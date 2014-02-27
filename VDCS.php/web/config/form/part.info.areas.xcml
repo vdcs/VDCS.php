@@ -1,0 +1,32 @@
+
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[地区信息]]></caption>
+	</input>
+	<input>
+		<type>text.{@tpx}area_country</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[所在国家]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<script>$pf.chooseValue('{@tpx}area_country','中国');</script>]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}area_province</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[所在省份]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}area_city</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[所在地区]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>

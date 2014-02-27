@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="lang">
+	<configure>
+		<node>common</node>
+	</configure>
+	<common>
+		<title.channel><![CDATA[频道]]></title.channel>
+		<title.module><![CDATA[模块]]></title.module>
+		<title.system><![CDATA[系统]]></title.system>
+		<title.name><![CDATA[名称]]></title.name>
+		<title.title><![CDATA[标题]]></title.title>
+		<title.topic><![CDATA[标题]]></title.topic>
+		<title.content><![CDATA[内容]]></title.content>
+		<title.ua><![CDATA[<app:var.ua>]]></title.ua>
+		<title.ua.info><![CDATA[<app:var.ua>信息]]></title.ua.info>
+		<title.uname><![CDATA[<app:var.ua>名]]></title.uname>
+		<title.unames><![CDATA[<app:var.ua>名]]></title.unames>
+		<title.account><![CDATA[<app:var.account>]]></title.account>
+		<title.user><![CDATA[<app:var.user>]]></title.user>
+		<title.username><![CDATA[<app:var.user>名]]></title.username>
+		<title.realname><![CDATA[真实姓名]]></title.realname>
+		<title.date><![CDATA[日期]]></title.date>
+		<title.time><![CDATA[时间]]></title.time>
+		<title.status><![CDATA[状态]]></title.status>
+		<title.sort><![CDATA[类别]]></title.sort>
+		<title.type><![CDATA[类型]]></title.type>
+		<title.grade><![CDATA[等级]]></title.grade>
+		<title.batch><![CDATA[批量]]></title.batch>
+		<title.option><![CDATA[选项]]></title.option>
+		<title.handle><![CDATA[操作]]></title.handle>
+		<title.search><![CDATA[搜索]]></title.search>
+		<title.coin><![CDATA[<app:var.coin>]]></title.coin>
+		<title.amount><![CDATA[<app:var.amount>]]></title.amount>
+		<title.cash><![CDATA[<app:var.cash>]]></title.cash>
+		<title.balance><![CDATA[<app:var.balance>]]></title.balance>
+		<title.price><![CDATA[<app:var.price>]]></title.price>
+		<title.money><![CDATA[<app:var.money>]]></title.money>
+		<title.emoney><![CDATA[<app:var.emoney>]]></title.emoney>
+		<title.points><![CDATA[<app:var.points>]]></title.points>
+		<title.score><![CDATA[<app:var.score>]]></title.score>
+		<title.credit><![CDATA[<app:var.credit>]]></title.credit>
+		<title.qt><![CDATA[<app:var.qt>]]></title.qt>
+		<title.quantity><![CDATA[<app:var.quantity>]]></title.quantity>
+		<title.num><![CDATA[数量]]></title.num>
+		<title.orderno><![CDATA[定单号]]></title.orderno>
+		<title.ordernum><![CDATA[定单号]]></title.ordernum>
+		<title.opua><![CDATA[操作人]]></title.opua>
+		<title.reua><![CDATA[被操作用户]]></title.reua>
+		<title.logo><![CDATA[LOGO]]></title.logo>
+		<title.url><![CDATA[URL]]></title.url>
+		<title.size><![CDATA[大小]]></title.size>
+		<title.filename><![CDATA[文件名]]></title.filename>
+		<title.filesize><![CDATA[文件大小]]></title.filesize>
+		<title.filetype><![CDATA[文件类型]]></title.filetype>
+		<title.attr.select><![CDATA[选择属性类型]]></title.attr.select>
+		
+		
+		<search.keyword><![CDATA[关键字]]></search.keyword>
+		<search.term><![CDATA[条件]]></search.term>
+		<search.field><![CDATA[字段]]></search.field>
+		<search.field.title><![CDATA[按字段..]]></search.field.title>
+		<search.term.and><![CDATA[与]]></search.term.and>
+		<search.term.or><![CDATA[或]]></search.term.or>
+		<search.term.exact><![CDATA[精确]]></search.term.exact>
+		
+		
+		<model.class><![CDATA[分类]]></model.class>
+		<model.special><![CDATA[专题]]></model.special>
+		<model.configure><![CDATA[配置]]></model.configure>
+		<model.collect><![CDATA[采集]]></model.collect>
+		
+		
+		<action.list><![CDATA[列表]]></action.list>
+		<action.listi><![CDATA[i列表]]></action.listi>
+		<action.list_p><![CDATA[列表p]]></action.list_p>
+		<action.create><![CDATA[创建]]></action.create>
+		<action.add><![CDATA[添加]]></action.add>
+		<action.edit><![CDATA[编辑]]></action.edit>
+		<action.reply><![CDATA[回复]]></action.reply>
+		<action.apply><![CDATA[申请]]></action.apply>
+		<action.audit><![CDATA[审核]]></action.audit>
+		<action.view><![CDATA[浏览]]></action.view>
+		<action.viewi><![CDATA[i浏览]]></action.viewi>
+		<action.search><![CDATA[搜索]]></action.search>
+		<action.searchi><![CDATA[i搜索]]></action.searchi>
+		<action.handle><![CDATA[处理]]></action.handle>
+		<action.handlei><![CDATA[i处理]]></action.handlei>
+		<action.dispose><![CDATA[处理]]></action.dispose>
+		<action.del><![CDATA[删除]]></action.del>
+		<action.deli><![CDATA[i删除]]></action.deli>
+		<action.delete><![CDATA[删除]]></action.delete>
+		<action.cancel><![CDATA[取消]]></action.cancel>
+		<action.import><![CDATA[导入]]></action.import>
+		<action.export><![CDATA[导出]]></action.export>
+		<action.online><![CDATA[上线]]></action.online>
+		<action.offline><![CDATA[下线]]></action.offline>
+		<action.move><![CDATA[移动]]></action.move>
+		<action.popedom><![CDATA[权限]]></action.popedom>
+		<action.popedoms><![CDATA[权限]]></action.popedoms>
+		<action.info><![CDATA[信息]]></action.info>
+		
+		<action.update><![CDATA[更新]]></action.update>
+		<action.updatei><![CDATA[i更新]]></action.updatei>
+		<action.config><![CDATA[配置]]></action.config>
+		<action.special><![CDATA[专题]]></action.special>
+		
+		
+		<handle.title><![CDATA[操作]]></handle.title>
+		<handle.object><![CDATA[操作对像]]></handle.object>
+		<handle.option.delete><![CDATA[删除!]]></handle.option.delete>
+		<handle.option.del><![CDATA[删除]]></handle.option.del>
+		<handle.option.lock><![CDATA[锁定]]></handle.option.lock>
+		<handle.option.unlock><![CDATA[解锁]]></handle.option.unlock>
+		<handle.option.pause><![CDATA[暂停]]></handle.option.pause>
+		<handle.option.show><![CDATA[显示]]></handle.option.show>
+		<handle.option.hide><![CDATA[隐藏]]></handle.option.hide>
+		<handle.option.unhide><![CDATA[显示]]></handle.option.unhide>
+		<handle.option.hidden><![CDATA[隐藏]]></handle.option.hidden>
+		<handle.option.unhidden><![CDATA[正常]]></handle.option.unhidden>
+		
+		<handle.option.gooda><![CDATA[已推荐]]></handle.option.gooda>
+		<handle.option.good><![CDATA[推荐]]></handle.option.good>
+		<handle.option.goodz><![CDATA[区推荐]]></handle.option.goodz>
+		<handle.option.goods><![CDATA[总推荐]]></handle.option.goods>
+		<handle.option.ungood><![CDATA[取消推荐]]></handle.option.ungood>
+		<handle.option.topa><![CDATA[已固顶]]></handle.option.topa>
+		<handle.option.top><![CDATA[固顶]]></handle.option.top>
+		<handle.option.topz><![CDATA[区固顶]]></handle.option.topz>
+		<handle.option.tops><![CDATA[总固顶]]></handle.option.tops>
+		<handle.option.untop><![CDATA[取消固顶]]></handle.option.untop>
+		
+		<handle.option.audit><![CDATA[已审核]]></handle.option.audit>
+		<handle.option.audited><![CDATA[已审核]]></handle.option.audited>
+		<handle.option.inaudit><![CDATA[待审核]]></handle.option.inaudit>
+		<handle.option.unaudit><![CDATA[未审核]]></handle.option.unaudit>
+		<handle.option.auth><![CDATA[已认证]]></handle.option.auth>
+		<handle.option.authed><![CDATA[已认证]]></handle.option.authed>
+		<handle.option.inauth><![CDATA[待认证]]></handle.option.inauth>
+		<handle.option.unauth><![CDATA[未认证]]></handle.option.unauth>
+		<handle.option.trans><![CDATA[已处理]]></handle.option.trans>
+		<handle.option.transed><![CDATA[待处理]]></handle.option.transed>
+		<handle.option.intrans><![CDATA[待处理]]></handle.option.intrans>
+		<handle.option.untrans><![CDATA[未处理]]></handle.option.untrans>
+		<handle.option.repeal><![CDATA[撤销]]></handle.option.repeal>
+		
+		<handle.option.on><![CDATA[开启]]></handle.option.on>
+		<handle.option.off><![CDATA[关闭]]></handle.option.off>
+		<handle.option.onup><![CDATA[上线]]></handle.option.onup>
+		<handle.option.ondown><![CDATA[下线]]></handle.option.ondown>
+		<handle.option.online><![CDATA[上线]]></handle.option.online>
+		<handle.option.offline><![CDATA[下线]]></handle.option.offline>
+		
+		<handle.option.use><![CDATA[已使用]]></handle.option.use>
+		<handle.option.used><![CDATA[已使用]]></handle.option.used>
+		<handle.option.unuse><![CDATA[未使用]]></handle.option.unuse>
+		<handle.option.import><![CDATA[导入]]></handle.option.import>
+		<handle.option.export><![CDATA[导出]]></handle.option.export>
+		<handle.option.solve><![CDATA[解决]]></handle.option.solve>
+		<handle.option.unsolve><![CDATA[未解决]]></handle.option.unsolve>
+		
+		<handle.option.pay><![CDATA[付款]]></handle.option.pay>
+		<handle.option.payed><![CDATA[已付款]]></handle.option.payed>
+		<handle.option.inpay><![CDATA[应付款]]></handle.option.inpay>
+		<handle.option.unpay><![CDATA[未付款]]></handle.option.unpay>
+		
+		
+		<!-- hold -->
+		<handle.option.isgood><![CDATA[推荐]]></handle.option.isgood>
+		<handle.option.istop><![CDATA[固顶]]></handle.option.istop>
+		<handle.option.istopz><![CDATA[区固顶]]></handle.option.istopz>
+		<handle.option.istops><![CDATA[总固顶]]></handle.option.istops>
+		<handle.option.isuse><![CDATA[已使用]]></handle.option.isuse>
+	</common>
+</xcml>

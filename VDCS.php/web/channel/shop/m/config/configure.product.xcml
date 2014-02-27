@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>search,class</frame>
+		<search.fields>{@table.px}topic=6;{@table.px}serial=6;{@table.px}summary=6;sp_keyword=6</search.fields>
+		<search.times>{@table.px}tim</search.times>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>{@table.name}</table.name>
+		<table.px>{@table.px}</table.px>
+		<table.field.id>{@table.px}id</table.field.id>
+		<table.field.total.data>{@table.prefix}total_data</table.field.total.data>
+		<table.field.pic>{@table.px}pic</table.field.pic>
+		<table.field.spic>{@table.px}spic</table.field.spic>
+		<table.fields.value>id={@table.px}id;topic={@table.px}topic;total.data={@table.px}total_data;time={@table.px}tim</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.query.onup>{@table.px}status=1</list.table.query.onup>
+		<list.table.query.ondown>{@table.px}status=0</list.table.query.ondown>
+		<list.table.query.newa>{@table.px}isnew>0</list.table.query.newa>
+		<list.table.query.new>{@table.px}isnew=1</list.table.query.new>
+		<list.table.query.unnew>{@table.px}isnew=0</list.table.query.unnew>
+		<list.table.query.salea>{@table.px}issale>0</list.table.query.salea>
+		<list.table.query.sale>{@table.px}issale=1</list.table.query.sale>
+		<list.table.query.unsale>{@table.px}issale=0</list.table.query.unsale>
+		<list.table.query.gooda>{@table.px}isgood>0</list.table.query.gooda>
+		<list.table.query.good>{@table.px}isgood=1</list.table.query.good>
+		<list.table.query.goodz>{@table.px}isgood=2</list.table.query.goodz>
+		<list.table.query.goods>{@table.px}isgood=3</list.table.query.goods>
+		<list.table.query.ungood>{@table.px}isgood=0</list.table.query.ungood>
+		<list.table.query.topa>{@table.px}istop>0</list.table.query.topa>
+		<list.table.query.top>{@table.px}istop=1</list.table.query.top>
+		<list.table.query.topz>{@table.px}istop=2</list.table.query.topz>
+		<list.table.query.tops>{@table.px}istop=3</list.table.query.tops>
+		<list.table.query.untop>{@table.px}istop=0</list.table.query.untop>
+		<list.table.order>{@table.px}id desc</list.table.order>
+		<list.table.order.tim>{@table.px}tim desc</list.table.order.tim>
+		<list.handle.select.option>onup,ondown,new=新品,unnew=取消新品,sale=促销,unsale=取消促销,good,ungood,top,topz,tops,untop,delete</list.handle.select.option>
+		<list.handle.sql.onup>update {@table.name} set {@table.px}status=1 where {@table.px}id in ({$ids})</list.handle.sql.onup>
+		<list.handle.sql.ondown>update {@table.name} set {@table.px}status=0 where {@table.px}id in ({$ids})</list.handle.sql.ondown>
+		<list.handle.sql.new>update {@table.name} set {@table.px}isnew=1 where {@table.px}id in ({$ids})</list.handle.sql.new>
+		<list.handle.sql.unnew>update {@table.name} set {@table.px}isnew=0 where {@table.px}id in ({$ids})</list.handle.sql.unnew>
+		<list.handle.sql.sale>update {@table.name} set {@table.px}issale=1 where {@table.px}id in ({$ids})</list.handle.sql.sale>
+		<list.handle.sql.unsale>update {@table.name} set {@table.px}issale=0 where {@table.px}id in ({$ids})</list.handle.sql.unsale>
+		<list.handle.sql.good>update {@table.name} set {@table.px}isgood=1 where {@table.px}id in ({$ids})</list.handle.sql.good>
+		<list.handle.sql.goodz>update {@table.name} set {@table.px}isgood=2 where {@table.px}id in ({$ids})</list.handle.sql.goodz>
+		<list.handle.sql.goods>update {@table.name} set {@table.px}isgood=3 where {@table.px}id in ({$ids})</list.handle.sql.goods>
+		<list.handle.sql.ungood>update {@table.name} set {@table.px}isgood=0 where {@table.px}id in ({$ids})</list.handle.sql.ungood>
+		<list.handle.sql.top>update {@table.name} set {@table.px}istop=1 where {@table.px}id in ({$ids})</list.handle.sql.top>
+		<list.handle.sql.topz>update {@table.name} set {@table.px}istop=2 where {@table.px}id in ({$ids})</list.handle.sql.topz>
+		<list.handle.sql.tops>update {@table.name} set {@table.px}istop=3 where {@table.px}id in ({$ids})</list.handle.sql.tops>
+		<list.handle.sql.untop>update {@table.name} set {@table.px}istop=0 where {@table.px}id in ({$ids})</list.handle.sql.untop>
+		<list.handle.sql.delete>delete from {@data:table.name} where rootid in ({$ids})$$$
+			delete from {@table.name} where {@table.px}id in ({$ids})</list.handle.sql.delete>
+		
+		<view.sql>select top 1 * from {@table.name} where {@table.px}id={$id}</view.sql>
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[{@name}]]></title.name>
+		<title.list><![CDATA[{@names}列表]]></title.list>
+		<title.list.><![CDATA[{@names}列表]]></title.list.>
+		<title.list.onup><![CDATA[上线{@names}]]></title.list.onup>
+		<title.list.ondown><![CDATA[下线{@names}]]></title.list.ondown>
+		<title.list.newa><![CDATA[所有新品{@names}]]></title.list.newa>
+		<title.list.new><![CDATA[新品{@names}]]></title.list.new>
+		<title.list.unnew><![CDATA[非新品{@names}]]></title.list.unnew>
+		<title.list.salea><![CDATA[已促销{@names}]]></title.list.salea>
+		<title.list.sale><![CDATA[促销{@names}]]></title.list.sale>
+		<title.list.unsale><![CDATA[未促销{@names}]]></title.list.unsale>
+		<title.list.gooda><![CDATA[已推荐{@names}]]></title.list.gooda>
+		<title.list.good><![CDATA[推荐{@names}]]></title.list.good>
+		<title.list.goodz><![CDATA[区推荐{@names}]]></title.list.goodz>
+		<title.list.goods><![CDATA[总推荐{@names}]]></title.list.goods>
+		<title.list.ungood><![CDATA[未推荐{@names}]]></title.list.ungood>
+		<title.list.topa><![CDATA[已固顶{@names}]]></title.list.topa>
+		<title.list.top><![CDATA[固顶{@names}]]></title.list.top>
+		<title.list.topz><![CDATA[区固顶{@names}]]></title.list.topz>
+		<title.list.tops><![CDATA[总固顶{@names}]]></title.list.tops>
+		<title.list.untop><![CDATA[未固顶{@names}]]></title.list.untop>
+		<title.add><![CDATA[添加新{@names}]]></title.add>
+		<title.edit><![CDATA[编辑{@names}]]></title.edit>
+		
+		<title.frame.class><![CDATA[{@names}分类]]></title.frame.class>
+		<title.frame.search><![CDATA[{@names}搜索]]></title.frame.search>
+		<search.fields.att>{@table.px}topic=名称;{@table.px}serial=编号;</search.fields.att>
+		
+		<error.not.exist><![CDATA[您要操作的 {@names} 不存在！]]></error.not.exist>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 {@unit}{@names}！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功更新了 1 {@unit}{@names}！]]></handle.ok.edit>
+		<handle.ok.onup><![CDATA[成功上线了 {$total} {@unit}{@names}！]]></handle.ok.onup>
+		<handle.ok.ondown><![CDATA[成功下线了 {$total} {@unit}{@names}！]]></handle.ok.ondown>
+		<handle.ok.new><![CDATA[成功新品了 {$total} {@unit}{@names}！]]></handle.ok.new>
+		<handle.ok.unnew><![CDATA[成功取消新品了 {$total} {@unit}{@names}！]]></handle.ok.unnew>
+		<handle.ok.sale><![CDATA[成功促销了 {$total} {@unit}{@names}！]]></handle.ok.sale>
+		<handle.ok.unsale><![CDATA[成功取消促销了 {$total} {@unit}{@names}！]]></handle.ok.unsale>
+		<handle.ok.good><![CDATA[成功推荐了 {$total} {@unit}{@names}！]]></handle.ok.good>
+		<handle.ok.goodz><![CDATA[成功区推荐了 {$total} {@unit}{@names}！]]></handle.ok.goodz>
+		<handle.ok.goods><![CDATA[成功总推荐了 {$total} {@unit}{@names}！]]></handle.ok.goods>
+		<handle.ok.ungood><![CDATA[成功取消推荐了 {$total} {@unit}{@names}！]]></handle.ok.ungood>
+		<handle.ok.top><![CDATA[成功固顶了 {$total} {@unit}{@names}！]]></handle.ok.top>
+		<handle.ok.topz><![CDATA[成功区固顶了 {$total} {@unit}{@names}！]]></handle.ok.topz>
+		<handle.ok.tops><![CDATA[成功总固顶了 {$total} {@unit}{@names}！]]></handle.ok.tops>
+		<handle.ok.untop><![CDATA[成功取消固顶了 {$total} {@unit}{@names}！]]></handle.ok.untop>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} {@unit}{@names}！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+	</template>
+</xcml>

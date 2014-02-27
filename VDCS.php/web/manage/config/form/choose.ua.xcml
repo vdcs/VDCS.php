@@ -1,0 +1,33 @@
+
+	<input>
+		<type>hidden.uuid</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=1;classi=items]]></property>
+		<style></style>
+		<caption><![CDATA[<app:var.ua>ID]]></caption>
+		<att></att>
+		<value>{$uuid}</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.unames</type>
+		<property><![CDATA[item=;action=;type=int;max=200;min=;classi=num]]></property>
+		<style></style>
+		<caption><![CDATA[<app:var.ua>名称]]></caption>
+		<att></att>
+		<value>{$unames}</value>
+		<explain><![CDATA[###
+			<span id="choose_ua">
+				<a class="btn m" el="choose">选择<app:var.ua></a>
+				<a class="btn btn-info" el="add">添加</a> 
+				<div class="hide" el="box">
+					<div class="w300">
+						<p class="itip info"><em></em><span>请输入<app:var.ua>信息模糊搜索：</span></p>
+						<input type="text" key="keyword" value="" minlength="0" maxlength="20" autocomplete="off" />
+						<select size="6" type="select-one" style="width:100%;height:110px;margin-top:10px;"></select>
+						<p>没有找到<app:var.ua>？请 <a el="add">点击此处</a> 添加。</p>
+					</div>
+				</div>
+			</span>
+			<script type="text/javascript">$(function(){appi.chooseUa($('#choose_ua'))});</script>
+		]]></explain>
+	</input>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,topic,content</field>
+	</configure>
+	<item>
+		<key>order-type</key>
+		<topic><![CDATA[订单的几种状态]]></topic>
+		<content><![CDATA[]]></content>
+	</item>
+	<item>
+		<key>bounty</key>
+		<topic><![CDATA[积分奖励计划]]></topic>
+		<content><![CDATA[]]></content>
+	</item>
+	<item>
+		<key>return-protection</key>
+		<topic><![CDATA[商品退货保障]]></topic>
+		<content><![CDATA[]]></content>
+	</item>
+	<item>
+		<key>non-members</key>
+		<topic><![CDATA[非会员购物通道]]></topic>
+		<content><![CDATA[]]></content>
+	</item>
+</xcml>

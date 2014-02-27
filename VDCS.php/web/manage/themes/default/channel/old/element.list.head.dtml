@@ -1,0 +1,4 @@
+<div class="Block Block-List">
+<control:ui.form("head")>
+<div class="BlockBar"><p><var:title></p></div>
+<div class="BlockBody"><div class="BlockInner">

@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+.sets_menu{clear:both;width:50px;background-color:#999;background-color:rgba(0, 0, 0, 0.2);}
+.sets_menu:before,
+.sets_menu:after{clear:both;display:table;content:"";}
+.sets_menu li{}
+.sets_menu li a{float:left;display:inline-block;width:50px;height:50px;background:url("sets_menu_icon.png") 0 0 no-repeat;text-indent:-999px;overflow:hidden;}
+.sets_menu li a.pop,
+.sets_menu li a:hover{background-position:-50px 0;}
+.sets_menu li.index a{background-position:0 0;}
+.sets_menu li.index.pop a,
+.sets_menu li.index a.pop,
+.sets_menu li.index a:hover{background-position:-50px 0;}
+.sets_menu li.home a{background-position:0 0;}
+.sets_menu li.home.pop a,
+.sets_menu li.home a.pop,
+.sets_menu li.home a:hover{background-position:-50px 0;}
+.sets_menu li.profile a{background-position:0 -50px;}
+.sets_menu li.profile.pop a,
+.sets_menu li.profile a.pop,
+.sets_menu li.profile a:hover{background-position:-50px -50px;}
+.sets_menu li.info a{background-position:0 -50px;}
+.sets_menu li.info.pop a,
+.sets_menu li.info a.pop,
+.sets_menu li.info a:hover{background-position:-50px -50px;}
+.sets_menu li.friends a{background-position:0 -100px;}
+.sets_menu li.friends.pop a,
+.sets_menu li.friends a.pop,
+.sets_menu li.friends a:hover{background-position:-50px -100px;}
+.sets_menu li.contacts a{background-position:0 -100px;}
+.sets_menu li.contacts.pop a,
+.sets_menu li.contacts a.pop,
+.sets_menu li.contacts a:hover{background-position:-50px -100px;}
+.sets_menu li.social a{background-position:0 -150px;}
+.sets_menu li.social.pop a,
+.sets_menu li.social a.pop,
+.sets_menu li.social a:hover{background-position:-50px -150px;}
+.sets_menu li.message a{background-position:0 -200px;}
+.sets_menu li.message.pop a,
+.sets_menu li.message a.pop,
+.sets_menu li.message a:hover{background-position:-50px -200px;}
+.sets_menu li.inbox a{background-position:0 -250px;}
+.sets_menu li.inbox.pop a,
+.sets_menu li.inbox a.pop,
+.sets_menu li.inbox a:hover{background-position:-50px -250px;}
+.sets_menu li.notices a{background-position:0 -300px;}
+.sets_menu li.notices.pop a,
+.sets_menu li.notices a.pop,
+.sets_menu li.notices a:hover{background-position:-50px -300px;}
+.sets_menu li.settings a{background-position:0 -350px;}
+.sets_menu li.settings.pop a,
+.sets_menu li.settings a.pop,
+.sets_menu li.settings a:hover{background-position:-50px -350px;}
+.sets_menu li.prefer a{background-position:0 -400px;}
+.sets_menu li.prefer.pop a,
+.sets_menu li.prefer a.pop,
+.sets_menu li.prefer a:hover{background-position:-50px -400px;}
+.sets_menu li.prefer a{background-position:0 -400px;}
+.sets_menu li.prefer.pop a,
+.sets_menu li.prefer a.pop,
+.sets_menu li.prefer a:hover{background-position:-50px -400px;}
+.sets_menu li.security a{background-position:0 -450px;}
+.sets_menu li.security.pop a,
+.sets_menu li.security a.pop,
+.sets_menu li.security a:hover{background-position:-50px -450px;}
+.sets_menu li.privacy a{background-position:0 -500px;}
+.sets_menu li.privacy.pop a,
+.sets_menu li.privacy a.pop,
+.sets_menu li.privacy a:hover{background-position:-50px -500px;}
+.sets_menu li.fav a{background-position:0 -550px;}
+.sets_menu li.fav.pop a,
+.sets_menu li.fav a.pop,
+.sets_menu li.fav a:hover{background-position:-50px -550px;}
+.sets_menu li.gift a{background-position:0 -600px;}
+.sets_menu li.gift.pop a,
+.sets_menu li.gift a.pop,
+.sets_menu li.gift a:hover{background-position:-50px -600px;}
+.sets_menu li.app a{background-position:0 -650px;}
+.sets_menu li.app.pop a,
+.sets_menu li.app a.pop,
+.sets_menu li.app a:hover{background-position:-50px -650px;}
+.sets_menu li.plus a{background-position:0 -700px;}
+.sets_menu li.plus.pop a,
+.sets_menu li.plus a.pop,
+.sets_menu li.plus a:hover{background-position:-50px -700px;}

@@ -1,0 +1,2049 @@
+
+<div class="tab-pane active fade in" id="led-icon">
+<ul class="icons-list clearfix">
+	<li>
+		<span><i class="icol-accept"></i></span>
+		<code>icol-accept</code>
+	</li>
+	<li>
+		<span><i class="icol-add"></i></span>
+		<code>icol-add</code>
+	</li>
+	<li>
+		<span><i class="icol-alarm"></i></span>
+		<code>icol-alarm</code>
+	</li>
+	<li>
+		<span><i class="icol-anchor"></i></span>
+		<code>icol-anchor</code>
+	</li>
+	<li>
+		<span><i class="icol-application-add"></i></span>
+		<code>icol-application-add</code>
+	</li>
+	<li>
+		<span><i class="icol-application-cascade"></i></span>
+		<code>icol-application-cascade</code>
+	</li>
+	<li>
+		<span><i class="icol-application-delete"></i></span>
+		<code>icol-application-delete</code>
+	</li>
+	<li>
+		<span><i class="icol-application-double"></i></span>
+		<code>icol-application-double</code>
+	</li>
+	<li>
+		<span><i class="icol-application-edit"></i></span>
+		<code>icol-application-edit</code>
+	</li>
+	<li>
+		<span><i class="icol-application-error"></i></span>
+		<code>icol-application-error</code>
+	</li>
+	<li>
+		<span><i class="icol-application-form"></i></span>
+		<code>icol-application-form</code>
+	</li>
+	<li>
+		<span><i class="icol-application-get"></i></span>
+		<code>icol-application-get</code>
+	</li>
+	<li>
+		<span><i class="icol-application-go"></i></span>
+		<code>icol-application-go</code>
+	</li>
+	<li>
+		<span><i class="icol-application-home"></i></span>
+		<code>icol-application-home</code>
+	</li>
+	<li>
+		<span><i class="icol-application-key"></i></span>
+		<code>icol-application-key</code>
+	</li>
+	<li>
+		<span><i class="icol-application-lightning"></i></span>
+		<code>icol-application-lightning</code>
+	</li>
+	<li>
+		<span><i class="icol-application-link"></i></span>
+		<code>icol-application-link</code>
+	</li>
+	<li>
+		<span><i class="icol-application-osx-terminal"></i></span>
+		<code>icol-application-osx-terminal</code>
+	</li>
+	<li>
+		<span><i class="icol-application-osx"></i></span>
+		<code>icol-application-osx</code>
+	</li>
+	<li>
+		<span><i class="icol-application-put"></i></span>
+		<code>icol-application-put</code>
+	</li>
+	<li>
+		<span><i class="icol-application-side-boxes"></i></span>
+		<code>icol-application-side-boxes</code>
+	</li>
+	<li>
+		<span><i class="icol-application-side-contract"></i></span>
+		<code>icol-application-side-contract</code>
+	</li>
+	<li>
+		<span><i class="icol-application-side-expand"></i></span>
+		<code>icol-application-side-expand</code>
+	</li>
+	<li>
+		<span><i class="icol-application-side-list"></i></span>
+		<code>icol-application-side-list</code>
+	</li>
+	<li>
+		<span><i class="icol-application-side-tree"></i></span>
+		<code>icol-application-side-tree</code>
+	</li>
+	<li>
+		<span><i class="icol-application-split"></i></span>
+		<code>icol-application-split</code>
+	</li>
+	<li>
+		<span><i class="icol-application-tile-horizontal"></i></span>
+		<code>icol-application-tile-horizontal</code>
+	</li>
+	<li>
+		<span><i class="icol-application-tile-vertical"></i></span>
+		<code>icol-application-tile-vertical</code>
+	</li>
+	<li>
+		<span><i class="icol-application-view-columns"></i></span>
+		<code>icol-application-view-columns</code>
+	</li>
+	<li>
+		<span><i class="icol-application-view-detail"></i></span>
+		<code>icol-application-view-detail</code>
+	</li>
+	<li>
+		<span><i class="icol-application-view-gallery"></i></span>
+		<code>icol-application-view-gallery</code>
+	</li>
+	<li>
+		<span><i class="icol-application-view-icons"></i></span>
+		<code>icol-application-view-icons</code>
+	</li>
+	<li>
+		<span><i class="icol-application-view-list"></i></span>
+		<code>icol-application-view-list</code>
+	</li>
+	<li>
+		<span><i class="icol-application-view-tile"></i></span>
+		<code>icol-application-view-tile</code>
+	</li>
+	<li>
+		<span><i class="icol-application-view-xp-terminal"></i></span>
+		<code>icol-application-view-xp-terminal</code>
+	</li>
+	<li>
+		<span><i class="icol-application-view-xp"></i></span>
+		<code>icol-application-view-xp</code>
+	</li>
+	<li>
+		<span><i class="icol-application2"></i></span>
+		<code>icol-application2</code>
+	</li>
+	<li>
+		<span><i class="icol-application"></i></span>
+		<code>icol-application</code>
+	</li>
+	<li>
+		<span><i class="icol-arrow-branch"></i></span>
+		<code>icol-arrow-branch</code>
+	</li>
+	<li>
+		<span><i class="icol-arrow-divide"></i></span>
+		<code>icol-arrow-divide</code>
+	</li>
+	<li>
+		<span><i class="icol-arrow-inout"></i></span>
+		<code>icol-arrow-inout</code>
+	</li>
+	<li>
+		<span><i class="icol-arrow-in"></i></span>
+		<code>icol-arrow-in</code>
+	</li>
+	<li>
+		<span><i class="icol-arrow-join"></i></span>
+		<code>icol-arrow-join</code>
+	</li>
+	<li>
+		<span><i class="icol-arrow-left"></i></span>
+		<code>icol-arrow-left</code>
+	</li>
+	<li>
+		<span><i class="icol-arrow-merge"></i></span>
+		<code>icol-arrow-merge</code>
+	</li>
+	<li>
+		<span><i class="icol-arrow-out"></i></span>
+		<code>icol-arrow-out</code>
+	</li>
+	<li>
+		<span><i class="icol-arrow-redo"></i></span>
+		<code>icol-arrow-redo</code>
+	</li>
+	<li>
+		<span><i class="icol-arrow-refresh"></i></span>
+		<code>icol-arrow-refresh</code>
+	</li>
+	<li>
+		<span><i class="icol-arrow-right"></i></span>
+		<code>icol-arrow-right</code>
+	</li>
+	<li>
+		<span><i class="icol-arrow-undo"></i></span>
+		<code>icol-arrow-undo</code>
+	</li>
+	<li>
+		<span><i class="icol-asterisk-orange"></i></span>
+		<code>icol-asterisk-orange</code>
+	</li>
+	<li>
+		<span><i class="icol-attach-2"></i></span>
+		<code>icol-attach-2</code>
+	</li>
+	<li>
+		<span><i class="icol-attach"></i></span>
+		<code>icol-attach</code>
+	</li>
+	<li>
+		<span><i class="icol-award-star-gold"></i></span>
+		<code>icol-award-star-gold</code>
+	</li>
+	<li>
+		<span><i class="icol-bandaid"></i></span>
+		<code>icol-bandaid</code>
+	</li>
+	<li>
+		<span><i class="icol-basket"></i></span>
+		<code>icol-basket</code>
+	</li>
+	<li>
+		<span><i class="icol-bell"></i></span>
+		<code>icol-bell</code>
+	</li>
+	<li>
+		<span><i class="icol-bin-closed"></i></span>
+		<code>icol-bin-closed</code>
+	</li>
+	<li>
+		<span><i class="icol-blog"></i></span>
+		<code>icol-blog</code>
+	</li>
+	<li>
+		<span><i class="icol-blueprint-horizontal"></i></span>
+		<code>icol-blueprint-horizontal</code>
+	</li>
+	<li>
+		<span><i class="icol-blueprint"></i></span>
+		<code>icol-blueprint</code>
+	</li>
+	<li>
+		<span><i class="icol-bluetooth"></i></span>
+		<code>icol-bluetooth</code>
+	</li>
+	<li>
+		<span><i class="icol-bomb"></i></span>
+		<code>icol-bomb</code>
+	</li>
+	<li>
+		<span><i class="icol-book-addresses"></i></span>
+		<code>icol-book-addresses</code>
+	</li>
+	<li>
+		<span><i class="icol-book-next"></i></span>
+		<code>icol-book-next</code>
+	</li>
+	<li>
+		<span><i class="icol-book-open"></i></span>
+		<code>icol-book-open</code>
+	</li>
+	<li>
+		<span><i class="icol-book-previous"></i></span>
+		<code>icol-book-previous</code>
+	</li>
+	<li>
+		<span><i class="icol-bookmark-book-open"></i></span>
+		<code>icol-bookmark-book-open</code>
+	</li>
+	<li>
+		<span><i class="icol-bookmark-book"></i></span>
+		<code>icol-bookmark-book</code>
+	</li>
+	<li>
+		<span><i class="icol-bookmark-document"></i></span>
+		<code>icol-bookmark-document</code>
+	</li>
+	<li>
+		<span><i class="icol-bookmark-folder"></i></span>
+		<code>icol-bookmark-folder</code>
+	</li>
+	<li>
+		<span><i class="icol-bookmark"></i></span>
+		<code>icol-bookmark</code>
+	</li>
+	<li>
+		<span><i class="icol-books"></i></span>
+		<code>icol-books</code>
+	</li>
+	<li>
+		<span><i class="icol-book"></i></span>
+		<code>icol-book</code>
+	</li>
+	<li>
+		<span><i class="icol-box"></i></span>
+		<code>icol-box</code>
+	</li>
+	<li>
+		<span><i class="icol-bricks"></i></span>
+		<code>icol-bricks</code>
+	</li>
+	<li>
+		<span><i class="icol-brick"></i></span>
+		<code>icol-brick</code>
+	</li>
+	<li>
+		<span><i class="icol-briefcase"></i></span>
+		<code>icol-briefcase</code>
+	</li>
+	<li>
+		<span><i class="icol-bug"></i></span>
+		<code>icol-bug</code>
+	</li>
+	<li>
+		<span><i class="icol-buildings"></i></span>
+		<code>icol-buildings</code>
+	</li>
+	<li>
+		<span><i class="icol-bullet-add-1"></i></span>
+		<code>icol-bullet-add-1</code>
+	</li>
+	<li>
+		<span><i class="icol-bullet-add-2"></i></span>
+		<code>icol-bullet-add-2</code>
+	</li>
+	<li>
+		<span><i class="icol-bullet-key"></i></span>
+		<code>icol-bullet-key</code>
+	</li>
+	<li>
+		<span><i class="icol-cake"></i></span>
+		<code>icol-cake</code>
+	</li>
+	<li>
+		<span><i class="icol-calculator"></i></span>
+		<code>icol-calculator</code>
+	</li>
+	<li>
+		<span><i class="icol-calendar-1"></i></span>
+		<code>icol-calendar-1</code>
+	</li>
+	<li>
+		<span><i class="icol-calendar-2"></i></span>
+		<code>icol-calendar-2</code>
+	</li>
+	<li>
+		<span><i class="icol-camera"></i></span>
+		<code>icol-camera</code>
+	</li>
+	<li>
+		<span><i class="icol-cancel"></i></span>
+		<code>icol-cancel</code>
+	</li>
+	<li>
+		<span><i class="icol-cart"></i></span>
+		<code>icol-cart</code>
+	</li>
+	<li>
+		<span><i class="icol-car"></i></span>
+		<code>icol-car</code>
+	</li>
+	<li>
+		<span><i class="icol-cd"></i></span>
+		<code>icol-cd</code>
+	</li>
+	<li>
+		<span><i class="icol-chart-bar"></i></span>
+		<code>icol-chart-bar</code>
+	</li>
+	<li>
+		<span><i class="icol-chart-curve"></i></span>
+		<code>icol-chart-curve</code>
+	</li>
+	<li>
+		<span><i class="icol-chart-line"></i></span>
+		<code>icol-chart-line</code>
+	</li>
+	<li>
+		<span><i class="icol-chart-organisation"></i></span>
+		<code>icol-chart-organisation</code>
+	</li>
+	<li>
+		<span><i class="icol-chart-pie"></i></span>
+		<code>icol-chart-pie</code>
+	</li>
+	<li>
+		<span><i class="icol-clipboard-paste-image"></i></span>
+		<code>icol-clipboard-paste-image</code>
+	</li>
+	<li>
+		<span><i class="icol-clipboard-sign"></i></span>
+		<code>icol-clipboard-sign</code>
+	</li>
+	<li>
+		<span><i class="icol-clipboard-text"></i></span>
+		<code>icol-clipboard-text</code>
+	</li>
+	<li>
+		<span><i class="icol-clock"></i></span>
+		<code>icol-clock</code>
+	</li>
+	<li>
+		<span><i class="icol-cog"></i></span>
+		<code>icol-cog</code>
+	</li>
+	<li>
+		<span><i class="icol-coins"></i></span>
+		<code>icol-coins</code>
+	</li>
+	<li>
+		<span><i class="icol-color-swatch-1"></i></span>
+		<code>icol-color-swatch-1</code>
+	</li>
+	<li>
+		<span><i class="icol-color-swatch-2"></i></span>
+		<code>icol-color-swatch-2</code>
+	</li>
+	<li>
+		<span><i class="icol-comment"></i></span>
+		<code>icol-comment</code>
+	</li>
+	<li>
+		<span><i class="icol-compass"></i></span>
+		<code>icol-compass</code>
+	</li>
+	<li>
+		<span><i class="icol-compress"></i></span>
+		<code>icol-compress</code>
+	</li>
+	<li>
+		<span><i class="icol-computer"></i></span>
+		<code>icol-computer</code>
+	</li>
+	<li>
+		<span><i class="icol-connect"></i></span>
+		<code>icol-connect</code>
+	</li>
+	<li>
+		<span><i class="icol-contrast"></i></span>
+		<code>icol-contrast</code>
+	</li>
+	<li>
+		<span><i class="icol-control-eject"></i></span>
+		<code>icol-control-eject</code>
+	</li>
+	<li>
+		<span><i class="icol-control-end"></i></span>
+		<code>icol-control-end</code>
+	</li>
+	<li>
+		<span><i class="icol-control-equalizer"></i></span>
+		<code>icol-control-equalizer</code>
+	</li>
+	<li>
+		<span><i class="icol-control-fastforward"></i></span>
+		<code>icol-control-fastforward</code>
+	</li>
+	<li>
+		<span><i class="icol-control-pause"></i></span>
+		<code>icol-control-pause</code>
+	</li>
+	<li>
+		<span><i class="icol-control-play"></i></span>
+		<code>icol-control-play</code>
+	</li>
+	<li>
+		<span><i class="icol-control-repeat"></i></span>
+		<code>icol-control-repeat</code>
+	</li>
+	<li>
+		<span><i class="icol-control-rewind"></i></span>
+		<code>icol-control-rewind</code>
+	</li>
+	<li>
+		<span><i class="icol-control-start"></i></span>
+		<code>icol-control-start</code>
+	</li>
+	<li>
+		<span><i class="icol-control-stop"></i></span>
+		<code>icol-control-stop</code>
+	</li>
+	<li>
+		<span><i class="icol-control-wheel"></i></span>
+		<code>icol-control-wheel</code>
+	</li>
+	<li>
+		<span><i class="icol-counter-count-up"></i></span>
+		<code>icol-counter-count-up</code>
+	</li>
+	<li>
+		<span><i class="icol-counter-count"></i></span>
+		<code>icol-counter-count</code>
+	</li>
+	<li>
+		<span><i class="icol-counter-reset"></i></span>
+		<code>icol-counter-reset</code>
+	</li>
+	<li>
+		<span><i class="icol-counter-stop"></i></span>
+		<code>icol-counter-stop</code>
+	</li>
+	<li>
+		<span><i class="icol-counter"></i></span>
+		<code>icol-counter</code>
+	</li>
+	<li>
+		<span><i class="icol-cross-octagon-fram"></i></span>
+		<code>icol-cross-octagon-fram</code>
+	</li>
+	<li>
+		<span><i class="icol-cross-octagon"></i></span>
+		<code>icol-cross-octagon</code>
+	</li>
+	<li>
+		<span><i class="icol-cross-shield-2"></i></span>
+		<code>icol-cross-shield-2</code>
+	</li>
+	<li>
+		<span><i class="icol-cross-shield"></i></span>
+		<code>icol-cross-shield</code>
+	</li>
+	<li>
+		<span><i class="icol-cross"></i></span>
+		<code>icol-cross</code>
+	</li>
+	<li>
+		<span><i class="icol-crown-bronze"></i></span>
+		<code>icol-crown-bronze</code>
+	</li>
+	<li>
+		<span><i class="icol-crown-silver"></i></span>
+		<code>icol-crown-silver</code>
+	</li>
+	<li>
+		<span><i class="icol-crown"></i></span>
+		<code>icol-crown</code>
+	</li>
+	<li>
+		<span><i class="icol-css"></i></span>
+		<code>icol-css</code>
+	</li>
+	<li>
+		<span><i class="icol-cursor"></i></span>
+		<code>icol-cursor</code>
+	</li>
+	<li>
+		<span><i class="icol-cut"></i></span>
+		<code>icol-cut</code>
+	</li>
+	<li>
+		<span><i class="icol-dashboard"></i></span>
+		<code>icol-dashboard</code>
+	</li>
+	<li>
+		<span><i class="icol-databases"></i></span>
+		<code>icol-databases</code>
+	</li>
+	<li>
+		<span><i class="icol-database"></i></span>
+		<code>icol-database</code>
+	</li>
+	<li>
+		<span><i class="icol-data"></i></span>
+		<code>icol-data</code>
+	</li>
+	<li>
+		<span><i class="icol-delete"></i></span>
+		<code>icol-delete</code>
+	</li>
+	<li>
+		<span><i class="icol-delivery"></i></span>
+		<code>icol-delivery</code>
+	</li>
+	<li>
+		<span><i class="icol-desktop-empty"></i></span>
+		<code>icol-desktop-empty</code>
+	</li>
+	<li>
+		<span><i class="icol-desktop"></i></span>
+		<code>icol-desktop</code>
+	</li>
+	<li>
+		<span><i class="icol-direction"></i></span>
+		<code>icol-direction</code>
+	</li>
+	<li>
+		<span><i class="icol-disconnect"></i></span>
+		<code>icol-disconnect</code>
+	</li>
+	<li>
+		<span><i class="icol-disk"></i></span>
+		<code>icol-disk</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-access"></i></span>
+		<code>icol-doc-access</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-break"></i></span>
+		<code>icol-doc-break</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-convert"></i></span>
+		<code>icol-doc-convert</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-excel-csv"></i></span>
+		<code>icol-doc-excel-csv</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-excel-table"></i></span>
+		<code>icol-doc-excel-table</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-film"></i></span>
+		<code>icol-doc-film</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-illustrator"></i></span>
+		<code>icol-doc-illustrator</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-music-playlist"></i></span>
+		<code>icol-doc-music-playlist</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-music"></i></span>
+		<code>icol-doc-music</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-offlice"></i></span>
+		<code>icol-doc-offlice</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-page-previous"></i></span>
+		<code>icol-doc-page-previous</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-page"></i></span>
+		<code>icol-doc-page</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-pdf"></i></span>
+		<code>icol-doc-pdf</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-photoshop"></i></span>
+		<code>icol-doc-photoshop</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-resize-actual"></i></span>
+		<code>icol-doc-resize-actual</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-resize"></i></span>
+		<code>icol-doc-resize</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-shred"></i></span>
+		<code>icol-doc-shred</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-stand"></i></span>
+		<code>icol-doc-stand</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-table"></i></span>
+		<code>icol-doc-table</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-tag"></i></span>
+		<code>icol-doc-tag</code>
+	</li>
+	<li>
+		<span><i class="icol-doc-text-image"></i></span>
+		<code>icol-doc-text-image</code>
+	</li>
+	<li>
+		<span><i class="icol-door-in"></i></span>
+		<code>icol-door-in</code>
+	</li>
+	<li>
+		<span><i class="icol-door"></i></span>
+		<code>icol-door</code>
+	</li>
+	<li>
+		<span><i class="icol-drawer"></i></span>
+		<code>icol-drawer</code>
+	</li>
+	<li>
+		<span><i class="icol-drink-empty"></i></span>
+		<code>icol-drink-empty</code>
+	</li>
+	<li>
+		<span><i class="icol-drink"></i></span>
+		<code>icol-drink</code>
+	</li>
+	<li>
+		<span><i class="icol-drive-burn"></i></span>
+		<code>icol-drive-burn</code>
+	</li>
+	<li>
+		<span><i class="icol-drive-cd-empty"></i></span>
+		<code>icol-drive-cd-empty</code>
+	</li>
+	<li>
+		<span><i class="icol-drive-cd"></i></span>
+		<code>icol-drive-cd</code>
+	</li>
+	<li>
+		<span><i class="icol-drive-delete"></i></span>
+		<code>icol-drive-delete</code>
+	</li>
+	<li>
+		<span><i class="icol-drive-disk"></i></span>
+		<code>icol-drive-disk</code>
+	</li>
+	<li>
+		<span><i class="icol-drive-error"></i></span>
+		<code>icol-drive-error</code>
+	</li>
+	<li>
+		<span><i class="icol-drive-go"></i></span>
+		<code>icol-drive-go</code>
+	</li>
+	<li>
+		<span><i class="icol-drive-link"></i></span>
+		<code>icol-drive-link</code>
+	</li>
+	<li>
+		<span><i class="icol-drive-network"></i></span>
+		<code>icol-drive-network</code>
+	</li>
+	<li>
+		<span><i class="icol-drive-rename"></i></span>
+		<code>icol-drive-rename</code>
+	</li>
+	<li>
+		<span><i class="icol-drive"></i></span>
+		<code>icol-drive</code>
+	</li>
+	<li>
+		<span><i class="icol-dvd"></i></span>
+		<code>icol-dvd</code>
+	</li>
+	<li>
+		<span><i class="icol-email-open-image"></i></span>
+		<code>icol-email-open-image</code>
+	</li>
+	<li>
+		<span><i class="icol-email-open"></i></span>
+		<code>icol-email-open</code>
+	</li>
+	<li>
+		<span><i class="icol-email"></i></span>
+		<code>icol-email</code>
+	</li>
+	<li>
+		<span><i class="icol-emoticon-evilgrin"></i></span>
+		<code>icol-emoticon-evilgrin</code>
+	</li>
+	<li>
+		<span><i class="icol-emoticon-grin"></i></span>
+		<code>icol-emoticon-grin</code>
+	</li>
+	<li>
+		<span><i class="icol-emoticon-happy"></i></span>
+		<code>icol-emoticon-happy</code>
+	</li>
+	<li>
+		<span><i class="icol-emoticon-smile"></i></span>
+		<code>icol-emoticon-smile</code>
+	</li>
+	<li>
+		<span><i class="icol-emoticon-surprised"></i></span>
+		<code>icol-emoticon-surprised</code>
+	</li>
+	<li>
+		<span><i class="icol-emoticon-tongue"></i></span>
+		<code>icol-emoticon-tongue</code>
+	</li>
+	<li>
+		<span><i class="icol-emoticon-unhappy"></i></span>
+		<code>icol-emoticon-unhappy</code>
+	</li>
+	<li>
+		<span><i class="icol-emoticon-waii"></i></span>
+		<code>icol-emoticon-waii</code>
+	</li>
+	<li>
+		<span><i class="icol-emoticon-wink"></i></span>
+		<code>icol-emoticon-wink</code>
+	</li>
+	<li>
+		<span><i class="icol-envelope-2"></i></span>
+		<code>icol-envelope-2</code>
+	</li>
+	<li>
+		<span><i class="icol-envelope"></i></span>
+		<code>icol-envelope</code>
+	</li>
+	<li>
+		<span><i class="icol-error"></i></span>
+		<code>icol-error</code>
+	</li>
+	<li>
+		<span><i class="icol-exclamation-octagon-fram"></i></span>
+		<code>icol-exclamation-octagon-fram</code>
+	</li>
+	<li>
+		<span><i class="icol-exclamation"></i></span>
+		<code>icol-exclamation</code>
+	</li>
+	<li>
+		<span><i class="icol-eye"></i></span>
+		<code>icol-eye</code>
+	</li>
+	<li>
+		<span><i class="icol-feed-ballon"></i></span>
+		<code>icol-feed-ballon</code>
+	</li>
+	<li>
+		<span><i class="icol-feed-document"></i></span>
+		<code>icol-feed-document</code>
+	</li>
+	<li>
+		<span><i class="icol-feed"></i></span>
+		<code>icol-feed</code>
+	</li>
+	<li>
+		<span><i class="icol-female"></i></span>
+		<code>icol-female</code>
+	</li>
+	<li>
+		<span><i class="icol-films"></i></span>
+		<code>icol-films</code>
+	</li>
+	<li>
+		<span><i class="icol-film"></i></span>
+		<code>icol-film</code>
+	</li>
+	<li>
+		<span><i class="icol-find"></i></span>
+		<code>icol-find</code>
+	</li>
+	<li>
+		<span><i class="icol-flag-blue"></i></span>
+		<code>icol-flag-blue</code>
+	</li>
+	<li>
+		<span><i class="icol-folder"></i></span>
+		<code>icol-folder</code>
+	</li>
+	<li>
+		<span><i class="icol-font"></i></span>
+		<code>icol-font</code>
+	</li>
+	<li>
+		<span><i class="icol-funnel"></i></span>
+		<code>icol-funnel</code>
+	</li>
+	<li>
+		<span><i class="icol-grid-dot"></i></span>
+		<code>icol-grid-dot</code>
+	</li>
+	<li>
+		<span><i class="icol-grid"></i></span>
+		<code>icol-grid</code>
+	</li>
+	<li>
+		<span><i class="icol-group"></i></span>
+		<code>icol-group</code>
+	</li>
+	<li>
+		<span><i class="icol-hammer-screwdriver"></i></span>
+		<code>icol-hammer-screwdriver</code>
+	</li>
+	<li>
+		<span><i class="icol-hammer"></i></span>
+		<code>icol-hammer</code>
+	</li>
+	<li>
+		<span><i class="icol-hand-point"></i></span>
+		<code>icol-hand-point</code>
+	</li>
+	<li>
+		<span><i class="icol-hand"></i></span>
+		<code>icol-hand</code>
+	</li>
+	<li>
+		<span><i class="icol-heart-break"></i></span>
+		<code>icol-heart-break</code>
+	</li>
+	<li>
+		<span><i class="icol-heart-empty"></i></span>
+		<code>icol-heart-empty</code>
+	</li>
+	<li>
+		<span><i class="icol-heart-half"></i></span>
+		<code>icol-heart-half</code>
+	</li>
+	<li>
+		<span><i class="icol-heart-small"></i></span>
+		<code>icol-heart-small</code>
+	</li>
+	<li>
+		<span><i class="icol-heart"></i></span>
+		<code>icol-heart</code>
+	</li>
+	<li>
+		<span><i class="icol-help"></i></span>
+		<code>icol-help</code>
+	</li>
+	<li>
+		<span><i class="icol-highlighter"></i></span>
+		<code>icol-highlighter</code>
+	</li>
+	<li>
+		<span><i class="icol-house"></i></span>
+		<code>icol-house</code>
+	</li>
+	<li>
+		<span><i class="icol-html"></i></span>
+		<code>icol-html</code>
+	</li>
+	<li>
+		<span><i class="icol-image-1"></i></span>
+		<code>icol-image-1</code>
+	</li>
+	<li>
+		<span><i class="icol-image-2"></i></span>
+		<code>icol-image-2</code>
+	</li>
+	<li>
+		<span><i class="icol-images"></i></span>
+		<code>icol-images</code>
+	</li>
+	<li>
+		<span><i class="icol-inbox"></i></span>
+		<code>icol-inbox</code>
+	</li>
+	<li>
+		<span><i class="icol-ipod-cast"></i></span>
+		<code>icol-ipod-cast</code>
+	</li>
+	<li>
+		<span><i class="icol-ipod"></i></span>
+		<code>icol-ipod</code>
+	</li>
+	<li>
+		<span><i class="icol-joystick"></i></span>
+		<code>icol-joystick</code>
+	</li>
+	<li>
+		<span><i class="icol-keyboard"></i></span>
+		<code>icol-keyboard</code>
+	</li>
+	<li>
+		<span><i class="icol-key"></i></span>
+		<code>icol-key</code>
+	</li>
+	<li>
+		<span><i class="icol-layer-treansparent"></i></span>
+		<code>icol-layer-treansparent</code>
+	</li>
+	<li>
+		<span><i class="icol-layers"></i></span>
+		<code>icol-layers</code>
+	</li>
+	<li>
+		<span><i class="icol-layout-header-footer-3-mix"></i></span>
+		<code>icol-layout-header-footer-3-mix</code>
+	</li>
+	<li>
+		<span><i class="icol-layout-header-footer-3"></i></span>
+		<code>icol-layout-header-footer-3</code>
+	</li>
+	<li>
+		<span><i class="icol-layout-join-vertical"></i></span>
+		<code>icol-layout-join-vertical</code>
+	</li>
+	<li>
+		<span><i class="icol-layout-join"></i></span>
+		<code>icol-layout-join</code>
+	</li>
+	<li>
+		<span><i class="icol-layout-select-content"></i></span>
+		<code>icol-layout-select-content</code>
+	</li>
+	<li>
+		<span><i class="icol-layout-select-footer"></i></span>
+		<code>icol-layout-select-footer</code>
+	</li>
+	<li>
+		<span><i class="icol-layout-select-sidebar"></i></span>
+		<code>icol-layout-select-sidebar</code>
+	</li>
+	<li>
+		<span><i class="icol-layout-select"></i></span>
+		<code>icol-layout-select</code>
+	</li>
+	<li>
+		<span><i class="icol-layout-split-vertical"></i></span>
+		<code>icol-layout-split-vertical</code>
+	</li>
+	<li>
+		<span><i class="icol-layout-split"></i></span>
+		<code>icol-layout-split</code>
+	</li>
+	<li>
+		<span><i class="icol-layout"></i></span>
+		<code>icol-layout</code>
+	</li>
+	<li>
+		<span><i class="icol-lifebuoy"></i></span>
+		<code>icol-lifebuoy</code>
+	</li>
+	<li>
+		<span><i class="icol-lightbulb-off"></i></span>
+		<code>icol-lightbulb-off</code>
+	</li>
+	<li>
+		<span><i class="icol-lightbulb"></i></span>
+		<code>icol-lightbulb</code>
+	</li>
+	<li>
+		<span><i class="icol-lightning"></i></span>
+		<code>icol-lightning</code>
+	</li>
+	<li>
+		<span><i class="icol-link-break"></i></span>
+		<code>icol-link-break</code>
+	</li>
+	<li>
+		<span><i class="icol-link"></i></span>
+		<code>icol-link</code>
+	</li>
+	<li>
+		<span><i class="icol-lock-unlock"></i></span>
+		<code>icol-lock-unlock</code>
+	</li>
+	<li>
+		<span><i class="icol-lock"></i></span>
+		<code>icol-lock</code>
+	</li>
+	<li>
+		<span><i class="icol-magnet"></i></span>
+		<code>icol-magnet</code>
+	</li>
+	<li>
+		<span><i class="icol-magnifier-zoom-in"></i></span>
+		<code>icol-magnifier-zoom-in</code>
+	</li>
+	<li>
+		<span><i class="icol-magnifier"></i></span>
+		<code>icol-magnifier</code>
+	</li>
+	<li>
+		<span><i class="icol-male"></i></span>
+		<code>icol-male</code>
+	</li>
+	<li>
+		<span><i class="icol-map"></i></span>
+		<code>icol-map</code>
+	</li>
+	<li>
+		<span><i class="icol-marker"></i></span>
+		<code>icol-marker</code>
+	</li>
+	<li>
+		<span><i class="icol-medal-bronze-1"></i></span>
+		<code>icol-medal-bronze-1</code>
+	</li>
+	<li>
+		<span><i class="icol-medal-gold-1"></i></span>
+		<code>icol-medal-gold-1</code>
+	</li>
+	<li>
+		<span><i class="icol-media-player-small-blue"></i></span>
+		<code>icol-media-player-small-blue</code>
+	</li>
+	<li>
+		<span><i class="icol-microphone"></i></span>
+		<code>icol-microphone</code>
+	</li>
+	<li>
+		<span><i class="icol-mobile-phone"></i></span>
+		<code>icol-mobile-phone</code>
+	</li>
+	<li>
+		<span><i class="icol-money-dollar"></i></span>
+		<code>icol-money-dollar</code>
+	</li>
+	<li>
+		<span><i class="icol-money-euro"></i></span>
+		<code>icol-money-euro</code>
+	</li>
+	<li>
+		<span><i class="icol-money-pound"></i></span>
+		<code>icol-money-pound</code>
+	</li>
+	<li>
+		<span><i class="icol-money-yen"></i></span>
+		<code>icol-money-yen</code>
+	</li>
+	<li>
+		<span><i class="icol-money"></i></span>
+		<code>icol-money</code>
+	</li>
+	<li>
+		<span><i class="icol-monitor"></i></span>
+		<code>icol-monitor</code>
+	</li>
+	<li>
+		<span><i class="icol-mouse"></i></span>
+		<code>icol-mouse</code>
+	</li>
+	<li>
+		<span><i class="icol-music-beam"></i></span>
+		<code>icol-music-beam</code>
+	</li>
+	<li>
+		<span><i class="icol-music"></i></span>
+		<code>icol-music</code>
+	</li>
+	<li>
+		<span><i class="icol-neutral"></i></span>
+		<code>icol-neutral</code>
+	</li>
+	<li>
+		<span><i class="icol-newspaper"></i></span>
+		<code>icol-newspaper</code>
+	</li>
+	<li>
+		<span><i class="icol-new"></i></span>
+		<code>icol-new</code>
+	</li>
+	<li>
+		<span><i class="icol-note"></i></span>
+		<code>icol-note</code>
+	</li>
+	<li>
+		<span><i class="icol-nuclear"></i></span>
+		<code>icol-nuclear</code>
+	</li>
+	<li>
+		<span><i class="icol-package"></i></span>
+		<code>icol-package</code>
+	</li>
+	<li>
+		<span><i class="icol-page-2-copy"></i></span>
+		<code>icol-page-2-copy</code>
+	</li>
+	<li>
+		<span><i class="icol-page-2"></i></span>
+		<code>icol-page-2</code>
+	</li>
+	<li>
+		<span><i class="icol-page-code"></i></span>
+		<code>icol-page-code</code>
+	</li>
+	<li>
+		<span><i class="icol-page-copy"></i></span>
+		<code>icol-page-copy</code>
+	</li>
+	<li>
+		<span><i class="icol-page-excel"></i></span>
+		<code>icol-page-excel</code>
+	</li>
+	<li>
+		<span><i class="icol-page-lightning"></i></span>
+		<code>icol-page-lightning</code>
+	</li>
+	<li>
+		<span><i class="icol-page-paste"></i></span>
+		<code>icol-page-paste</code>
+	</li>
+	<li>
+		<span><i class="icol-page-red"></i></span>
+		<code>icol-page-red</code>
+	</li>
+	<li>
+		<span><i class="icol-page-refresh"></i></span>
+		<code>icol-page-refresh</code>
+	</li>
+	<li>
+		<span><i class="icol-page-save"></i></span>
+		<code>icol-page-save</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-cplusplus"></i></span>
+		<code>icol-page-white-cplusplus</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-csharp"></i></span>
+		<code>icol-page-white-csharp</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-cup"></i></span>
+		<code>icol-page-white-cup</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-database"></i></span>
+		<code>icol-page-white-database</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-delete"></i></span>
+		<code>icol-page-white-delete</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-dvd"></i></span>
+		<code>icol-page-white-dvd</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-edit"></i></span>
+		<code>icol-page-white-edit</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-error"></i></span>
+		<code>icol-page-white-error</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-excel"></i></span>
+		<code>icol-page-white-excel</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-find"></i></span>
+		<code>icol-page-white-find</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-flash"></i></span>
+		<code>icol-page-white-flash</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-freehand"></i></span>
+		<code>icol-page-white-freehand</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-gear"></i></span>
+		<code>icol-page-white-gear</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-get"></i></span>
+		<code>icol-page-white-get</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-paintbrush"></i></span>
+		<code>icol-page-white-paintbrush</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-paste"></i></span>
+		<code>icol-page-white-paste</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-php"></i></span>
+		<code>icol-page-white-php</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-picture"></i></span>
+		<code>icol-page-white-picture</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-powerpoint"></i></span>
+		<code>icol-page-white-powerpoint</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-put"></i></span>
+		<code>icol-page-white-put</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-ruby"></i></span>
+		<code>icol-page-white-ruby</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-stack"></i></span>
+		<code>icol-page-white-stack</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-star"></i></span>
+		<code>icol-page-white-star</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-swoosh"></i></span>
+		<code>icol-page-white-swoosh</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-text-width"></i></span>
+		<code>icol-page-white-text-width</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-text"></i></span>
+		<code>icol-page-white-text</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-tux"></i></span>
+		<code>icol-page-white-tux</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-vector"></i></span>
+		<code>icol-page-white-vector</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-visualstudio"></i></span>
+		<code>icol-page-white-visualstudio</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-width"></i></span>
+		<code>icol-page-white-width</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-word"></i></span>
+		<code>icol-page-white-word</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-world"></i></span>
+		<code>icol-page-white-world</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-wrench"></i></span>
+		<code>icol-page-white-wrench</code>
+	</li>
+	<li>
+		<span><i class="icol-page-white-zip"></i></span>
+		<code>icol-page-white-zip</code>
+	</li>
+	<li>
+		<span><i class="icol-page"></i></span>
+		<code>icol-page</code>
+	</li>
+	<li>
+		<span><i class="icol-paintbrush"></i></span>
+		<code>icol-paintbrush</code>
+	</li>
+	<li>
+		<span><i class="icol-paintcan"></i></span>
+		<code>icol-paintcan</code>
+	</li>
+	<li>
+		<span><i class="icol-palette"></i></span>
+		<code>icol-palette</code>
+	</li>
+	<li>
+		<span><i class="icol-paper-bag"></i></span>
+		<code>icol-paper-bag</code>
+	</li>
+	<li>
+		<span><i class="icol-paste-plain"></i></span>
+		<code>icol-paste-plain</code>
+	</li>
+	<li>
+		<span><i class="icol-paste-word"></i></span>
+		<code>icol-paste-word</code>
+	</li>
+	<li>
+		<span><i class="icol-pencil"></i></span>
+		<code>icol-pencil</code>
+	</li>
+	<li>
+		<span><i class="icol-photo-album"></i></span>
+		<code>icol-photo-album</code>
+	</li>
+	<li>
+		<span><i class="icol-photos"></i></span>
+		<code>icol-photos</code>
+	</li>
+	<li>
+		<span><i class="icol-photo"></i></span>
+		<code>icol-photo</code>
+	</li>
+	<li>
+		<span><i class="icol-piano"></i></span>
+		<code>icol-piano</code>
+	</li>
+	<li>
+		<span><i class="icol-picture"></i></span>
+		<code>icol-picture</code>
+	</li>
+	<li>
+		<span><i class="icol-pilcrow"></i></span>
+		<code>icol-pilcrow</code>
+	</li>
+	<li>
+		<span><i class="icol-pill"></i></span>
+		<code>icol-pill</code>
+	</li>
+	<li>
+		<span><i class="icol-pin"></i></span>
+		<code>icol-pin</code>
+	</li>
+	<li>
+		<span><i class="icol-pipette"></i></span>
+		<code>icol-pipette</code>
+	</li>
+	<li>
+		<span><i class="icol-plaing-card"></i></span>
+		<code>icol-plaing-card</code>
+	</li>
+	<li>
+		<span><i class="icol-plugin"></i></span>
+		<code>icol-plugin</code>
+	</li>
+	<li>
+		<span><i class="icol-plug"></i></span>
+		<code>icol-plug</code>
+	</li>
+	<li>
+		<span><i class="icol-printer"></i></span>
+		<code>icol-printer</code>
+	</li>
+	<li>
+		<span><i class="icol-projection-screen-present"></i></span>
+		<code>icol-projection-screen-present</code>
+	</li>
+	<li>
+		<span><i class="icol-projection-screen"></i></span>
+		<code>icol-projection-screen</code>
+	</li>
+	<li>
+		<span><i class="icol-rainbow"></i></span>
+		<code>icol-rainbow</code>
+	</li>
+	<li>
+		<span><i class="icol-rocket"></i></span>
+		<code>icol-rocket</code>
+	</li>
+	<li>
+		<span><i class="icol-rosette"></i></span>
+		<code>icol-rosette</code>
+	</li>
+	<li>
+		<span><i class="icol-rss"></i></span>
+		<code>icol-rss</code>
+	</li>
+	<li>
+		<span><i class="icol-ruby"></i></span>
+		<code>icol-ruby</code>
+	</li>
+	<li>
+		<span><i class="icol-ruler-1"></i></span>
+		<code>icol-ruler-1</code>
+	</li>
+	<li>
+		<span><i class="icol-ruler-2"></i></span>
+		<code>icol-ruler-2</code>
+	</li>
+	<li>
+		<span><i class="icol-ruler-crop"></i></span>
+		<code>icol-ruler-crop</code>
+	</li>
+	<li>
+		<span><i class="icol-ruler-triangle"></i></span>
+		<code>icol-ruler-triangle</code>
+	</li>
+	<li>
+		<span><i class="icol-safe"></i></span>
+		<code>icol-safe</code>
+	</li>
+	<li>
+		<span><i class="icol-script"></i></span>
+		<code>icol-script</code>
+	</li>
+	<li>
+		<span><i class="icol-selection-select"></i></span>
+		<code>icol-selection-select</code>
+	</li>
+	<li>
+		<span><i class="icol-selection"></i></span>
+		<code>icol-selection</code>
+	</li>
+	<li>
+		<span><i class="icol-server"></i></span>
+		<code>icol-server</code>
+	</li>
+	<li>
+		<span><i class="icol-shading"></i></span>
+		<code>icol-shading</code>
+	</li>
+	<li>
+		<span><i class="icol-shape-aling-bottom"></i></span>
+		<code>icol-shape-aling-bottom</code>
+	</li>
+	<li>
+		<span><i class="icol-shape-aling-center"></i></span>
+		<code>icol-shape-aling-center</code>
+	</li>
+	<li>
+		<span><i class="icol-shape-aling-left"></i></span>
+		<code>icol-shape-aling-left</code>
+	</li>
+	<li>
+		<span><i class="icol-shape-aling-middle"></i></span>
+		<code>icol-shape-aling-middle</code>
+	</li>
+	<li>
+		<span><i class="icol-shape-aling-right"></i></span>
+		<code>icol-shape-aling-right</code>
+	</li>
+	<li>
+		<span><i class="icol-shape-aling-top"></i></span>
+		<code>icol-shape-aling-top</code>
+	</li>
+	<li>
+		<span><i class="icol-shape-flip-horizontal"></i></span>
+		<code>icol-shape-flip-horizontal</code>
+	</li>
+	<li>
+		<span><i class="icol-shape-flip-vertical"></i></span>
+		<code>icol-shape-flip-vertical</code>
+	</li>
+	<li>
+		<span><i class="icol-shape-group"></i></span>
+		<code>icol-shape-group</code>
+	</li>
+	<li>
+		<span><i class="icol-shape-handles"></i></span>
+		<code>icol-shape-handles</code>
+	</li>
+	<li>
+		<span><i class="icol-shape-move-backwards"></i></span>
+		<code>icol-shape-move-backwards</code>
+	</li>
+	<li>
+		<span><i class="icol-shape-move-back"></i></span>
+		<code>icol-shape-move-back</code>
+	</li>
+	<li>
+		<span><i class="icol-shape-move-forwards"></i></span>
+		<code>icol-shape-move-forwards</code>
+	</li>
+	<li>
+		<span><i class="icol-shape-move-front"></i></span>
+		<code>icol-shape-move-front</code>
+	</li>
+	<li>
+		<span><i class="icol-shape-square"></i></span>
+		<code>icol-shape-square</code>
+	</li>
+	<li>
+		<span><i class="icol-shield"></i></span>
+		<code>icol-shield</code>
+	</li>
+	<li>
+		<span><i class="icol-sitemap"></i></span>
+		<code>icol-sitemap</code>
+	</li>
+	<li>
+		<span><i class="icol-slides-stack"></i></span>
+		<code>icol-slides-stack</code>
+	</li>
+	<li>
+		<span><i class="icol-slides"></i></span>
+		<code>icol-slides</code>
+	</li>
+	<li>
+		<span><i class="icol-slide"></i></span>
+		<code>icol-slide</code>
+	</li>
+	<li>
+		<span><i class="icol-smiley-confuse"></i></span>
+		<code>icol-smiley-confuse</code>
+	</li>
+	<li>
+		<span><i class="icol-smiley-cool"></i></span>
+		<code>icol-smiley-cool</code>
+	</li>
+	<li>
+		<span><i class="icol-smiley-cry"></i></span>
+		<code>icol-smiley-cry</code>
+	</li>
+	<li>
+		<span><i class="icol-smiley-fat"></i></span>
+		<code>icol-smiley-fat</code>
+	</li>
+	<li>
+		<span><i class="icol-smiley-mad"></i></span>
+		<code>icol-smiley-mad</code>
+	</li>
+	<li>
+		<span><i class="icol-smiley-red"></i></span>
+		<code>icol-smiley-red</code>
+	</li>
+	<li>
+		<span><i class="icol-smiley-roll"></i></span>
+		<code>icol-smiley-roll</code>
+	</li>
+	<li>
+		<span><i class="icol-smiley-slim"></i></span>
+		<code>icol-smiley-slim</code>
+	</li>
+	<li>
+		<span><i class="icol-smiley-yell"></i></span>
+		<code>icol-smiley-yell</code>
+	</li>
+	<li>
+		<span><i class="icol-sockets"></i></span>
+		<code>icol-sockets</code>
+	</li>
+	<li>
+		<span><i class="icol-socket"></i></span>
+		<code>icol-socket</code>
+	</li>
+	<li>
+		<span><i class="icol-sort-alphabet"></i></span>
+		<code>icol-sort-alphabet</code>
+	</li>
+	<li>
+		<span><i class="icol-sort-date"></i></span>
+		<code>icol-sort-date</code>
+	</li>
+	<li>
+		<span><i class="icol-sort-disable"></i></span>
+		<code>icol-sort-disable</code>
+	</li>
+	<li>
+		<span><i class="icol-sort-number"></i></span>
+		<code>icol-sort-number</code>
+	</li>
+	<li>
+		<span><i class="icol-sort-price"></i></span>
+		<code>icol-sort-price</code>
+	</li>
+	<li>
+		<span><i class="icol-sort-quantity"></i></span>
+		<code>icol-sort-quantity</code>
+	</li>
+	<li>
+		<span><i class="icol-sort-rating"></i></span>
+		<code>icol-sort-rating</code>
+	</li>
+	<li>
+		<span><i class="icol-sort"></i></span>
+		<code>icol-sort</code>
+	</li>
+	<li>
+		<span><i class="icol-sound-note"></i></span>
+		<code>icol-sound-note</code>
+	</li>
+	<li>
+		<span><i class="icol-sound"></i></span>
+		<code>icol-sound</code>
+	</li>
+	<li>
+		<span><i class="icol-spellcheck"></i></span>
+		<code>icol-spellcheck</code>
+	</li>
+	<li>
+		<span><i class="icol-sport-8ball"></i></span>
+		<code>icol-sport-8ball</code>
+	</li>
+	<li>
+		<span><i class="icol-sport-basketball"></i></span>
+		<code>icol-sport-basketball</code>
+	</li>
+	<li>
+		<span><i class="icol-sport-football"></i></span>
+		<code>icol-sport-football</code>
+	</li>
+	<li>
+		<span><i class="icol-sport-golf"></i></span>
+		<code>icol-sport-golf</code>
+	</li>
+	<li>
+		<span><i class="icol-sport-raquet"></i></span>
+		<code>icol-sport-raquet</code>
+	</li>
+	<li>
+		<span><i class="icol-sport-shuttlecock"></i></span>
+		<code>icol-sport-shuttlecock</code>
+	</li>
+	<li>
+		<span><i class="icol-sport-soccer"></i></span>
+		<code>icol-sport-soccer</code>
+	</li>
+	<li>
+		<span><i class="icol-sport-tennis"></i></span>
+		<code>icol-sport-tennis</code>
+	</li>
+	<li>
+		<span><i class="icol-stamp"></i></span>
+		<code>icol-stamp</code>
+	</li>
+	<li>
+		<span><i class="icol-star-1"></i></span>
+		<code>icol-star-1</code>
+	</li>
+	<li>
+		<span><i class="icol-star-2"></i></span>
+		<code>icol-star-2</code>
+	</li>
+	<li>
+		<span><i class="icol-status-online"></i></span>
+		<code>icol-status-online</code>
+	</li>
+	<li>
+		<span><i class="icol-stop"></i></span>
+		<code>icol-stop</code>
+	</li>
+	<li>
+		<span><i class="icol-style"></i></span>
+		<code>icol-style</code>
+	</li>
+	<li>
+		<span><i class="icol-sum-2"></i></span>
+		<code>icol-sum-2</code>
+	</li>
+	<li>
+		<span><i class="icol-sum"></i></span>
+		<code>icol-sum</code>
+	</li>
+	<li>
+		<span><i class="icol-switch"></i></span>
+		<code>icol-switch</code>
+	</li>
+	<li>
+		<span><i class="icol-table"></i></span>
+		<code>icol-table</code>
+	</li>
+	<li>
+		<span><i class="icol-tab"></i></span>
+		<code>icol-tab</code>
+	</li>
+	<li>
+		<span><i class="icol-tag-blue"></i></span>
+		<code>icol-tag-blue</code>
+	</li>
+	<li>
+		<span><i class="icol-tag"></i></span>
+		<code>icol-tag</code>
+	</li>
+	<li>
+		<span><i class="icol-target"></i></span>
+		<code>icol-target</code>
+	</li>
+	<li>
+		<span><i class="icol-telephone"></i></span>
+		<code>icol-telephone</code>
+	</li>
+	<li>
+		<span><i class="icol-television"></i></span>
+		<code>icol-television</code>
+	</li>
+	<li>
+		<span><i class="icol-text-align-center"></i></span>
+		<code>icol-text-align-center</code>
+	</li>
+	<li>
+		<span><i class="icol-text-align-justify"></i></span>
+		<code>icol-text-align-justify</code>
+	</li>
+	<li>
+		<span><i class="icol-text-align-left"></i></span>
+		<code>icol-text-align-left</code>
+	</li>
+	<li>
+		<span><i class="icol-text-align-right"></i></span>
+		<code>icol-text-align-right</code>
+	</li>
+	<li>
+		<span><i class="icol-text-allcaps"></i></span>
+		<code>icol-text-allcaps</code>
+	</li>
+	<li>
+		<span><i class="icol-text-bold"></i></span>
+		<code>icol-text-bold</code>
+	</li>
+	<li>
+		<span><i class="icol-text-columns"></i></span>
+		<code>icol-text-columns</code>
+	</li>
+	<li>
+		<span><i class="icol-text-dropcaps"></i></span>
+		<code>icol-text-dropcaps</code>
+	</li>
+	<li>
+		<span><i class="icol-text-heading-1"></i></span>
+		<code>icol-text-heading-1</code>
+	</li>
+	<li>
+		<span><i class="icol-text-horizontalrule"></i></span>
+		<code>icol-text-horizontalrule</code>
+	</li>
+	<li>
+		<span><i class="icol-text-indent-remove"></i></span>
+		<code>icol-text-indent-remove</code>
+	</li>
+	<li>
+		<span><i class="icol-text-indent"></i></span>
+		<code>icol-text-indent</code>
+	</li>
+	<li>
+		<span><i class="icol-text-italic"></i></span>
+		<code>icol-text-italic</code>
+	</li>
+	<li>
+		<span><i class="icol-text-kerning"></i></span>
+		<code>icol-text-kerning</code>
+	</li>
+	<li>
+		<span><i class="icol-text-letter-omega"></i></span>
+		<code>icol-text-letter-omega</code>
+	</li>
+	<li>
+		<span><i class="icol-text-letterspacing"></i></span>
+		<code>icol-text-letterspacing</code>
+	</li>
+	<li>
+		<span><i class="icol-text-linespacing"></i></span>
+		<code>icol-text-linespacing</code>
+	</li>
+	<li>
+		<span><i class="icol-text-list-bullets"></i></span>
+		<code>icol-text-list-bullets</code>
+	</li>
+	<li>
+		<span><i class="icol-text-list-numbers"></i></span>
+		<code>icol-text-list-numbers</code>
+	</li>
+	<li>
+		<span><i class="icol-text-lowercase"></i></span>
+		<code>icol-text-lowercase</code>
+	</li>
+	<li>
+		<span><i class="icol-text-padding-bottom"></i></span>
+		<code>icol-text-padding-bottom</code>
+	</li>
+	<li>
+		<span><i class="icol-text-padding-left"></i></span>
+		<code>icol-text-padding-left</code>
+	</li>
+	<li>
+		<span><i class="icol-text-padding-right"></i></span>
+		<code>icol-text-padding-right</code>
+	</li>
+	<li>
+		<span><i class="icol-text-padding-top"></i></span>
+		<code>icol-text-padding-top</code>
+	</li>
+	<li>
+		<span><i class="icol-text-signature"></i></span>
+		<code>icol-text-signature</code>
+	</li>
+	<li>
+		<span><i class="icol-text-smallcaps"></i></span>
+		<code>icol-text-smallcaps</code>
+	</li>
+	<li>
+		<span><i class="icol-text-strikethrough"></i></span>
+		<code>icol-text-strikethrough</code>
+	</li>
+	<li>
+		<span><i class="icol-text-subscript"></i></span>
+		<code>icol-text-subscript</code>
+	</li>
+	<li>
+		<span><i class="icol-textfield-rename"></i></span>
+		<code>icol-textfield-rename</code>
+	</li>
+	<li>
+		<span><i class="icol-textfield"></i></span>
+		<code>icol-textfield</code>
+	</li>
+	<li>
+		<span><i class="icol-ticket"></i></span>
+		<code>icol-ticket</code>
+	</li>
+	<li>
+		<span><i class="icol-timeline-marker"></i></span>
+		<code>icol-timeline-marker</code>
+	</li>
+	<li>
+		<span><i class="icol-traffic"></i></span>
+		<code>icol-traffic</code>
+	</li>
+	<li>
+		<span><i class="icol-transmit"></i></span>
+		<code>icol-transmit</code>
+	</li>
+	<li>
+		<span><i class="icol-trophy-bronze"></i></span>
+		<code>icol-trophy-bronze</code>
+	</li>
+	<li>
+		<span><i class="icol-trophy-silver"></i></span>
+		<code>icol-trophy-silver</code>
+	</li>
+	<li>
+		<span><i class="icol-trophy"></i></span>
+		<code>icol-trophy</code>
+	</li>
+	<li>
+		<span><i class="icol-ui-combo-box"></i></span>
+		<code>icol-ui-combo-box</code>
+	</li>
+	<li>
+		<span><i class="icol-ui-saccordion"></i></span>
+		<code>icol-ui-saccordion</code>
+	</li>
+	<li>
+		<span><i class="icol-ui-slider-1"></i></span>
+		<code>icol-ui-slider-1</code>
+	</li>
+	<li>
+		<span><i class="icol-ui-slider-2"></i></span>
+		<code>icol-ui-slider-2</code>
+	</li>
+	<li>
+		<span><i class="icol-ui-tab-bottom"></i></span>
+		<code>icol-ui-tab-bottom</code>
+	</li>
+	<li>
+		<span><i class="icol-ui-tab-content"></i></span>
+		<code>icol-ui-tab-content</code>
+	</li>
+	<li>
+		<span><i class="icol-ui-tab-disable"></i></span>
+		<code>icol-ui-tab-disable</code>
+	</li>
+	<li>
+		<span><i class="icol-ui-tab-side"></i></span>
+		<code>icol-ui-tab-side</code>
+	</li>
+	<li>
+		<span><i class="icol-ui-text-field-hidden"></i></span>
+		<code>icol-ui-text-field-hidden</code>
+	</li>
+	<li>
+		<span><i class="icol-ui-text-field-password"></i></span>
+		<code>icol-ui-text-field-password</code>
+	</li>
+	<li>
+		<span><i class="icol-umbrella"></i></span>
+		<code>icol-umbrella</code>
+	</li>
+	<li>
+		<span><i class="icol-user-black-female"></i></span>
+		<code>icol-user-black-female</code>
+	</li>
+	<li>
+		<span><i class="icol-user-business-boss"></i></span>
+		<code>icol-user-business-boss</code>
+	</li>
+	<li>
+		<span><i class="icol-user-business"></i></span>
+		<code>icol-user-business</code>
+	</li>
+	<li>
+		<span><i class="icol-user-female"></i></span>
+		<code>icol-user-female</code>
+	</li>
+	<li>
+		<span><i class="icol-user-silhouette"></i></span>
+		<code>icol-user-silhouette</code>
+	</li>
+	<li>
+		<span><i class="icol-user-thief-baldie"></i></span>
+		<code>icol-user-thief-baldie</code>
+	</li>
+	<li>
+		<span><i class="icol-user-thief"></i></span>
+		<code>icol-user-thief</code>
+	</li>
+	<li>
+		<span><i class="icol-user"></i></span>
+		<code>icol-user</code>
+	</li>
+	<li>
+		<span><i class="icol-vcard"></i></span>
+		<code>icol-vcard</code>
+	</li>
+	<li>
+		<span><i class="icol-vector"></i></span>
+		<code>icol-vector</code>
+	</li>
+	<li>
+		<span><i class="icol-wait"></i></span>
+		<code>icol-wait</code>
+	</li>
+	<li>
+		<span><i class="icol-wall-break"></i></span>
+		<code>icol-wall-break</code>
+	</li>
+	<li>
+		<span><i class="icol-wall-brick"></i></span>
+		<code>icol-wall-brick</code>
+	</li>
+	<li>
+		<span><i class="icol-wall-disable"></i></span>
+		<code>icol-wall-disable</code>
+	</li>
+	<li>
+		<span><i class="icol-wall"></i></span>
+		<code>icol-wall</code>
+	</li>
+	<li>
+		<span><i class="icol-wand"></i></span>
+		<code>icol-wand</code>
+	</li>
+	<li>
+		<span><i class="icol-weather-clouds"></i></span>
+		<code>icol-weather-clouds</code>
+	</li>
+	<li>
+		<span><i class="icol-weather-cloudy"></i></span>
+		<code>icol-weather-cloudy</code>
+	</li>
+	<li>
+		<span><i class="icol-weather-lightning"></i></span>
+		<code>icol-weather-lightning</code>
+	</li>
+	<li>
+		<span><i class="icol-weather-rain"></i></span>
+		<code>icol-weather-rain</code>
+	</li>
+	<li>
+		<span><i class="icol-weather-snow"></i></span>
+		<code>icol-weather-snow</code>
+	</li>
+	<li>
+		<span><i class="icol-weather-sun"></i></span>
+		<code>icol-weather-sun</code>
+	</li>
+	<li>
+		<span><i class="icol-webcam"></i></span>
+		<code>icol-webcam</code>
+	</li>
+	<li>
+		<span><i class="icol-world"></i></span>
+		<code>icol-world</code>
+	</li>
+	<li>
+		<span><i class="icol-zone-money"></i></span>
+		<code>icol-zone-money</code>
+	</li>
+	<li>
+		<span><i class="icol-zones"></i></span>
+		<code>icol-zones</code>
+	</li>
+	<li>
+		<span><i class="icol-zone"></i></span>
+		<code>icol-zone</code>
+	</li>
+</ul>
+</div>

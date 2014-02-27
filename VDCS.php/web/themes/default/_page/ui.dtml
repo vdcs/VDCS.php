@@ -1,0 +1,255 @@
+<label:include file="frame/headers">
+
+<label:include script="comm/process.css" type="css">
+
+<div class="framer">
+	<div class="side">
+
+
+<style type="text/css">
+.demo-btn{}
+.demo-btn p a{margin:5px;}
+</style>
+<div class="demo-btn">
+<p>
+<a class="btn" href="javascript:;"><span>普通 btn</span></a>
+<br/>
+<a class="btn m" href="javascript:;"><span><i class="icol-lock"></i>主要 btn m</span></a>
+<br/>
+<a class="btn c" href="javascript:;"><span><i class="icos-bag"></i>着重 btn c</span></a>
+</p>
+
+<p>
+<a class="btn b" href="javascript:;"><span>普通 btn b</span></a>
+<br/>
+<a class="btn b m" href="javascript:;"><span><i class="icol-monitor"></i>主要 btn b m</span></a>
+<br/>
+<a class="btn b c" href="javascript:;"><span><i class="icos-cog"></i>着重 btn b c</span></a>
+</p>
+
+<p>
+<a class="btn s" href="javascript:;"><span>普通 btn s</span></a>
+<br/>
+<a class="btn s m" href="javascript:;"><span>主要 btn s m</span></a>
+<br/>
+<a class="btn s c" href="javascript:;"><span>着重 btn s c</span></a>
+</p>
+
+<div class="space"></div>
+<sh></sh>
+
+<p>
+<a class="btn">Default Button</a> 
+<a class="btn btn-primary">Primary Button</a>
+<a class="btn btn-info">Info Button</a>
+<a class="btn btn-success">Success Button</a>
+<a class="btn btn-warning">Warning Button</a>
+<a class="btn btn-danger">Danger Button</a>
+<a class="btn btn-inverse">Inverse Button</a>
+</p>
+<p>
+<a class="btn" disabled="">Default Button</a> 
+<a class="btn btn-primary" disabled="">Primary Button</a>
+<a class="btn btn-info" disabled="">Info Button</a>
+<a class="btn btn-success" disabled="">Success Button</a>
+<a class="btn btn-warning" disabled="">Warning Button</a>
+<a class="btn btn-danger" disabled="">Danger Button</a>
+<a class="btn btn-inverse" disabled="">Inverse Button</a>
+</p>
+</div>
+
+	</div>
+	<div class="cent">
+
+<p>
+<div class="btn-group">
+<a class="btn dropdown-toggle" data-toggle="dropdown"><span>Action</span><em class="caret"></em></a>
+<ul class="dropdown-menu">
+	<li><a href="#">Action</a></li>
+	<li><a href="#">Another action</a></li>
+	<li><a href="#">Something else here</a></li>
+	<li class="divider"></li>
+	<li><a href="#">Separated link</a></li>
+</ul>
+</div>
+<div class="btn-group">
+<a class="btn">操作</a>
+<a class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+<ul class="dropdown-menu">
+	<li><a href="#">Action</a></li>
+	<li><a href="#">Another action</a></li>
+	<li><a href="#">Something else here</a></li>
+	<li class="divider"></li>
+	<li><a href="#">Separated link</a></li>
+</ul>
+</div>
+</p>
+<div class="space"></div>
+<p>
+<div class="btn-group">
+<a class="btn b dropdown-toggle" data-toggle="dropdown"><span>Action</span><em class="caret"></em></a>
+<ul class="dropdown-menu">
+	<li><a href="#">Action</a></li>
+	<li><a href="#">Another action</a></li>
+	<li><a href="#">Something else here</a></li>
+	<li class="divider"></li>
+	<li><a href="#">Separated link</a></li>
+</ul>
+</div>
+<div class="btn-group">
+<a class="btn b">操作</a>
+<a class="btn b dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+<ul class="dropdown-menu">
+	<li><a href="#">Action</a></li>
+	<li><a href="#">Another action</a></li>
+	<li><a href="#">Something else here</a></li>
+	<li class="divider"></li>
+	<li><a href="#">Separated link</a></li>
+</ul>
+</div>
+</p>
+<div class="space"></div>
+<p>
+<div class="btn-group">
+<a class="btn s dropdown-toggle" data-toggle="dropdown"><span>Action</span><em class="caret"></em></a>
+<ul class="dropdown-menu">
+	<li><a href="#">Action</a></li>
+	<li><a href="#">Another action</a></li>
+	<li><a href="#">Something else here</a></li>
+	<li class="divider"></li>
+	<li><a href="#">Separated link</a></li>
+</ul>
+</div>
+<div class="btn-group">
+<a class="btn s">操作</a>
+<a class="btn s dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+<ul class="dropdown-menu">
+	<li><a href="#">Action</a></li>
+	<li><a href="#">Another action</a></li>
+	<li><a href="#">Something else here</a></li>
+	<li class="divider"></li>
+	<li><a href="#">Separated link</a></li>
+</ul>
+</div>
+</p>
+<div class="space"></div>
+<sh></sh>
+
+
+<p class="itip alert"><em></em><span>提示信息提示信息提示信息提示<br/>信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息</span></p>
+<div class="space"></div>
+<p class="itip load"><em></em><span>提示信息</span></p>
+<div class="space"></div>
+<p class="itip info"><em></em><span>提示信息</span></p>
+<div class="space"></div>
+<p class="itip error"><em></em><span>提示信息</span></p>
+<div class="space"></div>
+<p class="itip succeed"><em></em><span>提示信息</span></p>
+<div class="space"></div>
+<p class="itip infos info"><em></em><span>提示信息提示信息提示信息提示<br/>信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息</span></p>
+<div class="space"></div>
+<p class="itip alerts alert"><em></em><span>提示信息</span></p>
+<div class="space"></div>
+<p class="itip errors error"><em></em><span>提示信息</span></p>
+<div class="space"></div>
+<p class="itip succeeds succeed"><em></em><span>提示信息</span></p>
+<div class="space"></div>
+
+<p class="itip m load"><em></em><span>提示信息</span></p>
+<div class="space"></div>
+<p class="itip m info"><em></em><span>提示信息</span></p>
+<div class="space"></div>
+<p class="itip m alerts alert"><em></em><span>提示信息</span></p>
+<div class="space"></div>
+
+
+<div class="mtip" id="mtip">
+	<cite class="succeed"><em></em></cite>
+	<h3>提示标题</h3>
+	<h4>提示内容</h4>
+	<h5>
+<a class="btn" el="root" href="<url:root>"><span>首页</span></a>
+<a class="btn c" el="back" href="<url:root>"><span>返回</span></a>
+<a class="btn m" el="goback" href="<url:root>"><span>返回上一页</span></a>
+	</h5>
+</div>
+<div class="space"></div>
+<div class="mtip" id="mtip">
+	<cite class="error"><em></em></cite>
+	<h3>提示标题</h3>
+	<h4>提示内容</h4>
+	<h5>
+<a class="btn" el="root" href="<url:root>"><span>首页</span></a>
+<a class="btn" el="back" href="<url:root>"><span>返回</span></a>
+<a class="btn" el="goback" href="<url:root>"><span>返回上一页</span></a>
+	</h5>
+</div>
+<div class="space"></div>
+<div class="mtip" id="mtip">
+	<cite class="alert"><em></em></cite>
+	<h3>提示标题</h3>
+	<h4>提示内容</h4>
+	<h5>
+<a class="btn" el="root" href="<url:root>"><span>首页</span></a>
+<a class="btn" el="back" href="<url:root>"><span>返回</span></a>
+<a class="btn" el="goback" href="<url:root>"><span>返回上一页</span></a>
+	</h5>
+</div>
+<div class="space"></div>
+<div class="mtip" id="mtip">
+	<cite class="info"><em></em></cite>
+	<h3>提示标题</h3>
+	<h4>提示内容</h4>
+	<h5>
+<a class="btn" el="root" href="<url:root>"><span>首页</span></a>
+<a class="btn" el="back" href="<url:root>"><span>返回</span></a>
+<a class="btn" el="goback" href="<url:root>"><span>返回上一页</span></a>
+	</h5>
+</div>
+<div class="space"></div>
+<div class="mtip" id="mtip">
+	<h3>Message clot提示信息</h3>
+	<h4>message、help、notice、friends</h4>
+<div class="iblank clot message"><p><em></em><i>Help提示信息！</i></p></div>
+	<h3>message inline提示信息</h3>
+<div class="iblank inline message"><p><em></em><i>Message提示信息！</i></p></div>
+</div>
+	</div>
+	<div class="sider">
+
+<div id="Popups0" class="ui-popup"><div class="pinner"><div class="pbody"><p>冒泡信息</p></div></div></div>
+<div id="Popups1" class="ui-popup info"><div class="pinner"><div class="pbody"><p>冒泡信息</p></div></div></div>
+<div id="Popups2" class="ui-popup succeed"><div class="pinner"><div class="pbody"><p>冒泡信息</p></div></div></div>
+<div id="Popups3" class="ui-popup error"><div class="pinner"><div class="pbody"><p>冒泡信息</p></div></div></div>
+<div class="space"></div>
+<a href="javascript:;" onclick="javascript:ui.popups('','冒泡测试信息 (点击关闭)',true,500)">冒泡测试</a>
+<a href="javascript:;" onclick="javascript:ui.popups('info','冒泡测试',true,500)">冒泡测试</a>
+<a href="javascript:;" onclick="javascript:ui.mini.show('加载中..',{timer:5})">边提示</a>
+<div class="space"></div>
+
+<a href="javascript:;" onclick="javascript:ui.confirm('您确定要删除一条信息嘛？',function(){alert('handle..')})">确认窗口</a>
+<a href="javascript:;" onclick="javascript:ui.confirm('删除一条信息',function(){alert('handle..')},{mode:1})">确认窗口1</a>
+<a href="javascript:;" onclick="javascript:ui.confirm('删除一条信息删除一条信息',function(){alert('handle..')},{mode:2})">确认窗口2</a>
+<div class="space"></div>
+
+<a href="javascript:;" class="tipload-container">上传<span class="tipload-shade"></span><span class="tipload"><em></em></span></a>
+<a href="javascript:;" class="tipload-container ac vam" style="display:inline-block; width:100px;height:100px;line-height:100px;">上传<span class="tipload-shade"></span><span class="tipload"><em></em></span></a>
+
+
+<div class="space"></div>
+<div class="ioverlay">
+    <img src="<url:images>logo_header.png" alt="" style="width:160px;height:100px;" />
+    <div class="overlay-area">wait</div>
+</div>
+<div class="space"></div>
+<a class="ioverlay" href="">
+    <img src="<url:images>logo_header.png" alt="" style="width:160px;height:100px;" />
+    <div class="overlay-caption">提示信息</div>
+</a>
+
+	</div>
+</div>
+<div class="framer"><div class="space"></div></div>
+
+
+<label:include file="frame/footers">

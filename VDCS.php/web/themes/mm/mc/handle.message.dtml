@@ -1,0 +1,28 @@
+<label:include file="frame/header">
+<label:include file="frame/frame.left">
+<label:include file="frame/frame-menu">
+<label:include file="frame/frame.space">
+<div class="ContentMain">
+
+<label:include file="/common/handle.message.part">
+<script type="text/javascript">
+/*
+HMSG.lang({
+	'not.exist'		:'您要操作的信息不存在！',
+	'ok.add'		:'您已成功发布了一条信息。',
+	'ok.edit'		:'您已成功更新了一条信息。',
+'':''});
+HMSG.set({status:"info",icon:"info",
+topic		:"提示信息",
+explain		:"网站目前没有开放可供发布的频道",
+goback		:"show",
+index		:"hide",
+'':''});
+
+HMSG.parse();
+*/
+</script>
+
+</div>
+<label:include file="frame/frame.right">
+<label:include file="frame/footer">

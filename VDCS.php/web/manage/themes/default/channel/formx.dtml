@@ -1,0 +1,9 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+
+
+<label:include file="inc/forms">
+
+
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

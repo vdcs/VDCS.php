@@ -1,0 +1,41 @@
+
+</div><!-- goods view end -->
+	</div>
+</div>
+<script type="text/javascript">
+$(function plus(){
+	var t = $("input[name=amount]");
+	//数量增加操作
+	$("[el=plus]").click(function(){		
+		t.val(parseInt(t.val())+1);
+	});
+	//数量减少操作
+	$("[el=minus]").click(function(){
+		if(parseInt(t.val())>1)
+		t.val(parseInt(t.val())-1);
+	});
+});
+
+$(function(){
+	var jview=$('.e_view');
+	var _add=function(){
+		var _params=jview.find('form:first').serialize();
+		var _url='/{@channel}/cart.x?action=add&'+_params;
+		//dbg.t(_url);
+		$ajax({url:_url,value:'xml',ready:function(xml){parseAsync(xml);},error:true});
+		return false;
+	};
+	var parseAsync=function(xml){
+		var map=$util.toMapByXML(xml);
+		var treeVar=map.getItemTree('var');
+		if(treeVar.v('status')=='succeed'){
+			ui.popups('succeed','已加入购物车');
+		}else{
+			ui.popups('info',treeVar.v('message'));
+		}
+	};
+
+	jview.finda('#cart.add').click(_add);
+	
+});
+</script>

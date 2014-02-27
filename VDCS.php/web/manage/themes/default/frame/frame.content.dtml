@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<web:meta.charset>"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title><app:web.name> 管理后台(Menu)</title>
+<link rel="stylesheet" type="text/css" href="<app:url.manage.themes>frame/style.css" />
+<script type="text/javascript" src="<app:url.script>VDCS-optimize.js"></script>
+<script type="text/javascript">dcs.config.setPath("<app:dir.root>","<app:url.root>");</script>
+<script type="text/javascript" src="<app:url.manage.themes>frame/public.js"></script>
+<script type="text/javascript">
+<!--
+appFrame._data["frame"]="menu";
+appFrame.BaseChannel="<url:manage.channel>";
+$w.bindEvent("load","appFrame.doMenuInit()");
+//-->
+</script>
+</head>
+<body class="BodyFrameMenu">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%" id="FrameMenu-Table" class="FrameMenuTable">
+<tr>
+<td width="*" id="FrameMenu-Main" class="FrameMenu-Main" valign="top">
+<div id="menu-channels-frame" style="display:none;">
+<div id="menu-channels-body">load..</div>
+<xmp id="menu-channels-load"><div style="height:100px;"><img class="icon" src="<url:images>common/load/load.gif" /> 正在装载频道设置..</div></xmp>
+<div class="space"></div>
+</div>
+<div class="Cob">
+	<div class="CobBar hand"><p>频道选择</p></div>
+	<div class="CobContent"><div class="CobInner">
+<div class="FrameMenu-Menu-Channels" style="">
+<ul>
+<loop:channel.complex>
+<li><a id="menu-channels-item-[item:channel]" href="javascript:;" onclick="javascript:appFrame.doMenuChannelChange('[item:channel]');"><span>[item:name]</span></a></li>
+</loop>
+</ul>
+</div>
+	</div></div>
+	<div class="CobFooter"><p><img class="space" src="/admin/data/themes/space.gif"></p></div>
+</div>
+
+</td>
+<td width="6" class="FrameMenu-Bar"><img id="FrameMenu-Bar-Button" class="icon hand" src="<app:url.manage.themes>frame/menu/bar_switch_close.gif" onclick="javascript:appFrame.doMenuSwitch();" alt="隐藏/显示导航窗口" /></td>
+</tr>
+</table>
+</body>
+</html>
+<!-- Processed in <web:stat.exectime> s, <web:stat.query> queries. -->

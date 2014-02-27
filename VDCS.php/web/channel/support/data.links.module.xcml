@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,key,name</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<key>1</key>
+		<value><![CDATA[fir]]></value>
+		<name><![CDATA[首页链接]]></name>
+	</item>
+	<item>
+		<key>2</key>
+		<value><![CDATA[fir_txt]]></value>
+		<name><![CDATA[首页文字链接]]></name>
+	</item>
+	<item>
+		<key>3</key>
+		<value><![CDATA[sec]]></value>
+		<name><![CDATA[内页链接]]></name>
+	</item>	
+	<item>
+		<key>4</key>
+		<value><![CDATA[txt]]></value>
+		<name><![CDATA[内页文字链接]]></name>
+	</item>
+	<item>
+		<key>5</key>
+		<value><![CDATA[forum]]></value>
+		<name><![CDATA[论坛链接]]></name>
+	</item>
+	<item>
+		<key>6</key>
+		<value><![CDATA[ftxt]]></value>
+		<name><![CDATA[论坛文字链接]]></name>
+	</item>
+</xcml>

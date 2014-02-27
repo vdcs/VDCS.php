@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>action</frame>
+		
+		<table.name>dbc_adr</table.name>
+		<table.px>c_</table.px>
+		<table.field.id>id</table.field.id>
+		<table.field.pic>res</table.field.pic>
+		<table.fields.value>id=id;time=tim</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.order>id asc</list.table.order>
+		<list.table.orders>id desc</list.table.orders>
+		<list.handle.select.option>hide,unhide,delete</list.handle.select.option>
+		<list.handle.sql.hide>update dbc_adr set status=0 where id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.unhide>update dbc_adr set status=1 where id in ({$ids})</list.handle.sql.unhide>
+		<list.handle.sql.delete>delete from dbc_adr where id in ({$ids})</list.handle.sql.delete>
+	</config>
+	
+	<lang>
+		<title><![CDATA[广告位管理]]></title>
+		<title.name><![CDATA[广告位列表]]></title.name>
+		<title.list><![CDATA[广告位列表]]></title.list>
+		<title.list.><![CDATA[广告位列表]]></title.list.>
+		<title.add><![CDATA[添加广告位]]></title.add>
+		<title.edit><![CDATA[编辑广告位]]></title.edit>
+		
+		<error.not.exist><![CDATA[您要操作的广告位不存在！]]></error.not.exist>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 个广告位！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 个广告位！]]></handle.ok.edit>
+		<handle.ok.hide><![CDATA[成功隐藏操作了 {$count} 个广告位！]]></handle.ok.hide>
+		<handle.ok.unhide><![CDATA[成功显示操作了 {$count} 个广告位！]]></handle.ok.unhide>
+		<handle.ok.delete><![CDATA[成功删除了 {$count} 个广告位！]]></handle.ok.delete>
+		<handle.ok.update><![CDATA[成功更新了所有广告位！]]></handle.ok.update>
+	</lang>
+	
+	<template>
+	
+	</template>
+</xcml>

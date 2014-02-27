@@ -1,0 +1,8 @@
+<li>
+<div class="pics"><span class="pic"><span class="effect"></span><a href="[item:linkurl]">[item:pic]</a></span></div>
+<div class="parts">
+<div class="topics"><span class="topic"><a href="[item:linkurl]">[item:topic!html!50]</a></span></div>
+<div class="infos"><span class="summary">[item:summary!text!180]</span></div>
+<div class="infos"><span class="class">[[item:class]]</span> <span class="time"><langs:chn.time> <em>[item:tim!date]</em></span> <span class="total-view"><chn:var("act")><em>[item:total.view]</em><langs:chn.views></span></div>
+</div>
+</li>

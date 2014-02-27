@@ -1,0 +1,3 @@
+<label:include script="jquery/extends.min.js">
+<label:include script="VDCS.post.js">
+<label:include script="upload/ui.uploadx.js">

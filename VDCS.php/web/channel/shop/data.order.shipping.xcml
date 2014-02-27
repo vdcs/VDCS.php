@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>name,price,explain</field>
+	</configure>
+	<item>
+		<name>普通</name>
+		<price>0</price>
+		<explain><![CDATA[您购买的物品可以上门获取，市内我们将免费快递送达]]></explain>
+	</item>
+	<item>
+		<name>邮寄</name>
+		<price>10</price>
+		<explain><![CDATA[我们会将物品采用邮局寄送的形式在订单处理后一周内送达您的收货地址]]></explain>
+	</item>
+	<item>
+		<name>特快</name>
+		<price>20</price>
+		<explain><![CDATA[我们会将物品采用EMS快递的形式在订单处理后三日内送达您的收货地址]]></explain>
+	</item>
+</xcml>

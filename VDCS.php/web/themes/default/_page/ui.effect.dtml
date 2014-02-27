@@ -1,0 +1,69 @@
+<label:include file="frame/headers">
+
+<label:include script="html5/effect.css" type="css">
+<div class="animated fadeInLeftMiddle">animated fadeInLeftMiddle</div>
+<div class="fast fadeInLeftMiddle">fast fadeInLeftMiddle</div>
+<div class="animated flash">animated flash</div>
+<div class="animated shake">animated shake</div>
+<div class="fast hinge">fast hinge??</div>
+<div class="animated bounce">animated bounce</div>
+<div class="animated tada">animated tada</div>
+<div class="animated swing">animated swing</div>
+<div class="animated wobble">animated wobble</div>
+<div class="animated pulse">animated pulse</div>
+<div class="animated rollIn">animated rollIn</div>
+<div class="animated fadeInUpBig">animated rollOut</div>
+
+------------------------------------------------------------------------------------------<hr />
+1.速度，效果修饰样式
+fast
+animated
+
+<hr />
+2.动画效果
+hinge
+flash
+shake
+bounce
+tada
+swing
+wobble
+pulse
+
+
+<hr />
+3.出入
+rollIn
+rollOut
+
+<hr />
+fadeIn
+fadeInUp
+fadeInDown
+fadeInLeft
+fadeInRight
+fadeInUpBig	加big从远方= =
+fadeInDownBig
+fadeInLeftBig
+fadeInLeftMiddle
+fadeInRightBig
+
+<hr />
+fadeOut
+fadeOutUp
+fadeOutDown
+fadeOutLeft
+fadeOutRight
+fadeOutUpBig
+fadeOutDownBig
+fadeOutLeftBig
+
+
+
+
+
+
+
+
+
+<label:include file="frame/footers">

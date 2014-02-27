@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>sms</node>
+	</configure>
+	<sms>
+		<message><![CDATA[尊敬的用户：您本次“{$title}”操作动态码是"{$code}"。请在页面输入该动态码进行下一步操作。]]></message>
+		<register.title><![CDATA[注册帐号]]></register.title>
+	</sms>
+</xcml>

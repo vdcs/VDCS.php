@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="control">
+	<configure>
+		<node>popedom</node>
+	</configure>
+	<popedom>
+		<module.account-action><![CDATA[list,view,add,edit,searchi]]></module.account-action>
+		<module.__account-action>newline</module.__account-action>
+		<module.account-handle><![CDATA[default]]></module.account-handle>
+		<module.__account-handle>newline</module.__account-handle>
+
+		<module.assets.remit-action><![CDATA[list,view,add,edit,searchi]]></module.assets.remit-action>
+		<module.__assets.remit-action>newline</module.__assets.remit-action>
+		<module.assets.remit-handle><![CDATA[delete]]></module.assets.remit-handle>
+		<module.__assets.remit-handle>newline</module.__assets.remit-handle>
+		
+		<module.assets.refund-action><![CDATA[list,view,add,edit,searchi]]></module.assets.refund-action>
+		<module.__assets.refund-action>newline</module.__assets.refund-action>
+		<module.assets.refund-handle><![CDATA[delete]]></module.assets.refund-handle>
+		<module.__assets.refund-handle>newline</module.__assets.refund-handle>
+		
+		<module.coupon-action><![CDATA[list,view,add,edit,searchi]]></module.coupon-action>
+		<module.__coupon-action>newline</module.__coupon-action>
+		<module.coupon-handle><![CDATA[delete]]></module.coupon-handle>
+		<module.__coupon-handle>newline</module.__coupon-handle>
+		
+		<module.bill-action><![CDATA[list,view,add,edit,pay,searchi]]></module.bill-action>
+		<module.__bill-action>newline</module.__bill-action>
+		<module.bill-handle><![CDATA[delete]]></module.bill-handle>
+		<module.__bill-handle>newline</module.__bill-handle>
+
+		<title><![CDATA[assets.remit@names=转帐;assets.refund@names=提现;
+			coupon@names=优惠卷;
+			bill@names=账单;bill@action.pay=帐单付款;
+			message@action.list=短信列表;message@action.put=短信群发;message@action.clear=短信清理;message@handle.delete=短信删除;
+			fav@action.list=书签列表;fav@handle.delete=书签删除;favgroup@action.list=书签组列表;favgroup@handle.delete=书签组删除;
+			record@action.list=消费记录列表;record@handle.delete=消费记录删除]]></title>
+	</popedom>
+</xcml>

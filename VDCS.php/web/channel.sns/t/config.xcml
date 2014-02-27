@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre xmlns:mlog="node" xmlns:tags="node">
+		<channel>{@channel}</channel>
+		<table.namex>db_{@channel}_</table.namex>
+		<table.name>db_{@channel}</table.name>
+		<table.px></table.px>
+		<name>微博</name>
+		<names>微博</names>
+		<unit>条</unit>
+		<act>浏览</act>
+		<act.view>浏览</act.view>
+		
+		<mlog:table.name>db_mlog</mlog:table.name>
+		<mlog:table.px></mlog:table.px>
+		<mlog:name>微博</mlog:name>
+		<mlog:names>微博</mlog:names>
+		<mlog:unit>条</mlog:unit>
+		<mlog:act>浏览</mlog:act>
+		<mlog:act.view>浏览</mlog:act.view>
+		<mlog:act.reley>转发</mlog:act.reley>
+		
+		<tags:table.name>db_tags</tags:table.name>
+		<tags:table.px></tags:table.px>
+		<tags:name>标签</tags:name>
+		<tags:names>标签</tags:names>
+		<tags:unit>个</tags:unit>
+		<tags:act>查看</tags:act>
+		
+	</pre>
+	<var>
+		<title>微博</title>
+		
+		<title.create>开通新微博</title.create>
+		<title.my>我的微博</title.my>
+		<title.help>微博帮助</title.help>
+		
+		<title.home>主页</title.home>
+		<title.mine>我的</title.mine>
+		<title.mine.at>@我</title.mine.at>
+		<title.mine.comment>我的评论</title.mine.comment>
+		
+		<title.plaza>广场</title.plaza>
+		<title.tags>标签</title.tags>
+	</var>
+	<num>
+		<pic.width>0</pic.width>
+		<pic.height>0</pic.height>
+	</num>
+	<config>
+		<url>default</url>
+		<create>1</create>
+		<create.status>1</create.status>
+		<put>1</put>
+		<put.status>1</put.status>
+		
+		<up.mode></up.mode>
+		<up.format></up.format>
+		<up.types></up.types>
+		<up.dir><![CDATA[{$y}/{$m}{$d}/]]></up.dir>
+		<up.dirsn></up.dirsn>
+		<up.dirbase></up.dirbase>
+		<up.filename></up.filename>
+		<up.filetype></up.filetype>
+		<up.maxsize>2048</up.maxsize>
+		<up.maxtotal></up.maxtotal>
+		<up.cover></up.cover>
+		<up.data.index></up.data.index>
+		<up.data.status></up.data.status>
+		
+		<image.up.mode>image</image.up.mode>
+		<image.up.dir><![CDATA[{$y}/{$m}{$d}/]]></image.up.dir>
+		<image.up.dirsn><![CDATA[]]></image.up.dirsn>
+		<image.up.dirbase><![CDATA[]]></image.up.dirbase>
+		<image.up.filename><![CDATA[{$times}]]></image.up.filename>
+		<image.up.filetype><![CDATA[gif,jpg,png,bmp]]></image.up.filetype>
+		<image.up.maxsize>2048</image.up.maxsize>
+		<image.up.maxtotal>999</image.up.maxtotal>
+		<image.up.cover>status</image.up.cover>
+		<image.up.data.index></image.up.data.index>
+		<image.up.data.status>0</image.up.data.status>
+		
+	</config>
+</xcml>

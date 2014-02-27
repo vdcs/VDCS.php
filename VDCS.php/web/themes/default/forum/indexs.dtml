@@ -1,0 +1,27 @@
+<label:include file="header">
+<div class="framer">
+	<div class="side">
+<label:include file="common.menus">
+	</div>
+	<div class="cont">
+<label:include file="common.navbar">
+<dtml-loop:class.root!v>
+		<div class="Block Block-Local">
+			<h2><t>[v:name]</t><r><a href="[v:url]"><langs:chn.more></a></r></h2>
+			<div class="BlockBody"><div class="BlockInner">
+<div class="igoods">
+<ul>
+<label:block("{@channel}","res=new;classid=[v:classid];row=4;cache=;t=ci")>
+<label:include file="element.item.pici">
+</label:end>
+</ul>
+</div>
+<div class="space"></div>
+			</div>
+		</div>
+		<div class="space"></div>
+</dtml-loop>
+	</div></div>
+</div>
+<label:include file="common.footer">
+<label:include file="footer">

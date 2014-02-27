@@ -1,0 +1,5 @@
+<meta charset="<web:meta.charset>" />
+<meta http-equiv="Content-Type" content="<web:meta.type>; charset=<web:meta.charset>" /><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="copyright" content="<app:web.copyright>" /><meta name="generator" content="<web:meta.generator>" /><meta name="author" content="<app:web.author>" />
+<meta name="keywords" content="<web:meta.keywords>" />
+<meta name="description" content="<web:meta.description>" />

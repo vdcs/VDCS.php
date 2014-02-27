@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>nav,view,block</node>
+	</configure>
+	<nav>
+		<text><![CDATA[]]></text>
+		<space><![CDATA[]]></space>
+	</nav>
+	<view>
+		<banner><![CDATA[]]></banner>
+		<text><![CDATA[]]></text>
+		<text1></text1>
+		<text2></text2>
+		<text3></text3>
+		<text4></text4>
+		<text5></text5>
+	</view>
+	<block>
+		<value><![CDATA[
+<div id="div-block-ad" style="display:block;">
+	<div class="block">
+<ul>
+<li><a href="">链接标题</a></li>
+<li><a href="">链接标题</a></li>
+<li><a href="">链接标题</a></li>
+<li><a href="">链接标题</a></li>
+<li><a href="">链接标题</a></li>
+</ul>
+	</div>
+	<div class="clear"></div>
+	<div class="block">
+<ul>
+<li><a href="">链接标题</a></li>
+<li><a href="">链接标题</a></li>
+<li><a href="">链接标题</a></li>
+<li><a href="">链接标题</a></li>
+<li><a href="">链接标题</a></li>
+</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+]]></value>
+		<index>default</index>
+		<list>default</list>
+		<view>default</view>
+		<post>default</post>
+		<vote>default</vote>
+	</block>
+</xcml>

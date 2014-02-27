@@ -1,0 +1,26 @@
+
+	<div class="sets_menu fixc">
+		<ul>
+		<li class="index"><a href="<chn:linkurl("{@channel}","pa","p=index")>"><span><chn:var("{@channel}","title.index")></span></a></li>
+		<li class="settings"><a href="<chn:linkurl("{@channel}","pa","p=settings")>"><span><chn:var("{@channel}","title.settings")></span></a></li>
+		<li class="contacts"><a href="<chn:linkurl("{@channel}","pa","p=contacts")>"><span><chn:var("{@channel}","title.contacts")></span></a></li>
+		<li class="inbox"><a href="<chn:linkurl("{@channel}","pa","p=inbox")>"><span><chn:var("{@channel}","title.inbox")></span></a></li>
+		<li class="fav"><a href="<chn:linkurl("{@channel}","pa","p=fav")>"><span><chn:var("{@channel}","title.fav")></span></a></li>
+		<li class="notices"><a href="<chn:linkurl("{@channel}","pa","p=notices")>"><span><chn:var("{@channel}","title.notices")></span></a></li>
+		<li class="security"><a href="<chn:linkurl("{@channel}","pa","p=security")>"><span><chn:var("{@channel}","title.security")></span></a></li>
+		<!--
+		<li class="prefer"><a href="<chn:linkurl("{@channel}","pa","p=prefer")>"><span><chn:var("{@channel}","title.prefer")></span></a></li>
+		<li class="privacy"><a href="<chn:linkurl("{@channel}","pa","p=privacy")>"><span><chn:var("{@channel}","title.privacy")></span></a></li>
+		
+		<li class="home"><a href="<chn:linkurl("{@channel}","pa","p=home")>"><span><chn:var("{@channel}","title.home")></span></a></li>
+		<li class="profile"><a href="<chn:linkurl("{@channel}","pa","p=profile")>"><span><chn:var("{@channel}","title.profile")></span></a></li>
+		<li class="info"><a href="<chn:linkurl("{@channel}","pa","p=info")>"><span><chn:var("{@channel}","title.info")></span></a></li>
+		<li class="friends"><a href="<chn:linkurl("{@channel}","pa","p=friends")>"><span><chn:var("{@channel}","title.friends")></span></a></li>
+		<li class="social"><a href="<chn:linkurl("{@channel}","pa","p=social")>"><span><chn:var("{@channel}","title.social")></span></a></li>
+		<li class="message"><a href="<chn:linkurl("{@channel}","pa","p=message")>"><span><chn:var("{@channel}","title.message")></span></a></li>
+		<li class="gift"><a href="<chn:linkurl("{@channel}","pa","p=gift")>"><span><chn:var("{@channel}","title.gift")></span></a></li>
+		<li class="app"><a href="<chn:linkurl("{@channel}","pa","p=app")>"><span><chn:var("{@channel}","title.app")></span></a></li>
+		<li class="plus"><a href="<chn:linkurl("{@channel}","pa","p=plus")>"><span><chn:var("{@channel}","title.plus")></span></a></li>
+		-->
+		</ul>
+	</div>

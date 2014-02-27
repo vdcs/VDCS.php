@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config</node>
+	</configure>
+	<config>
+		<key>secret_server</key>
+		<key_interface></key_interface>
+	</config>
+</xcml>

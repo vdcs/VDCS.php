@@ -1,0 +1,65 @@
+﻿
+<div class="forms m">	
+<form name="frm_post" action="" method="post" >
+<input type="hidden" name="_chk" value="yes" />
+<dl>
+<dt el="account">
+	<h2>帐号</h2>
+	<h3><p><input type="text" class="tipi" name="account" value="" placeholder="手机号/电子邮箱" data-min="5" minlength="5" maxlength="50" tabindex="1"
+		/><em class="it account"></em><em class="ih require" title="可以输入您的手机号/电子邮箱作为帐号首选登录方式"></em></p></h3>
+</dt>
+<dt el="email" class="hided">
+	<h2>电子邮箱</h2>
+	<h3><p><input type="text" class="tipi" name="email" value="" placeholder="电子邮箱" data-min="5" minlength="0" maxlength="50" tabindex="1"
+		_exist="抱歉！电子邮箱已存在。" _right="恭喜！电子邮箱可用。" /><em class="it email"></em><em class="ih require" title="可以输入您的常用邮件地址作为帐号首选登录方式"></em></p></h3>
+</dt>
+<dt el="mobile" class="hided">
+	<h2>手机号</h2>
+	<h3><p><input type="text" class="tipi" name="mobile" value="" placeholder="手机号" data-min="11" minlength="0" maxlength="11" tabindex="2"
+		_exist="抱歉！手机号已存在。" _right="恭喜！手机号可用。" /><em class="it mobile"></em><em class="ih require" title="可以输入您的手机号作为帐号首选登录方式"></em></p></h3>
+</dt>
+<dt el="mobile_dcode" class="hided">
+	<h2></h2>
+	<h3><p class="itemi compact"><input type="text" class="tipi" name="mobile_dcode" value="" placeholder="动态码" data-min="4" minlength="0" maxlength="10" /><em class="it dcode"></em><em class="ih"></em></p>
+		<cite><a class="btn" href="javascript:;" el="dcode_send" data-second="60" data-hint="短信动态码已发送，请注意查收！">发送</a></cite></h3>
+</dt>
+<dt el="names" class="hided">
+	<h2>昵称</h2>
+	<h3><p><input type="text" class="tipi" name="names" value="" placeholder="个性昵称" minlength="0" maxlength="20" tabindex="2"
+		_exist="抱歉！昵称已存在。" _right="恭喜！昵称可用。" /><em class="it names"></em><em class="ih require" title="可以是您习惯的个人称呼"></em></p></h3>
+</dt>
+<dt el="password">
+	<h2>密码</h2>
+	<h3><p><input class="tipi" type="password" name="password" value="" placeholder="登录密码" minlength="4" maxlength="20" tabindex="3" /><em class="it password"></em><em class="ih require" title="密码由4-密码应由字母（区分大小写）、数字、符号组成"></em></p></h3>
+</dt>
+<dt el="password2">
+	<h2>重复密码</h2>
+	<h3><p><input class="tipi" type="password" name="password2" value="" placeholder="重复密码" minlength="4" maxlength="20" tabindex="4" /><em class="it password"></em><em class="ih require" title="重复密码应与新密码完全一致"></em></p></h3>
+</dt>
+<dd class="tips"><h3><p class="itip"><em></em><span>提示信息</span></p></h3></dd>
+<dd>
+	<h3>
+	<label><input type="checkbox" name="agreement" value="yes" checked data-bind="check" data-style="m" />我已阅读并同意<app:app.shortname></label>
+	<a href="<chn:linkurl("{@channel}","pa","p=agreement")>"><chn:var("{@channel}","title.agreement")></a>
+	</h3>
+</dd>
+<dd>
+	<h3>
+	<a class="btn b m" href="<url:register>" el="submit"><span>注册</span></a>
+	
+	</h3>
+</dd>
+</dl>
+</form>
+</div>
+
+
+<label:include file="inc/register.script">
+<label:include file="inc/dcode.mobile.script">
+<script type="text/javascript">
+$(function(){
+	$f.bindi();
+	app.xregister.initer();
+	app.xregister.autoAccount(false);
+});
+</script>

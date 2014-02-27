@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>pre,config,lang,template</node>
+	</configure>
+	<pre>
+		<table.name>dbs_manager</table.name>
+		<table.px></table.px>
+		<field.id>id</field.id>
+		<name>管理员</name>
+		<names>管理员</names>
+		<act>查看</act>
+		<unit>位</unit>
+	</pre>
+	<config>
+		<frame>links,search</frame>
+		<search.fields>name=6;username=6</search.fields>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>{@table.name}</table.name>
+		<table.px></table.px>
+		<table.field.id>{@field.id}</table.field.id>
+		<table.fields.value>id={@field.id};time=tim;topic=name</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.field.append>name,time</list.field.append>
+		<list.table.order>{@field.id} asc</list.table.order>
+		<list.handle.select.option>hide,show,lock,unlock,delete</list.handle.select.option>
+		<list.handle.sql.hide>update {@table.name} set status=0 where {@field.id} in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.show>update {@table.name} set status=1 where {@field.id} in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.lock>update {@table.name} set islock=1 where {@field.id} in ({$ids})</list.handle.sql.lock>
+		<list.handle.sql.unlock>update {@table.name} set islock=0 where {@field.id} in ({$ids})</list.handle.sql.unlock>
+		<list.handle.sql.delete>delete from {@table.name} where {@field.id} in ({$ids})</list.handle.sql.delete>
+	</config>
+	
+	<lang>
+		<title><![CDATA[{@names}]]></title>
+		<title.name><![CDATA[{@name}]]></title.name>
+		<title.names><![CDATA[{@names}]]></title.names>
+		<title.act><![CDATA[{@act}]]></title.act>
+		<title.unit><![CDATA[{@unit}]]></title.unit>
+		<title.list><![CDATA[{@names}列表]]></title.list>
+		<title.list.><![CDATA[{@names}列表]]></title.list.>
+		<title.list.lock><![CDATA[锁定{@names}列表]]></title.list.lock>
+		<title.list.unlock><![CDATA[未锁定{@names}列表]]></title.list.unlock>
+		<title.add><![CDATA[添加{@names}]]></title.add>
+		<title.edit><![CDATA[编辑{@names}]]></title.edit>
+		<title.popedom><![CDATA[编辑{@names}权限]]></title.popedom>
+		
+		<title.frame.search><![CDATA[{@names}搜索]]></title.frame.search>
+		<search.fields.att>name=用户;username=用户名称</search.fields.att>
+		
+		<error.exist.name><![CDATA[相关 {@names}名称 已存在！]]></error.exist.name>
+		<error.norule.name><![CDATA[{@names}名称 不符合规则！]]></error.norule.name>
+		<error.exist.password><![CDATA[相关 登录密码 已存在！]]></error.exist.password>
+		<error.norule.password><![CDATA[登录密码 不符合规则！]]></error.norule.password>
+
+		<error.exist.username><![CDATA[相关 用户名称 已存在！]]></error.exist.username>
+		<error.norule.username><![CDATA[用户名称 不符合规则！]]></error.norule.username>		
+		<error.exist.email><![CDATA[相关 电子邮箱 已存在！]]></error.exist.email>
+		<error.norule.email><![CDATA[电子邮箱 不符合规则！]]></error.norule.email>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 {@unit}{@names}！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 {@unit}{@names}！]]></handle.ok.edit>
+		<handle.ok.hide><![CDATA[成功隐藏了 {$count} {@unit}{@names}！]]></handle.ok.hide>
+		<handle.ok.show><![CDATA[成功正常处理了 {$count} {@unit}{@names}！]]></handle.ok.show>
+		<handle.ok.lock><![CDATA[成功锁定了 {$count} {@unit}{@names}！]]></handle.ok.lock>
+		<handle.ok.unlock><![CDATA[成功解锁了 {$count} {@unit}{@names}！]]></handle.ok.unlock>
+		<handle.ok.delete><![CDATA[成功删除了 {$count} {@unit}{@names}！]]></handle.ok.delete>
+		<handle.ok.popedoms><![CDATA[成功编辑 1 {@unit}{@names}的权限！]]></handle.ok.popedoms>
+	</lang>
+	
+	<template>
+		<list><![CDATA[
+<control:ui.value("listbox.heads")>
+<control:ui.value("list.bar.tr")>
+<control:ui.value("list.bar.id")>
+<td class="bar-user"><exec:langs("title.user")></td>
+<td class="bar-user"><exec:langs("title.username")></td>
+<td class="bar-info"><exec:langs("title.grade")></td>
+<td class="bar-status"><exec:langs("title.status")></td>
+<td class="bar-handle w60"><exec:langs("title.handle")></td>
+<control:ui.value("list.bar.sd")>
+</tr>
+<loop:list>
+<control:ui.value("list.row.tr")>
+<control:ui.value("list.row.id")>
+<td class="row-user"><a href="<var:url.edit>">[item:<var:table.px>name]</a></td>
+<td class="row-user"><a href="<app:url.account>user.asp?module=view&username=[item:username!urlencode]" target="_blank">[item:username]</a></td>
+<td class="row-info"><control:dict("file:sort=manage.config/data.manager.grade","[item:<var:table.px>grade]")></td>
+<td class="row-status"><control:dict("data.lock","[item:<var:table.px>islock]")> <control:dict("data.hide","[item:<var:table.px>status]")></td>
+<td class="row-handle"><a href="<var:url.edit>"><exec:langs("action.edit")></a> <a href="<var:url.popedoms>"><exec:langs("action.popedom")></a></td>
+<control:ui.value("list.row.sd")>
+</tr>
+</loop>
+<control:ui.value("listbox.ends")>
+]]></list>
+		<menu.links><![CDATA[
+@@@title=管理员管理;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("action=list")>">管理员列表</a></li>
+<li><a href="<exec:url("action=add")>">添加新管理员</a></li>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

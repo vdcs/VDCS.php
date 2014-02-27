@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+		<sp_code>code=sp_code;remark={@tpx}remark</sp_code>
+		<script.begin><![CDATA[<script type="text/javascript">
+ui.fbm.relates({"upload":"base,content"});
+</script>]]></script.begin>
+		<script.end><![CDATA[]]></script.end>
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<explain><![CDATA[default=$$$base=基本信息;content={@xnames}内容;sp={@xnames}特性;status={@xnames}状态]]></explain>
+	</input>
+	<!--attr={@xnames}属性;-->
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=none</att>
+	</input>
+<label:include file="part.topic!n">
+<label:include file="part.key!">
+<label:include file="part.srvid!">
+<label:include file="part.classid">
+<label:include file="part.specialid!">
+	<input>
+		<type>radio.{@tpx}sort</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style></style>
+		<caption><![CDATA[{@xnames}类别]]></caption>
+		<att><![CDATA[<control:att("file","common.channel/{@channel}/data.sort")>]]></att>
+		<value>__no1</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}type</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style></style>
+		<caption><![CDATA[{@xnames}类型]]></caption>
+		<att><![CDATA[<control:att("file","common.channel/{@channel}/data.type")>]]></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}level</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=0]]></property>
+		<style></style>
+		<caption><![CDATA[{@xnames}星级]]></caption>
+		<att><![CDATA[<control:att("dict","data.star")>]]></att>
+		<value>__no1</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}prop1</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style></style>
+		<caption><![CDATA[{@xnames}环境]]></caption>
+		<att><![CDATA[<control:att("file","common.channel/{@channel}/data.os")>]]></att>
+		<value>__no1</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}prop2</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=0]]></property>
+		<style>size=20 maxlength=20 class="num"</style>
+		<caption><![CDATA[{@xnames}大小]]></caption>
+		<att></att>
+		<value>MB</value>
+		<explain><![CDATA[例: 2.5MB]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}prop3</type>
+		<property><![CDATA[item=;class=sp;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[{@xnames}主页]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+<label:include file="part.linkurl!">
+<label:include file="part.pt.sa!">
+<label:include file="part.summarys">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+<label:include file="part.m.content">
+<label:include file="part.m.upload">
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=attr;display=none</att>
+	</input>
+	<!--
+	<input>
+		<type>hidden.{@tpx}prop1</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prop2</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prop3</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+	</input>
+	-->
+	<input>
+		<type>hidden.{@tpx}prop4</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prop5</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+	</input>
+<label:include file="part.sp.attrs">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+<label:include file="part.m.sp">
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=status;display=none</att>
+	</input>
+<label:include file="part.total.data!">
+<label:include file="part.total.views">
+<label:include file="part.total.extend">
+<label:include file="part.orderid">
+<label:include file="part.prepage!">
+<label:include file="part.statuss!a">
+<label:include file="part.username">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+</xcml>

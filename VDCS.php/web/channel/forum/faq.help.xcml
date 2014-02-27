@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,topic,content</field>
+	</configure>
+	<item>
+		<key>search</key>
+		<topic><![CDATA[我要搜索论坛，应该怎么做？]]></topic>
+		<content><![CDATA[点击论坛首页的较上方或本页的左方导航处的 论坛搜索，输入搜索的关键字并选择一个范围，就可以检索到您有权限访问论坛中的相关的帖子。]]></content>
+	</item>
+	<item>
+		<key>post</key>
+		<topic><![CDATA[如何发布新帖子？]]></topic>
+		<content><![CDATA[在论坛版块中，点“发表新帖”即可进入功能齐全的发帖界面。当然您也可以使用版块下面的“快速发帖”发表新帖(如果此选项打开)。注意，一般论坛都设置为需要登录后才能发帖。]]></content>
+	</item>
+	<item>
+		<key>post</key>
+		<topic><![CDATA[如何发起一个投票？]]></topic>
+		<content><![CDATA[您可以像发帖一样在版块中发起投票。每行输入一个可能的选项（最多10个），您可以通过阅读这个投票帖选出自己的答案，每人只能投票一次，之后将不能再对您的选择做出更改。]]></content>
+	</item>
+	<item>
+		<key>post-reply</key>
+		<topic><![CDATA[如何回复帖子？]]></topic>
+		<content><![CDATA[在浏览帖子时，点“发表回复”即可进入功能齐全的回复界面。当然您也可以使用版块下面的“快速回复”发表回复(如果此选项打开)。注意，一般论坛都设置为需要登录后才能回复。]]></content>
+	</item>
+	<item>
+		<key>post-edit</key>
+		<topic><![CDATA[怎样编辑自己发表的帖子？]]></topic>
+		<content><![CDATA[浏览帖子时可以按下面的“编辑帖子”，对于您自己发表的帖子，可以很容易的编辑和删除。如果管理员通过论坛设置将这个功能屏蔽掉则不再可以进行此操作。]]></content>
+	</item>
+	<item>
+		<key>post-del</key>
+		<topic><![CDATA[我能够删除主题吗？]]></topic>
+		<content><![CDATA[目前本论坛还不支持注册用户删除自己的贴子，只有版主及管理员才有权限删除。]]></content>
+	</item>
+	<item>
+		<key>post-upload</key>
+		<topic><![CDATA[我可不可以上传附件？]]></topic>
+		<content><![CDATA[可以。您可以在任何支持上传附件的版块中，通过发新帖、或者回复的方式上传附件（只要您的权限足够）。附件不能超过系统限定尺寸，且在可用类型的范围内才能上传。]]></content>
+	</item>
+</xcml>

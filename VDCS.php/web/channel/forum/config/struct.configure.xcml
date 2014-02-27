@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="struct">
+	<configure>
+		<node>item</node>
+	</configure>
+	<item xmlns:pre.class="node" xmlns:pre.topic="node" xmlns:pre.data="node" xmlns:pre.vote="node" xmlns:pre.event="node">
+		<__key><![CDATA[config.base]]></__key>
+		<__name><![CDATA[基本配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.var><![CDATA[名称设定			###type~bar]]></bar.var>
+		<pre.name><![CDATA[频道简称			###property.min~1]]></pre.name>
+		<pre.names><![CDATA[单位名称			###property.min~1]]></pre.names>
+
+		<bar.class.var><![CDATA[分类名称设定		###type~bar]]></bar.class.var>
+		<pre.class:name><![CDATA[分类简称		###property.min~1]]></pre.class:name>
+		<pre.class:names><![CDATA[分类名称		###property.min~1]]></pre.class:names>
+		<pre.class:act><![CDATA[分类单位动作		###property.min~1]]></pre.class:act>
+		<pre.class:unit><![CDATA[分类单位量词		###property.min~1]]></pre.class:unit>
+
+		<bar.topic.var><![CDATA[主题名称设定		###type~bar]]></bar.topic.var>
+		<pre.topic:name><![CDATA[主题简称		###property.min~1]]></pre.topic:name>
+		<pre.topic:names><![CDATA[主题名称		###property.min~1]]></pre.topic:names>
+		<pre.topic:act><![CDATA[主题单位动作		###property.min~1]]></pre.topic:act>
+		<pre.topic:unit><![CDATA[主题单位量词		###property.min~1]]></pre.topic:unit>
+
+		<bar.data.var><![CDATA[帖子名称设定		###type~bar]]></bar.data.var>
+		<pre.data:name><![CDATA[帖子简称		###property.min~1]]></pre.data:name>
+		<pre.data:names><![CDATA[帖子名称		###property.min~1]]></pre.data:names>
+		<pre.data:act><![CDATA[帖子单位动作		###property.min~1]]></pre.data:act>
+		<pre.data:unit><![CDATA[帖子单位量词		###property.min~1]]></pre.data:unit>
+
+		<bar.vote.var><![CDATA[投票名称设定		###type~bar]]></bar.vote.var>
+		<pre.vote:name><![CDATA[投票简称		###property.min~1]]></pre.vote:name>
+		<pre.vote:names><![CDATA[投票名称		###property.min~1]]></pre.vote:names>
+		<pre.vote:act><![CDATA[投票单位动作		###property.min~1]]></pre.vote:act>
+		<pre.vote:unit><![CDATA[投票单位量词		###property.min~1]]></pre.vote:unit>
+
+		<bar.event.var><![CDATA[事件名称设定		###type~bar]]></bar.event.var>
+		<pre.event:name><![CDATA[事件简称		###property.min~1]]></pre.event:name>
+		<pre.event:names><![CDATA[事件名称		###property.min~1]]></pre.event:names>
+		<pre.event:act><![CDATA[事件单位动作		###property.min~1]]></pre.event:act>
+		<pre.event:unit><![CDATA[事件单位量词		###property.min~1]]></pre.event:unit>
+
+		<bar.title><![CDATA[标题设定			###type~bar]]></bar.title>
+		<var.title><![CDATA[首页			###property.min~1]]></var.title>
+		<var.title.list><![CDATA[列表页			###property.min~1]]></var.title.list>
+		<var.title.view><![CDATA[浏览页			###property.min~1]]></var.title.view>
+		<var.title.post><![CDATA[发表页			###property.min~1]]></var.title.post>
+		<var.title.post.new><![CDATA[发新帖页		###property.min~1]]></var.title.post.new>
+		<var.title.post.new.vote><![CDATA[发新帖页	###property.min~1]]></var.title.post.new.vote>
+		<var.title.post.reply><![CDATA[回帖页		###property.min~1]]></var.title.post.reply>
+		<var.title.post.edit><![CDATA[编辑页		###property.min~1]]></var.title.post.edit>
+		<var.title.event><![CDATA[事件页		###property.min~1]]></var.title.event>
+		<var.title.my><![CDATA[个人页			###property.min~1]]></var.title.my>
+		<var.title.moderator><![CDATA[版主管理页	###property.min~1]]></var.title.moderator>
+		<var.title.help><![CDATA[帮助页			###property.min~1]]></var.title.help>
+
+	</item>
+	<item>
+		<__key><![CDATA[config.adv]]></__key>
+		<__name><![CDATA[高级配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.url><![CDATA[SEO设定			###type~bar]]></bar.url>
+		<config.url><![CDATA[URL模式			###type~radio		^att~<control:att("file","url.mode")>]]></config.url>
+	</item>
+	<item>
+		<__key><![CDATA[config.num]]></__key>
+		<__name><![CDATA[分值配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<num.post.vote.max><![CDATA[投票最大项数	###property.type~num	^property.min~1		^explain~项$$$]]></num.post.vote.max>
+
+		<bar.num.overtime><![CDATA[贴子设置		###type~bar]]></bar.num.overtime>
+		<num.post.min.online><![CDATA[发贴在线时间	###property.type~num	^property.min~		^explain~<app:unit.minute>$$$发贴最少在线时间]]></num.post.min.online>
+		<num.post.overtime.edit><![CDATA[可编辑时间	###property.type~num	^property.min~		^explain~<app:unit.day>$$$]]></num.post.overtime.edit>
+		<num.post.overtime.reply><![CDATA[可回复时间	###property.type~num	^property.min~		^explain~<app:unit.day>$$$]]></num.post.overtime.reply>
+
+		<bar.num.post.style><![CDATA[发帖主题效果	###type~bar]]></bar.num.post.style>
+		<num.post.color.points><![CDATA[主题加色扣分	###property.type~num	^property.min~		^explain~<app:unit.points>$$$]]></num.post.color.points>
+		<num.post.bold.points><![CDATA[主题加粗扣分	###property.type~int	^property.min~		^explain~<app:unit.points>$$$]]></num.post.bold.points>
+
+		<bar.num.post><![CDATA[发表新帖奖励		###type~bar]]></bar.num.post>
+		<num.post.emoney><![CDATA[增加货币		###property.type~num	^property.min~		^explain~<app:unit.emoney>$$$]]></num.post.emoney>
+		<num.post.points><![CDATA[增加积分		###property.type~int	^property.min~		^explain~<app:unit.points>$$$]]></num.post.points>
+
+		<bar.num.post.vote><![CDATA[发表投票奖励	###type~bar]]></bar.num.post.vote>
+		<num.post.vote.emoney><![CDATA[增加货币		###property.type~num	^property.min~		^explain~<app:unit.emoney>$$$]]></num.post.vote.emoney>
+		<num.post.vote.points><![CDATA[增加积分	###property.type~int	^property.min~		^explain~<app:unit.points>$$$]]></num.post.vote.points>
+
+		<bar.num.post.reply><![CDATA[发表回帖奖励	###type~bar]]></bar.num.post.reply>
+		<num.post.reply.emoney><![CDATA[增加货币	###property.type~num	^property.min~		^explain~<app:unit.emoney>$$$]]></num.post.reply.emoney>
+		<num.post.reply.points><![CDATA[增加积分	###property.type~int	^property.min~		^explain~<app:unit.points>$$$]]></num.post.reply.points>
+
+		<bar.num.vote><![CDATA[提交投票奖励		###type~bar]]></bar.num.vote>
+		<num.vote.emoney><![CDATA[增加货币		###property.type~num	^property.min~		^explain~<app:unit.emoney>$$$]]></num.vote.emoney>
+		<num.vote.points><![CDATA[增加积分		###property.type~int	^property.min~		^explain~<app:unit.points>$$$]]></num.vote.points>
+	</item>
+	<item>
+		<__key><![CDATA[config.url]]></__key>
+		<__name><![CDATA[地址配置]]></__name>
+		<__file><![CDATA[configure]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.url.script><![CDATA[动态URL地址配置	###type~bar]]></bar.url.script>
+		<url.script.index><![CDATA[首页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.index>
+		<url.script.list><![CDATA[列表页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.list>
+		<url.script.list.page><![CDATA[列表分页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.list.page>
+		<url.script.listt><![CDATA[列表专题页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.listt>
+		<url.script.listt.page><![CDATA[列表专题分页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.listt.page>
+		<url.script.list.action><![CDATA[列表请求	###property.min~1	^style~size=60 class="itxt"]]></url.script.list.action>
+		<url.script.view><![CDATA[浏览页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.view>
+		<url.script.view.page><![CDATA[浏览分页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.view.page>
+		<url.script.view.action><![CDATA[浏览请求	###property.min~1	^style~size=60 class="itxt"]]></url.script.view.action>
+		<url.script.post><![CDATA[发表页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.post>
+		<url.script.post.action><![CDATA[发表请求	###property.min~1	^style~size=60 class="itxt"]]></url.script.post.action>
+		<url.script.vote><![CDATA[投票页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.vote>
+		<url.script.vote.action><![CDATA[投票请求	###property.min~1	^style~size=60 class="itxt"]]></url.script.vote.action>
+		<url.script.search><![CDATA[搜索页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.search>
+		<url.script.search.action><![CDATA[搜索请求	###property.min~1	^style~size=60 class="itxt"]]></url.script.search.action>
+		<url.script.event><![CDATA[事件页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.event>
+		<url.script.my><![CDATA[个人页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.my>
+		<url.script.help><![CDATA[帮助页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.help>
+		<url.script.moderator><![CDATA[版主控制页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.moderator>
+		<url.script.app><![CDATA[应用页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.app>
+		<url.script.url><![CDATA[URL页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.url>
+		<url.script.rss><![CDATA[RSS源页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.rss>
+		<bar.url.rewrite><![CDATA[静态URL地址配置(ISAPI Rewrite)		###type~bar]]></bar.url.rewrite>
+		<url.rewrite.index><![CDATA[首页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.index>
+		<url.rewrite.list><![CDATA[列表页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.list>
+		<url.rewrite.list.page><![CDATA[列表分页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.list.page>
+		<url.rewrite.listt><![CDATA[列表专题页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.listt>
+		<url.rewrite.listt.page><![CDATA[列表专题分页URL###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.listt.page>
+		<url.rewrite.list.action><![CDATA[列表请求	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.list.action>
+		<url.rewrite.view><![CDATA[浏览页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.view>
+		<url.rewrite.view.page><![CDATA[浏览分页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.view.page>
+		<url.rewrite.view.action><![CDATA[浏览请求	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.view.action>
+		<url.rewrite.post><![CDATA[发表页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.post>
+		<url.rewrite.post.action><![CDATA[发表请求	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.post.action>
+		<url.rewrite.vote><![CDATA[投票页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.vote>
+		<url.rewrite.vote.action><![CDATA[投票请求	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.vote.action>
+		<url.rewrite.search><![CDATA[搜索页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.search>
+		<url.rewrite.search.action><![CDATA[搜索请求	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.search.action>
+		<url.rewrite.event><![CDATA[事件页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.event>
+		<url.rewrite.my><![CDATA[个人页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.my>
+		<url.rewrite.help><![CDATA[帮助页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.help>
+		<url.rewrite.moderator><![CDATA[版主控制页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.moderator>
+		<url.rewrite.app><![CDATA[应用页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.app>
+		<url.rewrite.url><![CDATA[URL页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.url>
+		<url.rewrite.rss><![CDATA[RSS源页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.rss>
+	</item>
+</xcml>

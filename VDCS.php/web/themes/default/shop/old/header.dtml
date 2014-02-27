@@ -1,0 +1,12 @@
+<label:include file="/header">
+<label:include file="common.header.nav">
+<label:include script="<web:url.themed>shop/appc.js">
+<script type="text/javascript">
+app.classid=toInt("<web:classid>");
+chn.setChannel("{@channel}");
+appc.ImagesPath="<web:url.themed>shop/images/";
+var {@channel}=appc;
+</script>
+
+<label:include script="<web:url.themed>shop/transfer.js">
+<script type="text/javascript">appc.cart.loader();</script>

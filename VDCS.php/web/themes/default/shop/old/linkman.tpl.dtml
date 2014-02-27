@@ -1,0 +1,9 @@
+<div>
+<label:include file="/inc/header.style5">
+<table class="table tables table-striped table-hover table-list">
+<tr><th>姓名</th><td><input type="text" name="name" value="<view:name>" /></td><th>手机</th><td><input type="text" name="mobile" value="<view:mobile>" /></td></tr>
+<tr><th>邮编</th><td><input type="text" name="postcode" value="<view:postcode>" /></td><th></th><td></td></tr>
+<tr><th>地址</th><td colspan="3"><input type="text" name="address" value="<view:address>" /></td></tr>
+<input type="hidden" name="id" value="<view:id>" />
+</table>
+</div>

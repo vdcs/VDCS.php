@@ -1,0 +1,86 @@
+
+<!--
+base={@xnames}信息;pivotal=关键信息;nums=分值信息;infon=网络资料;infos=详细资料;status={@xnames}状态
+attr={@xnames}属性;infoo=其它资料;
+-->
+
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=block</att>
+	</input>
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[基本信息]]></caption>
+	</input>
+<label:include file="partc.ua.id">
+<label:include file="partc.ua.name">
+
+<label:include file="part.ua.no!">
+<label:include file="part.ua.email">
+<label:include file="part.ua.mobile">
+
+<label:include file="partc.ua.idcard">
+
+<label:include file="partc.ua.basis">
+<label:include file="partc.ua.names">
+<label:include file="partc.ua.group">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+<label:include file="part.m.pivotal">
+
+
+	<input>
+		<type>multibar.head</type>
+		<att>id=nums;display=none</att>
+	</input>
+<label:include file="partc.ua.nums">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=status;display=none</att>
+	</input>
+<label:include file="partc.ua.auth">
+<label:include file="partc.ua.status">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=infon;display=none</att>
+	</input>
+<label:include file="partc.ua.infon">
+<label:include file="partc.ua.avatar">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=infos;display=none</att>
+	</input>
+<label:include file="partc.ua.namex">
+<label:include file="partc.info.com">
+<label:include file="partc.area">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=infoo;display=none</att>
+	</input>
+	
+	<input>
+		<type>multibar.foot</type>
+	</input>

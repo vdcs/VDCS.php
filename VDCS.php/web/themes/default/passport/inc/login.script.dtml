@@ -1,0 +1,52 @@
+﻿
+<script type="text/javascript">
+app._xlogin={
+	initer:function(opt,selector){
+		opt=ox({frm:'frm_login',
+			names			: '登录',
+			message_formcheck	: '请填写必要的登录信息！',
+			message_error_account	: '请输入您的 登录帐号 ！',
+			message_error_password	: '请输入您的 登录密码 ！',
+			message_parser		: '登录中..',
+			message_succeed		: '登录成功！转接中..',
+			submit_ing		: '登录中..',
+			submit_succeed		: '登录成功！',
+			encrypt			: true,
+			encrypt_timer		: true,
+			encrypt_field		: 'password',
+			serv_method		: 'post',
+			ua:''},opt);
+		if(!opt.serveURL) opt.serveURL=app.serve('p/login','ua='+opt.ua);
+		var backurl=$req.q('backurl')||$req.q('url');
+		if(backurl) opt.backurl=backurl;
+		if(!opt.backurl) opt.backurl=opt.urlback;
+		this._initer(opt,selector);if(!this.isinit)return;
+		this.submitInit();
+	},
+	
+	setValue:function(vs){
+		vs=ox({},vs);
+		var field,fields=('id,key,no,name,email,mobile,password').split(',');
+		for(var n in fields){
+			field=fields[n];
+			if(vs[field]) this.jform.find('[name="'+field+'"]').val(vs[field]).focus();
+		}
+	},
+	
+	formCheckExtend:function(){
+		/*
+		if(!this.ardata['name']&&!this.ardata['email']&&!this.ardata['no']){
+			this.err.addItem(this.getMessage('error_account'));
+			this.jform.find('[name="name"]').focus();
+			this.jform.find('[name="email"]').focus();
+			this.jform.find('[name="no"]').focus();
+		}
+		else if(!this.ardata['password']){
+			this.err.addItem(this.getMessage('error_password'));
+			this.jform.find('[name="password"]').focus();
+		}
+		*/
+	},
+'':''};
+app.xlogin=extend(app.xform,app._xlogin);
+</script>

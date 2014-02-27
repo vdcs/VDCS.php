@@ -1,0 +1,48 @@
+<label:include file="/headers">
+<style type="text/css">
+ul.forum_list{overflow:hidden;}
+ul.forum_list *{box-sizing:border-box;}
+ul.forum_list li{overflow:hidden;border-bottom:1px dashed #C2D5E3;}
+ul.forum_list li a:hover{cursor:pointer;}
+ul.forum_list li>.side,ul.forum_list li>.cent,ul.forum_list li>.sider{float:left;text-align:center;height:40px;}
+ul.forum_list li>.side{width:5%;}
+ul.forum_list li>.side cite{display:inline-block;width:18px;height:18px;margin-top:11px;background:#abc;}
+ul.forum_list li>.cent{width:60%;padding:10px 10px;text-align:left;}
+ul.forum_list li>.cent h2{}
+ul.forum_list li>.cent h2 a{font-size:14px;color:#666;}
+ul.forum_list li>.cent h2 em{display:inline-block;width:16px;height:16px;margin:0 10px;background:#abc;}
+ul.forum_list li>.cent h2 span{color:#F26C4F;}
+ul.forum_list li>.sider{width:35%;padding:5px;}
+ul.forum_list li>.sider h3 a,ul.forum_list li>.sider h4 a{font-size:12px;line-height:14px;display:block;color:#333;}
+ul.forum_list li>.sider h3 em,ul.forum_list li>.sider h4 em{font-size:11px;line-height:14px;color:#F26C4F;}
+ul.forum_list li>.sider h3{width:40%;}
+ul.forum_list li>.sider h4{width:20%;}
+</style>
+
+<div class="cont">
+	<div class="box">
+		<h2><t><web:var.classtitle></t><t2><i><paging:total></i><langs:chn.units></t2></h2>
+		<div class="con">
+			<ul class="forum_list">
+			<loop:list>
+			<li>
+				<div class="side"><cite></cite></div>
+				<div class="cent"><h2><a href="[item:linkurl]">[item:topic]</a><em></em><span>New</span></h2></div>
+				<div class="sider">
+				<h3 class="fl"><a>[item:unames]</a><em>[item:tim!date]</em></h3>
+				<h4 class="fl"><a>[item:total_reply]</a><em>[item:total_view]</em></h4> <!-- total_reply total_comment -->
+				<h3 class="fl"><a>[item:last_uname]</a><em>[item:reply_tim!date]</em></h3> <!-- 最后发表 时间 -->
+				</div>
+			</li>
+			</loop>
+			</ul>
+		</div>
+<label:include file="/inc/e/paging.box">
+	</div>
+</div>
+
+<div class="space"></div>
+
+<label:include file="post">
+
+<label:include file="/footers">

@@ -1,0 +1,10 @@
+		<div class="Block Side-Year">
+			<h2><t><langs:chn.year></t></h2>
+			<div class="cont">
+<div class="MenuSide"><ul>
+<loop:year>
+<li><a href="<linkurl:{@channel}.search.act>?year=[item:year]">[item:year]<langs:chn.year.unit></a> <span class="s gray">[item:total]<channel:var("unit")></span></li>
+</loop>
+</ul></div>
+			</div>
+		</div>

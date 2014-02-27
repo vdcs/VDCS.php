@@ -1,0 +1,13 @@
+
+<div class="bars">
+<h2><web:var.title.p></h2>
+<p>请尽可能详细，并且仔细填写，这些资料可能在你意想不到的时候保护你的帐号。</p>
+</div>
+
+<div class="links">
+<ul>
+<li el="password"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=password")>"><span><chn:var("{@channel}","title.{@portal}.password")></span></a></li>
+<li el="questions"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=questions")>"><span><chn:var("{@channel}","title.{@portal}.questions")></span></a></li>
+<li el="email"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=email")>"><span><chn:var("{@channel}","title.{@portal}.email")></span></a></li>
+</ul>
+</div>

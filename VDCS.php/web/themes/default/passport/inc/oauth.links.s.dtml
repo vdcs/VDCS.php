@@ -1,0 +1,6 @@
+﻿	
+<p>用社交网站账号快捷登录：</p>
+<p>
+	<a class="oauth_qq_s" href="<chn:linkurl("passport","pam","p=oauth&m=qq")>"><span>QQ登录</span></a>
+	<a class="oauth_weibo_s" href="<chn:linkurl("passport","pam","p=oauth&m=weibo")>"><span>微博登录</span></a>
+</p>

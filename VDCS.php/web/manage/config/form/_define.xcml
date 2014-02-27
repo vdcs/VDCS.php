@@ -1,0 +1,139 @@
+	
+	
+	<input>
+		<type>hidden.{@tpx}int1</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[自定义值1]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.point>$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}int2</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[自定义值2]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.point>$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}int3</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[自定义值3]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.point>$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}num1</type>
+		<property><![CDATA[item=;action=;type=num;max=255;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[自定义值1]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.point>$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}num2</type>
+		<property><![CDATA[item=;action=;type=num;max=255;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[自定义值2]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.point>$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}num3</type>
+		<property><![CDATA[item=;action=;type=num;max=255;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[自定义值3]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.point>$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}num4</type>
+		<property><![CDATA[item=;action=;type=num;max=255;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[自定义值4]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.point>$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}num5</type>
+		<property><![CDATA[item=;action=;type=num;max=255;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[自定义值5]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.point>$$$]]></explain>
+	</input>
+	
+	
+	
+	
+	<input>
+		<type>hidden.{@tpx}firstname</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=20 maxlength=50 class="item"</style>
+		<caption><![CDATA[FirstName]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}lastname</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=20 maxlength=50 class="item"</style>
+		<caption><![CDATA[LastName]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	
+	
+	
+	
+	<input>
+		<type>hidden.{@tpx}im</type>
+		<property><![CDATA[item=;action=;type=string;max=100;min=]]></property>
+		<style>size=30 maxlength=100 class="item"</style>
+		<caption><![CDATA[IM信息]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}im3</type>
+		<property><![CDATA[item=;action=;type=string;max=100;min=]]></property>
+		<style>size=30 maxlength=100 class="item"</style>
+		<caption><![CDATA[IM信息3]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}im4</type>
+		<property><![CDATA[item=;action=;type=string;max=100;min=]]></property>
+		<style>size=30 maxlength=100 class="item"</style>
+		<caption><![CDATA[IM信息4]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}im5</type>
+		<property><![CDATA[item=;action=;type=string;max=100;min=]]></property>
+		<style>size=30 maxlength=100 class="item"</style>
+		<caption><![CDATA[IM信息5]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	
+	
+	

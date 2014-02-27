@@ -1,0 +1,9 @@
+
+<div class="TipsClew hide" id="user-tip-nologin"><p>您还没有登录！您需要 <a href="<linkurl:passport.login>">登录</a> 后才可以进行相关操作。 <a href="<linkurl:passport.register>"><chn:var("passport","title.register")></a></p></div>
+<script type="text/javascript">
+$d.load(function(){
+	if(!user.id){
+		$("#user-tip-nologin").show();
+	}
+});
+</script>

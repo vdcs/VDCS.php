@@ -1,0 +1,72 @@
+<label:include file="frame/headers">
+
+
+<label:include script="comm/ua.css" type="css">
+<div class="framer">
+<div class="cent">
+
+
+<label:include script="/images/themes/widget/comment/comment.css" type="css">
+<label:include script="/images/themes/widget/comment/comment.js">
+
+<div class="comments">
+<input type="hidden" name="channel" value="demo" />
+<input type="hidden" name="rootid" value="123" />
+
+<div class="talki"><div class="inner">
+	<form>
+	<input type="hidden" name="pic" value="" />
+	<h2><t></t>
+		<r><span class="stats">已有<i class="total">6</i>条评论，共<i class="ua">436</i>人参与</r>
+	</h2>
+	<div class="txtbox">
+		<p><textarea name="message" maxlength="250" placeholder="请输入评论内容"></textarea></p>
+	</div>
+	<h5>
+		<div class="toolbar">
+			<a class="em" cmd="em" href="#em"><span></span></a>
+		</div>
+		<div class="prop">
+			<input type="hidden" name="sync_weibo" value="" />
+			<input type="hidden" name="sync_qq" value="" />
+			<a class="sync sync_weibo" href="#sync_weibo"><span>微博</span></a>
+			<a class="sync sync_qq" href="#sync_qq"><span>QQ</span></a>
+		</div>
+		<r>
+			<span class="counts">你还可以输入<i>200</i>字</span>
+			<a class="btn c send" data-title="Ctrl + Enter 快速提交"><span>发布</span></a>
+		</r>
+	</h5>
+	</form>
+</div></div>
+
+<div class="space"></div>
+<div class="comment_list">
+<div el="items"></div>
+<div class="paging" el="paging"></div>
+<xmp el="tpl">
+<dl>
+<dt><a class="avatarm"><img src="/avatar/[item:uuid]_s.gif" /></a></dt>
+<dd>
+	<h3><t><a href="[item:uuid!ulink]">[item:unames]</a></t><i></i></h3>
+	<h4>[item:message]</h4>
+	<h5><t>[item:tim!date]</t></h5>
+</dd>
+</dl>
+</xmp>
+</div>
+
+</div>
+
+<script type="text/javascript">
+$(function(){
+	widget.comment.initer();
+});
+</script>
+
+
+</div>
+</div>
+
+
+<label:include file="frame/footers">

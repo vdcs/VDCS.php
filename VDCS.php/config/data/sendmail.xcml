@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config</node>
+	</configure>
+	<config>
+		<module>smtp</module>			<!-- mail,smtp,sendmail -->
+		<smtp.secure>ssl</smtp.secure>		<!-- ssl,tls -->
+		<smtp.server>smtp.exmail.qq.com</smtp.server>
+		<smtp.host></smtp.host>
+		<smtp.ip></smtp.ip>
+		<smtp.port>465</smtp.port>
+		<smtp.silent>0</smtp.silent>
+		<smtp.auth>1</smtp.auth>
+		<smtp.user>send_dev@eml.sx</smtp.user>
+		<smtp.password>senddev132</smtp.password>
+		<charset>utf-8</charset>
+		<priority>3</priority>
+		<from.email></from.email>
+		<from.name></from.name>
+	</config>
+	<config.qq>
+		<smtp.secure>ssl</smtp.secure>		<!-- ssl,tls -->
+		<smtp.server>smtp.exmail.qq.com</smtp.server>
+		<smtp.host></smtp.host>
+		<smtp.ip></smtp.ip>
+		<smtp.port>465</smtp.port>
+	</config.qq>
+</xcml>

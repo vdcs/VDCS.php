@@ -1,0 +1,85 @@
+<label:include file="frame/headers">
+
+
+<div class="cont">
+<div class="cent">
+	<div class="box">
+		<h2><t>转账记录</t></h2>
+		<div class="bod">
+			<table class="table tables table-striped table-hover table-list">
+				<thead>
+					<tr><th>ID</th><th>金额</th><th>转账银行</th><th>备注</th><th>状态</th><th>时间</th></tr>
+				</thead>
+				<tbody id="record_list"></tbody>	
+			</table>
+			<xmp id="record_list_tpl">
+				<tr class="row h" dataid="[item:id]">
+					<td>[item:id]</td><td>[item:money]</td><td>[item:bankname]</td><td>[item:summary]</td><td>[item:status.name]</td><td>[item:time]</td>
+				</tr>
+			</xmp>
+		</div>
+	</div>
+</div>
+<div class="sider">
+	<div class="box">
+		<h2><t>操作</t></h2>
+		<div class="con">
+			<a class="btn btn-info" el="applysubmit">申请转账</a>
+		</div>
+	</div>
+</div>
+</div>
+<div class="space"></div>
+<div class="paging"></div>
+<script type="text/javascript">
+$(function(){
+	var _remit=function(){
+		ui.pages.channel='{@channel}';
+		var opt={
+			serveE:{p:'assets',m:'remit',action:'apply',params:''},//cp=account&p=linkman&x=e
+			serveX:{p:'assets',m:'remit',action:'apply',params:''},
+			//serveE:{p:'remit',action:'remit',params:''},//cp=account&p=linkman&x=e
+			//serveX:{p:'remit',action:'remit',params:''},
+			//serveX:{p:'cart',action:'add',params:'apptype=domain&productid='+productid+'&amount='+amount+'&price='+price1+''},
+			title:'填写汇款信息',
+			succeed:function(){
+				ui.popups('succeed','转账申请成功！',1);
+				record_list.refresh();
+			},
+		};
+		ui.pages.recordClick($('[el=applysubmit]'),opt);};
+
+	$('[el=applysubmit]').click(function(){
+		_remit();
+	});
+
+	var record_list=ui.list;//对象，传入存放内容的对象和模板对象
+	var opt={cont:$('#record_list'),tpl:$('#record_list_tpl')};
+	opt.serveVar={channel:'{@channel}',p:'assets',m:'remit',action:'list'};   
+	opt.bind=function(jitem){
+		var type=toInt(jitem.find('[el=_type]').attr('_type'));
+		switch(type){
+			case 1:
+				var stype='收入';
+				jitem.find('[el=_type]').text(stype);
+				break;	
+			default:
+				var stype='支付';
+				jitem.find('[el=_type]').text(stype);
+				break;	
+		}
+	};
+	opt.binds=function(jcont){
+	};
+	opt.paging=$('.paging');//放置分页按钮的对象
+	opt.node_table='item';
+	record_list.init(opt);
+	record_list.parse();
+
+	var recharge=$p.q('action');
+	if(recharge=='recharge') _remit();
+});
+</script>
+
+
+<label:include file="frame/footers">

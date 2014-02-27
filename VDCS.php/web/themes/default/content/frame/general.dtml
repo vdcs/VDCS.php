@@ -1,0 +1,34 @@
+		<div class="Block Side-General">
+			<h2><t><span id="mbar_new_bar"><langs:chn.news></span><span id="mbar_good_bar"><langs:chn.goods></span><span id="mbar_hot_bar"><langs:chn.hots></span></p></div>
+			<div class="BlockList" id="mbar_new_content"><div class="BlockInner">
+<ul>
+<label:block("{@channel}","res=new;row=10;cache=60;t=cg")>
+<li><a href="[item:linkurl]">[item:topic!html!30]</a></li>
+</label:end>
+</ul>
+			</div></div>
+			<div class="BlockList" id="mbar_good_content"><div class="BlockInner">
+<ul>
+<label:block("{@channel}","res=good;row=10;cache=60;t=cg")>
+<li><a href="[item:linkurl]">[item:topic!html!30]</a></li>
+</label:end>
+</ul>
+			</div></div>
+			<div class="BlockList" id="mbar_hot_content"><div class="BlockInner">
+<ul>
+<label:block("{@channel}","res=hot;row=10;cache=60;t=cg")>
+<li><a href="[item:linkurl]">[item:topic!html!30]</a></li>
+</label:end>
+</ul>
+			</div>
+		</div>
+<script type="text/javascript">
+var mBar1=new VDCS.libMultiBar("mBar1");
+mBar1.setConfig("bar.class","MultiBar");
+mBar1.setConfig("bar.class.pop","MultiBar MultiBarPop");
+mBar1.addItem("new",{"bar.id":"mbar_new_bar","content.id":"mbar_new_content"});
+mBar1.addItem("good",{"bar.id":"mbar_good_bar","content.id":"mbar_good_content"});
+mBar1.addItem("hot",{"bar.id":"mbar_hot_bar","content.id":"mbar_hot_content"});
+mBar1.setActivate("new");
+mBar1.init();
+</script>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links</frame>
+		
+	</config>
+	
+	<lang>
+		<title><![CDATA[配置管理]]></title>
+		<title.name><![CDATA[配置]]></title.name>
+		<title.list><![CDATA[配置信息]]></title.list>
+		<title.add><![CDATA[添加新配置]]></title.add>
+		<title.edit><![CDATA[编辑配置]]></title.edit>
+		<title.setting><![CDATA[频道设置]]></title.setting>
+
+		<error.no.channel.select><![CDATA[您还没有选择要操作的频道！请先选择一个配置频道！]]></error.no.channel.select>
+		<error.not.exist><![CDATA[您要操作的配置不存在！]]></error.not.exist>
+		<error.exist.add><![CDATA[您要添加的配置ID已存在！]]></error.exist.add>
+		<error.del.exist.child><![CDATA[您要删除的配置还有子配置存在！]]></error.del.exist.child>
+		
+		<tip.class.delete><![CDATA[您确定要删除此配置嘛？删除后将不可恢复]]></tip.class.delete>
+		
+		<handle.ok.modify><![CDATA[成功修改了 {$name} 信息！]]></handle.ok.modify>
+	</lang>
+	
+	<template>
+		<menu.links><![CDATA[
+@@@title=<var:menu.content.title>;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<var:menu.content.links>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

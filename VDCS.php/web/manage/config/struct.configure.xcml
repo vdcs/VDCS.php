@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="struct">
+	<configure>
+		<node>item</node>
+	</configure>
+	<item>
+		<__key><![CDATA[app.web]]></__key>
+		<__name><![CDATA[基本配置]]></__name>
+		<__file><![CDATA[common.config/app]]></__file>
+		<__cache><![CDATA[config@configure]]></__cache>
+		<mbar.bar><![CDATA[multibar			###type~multibar.bar	^explain~default=$$$base=网站信息;com=联系信息;def=默认值]]></mbar.bar>
+		<!--vars=单位变量;-->
+		<mbar.head.base><![CDATA[multibar		###type~multibar.head	^att~id=base;display=none]]></mbar.head.base>
+		<web.name><![CDATA[网站名称			###property.min~1	^style~size=60 class="itxt"]]></web.name>
+		<web.shortname><![CDATA[网站简称		###property.min~1	^style~size=60 class="itxt"]]></web.shortname>
+		<web.title><![CDATA[网站标题			###property.min~1	^style~size=60 class="itxt"]]></web.title>
+		<web.urls><![CDATA[网站地址			###property.min~1	^style~size=60 class="itxt"]]></web.urls>
+		<web.email><![CDATA[网站邮箱			###property.min~1	^style~size=60 class="itxt"]]></web.email>
+		<web.master><![CDATA[网站站长			###property.min~1	^style~size=60 class="itxt"]]></web.master>
+		<bar.page><![CDATA[页面信息设置			###type~bar]]></bar.page>
+		<web.keywords><![CDATA[网站关键字		###type~textbox		^property.min~1	^style~cols=60 rows=3 class="itxt"]]></web.keywords>
+		<web.description><![CDATA[网站描述		###type~textbox		^property.min~1	^style~cols=60 rows=3 class="itxt"]]></web.description>
+		<mbar.end.base><![CDATA[multibar		###type~multibar.foot]]></mbar.end.base>
+		<mbar.head.com><![CDATA[multibar		###type~multibar.head	^att~id=com;display=none]]></mbar.head.com>
+		<com.name><![CDATA[单位名称			###property.min~1	^style~size=60 class="itxt"]]></com.name>
+		<com.explain><![CDATA[单位描述			###property.min~1	^style~size=60 class="itxt"]]></com.explain>
+		<com.cause><![CDATA[单位标语			###property.min~1	^style~size=60 class="itxt"]]></com.cause>
+		<com.email><![CDATA[单位标语			###property.min~1	^style~size=60 class="itxt"]]></com.email>
+		<com.phone><![CDATA[单位电话			###property.min~1	^style~size=60 class="itxt"]]></com.phone>
+		<com.fax><![CDATA[单位传真			###property.min~1	^style~size=60 class="itxt"]]></com.fax>
+		<com.hotline><![CDATA[联系热线			###property.min~1	^style~size=60 class="itxt"]]></com.hotline>
+		<com.careline><![CDATA[服务热线			###property.min~1	^style~size=60 class="itxt"]]></com.careline>
+		<com.mobile><![CDATA[联系手机			###property.min~1	^style~size=60 class="itxt"]]></com.mobile>
+		<com.address><![CDATA[单位地址			###property.min~1	^style~size=60 class="itxt"]]></com.address>
+		<com.postcode><![CDATA[单位邮编			###property.min~1	^style~size=60 class="itxt"]]></com.postcode>
+		<com.location><![CDATA[所在位置			###property.min~1	^style~size=60 class="itxt"]]></com.location>
+		<mbar.end.com><![CDATA[multibar			###type~multibar.foot]]></mbar.end.com>
+		<mbar.head.vars><![CDATA[multibar		###type~multibar.head	^att~id=vars;display=none]]></mbar.head.vars>
+		<unit.coin><![CDATA[金额单位			###property.min~0	^style~size=20		^explain~默认: 元$$$]]></unit.coin>
+		<unit.emoney><![CDATA[货币单位			###property.min~0	^style~size=20		^explain~默认: 金币$$$]]></unit.emoney>
+		<unit.points><![CDATA[积分单位			###property.min~0	^style~size=20		^explain~默认: 分$$$]]></unit.points>
+		<unit.exp><![CDATA[经验单位			###property.min~0	^style~size=20		^explain~默认: 点$$$]]></unit.exp>
+		<unit.strength><![CDATA[体力单位		###property.min~0	^style~size=20		^explain~默认: 点$$$]]></unit.strength>
+		<unit.prestige><![CDATA[威望单位		###property.min~0	^style~size=20		^explain~默认: 点$$$]]></unit.prestige>
+		<bar.var.user><![CDATA[用户级别设置		###type~bar]]></bar.var.user>
+		<var.admin><![CDATA[管理员			###property.min~0	^style~size=20		^explain~默认: 管理员$$$]]></var.admin>
+		<var.user><![CDATA[用户				###property.min~0	^style~size=20		^explain~默认: 用户$$$]]></var.user>
+		<var.guest><![CDATA[游客			###property.min~0	^style~size=20		^explain~默认: 游客$$$]]></var.guest>
+		<mbar.end.vars><![CDATA[multibar		###type~multibar.foot]]></mbar.end.vars>
+		<mbar.head.def><![CDATA[multibar		###type~multibar.head	^att~id=def;display=none]]></mbar.head.def>
+		<bar.url><![CDATA[SEO设定			###type~bar]]></bar.url>
+		<var.url.mode><![CDATA[URL模式			###type~radio		^att~<control:att("file","url.mode")>]]></var.url.mode>
+		<bar.num><![CDATA[数值设定			###type~bar]]></bar.num>
+		<var.pic.width><![CDATA[小图片宽度		###property.min~0	^explain~像素$$$0为默认值 120px]]></var.pic.width>
+		<var.pic.height><![CDATA[小图片高度		###property.min~0	^explain~像素$$$0为默认值 90px]]></var.pic.height>
+		<mbar.end.def><![CDATA[multibar			###type~multibar.foot]]></mbar.end.def>
+	</item>
+	<item>
+		<__key><![CDATA[shield]]></__key>
+		<__name><![CDATA[过滤配置]]></__name>
+		<__file><![CDATA[common.config/data/shields]]></__file>
+		<__cache><![CDATA[]]></__cache>
+		<mbar.bar><![CDATA[multibar			###type~multibar.bar	^explain~default=$$$base=常规设置;ip=IP过滤信息;badword=脏字屏蔽设置]]></mbar.bar>
+		<!--;filtrate=信息过滤设置-->
+		<mbar.head.base><![CDATA[multibar		###type~multibar.head	^att~id=base;display=none]]></mbar.head.base>
+		<bar.var><![CDATA[信息审核设置			###type~bar]]></bar.var>
+		<var.audit.post><![CDATA[发布信息		###type~radio		^style~		^att~0=开启审核;1=无需审核		^explain~开启审核后，发布的信息将在审核后才可正常显示]]></var.audit.post>
+		<mbar.end.base><![CDATA[multibar		###type~multibar.foot]]></mbar.end.base>
+		<mbar.head.ip><![CDATA[multibar			###type~multibar.head	^att~id=ip;display=none]]></mbar.head.ip>
+		<bar.banip><![CDATA[IP过滤信息			###type~bar]]></bar.banip>
+		<banip.common><![CDATA[全局浏览屏蔽		###type~textbox		^style~cols=60 rows=4 class="itxt"	^explain~格式为: 123.123.123表示屏蔽123.123.123.*段IP, 多个IP段用“,”间隔]]></banip.common>
+		<banip.post><![CDATA[发布追加屏蔽		###type~textbox		^style~cols=60 rows=4 class="itxt"	^explain~]]></banip.post>
+		<banip.passport><![CDATA[Passport追加屏蔽	###type~textbox		^style~cols=60 rows=4 class="itxt"	^explain~]]></banip.passport>
+		<mbar.end.banip><![CDATA[multibar		###type~multibar.foot]]></mbar.end.banip>
+		<mbar.head.badword><![CDATA[multibar		###type~multibar.head	^att~id=badword;display=none]]></mbar.head.badword>
+		<bar.badword><![CDATA[脏字屏蔽设置		###type~bar]]></bar.badword>
+		<badword.common><![CDATA[全局信息屏蔽		###type~textbox		^style~cols=60 rows=4 class="itxt"	^explain~]]></badword.common>
+		<badword.post><![CDATA[发布追加屏蔽		###type~textbox		^style~cols=60 rows=4 class="itxt"	^explain~]]></badword.post>
+		<mbar.end.badword><![CDATA[multibar		###type~multibar.foot]]></mbar.end.badword>
+		<!--
+		<mbar.head.filtrate><![CDATA[multibar		###type~multibar.head	^att~id=filtrate;display=none]]></mbar.head.filtrate>
+		<bar.filtrate><![CDATA[信息过滤设置		###type~bar]]></bar.filtrate>
+		<filtrate.common><![CDATA[全局信息过滤		###type~textbox		^style~cols=60 rows=4 class="itxt"	^explain~]]></filtrate.common>
+		<filtrate.post><![CDATA[发布信息过滤		###type~textbox		^style~cols=60 rows=4 class="itxt"	^explain~]]></filtrate.post>
+		<filtrate.gbook><![CDATA[追加留言过滤		###type~textbox		^style~cols=60 rows=4 class="itxt"	^explain~]]></filtrate.gbook>
+		<filtrate.comment><![CDATA[追加评论过滤		###type~textbox		^style~cols=60 rows=4 class="itxt"	^explain~]]></filtrate.comment>
+		<mbar.end.filtrate><![CDATA[multibar		###type~multibar.foot]]></mbar.end.filtrate>
+		-->
+	</item>
+	<item>
+		<__key><![CDATA[email]]></__key>
+		<__name><![CDATA[邮件配置]]></__name>
+		<__file><![CDATA[common.config/data/sendmail]]></__file>
+		<__cache><![CDATA[]]></__cache>
+		<config.module><![CDATA[发送模式		###type~radio			^property.min~		^att~smtp=SMTP方式;sendmail=系统自带(*nix)	^explain~发送邮件的服务方式$$$]]></config.module>
+		<bar.smtp><![CDATA[SMTP配置			###type~bar]]></bar.smtp>
+		<config.smtp.server><![CDATA[SMTP服务器		###property.min~1		^style~size=40		^explain~邮件服务器的地址，可以为IP或域名$$$]]></config.smtp.server>
+		<config.smtp.port><![CDATA[SMTP端口号		###property.min~1		^style~size=40		^explain~邮件服务器的端口号$$$]]></config.smtp.port>
+		<config.smtp.silent><![CDATA[SMTP身份认证	###type~radio			^property.min~		^att~1=是;0=否 		^explain~STSM邮件服务器是否需要身份认证$$$]]></config.smtp.silent>
+		<config.smtp.user><![CDATA[SMTP用户名		###property.min~1		^style~size=20		^explain~邮件服务器上的SMTP用户名$$$]]></config.smtp.user>
+		<config.smtp.password><![CDATA[SMTP密码		###property.min~1		^style~size=20		^explain~SMTP用户名对应的SMTP密码$$$]]></config.smtp.password>
+		<bar.config><![CDATA[常规配置			###type~bar]]></bar.config>
+		<config.message.priority><![CDATA[邮件优先级	###type~radio			^property.min~		^att~3=一般邮件;1=紧急邮件;5=最慢邮件		^explain~发送邮件时的邮件优先级$$$]]></config.message.priority>
+		<config.message.charset><![CDATA[邮件编码	###property.min~1		^style~size=20		^explain~发送邮件内容的编码]]></config.message.charset>
+		<config.from.email><![CDATA[发件人邮箱		###property.min~1		^style~size=40		^explain~发送邮件的邮箱地址$$$]]></config.from.email>
+		<config.from.name><![CDATA[发件人名称		###property.min~1		^style~size=20		^explain~发送邮件的发件人名称$$$]]></config.from.name>
+	</item>
+</xcml>

@@ -1,0 +1,19 @@
+﻿<label:include file="frame/headers">
+
+<div class="framer">
+<div class="cent">
+		<div class="xform">
+<div class="bar">
+	<cite>注册</cite>
+	<t>REGISTER</t>
+</div>	
+<label:include file="inc/register.user">
+	</div>
+</div>
+<div class="sider">
+<label:include file="inc/tips.login">
+</div>
+</div>
+
+
+<label:include file="frame/footers">

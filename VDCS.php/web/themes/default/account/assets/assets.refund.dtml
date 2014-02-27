@@ -1,0 +1,65 @@
+<label:include file="frame/headers">
+
+
+<div class="cont">
+<div class="cent">
+	<div class="box">
+		<h2><t>提现记录</t></h2>
+		<div class="bod">
+			<table class="table tables table-striped table-hover table-list">
+				<thead>
+					<tr><th>ID</th><th>金额</th><th>银行</th><th>银行账号</th><th>备注</th><th>状态</th><th>时间</th></tr>
+				</thead>
+				<tbody id="list"></tbody>	
+			</table>
+			<xmp id="list_tpl">
+				<tr dataid="[item:id]">
+					<td>[item:id]</td><td>[item:money]</td><td>[item:bank]</td><td>[item:bankno]</td><td>[item:summary]</td><td>[item:status.name]</td><td>[item:time]</td>
+				</tr>
+			</xmp>
+		</div>
+	</div>
+</div>
+<div class="sider">
+	<div class="box">
+		<h2><t>操作</t></h2>
+		<div class="con">
+			<a class="btn btn-info" el="refund">申请提现</a>
+		</div>
+	</div>
+</div>
+</div>
+<div class="space"></div>
+<div class="paging"></div>
+<script type="text/javascript">
+$(function(){
+	ui.pages.channel='{@channel}';
+	var opt={
+		serveE:{p:'assets',m:'refund',action:'apply',params:''},//cp=account&p=linkman&x=e
+		serveX:{p:'assets',m:'refund',action:'apply',params:''},
+		//serveX:{p:'cart',action:'add',params:'apptype=domain&productid='+productid+'&amount='+amount+'&price='+price1+''},
+		title:'提现信息',
+		succeed:function(){
+			ui.popups('succeed','提现申请成功！',1);
+			list.refresh();
+		},
+	};
+	ui.pages.record($('[el=refund]'),opt);
+
+	var list=ui.list;//对象，传入存放内容的对象和模板对象
+	var opt={cont:$('#list'),tpl:$('#list_tpl')};
+	opt.serveVar={channel:'{@channel}',p:'assets',m:'refund',action:'list'};   
+	opt.bind=function(jitem){
+		
+	};
+	opt.binds=function(jcont){
+	};
+	opt.paging=$('.paging');//放置分页按钮的对象
+	opt.node_table='item';
+	list.init(opt);
+	list.parse();
+});
+</script>
+
+
+<label:include file="frame/footers">

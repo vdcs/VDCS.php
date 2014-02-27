@@ -1,0 +1,17 @@
+<label:include script="<url:images>script/jquery/jqzoom/jqzoom.css" type="css">
+<label:include script="jquery/jqzoom/jqzoom.js">
+<script type="text/javascript">
+$(d).ready(function(){
+	$(".jqzoom").jqueryzoom({
+		xzoom: 344,		//zooming div default width(default width value is 200)
+		yzoom: 350,		//zooming div default width(default height value is 200)
+		offset: 8,		//zooming div default offset(default offset value is 10)
+		position: "right",	//zooming div position(default position value is "right")
+		preload: 1,		//preload of images: 1 by default
+		lens:1  		//lens over the image: 1 by default
+	});
+});
+/*
+lens:false,
+*/
+</script>

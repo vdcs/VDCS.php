@@ -1,0 +1,3 @@
+<?
+class ChannelShopBase extends ChannelShopBasic{}
+?>

@@ -1,0 +1,9 @@
+<label:include file="frame/header">
+<label:include file="frame/frame.left">
+<label:include file="common-menu">
+<label:include file="frame/frame.space">
+
+<label:include file="my/my-page">
+
+<label:include file="frame/frame.right">
+<label:include file="frame/footer">

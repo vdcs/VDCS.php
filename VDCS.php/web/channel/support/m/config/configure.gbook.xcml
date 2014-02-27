@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links,search</frame>
+		<search.fields>g_topic=6</search.fields>
+		<search.term.type></search.term.type>
+		
+		<table.name>db_gbook</table.name>
+		<table.prefix>g_</table.prefix>
+		<table.field.id>g_id</table.field.id>
+		<table.fields.value>id=g_id;time=g_tim</table.fields.value>
+		<table.fields.edit>g_topic,username,g_realname,g_gender,g_qq,g_email,g_homepage,g_befrom,g_remark,g_ishide,g_status,g_tim,g_re_remark,g_re_tim</table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.order>g_id desc</list.table.order>
+		<list.field.append>g_topic</list.field.append>
+		<list.handle.select.option>audit,unaudit,show,hide,delete</list.handle.select.option>
+		<list.handle.sql.delete>delete from db_gbook where g_id in ({$ids})</list.handle.sql.delete>
+		<list.handle.sql.audit>update db_gbook set g_status=1 where g_id in ({$ids})</list.handle.sql.audit>
+		<list.handle.sql.unaudit>update db_gbook set g_status=0 where g_id in ({$ids})</list.handle.sql.unaudit>
+		<list.handle.sql.show>update db_gbook set g_ishide=0 where g_id in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.hide>update db_gbook set g_ishide=1 where g_id in ({$ids})</list.handle.sql.hide>
+	</config>
+	
+	<lang>
+		<title><![CDATA[留言管理]]></title>
+		<title.name><![CDATA[留言列表]]></title.name>
+		<title.list><![CDATA[留言列表]]></title.list>
+		<title.list.><![CDATA[留言列表]]></title.list.>
+		<title.add><![CDATA[添加留言]]></title.add>
+		<title.edit><![CDATA[编辑留言]]></title.edit>
+		<title.clearall><![CDATA[清除留言]]></title.clearall>
+		
+		<title.frame.search><![CDATA[留言搜索]]></title.frame.search>
+		<search.fields.att><![CDATA[s_topic=留言名称]]></search.fields.att>
+		
+		<error.not.exist><![CDATA[您要操作的留言不存在！]]></error.not.exist>
+		
+		<error.norule.remark><![CDATA[回复内容 不符合规则！]]></error.norule.remark>
+		
+		<handle.ok.edit><![CDATA[成功回复了 1 个留言！]]></handle.ok.edit>
+		<handle.ok.delete><![CDATA[成功删除 {$count} 个留言！]]></handle.ok.delete>
+		<handle.ok.audit><![CDATA[成功审核 {$count} 个留言！]]></handle.ok.audit>
+		<handle.ok.unaudit><![CDATA[成功待审核 {$count} 个留言！]]></handle.ok.unaudit>
+		<handle.ok.show><![CDATA[成功显示 {$count} 个留言！]]></handle.ok.show>
+		<handle.ok.hide><![CDATA[成功隐藏 {$count} 个留言！]]></handle.ok.hide>
+		<handle.ok.clearall><![CDATA[成功清空了所有留言！]]></handle.ok.clearall>
+	</lang>
+	
+	<template>
+		<list><![CDATA[
+<control:ui.value("listbox.heads")>
+<control:ui.value("list.bar.tr")>
+<control:ui.value("list.bar.id")>
+<td class="bar-user"><exec:langs("title.realname")></td>
+<td class="bar-topic"><exec:langs("title.topic")></td>
+<td class="bar-time"><exec:langs("title.time")></td>
+<td class="bar-status"><exec:langs("title.status")></td>
+<td class="bar-handle"><exec:langs("title.handle")></td>
+<control:ui.value("list.bar.sd")>
+</tr>
+<loop:list>
+<control:ui.value("list.row.tr")>
+<control:ui.value("list.row.id")>
+<td class="row-user"><a href="<app:url.account>user.asp?username=[item:username}" title="IP: [item:g_ip]">[item:g_realname]</a></td>
+<td class="row-topic"><a href="<var:url.edit>">[item:g_topic!html!50]</a></td>
+<td class="row-time">[item:times]</td>
+<td class="row-status"><control:dict("file:sort=common.channel/support/data.ishide","[item:<var:table.prefix>ishide]")> <control:dict("data.audit","[item:<var:table.prefix>status]")></td>
+<td class="row-handle"><a href="<var:url.edit>"><exec:langs("action.reply")></a></td>
+<control:ui.value("list.row.sd")>
+</tr>
+</loop>
+<control:ui.value("listbox.ends")>
+]]></list>
+		<menu.links><![CDATA[
+@@@title=留言管理;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("action=clearall")>" onclick="javascript:return $p.isClickReturn('清除所有留言',2);">清除留言</a></li>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

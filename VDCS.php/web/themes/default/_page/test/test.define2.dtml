@@ -1,0 +1,22 @@
+﻿<label:include file="headers">
+
+
+<label:include script="<web:url.themes>images/grid/grid.css" type="css">
+<label:include script="external/highslide.js">
+<div>
+<div id="def_area"><div class="inners">
+	<div class="innerx"></div>
+</div></div>
+</div>
+
+<label:include script="<web:url.themes>app.t.defines.js">
+<script type="text/javascript">
+$d.load(function(){
+	appt.define.initer();
+	//appt.define.dataSet('tags','<view:tagid>');
+	appt.define.dataRead();
+});
+</script>
+
+
+<label:include file="footers">

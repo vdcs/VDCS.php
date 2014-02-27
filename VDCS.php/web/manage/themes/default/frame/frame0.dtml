@@ -1,0 +1,79 @@
+<label:include file="header.frame">
+
+<div id="frame_header"><div class="inners">
+	<div class="bars">
+		<h2><a class="name" href="<url:root>" target="_blank"><app:web.name></a><span class="title">管理后台</span></h2>
+		<div class="navi">
+			<ul>
+			<li class="welcome">Hi <span class="name"><manager:name></span>!</li>
+			<li class="main"><a href="<url:manage.main>" target="ifrm_main">管理首页</a></li>
+			<li class="refresh"><a href="javascript:;" onclick="javascript:mframe.doReload('main');">刷新页面</a></li>
+			<li class="help"><a href="<url:manage.help>" target="_blank">帮助中心</a></li>
+			<li class="logout"><a href="<url:manage.logout>" onclick="javascript:return logout(this);" target="_top">安全退出</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="menus">
+		<div class="side"><cite el="time">今天是 <span id="FrameNow-Date">0000-00-00</span> <span id="FrameNow-Week">星期</span></cite></div>
+		<div class="nav">
+<ul>
+<loop:nav>
+<li el="[item:channel]"><a href="<url:manage.frame.menu>?channel=[item:channel]"><span>[item:name]</span></a></li>
+</loop>
+</ul>
+		</div>
+	</div>
+</div></div>
+<div id="frame_body"><div class="inners">
+	<div class="menus"><iframe name="ifrm_menu" src="about:blank" noresize></iframe></div>
+	<div class="strips"><a class="onoff"><span>开关</span></a></div>
+	<div class="mains"><iframe name="ifrm_main" src="about:blank" noresize></iframe></div>
+</div></div>
+<div id="frame_footer"><div class="inners">
+	<div class="copyright"><a href="<app:web.urls>" target="_blank"><app:web.name></a> Management Platform.</div>
+</div></div>
+
+<script type="text/javascript">
+logout=function(obj){
+	if(!obj) return false;
+	ui.confirm('您确定要 退出本系统 嘛？',function(){$p.go($(obj).attr('href'))});
+	return false;
+};
+
+mframe._data["menu.item.id"]="";
+//$(function(){mframe.doNavInit()});
+// onclick="javascript:return mframe.doNavMenuClick(this);" target="FrameMenu"
+$(function(){
+	var jheader=$('#frame_header'),jfooter=$('#frame_footer');
+	var jnava=null;
+	jheader.find('.menus .nav li a').attr('target','ifrm_menu');
+	jheader.find('.menus .nav li a').click(function(){
+		if(jnava) jnava.parent('li').removeClass('pop');
+		var jthis=$(this);
+		jthis.parent('li').addClass('pop');
+		jnava=jthis;
+		//return false;
+	});
+	$w.timeout(function(){
+		var jmenua=jheader.find('.menus .nav li a:first');
+		jmenua.click();
+		$('iframe[name="ifrm_menu"]').attr('src',jmenua.attr('href'));
+	},0.1);
+	var jinners=$('#frame_body > .inners');
+	var _resize=function(){
+		var body_h=$(window).height()-jheader.height()-jfooter.height();
+		var body_hi=body_h-10;
+		jinners.height(body_h);
+		jinners.find('.menus iframe').height(body_hi);
+		jinners.find('.mains iframe').height(body_hi);
+		jinners.find('.menus').height(body_hi);
+		jinners.find('.strips').height(body_hi);
+		jinners.find('.mains').height(body_hi);
+	};
+	_resize();
+	$(window).resize(_resize);
+	
+});
+</script>
+
+<label:include file="footer.frame">

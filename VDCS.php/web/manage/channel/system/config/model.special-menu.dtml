@@ -1,0 +1,11 @@
+<div class="box">
+<h2><t>专题</t></h2>
+<div class="con">
+	<div>
+		<ul>
+		<li><a href="<exec:url("action=list")>">专题列表</a></li>
+		<li><a href="<exec:url("action=add")>">添加专题</a></li>
+		</ul>
+	</div>
+</div>
+</div>

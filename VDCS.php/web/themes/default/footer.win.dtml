@@ -1,0 +1,5 @@
+﻿<div class="space"></div>
+<div><a href="<app:web.urls>" target="_blank"><app:web.name></a> <xcml:themes("frame.copyright")></div>
+</center>
+<div class="hide"><!-- 网站底部统计代码 Begin --><xcml:themes("frame.stat")><!-- End --></div>
+<label:include file="/footer.blank">

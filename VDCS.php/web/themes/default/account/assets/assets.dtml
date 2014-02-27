@@ -1,0 +1,15 @@
+<label:include file="frame/headers">
+
+
+<div class="cont">
+<label:include file="inc/box.profile">
+</div>
+
+<label:include file="frame/spacer">
+
+<div class="cont">
+
+</div>
+
+
+<label:include file="frame/footers">

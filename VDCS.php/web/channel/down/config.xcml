@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre xmlns:data="node">
+		<channel>{@channel}</channel>
+		<table.name>db_{@channel}</table.name>
+		<table.px>c_</table.px>
+		<name>下载</name>
+		<names>软件</names>
+		<act>下载</act>
+		<act.get>获取</act.get>
+		<act.view>浏览</act.view>
+		<unit>个</unit>
+		
+		<data:type>s</data:type>
+		<data:table.name>dbd_data</data:table.name>
+		<data:table.px></data:table.px>
+		<data:name>资源</data:name>
+		<data:names>资源</data:names>
+		<data:act>下载</data:act>
+		<data:unit>个</data:unit>
+	</pre>
+	<var>
+		<title>下载</title>
+		<title.index>null</title.index>
+		<title.list>软件列表</title.list>
+		<title.view>浏览软件</title.view>
+		<title.view.data>浏览资源</title.view.data>
+		<title.search>软件搜索</title.search>
+		<title.pic>软件图片</title.pic>
+		<title.class>软件分类</title.class>
+		<title.special>软件专题</title.special>
+	</var>
+	<num>
+		<pic.width>0</pic.width>
+		<pic.height>0</pic.height>
+	</num>
+	<config>
+		<url>default</url>
+		<put>0</put>
+		<put.status>0</put.status>
+		<put.premium>1</put.premium>
+		<put.audit></put.audit>
+		<put.premium.emoney>0</put.premium.emoney>
+		<put.premium.points>5</put.premium.points>
+	</config>
+</xcml>

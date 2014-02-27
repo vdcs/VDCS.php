@@ -1,0 +1,31 @@
+﻿<label:include file="frame/headers">
+
+
+<div class="cont">
+	<div class="box">
+		<!--<h2><t>标题</t></h2>-->
+		<div class="con">
+<div style="padding:80px;">
+<div class="mtip" id="mtip">
+	<cite class="error"><em></em></cite>
+	<h3>支付提示</h3>
+	<h4>您的支付操作出现了异常（验证错误）！</h4>
+	<h5>
+<a class="btn" el="root" href="<url:root>"><span><chn:var("common","title.index")></span></a>
+<a class="btn" el="back" href="<linkurl:account.index>"><span><chn:var("account","title")></span></a>
+<!--<a class="btn" el="goback" href="javascript:$p.goback();"><span>返回</span></a>-->
+	</h5>
+</div>
+</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	
+	
+});
+</script>
+
+
+<label:include file="frame/footers">

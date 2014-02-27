@@ -1,0 +1,9 @@
+	
+	<div class="space"></div>
+	<a name="comment"></a>
+	<div class="box">
+		<h2><t><langs:view.comment></t></h2>
+		<div class="con">
+<label:include file="/inc/widget/comment">
+		</div>
+	</div>

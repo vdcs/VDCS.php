@@ -1,0 +1,31 @@
+﻿<label:include file="frame/headers">
+
+
+<div class="framer">
+
+
+<div style="width:600px;">
+<div class="box">
+	<h2><t>登录</t></h2>
+	<div class="con">
+
+<label:include file="inc/login.quick">
+
+<label:include file="inc/login.script">
+<script type="text/javascript">
+$(function(){
+	$f.bindi();
+	//app.xlogin.debugxml=true;
+	app.xlogin.initer({backurl:"<var:url.back>"});
+	app.xlogin.setValue({name:"",password:""});
+});
+</script>
+
+	</div>
+</div>
+
+
+</div>
+
+
+<label:include file="frame/footers">

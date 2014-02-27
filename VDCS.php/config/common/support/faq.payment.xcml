@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,topic,content</field>
+	</configure>
+	<item>
+		<key>flow</key>
+		<topic><![CDATA[购买流程]]></topic>
+		<content><![CDATA[您可以通过以下方式联系确定您所需购买产品的价格及详细信息：<br>
+销售咨询电话: 000-00000000, 或在线咨询QQ: 000000]]></content>
+	</item>
+	<item>
+		<key>payment</key>
+		<topic><![CDATA[我如何付款给你们？]]></topic>
+		<content><![CDATA[您可以选择以下任一帐号进行网上银行实时转帐付款：<br>
+这里是银行付款内容<br>
+<br>
+也可以通过邮政汇款或上门付款（上海地区）的方式付款：<br>
+<font class="b">网站联系地址 邮编:000000</font><br>
+汇款后请及时和我们联系，告诉我们以下信息：<br>
+<font class="b">您的真实姓名、汇款方式、汇入银行、汇款时间、汇款金额</font><br>
+如果可以传真，请将汇款底单（银行回单）传真给我们。<br>
+]]></content>
+	</item>
+	<item>
+		<key>explain</key>
+		<topic><![CDATA[购买说明]]></topic>
+		<content><![CDATA[这里是购买说明]]></content>
+	</item>
+</xcml>

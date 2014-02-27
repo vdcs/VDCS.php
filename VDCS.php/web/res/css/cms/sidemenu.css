@@ -1,0 +1,34 @@
+
+#side_menu{display:none;position:fixed;top:40px;margin-left:98px;}
+#side_menu .side_menu_header{width:96px;height:7px;background:url("http://s0.pctuan.bdimg.com/static/widget/common/nav/img/sidenav_38fe593d.png") no-repeat scroll 0px -82px transparent;}
+#side_menu .side_menu_footer{display:block;width:96px;height:34px;margin-top:-1px;border-top:1px solid red;background:url("http://s0.pctuan.bdimg.com/static/widget/common/nav/img/sidenav_38fe593d.png") no-repeat scroll 0px -90px transparent;}
+#side_menu ul{}
+#side_menu li{border:1px solid #cdcdcd;width:94px;margin-top:-1px;}
+#side_menu li a{color:#DE0909;font-size:14px;width:53px;height:37px;line-height:37px;display:inline-block;padding-left:40px;text-decoration:none;}
+#side_menu li a:hover{background:#DE0909;width:54px;height:36px;margin-top:-1px;margin-left:-1px;border:1px solid rgb(153, 0, 0);color:#ffffff;}
+#side_menu li a:hover .index,
+#side_menu li a:hover .article,
+#side_menu li a:hover .news,
+#side_menu li a:hover .content,
+#side_menu li a:hover .down,
+#side_menu li a:hover .photo,
+#side_menu li a:hover .shop,
+#side_menu li a:hover .ask{background:url("http://s2.pctuan.bdimg.com/static/common/pkg/base_z50128fac.png") no-repeat scroll -218px -62px transparent;display:inline-block;}
+#side_menu li .menucover{background:#DE0909;color:#ffffff;border:1px solid rgb(153, 0, 0);width:54px;height:36px;line-height:36px;margin-top:-1px;margin-left:-1px;}
+#side_menu li span.index,
+#side_menu li span.article,
+#side_menu li span.news,
+#side_menu li span.content,
+#side_menu li span.down,
+#side_menu li span.photo,
+#side_menu li span.shop,
+#side_menu li span.ask{position:absolute;width:16px;height:15px;margin-left:-25px;margin-top:11px;background:url("http://s2.pctuan.bdimg.com/static/common/pkg/base_z50128fac.png") no-repeat scroll -218px -88px transparent;display:inline-block;}
+
+#side_menu li .menucover .index,
+#side_menu li .menucover .article,
+#side_menu li .menucover .news,
+#side_menu li .menucover .content,
+#side_menu li .menucover .down,
+#side_menu li .menucover .photo,
+#side_menu li .menucover .shop,
+#side_menu li .menucover .ask{background:url("http://s2.pctuan.bdimg.com/static/common/pkg/base_z50128fac.png") no-repeat scroll -218px -62px transparent;display:inline-block;}

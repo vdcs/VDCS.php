@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>base,app,xim</node>
+	</configure>
+	<app>
+		<id>app</id>
+		<name>测试APP</name>
+		<url>http://app.vdcs.cc/</url>
+		<api_x>xml</api_x>
+		<api_host>http://app.vdcs.cc/api/</api_host>
+		<api_key>secret_app</api_key>
+		<api_url>interface/{api}.xml</api_url>
+		<api_urls><![CDATA[]]></api_urls>
+		<ua>user</ua>
+		<redirect>0</redirect>
+		<status>1</status>
+	</app>
+	<xim>
+		<id>xim</id>
+		<name>测试xim</name>
+		<url>http://xim.vdcs.cn/</url>
+		<api_x>json</api_x>
+		<api_host>http://xim.vdcs.cn/api/</api_host>
+		<api_key>secret_xim</api_key>
+		<api_url>interface/{api}.json</api_url>
+		<api_urls><![CDATA[]]></api_urls>
+		<ua>user</ua>
+		<redirect>0</redirect>
+		<status>1</status>
+	</xim>
+</xcml>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>newday</node>
+	</configure>
+<!--
+update dbs_config set num_forum_new=0,today_tim='{$today}'
+-->
+	<newday>
+		<sql><![CDATA[update db_user set u_emoney_con=0,u_online=0,u_bbs_new=0$$$update db_bbs_class set f_num_new=0$$$update db_blog set b_emoney_con=0]]></sql>
+		<data.update><![CDATA[today={$today}$$$total.forum.new=0]]></data.update>
+		<cache.update><![CDATA[]]></cache.update>
+		<cache.del><![CDATA[]]></cache.del>
+	</newday>
+</xcml>

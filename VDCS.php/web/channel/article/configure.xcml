@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>var,config,url.script,url.rewrite</node>
+	</configure>
+	<var>
+		<name>{@name}</name>
+		<names>{@names}</names>
+		<act>{@act}</act>
+		<unit>{@unit}</unit>
+	</var>
+	<config>
+		<model>configure,search,class,special,collect</model>
+	</config>
+	<url.script>
+		<list><![CDATA[{@rootc.script}&p=list&classid={$classid}]]></list>
+		<list.page><![CDATA[{@rootc.script}&p=list&classid={$classid}&page={$page}]]></list.page>
+		<view><![CDATA[{@rootc.script}&p=view&id={$id}]]></view>
+		<view.page><![CDATA[{@rootc.script}&p=view&id={$id}&page={$page}]]></view.page>
+		
+		<special><![CDATA[{@rootc.script}&p=special&specialid={$specialid}]]></special>
+		<special.page><![CDATA[{@rootc.script}&p=special&specialid={$specialid}&page={$page}]]></special.page>
+	</url.script>
+	<url.rewrite>
+		<list><![CDATA[{@rootc.rewrite}list_{$classid}<app:rewrite.ext>]]></list>
+		<list.page><![CDATA[{@rootc.rewrite}list_{$classid}_{$page}<app:rewrite.ext>]]></list.page>
+		<view><![CDATA[{@rootc.rewrite}view_{$id}<app:rewrite.ext>]]></view>
+		<view.page><![CDATA[{@rootc.rewrite}view_{$id}_{$page}<app:rewrite.ext>]]></view.page>
+		
+		<special><![CDATA[{@rootc.rewrite}special_{$specialid}<app:rewrite.ext>]]></special>
+		<special.page><![CDATA[{@rootc.rewrite}special_{$specialid}_{$page}<app:rewrite.ext>]]></special.page>
+	</url.rewrite>
+</xcml>

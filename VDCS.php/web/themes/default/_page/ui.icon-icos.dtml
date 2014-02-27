@@ -1,0 +1,1411 @@
+
+<div class="tab-pane fade" id="iconsweets">
+<div><span>Dark Icons</span></div>
+<ul class="icons-list clearfix">
+	<li>
+		<span><i class="icos-abacus"></i></span>
+		<code>icos-abacus</code>
+	</li>
+	<li>
+		<span><i class="icos-acces-denied-sign"></i></span>
+		<code>icos-acces-denied-sign</code>
+	</li>
+	<li>
+		<span><i class="icos-address-book-2"></i></span>
+		<code>icos-address-book-2</code>
+	</li>
+	<li>
+		<span><i class="icos-address-book"></i></span>
+		<code>icos-address-book</code>
+	</li>
+	<li>
+		<span><i class="icos-admin-user-2"></i></span>
+		<code>icos-admin-user-2</code>
+	</li>
+	<li>
+		<span><i class="icos-admin-user"></i></span>
+		<code>icos-admin-user</code>
+	</li>
+	<li>
+		<span><i class="icos-airplane"></i></span>
+		<code>icos-airplane</code>
+	</li>
+	<li>
+		<span><i class="icos-alarm-bell-2"></i></span>
+		<code>icos-alarm-bell-2</code>
+	</li>
+	<li>
+		<span><i class="icos-alarm-bell"></i></span>
+		<code>icos-alarm-bell</code>
+	</li>
+	<li>
+		<span><i class="icos-alarm-clock"></i></span>
+		<code>icos-alarm-clock</code>
+	</li>
+	<li>
+		<span><i class="icos-alert-2"></i></span>
+		<code>icos-alert-2</code>
+	</li>
+	<li>
+		<span><i class="icos-alert"></i></span>
+		<code>icos-alert</code>
+	</li>
+	<li>
+		<span><i class="icos-android"></i></span>
+		<code>icos-android</code>
+	</li>
+	<li>
+		<span><i class="icos-apartment-building"></i></span>
+		<code>icos-apartment-building</code>
+	</li>
+	<li>
+		<span><i class="icos-archive"></i></span>
+		<code>icos-archive</code>
+	</li>
+	<li>
+		<span><i class="icos-arrow-down"></i></span>
+		<code>icos-arrow-down</code>
+	</li>
+	<li>
+		<span><i class="icos-arrow-left"></i></span>
+		<code>icos-arrow-left</code>
+	</li>
+	<li>
+		<span><i class="icos-arrow-right"></i></span>
+		<code>icos-arrow-right</code>
+	</li>
+	<li>
+		<span><i class="icos-arrow-up"></i></span>
+		<code>icos-arrow-up</code>
+	</li>
+	<li>
+		<span><i class="icos-bag"></i></span>
+		<code>icos-bag</code>
+	</li>
+	<li>
+		<span><i class="icos-balloons"></i></span>
+		<code>icos-balloons</code>
+	</li>
+	<li>
+		<span><i class="icos-bandaid"></i></span>
+		<code>icos-bandaid</code>
+	</li>
+	<li>
+		<span><i class="icos-bar-graph"></i></span>
+		<code>icos-bar-graph</code>
+	</li>
+	<li>
+		<span><i class="icos-battery-almost-empty"></i></span>
+		<code>icos-battery-almost-empty</code>
+	</li>
+	<li>
+		<span><i class="icos-battery-almost-full"></i></span>
+		<code>icos-battery-almost-full</code>
+	</li>
+	<li>
+		<span><i class="icos-battery-empty"></i></span>
+		<code>icos-battery-empty</code>
+	</li>
+	<li>
+		<span><i class="icos-battery-full"></i></span>
+		<code>icos-battery-full</code>
+	</li>
+	<li>
+		<span><i class="icos-battery"></i></span>
+		<code>icos-battery</code>
+	</li>
+	<li>
+		<span><i class="icos-bended-arrow-down"></i></span>
+		<code>icos-bended-arrow-down</code>
+	</li>
+	<li>
+		<span><i class="icos-bended-arrow-left"></i></span>
+		<code>icos-bended-arrow-left</code>
+	</li>
+	<li>
+		<span><i class="icos-bended-arrow-right"></i></span>
+		<code>icos-bended-arrow-right</code>
+	</li>
+	<li>
+		<span><i class="icos-bended-arrow-up"></i></span>
+		<code>icos-bended-arrow-up</code>
+	</li>
+	<li>
+		<span><i class="icos-big-brush"></i></span>
+		<code>icos-big-brush</code>
+	</li>
+	<li>
+		<span><i class="icos-blackberry"></i></span>
+		<code>icos-blackberry</code>
+	</li>
+	<li>
+		<span><i class="icos-blocks-images"></i></span>
+		<code>icos-blocks-images</code>
+	</li>
+	<li>
+		<span><i class="icos-blu-ray"></i></span>
+		<code>icos-blu-ray</code>
+	</li>
+	<li>
+		<span><i class="icos-bluetooth-2"></i></span>
+		<code>icos-bluetooth-2</code>
+	</li>
+	<li>
+		<span><i class="icos-bluetooth"></i></span>
+		<code>icos-bluetooth</code>
+	</li>
+	<li>
+		<span><i class="icos-book-bookmark"></i></span>
+		<code>icos-book-bookmark</code>
+	</li>
+	<li>
+		<span><i class="icos-book-large"></i></span>
+		<code>icos-book-large</code>
+	</li>
+	<li>
+		<span><i class="icos-book"></i></span>
+		<code>icos-book</code>
+	</li>
+	<li>
+		<span><i class="icos-bookmark"></i></span>
+		<code>icos-bookmark</code>
+	</li>
+	<li>
+		<span><i class="icos-books"></i></span>
+		<code>icos-books</code>
+	</li>
+	<li>
+		<span><i class="icos-box-incoming"></i></span>
+		<code>icos-box-incoming</code>
+	</li>
+	<li>
+		<span><i class="icos-box-outgoing"></i></span>
+		<code>icos-box-outgoing</code>
+	</li>
+	<li>
+		<span><i class="icos-bulls-eye"></i></span>
+		<code>icos-bulls-eye</code>
+	</li>
+	<li>
+		<span><i class="icos-calculator"></i></span>
+		<code>icos-calculator</code>
+	</li>
+	<li>
+		<span><i class="icos-calendar-today"></i></span>
+		<code>icos-calendar-today</code>
+	</li>
+	<li>
+		<span><i class="icos-camera-2"></i></span>
+		<code>icos-camera-2</code>
+	</li>
+	<li>
+		<span><i class="icos-camera"></i></span>
+		<code>icos-camera</code>
+	</li>
+	<li>
+		<span><i class="icos-car"></i></span>
+		<code>icos-car</code>
+	</li>
+	<li>
+		<span><i class="icos-cash-register"></i></span>
+		<code>icos-cash-register</code>
+	</li>
+	<li>
+		<span><i class="icos-cassette"></i></span>
+		<code>icos-cassette</code>
+	</li>
+	<li>
+		<span><i class="icos-cat"></i></span>
+		<code>icos-cat</code>
+	</li>
+	<li>
+		<span><i class="icos-cd"></i></span>
+		<code>icos-cd</code>
+	</li>
+	<li>
+		<span><i class="icos-chair"></i></span>
+		<code>icos-chair</code>
+	</li>
+	<li>
+		<span><i class="icos-chart-2"></i></span>
+		<code>icos-chart-2</code>
+	</li>
+	<li>
+		<span><i class="icos-chart-3"></i></span>
+		<code>icos-chart-3</code>
+	</li>
+	<li>
+		<span><i class="icos-chart-4"></i></span>
+		<code>icos-chart-4</code>
+	</li>
+	<li>
+		<span><i class="icos-chart-5"></i></span>
+		<code>icos-chart-5</code>
+	</li>
+	<li>
+		<span><i class="icos-chart-6"></i></span>
+		<code>icos-chart-6</code>
+	</li>
+	<li>
+		<span><i class="icos-chart-7"></i></span>
+		<code>icos-chart-7</code>
+	</li>
+	<li>
+		<span><i class="icos-chart-8"></i></span>
+		<code>icos-chart-8</code>
+	</li>
+	<li>
+		<span><i class="icos-chart"></i></span>
+		<code>icos-chart</code>
+	</li>
+	<li>
+		<span><i class="icos-check"></i></span>
+		<code>icos-check</code>
+	</li>
+	<li>
+		<span><i class="icos-chemical"></i></span>
+		<code>icos-chemical</code>
+	</li>
+	<li>
+		<span><i class="icos-chrome"></i></span>
+		<code>icos-chrome</code>
+	</li>
+	<li>
+		<span><i class="icos-clipboard-2"></i></span>
+		<code>icos-clipboard-2</code>
+	</li>
+	<li>
+		<span><i class="icos-clipboard"></i></span>
+		<code>icos-clipboard</code>
+	</li>
+	<li>
+		<span><i class="icos-clock-2"></i></span>
+		<code>icos-clock-2</code>
+	</li>
+	<li>
+		<span><i class="icos-clock"></i></span>
+		<code>icos-clock</code>
+	</li>
+	<li>
+		<span><i class="icos-cloud-download"></i></span>
+		<code>icos-cloud-download</code>
+	</li>
+	<li>
+		<span><i class="icos-cloud-upload"></i></span>
+		<code>icos-cloud-upload</code>
+	</li>
+	<li>
+		<span><i class="icos-cloud"></i></span>
+		<code>icos-cloud</code>
+	</li>
+	<li>
+		<span><i class="icos-cog-2"></i></span>
+		<code>icos-cog-2</code>
+	</li>
+	<li>
+		<span><i class="icos-cog-3"></i></span>
+		<code>icos-cog-3</code>
+	</li>
+	<li>
+		<span><i class="icos-cog-4"></i></span>
+		<code>icos-cog-4</code>
+	</li>
+	<li>
+		<span><i class="icos-cog"></i></span>
+		<code>icos-cog</code>
+	</li>
+	<li>
+		<span><i class="icos-companies"></i></span>
+		<code>icos-companies</code>
+	</li>
+	<li>
+		<span><i class="icos-computer"></i></span>
+		<code>icos-computer</code>
+	</li>
+	<li>
+		<span><i class="icos-coverflow"></i></span>
+		<code>icos-coverflow</code>
+	</li>
+	<li>
+		<span><i class="icos-create"></i></span>
+		<code>icos-create</code>
+	</li>
+	<li>
+		<span><i class="icos-cross"></i></span>
+		<code>icos-cross</code>
+	</li>
+	<li>
+		<span><i class="icos-crosshair"></i></span>
+		<code>icos-crosshair</code>
+	</li>
+	<li>
+		<span><i class="icos-cup"></i></span>
+		<code>icos-cup</code>
+	</li>
+	<li>
+		<span><i class="icos-day-calendar"></i></span>
+		<code>icos-day-calendar</code>
+	</li>
+	<li>
+		<span><i class="icos-delicious"></i></span>
+		<code>icos-delicious</code>
+	</li>
+	<li>
+		<span><i class="icos-digg-2"></i></span>
+		<code>icos-digg-2</code>
+	</li>
+	<li>
+		<span><i class="icos-digg"></i></span>
+		<code>icos-digg</code>
+	</li>
+	<li>
+		<span><i class="icos-document"></i></span>
+		<code>icos-document</code>
+	</li>
+	<li>
+		<span><i class="icos-documents-2"></i></span>
+		<code>icos-documents-2</code>
+	</li>
+	<li>
+		<span><i class="icos-documents"></i></span>
+		<code>icos-documents</code>
+	</li>
+	<li>
+		<span><i class="icos-download-to-computer"></i></span>
+		<code>icos-download-to-computer</code>
+	</li>
+	<li>
+		<span><i class="icos-download"></i></span>
+		<code>icos-download</code>
+	</li>
+	<li>
+		<span><i class="icos-dress"></i></span>
+		<code>icos-dress</code>
+	</li>
+	<li>
+		<span><i class="icos-dribbble-2"></i></span>
+		<code>icos-dribbble-2</code>
+	</li>
+	<li>
+		<span><i class="icos-dribbble"></i></span>
+		<code>icos-dribbble</code>
+	</li>
+	<li>
+		<span><i class="icos-dropbox"></i></span>
+		<code>icos-dropbox</code>
+	</li>
+	<li>
+		<span><i class="icos-drupal"></i></span>
+		<code>icos-drupal</code>
+	</li>
+	<li>
+		<span><i class="icos-dvd"></i></span>
+		<code>icos-dvd</code>
+	</li>
+	<li>
+		<span><i class="icos-eject"></i></span>
+		<code>icos-eject</code>
+	</li>
+	<li>
+		<span><i class="icos-electricity-input"></i></span>
+		<code>icos-electricity-input</code>
+	</li>
+	<li>
+		<span><i class="icos-electricity-plug"></i></span>
+		<code>icos-electricity-plug</code>
+	</li>
+	<li>
+		<span><i class="icos-excel-document"></i></span>
+		<code>icos-excel-document</code>
+	</li>
+	<li>
+		<span><i class="icos-excel-documents-2"></i></span>
+		<code>icos-excel-documents-2</code>
+	</li>
+	<li>
+		<span><i class="icos-excel-documents"></i></span>
+		<code>icos-excel-documents</code>
+	</li>
+	<li>
+		<span><i class="icos-exit"></i></span>
+		<code>icos-exit</code>
+	</li>
+	<li>
+		<span><i class="icos-expose"></i></span>
+		<code>icos-expose</code>
+	</li>
+	<li>
+		<span><i class="icos-expression-engine"></i></span>
+		<code>icos-expression-engine</code>
+	</li>
+	<li>
+		<span><i class="icos-eyedropper"></i></span>
+		<code>icos-eyedropper</code>
+	</li>
+	<li>
+		<span><i class="icos-facebook-f"></i></span>
+		<code>icos-facebook-f</code>
+	</li>
+	<li>
+		<span><i class="icos-facebook-like"></i></span>
+		<code>icos-facebook-like</code>
+	</li>
+	<li>
+		<span><i class="icos-facebook"></i></span>
+		<code>icos-facebook</code>
+	</li>
+	<li>
+		<span><i class="icos-favorite"></i></span>
+		<code>icos-favorite</code>
+	</li>
+	<li>
+		<span><i class="icos-fax"></i></span>
+		<code>icos-fax</code>
+	</li>
+	<li>
+		<span><i class="icos-female-contour"></i></span>
+		<code>icos-female-contour</code>
+	</li>
+	<li>
+		<span><i class="icos-female-symbol"></i></span>
+		<code>icos-female-symbol</code>
+	</li>
+	<li>
+		<span><i class="icos-file-cabinet"></i></span>
+		<code>icos-file-cabinet</code>
+	</li>
+	<li>
+		<span><i class="icos-film-camera"></i></span>
+		<code>icos-film-camera</code>
+	</li>
+	<li>
+		<span><i class="icos-film-strip-2"></i></span>
+		<code>icos-film-strip-2</code>
+	</li>
+	<li>
+		<span><i class="icos-film-strip"></i></span>
+		<code>icos-film-strip</code>
+	</li>
+	<li>
+		<span><i class="icos-film"></i></span>
+		<code>icos-film</code>
+	</li>
+	<li>
+		<span><i class="icos-finish-flag"></i></span>
+		<code>icos-finish-flag</code>
+	</li>
+	<li>
+		<span><i class="icos-firefox"></i></span>
+		<code>icos-firefox</code>
+	</li>
+	<li>
+		<span><i class="icos-flag-2"></i></span>
+		<code>icos-flag-2</code>
+	</li>
+	<li>
+		<span><i class="icos-flag"></i></span>
+		<code>icos-flag</code>
+	</li>
+	<li>
+		<span><i class="icos-flatscreen"></i></span>
+		<code>icos-flatscreen</code>
+	</li>
+	<li>
+		<span><i class="icos-folder-2"></i></span>
+		<code>icos-folder-2</code>
+	</li>
+	<li>
+		<span><i class="icos-folder"></i></span>
+		<code>icos-folder</code>
+	</li>
+	<li>
+		<span><i class="icos-footprints"></i></span>
+		<code>icos-footprints</code>
+	</li>
+	<li>
+		<span><i class="icos-fountain-pen"></i></span>
+		<code>icos-fountain-pen</code>
+	</li>
+	<li>
+		<span><i class="icos-frames"></i></span>
+		<code>icos-frames</code>
+	</li>
+	<li>
+		<span><i class="icos-globe-2"></i></span>
+		<code>icos-globe-2</code>
+	</li>
+	<li>
+		<span><i class="icos-globe"></i></span>
+		<code>icos-globe</code>
+	</li>
+	<li>
+		<span><i class="icos-go-back-from-full-screen"></i></span>
+		<code>icos-go-back-from-full-screen</code>
+	</li>
+	<li>
+		<span><i class="icos-go-back-from-screen"></i></span>
+		<code>icos-go-back-from-screen</code>
+	</li>
+	<li>
+		<span><i class="icos-go-full-screen"></i></span>
+		<code>icos-go-full-screen</code>
+	</li>
+	<li>
+		<span><i class="icos-google-buzz"></i></span>
+		<code>icos-google-buzz</code>
+	</li>
+	<li>
+		<span><i class="icos-google-maps"></i></span>
+		<code>icos-google-maps</code>
+	</li>
+	<li>
+		<span><i class="icos-graph"></i></span>
+		<code>icos-graph</code>
+	</li>
+	<li>
+		<span><i class="icos-hd-2"></i></span>
+		<code>icos-hd-2</code>
+	</li>
+	<li>
+		<span><i class="icos-hd-3"></i></span>
+		<code>icos-hd-3</code>
+	</li>
+	<li>
+		<span><i class="icos-hd"></i></span>
+		<code>icos-hd</code>
+	</li>
+	<li>
+		<span><i class="icos-headphones"></i></span>
+		<code>icos-headphones</code>
+	</li>
+	<li>
+		<span><i class="icos-heart-favorite"></i></span>
+		<code>icos-heart-favorite</code>
+	</li>
+	<li>
+		<span><i class="icos-help"></i></span>
+		<code>icos-help</code>
+	</li>
+	<li>
+		<span><i class="icos-home-2"></i></span>
+		<code>icos-home-2</code>
+	</li>
+	<li>
+		<span><i class="icos-home-3"></i></span>
+		<code>icos-home-3</code>
+	</li>
+	<li>
+		<span><i class="icos-home"></i></span>
+		<code>icos-home</code>
+	</li>
+	<li>
+		<span><i class="icos-ice-cream-2"></i></span>
+		<code>icos-ice-cream-2</code>
+	</li>
+	<li>
+		<span><i class="icos-ice-cream"></i></span>
+		<code>icos-ice-cream</code>
+	</li>
+	<li>
+		<span><i class="icos-ichat"></i></span>
+		<code>icos-ichat</code>
+	</li>
+	<li>
+		<span><i class="icos-image-2"></i></span>
+		<code>icos-image-2</code>
+	</li>
+	<li>
+		<span><i class="icos-image"></i></span>
+		<code>icos-image</code>
+	</li>
+	<li>
+		<span><i class="icos-images-2"></i></span>
+		<code>icos-images-2</code>
+	</li>
+	<li>
+		<span><i class="icos-images"></i></span>
+		<code>icos-images</code>
+	</li>
+	<li>
+		<span><i class="icos-inbox"></i></span>
+		<code>icos-inbox</code>
+	</li>
+	<li>
+		<span><i class="icos-info-about"></i></span>
+		<code>icos-info-about</code>
+	</li>
+	<li>
+		<span><i class="icos-ipad"></i></span>
+		<code>icos-ipad</code>
+	</li>
+	<li>
+		<span><i class="icos-iphone-3g"></i></span>
+		<code>icos-iphone-3g</code>
+	</li>
+	<li>
+		<span><i class="icos-iphone-4"></i></span>
+		<code>icos-iphone-4</code>
+	</li>
+	<li>
+		<span><i class="icos-ipod-classic"></i></span>
+		<code>icos-ipod-classic</code>
+	</li>
+	<li>
+		<span><i class="icos-ipod-nano"></i></span>
+		<code>icos-ipod-nano</code>
+	</li>
+	<li>
+		<span><i class="icos-joomla"></i></span>
+		<code>icos-joomla</code>
+	</li>
+	<li>
+		<span><i class="icos-key-2"></i></span>
+		<code>icos-key-2</code>
+	</li>
+	<li>
+		<span><i class="icos-key"></i></span>
+		<code>icos-key</code>
+	</li>
+	<li>
+		<span><i class="icos-lady-s-purse"></i></span>
+		<code>icos-lady-s-purse</code>
+	</li>
+	<li>
+		<span><i class="icos-lamp"></i></span>
+		<code>icos-lamp</code>
+	</li>
+	<li>
+		<span><i class="icos-laptop"></i></span>
+		<code>icos-laptop</code>
+	</li>
+	<li>
+		<span><i class="icos-lastfm"></i></span>
+		<code>icos-lastfm</code>
+	</li>
+	<li>
+		<span><i class="icos-lemonade-stand"></i></span>
+		<code>icos-lemonade-stand</code>
+	</li>
+	<li>
+		<span><i class="icos-light-bulb"></i></span>
+		<code>icos-light-bulb</code>
+	</li>
+	<li>
+		<span><i class="icos-link-2"></i></span>
+		<code>icos-link-2</code>
+	</li>
+	<li>
+		<span><i class="icos-link"></i></span>
+		<code>icos-link</code>
+	</li>
+	<li>
+		<span><i class="icos-linux"></i></span>
+		<code>icos-linux</code>
+	</li>
+	<li>
+		<span><i class="icos-list-image"></i></span>
+		<code>icos-list-image</code>
+	</li>
+	<li>
+		<span><i class="icos-list-images"></i></span>
+		<code>icos-list-images</code>
+	</li>
+	<li>
+		<span><i class="icos-list"></i></span>
+		<code>icos-list</code>
+	</li>
+	<li>
+		<span><i class="icos-loading-bar"></i></span>
+		<code>icos-loading-bar</code>
+	</li>
+	<li>
+		<span><i class="icos-locked-2"></i></span>
+		<code>icos-locked-2</code>
+	</li>
+	<li>
+		<span><i class="icos-locked"></i></span>
+		<code>icos-locked</code>
+	</li>
+	<li>
+		<span><i class="icos-looking-glass"></i></span>
+		<code>icos-looking-glass</code>
+	</li>
+	<li>
+		<span><i class="icos-macos"></i></span>
+		<code>icos-macos</code>
+	</li>
+	<li>
+		<span><i class="icos-magic-mouse"></i></span>
+		<code>icos-magic-mouse</code>
+	</li>
+	<li>
+		<span><i class="icos-magnifying-glass"></i></span>
+		<code>icos-magnifying-glass</code>
+	</li>
+	<li>
+		<span><i class="icos-mail"></i></span>
+		<code>icos-mail</code>
+	</li>
+	<li>
+		<span><i class="icos-male-contour"></i></span>
+		<code>icos-male-contour</code>
+	</li>
+	<li>
+		<span><i class="icos-male-symbol"></i></span>
+		<code>icos-male-symbol</code>
+	</li>
+	<li>
+		<span><i class="icos-map"></i></span>
+		<code>icos-map</code>
+	</li>
+	<li>
+		<span><i class="icos-marker"></i></span>
+		<code>icos-marker</code>
+	</li>
+	<li>
+		<span><i class="icos-medical-case"></i></span>
+		<code>icos-medical-case</code>
+	</li>
+	<li>
+		<span><i class="icos-megaphone"></i></span>
+		<code>icos-megaphone</code>
+	</li>
+	<li>
+		<span><i class="icos-message"></i></span>
+		<code>icos-message</code>
+	</li>
+	<li>
+		<span><i class="icos-microphone"></i></span>
+		<code>icos-microphone</code>
+	</li>
+	<li>
+		<span><i class="icos-mighty-mouse"></i></span>
+		<code>icos-mighty-mouse</code>
+	</li>
+	<li>
+		<span><i class="icos-minus"></i></span>
+		<code>icos-minus</code>
+	</li>
+	<li>
+		<span><i class="icos-mobile-phone"></i></span>
+		<code>icos-mobile-phone</code>
+	</li>
+	<li>
+		<span><i class="icos-mobypicture"></i></span>
+		<code>icos-mobypicture</code>
+	</li>
+	<li>
+		<span><i class="icos-money-2"></i></span>
+		<code>icos-money-2</code>
+	</li>
+	<li>
+		<span><i class="icos-money"></i></span>
+		<code>icos-money</code>
+	</li>
+	<li>
+		<span><i class="icos-monitor"></i></span>
+		<code>icos-monitor</code>
+	</li>
+	<li>
+		<span><i class="icos-month-calendar"></i></span>
+		<code>icos-month-calendar</code>
+	</li>
+	<li>
+		<span><i class="icos-mouse-wires"></i></span>
+		<code>icos-mouse-wires</code>
+	</li>
+	<li>
+		<span><i class="icos-multiple-users"></i></span>
+		<code>icos-multiple-users</code>
+	</li>
+	<li>
+		<span><i class="icos-music"></i></span>
+		<code>icos-music</code>
+	</li>
+	<li>
+		<span><i class="icos-myspace-2"></i></span>
+		<code>icos-myspace-2</code>
+	</li>
+	<li>
+		<span><i class="icos-new-message"></i></span>
+		<code>icos-new-message</code>
+	</li>
+	<li>
+		<span><i class="icos-next-track"></i></span>
+		<code>icos-next-track</code>
+	</li>
+	<li>
+		<span><i class="icos-note-book"></i></span>
+		<code>icos-note-book</code>
+	</li>
+	<li>
+		<span><i class="icos-off"></i></span>
+		<code>icos-off</code>
+	</li>
+	<li>
+		<span><i class="icos-pacman-ghost"></i></span>
+		<code>icos-pacman-ghost</code>
+	</li>
+	<li>
+		<span><i class="icos-pacman"></i></span>
+		<code>icos-pacman</code>
+	</li>
+	<li>
+		<span><i class="icos-paint-brush"></i></span>
+		<code>icos-paint-brush</code>
+	</li>
+	<li>
+		<span><i class="icos-pants"></i></span>
+		<code>icos-pants</code>
+	</li>
+	<li>
+		<span><i class="icos-paperclip"></i></span>
+		<code>icos-paperclip</code>
+	</li>
+	<li>
+		<span><i class="icos-paypal-2"></i></span>
+		<code>icos-paypal-2</code>
+	</li>
+	<li>
+		<span><i class="icos-paypal-3"></i></span>
+		<code>icos-paypal-3</code>
+	</li>
+	<li>
+		<span><i class="icos-paypal"></i></span>
+		<code>icos-paypal</code>
+	</li>
+	<li>
+		<span><i class="icos-pdf-document"></i></span>
+		<code>icos-pdf-document</code>
+	</li>
+	<li>
+		<span><i class="icos-pdf-documents-2"></i></span>
+		<code>icos-pdf-documents-2</code>
+	</li>
+	<li>
+		<span><i class="icos-pdf-documents"></i></span>
+		<code>icos-pdf-documents</code>
+	</li>
+	<li>
+		<span><i class="icos-pencil-2"></i></span>
+		<code>icos-pencil-2</code>
+	</li>
+	<li>
+		<span><i class="icos-pencil"></i></span>
+		<code>icos-pencil</code>
+	</li>
+	<li>
+		<span><i class="icos-phone-2"></i></span>
+		<code>icos-phone-2</code>
+	</li>
+	<li>
+		<span><i class="icos-phone-hook"></i></span>
+		<code>icos-phone-hook</code>
+	</li>
+	<li>
+		<span><i class="icos-phone"></i></span>
+		<code>icos-phone</code>
+	</li>
+	<li>
+		<span><i class="icos-piggy-bank"></i></span>
+		<code>icos-piggy-bank</code>
+	</li>
+	<li>
+		<span><i class="icos-plane-suitcase"></i></span>
+		<code>icos-plane-suitcase</code>
+	</li>
+	<li>
+		<span><i class="icos-play"></i></span>
+		<code>icos-play</code>
+	</li>
+	<li>
+		<span><i class="icos-plixi"></i></span>
+		<code>icos-plixi</code>
+	</li>
+	<li>
+		<span><i class="icos-plus"></i></span>
+		<code>icos-plus</code>
+	</li>
+	<li>
+		<span><i class="icos-polaroids"></i></span>
+		<code>icos-polaroids</code>
+	</li>
+	<li>
+		<span><i class="icos-post-card"></i></span>
+		<code>icos-post-card</code>
+	</li>
+	<li>
+		<span><i class="icos-power"></i></span>
+		<code>icos-power</code>
+	</li>
+	<li>
+		<span><i class="icos-powerpoint-document"></i></span>
+		<code>icos-powerpoint-document</code>
+	</li>
+	<li>
+		<span><i class="icos-powerpoint-documents-2"></i></span>
+		<code>icos-powerpoint-documents-2</code>
+	</li>
+	<li>
+		<span><i class="icos-powerpoint-documents"></i></span>
+		<code>icos-powerpoint-documents</code>
+	</li>
+	<li>
+		<span><i class="icos-presentation-2"></i></span>
+		<code>icos-presentation-2</code>
+	</li>
+	<li>
+		<span><i class="icos-presentation"></i></span>
+		<code>icos-presentation</code>
+	</li>
+	<li>
+		<span><i class="icos-preview"></i></span>
+		<code>icos-preview</code>
+	</li>
+	<li>
+		<span><i class="icos-previous-track"></i></span>
+		<code>icos-previous-track</code>
+	</li>
+	<li>
+		<span><i class="icos-price-tag"></i></span>
+		<code>icos-price-tag</code>
+	</li>
+	<li>
+		<span><i class="icos-price-tags"></i></span>
+		<code>icos-price-tags</code>
+	</li>
+	<li>
+		<span><i class="icos-printer"></i></span>
+		<code>icos-printer</code>
+	</li>
+	<li>
+		<span><i class="icos-radio"></i></span>
+		<code>icos-radio</code>
+	</li>
+	<li>
+		<span><i class="icos-record"></i></span>
+		<code>icos-record</code>
+	</li>
+	<li>
+		<span><i class="icos-recycle-symbol"></i></span>
+		<code>icos-recycle-symbol</code>
+	</li>
+	<li>
+		<span><i class="icos-refresh-2"></i></span>
+		<code>icos-refresh-2</code>
+	</li>
+	<li>
+		<span><i class="icos-refresh-3"></i></span>
+		<code>icos-refresh-3</code>
+	</li>
+	<li>
+		<span><i class="icos-refresh-4"></i></span>
+		<code>icos-refresh-4</code>
+	</li>
+	<li>
+		<span><i class="icos-refresh"></i></span>
+		<code>icos-refresh</code>
+	</li>
+	<li>
+		<span><i class="icos-repeat"></i></span>
+		<code>icos-repeat</code>
+	</li>
+	<li>
+		<span><i class="icos-robot"></i></span>
+		<code>icos-robot</code>
+	</li>
+	<li>
+		<span><i class="icos-rss"></i></span>
+		<code>icos-rss</code>
+	</li>
+	<li>
+		<span><i class="icos-ruler-2"></i></span>
+		<code>icos-ruler-2</code>
+	</li>
+	<li>
+		<span><i class="icos-ruler"></i></span>
+		<code>icos-ruler</code>
+	</li>
+	<li>
+		<span><i class="icos-running-man"></i></span>
+		<code>icos-running-man</code>
+	</li>
+	<li>
+		<span><i class="icos-safari"></i></span>
+		<code>icos-safari</code>
+	</li>
+	<li>
+		<span><i class="icos-save"></i></span>
+		<code>icos-save</code>
+	</li>
+	<li>
+		<span><i class="icos-scan-label"></i></span>
+		<code>icos-scan-label</code>
+	</li>
+	<li>
+		<span><i class="icos-scissors-2"></i></span>
+		<code>icos-scissors-2</code>
+	</li>
+	<li>
+		<span><i class="icos-scissors"></i></span>
+		<code>icos-scissors</code>
+	</li>
+	<li>
+		<span><i class="icos-sd-2"></i></span>
+		<code>icos-sd-2</code>
+	</li>
+	<li>
+		<span><i class="icos-sd-3"></i></span>
+		<code>icos-sd-3</code>
+	</li>
+	<li>
+		<span><i class="icos-sd"></i></span>
+		<code>icos-sd</code>
+	</li>
+	<li>
+		<span><i class="icos-settings-2"></i></span>
+		<code>icos-settings-2</code>
+	</li>
+	<li>
+		<span><i class="icos-settings-smal"></i></span>
+		<code>icos-settings-smal</code>
+	</li>
+	<li>
+		<span><i class="icos-settings"></i></span>
+		<code>icos-settings</code>
+	</li>
+	<li>
+		<span><i class="icos-shopping-bag"></i></span>
+		<code>icos-shopping-bag</code>
+	</li>
+	<li>
+		<span><i class="icos-shopping-basket-2"></i></span>
+		<code>icos-shopping-basket-2</code>
+	</li>
+	<li>
+		<span><i class="icos-shopping-basket"></i></span>
+		<code>icos-shopping-basket</code>
+	</li>
+	<li>
+		<span><i class="icos-shopping-cart-2"></i></span>
+		<code>icos-shopping-cart-2</code>
+	</li>
+	<li>
+		<span><i class="icos-shopping-cart-3"></i></span>
+		<code>icos-shopping-cart-3</code>
+	</li>
+	<li>
+		<span><i class="icos-shopping-cart-4"></i></span>
+		<code>icos-shopping-cart-4</code>
+	</li>
+	<li>
+		<span><i class="icos-shopping-cart"></i></span>
+		<code>icos-shopping-cart</code>
+	</li>
+	<li>
+		<span><i class="icos-shuffle"></i></span>
+		<code>icos-shuffle</code>
+	</li>
+	<li>
+		<span><i class="icos-sign-post"></i></span>
+		<code>icos-sign-post</code>
+	</li>
+	<li>
+		<span><i class="icos-single-document"></i></span>
+		<code>icos-single-document</code>
+	</li>
+	<li>
+		<span><i class="icos-single-excel-document"></i></span>
+		<code>icos-single-excel-document</code>
+	</li>
+	<li>
+		<span><i class="icos-single-pdf-copy"></i></span>
+		<code>icos-single-pdf-copy</code>
+	</li>
+	<li>
+		<span><i class="icos-single-powerpoint-document"></i></span>
+		<code>icos-single-powerpoint-document</code>
+	</li>
+	<li>
+		<span><i class="icos-single-user"></i></span>
+		<code>icos-single-user</code>
+	</li>
+	<li>
+		<span><i class="icos-single-word-document"></i></span>
+		<code>icos-single-word-document</code>
+	</li>
+	<li>
+		<span><i class="icos-single-zip-file"></i></span>
+		<code>icos-single-zip-file</code>
+	</li>
+	<li>
+		<span><i class="icos-skype"></i></span>
+		<code>icos-skype</code>
+	</li>
+	<li>
+		<span><i class="icos-sleeveless-shirt"></i></span>
+		<code>icos-sleeveless-shirt</code>
+	</li>
+	<li>
+		<span><i class="icos-small-brush"></i></span>
+		<code>icos-small-brush</code>
+	</li>
+	<li>
+		<span><i class="icos-socks"></i></span>
+		<code>icos-socks</code>
+	</li>
+	<li>
+		<span><i class="icos-sound"></i></span>
+		<code>icos-sound</code>
+	</li>
+	<li>
+		<span><i class="icos-speech-bubble-2"></i></span>
+		<code>icos-speech-bubble-2</code>
+	</li>
+	<li>
+		<span><i class="icos-speech-bubble"></i></span>
+		<code>icos-speech-bubble</code>
+	</li>
+	<li>
+		<span><i class="icos-speech-bubbles-2"></i></span>
+		<code>icos-speech-bubbles-2</code>
+	</li>
+	<li>
+		<span><i class="icos-speech-bubbles-3"></i></span>
+		<code>icos-speech-bubbles-3</code>
+	</li>
+	<li>
+		<span><i class="icos-speech-bubbles"></i></span>
+		<code>icos-speech-bubbles</code>
+	</li>
+	<li>
+		<span><i class="icos-sport-shirt"></i></span>
+		<code>icos-sport-shirt</code>
+	</li>
+	<li>
+		<span><i class="icos-stop-watch"></i></span>
+		<code>icos-stop-watch</code>
+	</li>
+	<li>
+		<span><i class="icos-stop"></i></span>
+		<code>icos-stop</code>
+	</li>
+	<li>
+		<span><i class="icos-strategy-2"></i></span>
+		<code>icos-strategy-2</code>
+	</li>
+	<li>
+		<span><i class="icos-strategy"></i></span>
+		<code>icos-strategy</code>
+	</li>
+	<li>
+		<span><i class="icos-stumbleupon"></i></span>
+		<code>icos-stumbleupon</code>
+	</li>
+	<li>
+		<span><i class="icos-suitcase"></i></span>
+		<code>icos-suitcase</code>
+	</li>
+	<li>
+		<span><i class="icos-sweater"></i></span>
+		<code>icos-sweater</code>
+	</li>
+	<li>
+		<span><i class="icos-t-shirt"></i></span>
+		<code>icos-t-shirt</code>
+	</li>
+	<li>
+		<span><i class="icos-table"></i></span>
+		<code>icos-table</code>
+	</li>
+	<li>
+		<span><i class="icos-tag-2"></i></span>
+		<code>icos-tag-2</code>
+	</li>
+	<li>
+		<span><i class="icos-tag"></i></span>
+		<code>icos-tag</code>
+	</li>
+	<li>
+		<span><i class="icos-tags"></i></span>
+		<code>icos-tags</code>
+	</li>
+	<li>
+		<span><i class="icos-television"></i></span>
+		<code>icos-television</code>
+	</li>
+	<li>
+		<span><i class="icos-timer"></i></span>
+		<code>icos-timer</code>
+	</li>
+	<li>
+		<span><i class="icos-trashcan-2"></i></span>
+		<code>icos-trashcan-2</code>
+	</li>
+	<li>
+		<span><i class="icos-trashcan"></i></span>
+		<code>icos-trashcan</code>
+	</li>
+	<li>
+		<span><i class="icos-travel-suitcase"></i></span>
+		<code>icos-travel-suitcase</code>
+	</li>
+	<li>
+		<span><i class="icos-tree"></i></span>
+		<code>icos-tree</code>
+	</li>
+	<li>
+		<span><i class="icos-trolly"></i></span>
+		<code>icos-trolly</code>
+	</li>
+	<li>
+		<span><i class="icos-truck"></i></span>
+		<code>icos-truck</code>
+	</li>
+	<li>
+		<span><i class="icos-tumbler"></i></span>
+		<code>icos-tumbler</code>
+	</li>
+	<li>
+		<span><i class="icos-twitter-2"></i></span>
+		<code>icos-twitter-2</code>
+	</li>
+	<li>
+		<span><i class="icos-twitter-t"></i></span>
+		<code>icos-twitter-t</code>
+	</li>
+	<li>
+		<span><i class="icos-twitter"></i></span>
+		<code>icos-twitter</code>
+	</li>
+	<li>
+		<span><i class="icos-umbrella"></i></span>
+		<code>icos-umbrella</code>
+	</li>
+	<li>
+		<span><i class="icos-under-construction"></i></span>
+		<code>icos-under-construction</code>
+	</li>
+	<li>
+		<span><i class="icos-unfavorite"></i></span>
+		<code>icos-unfavorite</code>
+	</li>
+	<li>
+		<span><i class="icos-unlocked"></i></span>
+		<code>icos-unlocked</code>
+	</li>
+	<li>
+		<span><i class="icos-upload"></i></span>
+		<code>icos-upload</code>
+	</li>
+	<li>
+		<span><i class="icos-user-2"></i></span>
+		<code>icos-user-2</code>
+	</li>
+	<li>
+		<span><i class="icos-user-comment"></i></span>
+		<code>icos-user-comment</code>
+	</li>
+	<li>
+		<span><i class="icos-user"></i></span>
+		<code>icos-user</code>
+	</li>
+	<li>
+		<span><i class="icos-users-2"></i></span>
+		<code>icos-users-2</code>
+	</li>
+	<li>
+		<span><i class="icos-users"></i></span>
+		<code>icos-users</code>
+	</li>
+	<li>
+		<span><i class="icos-v-card-2"></i></span>
+		<code>icos-v-card-2</code>
+	</li>
+	<li>
+		<span><i class="icos-v-card-3"></i></span>
+		<code>icos-v-card-3</code>
+	</li>
+	<li>
+		<span><i class="icos-v-card"></i></span>
+		<code>icos-v-card</code>
+	</li>
+	<li>
+		<span><i class="icos-vault"></i></span>
+		<code>icos-vault</code>
+	</li>
+	<li>
+		<span><i class="icos-vimeo-2"></i></span>
+		<code>icos-vimeo-2</code>
+	</li>
+	<li>
+		<span><i class="icos-vimeo"></i></span>
+		<code>icos-vimeo</code>
+	</li>
+	<li>
+		<span><i class="icos-walking-man"></i></span>
+		<code>icos-walking-man</code>
+	</li>
+	<li>
+		<span><i class="icos-wifi-signal-2"></i></span>
+		<code>icos-wifi-signal-2</code>
+	</li>
+	<li>
+		<span><i class="icos-wifi-signal"></i></span>
+		<code>icos-wifi-signal</code>
+	</li>
+	<li>
+		<span><i class="icos-windows"></i></span>
+		<code>icos-windows</code>
+	</li>
+	<li>
+		<span><i class="icos-winner-podium"></i></span>
+		<code>icos-winner-podium</code>
+	</li>
+	<li>
+		<span><i class="icos-word-document"></i></span>
+		<code>icos-word-document</code>
+	</li>
+	<li>
+		<span><i class="icos-word-documents-2"></i></span>
+		<code>icos-word-documents-2</code>
+	</li>
+	<li>
+		<span><i class="icos-word-documents"></i></span>
+		<code>icos-word-documents</code>
+	</li>
+	<li>
+		<span><i class="icos-wordpress-2"></i></span>
+		<code>icos-wordpress-2</code>
+	</li>
+	<li>
+		<span><i class="icos-wordpress-3"></i></span>
+		<code>icos-wordpress-3</code>
+	</li>
+	<li>
+		<span><i class="icos-wordpress"></i></span>
+		<code>icos-wordpress</code>
+	</li>
+	<li>
+		<span><i class="icos-youtube-2"></i></span>
+		<code>icos-youtube-2</code>
+	</li>
+	<li>
+		<span><i class="icos-youtube"></i></span>
+		<code>icos-youtube</code>
+	</li>
+	<li>
+		<span><i class="icos-zip-document"></i></span>
+		<code>icos-zip-document</code>
+	</li>
+	<li>
+		<span><i class="icos-zip-file"></i></span>
+		<code>icos-zip-file</code>
+	</li>
+	<li>
+		<span><i class="icos-zip-files"></i></span>
+		<code>icos-zip-files</code>
+	</li>
+</ul>
+<label:include file="ui.icon-icos-white">
+</div>

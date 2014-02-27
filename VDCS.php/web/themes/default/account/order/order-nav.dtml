@@ -1,0 +1,13 @@
+
+<div class="bars">
+<h2><web:var.title.p></h2>
+<p><web:var.title.p>列表</p>
+</div>
+
+<div class="links">
+<ul>
+<li el="all"><a href="<chn:linkurl("{@channel}","pa","p={@portal}&action=all")>"><span><chn:var("{@channel}","title.{@portal}.all")></span></a></li>
+<li el="payed"><a href="<chn:linkurl("{@channel}","pa","p={@portal}&action=payed")>"><span><chn:var("{@channel}","title.{@portal}.payed")></span></a></li>
+<li el="nopay"><a href="<chn:linkurl("{@channel}","pa","p={@portal}&action=nopay")>"><span><chn:var("{@channel}","title.{@portal}.nopay")></span></a></li>
+</ul>
+</div>

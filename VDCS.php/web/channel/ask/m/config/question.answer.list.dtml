@@ -1,0 +1,27 @@
+<label:include file="header.channel">
+
+<label:include file="frame.sideleft">
+<label:include file="element.list.heads">
+<label:include file="element.list.tr.bar">
+<control:ui.value("list.bar.id")>
+<td class="bar-topic">{@name}<exec:langs("title.topic")></td>
+<td class="bar-status w80"><exec:langs("title.status")></td>
+<td class="bar-handle"><exec:langs("title.handle")></td>
+<td class="bar-selectbox re-option"><control:ui.form("select.data")></td>
+</tr>
+<loop:list>
+<label:include file="element.list.tr.row">
+<td class="row-id"><a href="<v:url.web>" target="_blank" class="id">[item:id]</a></td>
+<td class="row-topic"><a href="<v:url.edit>">[item:topic]</a></td>
+<td class="row-status"><control:dict("data.hide","{$$list:<v:table.px>status}")> <control:dict("data.good","{$$list:<v:table.px>isgood}")>
+	<p class="s"><span class="time">[item:_tim!date]</span></p></td>
+<td class="row-handle"><a href="<v:url.edit>"><exec:langs("action.edit")></a></td>
+<td class="row-selectid re-option"><control:ui.form("select.id","{$$list:selectid}")></td>
+</tr>
+</loop>
+<label:include file="element.list.ends">
+<label:include file="frame.sidespace">
+<label:include file="element.menus">
+<label:include file="frame.sideright">
+
+<label:include file="footer.channel">

@@ -1,0 +1,3 @@
+<?
+class ChannelTBase extends ChannelTBasic{}
+?>

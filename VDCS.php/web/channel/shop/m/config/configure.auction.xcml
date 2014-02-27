@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>search</frame>
+		<search.fields>{@table.px}topic=6;{@table.px}serial=6;{@table.px}summary=6;sp_keyword=6</search.fields>
+		<search.times>{@table.px}tim</search.times>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>{@table.name}</table.name>
+		<table.px>{@table.px}</table.px>
+		<table.field.id>{@table.px}id</table.field.id>
+		<table.field.total.data>{@table.prefix}total_data</table.field.total.data>
+		<table.field.pic>{@table.px}pic</table.field.pic>
+		<table.field.spic>{@table.px}spic</table.field.spic>
+		<table.fields.value>id={@table.px}id;topic={@table.px}topic;total.data={@table.px}total_data;time={@table.px}tim</table.fields.value>
+		
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query>sp_auction='on'</list.table.query>
+		<list.table.query.onup>{@table.px}status=1</list.table.query.onup>
+		<list.table.query.ondown>{@table.px}status=0</list.table.query.ondown>
+		<list.table.order>{@table.px}id desc</list.table.order>
+		<list.handle.select.option>onup,ondown</list.handle.select.option>
+		<list.handle.sql.onup>update {@table.name} set {@table.px}status=1 where {@table.px}id in ({$ids})</list.handle.sql.onup>
+		<list.handle.sql.ondown>update {@table.name} set {@table.px}status=0 where {@table.px}id in ({$ids})</list.handle.sql.ondown>
+		
+		<view.sql>select top 1 * from {@table.name} where {@table.px}id={$id}</view.sql>
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[{@name}]]></title.name>
+		<title.list><![CDATA[{@names}列表]]></title.list>
+		<title.list.><![CDATA[{@names}列表]]></title.list.>
+		<title.list.onup><![CDATA[上线{@names}]]></title.list.onup>
+		<title.list.ondown><![CDATA[下线{@names}]]></title.list.ondown>
+		<title.add><![CDATA[添加新{@names}]]></title.add>
+		<title.edit><![CDATA[编辑{@names}]]></title.edit>
+		
+		<title.frame.class><![CDATA[{@names}分类]]></title.frame.class>
+		<title.frame.search><![CDATA[{@names}搜索]]></title.frame.search>
+		<search.fields.att>{@table.px}topic=名称;{@table.px}serial=编号;</search.fields.att>
+		
+		<error.not.exist><![CDATA[您要操作的 {@names} 不存在！]]></error.not.exist>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 {@unit}{@names}！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功更新了 1 {@unit}{@names}！]]></handle.ok.edit>
+		<handle.ok.onup><![CDATA[成功上线了 {$total} {@unit}{@names}！]]></handle.ok.onup>
+		<handle.ok.ondown><![CDATA[成功下线了 {$total} {@unit}{@names}！]]></handle.ok.ondown>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} {@unit}{@names}！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+	</template>
+</xcml>

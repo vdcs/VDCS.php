@@ -1,0 +1,194 @@
+<label:include file="frame/headers">
+
+
+<label:include script="comm/ui.process.css" type="css">
+
+
+<div class="framer">
+
+<div id="progress">
+                                        <div class="widget">
+                                            <div class="widget-header">
+                                                <span class="title"><i class="icon-progress-bar"></i> Progress Bar Types</span>
+                                            </div>
+                                            <div class="widget-content form-container">
+                                                
+                                                <form class="form-horizontal">
+                                                    <div class="control-group">
+                                                        <label class="control-label">
+                                                            Usual Progress Bar
+                                                        </label>
+                                                        <div class="controls">
+                                                            <div class="progress">
+                                                                <div class="bar" style="width: 67%; "></div>
+                                                            </div>
+                                                            <span class="help-block"><code>progress</code></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label">
+                                                            Progress Bar With Label
+                                                        </label>
+                                                        <div class="controls">
+                                                            <div class="progress">
+                                                                <div class="bar" style="width: 67%; ">67%</div>
+                                                            </div>
+                                                            <span class="help-block"><code>progress</code></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label">
+                                                            Striped Progress Bar
+                                                        </label>
+                                                        <div class="controls">
+                                                            <div class="progress progress-striped">
+                                                                <div class="bar" style="width: 31%; "></div>
+                                                            </div>
+                                                            <span class="help-block"><code>progress progress-striped</code></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label">
+                                                            Active Progress Bar
+                                                        </label>
+                                                        <div class="controls">
+                                                            <div class="progress active progress-striped">
+                                                                <div class="bar" style="width: 53%; "></div>
+                                                            </div>
+                                                            <span class="help-block"><code>progress active progress-striped</code></span>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="widget">
+                                            <div class="widget-header">
+                                                <span class="title"><i class="icon-progress-bar"></i> Custom Progress Bar Sizes</span>
+                                            </div>
+                                            <div class="widget-content form-container">
+                                                
+                                                <form class="form-horizontal">
+                                                    <div class="control-group">
+                                                        <label class="control-label">
+                                                            Default Progress Bar
+                                                        </label>
+                                                        <div class="controls">
+                                                            <div class="progress">
+                                                                <div class="bar" style="width: 67%; "></div>
+                                                            </div>
+                                                            <span class="help-block"><code>progress</code></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label">
+                                                            Mini Progress Bar
+                                                        </label>
+                                                        <div class="controls">
+                                                            <div class="progress progress-mini">
+                                                                <div class="bar" style="width: 74%; "></div>
+                                                            </div>
+                                                            <span class="help-block"><code>progress progress-mini</code></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label">
+                                                            Small Progress Bar
+                                                        </label>
+                                                        <div class="controls">
+                                                            <div class="progress progress-small">
+                                                                <div class="bar" style="width: 23%; "></div>
+                                                            </div>
+                                                            <span class="help-block"><code>progress progress-small</code></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label">
+                                                            Large Progress Bar
+                                                        </label>
+                                                        <div class="controls">
+                                                            <div class="progress progress-large">
+                                                                <div class="bar" style="width: 87%; "></div>
+                                                            </div>
+                                                            <span class="help-block"><code>progress progress-large</code></span>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="widget">
+                                        	<div class="widget-header">
+                                            	<span class="title"><i class="icon-progress-bar"></i> Progress Bar Colors</span>
+                                            </div>
+                                            <div class="widget-content form-container">
+                                            	
+                                                <form class="form-horizontal">
+                                                    <div class="control-group">
+                                                        <label class="control-label">
+                                                            Default Progress Bar
+                                                        </label>
+                                                        <div class="controls">
+                                                            <div class="progress active progress-striped">
+                                                                <div class="bar" style="width: 67%; "></div>
+                                                            </div>
+                                                            <span class="help-block"><code>progress active progress-striped</code></span>
+                                                        </div>
+                                                    </div>
+                                                	<div class="control-group">
+                                                    	<label class="control-label">
+                                                            Info Progress Bar
+                                                        </label>
+                                                        <div class="controls">
+                                                        	<div class="progress progress-info active progress-striped">
+                                                                <div class="bar" style="width: 67%; "></div>
+                                                            </div>
+                                                            <span class="help-block"><code>progress progress-info active progress-striped</code></span>
+                                                        </div>
+                                                    </div>
+                                                	<div class="control-group">
+                                                    	<label class="control-label">
+                                                            Success Progress Bar
+                                                        </label>
+                                                        <div class="controls">
+                                                            <div class="progress progress-success active progress-striped">
+                                                                <div class="bar" style="width: 55%; "></div>
+                                                            </div>
+                                                            <span class="help-block"><code>progress progress-success active progress-striped</code></span>
+                                                        </div>
+                                                    </div>
+                                                	<div class="control-group">
+                                                    	<label class="control-label">
+                                                            Warning Progress Bar
+                                                        </label>
+                                                        <div class="controls">
+                                                            <div class="progress progress-warning active progress-striped">
+                                                                <div class="bar" style="width: 75%; "></div>
+                                                            </div>
+                                                            <span class="help-block"><code>progress progress-warning active progress-striped</code></span>
+                                                        </div>
+                                                    </div>
+                                                	<div class="control-group">
+                                                    	<label class="control-label">
+                                                            Danger Progress Bar
+                                                        </label>
+                                                        <div class="controls">
+                                                            <div class="progress progress-danger active progress-striped">
+                                                                <div class="bar" style="width: 32%; "></div>
+                                                            </div>
+                                                            <span class="help-block"><code>progress progress-danger active progress-striped</code></span>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            
+                                            </div>
+                                        </div>
+</div>
+
+</div>
+
+
+<label:include file="frame/footers">

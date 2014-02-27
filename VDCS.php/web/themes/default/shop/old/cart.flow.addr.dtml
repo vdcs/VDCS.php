@@ -1,0 +1,102 @@
+<label:include file="header">
+<div class="framer">
+	<div class="side">
+<label:include file="common.menus">
+	</div>
+	<div class="cont">
+<label:include file="common.navbar">
+<label:include file="common.flow">
+
+<div class="Block" id="div-form-post">
+	<h2><t>请输入配送地址</t></h2>
+	<div class="cont">
+<dtml:_message>
+<label:include script="external/PCAS.js">
+<div style="margin:5px 20px;">
+<div class="PostForm PostFormSamro">
+<form name="frm_post" action="<chn:linkurl("{@channel}","cart.flow","flow=addr")>" method="post" onsubmit="javascript:$f.doSubmitOnce(this);">
+<input type="hidden" name="_chk" value="yes">
+<div class="PostFormBar">
+	<div class="itemContent"><input class="ClewSign" disabled />为必填写项目</div>
+</div>
+<div class="PostFormItem oe2">
+	<div class="itemCaption">收货人姓名：<input class="ClewSign" disabled /></div>
+	<div class="itemInput"><input type="text" class="txt" name="linkman" value="<dat:linkman!html>" size="50" maxlength="50" /></div>
+</div>
+<div class="PostFormItem">
+	<div class="itemCaption">省份/直辖市：<input class="ClewSign" disabled /></div>
+	<div class="itemInput"><select name="area_province"></select><select name="area_city"></select><select name="area_area"></select></div>
+</div>
+<script type="text/javascript">new PCAS("area_province","area_city","area_area","<dat:area_province!js>","<dat:area_city!js>","<dat:area_area!js>");</script>
+<div class="PostFormItem oe2">
+	<div class="itemCaption">详细地址：<input class="ClewSign" disabled /></div>
+	<div class="itemInput"><input type="text" class="txt" name="address" value="<dat:address!html>" size="50" maxlength="200" />
+		<div class="explain">300个城市送货上门。<a href="javascript:;">查看详细的配送范围</a></div>
+	</div>
+</div>
+<div class="PostFormItem">
+	<div class="itemCaption">邮政编码：<input class="ClewSign" disabled /></div>
+	<div class="itemInput"><input type="text" class="txt" name="postcode" value="<dat:postcode!html>" size="50" maxlength="10" /></div>
+</div>
+<div class="PostFormItem oe2">
+	<div class="itemCaption">手机/固定电话：<input class="ClewSign" disabled /></div>
+	<div class="itemInput"><input type="text" class="txt" name="phone" value="<dat:phone!html>" size="50" maxlength="50" /></div>
+</div>
+<div class="PostFormItem">
+	<div class="itemCaption">E-mail：</div>
+	<div class="itemInput"><input type="text" class="txt" name="email" value="<dat:email!html>" size="50" maxlength="50" /></div>
+</div>
+</form>
+</div>
+</div>
+	</div></div>
+</div>
+<div class="space"></div>
+
+<loop:addr>
+<div class="box">
+	<h2><t>收货地址[item:sn]</t><r><a style="margin-top:2px;" class="btn-addr-select" href="javascript:;" onclick="javascript:page.setAddrValues('[item:sn]');"><span>配送到这个地址</span></a></r></h2>
+	<div class="cont">
+<table cellspacing="0" cellpadding="4" class="list lists">
+<tr class="row">
+<td width="18%"><span class="b">收货人：</span></td>
+<td width="32%"><span id="addr-item[item:sn]-linkman">[item:linkman]</span></td>
+<td width="18%"><span class="b">收货人邮编：</span></td>
+<td width="32%"><span id="addr-item[item:sn]-postcode">[item:postcode]</span></td>
+</tr>
+<tr class="row">
+<td><span class="b">收货人省份：</span></td>
+<td><span id="addr-item[item:sn]-areas">[item:areas]</span></td>
+<td><span class="b">固定电话/手机：</span></td>
+<td><span id="addr-item[item:sn]-phone">[item:phone] [item:mobile]</span></td>
+</tr>
+<tr class="row blank">
+<td><span class="b">地址：</span></td>
+<td><span id="addr-item[item:sn]-address">[item:address]</span></td>
+<td><span class="b">E-mail：</span></td>
+<td><span id="addr-item[item:sn]-email">[item:email]</span></td>
+</tr>
+</table>
+	</div></div>
+</div>
+<div class="space"></div>
+</loop>
+
+<div class="align-center">
+<a class="btn120 btn-flow-back" href="<chn:linkurl("{@channel}","cart")>"><span>返回上一步</span></a>
+<a class="btn120 btn-flow-addr" href="javascript:;" onclick="javascript:$('form[name=frm_post]').submit();"><span>确认配送信息</span></a>
+</div>
+	</div></div>
+</div>
+<script type="text/javascript">
+page.setAddrValues=function(sn){
+	$f.v("frm_post.linkman",$("addr-item"+sn+"-linkman").v());
+	$f.v("frm_post.address",$("addr-item"+sn+"-address").v());
+	$f.v("frm_post.postcode",$("addr-item"+sn+"-postcode").v());
+	$f.v("frm_post.phone",$("addr-item"+sn+"-phone").v());
+	$f.v("frm_post.email",$("addr-item"+sn+"-email").v());
+	var aryArea=$("addr-item"+sn+"-areas").v().split("-");
+	new PCAS("area_province","area_city","area_area",aryArea[0],aryArea[1],aryArea[2]);
+}
+</script>
+<label:include file="footer">

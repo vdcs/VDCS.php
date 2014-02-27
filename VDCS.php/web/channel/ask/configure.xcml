@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>var,config,url.script,url.rewrite</node>
+	</configure>
+	<var xmlns:data="node" xmlns:question="node" xmlns:answer="node" xmlns:user="node">
+		<name>{@name}</name>
+		<names>{@names}</names>
+		<act>{@act}</act>
+		<act.get>{@act.get}</act.get>
+		<act.view>{@act.view}</act.view>
+		<unit>{@unit}</unit>
+		<data:name>{@data:name}</data:name>
+		<data:names>{@data:names}</data:names>
+		<data:act>{@data:act}</data:act>
+		<data:unit>{@data:unit}</data:unit>
+		
+		<question:name>{@question:name}</question:name>
+		<question:names>{@question:names}</question:names>
+		<question:act>{@question:act}</question:act>
+		<question:unit>{@question:unit}</question:unit>
+		<answer:name>{@answer:name}</answer:name>
+		<answer:names>{@answer:names}</answer:names>
+		<answer:act>{@answer:act}</answer:act>
+		<answer:unit>{@answer:unit}</answer:unit>
+		
+		<ua:name>{@ua:name}</ua:name>
+		<ua:names>{@ua:names}</ua:names>
+		<ua:act>{@ua:act}</ua:act>
+		<ua:unit>{@ua:unit}</ua:unit>
+	</var>
+	<config>
+		<model>configure,search,class,spaces</model>
+	</config>
+	<url.script>
+		<list><![CDATA[{@rootc.script}&p=list&classid={$classid}]]></list>
+		<list.page><![CDATA[{@rootc.script}&p=list&classid={$classid}&page={$page}]]></list.page>
+		<view><![CDATA[{@rootc.script}&p=view&id={$id}]]></view>
+		<view.page><![CDATA[{@rootc.script}&p=view&id={$id}&page={$page}]]></view.page>
+		
+		<faq><![CDATA[{@rootc.script}&p=faq&page={$page}]]></faq>
+		<faq.key><![CDATA[{@rootc.script}&p=faq&page={$page}&key={$key}]]></faq.key>
+	</url.script>
+	<url.rewrite>
+		<list><![CDATA[{@rootc.rewrite}list_{$classid}<app:rewrite.ext>]]></list>
+		<list.page><![CDATA[{@rootc.rewrite}list_{$classid}_{$page}<app:rewrite.ext>]]></list.page>
+		<view><![CDATA[{@rootc.rewrite}view_{$id}<app:rewrite.ext>]]></view>
+		<view.page><![CDATA[{@rootc.rewrite}view_{$id}_{$page}<app:rewrite.ext>]]></view.page>
+		
+		<faq><![CDATA[{@rootc.rewrite}{$page}<app:rewrite.ext>]]></faq>
+		<faq.key><![CDATA[{@rootc.rewrite}{$page}-{$key}<app:rewrite.ext>]]></faq.key>
+	</url.rewrite>
+</xcml>

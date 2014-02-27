@@ -1,0 +1,12 @@
+
+<div class="bars">
+<h2><web:var.title.p></h2>
+<p>小伙伴们之间的悄悄话。发私信给他（或者她）！</p>
+</div>
+
+<div class="links">
+<ul>
+<li el="module"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=module")>"><span><chn:var("{@channel}","title.{@portal}.module")></span></a></li>
+<li el="module"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=module")>"><span><chn:var("{@channel}","title.{@portal}.module")></span></a></li>
+</ul>
+</div>

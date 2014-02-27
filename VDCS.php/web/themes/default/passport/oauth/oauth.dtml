@@ -1,0 +1,12 @@
+<label:include file="oauth-header">
+
+
+<div class="box">
+	<h2><t>开放平台</t></h2>
+	<div class="con">
+wait..
+	</div>
+</div>
+
+
+<label:include file="oauth-footer">

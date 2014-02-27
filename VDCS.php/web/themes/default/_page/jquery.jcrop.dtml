@@ -1,0 +1,128 @@
+﻿<label:include file="frame/headers">
+<div class="framer">
+<div class="side">
+<label:include file="_shortcut">
+</div>
+<div class="cont">
+
+
+<label:include script="<web:url.themes>app.t.uploadx.js">
+<label:include script="<web:url.script>jquery/jcrop/jcrop.min.js">
+<label:include script="/images/script/jquery/jcrop/jcrop.css" type="css">
+<style>
+	#picContainer img{}
+	/* Apply these styles only when #preview-pane has
+   	been placed within the Jcrop widget */
+   	.mybox{position:relative;}
+	#preview-pane {
+		display: block;
+		position: absolute;
+		z-index: 2000;
+		top: 10px;
+		right: 0;
+		padding: 6px;
+		border: 1px rgba(0,0,0,.4) solid;
+		background-color: white;
+		
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+		
+		-webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+		box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+	}
+	
+	/* The Javascript code will set the aspect ratio of the crop
+	   area based on the size of the thumbnail preview,
+	   specified here */
+	#preview-pane .preview-container {
+		width: 100px;
+		height: 100px;
+		overflow: hidden;
+	}
+</style>
+<div class="mybox" style="background:#ccc;width:800px;height:600px;">
+	x1:<input type="text" id="x1" /><br />y1:<input type="text" id="y1" /><br />x2:<input type="text" id="x2" /><br />y2:<input type="text" id="y2" /><br />width:<input type="text" id="w" /><br />height:<input type="text" id="h" />
+	<p id="mybtn"><a class="xbtn"><span>click it</span></a></p>
+	<div id="preview-pane">
+		<div class="preview-container">
+			<!-- 预览图 -->
+		</div>
+	</div>
+	<div id="picContainer">
+		<!-- 操作的图片 -->
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(function(){
+		this.juploadx=$uploadx.btnElement("def",$('#mybtn'),{display:'show',sessionid:this.sessionid});
+		$uploadx.init_images("def",{upload_sorts:'tags',channel:'t'},{complete:function(vars){
+			var treeVar=vars.treeVar;
+			var url=treeVar.v("file.urls");
+			$('#preview-pane').find('.preview-container').html('<img src="'+url+'"  class="jcrop-preview" alt="Preview" />');
+			$('#picContainer').html('<img src="'+url+'" id="cropbox" />');
+			test();
+		}});
+		function test(){
+			var jcrop_api,
+			boundx,
+			boundy,
+			
+			// Grab some information about the preview pane
+			$preview = $('#preview-pane'),
+			$pcnt = $('#preview-pane .preview-container'),
+			$pimg = $('#preview-pane .preview-container img'),
+			
+			xsize = $pcnt.width(),
+			ysize = $pcnt.height();
+			var obj=$('.mybox');
+			//var arr=[];
+			//arr.push(xsize,ysize);
+			//console.log('init',[xsize,ysize]);
+			//console.log('init',arr);
+			$('#cropbox').Jcrop({
+			onChange: updatePreview,
+			onSelect: updatePreview,
+			aspectRatio: xsize / ysize
+			},function(){
+				// Use the API to get the real image size
+				var bounds = this.getBounds();
+				boundx = bounds[0];
+				boundy = bounds[1];
+				// Store the API in the jcrop_api variable
+				jcrop_api = this;
+				
+				// Move the preview into the jcrop container for css positioning
+				$preview.appendTo(obj);
+			});
+			
+			function updatePreview(c){
+				if (parseInt(c.w) > 0){
+					var rx = xsize / c.w;
+					var ry = ysize / c.h;
+					$pimg.css({
+						width: Math.round(rx * boundx) + 'px',
+						height: Math.round(ry * boundy) + 'px',
+						marginLeft: '-' + Math.round(rx * c.x) + 'px',
+						marginTop: '-' + Math.round(ry * c.y) + 'px'
+					});
+				}
+				
+				$('#x1').val(c.x);
+				$('#y1').val(c.y);
+				$('#x2').val(c.x2);
+				$('#y2').val(c.y2);
+				$('#w').val(c.w);
+				$('#h').val(c.h);
+				
+			};
+		}
+	});
+	
+</script>
+
+</div>
+</div>
+<label:include file="frame/footers">

@@ -1,0 +1,15 @@
+
+<label:include script="res/VDCS.tmenu.js">
+<div class="box">
+	<h2><t>文章分类</t></h2>
+	<div class="con">
+<div id="class_menu">
+<div class="all"><a class="all" href="#all">所有</a></div>
+<div id="class_menu_body"></div>
+<div><a class="unknown" href="#no">未分类</a></div>
+</div>
+	</div>
+</div>
+<script type="text/javascript">
+appi.modClass.initer();
+</script>

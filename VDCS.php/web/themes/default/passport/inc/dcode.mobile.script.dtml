@@ -1,0 +1,60 @@
+﻿
+<script type="text/javascript">
+app.dcode={
+	second_down:function(jo,second){
+		if(jo.attrd('lock')) return;
+		if(!second) second=jo.attrd('second')||60;
+		if(!jo.attrd('title')) jo.attrd('title',jo.text());
+		jo.attrd('lock','true');jo.attr('disabled','disabled');
+		jo.text(second+'秒');
+		jo.attrd('second-down',second);
+		jo.everyTime('1s',function(){
+			jo.attrd('second-down',jo.attrd('second-down')-1);
+			jo.text(jo.attrd('second-down')+'秒');
+		},second-1);
+		jo.oneTime(second+'s',function(){
+			jo.attrd('second-down','');
+			jo.attrd('lock','');
+			jo.removeAttr('disabled');
+			jo.text(jo.attrd('title'));
+		});
+	},
+	click:function(jo){
+		var that=this;
+		//var jo=$(this);
+		if(!jo || !jo.length || jo.attrd('lock') || jo.attrd('sending')) return;
+		var jmobile=app.xregister.jform.find('input[name="mobile"]');
+		var mobile=jmobile.val();
+		if(!mobile){
+			jmobile.focus();
+			//app.popup('error','请填写手机号码！');
+			return;
+		}
+		if(!jo.attrd('title')) jo.attrd('title',jo.text());
+		jo.attrd('sending','ing');jo.text('发送中..');jo.attr('disabled','disabled');
+		
+		var _url='/common/dcode/mobile.x?action=apply&module=register&mobile='+mobile;
+		$ajax({url:_url,value:'xml',ready:function(xml){
+			jo.attrd('sending','');jo.text(jo.attrd('title'));jo.removeAttr('disabled');
+			var maps=$util.toMapByXML(xml);
+			var treeVar=maps.getItemTree('var');
+			var status=treeVar.v('status');
+			switch(status){
+				case 'succeed':
+					that.second_down(jo);
+					app.popup('succeed',jo.attrd('hint'),true,2);
+					break;
+				case 'mobile':
+					app.popup('error','请填写正确的手机号码！');
+					break;
+				case 'valid':
+					app.popup('error','动态码已经发送！如未收到，请稍候重试。');
+					break;
+				default:
+					app.popup('error','未知错误('+status+')');
+					break;
+			}
+		},error:true});
+	},
+'':''};
+</script>

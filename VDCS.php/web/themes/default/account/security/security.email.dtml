@@ -1,0 +1,26 @@
+<label:include file="frame/headers">
+<div class="cont">
+
+
+<div class="xform">
+<label:include file="/inc/form/forms.head">
+<dt el="password_login">
+	<h2>登录密码</h2>
+	<h3><p><input class="tipi" type="password" name="password_login" value="" placeholder="登录密码" minlength="4" maxlength="20" tabindex="1" /><em class="it password"></em><em class="ih require" title="请输入您当前的登录密码"></em></p></h3>
+</dt>
+<dt el="email">
+	<h2><chn:var("{@channel}","title.{@portal}.email")></h2>
+	<h3><p><input class="tipi" type="email" name="email" value="" placeholder="<chn:var("{@channel}","title.{@portal}.email")>" minlength="5" maxlength="50" tabindex="2"
+		 _exist="很抱歉！此邮箱已存在。" /><em class="it email"></em><em class="ih email" title="请输入您当前的登录密码"></em></p></h3>
+</dt>
+<label:include file="/inc/form/forms.vcode">
+<label:include file="/inc/form/forms.btn">
+<label:include file="/inc/form/forms.end">
+<label:include file="/inc/form/forms.script">
+</div>
+
+<label:include file="{#portal}-script">
+
+
+</div>
+<label:include file="frame/footers">

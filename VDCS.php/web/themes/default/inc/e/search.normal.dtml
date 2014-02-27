@@ -1,0 +1,18 @@
+﻿<div class="Cobs Side-Search">
+	<div class="CobBar"><p><langs:search.quick.title></p></div>
+	<div class="CobList"><div class="CobInner">
+<form name="frm_search" action="<linkurl:{@channel}.search.act>" method="get">
+<div class="sea-keyword"><input type="text" class="keyword" name="keyword" value="" size="25" maxlength="50"></div>
+<div class="sea-field"><select name="sea_field" >
+<option value="topic"><langs:search.field.topic></option>
+<option value="sp_keyword"><langs:search.field.keyword></option>
+<option value="username"><langs:search.field.username></option>
+</select></div>
+<div class="sea-button"><input type="submit" class="sea-btn" value="<langs:search.quick.submit>" style="margin-right:10px;" /> <a class="act act-search" href="<linkurl:{@channel}.search>"><langs:search.advance></a></div>
+</form>
+<script type="text/javascript">
+//dcs.xSelect.doReplace($f.o("frm_search.sea_field"),{theme:"ubox"});
+</script>
+	</div></div>
+	<div class="CobFooter"><p></p></div>
+</div>

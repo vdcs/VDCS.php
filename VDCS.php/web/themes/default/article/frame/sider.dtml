@@ -1,0 +1,10 @@
+<div class="box">
+	<h2><t><langs:chn.tit.hot></t></h2>
+	<div class="con">
+<div class="e_list"><ul>
+<label:block("{@channel}","res=hot;row=8;cache=;t=ci")>
+<label:include file="/inc/e/itemi">
+</label:end>
+</ul></div>
+	</div></div>
+</div>

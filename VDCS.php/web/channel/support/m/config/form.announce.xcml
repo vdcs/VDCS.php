@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+		<sp.code>code=sp_code;remark=a_remark</sp.code>
+		<script.begin><![CDATA[<script type="text/javascript">
+		ui.fbm.relates({"upload":"base,content"});
+</script>]]></script.begin>
+		<script.end><![CDATA[]]></script.end>
+	</configure>
+	<input>
+		<type>radio.module</type>
+		<property><![CDATA[item=;class=s;action=;type=string;max=50;min=]]></property>
+		<style></style>
+		<caption><![CDATA[{@xnames}类型]]></caption>
+		<att><![CDATA[<control:att("file","sort=common.channel/{@channel}/data.announce.module")>]]></att>
+		<value><![CDATA[{$module}]]></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>hidden.sort</type>
+		<property><![CDATA[item=;class=;action=;type=string;max=20;min=]]></property>
+		<style></style>
+		<caption><![CDATA[{@xnames}类别]]></caption>
+		<att><![CDATA[<control:att("file","sort=common.channel/{@channel}/data.announce.sort")>]]></att>
+		<value><![CDATA[{$module}]]></value>
+		<explain></explain>
+	</input>
+	
+<label:include file="part.topic">
+<label:include file="part.sp.keyword">
+	<input>
+		<type>hidden.sp_code</type>
+		<property><![CDATA[item=;action=;type=int;max=10;min=]]></property>
+		<style></style>
+		<caption><![CDATA[]]></caption>
+		<att></att>
+		<value>1</value>
+		<explain></explain>
+	</input>
+<label:include file="part.remark">
+	
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[状态信息]]></caption>
+	</input>
+	<input>
+		<type>text.{@tpx}total_view</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=]]></property>
+		<style>size=15 maxlength=15 class="total"</style>
+		<caption><![CDATA[{@xact}次数]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[次$$$]]></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}istop</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否固顶]]></caption>
+		<att><![CDATA[<control:att("dict","data.top")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}status</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[当前状态]]></caption>
+		<att><![CDATA[<control:att("dict","data.hide")>]]></att>
+		<value>1</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}tim</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=1]]></property>
+		<style>size=20 maxlength=20 class="time"</style>
+		<caption><![CDATA[发布时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain></explain>
+	</input>
+</xcml>

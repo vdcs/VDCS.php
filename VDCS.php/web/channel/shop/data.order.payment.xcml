@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>type,name,value,explain</field>
+	</configure>
+	<item>
+		<type>0</type>
+		<name>在线支付</name>
+		<value>onlinepay</value>
+		<explain><![CDATA[本站在线支付推荐采用 <a href="http://www.alipay.com/" target="_blank"><b>支付宝</b></a> 进行安全支付。<br>
+在支付进行前请先关闭您开启的屏蔽弹出窗口的浏览器插件。]]></explain>
+	</item>
+	<item>
+		<type>0</type>
+		<name>银行转帐</name>
+		<value>transfer</value>
+		<explain><![CDATA[<a href="<app:url.support>?page=payment" target="_blank">点击查看我们提供的银行转帐帐号信息</a>]]></explain>
+	</item>
+	<item>
+		<type>0</type>
+		<name>邮局汇款</name>
+		<value>remit</value>
+		<explain><![CDATA[<a href="<app:url.support>?page=payment" target="_blank">点击查看我们提供的邮局汇款信息</a>]]></explain>
+	</item>
+	<item>
+		<type>0</type>
+		<name>现金支付</name>
+		<value>cash</value>
+		<explain><![CDATA[<a href="<app:url.support>?page=payment" target="_blank">点击查看我们提供的现金支付的联系信息</a>]]></explain>
+	</item>
+</xcml>

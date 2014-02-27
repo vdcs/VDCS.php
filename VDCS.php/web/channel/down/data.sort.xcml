@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>id,name,value</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<id>1</id>
+		<name>免费软件</name>
+		<value>免费软件</value>
+	</item>
+	<item>
+		<id>2</id>
+		<name>共享软件</name>
+		<value>共享软件</value>
+	</item>
+	<item>
+		<id>3</id>
+		<name>授权软件</name>
+		<value>授权软件</value>
+	</item>
+	<item>
+		<id>4</id>
+		<name>其它类型</name>
+		<value>其它类型</value>
+	</item>
+</xcml>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links</frame>
+		
+		<table.name>dbs_class</table.name>
+		<table.px></table.px>
+		<table.field.id>id</table.field.id>
+		<table.field.defineid>classid</table.field.defineid>
+		<table.fields.value>id={@table.px}id;time={@table.px}tim</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.order>rootid asc,orderid asc,id asc</list.table.order>
+		<list.handle.select.option></list.handle.select.option>
+		<list.handle.sql.del>delete from dbs_class where id in ({$ids})</list.handle.sql.del>
+	</config>
+	
+	<lang>
+		<title><![CDATA[分类管理]]></title>
+		<title.name><![CDATA[分类]]></title.name>
+		<title.list><![CDATA[分类信息]]></title.list>
+		<title.add><![CDATA[添加新分类]]></title.add>
+		<title.edit><![CDATA[编辑分类]]></title.edit>
+		<title.del><![CDATA[删除分类]]></title.del>
+		<title.move><![CDATA[链接移动]]></title.move>
+		<title.unite><![CDATA[数据合并]]></title.unite>
+		
+		<error.no.root><![CDATA[未知或错误的频道参数！]]></error.no.root>
+		
+		<error.not.exist><![CDATA[您要操作的分类不存在！]]></error.not.exist>
+		<error.not.fatherid><![CDATA[所属分类不存在！]]></error.not.fatherid>
+		<error.exist.id><![CDATA[分类ID已存在！]]></error.exist.id>
+		<error.exist.child><![CDATA[分类还有子分类存在！]]></error.exist.child>
+		<error.exist.data><![CDATA[分类有还有数据存在！]]></error.exist.data>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 个分类！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 个分类！]]></handle.ok.edit>
+		<handle.ok.del><![CDATA[成功删除了{$total} 个分类！]]></handle.ok.del>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} 个分类！]]></handle.ok.delete>
+		<handle.ok.order><![CDATA[成功更新了分类排序！]]></handle.ok.order>
+		<handle.ok.unite><![CDATA[成功执行了 数据合并 操作！]]></handle.ok.unite>
+	</lang>
+	
+	<template>
+		<menu.links><![CDATA[
+@@@title=分类管理;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<var:menu.links>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

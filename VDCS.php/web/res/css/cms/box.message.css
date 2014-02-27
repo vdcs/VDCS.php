@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @box.message v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######################### */
+/* ########## Box ########## */
+/* ######################### */
+.BoxCenter{height:100%;width:100%;overflow:hidden;position:static !important;position:relative;display:table !important;}
+.BoxBody{display:table-cell !important;vertical-align:middle !important;position:static !important;position:absolute;top:50%;}
+.BoxInner{width:100%;position:relative;top:-50%;margin:0 auto;text-align:center;}
+
+.BoxReadMe{height:300px;overflow-y:auto;}
+.BoxReadMe .subtopic{font-weight:bold;padding:0 0 3px 0;}
+.BoxReadMe .explain{line-height:140%;padding:0 0 5px 13px;}
+
+.BoxMessage{clear:both;text-align:left;}
+.BoxMessageFrame{}
+.BoxMessageBody{clear:both;}
+.BoxMessage .partIcon{float:left;display:inline;width:60px;height:60px;}
+.BoxMessage .icon-info,
+.BoxMessage .icon-succeed,
+.BoxMessage .icon-failed,
+.BoxMessage .icon-error{background-repeat:no-repeat;background-position:0 0;}
+.BoxMessage .partTopic{font-size:16px;color:#004080;font-weight:bold;margin-left:60px;padding-top:5px;}
+.BoxMessage .partExplain{font-size:12px;color:#988B87;margin-left:60px;margin-top:5px;padding-top:10px;padding-bottom:10px;}
+.BoxMessage .partMessage{font-size:12px;line-height:150%;margin-left:60px;margin-top:5px;}
+.BoxMessage .partButton{font-size:12px;margin-left:60px;margin-top:10px;padding-left:1px;}
+.BoxMessage .partButton button{margin-right:8px;}
+
+.BoxMessage .icon-info{background-image:url("../../common/box/icon_message_info.gif");}
+.BoxMessage .icon-succeed{background-image:url("../../common/box/icon_message_succeed.gif");}
+.BoxMessage .icon-failed{background-image:url("../../common/box/icon_message_failed.gif");}
+.BoxMessage .icon-error{background-image:url("../../common/box/icon_message_error.gif");}

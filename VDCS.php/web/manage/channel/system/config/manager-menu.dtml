@@ -1,0 +1,12 @@
+
+<div class="box">
+	<h2><t><var:titles></t></h2>
+	<div class="con">
+<div class="links">
+<ul>
+<li><a href="<exec:url("action=list")>"><var:names>列表</a></li>
+<li><a href="<exec:url("action=add")>">添加新<var:names></a></li>
+</ul>
+</div>
+	</div>
+</div>

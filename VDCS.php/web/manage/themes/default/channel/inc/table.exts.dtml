@@ -1,0 +1,6 @@
+<div class="loader" el="loader"></div>
+<div class="bos">
+	<div class="paging" el="paging"><paging:string></div>
+	<div class="handle"></div>
+</div>
+</div>

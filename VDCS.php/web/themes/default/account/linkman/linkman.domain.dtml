@@ -1,0 +1,58 @@
+<label:include file="frame/headers">
+
+<div class="cont">
+<!--
+<div class="sider">
+<div class="box">
+	<h2><t>操作</t></h2>
+	<div class="con"></div>
+</div>
+</div>
+-->
+<!--<div class="cent">-->
+
+<div class="box" id="box_form">
+	<h2><t>信息站</t></h2>
+	<div class="con">
+		<div class="bod">
+			<ul class="tab-nav">
+				<li class="active"><a href="#tab1" data-toggle="tab" el="gtable">域名所有人信息</a></li>
+				<li><a href="#tab2" data-toggle="tab" el="mtable">技术联系人</a></li>
+				<li><a href="#tab3" data-toggle="tab" el="repay">域名管理人信息</a></li>
+				<li><a href="#tab4" data-toggle="tab" el="repay">缴费联系人信息</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="con">
+	<form name="frm_linkman" class="forms">
+		<div id="tab1" class="tab-pane active">
+			<label:include file="linkman.domain.owner">
+		</div>
+
+		<div id="tab2" class="tab-pane">
+			<label:include file="linkman.domain.technical">
+		</div>
+		
+		<div id="tab3" class="tab-pane">
+			<label:include file="linkman.domain.admin">
+		</div>
+
+		<div id="tab4" class="tab-pane">
+			<label:include file="linkman.domain.billing">
+		</div>
+		<div class="tips hide"><h3><p class="itip"><em></em><span>提示信息</span></p></h3></div>
+		<div style="margin-top:10px;margin-left:110px;">
+			<a class="btn c" el="submit"><span>保存</span></a>
+			<a class="btn" el="copy">复制信息</a>
+		</div>
+	</form>
+	</div>
+</div>
+
+<!--</div>-->
+</div>
+
+<label:include file="linkmain.domain-script">
+
+
+<label:include file="frame/footers">

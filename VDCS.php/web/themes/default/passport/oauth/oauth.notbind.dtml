@@ -1,0 +1,26 @@
+<label:include file="oauth-header">
+
+
+<div class="box">
+	<h2><t><var:title></t></h2>
+	<div class="con">
+<div class="mtip" id="mtip">
+	<cite class="succeed"><em></em></cite>
+	<h3><var:auth.name> 连接成功！</h3>
+	<h4>
+		<p>系统已经成功连接 <var:auth.name>，但尚未检测到有效登录信息。</p>
+		<p>已经是注册用户！请先 <a class="btn s" href="<var:url.login>"><chn:var("passport","title.login")></a>，系统会自动为您进行帐号绑定。</p>
+		<p></p>
+		<p>如果您还没有注册，您可以 <a class="btn s" href="<var:url.register>"><chn:var("passport","title.register")></a></p>
+	</h4>
+	<h5>
+<!--<a class="btn" el="root" href="<url:root>"><span>首页</span></a>-->
+<a class="btn m" el="login" href="<var:url.login>"><span><chn:var("passport","title.login")></span></a>
+<a class="btn c" el="register" href="<var:url.register>"><span><chn:var("passport","title.register")></span></a>
+	</h5>
+</div>
+	</div>
+</div>
+
+
+<label:include file="oauth-footer">

@@ -1,0 +1,14 @@
+@charset "utf-8";
+/*
+Version:	VDCS comm @ver v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######## Version ######## */
+.vver{color:#000;font-family:'Arial';font-size:11.5px;font-weight:bold;}
+.vver a{color:#000;text-decoration:none;}
+.vver a:hover{color:#ED1B23;text-decoration:underline;}
+.vver a em{color:#ED1B23;}
+.vver em{color:#AFAFAF;}

@@ -1,0 +1,32 @@
+<label:include file="header">
+<div class="framer">
+	<div class="side">
+<label:include file="common.menus">
+	</div>
+	<div class="cont">
+<label:include file="common.navbar">
+<label:include file="common.flow">
+
+
+<label:include file="pay-info">
+<div class="space"></div>
+<label:include file="pay-items">
+<div class="space"></div>
+<label:include file="pay-stat">
+<div class="space"></div>
+
+
+<div class="lines mx10"></div>
+<div class="space"></div>
+<div class="all ac">
+<a class="btn120 btn-flow-pay0" href="javascript:;" onclick="javascript:$('form[name=frm_pay]').submit();"><span>提交定单</span></a>
+</div>
+<div class="space"></div>
+
+
+	</div></div>
+</div>
+<script type="text/javascript" defer>
+//mall.usera.doBind("u-item-","levelname2=levelname");
+</script>
+<label:include file="footer">

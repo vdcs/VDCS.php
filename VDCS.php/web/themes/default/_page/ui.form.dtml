@@ -1,0 +1,145 @@
+<label:include file="frame/headers">
+
+
+<label:include script="VDCS.ui.form.js">
+<label:include script="comm/ui.form.css" type="css">
+
+<div class="framer">
+	<div class="side">
+
+<style type="text/css">
+.demo-btn{}
+.demo-btn p a{margin:5px;}
+</style>
+<div class="demo-btn">
+<p>
+<a class="btn" href="javascript:;"><span>普通 btn</span></a>
+<br/>
+<a class="btn m" href="javascript:;"><span><i class="icol-lock"></i>主要 btn m</span></a>
+<br/>
+<a class="btn c" href="javascript:;"><span><i class="icos-bag"></i>着重 btn c</span></a>
+</p>
+
+<p>
+<a class="btn b" href="javascript:;"><span>普通 btn b</span></a>
+<br/>
+<a class="btn b m" href="javascript:;"><span><i class="icol-monitor"></i>主要 btn b m</span></a>
+<br/>
+<a class="btn b c" href="javascript:;"><span><i class="icos-cog"></i>着重 btn b c</span></a>
+</p>
+
+<p>
+<a class="btn s" href="javascript:;"><span>普通 btn s</span></a>
+<br/>
+<a class="btn s m" href="javascript:;"><span>主要 btn s m</span></a>
+<br/>
+<a class="btn s c" href="javascript:;"><span>着重 btn s c</span></a>
+</p>
+</div>
+	</div>
+	<div class="cent" style="background1:#DDD;">
+
+<div class="inputs">
+	普通大小
+	<input type="text" name="names" value="普通大小" minlength="3" maxlength="20" />
+	<div class="space"></div>
+	<textarea cols="50" rows="2" name="sign" maxlength="50"><data:sign!html></textarea>
+	<div class="space"></div>
+	<label><input type="radio" name="gender" value="1" />男</label>
+	<label><input type="radio" name="gender" value="2" />女</label>
+	<label><input type="checkbox" name="attr" value="1" />属性1</label>
+	<label><input type="checkbox" name="attr" value="2" />属性2</label><span class="must_item">*</span>
+	<label><select name="bday_year" _value="<data:birthday!year>"><option>2013</option><option>2012</option><option>2011</option></select>年</label>
+	<label><select name="bday_month" _value="<data:birthday!month>"><option>1</option><option>2</option><option>3</option></select>月</label>
+	<label><select name="bday_day" _value="<data:birthday!day>"><option></option></select>日</label>
+</div>
+
+<div class="space"></div><div class="space"></div>
+
+<div class="inputs input-big">
+	Big大小
+	<input type="text" name="names" value="Big大小" minlength="3" maxlength="20" />
+	<div class="space"></div>
+	<textarea cols="50" rows="2" name="sign" maxlength="50"><data:sign!html></textarea>
+	<div class="space"></div>
+	<label><input type="radio" name="gender" value="1" />男</label>
+	<label><input type="radio" name="gender" value="2" />女</label>
+	<label><input type="checkbox" name="attr" value="1" />属性1</label>
+	<label><input type="checkbox" name="attr" value="2" />属性2</label><span class="must_item">*</span>
+	<label><select name="bday_year" _value="<data:birthday!year>"><option>2013</option><option>2012</option><option>2011</option></select>年</label>
+	<label><select name="bday_month" _value="<data:birthday!month>"><option>1</option><option>2</option><option>3</option></select>月</label>
+	<label><select name="bday_day" _value="<data:birthday!day>"><option></option></select>日</label>
+</div>
+
+<div class="space"></div><div class="space"></div>
+
+<div class="inputs input-large">
+	Large大小
+	<input type="text" name="names" value="Large大小" minlength="3" maxlength="20" />
+	<div class="space"></div>
+	<textarea cols="50" rows="2" name="sign" maxlength="50"><data:sign!html></textarea>
+	<div class="space"></div>
+	<label><input type="radio" name="gender" value="1" />男</label>
+	<label><input type="radio" name="gender" value="2" />女</label>
+	<label><input type="checkbox" name="attr" value="1" />属性1</label>
+	<label><input type="checkbox" name="attr" value="2" />属性2</label><span class="must_item">*</span>
+	<label><select name="bday_year" _value="<data:birthday!year>"><option>2013</option><option>2012</option><option>2011</option></select>年</label>
+	<label><select name="bday_month" _value="<data:birthday!month>"><option>1</option><option>2</option><option>3</option></select>月</label>
+	<label><select name="bday_day" _value="<data:birthday!day>"><option></option></select>日</label>
+</div>
+
+<div class="space"></div><div class="space"></div>
+<div class="inputs input-small">
+	Small大小
+	<input type="text" name="names" value="Small大小" minlength="3" maxlength="20" />
+	<div class="space"></div>
+	<textarea cols="50" rows="2" name="sign" maxlength="50"><data:sign!html></textarea>
+	<div class="space"></div>
+	<label><input type="radio" name="gender" value="1" />男</label>
+	<label><input type="radio" name="gender" value="2" />女</label>
+	<label><input type="checkbox" name="attr" value="1" />属性1</label>
+	<label><input type="checkbox" name="attr" value="2" />属性2</label><span class="must_item">*</span>
+	<label><select name="bday_year" _value="<data:birthday!year>"><option>2013</option><option>2012</option><option>2011</option></select>年</label>
+	<label><select name="bday_month" _value="<data:birthday!month>"><option>1</option><option>2</option><option>3</option></select>月</label>
+	<label><select name="bday_day" _value="<data:birthday!day>"><option></option></select>日</label>
+</div>
+
+<div class="space"></div><div class="space"></div>
+<div>
+<form name="search_bar">
+<input type="text" name="keyword" /><a class="btn" el="_submit">搜索</a>
+</form>
+</div>
+
+	</div>
+	<div class="sider">
+
+<div class="box">
+	<p>单选</p>
+	<p data-ui-form="radio" style="display: none;">
+		<label><input type="radio" class="normal" name="status" value="0" size="60" maxlength="200">000</label> 
+		<label><input type="radio" class="normal" name="status" value="1" size="60" maxlength="200">111</label> 
+	</p>
+	<br /><br /><br />
+	<p>多选</p>
+	<p data-ui-form="checkbox" style="display: none;">
+		<label><input type="checkbox" class="normal" name="aa" value="a" size="60" maxlength="200">aaaa</label> 
+		<label><input type="checkbox" class="normal" name="aa" value="b" size="60" maxlength="200">bbb</label> 
+	</p>
+</div>
+<br /><br /><br />
+<a class="btn" el="submit"><span>提交</span></a>
+
+<script type="text/javascript">
+$(function(){
+	ui.form.init($('.box'));
+	$('[el=submit]').click(function(){
+		$('.box').find('input:checked').each(function(){
+			alert($(this).val());
+		});
+	});
+});
+</script>
+	</div>
+
+<label:include file="frame/footers">

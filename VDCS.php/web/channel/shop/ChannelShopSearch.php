@@ -1,0 +1,6 @@
+<?
+class ChannelShopSearch extends ChannelShopList
+{
+	
+}
+?>

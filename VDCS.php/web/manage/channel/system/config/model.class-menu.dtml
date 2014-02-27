@@ -1,0 +1,12 @@
+
+<div class="box">
+	<h2><t>分类</t></h2>
+	<div class="con">
+		<div class="links">
+		<ul>
+		<li><a href="<exec:url("action=list")>">分类列表</a></li>
+		<li><a href="<exec:url("action=add")>">添加分类</a></li>
+		</ul>
+		</div>
+	</div>
+</div>

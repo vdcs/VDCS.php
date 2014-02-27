@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,type,regex,html</field>
+	</configure>
+	<item>
+		<key>re.iframes</key>
+		<type>1</type>
+		<regex><![CDATA[<iframe(.[^\>]*)src=(\"|\')(.[^\'">]*)(\"|\')(.[^\>]*)>(.[^\<+/]*)<\/iframe>]]></regex>
+		<html><![CDATA[[iframe=$3]$6[/iframe]]]></html>
+	</item>
+	<item>
+		<key>re.iframe</key>
+		<type>1</type>
+		<regex><![CDATA[<iframe(.[^\>]*)src=(\"|\')(.[^\'">]*)(\"|\')(.[^\>]*)>]]></regex>
+		<html><![CDATA[[iframe]$3[/iframe]]]></html>
+	</item>
+	
+	
+	
+<!-- ############################## -->
+<!--
+	<item>
+		<key>re.dp</key>
+		<type>1</type>
+		<regex><![CDATA[<(\/?(div|p)) align=(justify|left|center|right)>]]></regex>
+		<html><![CDATA[[$1=$3]]]></html>
+	</item>
+	<item>
+		<key>re.dp.s</key>
+		<type>1</type>
+		<regex><![CDATA[<(\/?(div|p)) align="(justify|left|center|right)">]]></regex>
+		<html><![CDATA[[$1=$3]]]></html>
+	</item>
+	<item>
+		<key>re.ibup</key>
+		<type>1</type>
+		<regex><![CDATA[<(\/?(i|b|u|ul|ol|li|div|p|br))>]]></regex>
+		<html><![CDATA[[$1]]]></html>
+	</item>
+	<item>
+		<key>re.br</key>
+		<type>1</type>
+		<regex><![CDATA[<(i|b|u|p|br)/>]]></regex>
+		<html><![CDATA[[$1]]]></html>
+	</item>
+	<item>
+		<key>re.br</key>
+		<type>1</type>
+		<regex><![CDATA[<(\/?s(ub|up|trike))>]]></regex>
+		<html><![CDATA[[$1]]]></html>
+	</item>
+	
+	
+	<item>
+		<key>re.font.color</key>
+		<type>1</type>
+		<regex><![CDATA[<font(.[^\>]*)color=(\"?\'?)(.[^\'">]*)(\"?\'?)(.[^\>]*)>(.+?)</font>]]></regex>
+		<html><![CDATA[[color=$3]$6[/color]]]></html>
+	</item>
+	
+	<item>
+		<key>re.font.size</key>
+		<type>1</type>
+		<regex><![CDATA[<font(.[^\>]*)size=(\"?\'?)([0-7])(\"?\'?)(.[^\>]*)>(.+?)</font>]]></regex>
+		<html><![CDATA[[size=$3]$6[/size]]]></html>
+	</item>
+	
+	<item>
+		<key>re.img</key>
+		<type>1</type>
+		<regex><![CDATA[<img(.[^\>]*)src=(\"|\')(.[^\'">]*)(\"|\')(.[^\>]*)>]]></regex>
+		<html><![CDATA[[img]$3[/img]]]></html>
+	</item>
+	
+	
+	<item>
+		<key>re.url1</key>
+		<type>1</type>
+		<regex><![CDATA[<a(.[^\>]*)href=(\"|\')(.[^\'">]*)(\"|\')(.[^\>]*)>(.[^\<+/]*)<\/a>]]></regex>
+		<html><![CDATA[[url=$3]$6[/url]]]></html>
+	</item>
+	<item>
+		<key>re.url3</key>
+		<type>1</type>
+		<regex><![CDATA[<a(.[^\>]*)href=(\"?\'?)(.[^\'">]*)(\"?\'?)>(.[^\<+/]*)<\/a>]]></regex>
+		<html><![CDATA[[url=$3]$5[/url]]]></html>
+	</item>
+	<item>
+		<key>re.url4</key>
+		<type>1</type>
+		<regex><![CDATA[<a(.[^\>]*)href=(.[^\'">]*) (.[^\>]*)>(.[^\<+/]*)<\/a>]]></regex>
+		<html><![CDATA[[url=$2]$4[/url]]]></html>
+	</item>
+	
+	<item>
+		<key>br</key>
+		<type>0</type>
+		<regex><![CDATA[\[br\]]]></regex>
+		<html><![CDATA[<br/>
+]]></html>
+	</item>
+-->
+</xcml>

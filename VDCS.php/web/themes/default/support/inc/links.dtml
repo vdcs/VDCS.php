@@ -1,0 +1,13 @@
+<label:include script="<web:url.themed>support/images/style.links.css" type="css">
+	<div class="StructLinks">
+<div class="LinksPic"><ul>
+<label:links("fir")>
+<label:include file="/support/element.links.item.pic">
+</label:end>
+</ul></div>
+<div class="LinksTxt"><ul class="clears inlines">
+<label:links("fir_txt")>
+<label:include file="/support/element.links.item.txt">
+</label:end>
+</ul></div>
+	</div>

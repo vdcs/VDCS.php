@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre xmlns:ua="node">
+		<channel>{@channel}</channel>
+		<table.namex>db_user_</table.namex>
+		<name>账户</name>
+		<names>账户</names>
+		
+		<ua>user</ua>
+		<ua:key>user</ua:key>
+		<ua:table.name>db_user</ua:table.name>
+		<ua:table.px></ua:table.px>
+		<ua:field.id>uid</ua:field.id>
+		<ua:name>用户</ua:name>
+		<ua:names>用户</ua:names>
+		<ua:act>浏览</ua:act>
+		<ua:unit>位</ua:unit>
+	</pre>
+	<var>
+		<title>账户中心</title>
+		<title.index>我的账号</title.index>
+		
+		<title.my>我的信息</title.my>
+		<title.home>主页</title.home>
+		<title.profile>个人资料</title.profile>
+		<title.info>个人信息</title.info>
+		<title.space>空间</title.space>
+		<title.online>在线用户</title.online>
+		
+		<title.user>用户</title.user>
+		<title.user.info>用户信息</title.user.info>
+		<title.user.list>用户列表</title.user.list>
+		<title.user.view>用户浏览</title.user.view>
+		<title.user.home>个人主页</title.user.home>
+		<title.user.space>个人空间</title.user.space>
+		<title.user.online>与我在线</title.user.online>
+		
+		<title.settings>设置</title.settings>
+		<title.settings.index>我的信息</title.settings.index>
+		<title.settings.info>基本信息</title.settings.info>
+		<title.settings.avatar>头像设置</title.settings.avatar>
+		<title.settings.privacy>隐私设置</title.settings.privacy>
+		<title.settings.auth>账号认证</title.settings.auth>
+		<title.settings.auth.certif>证书认证</title.settings.auth.certif>
+		<title.settings.auth.idcard>实名认证</title.settings.auth.idcard>
+		<title.prefer>个性化</title.prefer>
+		<title.prefer.set>个性设置</title.prefer.set>
+		<title.security>安全</title.security>
+		<title.security.set>安全设置</title.security.set>
+		<title.security.password>修改密码</title.security.password>
+		<title.security.question>安全问题</title.security.question>
+		<title.security.questions>安全问题</title.security.questions>
+		<title.security.email>安全邮箱</title.security.email>
+		<title.security.mobile>绑定手机号</title.security.mobile>
+		<title.privacy>隐私</title.privacy>
+		<title.privacy.set>隐私设置</title.privacy.set>
+		
+		<title.notices>通知</title.notices>
+		<title.notify>通知</title.notify>
+		<title.notices.notice>系统通知</title.notices.notice>
+		<title.notices.app>应用通知</title.notices.app>
+
+		<title.inbox>私信</title.inbox>
+		<title.message>短信息</title.message>
+		
+		<title.friends>好友</title.friends>
+		<title.contacts>人脉</title.contacts>
+		<title.contacts.follow>关注</title.contacts.follow>
+		<title.contacts.follower>听从</title.contacts.follower>
+		<title.contacts.fans>粉丝</title.contacts.fans>
+		<title.social>社交</title.social>
+		<title.social.at>AT</title.social.at>
+		<title.social.comment>评论</title.social.comment>
+		
+		<title.ucard>个人卡片</title.ucard>
+		<title.linkman>联系人</title.linkman>
+		
+		<title.fav>收藏夹</title.fav>
+		<title.gift>礼品</title.gift>
+		<title.app>应用</title.app>
+		
+		<!--
+		个人理财
+		-->
+		<title.assets>账户</title.assets>
+		<title.assets.transaction>资金流动</title.assets.transaction>
+		<title.assets.remit>汇款</title.assets.remit>
+		<title.assets.refund>提现</title.assets.refund>
+		<title.assets.recharge>充值</title.assets.recharge>
+		<title.assets.emoney>货币服务</title.assets.emoney>
+		<title.assets.prepay>预付服务</title.assets.prepay>
+		<title.assets.note>理财记录</title.assets.note>
+		
+		<title.card>会员卡</title.card>
+		<title.coupon>优惠卷</title.coupon>
+		
+		<title.order>订单</title.order>
+
+		<title.put>投稿中心</title.put>
+	</var>
+	<num>
+		<ispay>1</ispay>
+		<ismoney>1</ismoney>
+		<isprepay>1</isprepay>
+		<isemoney>1</isemoney>
+		<buy.proportion>5</buy.proportion>
+		<buy.base>10</buy.base>
+	</num>
+	<config>
+		<url>default</url>
+		
+		<m.default><![CDATA[contacts=follow;social=at;notices=notice;inbox=;prefer=set;settings=info;security=;privacy=set;assets=]]></m.default>
+		
+		<up.mode></up.mode>
+		<up.format></up.format>
+		<up.types></up.types>
+		<up.dir><![CDATA[{$y}{$m}/]]></up.dir>
+		<up.dirsn></up.dirsn>
+		<up.dirbase></up.dirbase>
+		<up.filename></up.filename>
+		<up.filetype></up.filetype>
+		<up.maxsize></up.maxsize>
+		<up.cover></up.cover>
+		<up.data.index></up.data.index>
+		<up.data.status></up.data.status>
+		
+		<avatar.up.mode>avatar</avatar.up.mode>
+		<avatar.up.format>jpg</avatar.up.format>
+		<avatar.up.types>small,big</avatar.up.types>
+		<avatar.up.dir><![CDATA[{$sn1}/{$sn2}{$sn3}/]]></avatar.up.dir>
+		<avatar.up.dirsn><![CDATA[{$uuid}]]></avatar.up.dirsn>
+		<avatar.up.dirbase><![CDATA[user/]]></avatar.up.dirbase>
+		<avatar.up.filename><![CDATA[{$uuid}_avatar]]></avatar.up.filename>
+		<avatar.up.filetype><![CDATA[gif,jpg,png,bmp]]></avatar.up.filetype>
+		<avatar.up.maxsize></avatar.up.maxsize>
+		<avatar.up.cover>yes</avatar.up.cover>
+		<avatar.up.eavatar>yes</avatar.up.eavatar>
+		<avatar.up.data.index>ua</avatar.up.data.index>
+		<avatar.up.data.status>1</avatar.up.data.status>
+		
+		<idcard.up.mode>cert</idcard.up.mode>
+		<idcard.up.dir><![CDATA[{$sn1}/{$sn2}{$sn3}/]]></idcard.up.dir>
+		<idcard.up.dirsn><![CDATA[{$uuid}]]></idcard.up.dirsn>
+		<idcard.up.dirbase><![CDATA[user/]]></idcard.up.dirbase>
+		<idcard.up.filename><![CDATA[{$uuid}_idcard_{$rnds}]]></idcard.up.filename>
+		<idcard.up.filetype><![CDATA[gif,jpg,png,bmp]]></idcard.up.filetype>
+		<idcard.up.cover>status</idcard.up.cover>
+		<idcard.up.data.index>ua</idcard.up.data.index>
+		<idcard.up.data.status>0</idcard.up.data.status>
+		
+	</config>
+</xcml>

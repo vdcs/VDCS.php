@@ -1,0 +1,15 @@
+
+<div class="bars">
+<h2><web:var.title.p></h2>
+<p>帐户资产的充值、转帐与记录查询。</p>
+</div>
+
+<div class="links">
+<ul>
+	<li el="index"><a href="<chn:linkurl("{@channel}","pa","p={@portal}")>"><chn:var("{@channel}","title.{@portal}")></a></li>
+	<li el="transaction"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=transaction")>"><chn:var("{@channel}","title.{@portal}.transaction")></a></li>
+	<li el="remit"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=remit")>"><chn:var("{@channel}","title.{@portal}.remit")></a></li>
+	<li el="refund"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=refund")>"><chn:var("{@channel}","title.{@portal}.refund")></a></li>
+	<li el="recharge"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=recharge")>"><chn:var("{@channel}","title.{@portal}.recharge")></a></li>
+</ul>
+</div>

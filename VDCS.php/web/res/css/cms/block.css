@@ -1,0 +1,75 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @block v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######################### */
+/* ######### Block ######### */
+/* ######################### */
+.Block,.Blocks{clear:both;text-align:left;position:relative;overflow:hidden;}
+.BlockBar,.BlockSub{position:relative;overflow:hidden;height:28px;line-height:28px;color:#29458C;font-weight:bold;font-size:14px;border:1px solid #E7E7E7;border-bottom:0;background-color:#E9F1F8;background-repeat:no-repeat;background-position:100% 0;}
+.BlockSub{border-top:none;}
+.BlockBar p,.BlockSub p{line-height:28px;background-repeat:no-repeat;background-position:0 0;padding:0 8px;overflow:hidden;}
+.BlockBar a,.BlockSub a{color:#29458C;text-decoration:none;}
+.BlockBar .more,.BlockSub .more{position:absolute;top:0;right:8px;font-size:12px;font-weight:normal;}
+.BlockBar .more img,.BlockBar img.more,.BlockSub .more img,.BlockSub img.more{margin-top:5px;}
+.BlockBar .more,.BlockSub .more,
+.BlockBar .more a,.BlockSub .more a{color:#888888;}
+.BlockHeader,.BlockFooter{height:1px;overflow:hidden;background-color:#E7E7E7; background-repeat:no-repeat;background-position:0 0;}
+.BlockHeader p,.BlockFooter p{background-repeat:no-repeat;background-position:100% 0;}
+.BlockBody .BlockInner{padding:0;}
+.BlockContent .BlockInner{padding:8px 8px 10px 8px;}
+.BlockContent p{line-height:150%;}
+.BlockList .BlockInner{padding:4px 8px 6px 8px;}
+.BlockList ul{padding:0;}
+.BlockList li{clear:both;padding:2px 0;}
+.BlockBody,.BlockContent,.BlockList{background-color:#FFFFFF;background-repeat:repeat-y;background-position:100% 0;border-left:1px solid #E7E7E7;border-right:1px solid #E7E7E7;}
+.BlockInner{background-repeat:repeat-y;background-position:0 0;}
+
+.Block-None{}
+.Block-None .BlockBody,.Block-None .BlockContent,.Block-None .BlockList{border:0;}
+.Block-None .BlockHeader,.Block-None .BlockFooter{display:none;}
+
+/* ########## Cob ########## */
+.Cob,.Cobs{clear:both;text-align:left;position:relative;overflow:hidden;}
+.CobBar,.CobSub{position:relative;overflow:hidden;height:30px;font-size:14px;font-weight:bold;background-repeat:no-repeat;background-position:right -60px;}
+.CobBar p,.CobSub p{height:30px;line-height:30px;background-repeat:no-repeat;background-position:0 0;margin-right:5px;padding:0 4px 0 12px;overflow:hidden;}
+/*.CobSub{background-position:-5px -60px;}
+.CobSub p{background-position:-5px 0;margin-right:0;}*/
+.CobBar a,.CobSub a{text-decoration:none;}
+.CobBar .more,.CobSub .more{position:absolute;top:0;right:4px;font-size:12px;font-weight:normal;}
+.CobBar .more img,.CobBar img.more,.CobSub .more img,.CobSub img.more{margin-top:5px;}
+.CobBody,.CobContent,.CobList{background-color:#FFFFFF;background-repeat:repeat-y;background-position:100% 0;}
+.CobInner{background-repeat:repeat-y;background-position:0 0;margin-right:5px;padding-left:5px;}
+.CobContent .CobInner{margin-right:12px;padding:5px 0 7px 12px;}
+.CobContent p{line-height:150%;}
+.CobList .CobInner{margin-right:12px;padding-left:12px;padding:3px 0 5px 12px;}
+.CobList ul{padding:0;}
+.CobList li{clear:both;padding:2px 0;}
+.CobHeader{height:5px;overflow:hidden;background-repeat:no-repeat;background-position:right -90px;}
+.CobHeader p{height:5px;background-repeat:no-repeat;background-position:0 -30px;margin-right:5px;}
+.CobFooter{height:5px;overflow:hidden;background-repeat:no-repeat;background-position:right -95px;}
+.CobFooter p{height:5px;background-repeat:no-repeat;background-position:0 -35px;margin-right:5px;}
+
+.Cobs .CobBar,.Cobs .CobSub{background-position:right -180px;}
+.Cobs .CobBar p,.Cobs .CobSub p{background-position:0 -120px;}
+.Cobs .CobHeader{background-position:right -210px;}
+.Cobs .CobHeader p{background-position:0 -150px;}
+.Cobs .CobFooter{background-position:right -215px;}
+.Cobs .CobFooter p{background-position:0 -155px;}
+
+.CobBar .MultiBar,.CobSub .MultiBar,
+.CobBar .MultiBar,.CobSub .MultiBar{display:inline-block;overflow:hidden;height:22px;line-height:24px;border:1px solid #E9F1F8;border-bottom:0;font-size:12px;font-weight:normal;cursor:pointer;padding-left:8px;padding-right:8px;margin-top:5px;}
+.CobBar .MultiBarPop,.CobSub .MultiBarPop,
+.CobBar .MultiBarPop,.CobSub .MultiBarPop{border:1px solid #FBFBFD;border-bottom:0;background-color:#FFFFFF;font-weight:bold;}
+.CobBar .MultiBarTxt,.CobSub .MultiBarTxt,
+.CobBar .MultiBarTxt,.CobSub .MultiBarTxt{display:inline-block;overflow:hidden;height:22px;line-height:24px;font-size:12px;font-weight:normal;cursor:pointer;padding-left:8px;padding-right:8px;margin-top:5px;}
+
+.CobBar,.CobBar p,.CobSub,.CobSub p,.CobHeader,.CobHeader p,.CobFooter,.CobFooter p,
+.Cobs .CobBar,.Cobs .CobBar p,.Cobs .CobSub,.Cobs .CobSub p,
+.Cobs .CobHeader,.Cobs .CobHeader p,.Cobs .CobFooter,.Cobs .CobFooter p{background-image:url("../../common/struct/cobs.gif");}
+.CobBody,.CobInner,.CobContent,.CobList{background-image:url("../../common/struct/cob_bg.gif");}
+.Cobs .CobBody,.Cobs .CobInner,.Cobs .CobContent,.Cobs .CobList{background-image:url("../../common/struct/cobs_bg.gif");}

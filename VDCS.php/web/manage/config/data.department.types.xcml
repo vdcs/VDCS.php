@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,name</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<value>1</value>
+		<name>销售</name>
+	</item>
+	<item>
+		<value>2</value>
+		<name>客服</name>
+	</item>
+	<item>
+		<value>6</value>
+		<name>技术</name>
+	</item>
+	<item>
+		<value>5</value>
+		<name>研发</name>
+	</item>
+	<item>
+		<value>3</value>
+		<name>财务</name>
+	</item>
+	<item>
+		<value>4</value>
+		<name>管理</name>
+	</item>
+</xcml>

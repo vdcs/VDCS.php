@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="sql">
+	<configure>
+		<node>struct,label.announce,label.page,label.adr,label.links</node>
+	</configure>
+	<struct>
+		<table.name><![CDATA[]]></table.name>
+		<table.px><![CDATA[a_]]></table.px>
+	</struct>
+	<label.announce>
+		<table.name><![CDATA[{@announce:table.name}]]></table.name>
+		<table.field><![CDATA[id=id;module=module;sort=sort;
+			key=key;topic=topic;summary=remark;
+			tim=tim;total.view=total_view;istop=istop]]></table.field>
+		<table.fields><![CDATA[id,module,sort,
+			key,topic,sp_keyword,
+			total_view,istop,status,tim]]></table.fields>
+		<block><![CDATA[select top {$num} {$table.fields} from {$table.name} where status=1  {$query.append} {$order}]]></block>
+		<block.order><![CDATA[new=order by orderid desc,id desc;
+			sys=and module='sys' order by orderid desc,id desc;
+			hot=order by total_view desc,orderid desc,id desc;
+			top=and istop>0 order by istop desc,orderid desc,id desc;]]></block.order>
+		<block.url>announce.view</block.url>
+	</label.announce>
+	<label.page>
+		<table.name><![CDATA[dbc_page]]></table.name>
+		<table.field><![CDATA[id=id;key=key;sort=sort;topic=topic;summary=summary;info=info;remark=remark;prop1=prop1;prop2=prop2;prop3=prop3;prop4=prop4;prop5=prop5;tim=tim;tim.up=tim_up]]></table.field>
+		<table.fields><![CDATA[id,key,sort,type,topic,summary,info,remark,prop1,prop2,prop3,prop4,prop5,tim,tim_up]]></table.fields>
+		<block><![CDATA[select top {$num} {$table.fields} from {$table.name} where status=1 {$query.append} {$order}]]></block>
+		<block.order><![CDATA[key=and `key`='{$term}' order by orderid desc,id asc;]]></block.order>
+		<block.url>page</block.url>
+	</label.page>
+	<label.adr>
+		<table.name><![CDATA[dbc_adr]]></table.name>
+		<table.field><![CDATA[id=id;key=key;sort=sort;type=type;name=name;title=title;url=linkurl;pic=res;res=res;sizew=sizew;sizeh=sizeh;params=params;content=content;tim=tim;tim.up=tim_up]]></table.field>
+		<table.fields><![CDATA[id,key,sort,type,name,title,linkurl,res,sizew,sizeh,params,content,tim,tim_up]]></table.fields>
+		<block><![CDATA[select top {$num} {$table.fields} from {$table.name} where status=1 {$query.append} {$order}]]></block>
+		<block.order><![CDATA[key=and `key`='{$term}' order by orderid desc,id asc;]]></block.order>
+		<block.url><![CDATA[![item:url]]]></block.url>
+	</label.adr>
+	<label.links>
+		<table.name><![CDATA[dbc_links]]></table.name>
+		<table.field><![CDATA[id=id;orderid=orderid;module=module;sort=sort;type=type;name=name;title=title;logo=logo;url=url;tim=tim;explain=explain]]></table.field>
+		<table.fields><![CDATA[id,orderid,module,sort,type,name,title,url,logo,tim,explain]]></table.fields>
+		<block><![CDATA[select top {$num} {$table.fields} from {$table.name} where status=1 {$query.append} {$order}]]></block>
+		<block.order><![CDATA[module=and `module`='{$term}' order by orderid desc,id asc;]]></block.order>
+		<block.url><![CDATA[![item:url]]]></block.url>
+	</label.links>
+</xcml>

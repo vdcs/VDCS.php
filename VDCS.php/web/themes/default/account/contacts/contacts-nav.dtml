@@ -1,0 +1,12 @@
+
+<div class="bars">
+<h2><web:var.title.p></h2>
+<p>你可以在这里添加或删除你的好友。</p>
+</div>
+
+<div class="links">
+<ul>
+<li el="follow"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=follow")>"><span><chn:var("{@channel}","title.{@portal}.follow")></span></a></li>
+<li el="fans"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=fans")>"><span><chn:var("{@channel}","title.{@portal}.fans")></span></a></li>
+</ul>
+</div>

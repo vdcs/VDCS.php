@@ -1,0 +1,7 @@
+﻿<label:include file="frame/headers">
+
+
+{@channel}.{@portal}.{@module}
+
+
+<label:include file="frame/footers">

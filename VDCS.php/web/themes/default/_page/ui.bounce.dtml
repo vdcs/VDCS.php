@@ -1,0 +1,14 @@
+<label:include file="frame/headers">
+<label:include script="html5/effect.css" type="css">
+<label:include script="html5/effect.bounce.css" type="css">
+<div class="animated bounceIn">animated bounceIn</div>
+<div class="animated bounceInUp">animated bounceInUp</div>
+<div class="animated bounceInDown">animated bounceInDown</div>
+<div class="animated bounceInLeft">animated bounceInLeft</div>
+<div class="animated bounceInRight">animated bounceInRight</div>
+<div class="animated bounceOut">animated bounceOut</div>
+<div class="animated bounceOutUp">animated bounceOutUp</div>
+<div class="animated bounceOutLeft">animated bounceOutLeft</div>
+<div class="animated bounceOutRight">animated bounceOutRight</div>
+
+<label:include file="frame/footers">

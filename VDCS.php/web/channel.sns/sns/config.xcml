@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre>
+		<channel>{@channel}</channel>
+		<table.namex>db_{@channel}_</table.namex>
+		<table.name>db_{@channel}</table.name>
+		<table.px>b_</table.px>
+		<name>社区</name>
+		<names>社区</names>
+		<act>浏览</act>
+		<act.view>浏览</act.view>
+		<unit>个</unit>
+	</pre>
+	<var>
+		<title>社区</title>
+		
+		<title.my>我的社区</title.my>
+		<title.help>社区帮助</title.help>
+	</var>
+	<num>
+		<pic.width>0</pic.width>
+		<pic.height>0</pic.height>
+	</num>
+	<config>
+		<url>script</url>
+		<create>1</create>
+		<create.status>1</create.status>
+		<put>1</put>
+		<put.status>1</put.status>
+		
+	</config>
+</xcml>

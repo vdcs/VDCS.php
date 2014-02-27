@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="gb2312"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>lang,page,module</node>
+	</configure>
+	<lang>
+		<error.config><![CDATA[提交的评论数据出现异常！]]></error.config>
+		<error.norule.username><![CDATA[评论作者 为空或不符合规则！]]></error.norule.username>
+		<error.norule.email><![CDATA[电子邮件 为空或不符合规则！]]></error.norule.email>
+		<error.norule.topic><![CDATA[评论主题 为空或不符合规则！]]></error.norule.topic>
+		<error.norule.remark><![CDATA[评论内容 为空或不符合规则！]]></error.norule.remark>
+		
+		<handle.ok.post><![CDATA[您已成功发布了一条评论！]]></handle.ok.post>
+	</lang>
+	
+	
+	<page>
+		<full><![CDATA[
+{$comment.module.css}
+{$comment.module.list}
+{$comment.module.post}
+]]></full>
+		<view><![CDATA[
+{$comment.module.css}
+{$comment.module.spot}
+{$comment.module.post}
+]]></view>
+	</page>
+	
+	
+	<module>
+		<list><![CDATA[
+<div class="comment_list" id="comment_list">
+	<div class="title">评论列表 (共{$comment.total}条)</div>
+{$comment.items}
+<div class="space" style="padding:2px;"></div>
+{$comment.paging}
+</div>
+]]></list>
+		<spot><![CDATA[
+<div class="comment_spot" id="comment_spot">
+	<div class="title">相关评论(共{$comment.total}条, <a href="{$comment.url}?channel={$comment.channel}&dataid={$comment.dataid}">查看所有评论</a>)</div>
+{$comment.items}
+</div>
+]]></spot>
+		<item><![CDATA[
+	<div class="item">
+		<div class="topic"><strong>{$comment.item.username}</strong> 认为：{$comment.item.topic}</div>
+		<div class="useremail">{$comment.item.useremail}</div>
+		<div class="time">{$comment.item.time}</div>
+		<div class="time_date">{$comment.item.time.date}</div>
+		<div class="remark">{$comment.item.remarks}</div>
+		<div class="ip">{$comment.item.ip}</div>
+	</div>
+]]></item>
+		<post><![CDATA[
+<div class="comment_post" id="comment_post">
+	<div class="title">发表评论</div>
+	<form name=frm_review action="{$comment.url}?channel={$comment.channel}&dataid={$comment.dataid}" method=post>
+	<input type=hidden name=_chk value="{$comment.module}">
+	<input type=hidden name=_page value="{$comment.channel.page}">
+	<div class="item">
+		<div class="caption">评论作者:</div>
+		<div class="input"><input type=text name=username value="{$comment.username}" size=20 maxlength=20></div>
+	</div>
+	<div class="item">
+		<div class="caption">电子邮件:</div>
+		<div class="input"><input type=text name=useremail value="" size=30 maxlength=100></div>
+	</div>
+	<div class="item">
+		<div class="caption">评论主题:</div>
+		<div class="input"><input type=text name=c_topic value="" size=40 maxlength=200></div>
+	</div>
+	<div class="item">
+		<div class="caption">评论内容:</div>
+		<div class="input"><textarea name=c_remark cols=40 rows=4></textarea></div>
+	</div>
+	<div class="item">
+		<div class="button"><input type=submit name=_sbt value="提交评论"></div>
+	</div>
+	</form>
+</div>
+]]></post>
+		<css><![CDATA[
+<style>
+div.comment_spot { width:100%; background:#EDEDED; padding:0px; }
+div.comment_spot div.title { width:100%; text-align:left; background:#FFFFFF; font-weight:bold; font-size:14px; padding:2px 0px 2px 0px; }
+div.comment_spot div.item { width:100%; text-align:left; background:#FFFFFF; padding:2px 0px 2px 0px; }
+div.comment_spot div.item div.username {  }
+div.comment_spot div.item div.useremail { display:none; }
+div.comment_spot div.item div.topic { width:100%; padding:5px 0px 2px 0px; margin:2px 0 2px 0; border-bottom:1px dotted #d4d4d4; float:left; }
+div.comment_spot div.item div.remark { margin:0; padding:0px 0px 0px 0px; text-align:left; float:left; }
+div.comment_spot div.item div.ip { display:none; }
+div.comment_spot div.item div.time { width:100%; margin:-30px 0 0 0; padding:5px 0 0 0; float:right; text-align:right; }
+div.comment_spot div.item div.time_date { display:none; }
+
+div.comment_list { width:100%; background:#EDEDED; padding:0px; }
+div.comment_list div.title { width:100%; text-align:left; background:#FFFFFF; font-weight:bold; font-size:14px; padding:2px 0px 2px 0px; }
+div.comment_list div.item { width:100%; text-align:left; background:#FFFFFF; padding:2px 0px 2px 0px; }
+div.comment_list div.item div.username {  }
+div.comment_list div.item div.useremail { display:none; }
+div.comment_list div.item div.topic { width:100%; padding:5px 0px 2px 0px; margin:2px 0 2px 0; border-bottom:1px dotted #d4d4d4; float:left; }
+div.comment_list div.item div.remark { margin:0; padding:0px 0px 0px 0px; text-align:left; float:left; }
+div.comment_list div.item div.ip { display:none; }
+div.comment_list div.item div.time { width:100%; margin:-30px 0 0 0; padding:5px 0 0 0; float:right; text-align:right; }
+div.comment_list div.item div.time_date { display:none; }
+
+div.comment_post { width:100%; background:#EDEDED; padding:0px; }
+div.comment_post div.title { width:100%; text-align:left; background:#FFFFFF; font-weight:bold; font-size:14px; padding:2px 0px 2px 0px; }
+div.comment_post div.item { width:100%; text-align:left; background:#FFFFFF;  height:30px; clear:both; margin:0 auto; padding:2px 0px 2px 0px; }
+div.comment_post div.item div.caption { width:20%; text-align:right; padding:2px 10px 2px 0px; float:left; }
+div.comment_post div.item div.input { width:80%; text-align:left; padding:2px 0px 2px 0px; float:right; }
+div.comment_post div.item div.input input { border:1px solid #cccccc; background:#FFFFFF; height:22px; padding:3px 3px 0px 3px; }
+div.comment_post div.item div.input textarea { border:1px solid #cccccc; background-color:#FFFFFF; padding:3px 3px 0px 3px; }
+div.comment_post div.item div.button { width:80%; text-align:left; padding:2px 0px 2px 0px; float:right; }
+div.comment_post div.item div.button input { border:1px solid #c0c0c0; background-color:#CFE8F5; height:25px; padding:3px 1px 0px 1px; }
+</style>
+]]></css>
+	</module>
+</xcml>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>lang,tpl</node>
+	</configure>
+	<lang>
+		<unit><![CDATA[条]]></unit>
+		<names><![CDATA[记录]]></names>
+	</lang>
+	<tpl>
+		<frame><![CDATA[<table cellspacing="1" cellpadding="4" class="paging">
+<tr>
+<td class="bar"><font class="light">{$total}</font>{$unit}{$names} {$page}/{$pagetotal}</td>
+<td class="td">{$items}</td>
+<input type="hidden" name="paging_url" value="{$urls}">
+<td class="td"><input type="text" class="txt" name="paging_num" value="{$page}" size="3" style="text-align:center;"> <input type="button" class="btn" value="GO" onclick="javascript:dcs.paging.go();"></td>
+</tr>
+</table>]]></frame>
+		<first><![CDATA[<a href="{$urls}"><img class="icon" src="/images/paging/default/first.gif"></a> ]]></first>
+		<firsts><![CDATA[<img class="icon" src="/images/paging/default/first.gif"> ]]></firsts>
+		<prev><![CDATA[<a href="{$urls}"><img class="icon" src="/images/paging/default/previous.gif"></a> ]]></prev>
+		<prevs><![CDATA[<img class="icon" src="/images/paging/default/previous.gif"> ]]></prevs>
+		<item><![CDATA[<a href="{$urls}">{$page}</a> ]]></item>
+		<items><![CDATA[<strong>{$page}</strong> ]]></items>
+		<next><![CDATA[<a href="{$urls}"><img class="icon" src="/images/paging/default/next.gif"></a> ]]></next>
+		<nexts><![CDATA[<img class="icon" src="/images/paging/default/next.gif"> ]]></nexts>
+		<last><![CDATA[<a href="{$urls}"><img border=0 src="/images/paging/default/last.gif"></a>]]></last>
+		<lasts><![CDATA[<img class="icon" src="/images/paging/default/last.gif">]]></lasts>
+	</tpl>
+</xcml>

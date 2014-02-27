@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="sql">
+	<configure>
+		<node>struct,label.ua,label.friend,label.fav</node>
+	</configure>
+	<struct>
+	 	<user.relate><![CDATA[uuid={$uid}]]></user.relate>
+	</struct>
+	<label.ua>
+		<table.name><![CDATA[{@ua:table.name}]]></table.name>
+		<table.field><![CDATA[id=uid;uid=uid;name=name;money=money;emoney=emoney;points=points;exp=exp;tim=tim]]></table.field>
+		<table.fields><![CDATA[uid,name,points,money,emoney,exp,tim]]></table.fields>
+		<block><![CDATA[select top {$num} {$table.fields} from {$table.name} where status=1 {$query.append} {$order}]]></block>
+		<block.order><![CDATA[new=order by uid desc,tim desc;
+			money=and money>0 order by money desc,tim asc;
+			emoney=and emoney>0 order by emoney desc,tim asc;
+			points=and points>0 order by points desc,tim asc;
+			exp=and exp>0 order by exp desc,tim asc]]></block.order>
+		<block.url>ua.view.id</block.url>
+	</label.ua>
+	<label.friend>
+		<table.name><![CDATA[{@table.namex}friend]]></table.name>
+		<table.field><![CDATA[id=f_id;uid=uid;name=u_name]]></table.field>
+		<table.fields><![CDATA[f_id,uid,name]]></table.fields>
+		<block><![CDATA[select top {$num} {$table.fields} from {$table.name} where f_id>-1 {$query.append} {$order}]]></block>
+		<block.order><![CDATA[new=order by f_id desc]]></block.order>
+		<block.url>ua.view</block.url>
+	</label.friend>
+	<label.fav>
+		<table.name><![CDATA[{@table.namex}fav]]></table.name>
+		<table.field><![CDATA[groupid=g_id;channel=nsort;id=b_id;topic=b_name;url=b_url]]></table.field>
+		<table.fields><![CDATA[g_id,nsort,b_id,b_name,b_url]]></table.fields>
+		<block><![CDATA[select top {$num} {$table.fields} from {$table.name} where b_iscommon>-1 {$query.append} {$order}]]></block>
+		<block.order><![CDATA[new=order by b_id desc;
+			hot=order by b_total_view desc,b_id desc]]></block.order>
+		<block.url>fav</block.url>
+	</label.fav>
+</xcml>

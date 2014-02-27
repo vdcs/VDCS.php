@@ -1,0 +1,101 @@
+﻿<label:include file="frame/headers">
+
+
+<div class="cont">
+	<div class="box">
+		<h2><t>基本资料</t></h2>
+		<div class="con">
+<div class="forms">
+<form name="frm_info">
+<dl>
+<dt><h2>登录邮箱</h2><h3><p class="put"><info:email!html></p></h3></dt><!--<input type="text" name="email" value="<info:email!html>" />-->
+<dt><h2>昵称</h2><h3><p class="items"><input type="text" name="names" value="<ua:names!html>" minlength="3" maxlength="20" /></p></h3></dt>
+<dt><h2>签名</h2><h3><p class="items"><textarea name="sign"><ua:sign!html></textarea></p></h3></dt>
+<dt><h2>密码</h2><h3><p class="put"><a class="sbtn" href="<chn:linkurl("{@channel}","pam","p=security&m=password")>"><span>修改密码</span></a></p></h3></dt>
+<dt><h2>性别</h2><h3><p><label><input type="radio" name="gender" value="1" />男</label>
+	<label><input type="radio" name="gender" value="2" />女</label></p></h3></dt>
+<dt><h2>生日</h2><h3><p><label><select name="bday_year" _value="<ua:birthday!year>">
+	<option></option>
+	</select>年</label>
+	<label><select name="bday_month" _value="<ua:birthday!month>">
+	<option></option>
+	</select>月</label>
+	<label><select name="bday_day" _value="<ua:birthday!day>">
+	<option></option></select>日</label></p></h3></dt>
+	<dd class="tips"><h3><p class="itip"><em></em><span>提示信息</span></p></h3></dd>
+	<dd el="action">
+	<h3>
+	<a class="btn m" href="javascript:;" el="submit"><span>提交</span></a>
+	</h3>
+</dd>
+</dl>
+</form>
+</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	$f.bindi();
+	var opt={
+		frm:'frm_info',
+		names			: '基本资料',
+		message_formcheck	: '请填写必要的信息！',
+		message_parser		: '处理中..',
+		message_succeed		: '处理成功！转接中..',
+		submit_ing		: '处理中..',
+		submit_succeed		: '处理成功！',
+		serv_method		: 'post',
+		goback			: false,
+		servURL			: '/{@channel}/settings/modify.x?action=info',
+		callback:		function(_status,treeVar){
+						ui.popups('succeed','编辑成功!');
+						setTimeout(function(){
+							location.href='/{@channel}/settings';
+						},1000);
+					}
+		};
+	app.xform.initer(opt);
+	var gender="<ua:gender!int>";
+	$("input[name=gender][value="+gender+"]").attr("checked",true);
+	//alert($("input[name=gender][checked]").val());
+	var jsyear=$("select[name=bday_year]");
+	for(var i=2013;i>1899;i--){
+		jsyear.append('<option value="'+i+'">'+i+'</option>');
+	}
+	jsyear.find("option[value='"+jsyear.attr("_value")+"']").attr("selected","selected");
+	var jsmonth=$("select[name=bday_month]");
+	for(var i=1;i<13;i++){
+		var txt=i<10?("0"+i):i;
+		jsmonth.append('<option value="'+txt+'">'+txt+'</option>');
+	}
+	jsmonth.find("option[value='"+jsmonth.attr("_value")+"']").attr("selected","selected");
+	var jsday=$("select[name=bday_day]");
+	for(var i=1;i<32;i++){
+		var txt=i<10?("0"+i):i;
+		jsday.append('<option value="'+txt+'">'+txt+'</option>');
+	}
+	jsday.find("option[value='"+jsday.attr("_value")+"']").attr("selected","selected");
+	
+	var jsgyear=$("select[name=fgame_year]");
+	for(var i=2013;i>1980;i--){
+		jsgyear.append('<option value="'+i+'">'+i+'</option>');
+	}
+	jsgyear.find("option[value='"+jsgyear.attr("_value")+"']").attr("selected","selected");
+	
+	var sign_box=$('[el=_sign]').find('textarea');
+	/*
+	sign_box.keydown(function(){
+		check_chars($(this),50);
+	});
+	function check_chars(obj,total){
+		if(obj.val().length>=50){
+			obj.next('span[el=tips]').show();
+		}else{
+			obj.next('span[el=tips]').hide();
+		}
+	}
+	*/
+});
+</script>
+<label:include file="frame/footers">

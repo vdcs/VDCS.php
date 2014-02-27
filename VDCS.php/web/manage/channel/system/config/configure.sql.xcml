@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		
+	</config>
+	
+	<lang>
+		<title><![CDATA[执行SQL]]></title>
+		<title.name><![CDATA[SQL]]></title.name>
+		
+		<error.not.sql><![CDATA[您输入需要执行的SQL语句！]]></error.not.sql>
+		<error.norule.sql><![CDATA[您输入的SQL不符合SQL语法规则！]]></error.norule.sql>
+		
+		<handle.ok.execute><![CDATA[成功执行了 {$total.succeed} 条SQL语句！但有 {$total.fail} 条错误的SQL语句。]]></handle.ok.execute>
+	</lang>
+	
+	<template>
+		<execute><![CDATA[
+<control:ui.value("vbox.head")>
+<form name="">
+<input type="hidden" name="_chk" value="yes">
+<table class="tab tabs tab-editor">
+<tr><td><textarea name="sql" cols="60" rows="10" style="width:99%;">{$sql}</textarea></td></tr>
+</table>
+<input type="submit" class="btn push" value="提交执行" />
+<input type="checkbox" class="normal" name="type" value="line" checked />以每一行作为一条独立的SQL语句进行执行
+</form>
+<control:ui.value("vbox.end")>
+]]></execute>
+	</template>
+</xcml>

@@ -1,0 +1,5 @@
+<li class="sn[item:sn] ieffect isbest[item:isgood] isnew[item:isnew] issale[item:issale]">
+<pic><em class="effect"></em><a href="[item:linkurl]"><img src="[item:pic.url]" /></a></pic>
+<h4><n class="price">[item:price!price]</n></h4>
+<h3><a href="[item:linkurl]">[item:topic!html!38]</a></h3>
+</li>

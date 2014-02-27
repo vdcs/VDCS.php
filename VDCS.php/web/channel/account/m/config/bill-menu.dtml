@@ -1,0 +1,15 @@
+<label:include file="inc/search.begin">
+<label:include file="inc/search.date">
+<label:include file="inc/search.end">
+<div class="box"><h2><t>账单筛选</t></h2>
+<div class="con">
+	<div>
+		<ul>
+		<li><a href="<exec:url("action=list")>">全部</a></li>
+		<li><a href="<exec:url("action=list&mode=payed")>">已付款</a></li>
+		<li><a href="<exec:url("action=list&mode=paying")>" {$script}="">待付款</a></li>
+		<li><a href="<exec:url("action=list&mode=notpay")>" {$script}="">未付款</a></li>
+		</ul>
+	</div>
+</div>
+</div>

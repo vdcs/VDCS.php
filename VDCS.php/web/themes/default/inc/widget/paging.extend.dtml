@@ -1,0 +1,10 @@
+<!--
+<div class="space"></div>
+<div class="pagings"><div class="paging">
+<a class="button" href="javascript:;" onclick="javascript:dcs.paging.doGO('','','',-20);">&lsaquo;&lsaquo;上20页</a></a>
+<a class="button" href="javascript:;" onclick="javascript:dcs.paging.doGO('','','',-10);">&lsaquo;&lsaquo;上10页</a></a>
+<a class="pagenow">当前<paging:page>页</a>
+<a class="button" href="javascript:;" onclick="javascript:dcs.paging.doGO('','','',10);">下10页&rsaquo;&rsaquo;</a></a>
+<a class="button" href="javascript:;" onclick="javascript:dcs.paging.doGO('','','',20);">下20页&rsaquo;&rsaquo;</a></a>
+</div></div>
+-->

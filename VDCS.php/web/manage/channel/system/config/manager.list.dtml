@@ -1,0 +1,28 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+
+
+<label:include file="inc/listc.struct.begin">
+<th class="name"><exec:langs("title.name")></th>
+<th class="info"><exec:langs("title.account")></th>
+<th class="item w60"><exec:langs("title.grade")></th>
+<th class="status"><exec:langs("title.status")></th>
+<th class="handle w60"><exec:langs("title.handle")></th>
+<label:include file="inc/listc.struct.end">
+<label:include file="inc/listc.tpl.begin">
+<td class="name"><a href="#edit">[item:name]</a></td>
+<td class="info"><a href="<url:common>ua/view?rc=[item:uurc]&uid=[item:uuid]" target="_blank">[item:uname]</a></td>
+<td class="item"><span data-dict="file:sort=manage.config/data.manager.grade" data-value="[item:grade]"></span></td>
+<td class="status"><span data-dict="data.lock" data-value="[item:islock]"></span>
+	<span data-dict="data.hide" data-value="[item:status]"></span>
+	<label:include file="inc/row.item.timed"></td>
+<td class="handle">
+	<a href="#edit"><exec:langs("action.edit")></a>
+	<a href="#popedom"><exec:langs("action.popedom")></a>
+</td>
+<label:include file="inc/listc.tpl.end">
+<label:include file="inc/listc.script">
+
+
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

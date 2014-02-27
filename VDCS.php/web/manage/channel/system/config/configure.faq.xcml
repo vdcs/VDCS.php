@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>pre,config,lang,template</node>
+	</configure>
+	<pre>
+		<name>节点</name>
+		<names>节点</names>
+		<unit>个</unit>
+	</pre>
+	<config>
+		<frame>links,action</frame>
+
+		<table.field.id>key</table.field.id>
+		<table.fields.value>id=key;time=;topic=name</table.fields.value>
+	</config>
+	
+	<lang>
+		<title><![CDATA[{@name}]]></title>
+		<title.name><![CDATA[条目列表]]></title.name>
+		<title.list><![CDATA[{@name}列表]]></title.list>
+		<title.list.><![CDATA[{@name}列表]]></title.list.>
+		<title.add><![CDATA[添加{@name}]]></title.add>
+		<title.edit><![CDATA[编辑{@name}]]></title.edit>
+		<title.delete><![CDATA[删除{@name}]]></title.delete>
+		
+		<error.key><![CDATA[您要操作的条目值有错误存在！]]></error.key>
+		<error.exist.add><![CDATA[您要添加的条目已经存在！]]></error.exist.add>
+		<error.exist.key><![CDATA[您要操作的{@name}有错误或者已经存在！]]></error.exist.key>
+		<error.not.exist><![CDATA[您要编辑的条目不存在！]]></error.not.exist>
+		<error.not.select><![CDATA[请选择一个您要编辑的{@name}！]]></error.not.select>
+		<error.not.key><![CDATA[请选择一个您要操作的{@name}！]]></error.not.key>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 {@unit}{@name}！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 {@unit}{@name}！]]></handle.ok.edit>
+ 		<handle.ok.delete><![CDATA[成功删除了 1 {@unit}{@name}！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+	</template>
+</xcml>

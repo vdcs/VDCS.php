@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links,linkstatus,linkrelate,search</frame>
+		<search.fields>orderno=6;username=6</search.fields>
+		<search.times>p_tim</search.times>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>dbd_payment</table.name>
+		<table.px></table.px>
+		<table.field.id>id</table.field.id>
+		<table.fields.value>id=id;time=tim</table.fields.value>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.query.payed>ispay=1</list.table.query.payed>
+		<list.table.query.unpay>ispay=0</list.table.query.unpay>
+		<list.table.order>id desc</list.table.order>
+		<list.field.append>channel,uid,uname,sp_points,sp_emoney,n_tim</list.field.append>
+		<list.handle.select.option>delete</list.handle.select.option>
+		<list.handle.sql.delete>delete from dbd_payment where id in ({$ids})</list.handle.sql.delete>
+	</config>
+	
+	<lang>
+		<title><![CDATA[支付记录]]></title>
+		<title.name><![CDATA[支付记录列表]]></title.name>
+		<title.list><![CDATA[支付记录列表]]></title.list>
+		<title.list.><![CDATA[支付记录列表]]></title.list.>
+		
+		<title.frame.search><![CDATA[支付记录搜索]]></title.frame.search>
+		<search.fields.att><![CDATA[orderno=订单号;]]></search.fields.att>
+		
+		<handle.ok.delete><![CDATA[成功删除了 {$count} 个记录！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+	</template>
+</xcml>

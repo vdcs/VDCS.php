@@ -1,0 +1,8 @@
+<label:include file="element.list.tr.row">
+<label:include file="element.list.row.id">
+<td class="row-topic"><a href="<v:url.edit>">[item:topic]</a></td>
+<td class="row-time">[item:times]</td>
+<td class="row-status"><control:dict("data.audit","{$$list:<v:table.px>status}")> <control:dict("data.good","{$$list:<v:table.px>isgood}")></td>
+<td class="row-handle"><a href="<v:url.edit>"><exec:langs("action.edit")></a></td>
+<label:include file="element.list.row.sd">
+</tr>

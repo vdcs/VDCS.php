@@ -1,0 +1,12 @@
+<label:include file="frame/header">
+
+<label:include file="frame/navbar">
+
+<div class="framer">
+<div id="menu">
+<label:include file="frame/menus">
+</div>
+<div id="main">
+<label:include file="frame/nav">
+	<!-- content begin -->
+	<div class="conts">

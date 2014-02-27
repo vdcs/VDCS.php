@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="struct">
+	<configure>
+		<node>item</node>
+	</configure>
+	<item xmlns:pre.user="node">
+		<__key><![CDATA[config.base]]></__key>
+		<__name><![CDATA[基本配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.var><![CDATA[名称设定			###type~bar]]></bar.var>
+		<pre.name><![CDATA[频道简称			###property.min~1]]></pre.name>
+		<pre.names><![CDATA[单位名称			###property.min~1]]></pre.names>
+		<bar.user.var><![CDATA[用户名称设定		###type~bar]]></bar.user.var>
+		<pre.ua:name><![CDATA[用户简称		###property.min~1]]></pre.ua:name>
+		<pre.ua:names><![CDATA[用户名称		###property.min~1]]></pre.ua:names>
+		<pre.ua:unit><![CDATA[用户单位量词		###property.min~1]]></pre.ua:unit>
+		<pre.ua:act><![CDATA[用户单位动作		###property.min~1]]></pre.ua:act>
+		<bar.title><![CDATA[标题设定			###type~bar]]></bar.title>
+		<var.title><![CDATA[首页			###property.min~1]]></var.title>
+		<var.title.my><![CDATA[个人信息页		###property.min~1]]></var.title.my>
+		<var.title.user><![CDATA[用户操作页		###property.min~1]]></var.title.user>
+		<var.title.user.info><![CDATA[用户信息页	###property.min~1]]></var.title.user.info>
+		<var.title.user.list><![CDATA[用户列表页	###property.min~1]]></var.title.user.list>
+		<var.title.user.online><![CDATA[与我在线页	###property.min~1]]></var.title.user.online>
+		<var.title.online><![CDATA[在线用户页		###property.min~1]]></var.title.online>
+		<var.title.modify><![CDATA[资料维护页		###property.min~1]]></var.title.modify>
+		<var.title.message><![CDATA[短信息页		###property.min~1]]></var.title.message>
+		<var.title.friend><![CDATA[好友页		###property.min~1]]></var.title.friend>
+		<var.title.bookmark><![CDATA[收藏夹页		###property.min~1]]></var.title.bookmark>
+		<var.title.finance><![CDATA[个人理财页		###property.min~1]]></var.title.finance>
+		<var.title.finance.emoney><![CDATA[货币服务页	###property.min~1]]></var.title.finance.emoney>
+		<var.title.finance.prepay><![CDATA[预付服务页	###property.min~1]]></var.title.finance.prepay>
+		<var.title.finance.note><![CDATA[理财记录页	###property.min~1]]></var.title.finance.note>
+		<var.title.card><![CDATA[会员卡页		###property.min~1]]></var.title.card>
+		<var.title.put><![CDATA[投稿页			###property.min~1]]></var.title.put>
+	</item>
+	<item>
+		<__key><![CDATA[config.adv]]></__key>
+		<__name><![CDATA[高级配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.url><![CDATA[SEO设定			###type~bar]]></bar.url>
+		<config.url><![CDATA[URL模式			###type~radio		^att~<control:att("file","url.mode")>]]></config.url>
+	</item>
+	<item>
+		<__key><![CDATA[data.gender]]></__key>
+		<__name><![CDATA[性别配置]]></__name>
+		<__file><![CDATA[data.gender]]></__file>
+		<__cache><![CDATA[data.gender]]></__cache>
+		<item.1.name><![CDATA[保留称谓			###property.min~1]]></item.1.name>
+		<item.2.name><![CDATA[先生称谓			###property.min~1]]></item.2.name>
+		<item.3.name><![CDATA[女士称谓			###property.min~1]]></item.3.name>
+	</item>
+	<item>
+		<__key><![CDATA[config.pay]]></__key>
+		<__name><![CDATA[支付与购买]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.is><![CDATA[开关配置			###type~bar]]></bar.is>
+		<num.ispay><![CDATA[是否可支付			###type~radio		^att~1=开启在线支付;0=关闭在线支付	^explain~关闭在线支付后所有相关功能都将关闭]]></num.ispay>
+		<num.ismoney><![CDATA[是否可充值		###type~radio		^att~1=开启充值;0=关闭充值		^explain~是否可充入帐户现金值]]></num.ismoney>
+		<num.isprepay><![CDATA[是否可预付		###type~radio		^att~1=开启预付;0=关闭预付		^explain~是否可预付帐户会员时间]]></num.isprepay>
+		<bar.buy><![CDATA[<app:unit.emoney>购买配置	###type~bar]]></bar.buy>
+		<num.isemoney><![CDATA[是否可购买		###type~radio		^att~1=开启购买;0=关闭购买]]></num.isemoney>
+		<num.buy.proportion><![CDATA[购买比例		###property.type~int	^property.min~		^explain~<app:unit.emoney>$$$人民币<font class="money">1</font><app:unit.coin>购买<font class="emoney"><app:unit.emoney></font>的比例]]></num.buy.proportion>
+		<num.buy.base><![CDATA[购买最少值		###property.type~int	^property.min~		^explain~<app:unit.coin>$$$一次购买<font class="emoney"><app:unit.emoney></font>的最少人民币数]]></num.buy.base>
+	</item>
+	<item>
+		<__key><![CDATA[config.url]]></__key>
+		<__name><![CDATA[地址配置]]></__name>
+		<__file><![CDATA[configure]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.url.script><![CDATA[动态URL地址配置	###type~bar]]></bar.url.script>
+		<url.script.index><![CDATA[首页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.index>
+		<url.script.my><![CDATA[个人信息页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.my>
+		<url.script.view><![CDATA[浏览页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.view>
+		<url.script.user><![CDATA[用户页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.user>
+		<url.script.user.action><![CDATA[用户请求URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.user.action>
+		<url.script.user.list><![CDATA[用户列表页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.user.list>
+		<url.script.user.view><![CDATA[用户浏览页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.user.view>
+		<url.script.user.views><![CDATA[用户浏览页2URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.user.views>
+		<url.script.user.act><![CDATA[用户请求页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.user.act>
+		<url.script.avatar><![CDATA[形象页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.avatar>
+		<url.script.avatar.src><![CDATA[形象地址URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.avatar.src>
+		<url.script.spaces><![CDATA[空间页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.spaces>
+		<url.script.spaces.view><![CDATA[空间浏览页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.spaces.view>
+		<url.script.online><![CDATA[在线用户页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.online>
+		<url.script.modify><![CDATA[资料维护页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.modify>
+		<url.script.message><![CDATA[短信息页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.message>
+		<url.script.friend><![CDATA[好友页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.friend>
+		<url.script.bookmark><![CDATA[收藏夹页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.bookmark>
+		<url.script.finance><![CDATA[理财页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.finance>
+		<url.script.finance.act><![CDATA[理财请求页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.finance.act>
+		<url.script.finance.acts><![CDATA[理财请求页2URL###property.min~1	^style~size=60 class="itxt"]]></url.script.finance.acts>
+		<url.script.card><![CDATA[会员卡页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.card>
+		<url.script.card.act><![CDATA[会员卡请求页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.card.act>
+		<url.script.put><![CDATA[投稿页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.put>
+		<bar.url.rewrite><![CDATA[静态URL地址配置(ISAPI Rewrite)		###type~bar]]></bar.url.rewrite>
+		<url.rewrite.index><![CDATA[首页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.index>
+		<url.rewrite.my><![CDATA[个人信息页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.my>
+		<url.rewrite.view><![CDATA[浏览页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.view>
+		<url.rewrite.user><![CDATA[用户操作页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.user>
+		<url.rewrite.user.action><![CDATA[用户请求URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.user.action>
+		<url.rewrite.user.list><![CDATA[用户列表页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.user.list>
+		<url.rewrite.user.view><![CDATA[用户浏览页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.user.view>
+		<url.rewrite.user.views><![CDATA[用户浏览页2URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.user.views>
+		<url.rewrite.user.act><![CDATA[用户Action页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.user.act>
+		<url.rewrite.avatar><![CDATA[形象页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.avatar>
+		<url.rewrite.avatar.src><![CDATA[形象地址URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.avatar.src>
+		<url.rewrite.spaces><![CDATA[空间页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.spaces>
+		<url.rewrite.spaces.view><![CDATA[空间浏览页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.spaces.view>
+		<url.rewrite.online><![CDATA[在线用户页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.online>
+		<url.rewrite.modify><![CDATA[资料维护页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.modify>
+		<url.rewrite.message><![CDATA[短信息页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.message>
+		<url.rewrite.friend><![CDATA[好友页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.friend>
+		<url.rewrite.bookmark><![CDATA[收藏夹页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.bookmark>
+		<url.rewrite.finance><![CDATA[理财页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.finance>
+		<url.rewrite.finance.act><![CDATA[理财请求页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.finance.act>
+		<url.rewrite.finance.acts><![CDATA[理财请求页2URL###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.finance.acts>
+		<url.rewrite.card><![CDATA[会员卡页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.card>
+		<url.rewrite.card.act><![CDATA[会员卡请求页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.card.act>
+		<url.rewrite.put><![CDATA[投稿页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.put>
+	</item>
+</xcml>

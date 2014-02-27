@@ -1,0 +1,45 @@
+<label:include file="element.list.heads">
+<label:include file="element.list.bar.tr">
+<label:include file="element.list.bar.id">
+<td class="bar-topic"><exec:langs("title.name")></td>
+<td class="bar-price w80"><exec:langs("title.price")><span class="units"><app:unit.money></span></td>
+<td class="bar-item w60">供货量</td>
+<td class="bar-status w100"><exec:langs("title.status")></td>
+<td class="bar-handle"><exec:langs("title.handle")></td>
+<label:include file="element.list.bar.sd">
+</tr>
+<script type="text/javascript">
+toStockValue=function(amounts,amount,unit){
+	var re="";
+	if(amounts>=999999999) re='不限';
+	else{
+		if(amounts<1||amount<1) re='缺货';
+		else{
+			re='余<em class="total em">'+amount+'</em>'+unit+'<br/><p class="h0 s">共<em class="total em">'+amounts+'</em>'+unit+'</p>';
+		}
+	}
+	return re;
+}
+toAuctionValue=function(auction,bidurl){
+	var re="";
+	if(auction=="on" || auction=='yes'){
+		re='<img class="icon" src="<url:images>common/icon/auction.gif" title="拍卖" /> <a href="'+bidurl+'" title="拍卖明细">明细</a>';
+	}
+	return re;
+}
+</script>
+<loop:list>
+<label:include file="element.list.row.tr">
+<label:include file="element.list.row.id">
+<td class="row-topic"><a href="<v:url.edit>">[item:topic]</a> <span class="s">[item:<v:table.px>serial]</span> <script>put(toAuctionValue('[item:sp_auction]','<v:url.bid>'));</script></td>
+<td class="row-price"><span class="price b big">[item:<v:table.px>price!price]</span>
+	<!--{if (toNum({$list:<v:table.px>weight})>0)}--><p class="s">[item:<v:table.px>weight!tzone]<span class="units"><app:unit.weight></span></p><!--{/if}--></td>
+<td class="row-item"><span id="stocks-[item:id]" class="gray">&nbsp;</span></td>
+<td class="row-status"><control:dict("file:sort=common.channel/{@channel}/data.product.news","{$$list:<v:table.px>isnew}")> <control:dict("file:sort=common.channel/{@channel}/data.product.sales","{$$list:<v:table.px>issale}")> <control:dict("data.good","{$$list:<v:table.px>isgood}")>
+	<p class="s"><control:ui.value("list.rowi.timed")></p></td>
+<td class="row-handle"><a href="<v:url.edit>"><exec:langs("action.edit")></a></td>
+<label:include file="element.list.row.sd">
+</tr>
+<script>$("#stocks-[item:id]").html(toStockValue([item:<v:table.px>amounts!int],[item:<v:table.px>amount!int],"[item:<v:table.px>unit]"));</script>
+</loop>
+<label:include file="element.list.ends">

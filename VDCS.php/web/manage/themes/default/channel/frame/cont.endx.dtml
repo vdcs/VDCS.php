@@ -1,0 +1,7 @@
+<label:include file="frame/cont.space">
+
+
+<label:include file="{#portalx}-menu">
+
+
+<label:include file="frame/cont.end">

@@ -1,0 +1,3 @@
+<?
+class PagePortal extends PortalSystemConfigure{}
+?>

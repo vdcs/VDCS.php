@@ -1,0 +1,31 @@
+<label:include file="/article/frame/headers">
+
+
+<div class="cont">
+	<div class="box">
+		<div class="con">
+<label:include file="/inc/e/view-init">
+<div class="e_view" data-channel="{@channel}" data-id="{@id}">
+<label:include file="/inc/e/view-topic">
+<label:include file="/inc/e/view-bari-simple">
+<label:include file="/inc/e/view-remark">
+<label:include file="/inc/e/view-relates">
+
+
+<div id="attitude" class="attitude">
+	<span><a class="like like1" href="javascript:;"><span>10赞</span></a></span>
+	<span><a class="collect collect0" href="javascript:;"><span>收藏</span></a></span>
+</div>
+
+<script type="text/javascript">
+	
+</script>
+
+</div>
+		</div>
+	</div>
+<label:include file="/inc/view/comment.box">
+</div>
+
+
+<label:include file="/article/frame/footers">

@@ -1,0 +1,11 @@
+
+<div class="box">
+<h2><cite>搜索</cite></h2>
+<div class="con">
+<form name="searchbar" class="searchbar">
+	<input type="text" name="keyword" class="keyword" placeholder="输入关键字" el="keyword" /><a class="btn submit" el="submit">搜索</a>
+	<div class="exact_box">
+		<input type="checkbox" name="search_type" value="exact" />高级搜索
+	</div>
+	<div class="space"></div>
+	<div class="fields_box hide al">

@@ -1,0 +1,6 @@
+<?
+class ChannelAskPut extends ChannelAskMyPut
+{
+	
+}
+?>

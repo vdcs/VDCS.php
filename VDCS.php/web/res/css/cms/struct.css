@@ -1,0 +1,28 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @struct v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+@import url("block.css");
+@import url("act.css");
+@import url("tips.css");
+@import url("btn.css");
+@import url("btnx.css");
+@import url("box.message.css");
+@import url("bar.multi.css");
+@import url("menu.css");
+@import url("menus.css");
+@import url("menu.tab.css");
+@import url("table.css");
+@import url("form.css");
+@import url("search.css");
+@import url("paging.css");
+@import url("code.css");
+/*@import url("../comm/attrs.css");*/
+@import url("../comm/avatar.css");
+@import url("../comm/uax.css");
+@import url("../comm/oauth.css");
+@import url("../comm/ui.tooltip.css");
+@import url("../comm/ver.css");

@@ -1,0 +1,32 @@
+
+<xmp id="tpl_cart_box">
+<div class="cart_box">
+	<!--<div class="loading"><p><span>加载中..</span></p></div>-->
+	<h2>最新加入的产品</h2>
+	<ul></ul>
+	<h5>
+		<cite>应付款:<span class="money"><i>0</i></span>元</cite>
+		<a class="btn c checkout" href="<url:checkout>"><span>去结算</span></a>
+	</h5>
+</div>
+</xmp>
+<xmp id="tpl_cart_box_item">
+		<li data-id="[item:id]">
+			<div class="info">
+				<cite><a href="#product">[item:name]</a></cite>
+				<p data-refill="detail_{val}" data-refill-field="apptype"></p>
+			</div>
+			<div class="atts">
+				<span class="price">[item:price]</span>
+				<!--<a class="del" href="#del">删除</a>-->
+			</div>
+		</li>
+</xmp>
+<xmp data-refill="detail_cloud" class="cart_refill_box">
+	<span>CPU:[item:settings.user_set.cpu]核</span> <span>内存:[item:settings.user_set.memory]M</span> <span>带宽:[item:settings.user_set.bandwidth]M</span> <span>线路:[item:settings.user_set.route_name]</span>
+</xmp>
+<script type="text/javascript">
+$(function(){
+	widget.icart && widget.icart.initerHeader();
+});
+</script>

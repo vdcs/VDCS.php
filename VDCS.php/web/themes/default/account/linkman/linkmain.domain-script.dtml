@@ -1,0 +1,48 @@
+
+<script type="text/javascript">
+$(function(){
+	var jwrap=$('#box_form');
+	$('[name=owner_area_country]').val('<owner:area_country>');
+	$('[name=technical_area_country]').val('<technical:area_country>');
+	$('[name=admin_area_country]').val('<admin:area_country>');
+	$('[name=billing_area_country]').val('<billing:area_country>');
+	var action='add';
+	if($('input[name=owner_id]').val()) action='edit';
+	
+	$f.bindi();
+	var opt={
+		frm			: 'frm_linkman',
+		names			: '联系人信息',
+		message_formcheck	: '请填写必要的信息！',
+		message_parser		: '数据保存..',
+		message_succeed		: '保存成功！转接中..',
+		serv_method		: 'post',
+		goback			: false,
+		servURL			: '/account/linkman/domain.x?action='+action,
+		callback:		function(){
+						ui.popups('succeed','联系人保存成功');
+						setTimeout(function(){
+							location.reload();
+						},1000);
+					}
+	};
+	app.xform.initer(opt);
+	
+	jwrap.finde('copy').click(function(){
+		var _send={};
+		$('[el=owner_]').find('input,select').each(function(){
+			var _name=$(this).attr('name').substr(6);
+			var _val=$(this).val();
+			_send[_name]=_val;
+		});
+		//delete _send.id;
+		//delete _send.types;
+		$('[el=technical_],[el=admin_],[el=billing_]').find('input,select').each(function(){
+			var _start=$(this).parents('dl').attr('el').length;
+			var _name=$(this).attr('name').substr(_start);
+			if(_name!='type' && _name!='id') $(this).val(_send[_name]);
+			ui.popups('succeed','信息复制成功');
+		});
+	});
+});
+</script>

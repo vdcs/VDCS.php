@@ -1,0 +1,14 @@
+	<div class="partItems">
+		<ul id="div-menu-base">
+		<li><a href="<linkurl:account.my>"><span><chn:var("account","title.my")></span></a></li>
+		</ul>
+	</div>
+	<div class="partBar" id="div-menu-bar"><p><span>帐户链接</span></p></div>
+	<div class="partItems">
+		<ul id="div-menu-links">
+		<li><a href="<chn:linkurl("account","user.act","module=list")>"><span><chn:var("account","title.user.list")></span></a></li>
+		<li><a href="<linkurl:account.online>"><span><chn:var("account","title.online")></span></a></li>
+		<li><a href="<linkurl:account.modify>"><span><chn:var("account","title.modify")></span></a></li>
+		<li><a href="<linkurl:passport.logout>" onclick="javascript:return $p.isClickReturn('<langs:user.logout.prompt>',1);"><span><chn:var("passport","title.logout")></span></a></li>
+		</ul>
+	</div>

@@ -1,0 +1,15 @@
+﻿<label:include file="headers">
+
+
+this is test page.
+
+<div>
+
+	<a class="btn m"><span>保存</span></a>
+	<a class="btn c"><span>操作</span></a>
+	<a class="btn"><span>返回</span></a>
+
+</div>
+
+
+<label:include file="footers">

@@ -1,0 +1,5 @@
+<?
+class NoticeQuery extends UcNoticeQuery
+{
+	
+}

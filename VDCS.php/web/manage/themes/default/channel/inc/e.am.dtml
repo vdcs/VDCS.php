@@ -1,0 +1,6 @@
+<table class="table tables table-hover table-list">
+	<tbody>
+		<tr><th style="width:15%;">ID</th><td eli="staffid" style="width:35%;"></td><th style="width:15%;">姓名</th><td eli="names"></td></tr>
+		<tr><th>邮箱</th><td eli="email"></td><th>手机</th><td eli="mobile"></td></tr>
+	</tbody>	
+</table>

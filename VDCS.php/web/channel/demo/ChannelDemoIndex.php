@@ -1,0 +1,6 @@
+<?
+class ChannelDemoIndex extends ChannelDemoBase
+{
+	
+}
+?>

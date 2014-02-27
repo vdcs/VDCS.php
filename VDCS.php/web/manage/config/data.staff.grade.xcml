@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,name</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<value>1</value>
+		<name>普通</name>
+	</item>
+	<item>
+		<value>2</value>
+		<name>主管</name>
+	</item>
+	<item>
+		<value>3</value>
+		<name>经理</name>
+	</item>
+	<item>
+		<value>5</value>
+		<name>总监</name>
+	</item>
+</xcml>

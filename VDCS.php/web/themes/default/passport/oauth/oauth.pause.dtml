@@ -1,0 +1,23 @@
+<label:include file="oauth-header">
+
+
+<div class="box">
+	<h2><t><var:title></t></h2>
+	<div class="con">
+<div class="mtip" id="mtip">
+	<cite class="succeed"><em></em></cite>
+	<h3><var:auth.name> 连接暂停</h3>
+	<h4>
+		<p>系统暂停了 <var:auth.name> 的连接服务，请稍候再偿试。</p>
+	</h4>
+	<h5>
+<a class="btn" el="root" href="<url:root>"><span>首页</span></a>
+<a class="btn m" el="login" href="<linkurl:passport.login>"><span><chn:var("passport","title.login")></span></a>
+<a class="btn c" el="register" href="<linkurl:passport.register>"><span><chn:var("passport","title.register")></span></a>
+	</h5>
+</div>
+	</div>
+</div>
+
+
+<label:include file="oauth-footer">

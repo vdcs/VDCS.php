@@ -1,0 +1,24 @@
+﻿<footer><inners>
+
+<a href="<app:web.urls>" target="_blank"><app:web.name></a>
+<span class="dot"
+	 title="Processed in <web:stat.exectime> s, <web:stat.query> queries.&#10;Gzip <web:stat.gzip>, Memory usage <web:stat.memory>."
+	>&bull;</span>
+<app:com.cause>
+&nbsp;
+<span class="beian"><xcml:themes("frame.beian")></span>
+<a href="<url:manage>" target="_blank">M</a>
+
+<ul>
+<themes:menu("bottom")>
+<li><a href="[menu:url]" [menu:att]><span>[menu:name]</span></a></li>
+</themes>
+<li class="copyright"><xcml:themes("frame.copyright")></li>
+</ul>
+
+</inners></footer>
+
+<div id="linktop"><a href="#top"><span></span></a></div>
+
+<div class="hide"><xcml:themes("frame.stat")></div>
+<label:include file="/footer.blank">

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links,search</frame>
+		<search.fields>username=6;e_username=6;e_remark=6;e_ip=6</search.fields>
+		<search.term.type>and,or,exact</search.term.type>
+
+		<table.name>db_bbs_event</table.name>
+		<table.px>e_</table.px>
+		<table.field.id>e_id</table.field.id>
+		<table.field>id=e_id;topic=e_topic;time=e_tim</table.field>
+
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.field.append>opuser,reuser,content,time</list.field.append>
+		<list.table.order>e_id desc</list.table.order>
+		<list.handle.select.option>delete</list.handle.select.option>
+		<list.handle.sql.delete>delete from db_bbs_event where e_id in ({$ids})</list.handle.sql.delete>
+
+	</config>
+
+	<lang>
+		<title.name><![CDATA[事件]]></title.name>
+		<title.list><![CDATA[事件列表]]></title.list>
+		<title.list.><![CDATA[事件列表]]></title.list.>
+		<title.clear><![CDATA[清除所有事件]]></title.clear>
+		<title.del><![CDATA[批量清除事件]]></title.del>
+
+		<title.frame.search><![CDATA[日志搜索]]></title.frame.search>
+		<search.fields.att>username=操作人;e_username=被操作人;e_remark=事件内容;e_ip=IP</search.fields.att>
+
+		<error.not.exist.username><![CDATA[您要操作的用户不存在！]]></error.not.exist.username>
+		<error.not.exist.operator><![CDATA[您要操作的被操作用户不存在！]]></error.not.exist.operator>
+		<error.not.time><![CDATA[开始时间 或 结束时间错误！]]></error.not.time>
+		<error.bulk.time><![CDATA[开始时间 不能大于 结束时间！]]></error.bulk.time>
+
+		<handle.ok.delete><![CDATA[成功删除了 {$count} 条事件！]]></handle.ok.delete>
+		<handle.ok.clear><![CDATA[成功清除了所有事件！]]></handle.ok.clear>
+		<handle.ok.del><![CDATA[成功批量删除了 {$count} 条事件！]]></handle.ok.del>
+	</lang>
+
+	<template>
+		<list><![CDATA[
+<control:ui.value("listbox.heads")>
+<control:ui.value("list.bar.tr")>
+<control:ui.value("list.bar.id")>
+<td class="bar-user"><exec:langs("title.opuser")></td>
+<td class="bar-user"><exec:langs("title.reuser")></td>
+<td class="bar-info"><exec:langs("title.content")></td>
+<td class="bar-time"><exec:langs("title.time")></td>
+<control:ui.value("list.bar.sd")>
+</tr>
+<loop:list>
+<control:ui.value("list.row.tr")>
+<td class="row-id">[item:id]</td>
+<td class="row-user"><script>put(appUser.toLinkURL(0,"[item:username]"));</script></td>
+<td class="row-user"><script>put(appUser.toLinkURL(0,"[item:<var:table.px>username]"));</script></td>
+<td class="row-info" alt="IP: [item:<var:table.px>ip]&#10;<exec:langs("title.integral")>: [item:<var:table.px>integral]&#10;经验: [item:<var:table.px>exp]">[item:content]</td>
+<td class="row-time"><span class="s">[item:<var:table.px>tim]</span></td>
+<control:ui.value("list.row.sd")>
+</tr>
+</loop>
+<control:ui.value("listbox.ends")>
+]]></list>
+		<menu.links><![CDATA[
+@@@title=日志管理;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("action=del")>">批量删除日志</a></li>
+<li><a href="<exec:url("action=clear")>" onclick="javascript:return $p.isClickReturn('清除所有日志',2);">清除所有日志</a></li>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

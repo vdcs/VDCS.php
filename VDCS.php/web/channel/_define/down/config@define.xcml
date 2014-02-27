@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre xmlns:data="node">
+	</pre>
+	<var>
+		<title>下载</title>
+	</var>
+	<num>
+	</num>
+	<config>
+	</config>
+</xcml>

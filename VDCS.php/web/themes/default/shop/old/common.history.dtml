@@ -1,0 +1,26 @@
+		<div class="box">
+			<h2><t>浏览历史</t></h2>
+			<div class="cont">
+<div class="StructSidePic" id="module-history-Body"><ul id="module-history-Items">
+</ul></div>
+<!-- history Templat Begin -->
+<div class="hide">
+<div id="module-history-Loading">
+<img class="icon" src="<url:images>common/load/16x16.gif" /> 数据载入中，请稍候...
+</div>
+<div id="module-history-ItemTemplet">
+<li class="no[item:sn]">
+<div class="info">
+<p><a href="[item:linkurl]">[item:topic!html]</a></p>
+<p>[item:subtopic!html]</p>
+<cite>售价：<em>￥[item:price!price]</em></cite>
+</div>
+<div class="pic"><a href="[item:linkurl]">[item:spic]</a></div>
+</li>
+</div>
+</div>
+<div id="module-history-ItemScript" class="hide"></div>
+<!-- history Templat end -->
+<script type="text/javascript">$d.load(function(){appc.historyNote();});</script>
+			</div>
+		</div>

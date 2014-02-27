@@ -1,0 +1,25 @@
+
+<label:include script="jquery/galleria/galleria.min.js">
+
+<style type="text/css">
+#galleria{height:500px;}
+</style>
+
+<div id="galleria">
+<loop:data>
+<a href="[item:url]">
+<img title="[item:topic!html]"
+	alt="[item:summary!html]"
+	src="[item:pic]" />
+</a>
+</loop>
+</div>
+
+<script type="text/javascript">
+Galleria.loadTheme('<url:images>script/jquery/galleria/themes/classic/galleria.blank.js');
+// Initialize Galleria
+$d.load(function(){
+	$('#galleria').galleria();
+	
+});
+</script>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+		<script.begin><![CDATA[<script type="text/javascript">
+		ui.fbm.relates({"upload":"base,content"});
+</script>]]></script.begin>
+		<script.end><![CDATA[]]></script.end>
+	</configure>
+	<input>
+		<type>select.module</type>
+		<property><![CDATA[item=;class=s;action=;type=string;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[链接类型]]></caption>
+		<att><![CDATA[<control:att("file","sort=common.channel/support/data.links.module")>]]></att>
+		<value><![CDATA[{$module}]]></value>
+		<explain></explain>
+	</input> 	
+	<input>
+		<type>text.name</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=1]]></property>
+		<style>size=50 maxlength=200</style>
+		<caption><![CDATA[网站名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}logo</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[网站LOGO]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<control:form.element("upload.linkurl","","channel={@channel};filetype=pic;filename={@up.filename};fileinput={@tpx}logo;inputtype=pic;title=LOGO")>$$$]]></explain>
+	</input>
+	<input>
+		<type>text.url</type>
+		<property><![CDATA[item=;action=;type=string;max=100;min=1]]></property>
+		<style>size=50 maxlength=100</style>
+		<caption><![CDATA[网站地址]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.orderid</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=]]></property>
+		<style>size=20 maxlength=20 class="total"</style>
+		<caption><![CDATA[排 序 值]]></caption>
+		<att></att>
+		<value>{$orderid}</value>
+		<explain><![CDATA[$$$排序值越大越靠前，而不受发布时间限制]]></explain>
+	</input>
+	<input>
+		<type>radio.status</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[网站审核]]></caption>
+		<att><![CDATA[<control:att("dict","data.hide")>]]></att>
+		<value>1</value>
+		<explain></explain>
+	</input>
+</xcml>

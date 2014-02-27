@@ -1,0 +1,12 @@
+		<div class="Block Side-Menu">
+			<h2><t><langs:chn.menu></t></h2>
+			<div class="cont">
+<div class="MenuSide"><ul>
+<li><a href="<linkurl:{@channel}.index>"><channel:var("title")></a></li>
+<li><a href="<linkurl:{@channel}.lists>"><channel:var("title.list")></a></li>
+<li><a href="<linkurl:{@channel}.search>"><channel:var("title.search")></a></li>
+<li><a href="<linkurl:{@channel}.cart>"><channel:var("title.cart")></a></li>
+<li><a href="<linkurl:{@channel}.order>"><channel:var("title.order")></a></li>
+</ul></div>
+			</div>
+		</div>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,key,title,level</field>
+	</configure>
+	<item>
+		<value>0</value>
+		<title><![CDATA[按频道设置]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<value>1</value>
+		<title><![CDATA[按分类设置]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<value>5</value>
+		<title><![CDATA[自定义设置]]></title>
+		<level>0</level>
+	</item>
+</xcml>

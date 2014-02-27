@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>passport,account</node>
+	</configure>
+	<passport>
+		<register.audit.subject><![CDATA[<app:web.name> - 注册成功]]></register.audit.subject>
+		<register.audit.content><![CDATA[亲爱的 {$realname}：
+
+恭喜！您已于 {$time.now} 成功注册成为本站用户。
+
+您的注册信息如下：
+==============================
+用户名称：{$name}
+登陆密码：{$password}
+提示问题：{$question}
+问题答案：{$answer}
+注册时间：{$time.now}
+
+点击下面的网址以便激活您的用户ID(将地址复制后打开新的浏览器窗口粘贴浏览)
+{$url.serve}
+(如上面不是链接形式，请将该地址手工粘贴到浏览器地址栏再访问)
+
+
+感谢您的访问，祝您使用愉快！
+此致
+
+<app:web.name>
+<app:web.urls>
+{$time.today}
+
+（本邮件由系统自动发出，请勿回复。）]]></register.audit.content>
+		
+		
+		<register.subject><![CDATA[<app:web.name> - 注册成功]]></register.subject>
+		<register.content><![CDATA[亲爱的 {$realname}：
+
+恭喜！您已于 {$time.now} 成功注册成为本站用户。
+
+您的注册信息如下：
+==============================
+用户名称：{$username}
+登陆密码：{$password}
+电子邮件：{$email}
+提示问题：{$question}
+问题答案：{$answer}
+注册时间：{$time.now}
+
+==============================
+请妥善保管您的相关用户信息！
+
+{$url.serve}
+(如上面不是链接形式，请将该地址手工粘贴到浏览器地址栏再访问)
+
+
+感谢您的访问，祝您使用愉快！
+此致
+
+<app:web.name>
+<app:web.urls>
+{$time.today}
+
+（本邮件由系统自动发出，请勿回复。）]]></register.content>
+		
+		
+		<forgot.password.format></forgot.password.format>
+		<forgot.password.subject><![CDATA[<app:web.name> - 找回密码]]></forgot.password.subject>
+		<forgot.password.content><![CDATA[亲爱的 {$realname}：
+
+欢迎使用<app:web.name>找回密码功能。请点击以下链接重置您的密码（链接60分钟内有效）：
+{$url.serve}
+(如上面不是链接形式，请将该地址手工粘贴到浏览器地址栏再访问)
+
+如果您没有申请找回密码，请忽略此邮件。
+
+
+感谢您的访问，祝您使用愉快！
+此致
+
+<app:web.name>
+<app:web.urls>
+{$time.today}
+
+（本邮件由系统自动发出，请勿回复。）]]></forgot.password.content>
+		
+		
+		<activate.subject><![CDATA[<app:web.name> - 帐号激活]]></activate.subject>
+		<activate.content><![CDATA[亲爱的 {$realname}：
+
+您于 {$time.now} 使用了系统提供的重新发送用户激活邮件服务！
+
+您的激活信息如下：
+==============================
+用户名称：{$username}
+登陆密码：{$password}
+
+欢迎使用<app:web.name>找回密码功能。请点击以下链接重置您的密码（链接60分钟内有效）：
+{$url.serve}
+(如上面不是链接形式，请将该地址手工粘贴到浏览器地址栏再访问)
+
+如果您没有申请找回密码，请忽略此邮件。
+
+
+感谢您的访问，祝您使用愉快！
+此致
+
+<app:web.name>
+<app:web.urls>
+{$time.today}
+
+（本邮件由系统自动发出，请勿回复。）]]></activate.content>
+	</passport>
+	<account>
+		<comment.subject><![CDATA[<app:web.name> - 您的的好友 {$realname} 给您的推荐]]></comment.subject>
+		<comment.content><![CDATA[{$realname}，您好！
+
+我是{$username}，今天在网上看到的网页内容，推荐您看一下：
+
+{$topic}
+{$url}
+
+您的朋友：{$realname}
+电子邮件：{$email}
+
+以下是您的好友给您的附言：
+==============================
+{$remark}
+==============================
+系统邮件，请勿直接回复！
+
+<app:web.name>
+<app:web.urls>
+{$time.today}
+
+（本邮件由系统自动发出，请勿回复。）]]></comment.content>
+	</account>
+</xcml>
+<!--
+邮件为系统根据您的订阅请求自动发送，不需要回复。 
+© 2003-2008 VDCS.
+-->

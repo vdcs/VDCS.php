@@ -1,0 +1,52 @@
+
+<div id="headbar"><div class="inners">
+	<div class="logo"><a href="<url:root>"><span><app:web.name></span></a></div>
+	<div class="menu">
+		<ul>
+		<li class="pop"><a href="<url:index>"><span>首页</span></a></li>
+		<li><a href="<url:account>"><span>帐户</span></a></li>
+		<!--
+		<li><a href="<url:plaza>"><span>广场</span></a></li>
+		-->
+		<li><a href="<linkurl:ask.index>"><span>问答</span></a><dl class="rc5 rc0t bsh">
+<dd><a href="<chn:linkurl("ask","pa","p=new")>"><span>新问题</span></a></dd>
+<dd><a href="<chn:linkurl("ask","pa","p=rewards")>"><span>悬赏</span></a></dd>
+<dd><a href="<chn:linkurl("ask","pa","p=put")>"><span>提问</span></a></dd>
+</dl></li>
+		</ul>
+	</div>
+	<div class="nav">
+<label:include file="/inc/widget/headbar/nav.cart">
+		<ul class="show<ua:_o>">
+		<li class="ua"><a class="ua" href="<url:account>" uid="<url:uap><ua:_no>"><img class="avatar c s" src="<chn:linkurl("account","avatar","res=s&id=<ua:id>")>" /><span><ua:names></span></a><dl class="rc5 rc0t bsh">
+<dd class="inbox"><a href="<chn:linkurl("account","pa","p=inbox")>"><span>私信</span></a></dd>
+<dd class="notices"><a href="<chn:linkurl("account","pa","p=notices")>"><span>通知</span></a></dd>
+<dd class="settings"><a href="<chn:linkurl("account","pa","p=settings")>"><span>设置</span></a></dd>
+<!--
+<dd class="ap"><a href="<url:home>"><span>主页</span></a></dt>
+<dd class="skin"><a href="#skin"><span>换肤</span></a></dd>
+-->
+<dd class="logout"><a href="<url:logout>"><span>退出</span></a></dd>
+</dl></li>
+		</ul>
+		<ul class="hide<ua:_o>">
+		<li class="register"><a href="<url:register>"><span>注册</span></a></li>
+		<li class="login"><a href="<url:login>"><span>登录</span></a></li>
+		</ul>
+		<!--
+		<li class="help"><a href="<url:help>"><span>帮助</span></a></li>
+		-->
+	</div>
+	<div class="tipn hide">
+		<opt><a title="关闭" class="iclose"><span>关闭</span></a></opt>
+		<p el="_comment" class="msg_talks"><a class="tip_border" href="/receivecomment"><em><ua:new_comment></em></a></p>
+		<p el="_at" class="msg_at"><a class="tip_border" href="/atnew"><em><ua:new_at></em></a></p>
+		<p el="_fans" class="msg_funs"><a class="tip_border" href="/account/friends/fans"><em><ua:new_fans></em></a></p>
+		<p el="_inbox" class="msg_inbox"><a class="tip_border" href="<url:my.inbox>"><em><ua:new_inbox></em></a></p>
+		<p el="_notice" class="msg_notice"><a class="tip_border" href="<url:my.notice>"><em><ua:new_notice></em></a></p>
+	</div>
+</div></div>
+<div id="headbar_holder"></div>
+
+<label:include script="/images/themes/widget/cart/icart.js">
+<label:include file="/inc/widget/headbar/cart">

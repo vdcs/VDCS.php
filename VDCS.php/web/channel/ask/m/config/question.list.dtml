@@ -1,0 +1,29 @@
+<label:include file="header.channel">
+
+<label:include file="frame.sideleft">
+<label:include file="element.list.heads">
+<label:include file="element.list.bar.tr">
+<label:include file="element.list.bar.id">
+<td class="bar-topic">{@names}<exec:langs("title.topic")></td>
+<td class="bar-data">{@answer:names}</td>
+<td class="bar-status w80"><exec:langs("title.status")></td>
+<td class="bar-handle"><exec:langs("title.handle")></td>
+<label:include file="element.list.bar.sd">
+</tr>
+<loop:list>
+<label:include file="element.list.row.tr">
+<label:include file="element.list.row.id">
+<td class="row-topic"><a href="<v:url.edit>">[item:topic]</a></td>
+<td class="row-data"><a href="<exec:url("portal=answer&dataid=[item:id]")>"><span class="b total">[item:total.data]</span><span class="units">{@answer:unit}</span></a></td>
+<td class="row-status"><control:dict("data.audit","{$$list:<v:table.px>status}")> <control:dict("data.good","{$$list:<v:table.px>isgood}")>
+	<p class="s"><control:ui.value("list.rowi.timed")></p></td>
+<td class="row-handle"><a href="<v:url.edit>"><exec:langs("action.edit")></a></td>
+<label:include file="element.list.row.sd">
+</tr>
+</loop>
+<label:include file="element.list.ends">
+<label:include file="frame.sidespace">
+<label:include file="element.menus">
+<label:include file="frame.sideright">
+
+<label:include file="footer.channel">

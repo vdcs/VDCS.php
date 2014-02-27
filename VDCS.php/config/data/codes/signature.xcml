@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,type,regex,html</field>
+	</configure>
+	
+	<!-- ############################## -->
+	<!-- ############ fly ############# -->
+	<item>
+		<key>fly</key>
+		<type>1</type>
+		<regex><![CDATA[\[fly\](.+?)\[\/fly\]]]></regex>
+		<html><![CDATA[<marquee width="100%" behavior="alternate" scrollamount="3">$1</marquee>]]></html>
+	</item>
+	<item>
+		<key>move</key>
+		<type>1</type>
+		<regex><![CDATA[\[move\](.+?)\[\/move\]]]></regex>
+		<html><![CDATA[<marquee scrollamount="3">$1</marquee>]]></html>
+	</item>
+	
+	
+	<!-- ############################## -->
+	<item>
+		<key>url</key>
+		<type>1</type>
+		<regex><![CDATA[\[url\](.[url]*)\[\/url\]]]></regex>
+		<html><![CDATA[<img class="icon" src="<app:url.images>common/filetype/act/url.gif"><a href="$1" target="_blank">$1</a>]]></html>
+	</item>
+	<item>
+		<key>url.name</key>
+		<type>2</type>
+		<regex><![CDATA[\[url=(.[url]*)\](.+?)\[\/url\]]]></regex>
+		<html><![CDATA[<a href="$1" target="_blank">$2</a>]]></html>
+	</item>
+	<item>
+		<key>email</key>
+		<type>1</type>
+		<regex><![CDATA[\[email\](\S+\@.*)\[\/email\]]]></regex>
+		<html><![CDATA[<img class="icon" src="<app:url.images>common/filetype/act/email.gif"><a href="mailto:$1">$1</a>]]></html>
+	</item>
+	
+	
+	<!-- ############################## -->
+	<!-- ############################## -->
+	<item>
+		<key>center</key>
+		<type>1</type>
+		<regex><![CDATA[\[center\](.+?)\[\/center\]]]></regex>
+		<html><![CDATA[<center>$1</center>]]></html>
+	</item>
+	<item>
+		<key>align</key>
+		<type>1</type>
+		<regex><![CDATA[\[align=(left|center|right)\](.+?)\[\/align\]]]></regex>
+		<html><![CDATA[<div class="$1">$2</div>]]></html>
+	</item>
+	
+	<item>
+		<key>dp</key>
+		<type>1</type>
+		<regex><![CDATA[\[(\/?(div|p))=(justify|left|center|right)\]]]></regex>
+		<html><![CDATA[<$1 align="$3">]]></html>
+	</item>
+	<item>
+		<key>p</key>
+		<type>1</type>
+		<regex><![CDATA[\[p\](.+?)\[\/p\]]]></regex>
+		<html><![CDATA[<p>$1</p>]]></html>
+	</item>
+	<item>
+		<key>div.class</key>
+		<type>1</type>
+		<regex><![CDATA[\[div.([a-z][0-9][-_])\](.+?)\[\/div\]]]></regex>
+		<html><![CDATA[<div class="$1">$2</div>]]></html>
+	</item>
+	<item>
+		<key>div</key>
+		<type>1</type>
+		<regex><![CDATA[\[div\](.+?)\[\/div\]]]></regex>
+		<html><![CDATA[<p>$1</p>]]></html>
+	</item>
+	<item>
+		<key>strong</key>
+		<type>1</type>
+		<regex><![CDATA[\[strong\](.+?)\[\/strong\]]]></regex>
+		<html><![CDATA[<strong>$1</strong>]]></html>
+	</item>
+	<item>
+		<key>b</key>
+		<type>1</type>
+		<regex><![CDATA[\[b\](.+?)\[\/b\]]]></regex>
+		<html><![CDATA[<b>$1</b>]]></html>
+	</item>
+	<item>
+		<key>i</key>
+		<type>1</type>
+		<regex><![CDATA[\[i\](.+?)\[\/i\]]]></regex>
+		<html><![CDATA[<i>$1</i>]]></html>
+	</item>
+	<item>
+		<key>u</key>
+		<type>1</type>
+		<regex><![CDATA[\[u\](.+?)\[\/u\]]]></regex>
+		<html><![CDATA[<u>$1</u>]]></html>
+	</item>
+	
+	
+	<!-- ############################## -->
+	<item>
+		<key>color</key>
+		<type>1</type>
+		<regex><![CDATA[\[color=(.[key]*)\](.+?)\[\/color\]]]></regex>
+		<html><![CDATA[<font color="$1">$2</font>]]></html>
+	</item>
+	<item>
+		<key>face</key>
+		<type>1</type>
+		<regex><![CDATA[\[face=(.[key]*)\](.+?)\[\/face\]]]></regex>
+		<html><![CDATA[<font face="$1">$2</font>]]></html>
+	</item>
+	<item>
+		<key>font</key>
+		<type>1</type>
+		<regex><![CDATA[\[font=(.[key]*)\](.+?)\[\/font\]]]></regex>
+		<html><![CDATA[<font face="$1">$2</font>]]></html>
+	</item>
+	<item>
+		<key>size</key>
+		<type>1</type>
+		<regex><![CDATA[\[size=([1-7])\](.+?)\[\/size\]]]></regex>
+		<html><![CDATA[<font size="$1">$2</font>]]></html>
+	</item>
+	
+	
+	<!-- ############################## -->
+	<!-- ############################## -->
+	<item>
+		<key>img.upload</key>
+		<type>1</type>
+		<regex><![CDATA[\[img\]upload\/(.[file]*)\[\/img\]]]></regex>
+		<html><![CDATA[<img class="hand" border="0" src="<app:url.upload>$1" onLoad="javascript:$img.doResize(this,0.5);" onerror="javascript:$img.doError(this);" onMouseWheel="javascript:return $img.doZoom(this);" onClick="javascript:return $img.doOpen(this);">]]></html>
+	</item>
+	<item>
+		<key>img</key>
+		<type>1</type>
+		<regex><![CDATA[\[img\](.[url]*)\[\/img\]]]></regex>
+		<html><![CDATA[<img class="hand" border="0" src="$1" onLoad="javascript:$img.doResize(this,0.5);" onerror="javascript:$img.doError(this);" onMouseWheel="javascript:return $img.doZoom(this);" onClick="javascript:return $img.doOpen(this);">]]></html>
+	</item>
+	<item>
+		<key>upload</key>
+		<type>2</type>
+		<regex><![CDATA[\[upload=(gif|jpg|bmp|png)\](.[url]*)\[\/upload\]]]></regex>
+		<html><![CDATA[<img class="icon" src="<app:url.images>common/filetype/$1.gif"> 点击放大浏览<br><img class="hand" border="0" src="$2" onLoad="javascript:$img.doResize(this,0.5);" onerror="javascript:$img.doError(this);" onMouseWheel="javascript:return $img.doZoom(this);" onClick="javascript:return $img.doOpen(this);">]]></html>
+	</item>
+	
+	
+	<!-- ############################## -->
+	<item>
+		<key>br</key>
+		<type>0</type>
+		<regex><![CDATA[\[br\]]]></regex>
+		<html><![CDATA[<br/>
+]]></html>
+	</item>
+</xcml>

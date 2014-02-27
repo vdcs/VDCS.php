@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>var,config,url.script,url.rewrite</node>
+	</configure>
+	<var xmlns:ua="node">
+		<name>{@name}</name>
+		<names>{@names}</names>
+		
+		<ua>{@ua}</ua>
+		<ua:key>{@ua:key}</ua:key>
+		<ua:name>{@ua:name}</ua:name>
+		<ua:names>{@ua:names}</ua:names>
+		<ua:act>{@ua:act}</ua:act>
+		<ua:unit>{@ua:unit}</ua:unit>
+	</var>
+	<config>
+		<model>configure</model>
+		<m.default><![CDATA[demo=abc;]]></m.default>
+	</config>
+	<url.script>
+		<avatar><![CDATA[{@rootc.script}&p=avatar&id={$id}&res={$res}&f=.gif]]></avatar>
+		<user.view><![CDATA[{@rootc.script}&p=user]]></user.view>
+		<user.view.id><![CDATA[{@rootc.script}&p=user&id={$id}]]></user.view.id>
+	</url.script>
+	<url.rewrite>
+		<!--
+		<index><![CDATA[{@root}{@channel}]]></index>
+		-->
+		<avatar><![CDATA[{@root}avatar/{$id}_{$res}.gif]]></avatar>
+		<user.view><![CDATA[{@rootc.rewrite}user_{$id}<app:rewrite.exti>]]></user.view>
+		<user.view.id><![CDATA[{@rootc.rewrite}user<app:rewrite.exti>?id={$id}]]></user.view.id>
+	</url.rewrite>
+</xcml>

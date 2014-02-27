@@ -1,0 +1,25 @@
+
+<dl el="owner_">
+	<dt><h2>域名所有人:</h2><h3><p class="items"><input type="text" name="owner_name_en" value="<owner:name_en>" /></p></h3></dt>
+	<dt><h2>姓:</h2><h3><p class="items"><input type="text" name="owner_firstname_en" value="<owner:firstname_en>"  /></p></h3></dt>
+	<dt><h2>名:</h2><h3><p class="items"><input type="text" name="owner_lastname_en" value="<owner:lastname_en>"  /></p></h3></dt>
+	<dt><h2>国家代码:<h3><p class="items"><select name="owner_area_country" id="ff18">
+		<label:include file="inc/country.option">
+		</select></p></h3></dt>
+	<dt><h2>省份:</h2><h3><p class="items"><input type="text" name="owner_area_province_en" value="<owner:area_province_en>" /></p></h3></dt>
+	<dt><h2>城市:</h2><h3><p class="items"><input type="text" name="owner_area_city_en" value="<owner:area_city_en>"  /></p></h3></dt>
+	<dt><h2>地址:</h2><h3><p class="items"><input type="text" name="owner_address_en" value="<owner:address_en>"/></p></h3></dt>
+	<dt><h2>邮编:</h2><h3><p class="items"><input type="text" name="owner_postcode" value="<owner:postcode>" /></p></h3></dt>
+	<dt><h2>电话:</h2><h3><p class="items"><input type="text" name="owner_phoneregioncode" value="<owner:phoneregioncode>" style="width:60px;"  placeholder="国家代码" />-<input type="text" name="owner_phoneareacode" value="<owner:phoneareacode>" style="width:60px;"  placeholder="电话区号" />-<input type="text" name="owner_phonenumber" value="<owner:phonenumber>" style="width:100px;" placeholder="电话号码" />-<input type="text" name="owner_phoneext" value="<owner:phoneext>" style="width:40px;" placeholder="分机" /></p></h3></dt>
+	<dt><h2>传真:</h2><h3><p class="items"><input type="text" name="owner_fax" value="<owner:fax>"  /></p></h3></dt>
+	<dt><h2>电子邮件:</h2><h3><p class="items"><input type="text" name="owner_email" value="<owner:email>" /></p></h3></dt>
+	<p>以下是域名所有人中文信息（须包含中文）</p>
+	<dt><h2>域名所有人:</h2><h3><p class="items"><input type="text" name="owner_name_cn" value="<owner:name_cn>"  /></p></h3></dt>
+	<dt><h2>姓（中文）:</h2><h3><p class="items"><input type="text" name="owner_firstname_cn" value="<owner:firstname_cn>"  /></p></h3></dt>
+	<dt><h2>名（中文）:</h2><h3><p class="items"><input type="text" name="owner_lastname_cn" value="<owner:lastname_cn>"  /></p></h3></dt>
+	<dt><h2>省份（中文）:</h2><h3><p class="items"><input type="text" name="owner_area_province_cn" value="<owner:area_province_cn>"   /></p></h3></dt>
+	<dt><h2>城市（中文）:</h2><h3><p class="items"><input type="text" name="owner_area_city_cn" value="<owner:area_city_cn>"  /></p></h3></dt>
+	<dt><h2>通信地址:</h2><h3><p class="items"><input type="text" name="owner_address_cn" value="<owner:address_cn>"  /></p></h3></dt>
+	<input type="hidden" name="owner_type" value="owner" />
+	<input type="hidden" name="owner_id" value="<owner:id>" />
+</dl>

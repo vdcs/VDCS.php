@@ -1,0 +1,97 @@
+<label:include file="header">
+<div class="framer">
+	<div class="side">
+<label:include file="common.menus">
+	</div>
+	<div class="cont">
+<label:include file="common.navbar">
+<label:include file="common.flow">
+
+<form name="frm_post" action="<chn:linkurl("{@channel}","cart.flow","flow=unite")>" method="post">
+<input type="hidden" name="_chk" value="yes">
+<div class="box">
+	<h2><t>付款方式</t></h2>
+	<div class="cont">
+<div style="margin-left:100px;">
+<table border=0 cellspacing=0 cellpadding=2>
+<loop:payment>
+<tr><td style="padding:5px 0px 5px 0px;">
+<input type="radio" class="normal" name="_payment" value="[item:value]">
+<u><b>[item:name]</b></u>
+</td></tr>
+<tr><td>[item:explain]</td></tr>
+</loop>
+</table>
+</div>
+	</div></div>
+</div>
+<div class="space"></div>
+<div class="box">
+	<h2><t>送货方式</t></h2>
+	<div class="cont">
+<div style="margin-left:100px;">
+<table border="0" cellspacing="0" cellpadding="2">
+<loop:shipping>
+<tr><td style="padding:5px 0px 5px 0px;">
+<input type="radio" class="normal" name="_shipping" value="[item:name]">
+<u><b>[item:name]</b></u> <!--{if toInt({$shipping:price})>0}-->加 <span class="price">[item:price!price]</span> <app:unit.coin><!--{else}--><span class="mark">免费</span><!--{/if}-->
+</td></tr>
+<tr><td>[item:explain]</td></tr>
+</loop>
+</table>
+</div>
+	</div></div>
+</div>
+<div class="space"></div>
+<div class="box">
+	<h2><t>送货时间选择</t></h2>
+	<div class="cont">
+<div style="margin-left:100px;">
+<table border=0 cellspacing=0 cellpadding=2>
+<loop:dtime>
+<tr><td style="padding:5px 0px 5px 0px;">
+<input type="radio" class="normal" name="_dtime" value="[item:value]">
+[item:explain]
+</td></tr>
+</loop>
+</table>
+</div>
+	</div></div>
+</div>
+<div class="space"></div>
+</form>
+
+<div class="align-center">
+<a class="btn120 btn-flow-back" href="<chn:linkurl("{@channel}","cart")>"><span>返回上一步</span></a>
+<a class="btn120 btn-flow-unite" href="javascript:;" onclick="javascript:$('form[name=frm_post]').submit();"><span>确认支付方式</span></a>
+</div>
+	</div></div>
+</div>
+<script type="text/javascript">
+initPayForm=function(v1,v2){
+	var v="";
+	var oShipping=$f.oe("frm_post._shipping");
+	if(oShipping){
+		if(!oShipping.isSelect()){
+			v="<data:_shippingid>";	//$f.v("frm_post._shipping");
+			oShipping.setValue(v?v:"__no1");
+		}
+	}
+	var oPayment=$f.oe("frm_post._payment");
+	if(oPayment){
+		if(!oPayment.isSelect()){
+			v="<data:_paymentid>";	//$f.v("frm_post._payment");
+			oPayment.setValue(v?v:"__no1");
+		}
+	}
+	var oDtime=$f.oe("frm_post._dtime");
+	if(oDtime){
+		if(!oDtime.isSelect()){
+			v="<data:_dtimeid>";	//$f.v("frm_post._dtime");
+			oDtime.setValue(v?v:"__no1");
+		}
+	}
+}
+initPayForm();
+</script>
+<label:include file="footer">

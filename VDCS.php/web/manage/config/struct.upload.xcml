@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="struct">
+	<configure>
+		<node>item</node>
+	</configure>
+	<item>
+		<__key><![CDATA[upload]]></__key>
+		<__name><![CDATA[上传基本配置]]></__name>
+		<__file><![CDATA[common.config/data/upload]]></__file>
+		<__cache><![CDATA[]]></__cache>
+		<bar.var><![CDATA[基本配置			###type~bar]]></bar.var>
+		<var.status><![CDATA[上传开关			###type~radio		^property.min~1			^property.type~string		^att~1=开放;0=关闭]]></var.status>
+		<var.maxsize><![CDATA[文件大小			###property.type~int	^property.min~1			^style~size=10 class="num"	^explain~KB$$$上传文件大小的最大值，<span class="mark b">1000</span> KB = <span class="mark b">1</span> MB]]></var.maxsize>
+		<bar.ext><![CDATA[文件类型			###type~bar]]></bar.ext>
+		<ext.pic><![CDATA[图片				###property.min~0	^style~size=60 class="itxt"	^explain~<p>上传图片允许的文件类型，多个多逗号(,)隔开，下同</p>]]></ext.pic>
+		<ext.affix><![CDATA[附件			###property.min~0	^style~size=60 class="itxt"	^explain~<p>上传附件允许的文件类型</p>]]></ext.affix>
+		<ext.mm><![CDATA[多媒体				###property.min~0	^style~size=60 class="itxt"	^explain~<p>上传多媒体允许的文件类型</p>]]></ext.mm>
+		<ext.other><![CDATA[其他			###property.min~0	^style~size=60 class="itxt"	^explain~<p>上传其他允许的文件类型</p>]]></ext.other>
+	</item>
+	<!--
+	<item>
+		<__key><![CDATA[upload.thumb]]></__key>
+		<__name><![CDATA[上传缩放配置]]></__name>
+		<__file><![CDATA[common.config/data/upload]]></__file>
+		<__cache><![CDATA[]]></__cache>
+		<bar.thumb><![CDATA[图片缩放			###type~bar]]></bar.thumb>
+		<thumb.status><![CDATA[缩放开关			###type~radio		^property.min~1			^property.type~string		^att~1=开放;0=关闭]]></thumb.status>
+		<thumb.mode><![CDATA[缩放模式			###type~radio		^property.min~			^property.type~string		^att~1=按宽度比例缩放;2=按高度比例缩放;3=按大小缩放;5=按比例缩放]]></thumb.mode>
+		<thumb.quality><![CDATA[缩放品质		###property.min~1	^style~size=10 class="num"	^explain~可选值：0-100]]></thumb.quality>
+		<thumb.width><![CDATA[缩放宽度			###property.min~1	^style~size=10 class="num"	^explain~0表示使用当前频道值]]></thumb.width>
+		<thumb.height><![CDATA[缩放高度			###property.min~1	^style~size=10 class="num"	^explain~0表示使用当前频道值]]></thumb.height>
+	</item>
+	<item>
+		<__key><![CDATA[upload.watermark]]></__key>
+		<__name><![CDATA[上传水印配置]]></__name>
+		<__file><![CDATA[common.config/data/upload]]></__file>
+		<__cache><![CDATA[]]></__cache>
+		<bar.watermark><![CDATA[水印设置		###type~bar]]></bar.watermark>
+		<watermark.status><![CDATA[水印开关		###type~radio		^property.min~1		^property.type~string		^att~1=开放;0=关闭]]></watermark.status>
+		<watermark.type><![CDATA[水印类型		###type~radio		^property.min~		^att~txt=文字;pic=图片]]></watermark.type>
+		<watermark.place><![CDATA[水印位置		###type~radio		^property.min~		^property.type~int		^att~0=居中;1=左上;2=右上;3=左下;4=右下;5=随机]]></watermark.place>
+		<watermark.rotation><![CDATA[旋转角度		###property.min~	^property.type~int	^style~size=10			^explain~度$$$0为不旋转]]></watermark.rotation>
+		<watermark.quality><![CDATA[图片品质		###property.min~	^property.type~int	^style~size=10			^explain~%$$$百分比]]></watermark.quality>
+		<watermark.bar_color><![CDATA[边框颜色		###property.min~	^style~size=10		^explain~为空表示不加边框]]></watermark.bar_color>
+		<watermark.bar_space><![CDATA[边框距离		###property.min~	^property.type~int	^style~size=10			^explain~px$$$]]></watermark.bar_space>
+		<watermark.bar_width><![CDATA[边框宽度		###property.min~	^property.type~int	^style~size=10			^explain~px$$$]]></watermark.bar_width>
+		<watermark.bar_solid><![CDATA[是否填充		###type~radio		^property.min~		^property.type~int		^att~0=不填充为画框;1=填充为画色块]]></watermark.bar_solid>
+		
+		<bar.watermark.pic><![CDATA[图片水印设置	###type~bar]]></bar.watermark.pic>
+		<watermark.pic_filename><![CDATA[水印图片路径	###property.min~1	^style~size=40		]]></watermark.pic_filename>
+		<watermark.pic_bgcolor><![CDATA[图片背景颜色	###property.min~	^style~size=10		^explain~空为默认白色]]></watermark.pic_bgcolor>
+		<watermark.pic_deviation><![CDATA[图片背离系数	###property.min~	^property.type~int	^style~size=10			^explain~0-255 越大越清晰（去除背景色越好）]]></watermark.pic_deviation>
+		<watermark.pic_opacity><![CDATA[图片透明度	###property.min~	^property.type~int	^style~size=10			^explain~%$$$100%为不透明]]></watermark.pic_opacity>
+		
+		<bar.watermark.txt><![CDATA[文字水印设置	###type~bar]]></bar.watermark.txt>
+		<watermark.txt_content><![CDATA[水印文字	###property.min~1	^style~size=40		]]></watermark.txt_content>
+		<watermark.txt_size><![CDATA[文字大小		###property.min~1	^property.type~int	^style~size=10		]]></watermark.txt_size>
+		<watermark.txt_font><![CDATA[文字字体		###property.min~1	^style~size=10		]]></watermark.txt_font>
+		<watermark.txt_color><![CDATA[文字颜色		###property.min~	^style~size=10		]]></watermark.txt_color>
+		<watermark.txt_bold><![CDATA[文字加粗		###type~radio		^property.min~		^property.type~int		^att~0=不加粗;1=加粗]]></watermark.txt_bold>
+		<watermark.txt_italic><![CDATA[文字斜体 	###type~radio		^property.min~		^property.type~int		^att~0=不加斜体;1=加斜体]]></watermark.txt_italic>
+		<watermark.txt_underlined><![CDATA[文字加粗	###type~radio		^property.min~		^property.type~int		^att~0=不加下划线;1=加下划线]]></watermark.txt_underlined>
+		<watermark.txt_background><![CDATA[文字背景颜色	###property.min~	^style~size=10		]]></watermark.txt_background>
+		<watermark.txt_shadowcolor><![CDATA[文字阴影颜色###property.min~	^style~size=10		^explain~为空表示不加阴影]]></watermark.txt_shadowcolor>
+	</item>
+	-->
+</xcml>

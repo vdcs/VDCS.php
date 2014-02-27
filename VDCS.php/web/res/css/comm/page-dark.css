@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.framer{background-color:transparent;}
+
+
+#navbar{margin-bottom:15px;}
+#navbar h2{color:#DDD;}
+#navbar h3 a{color:#CCC;}
+#navbar h3 a:hover{color:#FFF;}

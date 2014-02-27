@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="lang">
+	<configure>
+		<node>ua</node>
+	</configure>
+	<ua xmlns:info="node">
+		<rc>staff</rc>
+		<table.name>dba_staff</table.name>
+		<field.id>staffid</field.id>
+		<field.name>name</field.name>
+
+		<info.data><![CDATA[dba_staff_info=staffid;dbe_employee=staffid,emp.]]></info.data>
+	</ua>
+</xcml>

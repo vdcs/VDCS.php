@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<explain><![CDATA[default=base$$$base=基本信息;pivotal=关键信息;nums=分值信息;infon=网络资料;infos=详细资料;status={@xnames}状态]]></explain>
+	</input>
+	<!--attr={@xnames}属性;-->
+	
+<label:include file="parts.ua">
+	
+</xcml>

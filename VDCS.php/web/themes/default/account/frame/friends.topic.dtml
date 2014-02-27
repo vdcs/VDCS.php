@@ -1,0 +1,11 @@
+<div class="tags_tj">
+	<div class="tags_tj_con" >
+		<ul>
+		<li><a href=""><img src="css/tag_tj1.png" /></a></li>
+		<li><a href=""><img src="css/tag_tj1.png" /></a></li>
+		<li><a href=""><img src="css/tag_tj1.png" /></a></li>
+		</ul>  
+	</div>
+	<a class="preNext pre">pre</a>
+	<a class="preNext next">next</a>
+</div><!-- // End tags_tj-->

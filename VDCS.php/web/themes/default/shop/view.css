@@ -1,0 +1,8 @@
+@charset "utf-8";
+@import url("/images/css/comm/page.view.css");
+
+
+.e_view .pics pic{}
+.e_view .pics pic a{}
+.e_view .infos{}
+.e_view .infos .price{font-size:1.5em;font-weight:bold;background:url("/images/common/icon/y.gif") 0 4px no-repeat;padding-left:18px;}

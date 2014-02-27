@@ -1,0 +1,162 @@
+﻿
+<label:include script="~~~guide.css" type="css">
+<div class="sets_guide">
+<ul>
+<li>
+	<dl>
+	<dt><a class="settings" href="<chn:linkurl("{@channel}","pa","p=settings")>"><span><chn:var("{@channel}","title.settings")></span><em></em></a></dt>
+	<dd>
+		<h2><a href="<chn:linkurl("{@channel}","pa","p=settings")>"><chn:var("{@channel}","title.settings")></a></h2>
+		<h3>
+		<a class="btn s" href="<chn:linkurl("{@channel}","pam","p=settings&m=info")>"><span><chn:var("{@channel}","title.settings.info")></span></a>
+		<a class="btn s" href="<chn:linkurl("{@channel}","pam","p=settings&m=avatar")>"><span><chn:var("{@channel}","title.settings.avatar")></span></a>
+		</h3>
+		<p>您可以在这里设置诸如昵称、签名和头像等的个人信息。</p>
+		<h5><a class="handle" href="<chn:linkurl("{@channel}","pa","p=settings")>"><span>操作</span></a></h5>
+	</dd>
+	</dl>
+</li>
+<li>
+	<dl>
+	<dt><a class="contacts" href="<chn:linkurl("{@channel}","pa","p=contacts")>"><span><chn:var("{@channel}","title.contacts")></span><em></em></a></dt>
+	<dd>
+		<h2><a href="<chn:linkurl("{@channel}","pa","p=contacts")>"><chn:var("{@channel}","title.contacts")></a></h2>
+		<h3>
+		<a class="btn s" href="<chn:linkurl("{@channel}","pam","p=contacts&m=follow")>"><span><chn:var("{@channel}","title.contacts.follow")></span></a>
+		<a class="btn s" href="<chn:linkurl("{@channel}","pam","p=contacts&m=fans")>"><span><chn:var("{@channel}","title.contacts.fans")></span></a>
+		<a class="btn s" href="<url:accountx>invite"><span>邀请</span></a>
+		</h3>
+		<p>你可以在这里添加或删除你的好友。</p>
+		<h5><a class="handle" href="<chn:linkurl("{@channel}","pa","p=contacts")>"><span>操作</span></a></h5>
+	</dd>
+	</dl>
+</li>
+<li>
+	<dl>
+	<dt><a class="inbox" href="<chn:linkurl("{@channel}","pa","p=inbox")>"><span><chn:var("{@channel}","title.inbox")></span><em></em></a></dt>
+	<dd>
+		<h2><a href="<chn:linkurl("{@channel}","pa","p=inbox")>"><chn:var("{@channel}","title.inbox")></a></h2>
+		<h3>
+		<a class="btn s" href="<chn:linkurl("{@channel}","pam","p=inbox&m=inbox")>"><span><chn:var("{@channel}","title.inbox.inbox")></span></a>
+		<a class="btn s" href="<chn:linkurl("{@channel}","pam","p=inbox&m=send")>"><span><chn:var("{@channel}","title.inbox.send")></span></a>
+		</h3>
+		<p>小伙伴们之间的悄悄话。发私信给他（或者她）！</p>
+		<h5><a class="handle" href="<chn:linkurl("{@channel}","pa","p=inbox")>"><span>操作</span></a></h5>
+	</dd>
+	</dl>
+</li>
+<li>
+	<dl>
+	<dt><a class="fav" href="<chn:linkurl("{@channel}","pa","p=fav")>"><span><chn:var("{@channel}","title.fav")></span><em></em></a></dt>
+	<dd>
+		<h2><a href="<chn:linkurl("{@channel}","pa","p=fav")>"><chn:var("{@channel}","title.fav")></a></h2>
+		<h3></h3>
+		<p>我们还提供了更多功能，可以将自己常用或喜爱的功能添加到这里。</p>
+		<h5><a class="handle" href="<chn:linkurl("{@channel}","pa","p=fav")>"><span>操作</span></a></h5>
+	</dd>
+	</dl>
+</li>
+<li>
+	<dl>
+	<dt><a class="notices" href="<chn:linkurl("{@channel}","pa","p=notices")>"><span><chn:var("{@channel}","title.notices")></span><em></em></a></dt>
+	<dd>
+		<h2><a href="<chn:linkurl("{@channel}","pa","p=notices")>"><chn:var("{@channel}","title.notices")></a></h2>
+		<h3>
+		<a class="btn s" href="<chn:linkurl("{@channel}","pam","p=notices&m=notice")>"><span><chn:var("{@channel}","title.notices.notice")></span></a>
+		<!--
+		<a class="btn s" href="<chn:linkurl("{@channel}","pam","p=notices&m=app")>"><span><chn:var("{@channel}","title.notices.app")></span></a>
+		-->
+		</h3>
+		<p>系统给您发送的通知消息。</p>
+		<h5><a class="handle" href="<chn:linkurl("{@channel}","pa","p=notices")>"><span>操作</span></a></h5>
+	</dd>
+	</dl>
+</li>
+<li>
+	<dl>
+	<dt><a class="security" href="<chn:linkurl("{@channel}","pa","p=security")>"><span><chn:var("{@channel}","title.security")></span><em></em></a></dt>
+	<dd>
+		<h2><a href="<chn:linkurl("{@channel}","pa","p=security")>"><chn:var("{@channel}","title.security")></a></h2>
+		<h3>
+		<a class="btn s" href="<chn:linkurl("{@channel}","pam","p=security&m=password")>"><span><chn:var("{@channel}","title.security.password")></span></a>
+		<a class="btn s" href="<chn:linkurl("{@channel}","pam","p=security&m=question")>"><span><chn:var("{@channel}","title.security.question")></span></a>
+		<a class="btn s" href="<chn:linkurl("{@channel}","pam","p=security&m=email")>"><span><chn:var("{@channel}","title.security.email")></span></a>
+		</h3>
+		<p>请尽可能详细，并且仔细填写，这些资料可能在你意想不到的时候保护你的帐号。</p>
+		<h5><a class="handle" href="<chn:linkurl("{@channel}","pa","p=security")>"><span>操作</span></a></h5>
+	</dd>
+	</dl>
+</li>
+<!--
+你可以在这里添加或删除你的好友。另外，可能会有一些其他有意思的东西让你惊喜。
+
+<li>
+	<dl>
+	<dt><a class="plus" href="<chn:linkurl("{@channel}","index")>"><span>添加</span><em></em></a></dt>
+	<dd>
+		<h2><a href="<chn:linkurl("{@channel}","index")>">添加</a></h2>
+		<h3></h3>
+		<p>我们还提供了更多功能，可以将自己常用或喜爱的功能添加到这里。</p>
+		<h5></h5>
+	</dd>
+	</dl>
+</li>
+
+<li>
+	<dl>
+	<dt><a class="privacy" href="<chn:linkurl("{@channel}","pa","p=privacy")>"><span><chn:var("{@channel}","title.privacy")></span><em></em></a></dt>
+	<dd>
+		<h2><a href="<chn:linkurl("{@channel}","pa","p=privacy")>"><chn:var("{@channel}","title.privacy")></a></h2>
+		<h3>
+		<a class="btn s" href="<chn:linkurl("{@channel}","pam","p=privacy&m=password")>"><span><chn:var("{@channel}","title.privacy.password")></span></a>
+		</h3>
+		<p>介绍信息</p>
+		<h5><a class="handle" href="<chn:linkurl("{@channel}","pa","p=privacy")>"><span>操作</span></a></h5>
+	</dd>
+	</dl>
+</li>
+<li>
+	<dl>
+	<dt><a class="prefer" href="<chn:linkurl("{@channel}","pa","p=prefer")>"><span><chn:var("{@channel}","title.prefer")></span><em></em></a></dt>
+	<dd>
+		<h2><a href="<chn:linkurl("{@channel}","pa","p=prefer")>"><chn:var("{@channel}","title.prefer")></a></h2>
+		<h3>
+		<a class="btn s" href="<chn:linkurl("{@channel}","pam","p=prefer&m=password")>"><span><chn:var("{@channel}","title.prefer.password")></span></a>
+		</h3>
+		<p>介绍信息</p>
+		<h5><a class="handle" href="<chn:linkurl("{@channel}","pa","p=prefer")>"><span>操作</span></a></h5>
+	</dd>
+	</dl>
+</li>
+
+<li>
+	<dl>
+	<dt><a class="gift" href="<chn:linkurl("{@channel}","pa","p=gift")>"><span><chn:var("{@channel}","title.gift")></span><em></em></a></dt>
+	<dd>
+		<h2><a href="<chn:linkurl("{@channel}","pa","p=gift")>"><chn:var("{@channel}","title.gift")></a></h2>
+		<h3></h3>
+		<p>我们还提供了更多功能，可以将自己常用或喜爱的功能添加到这里。</p>
+		<h5><a class="handle" href="<chn:linkurl("{@channel}","pa","p=gift")>"><span>操作</span></a></h5>
+	</dd>
+	</dl>
+</li>
+<li>
+	<dl>
+	<dt><a class="app" href="<chn:linkurl("{@channel}","pa","p=app")>"><span><chn:var("{@channel}","title.app")></span><em></em></a></dt>
+	<dd>
+		<h2><a href="<chn:linkurl("{@channel}","pa","p=app")>"><chn:var("{@channel}","title.app")></a></h2>
+		<h3></h3>
+		<p>我们还提供了更多功能，可以将自己常用或喜爱的功能添加到这里。</p>
+		<h5><a class="handle" href="<chn:linkurl("{@channel}","pa","p=app")>"><span>操作</span></a></h5>
+	</dd>
+	</dl>
+</li>
+-->
+</ul>
+</div>
+
+<script type="text/javascript">
+$(function(){
+	$('.sets_guide li dt a').addClass('pop');
+});
+</script>

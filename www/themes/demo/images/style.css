@@ -1,0 +1,67 @@
+﻿@charset "utf-8";
+@import url("/images/css/html5/effect.css");
+@import url("/images/css/comm/ui.css");
+@import url("/images/css/comm/ui.tips.css");
+@import url("/images/css/comm/ui.table.css");
+@import url("/images/css/comm/ui.paging.css");
+@import url("/images/css/comm/oauth.css");
+@import url("/images/css/comm/ua.css");
+@import url("/images/css/comm/box.css");
+@import url("/images/css/comm/page.css");
+@import url("/images/css/comm/page.widget.css");
+@import url("/images/css/comm/page.e.css");
+@import url("/images/css/comm/navbar.css");
+@import url("headbar.css");
+@import url("frame.css");
+
+
+/* ######################### */
+/* ##### user-defined ###### */
+/* ######################### */
+body{color:#000;}
+/*body{color:#4D4D4D;background:#FFF url("page/bg.png") repeat top center fixed;}*/
+.debugi{color:#666;text-align:left;}
+
+a{color:#252525;text-decoration:none;}
+a:hover{color:#D20000;text-decoration:underline;}
+
+
+/* ########## Wrap ######### */
+#wrap{}
+#wrapper{}
+
+
+/* extends */
+/* cont = cent + sider */
+#menu{}
+#main{}
+#main > .cont{}
+#main > .cent{}
+#main > .side,
+#main > .sider{}
+/* main = side + cent + sider */
+/* main = side + cont */
+/* cont = cent + sider */
+.framers,
+.framer{width:980px;}
+.framer > .main{width:980px;}
+.framer > .cont{width:735px;}
+.framer > .cent{width:490px;}
+.framer > .menu,
+.framer > .side{width:230px;}
+.framer > .sider,
+.framer > .relate{width:230px;}
+
+.pager > h2,
+.pager > h3,
+.pager > h2 a,
+.pager > h3 a{color:#013E55;}
+.pager > h2 a:hover,
+.pager > h3 a:hover{color:#D20000;}
+.pager .title,
+.pager .subtitle,
+.pager .topic{color:#29458C;}
+.pager .subtopic{color:#235D83;}
+.pager > .h1{color:#235D83;}
+.pager > .h1 a{color:#EC5F00;}
+.pager > .h1 a:hover{color:#FF0000;}

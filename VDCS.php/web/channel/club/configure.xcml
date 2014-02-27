@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>var,config,url.script,url.rewrite</node>
+	</configure>
+	<var>
+		<name>{@name}</name>
+		<names>{@names}</names>
+		<act>{@act}</act>
+		<act.view>{@act.view}</act.view>
+		<unit>{@unit}</unit>
+	</var>
+	<config>
+		<model>configure,search</model>
+	</config>
+	<url.script>
+		<mu><![CDATA[{@rootc}mu<app:ext.script>?muid={$muid}]]></mu>
+		<mu.blog><![CDATA[{@rootc}mu<app:ext.script>?muid={$muid}&p=blog]]></mu.blog>
+		<mu.blog.view><![CDATA[{@rootc}mu<app:ext.script>?muid={$muid}&p=blog&m=view&id={$id}]]></mu.blog.view>
+		<mu.blog.sort><![CDATA[{@rootc}mu<app:ext.script>?muid={$muid}&p=blog&sortid={$sortid}]]></mu.blog.sort>
+		<mu.profile><![CDATA[{@rootc}mu<app:ext.script>?muid={$muid}&p=profile]]></mu.profile>
+	</url.script>
+	<url.rewrite>
+		<mu><![CDATA[{@rootc}u/{$muid}/]]></mu>
+		<mu.blog><![CDATA[{@rootc}u/{$muid}/blog<app:rewrite.ext>]]></mu.blog>
+		<mu.blog.view><![CDATA[{@rootc}u/{$muid}/blog_view_{$id}<app:rewrite.ext>]]></mu.blog.view>
+		<mu.blog.sort><![CDATA[{@rootc}u/{$muid}/blog_sort_{$sortid}<app:rewrite.ext>]]></mu.blog.sort>
+		<mu.profile><![CDATA[{@rootc}u/{$muid}/profile<app:rewrite.ext>]]></mu.profile>
+	</url.rewrite>
+</xcml>

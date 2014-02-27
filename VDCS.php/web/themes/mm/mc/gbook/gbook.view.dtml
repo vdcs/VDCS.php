@@ -1,0 +1,80 @@
+<label:include file="frame/header">
+<label:include file="frame/frame.left">
+<label:include file="gbook-menu">
+<label:include file="frame/frame.space">
+<label:include file="gbook-common">
+<div class="ContentMain">
+
+<div class="MessageView">
+<div class="partBar">
+	<table class="list" style="width:60%;">
+	<tr class="px1"><td width="15%"></td><td width="35%"></td><td width="15%"></td><td width="35%"></td></tr>
+	<tr>
+	<td>姓名：</td>
+	<td><view:realname></td>
+	<td></td>
+	<td></td>
+	</tr>
+	<tr>
+	<td>电话：</td>
+	<td><view:mobile></td>
+	<td></td>
+	<td><view:phone></td>
+	</tr>
+	<tr>
+	<td>邮件：</td>
+	<td><view:email></td>
+	<td>QQ：</td>
+	<td><view:im1></td>
+	</tr>
+	<tr>
+	<td>时间：</td>
+	<td><view:tim!time></td>
+	<td></td>
+	<td></td>
+	</tr>
+	</table>
+</div>
+<div class="partContent">
+<div class="content remark"><view:message.codes></div>
+</div>
+<div class="partFoot">
+	<div class="partHandle">
+		<button id="list-btn-del" class="btn btn50" onclick="javascript:return appc.itemDel('<view:id>');">删除</button>
+		<button id="list-btn-goback" class="btn btn50" onclick="javascript:$p.goback();">返回</button>
+	</div>
+</div>
+</div>
+
+<script type="text/javascript">
+appc.itemDel=function(id){
+	var isClick=$p.isClickReturn('删除本条信息',1);
+	if(!isClick) return false;
+	var __othis=this;
+	var _url=$url.link("?m=xmls","action=del&id="+id);
+	//dbg.t(_url);
+	$ajax({url:_url,value:"map",ready:function(maps){
+		var treeVar=maps.getItemTree("var");
+		switch(treeVar.v("status")){
+			case "succeed":
+				$xtip.popups("succeed","删除成功！",true,1);
+				$w.timeout(function(){
+					$p.go('?mode=<ctl:mode>');
+				},1);
+				break;
+			case "nodata":
+				$xtip.popups("info","无效的数据请求！",true);
+				break;
+			default:
+				$xtip.popups("error","服务数据异常！",true);
+				break;
+		}
+	},error:true});
+	
+	return isClick;
+}
+</script>
+
+</div>
+<label:include file="frame/frame.right">
+<label:include file="frame/footer">

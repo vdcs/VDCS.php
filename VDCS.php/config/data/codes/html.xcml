@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,type,regex,html</field>
+	</configure>
+	<item>
+		<key>re.dp</key>
+		<type>1</type>
+		<regex><![CDATA[\[(\/?(div|p))=(justify|left|center|right)\]]]></regex>
+		<html><![CDATA[<$1 align="$3">]]></html>
+	</item>
+	<item>
+		<key>div.class</key>
+		<type>1</type>
+		<regex><![CDATA[\[div.([a-z][0-9][-_])\](.+?)\[\/div\]]]></regex>
+		<html><![CDATA[<div class="$1">$2</div>]]></html>
+	</item>
+	<item>
+		<key>re.ibup</key>
+		<type>1</type>
+		<regex><![CDATA[\[(\/?(i|strong|b|u|ul|ol|li|div|p|br))\]]]></regex>
+		<html><![CDATA[<$1>]]></html>
+	</item> 
+	<item>
+		<key>re.ibup</key>
+		<type>1</type>
+		<regex><![CDATA[\[(\/?(table|tbody|tr|th|td))\]]]></regex>
+		<html><![CDATA[<$1>]]></html>
+	</item>
+	
+	<item>
+		<key>re.upload.px</key>
+		<type>1</type>
+		<regex><![CDATA[src="upload\/(.+?)"]]></regex>
+		<html><![CDATA[src="\/upload\/$1"]]></html>
+	</item>
+	
+</xcml>

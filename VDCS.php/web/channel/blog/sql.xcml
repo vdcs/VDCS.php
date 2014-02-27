@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="sql">
+	<configure>
+		<node>struct,label</node>
+	</configure>
+	<struct>
+		<table.name><![CDATA[{@table.name}]]></table.name>
+		<table.px><![CDATA[{@table.px}]]></table.px>
+		<table.field.id><![CDATA[blogid]]></table.field.id>
+		<list.table><![CDATA[]]></list.table>
+		<list.fields><![CDATA[*]]></list.fields>
+		<list.query><![CDATA[{@table.px}status=1]]></list.query>
+		<list.query.good><![CDATA[{@table.px}status=1 and {@table.px}isgood=1]]></list.query.good>
+		<list.query.top><![CDATA[{@table.px}status=1 and {@table.px}ishot=1]]></list.query.top>
+		<list.query.auth><![CDATA[{@table.px}status=1 and {@table.px}isauth=1]]></list.query.auth>
+		<list.order><![CDATA[blogid desc]]></list.order>
+		<list.orders><![CDATA[]]></list.orders>
+		<list.search.fields><![CDATA[name=6,{@table.px}name;sp_keyword=6]]></list.search.fields>
+		<view.sql><![CDATA[select * from {@table.name} where {@table.px}status=1 and blogid={$id} limit 0,1]]></view.sql>
+		<view.px><![CDATA[{@table.px}]]></view.px>
+		<view.update><![CDATA[update {@table.name} set 
+			{@table.px}total_day={@table.px}total_day+1,
+			{@table.px}total_week={@table.px}total_week+1,
+			{@table.px}total_month={@table.px}total_month+1,
+			{@table.px}total_view={@table.px}total_view+1 where blogid={$id}]]></view.update>
+	 	<comment.update><![CDATA[update {@table.name} set {@table.px}total_comment={@table.px}total_comment+1 where blogid={$id}]]></comment.update>
+		<fav.update><![CDATA[update {@table.name} set {@table.px}total_fav={@table.px}total_fav+1 where blogid={$id}]]></fav.update>
+		<regard.update><![CDATA[update {@table.name} set {@table.px}total_regard={@table.px}total_regard+1 where blogid={$id}]]></regard.update>
+		<regard.track><![CDATA[update {@table.name} set {@table.px}total_track={@table.px}total_track+1 where blogid={$id}]]></regard.track>
+		<regard.fans><![CDATA[update {@table.name} set {@table.px}total_fans={@table.px}total_fans+1 where blogid={$id}]]></regard.fans>
+		<data.update><![CDATA[update {@data:table.name} set {@data:table.px}total_view={@data:table.px}total_view+1 where {@data:table.px}id={$id}]]></data.update>
+		
+	 	<data.relate><![CDATA[keyid={$rootid}]]></data.relate>
+	 	<ua.relate><![CDATA[uuid={$uuid}]]></ua.relate>
+	</struct>
+	<label>
+		<table.name><![CDATA[{@table.name}]]></table.name>
+		<table.field><![CDATA[id=blogid;classid=classid;uid=uuid;
+			no={@table.px}no;key={@table.px}key;topic={@table.px}name;name={@table.px}name;desc={@table.px}desc;
+			sort={@table.px}sort;type={@table.px}type;level={@table.px}level;symbol={@table.px}symbol;rank={@table.px}rank;
+			skin={@table.px}skin;style={@table.px}style;
+			prop1={@table.px}prop1;prop2={@table.px}prop2;prop3={@table.px}prop3;prop4={@table.px}prop4;prop5={@table.px}prop5;
+			logo={@table.px}logo;summary={@table.px}summary;intro={@table.px}intro;
+			sp_keyword=sp_keyword;sp_attr=sp_attr;sp_mode=sp_mode;sp_edition=sp_edition;
+			total={@table.px}total_view;total.view={@table.px}total_view;total.get={@table.px}total_view;total.day={@table.px}total_day;total.week={@table.px}total_week;total.month={@table.px}total_month;
+			total.comment={@table.px}total_comment;total.fav={@table.px}total_fav;total.regard={@table.px}total_regard;
+			total.track={@table.px}total_track;total.follow={@table.px}total_follow;total.fans={@table.px}total_fans;total.relay={@table.px}total_relay;
+			total.data={@table.px}total_data;
+			total.dat1={@table.px}total_dat1;total.dat2={@table.px}total_dat2;total.dat3={@table.px}total_dat3;
+			isgood={@table.px}isgood;istop={@table.px}istop;isauth={@table.px}isauth;tim={@table.px}tim;tim_up={@table.px}tim_up]]></table.field>
+		<table.fields><![CDATA[blogid,classid,uuid,
+			{@table.px}no,{@table.px}key,{@table.px}name,{@table.px}desc,
+			{@table.px}sort,{@table.px}type,{@table.px}level,{@table.px}symbol,{@table.px}rank,
+			{@table.px}skin,{@table.px}style,
+			{@table.px}prop1,{@table.px}prop2,{@table.px}prop3,{@table.px}prop4,{@table.px}prop5,
+			{@table.px}logo,{@table.px}summary,{@table.px}intro,
+			sp_keyword,sp_attr,sp_mode,sp_edition,
+			{@table.px}total_view,{@table.px}total_day,{@table.px}total_week,{@table.px}total_month,
+			{@table.px}total_comment,{@table.px}total_fav,{@table.px}total_regard,
+			{@table.px}total_track,{@table.px}total_follow,{@table.px}total_fans,{@table.px}total_relay,
+			{@table.px}total_data,
+			{@table.px}total_dat1,{@table.px}total_dat2,{@table.px}total_dat3,
+			{@table.px}isgood,{@table.px}istop,{@table.px}isauth,{@table.px}tim,{@table.px}tim_up]]></table.fields>
+		<block><![CDATA[select top {$num} {$table.fields} from {@table.name} where {@table.px}status=1 {$query.append} {$order}]]></block>
+		<block.order><![CDATA[new=order by blogid desc;
+			hot=order by {@table.px}total_view desc,blogid desc;
+			hotview=order by {@table.px}total_view desc,blogid desc;
+			hotday=order by {@table.px}total_day desc,blogid desc;
+			hotweek=order by {@table.px}total_week desc,blogid desc;
+			hotmonth=order by {@table.px}total_month desc,blogid desc;
+			hotcomment=order by {@table.px}total_comment desc,blogid desc;
+			hotfav=order by {@table.px}total_fav desc,blogid desc;
+			hotregard=order by {@table.px}total_regard desc,blogid desc;
+			hottrack=order by {@table.px}total_track desc,blogid desc;
+			hotfans=order by {@table.px}total_fans desc,blogid desc;
+			hotdata=order by {@table.px}total_data desc,blogid desc;
+			hotdat1=order by {@table.px}total_dat1 desc,blogid desc;
+			hotdat2=order by {@table.px}total_dat2 desc,blogid desc;
+			hotdat3=order by {@table.px}total_dat3 desc,blogid desc;
+			good=and {@table.px}isgood>0 order by {@table.px}isgood desc,blogid desc;
+			top=order by {@table.px}istop desc,blogid desc;]]></block.order>
+		<block.url>view</block.url>
+		<list.query>{@table.px}status=1 {$query_append}</list.query>
+		<list.order><![CDATA[new=blogid desc]]></list.order>
+		<list.orders><![CDATA[new=blogid asc]]></list.orders>
+		<list.url>list</list.url>
+	</label>
+</xcml>

@@ -1,0 +1,20 @@
+
+	<div class="partItems">
+<ul>
+<li menus="my"><a href="<linkurl:{@channel}.my>"><span><chn:var("{@channel}","title.my")></span></a></li>
+</ul>
+	</div>
+	<div class="space"></div>
+	<div class="partBar" id="div-menu-bar"><p><span><chn:var("{@channel}","title.settings")></span></p></div>
+	<div class="partItems">
+<ul id="div-menu-settings">
+<li><a href="<linkurl:{@channel}.settings>"><span><chn:var("{@channel}","title.settings.info")></span></a></li>
+<li><a href="<chn:linkurl("{@channel}","settings","action=password")>"><span><chn:var("{@channel}","title.settings.password")></span></a></li>
+<li class="space"></li>
+<!--
+<li><a href="<chn:linkurl("{@channel}","settings","m=logo")>"><span><chn:var("{@channel}","title.settings.logo")></span></a></li>
+<li class="space"></li>
+-->
+<li><a href="<chn:linkurl("{@channel}","settings","m=auth&action=certic")>"><span><chn:var("{@channel}","title.settings.auth.certic")></span></a></li>
+</ul>
+	</div>

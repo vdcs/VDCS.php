@@ -1,0 +1,96 @@
+<xmp id="box_recharge" data-title="温馨提示">
+	<div class="ac" style="padding:20px 50px;">
+	<p class="itip load"><em></em><span>正在检测您的支付结果，请稍候..</span></p>
+	<p style="margin:10px 0;">支付成功后将自动跳转，若未跳转请点击</p>
+	<p><a class="btn c" href="#complete">已经完成支付</a> &nbsp; <a class="btn m" href="#help">支付遇到问题</a></p>
+	</div>
+</xmp>
+<script type="text/javascript">
+var globalopt={};
+var jboxi,payment_tradeno='',poll_second=5;
+var payment_test=true;		//payment_test=true;
+payment_callback=function(orderid,tradeno){
+	payment_tradeno=tradeno;
+	if(payment_test) jboxi.find('.itip').find('span').append(orderid);
+	payment_poll_agent(orderid,tradeno);
+};
+payment_poll_agent=function(orderid,tradeno){
+	$w.timeout(function(){payment_poll(orderid,tradeno)},poll_second);
+};
+payment_poll=function(orderid,tradeno){
+	console.assert(false,'static: '+tradeno+' '+$tim.getNow(true));
+	//var _url='/account/checkout.x?action=check&orderid='+orderid+'&tradeno='+tradeno;
+	var _url=ui.serve.getURL({'channel':'{@channel}','p':'checkout','x':'x','action':'check','params':'orderid='+orderid+'&tradeno='+tradeno});
+	$ajax({url:_url,value:'xml',ready:function(xml){
+		var maps=$util.toMapByXML(xml);
+		var treeVar=maps.getItemTree('var');
+		if(treeVar.v('status')=='succeed'){
+			jboxi.ibox('close');
+			var message=treeVar.v('desc');
+			if(!message) message='支付成功！';
+			/*
+			app.popup('succeed',message,true,0,function(){
+				payByBalance(globalopt);
+			});
+			*/
+			payByBalance(globalopt);
+		}
+		else{
+			console.assert(false,'static: '+tradeno+','+treeVar.v('status')+' '+$tim.getNow(true));
+			payment_poll_agent(orderid,tradeno);
+		}
+	},error:true});
+};
+
+function payByBalance(opt){
+	if(iso(opt)){
+		opt=ox({payment:'balance'},opt);
+		var payment=opt.payment;
+		var orderid=opt.orderid;
+	}else{
+		orderid=opt;
+		payment='balance';
+	}
+	globalopt=opt;
+	//var _url='/{@channel}/checkout.x?action=pay&orderid='+orderid+'&type='+type+'&pid='+pid;
+	var _url=ui.serve.getURL({'channel':'{@channel}','p':'checkout','x':'x','action':'pay','params':'orderid='+orderid+'&payment='+payment});
+	$ajax({url:_url,value:'xml',ready:function(xml){
+		var map=$util.toMapByXML(xml);
+		var treeVar=map.getItemTree('var');
+		var _status=treeVar.v('status');
+		switch(_status){
+			case 'succeed':
+				ui.popups('succeed','支付成功',0);
+				setTimeout(function(){
+					location.href='/{@channel}/order/track?orderid='+orderid+'';
+				},1000);
+				break;
+			case '2':
+				var recharge=treeVar.vn('recharge');
+				var jo=$('<p>充值 <b>'+recharge+'</b> 元</p>');
+				var opt={};
+				opt.title='操作提示';
+				opt.submit_name='去充值';
+				opt.onsubmit=function(){
+					var url='/account/assets/recharge?orderid='+orderid+'&amount='+recharge+'';
+					window.open(url);
+					jboxi=$('#box_recharge').ibox({nobtn:true});
+					payment_callback(orderid,123);
+					/*
+					if(payment_test){
+						jboxi.find('a[href="#help"]').click(function(){
+							payment_callback(orderid,123);
+							return false;
+						});
+					}
+					*/
+				};
+				ui.box(jo,opt);
+				break;
+			default:
+				ui.popups('error',treeVar.v('message'),0);
+				break
+		}
+	},error:true});	
+}
+</script>

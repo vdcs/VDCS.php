@@ -1,0 +1,146 @@
+<label:include file="frame/headers">
+
+
+<label:include script="comm/box.css" type="css">
+
+<div class="framer">
+<div class="cont">
+	<div class="box">
+		<h2><t>Welcome</t></h2>
+		<div class="con">
+			<div class="ac" style="padding:34px 0px;">欢迎使用<app:web.name></div>
+		</div>
+	</div>
+	<div class="space"></div>
+	<div class="box">
+		<h2><t>主块1标题</t></h2>
+		<div class="bod">
+<ul class="tab-nav">
+<li class="active"><a href="#tab1" data-toggle="tab"><i class="icol-font"></i> 标签1</a></li>
+<li><a href="#tab2" data-toggle="tab"><i class="icol-color-swatch-1"></i> 标签2</a></li>
+<li><a href="#tab3" data-toggle="tab"><i class="icol-ui-saccordion"></i> 标签3</a></li>
+</ul>
+		</div>
+		<div class="con">
+<div id="tab1" class="tab-pane active fade in">
+<div class="h">
+标准内容(一般带四周间距)(tab1)<br>
+<p>这是一段使用&lt;p&gt;&lt;/p&gt;标签建立的行</p>
+</div>
+</div>
+<div id="tab2" class="tab-pane fade">
+<div class="h">
+标准内容(一般带四周间距)(tab2)<br>
+<p>这是一段使用&lt;p&gt;&lt;/p&gt;标签建立的行</p>
+</div>
+</div>
+<div id="tab3" class="tab-pane fade">
+<div class="h">
+标准内容(一般带四周间距)(tab3)<br>
+<p>这是一段使用&lt;p&gt;&lt;/p&gt;标签建立的行</p>
+</div>
+</div>
+		</div>
+	</div>
+	<div class="space"></div>
+	<box>
+		<h2><t>主块1标题</t></h2>
+		<con>
+<div class="h">
+标准内容(一般带四周间距)<br>
+<p>这是一段使用&lt;p&gt;&lt;/p&gt;标签建立的行</p>
+</div>
+		</con>
+	</box>
+</div>
+<div class="sider">
+	<div class="box bulk">
+		<h2><t>左块2标题</t></h2>
+		<div class="con">
+<ul>
+<li>1. topic String</li>
+<li>2. topic String</li>
+<li>3. topic String</li>
+<li>4. topic String</li>
+<li>5. topic String</li>
+</ul>
+		</div>
+	</div>
+	<div class="space"></div>
+	<div class="box">
+		<div class="con">
+<ul>
+<li>测试列表1</li>
+<li>测试列表2</li>
+<li>测试列表3</li>
+<li>测试列表4</li>
+<li>测试列表5</li>
+</ul>
+		</div>
+	</div>
+	<div class="space"></div>
+	<div class="box bulk">
+		<div class="con">
+<p>无Bar块内容</p>
+<p>无Bar块内容</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="framesh"></div>
+
+
+<!-- ######################################## -->
+<!-- ######################################## -->
+<!-- ######################################## -->
+<div class="framer">
+<div class="side">
+	<div class="box">
+		<h2><t>左块1标题</t></h2>
+		<div class="con">
+			测试内容
+		</div>
+	</div>
+	<div class="space"></div>
+	<div class="box">
+		<h2><t>左块2标题</t></h2>
+		<div class="con">
+			测试内容
+		</div>
+	</div>
+</div>
+<div class="cent">
+	<div class="box">
+		<h2><t>中块1标题</t></h2>
+		<div class="con">
+			测试内容
+		</div>
+	</div>
+	<div class="space"></div>
+	<div class="box">
+		<h2><t>中块2标题</t></h2>
+		<div class="con">
+			测试内容
+		</div>
+	</div>
+</div>
+<div class="sider">
+	<div class="box">
+		<h2><t>右块1标题</t></h2>
+		<div class="con">
+			测试内容
+		</div>
+	</div>
+	<div class="space"></div>
+	<div class="box">
+		<h2><t>右块2标题</t></h2>
+		<div class="con">
+			测试内容
+		</div>
+	</div>
+</div>
+</div>
+<div class="framesh"></div>
+
+
+<label:include file="frame/footers">

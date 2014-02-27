@@ -1,0 +1,65 @@
+@charset "utf-8";
+@import url("common.defined.css");
+/*@import url("common.channel.css");*/
+
+
+body{padding:10px;}
+
+a{color:#336699;text-decoration:none;}				/*,a:link,a:visited*/
+a:hover{color:#D20000;text-decoration:underline;}		/*,a:active*/
+
+
+/* ######################### */
+/* ########## Page ######### */
+/* ######################### */
+#wrapper{clear:both;width:825px;min-height:500px;_height:500px;position:relative;}
+#wrapper:before,
+#wrapper:after{clear:both;display:table;content:"";}
+#main{clear:both;}
+#cent{clear:both;width:635px;}
+#sider{clear:both;width:180px;}
+#cent{margin-right:190px;}
+#sider{position:absolute;top:0;right:0;}
+.wrapl #cent{margin:0;margin-left:190px;}
+.wrapl #sider{left:0;}
+.wrapr #cent{margin:0;margin-right:190px;}
+.wrapr #sider{right:0;}
+
+#side:before,
+#sider:after{clear:both;display:table;content:"";}
+
+/* width=1100,+120 */
+#wrapper{width:945px;}
+#cent{width:755px;}
+
+
+.table-list td{vertical-align:middle;}
+.table-list td.status{line-height:10px;}
+.table-list p.s{display:inline-block;font-size:9.5px;height:12px;line-height:12px!important;padding:0;margin:0;margin-top:5px;overflow:hidden;}
+.table-list p.s{-webkit-transform-origin:left;-webkit-transform:scale(0.83);-webkit-font-size:12px;}
+
+.table-detail th{min-width:80px;_width:90px;}
+.table-detail td{min-width:200px;_width:200px;}
+
+
+.xform{__max-width:670px;}
+.xform .mtip{margin:40px 60px;}
+
+
+.xlist{}
+.xlist > h3{clear:both;margin-bottom:8px;}
+.xlist > h3 cite{font-size:1.3em;font-weight:bold;}
+.xlist > .loader{display:none;text-align:center;padding:20px;}
+.xlist > .loader .loading{display:block;margin:0 auto;}
+.xlist > .bos{margin-top:10px;}
+
+
+
+/* ######### Footer ######## */
+#footer{clear:both;width:945px;height:30px;margin-top:10px;color:#888;font-size:10px;font-family:"Verdana","Arial";}
+#footer .copyright{float:left;display:inline;}
+#footer .version{float:right;display:inline;}
+#footer .version{-webkit-transform-origin:right;-webkit-transform:scale(0.83);-webkit-font-size:12px;}
+#footer .version span.versions{font-size:9px;}
+#footer .version span.versions a{font-size:9px;}
+#footer .version span.versions span.version{font-size:9px;}

@@ -1,0 +1,9 @@
+<label:include file="header.channel">
+
+<label:include file="frame.sideleft">
+<label:include file="product-list">
+<label:include file="frame.sidespace">
+<label:include file="element.menus">
+<label:include file="frame.sideright">
+
+<label:include file="footer.channel">

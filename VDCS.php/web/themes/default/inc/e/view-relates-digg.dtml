@@ -1,0 +1,4 @@
+	<div class="partof clr">
+		<l><label:include file="/inc/view/relate.context"></l>
+		<r><label:include file="/inc/widget/sync.digg"></r>
+	</div>

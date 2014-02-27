@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @act v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######## Action ######### */
+.act,.act:link,.act:visited,.lnk,.lnk:link,.lnk:visited{display:inline-block;background-position:0 2px;background-position:0 1px\9;background-repeat:no-repeat;line-height:normal;padding:2px 0 2px 19px;padding-top:3px\9;text-decoration:none!important;}
+.act:hover,.act:active,.lnk:hover,.lnk:active{}
+a.act,a.act:link,a.act:visited{text-decoration:none!important;}
+a.act:hover,a.act:active{text-decoration:underline!important;}
+
+a.act-arrow{background-image:url("../../common/icon/arrow.gif");}
+a.act-back{background-image:url("../../common/icon/arrow_back.gif");}
+a.act-app{background-image:url("../../common/icon/app.gif");}
+a.act-op{background-image:url("../../common/icon/option.gif");}
+a.act-event{background-image:url("../../common/icon/event.gif");}
+a.act-file{background-image:url("../../common/icon/file.gif");}
+a.act-ask{background-image:url("../../common/icon/ask.gif");}
+a.act-info{background-image:url("../../common/icon/info.gif");}
+a.act-help{background-image:url("../../common/icon/help.gif");}
+a.act-print{background-image:url("../../common/icon/print.gif");}
+a.act-feed{background-image:url("../../common/icon/feed.gif");}
+a.act-fav{background-image:url("../../common/icon/fav.gif");}
+a.act-commend{background-image:url("../../common/icon/commend.gif");}
+a.act-put{background-image:url("../../common/icon/put.gif");}
+a.act-report{background-image:url("../../common/icon/report.gif");}
+a.act-refresh{background-image:url("../../common/icon/refresh.gif");}
+a.act-search{background-image:url("../../common/icon/search.gif");}
+a.act-vote{background-image:url("../../common/icon/vote.gif");}
+a.hde-folder{background-image:url("../../common/handle/act_folder.gif");}
+a.hde-list{background-image:url("../../common/handle/act_list.gif");}
+a.hde-post{background-image:url("../../common/handle/act_post.gif");}
+a.hde-add{background-image:url("../../common/handle/act_add.gif");}
+a.hde-edit{background-image:url("../../common/handle/act_edit.gif");}
+a.hde-view{background-image:url("../../common/handle/act_view.gif");}
+
+a.adv,a.help,
+a.lnk{display:inline-block;background-position:0 0px;background-repeat:no-repeat;line-height:normal;padding:1px 0 1px 18px;padding-top:2px\9;_padding-top:2px;text-decoration:none!important;}
+a.lnk{background-image:url("../../common/icon/arrow.gif");}
+a.adv{background-image:url("../../common/icon/adv.gif");}
+a.help{background-image:url("../../common/icon/help.gif");}

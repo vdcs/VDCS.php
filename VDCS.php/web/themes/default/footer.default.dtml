@@ -1,0 +1,42 @@
+<div id="footer"><div class="inners">
+	<div class="menu">
+<ul>
+<themes:menu("bottom")>
+<li [menu:atts]><a href="[menu:url]" [menu:att]><span>[menu:name]</span></a></li>
+</themes>
+</ul>
+	</div>
+	<div class="logo"><a class="root" href="<url:root>"><span><app:web.name></span></a></div>
+	<div class="links">
+		<h2></h2>
+		<ul>
+		<li><a href="http://e.weibo.com/" target="_blank"><app:web.shortname>新浪官方微博</a></li>
+		<li><a href="http://t.qq.com/" target="_blank"><app:web.shortname>腾讯官方微博</a></li>
+		<li><a href="http://weixin.qq.com/" target="_blank"><app:web.shortname>微信公众帐号</a></li>
+		</ul>
+	</div>
+	<div class="contacts">
+		<h2></h2>
+		<ul>
+		<li><span class="address"><app:com.address></span></li>
+		<li><span class="phone"><app:com.phone></span></li>
+		<li><span class="email"><app:com.email></span></li>
+		</ul>
+	</div>
+	<div class="info">
+<p>
+<a href="<app:web.urls>"><app:web.name></a>
+<span class="dot"
+	 title="Processed in <web:stat.exectime> s, <web:stat.query> queries.&#10;Gzip <web:stat.gzip>, Memory usage <web:stat.memory>."
+	>&bull;</span>
+<app:com.cause>
+&nbsp;<xcml:themes("frame.copyright")>
+<span class="beian"><xcml:themes("var.beian")></span>
+<a href="<url:manage>" target="_blank">M</a>
+</p>
+	</div>
+</div></div>
+
+<div id="linktop"><a href="#top"><span></span></a></div>
+<div class="hide"><xcml:themes("frame.stat")></div>
+<label:include file="/footer.blank">

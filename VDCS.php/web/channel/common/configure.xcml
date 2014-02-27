@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>var,config,url.script,url.rewrite</node>
+	</configure>
+	<var>
+		<name>{@name}</name>
+		<names>{@names}</names>
+	</var>
+	<config>
+		<model>configure</model>
+	</config>
+	<url.script>
+		<indexs><![CDATA[<app:url.root>]]></indexs>
+	</url.script>
+	<url.rewrite>
+		<indexs><![CDATA[<app:url.root>]]></indexs>
+	</url.rewrite>
+</xcml>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,value</field>
+	</configure>
+	<item>
+		<key>form.clew.sign</key>
+		<value><![CDATA[]]></value>
+	</item>
+	<item>
+		<key>form.put</key>
+		<value><![CDATA[<font class="default">{$text}</font>]]></value>
+	</item>
+	<item>
+		<key>form.header.title</key>
+		<value><![CDATA[
+<!-- multibar.body -->
+<table class="frm fill">
+<tr class="bar title"><td colspan="2">{$title}</td></tr>
+]]></value>
+	</item>
+	<item>
+		<key>form.header</key>
+		<value><![CDATA[
+<!-- multibar.body -->
+<table class="frm fill">
+]]></value>
+	</item>
+	<item>
+		<key>form.footer</key>
+		<value><![CDATA[
+</table>
+]]></value>
+	</item>
+	<item>
+		<key>form.header.table</key>
+		<value><![CDATA[<table class="frm">]]></value>
+	</item>
+	<item>
+		<key>form.footer.table</key>
+		<value><![CDATA[</table>]]></value>
+	</item>
+	
+	<item>
+		<key>form.bar</key>
+		<value><![CDATA[
+<tr class="{$class} title" id="{$id.item}"><td colspan="2">{$caption}</td></tr>]]></value>
+	</item>
+	<item>
+		<key>form.item</key>
+		<value><![CDATA[
+<tr class="{$class}" id="{$id.item}" {$style} onMouseOver="javascript:this.className='{$class} pop';" onMouseOut="javascript:this.className='{$class}';">
+<td class="caption">{$option.select}{$caption}:<br/>{$caption.explain}</td>
+<td class="input">{$input} {$note} {$clew.sign} {$explain}</td>
+</tr>]]></value>
+	</item>
+	<item>
+		<key>form.item.put</key>
+		<value><![CDATA[
+<tr class="{$class}" id="{$id.item}" {$style} onMouseOver="javascript:this.className='{$class} pop';" onMouseOut="javascript:this.className='{$class}';">
+<td class="caption">{$option.select}{$caption}:<br/>{$caption.explain}</td>
+<td class="input put">{$input} {$note} {$clew.sign} {$explain}</td>
+</tr>]]></value>
+	</item>
+	<item>
+		<key>form.item.hidden</key>
+		<value><![CDATA[
+<tr class="hide" id="{$id.item}">{$input}<td class="caption"></td><td class="input"></td></tr>]]></value>
+	</item>
+	<item>
+		<key>form.item.hide</key>
+		<value><![CDATA[
+<tr class="hide" id="{$id.item}">{$input}<td class="caption"></td><td class="input"></td></tr>]]></value>
+	</item>
+	<item>
+		<key>form.item.textbox</key>
+		<value><![CDATA[
+<tr class="{$class}" id="{$id.item}" {$style} onMouseOver="javascript:this.className='{$class} pop';" onMouseOut="javascript:this.className='{$class}';">
+<td class="caption caption-explain" valign="top">{$option.select}{$caption}:<br/>{$note} {$clew.sign}<br/>{$caption.explain}</td>
+<td class="input">
+<table class="blk">
+<tr>
+<td>{$input}</td>
+<td width="3"></td>
+<td valign="bottom"><img class="icon hand" src="<app:url.images>common/icon/resize_minus.gif" onclick="javascript:dcs.post.doTextareaResize('{$form.name}.{$name}','-',3);"><br/><img class="icon hand" src="<app:url.images>common/icoicon/resize_plus.gif" onclick="javascript:dcs.post.doTextareaResize('{$form.name}.{$name}','+',3);"></td>
+</tr>
+</table>
+<div class="explain">{$explain}</div></td>
+</tr>]]></value>
+	</item>
+	<item>
+		<key>form.item.editor</key>
+		<value><![CDATA[
+<tr class="{$class}" id="{$id.item}" {$style}>
+<td class="caption caption-explain" valign="top">{$option.select}{$caption}:<br/>{$note} {$clew.sign}<br/>{$caption.explain}</td>
+<td class="input">{$input}<div class="explain">{$explain}</div></td>
+</tr>]]></value>
+	</item>
+	<item>
+		<key>form.item.upload</key>
+		<value><![CDATA[
+<tr class="{$class}" id="{$id.item}" {$style}>
+<td class="caption">{$caption}:</td>
+<td class="input">{$input} {$explain}</td>
+</tr>]]></value>
+	</item>
+	
+	
+	<item>
+		<key>form.item.code.caption</key>
+		<value><![CDATA[[编码模式]]]></value>
+	</item>
+	<item>
+		<key>form.item.code.explain</key>
+		<value><![CDATA[<input type="button" class="btn switchcode" value="点击切换编码模式" onclick="$f.setValue('{$form.name}._chk',''); $f.setValue('{$form.name}._sp_code',$f.getValue('{$form.name}.{$form.field.sp.code}')); $f.doSubmit('{$form.name}')" /> <input type="hidden" name="_sp_code" value="" />]]></value>
+	</item>
+	
+	
+	<item>
+		<key>form.multibar.bar</key>
+		<value><![CDATA[<div id="fbm-bar"><table class="multibar">
+<tr class="{$class}"><td colspan="2"><div class="{$class}-items" id="fbm-bars"></div></td></tr>
+</table></div>
+<div id="fbm-loaddata" class="multibar-loaddata"><span>数据加载中...</span></div>
+<div id="fbm-template-bar" class="hide"><a id="fbm-bar-{key}" _key="{key}" href="javascript:;" onclick="javascript:ui.fbm.click('{key}');"><span>{title}</span></a></div>
+<div id="fbm-define" class="hide">{$explain}</div>
+<script type="text/javascript">$(function(){fbm.init()});</script>]]></value>
+	</item>
+	<item>
+		<key>form.multibar.head</key>
+		<value><![CDATA[<tbody id="fbm-body-{$id}" class="display_{$display}">]]></value>
+	</item>
+	<item>
+		<key>form.multibar.foot</key>
+		<value><![CDATA[</tbody>]]></value>
+	</item>
+	
+	
+	<item>
+		<key>form.title</key>
+		<value><![CDATA[[Default Title]]]></value>
+	</item>
+	<item>
+		<key>form.title.upload</key>
+		<value><![CDATA[[上传至内容]]]></value>
+	</item>
+	<item>
+		<key>form.option.select.all</key>
+		<value><![CDATA[<input type="checkbox" class="normal" name="__option_select_all" value="yes" onclick="javascript:dcs.formx.doOptionSelectAll(this.form,'{$option.select.prefix}');" />全选]]></value>
+	</item>
+	<item>
+		<key>form.submit.title</key>
+		<value><![CDATA[]]></value>
+	</item>
+	<item>
+		<key>form.submit.title.add</key>
+		<value><![CDATA[添加]]></value>
+	</item>
+	<item>
+		<key>form.submit.title.edit</key>
+		<value><![CDATA[编辑]]></value>
+	</item>
+	<item>
+		<key>form.submit.title.default</key>
+		<value><![CDATA[操作]]></value>
+	</item>
+	<item>
+		<key>form.error.item</key>
+		<value><![CDATA[{$caption} 不能为空或不符合规则！]]></value>
+	</item>
+	<item>
+		<key>form.class.bar</key>
+		<value><![CDATA[bar]]></value>
+	</item>
+	<item>
+		<key>form.class.multibar</key>
+		<value><![CDATA[multibar]]></value>
+	</item>
+	<item>
+		<key>form.class.row</key>
+		<value><![CDATA[row]]></value>
+	</item>
+	<item>
+		<key>form.class.rows</key>
+		<value><![CDATA[rows]]></value>
+	</item>
+	<item>
+		<key>form.class.rowsp</key>
+		<value><![CDATA[rowsp]]></value>
+	</item>
+	<item>
+		<key>form.class.rowput</key>
+		<value><![CDATA[row h]]></value>
+	</item>
+	<item>
+		<key>form.postfix</key>
+		<value><![CDATA[[.xcml]]]></value>
+	</item>
+</xcml>

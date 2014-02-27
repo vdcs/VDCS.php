@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>search,class</frame>
+		<search.fields></search.fields>
+		<search.times>tim</search.times>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>dbu_coupon</table.name>
+		<table.px></table.px>
+		<table.field.id>id</table.field.id>
+		<table.field.pic></table.field.pic>
+		<table.fields.value>id=id</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.query.audit>{@table.px}status=1</list.table.query.audit>
+		<list.table.query.inaudit>{@table.px}status=2</list.table.query.inaudit>
+		<list.table.query.unaudit>{@table.px}status=0</list.table.query.unaudit>
+		<list.table.query.show>{@table.px}status=1</list.table.query.show>
+		<list.table.query.hide>{@table.px}status=0</list.table.query.hide>
+		<list.handle.select.option>show,hide,delete</list.handle.select.option>
+		<list.handle.sql.audit>update {@table.name} set {@table.px}status=1 where {@table.px}id in ({$ids})</list.handle.sql.audit>
+		<list.handle.sql.inaudit>update {@table.name} set {@table.px}status=2 where {@table.px}id in ({$ids})</list.handle.sql.inaudit>
+		<list.handle.sql.unaudit>update {@table.name} set {@table.px}status=0 where {@table.px}id in ({$ids})</list.handle.sql.unaudit>
+		<list.handle.sql.show>update {@table.name} set {@table.px}status=1 where {@table.px}id in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.hide>update {@table.name} set {@table.px}status=0 where {@table.px}id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.delete>delete from {@table.name} where {@table.px}id in ({$ids})</list.handle.sql.delete>
+		
+		<view.sql>select top 1 * from {@table.name} where {@table.px}id={$id}</view.sql>
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[优惠券]]></title.name>
+		<title.view><![CDATA[优惠券明细]]></title.view>
+		<title.list><![CDATA[优惠券列表]]></title.list>
+		<title.list.><![CDATA[优惠券列表]]></title.list.>
+		<title.list.payed><![CDATA[优惠券列表]]></title.list.payed>
+		<title.list.audit><![CDATA[已审核优惠券]]></title.list.audit>
+		<title.list.inaudit><![CDATA[待审核优惠券]]></title.list.inaudit>
+		<title.list.unaudit><![CDATA[未审核优惠券]]></title.list.unaudit>
+		<title.list.show><![CDATA[显示优惠券]]></title.list.show>
+		<title.list.hide><![CDATA[隐藏优惠券]]></title.list.hide>
+		<title.add><![CDATA[添加新优惠券]]></title.add>
+		<title.edit><![CDATA[编辑优惠券]]></title.edit>
+		
+		<title.frame.class><![CDATA[优惠券分类]]></title.frame.class>
+		<title.frame.search><![CDATA[优惠券搜索]]></title.frame.search>
+		<search.fields.att></search.fields.att>
+		
+		<error.not.exist><![CDATA[您要操作的 优惠券 不存在！]]></error.not.exist>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 {@unit}优惠券！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 {@unit}优惠券！]]></handle.ok.edit>
+		<handle.ok.audit><![CDATA[成功待审核了 {$total} {@unit}优惠券！]]></handle.ok.audit>
+		<handle.ok.inaudit><![CDATA[成功待审核了 {$total} {@unit}优惠券！]]></handle.ok.inaudit>
+		<handle.ok.unaudit><![CDATA[成功未审核了 {$total} {@unit}优惠券！]]></handle.ok.unaudit>
+		<handle.ok.show><![CDATA[成功显示了 {$total} {@unit}优惠券！]]></handle.ok.show>
+		<handle.ok.hide><![CDATA[成功隐藏了 {$total} {@unit}优惠券！]]></handle.ok.hide>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} {@unit}优惠券！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+	</template>
+</xcml>

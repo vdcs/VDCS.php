@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="struct">
+	<configure>
+		<node>item</node>
+	</configure>
+	<item>
+		<__key><![CDATA[config.base]]></__key>
+		<__name><![CDATA[基本配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.var><![CDATA[名称设定			###type~bar]]></bar.var>
+		<pre.name><![CDATA[频道简称			###property.min~1]]></pre.name>
+		<pre.names><![CDATA[页面名称			###property.min~1]]></pre.names>
+		<bar.title><![CDATA[标题设定			###type~bar]]></bar.title>
+		<var.title><![CDATA[首页			###property.min~1]]></var.title>
+		<var.title.login><![CDATA[登录页		###property.min~1]]></var.title.login>
+		<var.title.logout><![CDATA[登出页		###property.min~1]]></var.title.logout>
+		<var.title.register><![CDATA[注册页		###property.min~1]]></var.title.register>
+		<var.title.lostpassword><![CDATA[找回密码页	###property.min~1]]></var.title.lostpassword>
+		<var.title.resetpassword><![CDATA[重置密码页	###property.min~1]]></var.title.resetpassword>
+		<var.title.activation><![CDATA[激活帐户页	###property.min~1]]></var.title.activation>
+		<var.title.invite><![CDATA[注册邀请页		###property.min~1]]></var.title.invite>
+		<var.title.agreement><![CDATA[注册协议页	###property.min~1]]></var.title.agreement>
+		<var.title.pass5><![CDATA[Pass5支持页		###property.min~1]]></var.title.pass5>
+	</item>
+	<item>
+		<__key><![CDATA[config.adv]]></__key>
+		<__name><![CDATA[高级配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.url><![CDATA[SEO设定			###type~bar]]></bar.url>
+		<config.url><![CDATA[URL模式			###type~radio		^att~<control:att("file","url.mode")>]]></config.url>
+	</item>
+	<item>
+		<__key><![CDATA[config.login]]></__key>
+		<__name><![CDATA[登录配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<num.islogin><![CDATA[是否可登录		###type~radio		^att~1=可以登录;0=关闭登录]]></num.islogin>
+	</item>
+	<item>
+		<__key><![CDATA[config.register]]></__key>
+		<__name><![CDATA[注册配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<num.isregister><![CDATA[是否可注册		###type~radio		^att~1=可以注册;0=关闭注册]]></num.isregister>
+		<bar.pivotal><![CDATA[关键设定			###type~bar]]></bar.pivotal>
+		<num.email.only><![CDATA[邮箱唯一		###type~radio		^att~1=一个邮箱只能注册一个用户;0=一个邮箱可以注册多个用户]]></num.email.only>
+		<num.issendmail><![CDATA[欢迎信息		###type~radio		^att~1=发送欢迎信息邮件;0=不发送欢迎信息邮件]]></num.issendmail>
+		<num.isactivation><![CDATA[邮件激活		###type~radio		^att~1=注册后需要邮件激活;0=注册后不需要邮件激活]]></num.isactivation>
+		<bar.username><![CDATA[用户名设定		###type~bar]]></bar.username>
+		<num.username.type><![CDATA[名称类型		###type~radio		^att~1=字母及数字组合;2=字母、数字及汉字组合]]></num.username.type>
+		<num.username.min><![CDATA[最短长度		###property.min~1	^style~size=20	^type~int]]></num.username.min>
+		<num.username.max><![CDATA[最长长度		###property.min~1	^style~size=20	^type~int]]></num.username.max>	
+		<bar.password><![CDATA[密码设定			###type~bar]]></bar.password>
+		<num.password.min><![CDATA[最短长度		###property.min~1	^style~size=20	^type~int]]></num.password.min>
+		<num.password.max><![CDATA[最长长度		###property.min~1	^style~size=20	^type~int]]></num.password.max>
+		<bar.email><![CDATA[邮件地址设定		###type~bar]]></bar.email>
+		<num.email.min><![CDATA[最短长度		###property.min~1	^style~size=20	^type~int]]></num.email.min>
+		<num.email.max><![CDATA[最长长度		###property.min~1	^style~size=20	^type~int]]></num.email.max>
+		<bar.realname><![CDATA[真实姓名设定		###type~bar]]></bar.realname>
+		<num.realname.min><![CDATA[最短长度		###property.min~1	^style~size=20	^type~int]]></num.realname.min>
+		<num.realname.max><![CDATA[最长长度		###property.min~1	^style~size=20	^type~int]]></num.realname.max>
+		<bar.hold><![CDATA[用户名保留设置		###type~bar]]></bar.hold>
+		<config.username.hold><![CDATA[精确保留		###property.min~0	^style~size=60 class="itxt"]]></config.username.hold>
+		<config.username.holds><![CDATA[模糊保留	###property.min~0	^style~size=60 class="itxt"]]></config.username.holds>
+	</item>
+	<item>
+		<__key><![CDATA[config.url]]></__key>
+		<__name><![CDATA[地址配置]]></__name>
+		<__file><![CDATA[configure]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.url.script><![CDATA[动态URL地址配置	###type~bar]]></bar.url.script>
+		<url.script.index><![CDATA[首页			###property.min~1	^style~size=60 class="itxt"]]></url.script.index>
+		<url.script.login><![CDATA[登录页		###property.min~1	^style~size=60 class="itxt"]]></url.script.login>
+		<url.script.register><![CDATA[注册页		###property.min~1	^style~size=60 class="itxt"]]></url.script.register>
+		<url.script.lostpassword><![CDATA[找回密码	###property.min~1	^style~size=60 class="itxt"]]></url.script.lostpassword>
+		<url.script.resetpassword><![CDATA[重置密码	###property.min~1	^style~size=60 class="itxt"]]></url.script.resetpassword>
+		<url.script.activation><![CDATA[激活帐户	###property.min~1	^style~size=60 class="itxt"]]></url.script.activation>
+		<url.script.invite><![CDATA[注册邀请		###property.min~1	^style~size=60 class="itxt"]]></url.script.invite>
+		<url.script.agreement><![CDATA[注册协议		###property.min~1	^style~size=60 class="itxt"]]></url.script.agreement>
+		<url.script.misc><![CDATA[综合请求		###property.min~1	^style~size=60 class="itxt"]]></url.script.misc>
+		<url.script.pass5><![CDATA[Pass5支持		###property.min~1	^style~size=60 class="itxt"]]></url.script.pass5>
+		<url.script.pass5.bind><![CDATA[Pass5绑定	###property.min~1	^style~size=60 class="itxt"]]></url.script.pass5.bind>
+		<url.script.pass5.login><![CDATA[Pass5登录	###property.min~1	^style~size=60 class="itxt"]]></url.script.pass5.login>
+		<bar.url.rewrite><![CDATA[静态URL地址配置(ISAPI Rewrite)		###type~bar]]></bar.url.rewrite>
+		<url.rewrite.index><![CDATA[首页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.index>
+		<url.rewrite.login><![CDATA[登录页		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.login>
+		<url.rewrite.register><![CDATA[注册页		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.register>
+		<url.rewrite.lostpassword><![CDATA[找回密码	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.lostpassword>
+		<url.rewrite.resetpassword><![CDATA[重置密码	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.resetpassword>
+		<url.rewrite.activation><![CDATA[激活帐户	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.activation>
+		<url.rewrite.invite><![CDATA[注册邀请		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.invite>
+		<url.rewrite.agreement><![CDATA[注册协议	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.agreement>
+		<url.rewrite.misc><![CDATA[综合请求		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.misc>
+		<url.rewrite.pass5><![CDATA[Pass5支持		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.pass5>
+		<url.rewrite.pass5.bind><![CDATA[Pass5绑定	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.pass5.bind>
+		<url.rewrite.pass5.login><![CDATA[Pass5登录	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.pass5.login>
+	</item>
+</xcml>

@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title><app:web.name> - 支付网关</title>
+<script type="text/javascript">
+var tradeno='<var:tradeno>';
+var url_return='<var:url_return>';
+</script>
+</head>
+<body>
+<h3><app:web.name> - 支付网关 </h3>
+<p>等待<a href="<var:url_return>" target="_blank">跳转</a>..</p>
+<meta http-equiv="refresh" content="3; url=<var:url_return>" />
+</body>
+</html>

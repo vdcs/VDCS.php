@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<var>
+		<title>Passport</title>
+		<title.login>帐户登录</title.login>
+		<title.logout>退出登录</title.logout>
+		<title.register>注册新帐户</title.register>
+	</var>
+	<num>
+		<islogin>1</islogin>
+		<isregister>1</isregister>
+	</num>
+	<config>
+	</config>
+</xcml>

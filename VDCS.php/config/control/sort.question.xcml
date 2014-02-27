@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,name</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<value></value>
+		<name><![CDATA[没有提示问题]]></name>
+	</item>
+	<item>
+		<value>1</value>
+		<name><![CDATA[我的宠物名字？]]></name>
+	</item>
+	<item>
+		<value>2</value>
+		<name><![CDATA[我最好的朋友是谁？]]></name>
+	</item>
+	<item>
+		<value>3</value>
+		<name><![CDATA[我最喜爱的颜色？]]></name>
+	</item>
+	<item>
+		<value>4</value>
+		<name><![CDATA[我最喜爱的电影？]]></name>
+	</item>
+	<item>
+		<value>5</value>
+		<name><![CDATA[我最喜爱的歌曲？]]></name>
+	</item>
+	<item>
+		<value>6</value>
+		<name><![CDATA[我最喜爱的影星？]]></name>
+	</item>
+	<item>
+		<value>7</value>
+		<name><![CDATA[我最喜爱的食物？]]></name>
+	</item>
+	<item>
+		<value>8</value>
+		<name><![CDATA[我最大的爱好？]]></name>
+	</item>
+</xcml>

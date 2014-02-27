@@ -1,0 +1,14 @@
+﻿<label:include file="/header-nav">
+
+	<div class="menu"><div class="inner">
+<ul>
+<themes:menu("main")>
+<li menu="[menu:id]" [menu:atts]><a href="[menu:url]" [menu:att]><span>[menu:name]</span></a></li>
+<@part:space>
+<li class="linev"><i></i></li>
+</themes>
+</ul>
+<!-- menu search -->
+	</div></div>
+
+<label:include file="/header-end">

@@ -1,0 +1,3 @@
+
+<label:include script="<web:url.themed>shop/auction.js">
+<script type="text/javascript">auction.init("{@channel}","<view:id>");</script>

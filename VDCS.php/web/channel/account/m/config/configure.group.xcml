@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links,group</frame>
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[用户组]]></title.name>
+		<title.add><![CDATA[添加新用户]]></title.add>
+		<title.edit><![CDATA[编辑用户组]]></title.edit>
+		<title.delete><![CDATA[删除用户组]]></title.delete>
+		<title.config><![CDATA[用户组配置]]></title.config>
+		
+		<error.id><![CDATA[您要添加的用户组ID不符合规则！]]></error.id>
+		<error.exist.id><![CDATA[您要添加的用户组ID已经存在！]]></error.exist.id>
+		<error.not.exist><![CDATA[您要编辑的用户组不存在！]]></error.not.exist>
+		<error.not.exist.id><![CDATA[您要删除的用户组不存在！]]></error.not.exist.id>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 个新用户组！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 个用户组！]]></handle.ok.edit>
+		<handle.ok.delete><![CDATA[成功删除了 1 个用户组！]]></handle.ok.delete>
+		<handle.ok.config><![CDATA[成功编辑了 1 个用户组配置！]]></handle.ok.config>
+	</lang>
+	
+	<template>
+		
+		<menu.links><![CDATA[
+@@@title=用户组操作;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("action=add")>">添加用户组</a></li>
+</ul>
+</div>
+]]></menu.links>
+		<menu.group><![CDATA[
+@@@title=用户组;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<var:menu.content.group>
+</ul>
+</div>
+]]></menu.group>
+
+	</template>
+</xcml>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="sql">
+	<configure>
+		<node>struct,label</node>
+	</configure>
+	<struct xmlns:data="node" xmlns:order="node">
+		<table.name><![CDATA[{@table.name}]]></table.name>
+		<table.px><![CDATA[{@table.px}]]></table.px>
+		<table.field.id><![CDATA[{@table.px}id]]></table.field.id>
+		<list.table><![CDATA[]]></list.table>
+		<list.fields><![CDATA[*]]></list.fields>
+		<list.query><![CDATA[{@table.px}status=1]]></list.query>
+		<list.query.news><![CDATA[{@table.px}status=1 and {@table.px}isnew=1]]></list.query.news>
+		<list.query.sales><![CDATA[{@table.px}status=1 and {@table.px}issale=1]]></list.query.sales>
+		<list.order><![CDATA[{@table.px}id desc]]></list.order>
+		<list.orders><![CDATA[]]></list.orders>
+		<list.search.fields><![CDATA[topic=6,{@table.px}topic;sp_keyword=6;username=6]]></list.search.fields>
+		<view.sql><![CDATA[select top 1 * from {@table.name} where {@table.px}status=1 and {@table.px}id={$id}]]></view.sql>
+		<view.px><![CDATA[{@table.px}]]></view.px>
+		<view.update><![CDATA[update {@table.name} set {@table.px}total_view={@table.px}total_view+1 where {@table.px}id={$id}]]></view.update>
+		<order.update><![CDATA[update {@table.name} set {@table.px}total_order={@table.px}total_order+1 where {@table.px}id={$id}]]></order.update>
+		<buy.update><![CDATA[update {@table.name} set 
+				{@table.px}total_day={@table.px}total_day+1,
+				{@table.px}total_week={@table.px}total_week+1,
+				{@table.px}total_month={@table.px}total_month+1,
+				{@table.px}total_buy={@table.px}total_buy+1 where {@table.px}id={$id}]]></buy.update>
+	 	<comment.update><![CDATA[update {@table.name} set {@table.px}total_comment={@table.px}total_comment+1 where {@table.px}id={$id}]]></comment.update>
+		<fav.update><![CDATA[update {@table.name} set {@table.px}total_fav={@table.px}total_fav+1 where {@table.px}id={$id}]]></fav.update>
+		<regard.update><![CDATA[update {@table.name} set {@table.px}total_regard={@table.px}total_regard+1 where {@table.px}id={$id}]]></regard.update>
+		
+		<srv.relate><![CDATA[srvid={$srvid}]]></srv.relate>
+	 	<ua.relate><![CDATA[uuid={$uuid}]]></ua.relate>
+	 	
+	 	<data:table.name><![CDATA[{@data:table.name}]]></data:table.name>
+		<data:table.px><![CDATA[{@data:table.px}]]></data:table.px>
+		<data:list.sql><![CDATA[select * from {@data:table.name} where rootid={$id} and {@data:table.px}status=1 order by orderid desc,{@data:table.px}id asc]]></data:list.sql>
+		<data:view.update><![CDATA[update {@data:table.name} set {@data:table.px}total_view={@data:table.px}total_view+1 where {@data:table.px}id={$dataid}]]></data:view.update>
+		
+		<order:table.field.orderno><![CDATA[orderno]]></order:table.field.orderno>
+	</struct>
+	<label>
+		<table.name><![CDATA[{@table.name}]]></table.name>
+		<table.field><![CDATA[id={@table.px}id;srvid=srvid;classid=classid;brandid=brandid;
+			key={@table.px}key;topic={@table.px}topic;subtopic={@table.px}subtopic;name={@table.px}name;brand={@table.px}brand;serial={@table.px}serial;pic={@table.px}pic;summary={@table.px}summary;
+			prop1={@table.px}prop1;prop2={@table.px}prop2;prop3={@table.px}prop3;prop4={@table.px}prop4;prop5={@table.px}prop5;
+			price={@table.px}price;price.old={@table.px}price_old;price.market={@table.px}price_market;price.trade={@table.px}price_trade;
+			unit={@table.px}unit;weight={@table.px}weight;amount={@table.px}amount;amounts={@table.px}amounts;discount={@table.px}discount;
+			con.emoney={@table.px}con_emoney;con.points={@table.px}con_points;con.score={@table.px}con_score;con.gift={@table.px}con_gift;
+			sp_keyword=sp_keyword;sp_emoney=sp_emoney;sp_points=sp_points;sp_score=sp_score;sp_poll_agree=sp_poll_agree;sp_poll_oppose=sp_poll_oppose;
+			total={@table.px}total_buy;total.view={@table.px}total_view;total.order={@table.px}total_order;total.buy={@table.px}total_buy;total.day={@table.px}total_day;total.week={@table.px}total_week;total.month={@table.px}total_month;
+			total.data={@table.px}total_data;total.comment={@table.px}total_comment;total.fav={@table.px}total_fav;total.regard={@table.px}total_regard;
+			isnew={@table.px}isnew;issale={@table.px}issale;
+			isgood={@table.px}isgood;istop={@table.px}istop;tim={@table.px}tim]]></table.field>
+		<table.fields><![CDATA[{@table.px}id,srvid,classid,brandid,
+			{@table.px}key,{@table.px}topic,{@table.px}subtopic,{@table.px}name,{@table.px}brand,{@table.px}serial,{@table.px}pic,{@table.px}summary,
+			{@table.px}prop1,{@table.px}prop2,{@table.px}prop3,{@table.px}prop4,{@table.px}prop5,
+			{@table.px}price,{@table.px}price_old,{@table.px}price_market,{@table.px}price_trade,
+			{@table.px}unit,{@table.px}weight,{@table.px}amount,{@table.px}amounts,{@table.px}discount,
+			{@table.px}con_emoney,{@table.px}con_points,{@table.px}con_score,{@table.px}con_gift,
+			sp_keyword,sp_emoney,sp_points,sp_score,sp_poll_agree,sp_poll_oppose,
+			{@table.px}total_view,{@table.px}total_order,{@table.px}total_buy,{@table.px}total_day,{@table.px}total_week,{@table.px}total_month,
+			{@table.px}total_data,{@table.px}total_comment,{@table.px}total_fav,{@table.px}total_regard,
+			{@table.px}isnew,{@table.px}issale,
+			{@table.px}isgood,{@table.px}istop,{@table.px}tim]]></table.fields>
+		<block><![CDATA[select top {$num} {$table.fields} from {@table.name} where {@table.px}status=1 {$query.append} {$order}]]></block>
+		<block.order><![CDATA[new=order by orderid desc,{@table.px}id desc;
+			hotview=order by {@table.px}total_view desc,orderid desc,{@table.px}id desc;
+			hotorder=order by {@table.px}total_order desc,orderid desc,{@table.px}id desc;
+			hotbuy=order by {@table.px}total_buy desc,orderid desc,{@table.px}id desc;
+			hotday=order by {@table.px}total_day desc,orderid desc,{@table.px}id desc;
+			hotweek=order by {@table.px}total_week desc,orderid desc,{@table.px}id desc;
+			hotmonth=order by {@table.px}total_month desc,orderid desc,{@table.px}id desc;
+			hotcomment=order by {@table.px}total_comment desc,orderid desc,{@table.px}id desc;
+			hotfav=order by {@table.px}total_fav desc,orderid desc,{@table.px}id desc;
+			hotregard=order by {@table.px}total_regard desc,orderid desc,{@table.px}id desc;
+			
+			newx=and {@table.px}isnew>0 order by {@table.px}isnew desc,orderid desc,{@table.px}id desc;
+			sale=and {@table.px}issale>0 order by {@table.px}issale desc,orderid desc,{@table.px}id desc;
+			
+			pic=and length({@table.px}pic)>0 order by orderid desc,{@table.px}id desc;
+			hots=and {@table.px}ishot=3 order by orderid desc,{@table.px}id desc;
+			hotz=and {@table.px}ishot=2 order by orderid desc,{@table.px}id desc;
+			hot=and {@table.px}ishot>0 order by {@table.px}ishot desc,orderid desc,{@table.px}id desc;
+			goods=and {@table.px}isgood=3 order by orderid desc,{@table.px}id desc;
+			goodz=and {@table.px}isgood=2 order by orderid desc,{@table.px}id desc;
+			good=and {@table.px}isgood>0 order by {@table.px}isgood desc,orderid desc,{@table.px}id desc;
+			tops=and {@table.px}istop=3 order by orderid desc,{@table.px}id desc;
+			topz=and {@table.px}istop=2 order by orderid desc,{@table.px}id desc;
+			top=and {@table.px}istop>0 order by {@table.px}istop desc,orderid desc,{@table.px}id desc;]]></block.order>
+		<block.url>view</block.url>
+		<list.query>{@table.px}status=1 {$query_append}</list.query>
+		<list.order><![CDATA[new={@table.px}id desc]]></list.order>
+		<list.orders><![CDATA[new={@table.px}id asc]]></list.orders>
+		<list.url>list</list.url>
+	</label>
+</xcml>

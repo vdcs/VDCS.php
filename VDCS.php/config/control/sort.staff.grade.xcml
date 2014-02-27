@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,key,name</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<value>0</value>
+		<key>base</key>
+		<name>普通</name>
+	</item>
+	<item>
+		<value>10</value>
+		<key>manager</key>
+		<name>管理员</name>
+	</item>
+</xcml>

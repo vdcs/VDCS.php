@@ -1,0 +1,62 @@
+
+<script type="text/javascript">
+	var jboxi,payment_tradeno='',poll_second=5;
+	var payment_test=false;		//payment_test=true;
+	payment_callback=function(tradeno){
+	payment_tradeno=tradeno;
+	if(payment_test) jboxi.find('.itip').find('span').append(tradeno);
+	payment_poll_agent(tradeno);
+	};
+	payment_poll_agent=function(tradeno){
+	$w.timeout(function(){payment_poll(tradeno)},poll_second);
+	};
+	payment_poll=function(tradeno){
+	console.assert(false,'static: '+tradeno+' '+$tim.getNow(true));
+	var _url='/common/payment.x?action=status&tradeno='+tradeno;
+	$ajax({url:_url,value:'xml',ready:function(xml){
+		var maps=$util.toMapByXML(xml);
+		var treeVar=maps.getItemTree('var');
+		if(treeVar.v('status')=='succeed'){
+			jboxi.ibox('close');
+			var message=treeVar.v('desc');
+			if(!message) message='充值成功！';
+			app.popup('succeed',message,true,0,function(){
+				$p.go('/account/assets.html');
+			});
+		}
+		else{
+			console.assert(false,'static: '+tradeno+','+treeVar.v('status')+' '+$tim.getNow(true));
+			payment_poll_agent(tradeno);
+		}
+	},error:true});
+};
+
+$(function(){
+	var tradeno='20130910-172755985';
+	
+	var jform=$('form[name="frm_action"]');
+	if(payment_test) jform.find('input[name="money"]').valer(0.01);
+	jform.find('a[href="#submit"]').click(function(){
+		var jmoney=jform.find('input[name="money"]');
+		var money=jmoney.val();
+		if(!money){
+			app.popup('info','请输入充值金额！');
+			jmoney.focus();
+			return false;
+		}
+		jboxi=$('#box_payment').ibox({nobtn:true});
+		jform.find('input[name="desc"]').val('充值 '+money+' 元');
+		jform.submit();
+		if(payment_test){
+			jboxi.find('a[href="#help"]').click(function(){
+				payment_callback(tradeno);
+				return false;
+			});
+		}
+		return false;
+	});
+
+	
+
+});
+</script>

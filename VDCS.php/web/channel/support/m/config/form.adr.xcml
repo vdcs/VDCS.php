@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+		<script.begin><![CDATA[<script type="text/javascript">
+		ui.fbm.relates({"upload":"base,content"});
+</script>]]></script.begin>
+		<script.end><![CDATA[]]></script.end>
+	</configure>
+	<input>
+		<type>text.key</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=1;classi=value]]></property>
+		<style>size=30 maxlength=20</style>
+		<caption><![CDATA[Key索引]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.name</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=1]]></property>
+		<style>size=60 maxlength=50</style>
+		<caption><![CDATA[广告名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>radio.type</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=]]></property>
+		<style></style>
+		<caption><![CDATA[广告类型]]></caption>
+		<att>pic=图片广告;text=文字广告</att>
+		<value>pic</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.title</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=1]]></property>
+		<style>size=60 maxlength=200</style>
+		<caption><![CDATA[广告标题]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.linkurl</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=1]]></property>
+		<style>size=60 maxlength=200</style>
+		<caption><![CDATA[链接地址]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[点击广告后的链接地址]]></explain>
+	</input>
+	
+	<input>
+		<type>text.res</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[广告资源]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<control:form.element("upload.linkurl","","channel={@channel};filetype=pic;filename={@up.filename};fileinput=res;inputtype=pic;title=上传图片")>$$$]]></explain>
+	</input>
+	
+	
+	<input>
+		<type>text.sizew</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=]]></property>
+		<style>size=30 maxlength=20</style>
+		<caption><![CDATA[资源宽度]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[PX$$$单位：像素]]></explain>
+	</input>
+	<input>
+		<type>text.sizeh</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=]]></property>
+		<style>size=30 maxlength=20</style>
+		<caption><![CDATA[资源高度]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[PX$$$单位：像素]]></explain>
+	</input>
+	<input>
+		<type>textbox.params</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>rows=3 cols=45</style>
+		<caption><![CDATA[广告参数]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>textbox.content</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>rows=3 cols=45</style>
+		<caption><![CDATA[广告内容]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>textbox.explain</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>rows=3 cols=45</style>
+		<caption><![CDATA[广告说明]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>hidden.orderid</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=]]></property>
+		<style>size=20 maxlength=20 class="total"</style>
+		<caption><![CDATA[排 序 值]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[$$$排序值越大越靠前]]></explain>
+	</input>
+	<input>
+		<type>text.tim_up</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=1]]></property>
+		<style>size=20 maxlength=20 class="time"</style>
+		<caption><![CDATA[更新时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.tim</type>
+		<property><![CDATA[item=;action=add;type=time;max=20;min=1]]></property>
+		<style>size=20 maxlength=20 class="time"</style>
+		<caption><![CDATA[添加时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.status</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[当前状态]]></caption>
+		<att><![CDATA[<control:att("dict","data.hide")>]]></att>
+		<value>1</value>
+		<explain></explain>
+	</input>
+</xcml>

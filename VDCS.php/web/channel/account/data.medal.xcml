@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>item</node>
+		<field>value,name,pic,explain,img,icons</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<value>core</value>
+		<name>核心成员</name>
+		<pic>crown.gif</pic>
+		<explain>社区核心的内部成员</explain>
+		<img><![CDATA[<img class="icon" src="<app:url.images>user/medal/crown.gif" title="核心成员&#10;社区核心的内部成员">]]></img>
+		<icons><![CDATA[<img class="icon" src="<app:url.images>user/medal/crown.gif" title="核心成员&#10;社区核心的内部成员"> 核心成员]]></icons>
+	</item>
+	<item>
+		<value>star</value>
+		<name>星使者</name>
+		<pic>star.gif</pic>
+		<explain>属于社区中的特殊星使者，所到之处会给他人带来方便</explain>
+		<img><![CDATA[<img class="icon" src="<app:url.images>user/medal/star.gif" title="星使者&#10;属于社区中的特殊星使者，所到之处会给他人带来方便">]]></img>
+		<icons><![CDATA[<img class="icon" src="<app:url.images>user/medal/star.gif" title="星使者&#10;属于社区中的特殊星使者，所到之处会给他人带来方便"> 星使者]]></icons>
+	</item>
+	<item>
+		<value>wise</value>
+		<name>风云人物</name>
+		<pic>wise.gif</pic>
+		<explain>社区中呼风唤雨的风云人物</explain>
+		<img><![CDATA[<img class="icon" src="<app:url.images>user/medal/wise.gif" title="年度风云人物&#10;在社区中呼风唤雨的风云人物">]]></img>
+		<icons><![CDATA[<img class="icon" src="<app:url.images>user/medal/wise.gif" title="年度风云人物&#10;在社区中呼风唤雨的风云人物"> 年度风云人物]]></icons>
+	</item>
+	<item>
+		<value>vip</value>
+		<name>最有价值会员</name>
+		<pic>vip.gif</pic>
+		<explain>在社区中积极参与技术讨论、乐于助人的杰出会员</explain>
+		<img><![CDATA[<img class="icon" src="<app:url.images>user/medal/vip.gif" title="最有价值会员&#10;在社区中积极参与技术讨论、乐于助人的杰出会员">]]></img>
+		<icons><![CDATA[<img class="icon" src="<app:url.images>user/medal/vip.gif" title="最有价值会员&#10;在社区中积极参与技术讨论、乐于助人的杰出会员"> 最有价值会员]]></icons>
+	</item>
+	<item>
+		<value>male</value>
+		<name>魅力男</name>
+		<pic>male.gif</pic>
+		<explain>网站中的魅力男人们</explain>
+		<img><![CDATA[<img class="icon" src="<app:url.images>user/medal/male.gif" title="魅力男&#10;网站中的魅力男人们">]]></img>
+		<icons><![CDATA[<img class="icon" src="<app:url.images>user/medal/male.gif" title="魅力男&#10;网站中的魅力男人们"> 魅力男]]></icons>
+	</item>
+	<item>
+		<value>female</value>
+		<name>魅力女</name>
+		<pic>female.gif</pic>
+		<explain>网站中的魅力女人们</explain>
+		<img><![CDATA[<img class="icon" src="<app:url.images>user/medal/female.gif" title="魅力女&#10;网站中的魅力女人们">]]></img>
+		<icons><![CDATA[<img class="icon" src="<app:url.images>user/medal/female.gif" title="魅力女&#10;网站中的魅力女人们"> 魅力女]]></icons>
+	</item>
+	<item>
+		<value>water</value>
+		<name>超级水王</name>
+		<pic>happy.gif</pic>
+		<explain>社区中比较罕见的超级灌水大王</explain>
+		<img><![CDATA[<img class="icon" src="<app:url.images>user/medal/happy.gif" title="超级水王&#10;社区中比较罕见的超级灌水大王">]]></img>
+		<icons><![CDATA[<img class="icon" src="<app:url.images>user/medal/happy.gif" title="超级水王&#10;社区中比较罕见的超级灌水大王"> 超级水王]]></icons>
+	</item>
+</xcml>

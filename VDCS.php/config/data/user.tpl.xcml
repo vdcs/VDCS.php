@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>message</node>
+	</configure>
+	<message>
+		<nopopedom><![CDATA[
+<div class="align-center">
+<table cellspacing="1" cellpadding="4" class="tab" style="width:auto; margin:20px 0px 20px 0px;">
+<tr class="bar"><td>系统提示</td></tr>
+<tr class="row"><td class="align-center" style="padding:50px;">
+您的用户权限太低！
+</td></tr>
+</table>
+</div>
+]]></nopopedom>
+		<nopay><![CDATA[
+<div class="align-center">
+<table cellspacing="1" cellpadding="4" class="tab" style="width:auto; margin:20px 0px 20px 0px;">
+<tr class="bar"><td>系统提示</td></tr>
+<tr class="row"><td height="100" class="align-center" style="padding:50px;">
+	<table cellspacing="4" cellpadding="4">
+	<tr><td class="align-center">浏览此内容需支付 <font class="emoney">{$sp_emoney}</font> {$=app.unit.emoney$}和 <font class="light">{$sp_integral}</font> {$=app.unit.integral$}</td></tr>
+	<tr><td class="align-center">您的帐户目前有 <font class="emoney">{$user.emoney}</font> {$=app.unit.emoney$}和 <font class="light">{$user.integral}</font> {$=app.unit.integral$}</td></tr>
+	<form name="frm_common_notepay" action="" method="post" onsubmit="javascript:dcs.form.doOnceSubmit(this);">
+	<input type="hidden" name="_chk" value="notepay">
+	<tr><td class="align-center"><input type="submit" name="_sbt" class="btn" value="我要购买此内容" onclick="javascript:return dcs.pages.isClickReturn('您确实要花费 {$sp_emoney} {$=app.unit.emoney$}和 {$sp_integral} {$=app.unit.integral$} 购买此内容吗？',1);"></td></tr>
+	</form>
+	</table>
+</td></tr>
+</table>
+</div>
+]]></nopay>
+		<notpay><![CDATA[
+<div class="align-center">
+<table cellspacing="1" cellpadding="4" class="tab" style="width:auto; margin:20px 0px 20px 0px;">
+<tr class="bar"><td>系统提示</td></tr>
+<tr class="row"><td class="align-center" style="padding:50px;">
+	<table cellspacing="4" cellpadding="4" class="align-center">
+	<tr><td class="align-center">浏览此内容需支付 <font class="emoney">{$sp_emoney}</font> {$=app.unit.emoney$}和 <font class="light">{$sp_integral}</font> {$=app.unit.integral$}</td></tr>
+	<tr><td class="align-center">您的帐户只有 <font class="emoney">{$user.emoney}</font> {$=app.unit.emoney$}和 <font class="light">{$user.integral}</font> {$=app.unit.integral$}</td></tr>
+	<tr><td class="align-center">因金额不足，您目前无法购买或浏览些内容</td></tr>
+	</table>
+</td></tr>
+</table>
+</div>
+]]></notpay>
+	</message>
+</xcml>

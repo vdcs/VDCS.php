@@ -1,0 +1,33 @@
+﻿<label:include file="headers">
+
+
+<label:include script="<url:css>cms/block.css" type="css">
+
+<div class="Cobs">
+	<div class="CobBar"><p><span id="mbar_new_bar" class="MultiBarTxt">最新</span><span id="mbar_good_bar" class="MultiBarTxt">精华</span><span id="mbar_top_bar" class="MultiBarTxt">固顶</span><span class="MultiBarTxt">贴子</span></p></div>
+	<div class="CobList" id="mbar_new_content" style="display:none;"><div class="CobInner">
+asdfasdfasdfasdf
+	</div></div>
+	<div class="CobList" id="mbar_good_content" style="display:none;"><div class="CobInner">
+dddddddddddddddddddddd
+	</div></div>
+	<div class="CobList" id="mbar_top_content" style="display:none;"><div class="CobInner">
+fffffffffffffffffff
+	</div></div>
+	<div class="CobFooter"><p></p></div>
+</div>
+<script type="text/javascript">
+$(function(){
+	var mbar=new ui.MultiBar();
+	//mbar.set("class","MultiBar");
+	//mbar.set("classpop","MultiBar MultiBarPop");
+	mbar.set("classpop","MultiBarPop");
+	mbar.add("new",{bar:"mbar_new_bar",con:"mbar_new_content"});
+	mbar.add("good",{bar:"mbar_good_bar",con:"mbar_good_content"});
+	mbar.add("hot",{bar:"mbar_top_bar",con:"mbar_top_content"});
+	mbar.init();
+});
+</script>
+
+
+<label:include file="footers">

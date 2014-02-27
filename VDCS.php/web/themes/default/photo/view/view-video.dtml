@@ -1,0 +1,9 @@
+
+<div class="xplayer" data-url="<view:url>"><div class="loading">loading..</div></div>
+
+<label:include script="res/app.player.js">
+<script type="text/javascript">
+$(function(){
+	xplayer.initer('.xplayer',{});
+});	
+</script>

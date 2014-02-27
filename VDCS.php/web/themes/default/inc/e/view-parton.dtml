@@ -1,0 +1,6 @@
+	
+	<div class="partof parton">
+		<div class="l"><langs:view.class>: <view:class.nav></div>
+		<r><span class="author"><langs:view.author>: <i class="uname"><view:author></i></span></r>
+	</div>
+	

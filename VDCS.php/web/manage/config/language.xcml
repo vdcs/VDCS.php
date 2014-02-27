@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="lang">
+	<configure>
+		<node>common,model,frame,message</node>
+	</configure>
+	<common>
+		<menu.links><![CDATA[快捷方式]]></menu.links>
+		<menu.adv><![CDATA[高级管理]]></menu.adv>
+		<menu.modules><![CDATA[功能管理]]></menu.modules>
+		<menu.system><![CDATA[系统管理]]></menu.system>
+		<menu.kernel><![CDATA[核心管理]]></menu.kernel>
+		
+		<titles.page><![CDATA[{$name}{$title}]]></titles.page>
+		<titles.action><![CDATA[{$title}{$name}]]></titles.action>
+		<titles.handle><![CDATA[{$title}{$name}]]></titles.handle>
+		<titles.popedom><![CDATA[{$name}权限]]></titles.popedom>
+		<titles.manage><![CDATA[{$name}管理]]></titles.manage>
+		<titles.model><![CDATA[{$name}{$title}]]></titles.model>
+	</common>
+	<model>
+		<class.unknown><![CDATA[未分类]]></class.unknown>
+	</model>
+	<frame>
+		<nav.default><![CDATA[管理中心]]></nav.default>
+		<nav.system><![CDATA[系统管理中心]]></nav.system>
+	</frame>
+	<message>
+		<title><![CDATA[系统提示]]></title>
+		<nopopedom><![CDATA[您没有相关的操作权限]]></nopopedom>
+		<manager.lock><![CDATA[锁定管理帐号无法执行此操作]]></manager.lock>
+	</message>
+</xcml>

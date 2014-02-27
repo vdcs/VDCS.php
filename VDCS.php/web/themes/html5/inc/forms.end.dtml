@@ -1,0 +1,28 @@
+</form>
+</dl>
+</div>
+
+<label:include script="res/VDCS.vform.js">
+<script type="text/javascript">
+app._xforms={
+	initer:function(ps,selector){
+		ps=ox({frm:'frm_post',
+			names			: ('<web:var.subtitle>'?'<web:var.subtitle>':'<web:var.title>'),
+			message_formcheck	: '请填写必要的表单信息！',
+			message_parser		: '处理中..',
+			message_succeed		: '处理成功！',
+			servURL			: app.serve('{@channel}/{@portal}/{@module}')},ps);
+		var backurl=$req.q('backurl')||$req.q('url');
+		if(backurl) ps.backurl=backurl;
+		this._initer(ps,selector);if(!this.isinit)return;
+		this.submitInit();
+	},
+'':''};
+app.xforms=extendo(app.xform,app._xforms);
+
+$(function(){
+	$f.bindi();
+	$vcode.setChannel('{@channel}');
+	$vcode.bind($('#vcode_input'),$('#vcode_support'));
+});
+</script>

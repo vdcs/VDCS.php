@@ -1,0 +1,24 @@
+
+	<item>
+		<__key><![CDATA[data.ads]]></__key>
+		<__name><![CDATA[广告配置]]></__name>
+		<__file><![CDATA[data.ads]]></__file>
+		<bar.nav><![CDATA[导航条			###type~bar]]></bar.nav>
+		<nav.text><![CDATA[文字提示			###type~textbox		^style~cols=60 rows=3]]></nav.text>
+		<nav.space><![CDATA[间隔提示			###type~textbox		^style~cols=60 rows=3]]></nav.space>
+		<bar.block><![CDATA[文本块			###type~bar]]></bar.block>
+		<block.value><![CDATA[默认页			###type~textbox		^style~cols=60 rows=3]]></block.value>
+		<block.index><![CDATA[首页			###type~textbox		^style~cols=60 rows=3]]></block.index>
+		<block.list><![CDATA[列表页			###type~textbox		^style~cols=60 rows=3]]></block.list>
+		<block.view><![CDATA[浏览页			###type~textbox		^style~cols=60 rows=3]]></block.view>
+		<block.post><![CDATA[发贴页			###type~textbox		^style~cols=60 rows=3]]></block.post>
+		<block.vote><![CDATA[投票页			###type~textbox		^style~cols=60 rows=3]]></block.vote>
+		<bar.view><![CDATA[浏览页			###type~bar]]></bar.view>
+		<view.banner><![CDATA[Banner条			###type~textbox		^style~cols=60 rows=3]]></view.banner>
+		<view.text><![CDATA[间隙文字			###type~textbox		^style~cols=60 rows=2]]></view.text>
+		<view.text1><![CDATA[间隙文字1			###type~textbox		^style~cols=60 rows=2]]></view.text1>
+		<view.text2><![CDATA[间隙文字2			###type~textbox		^style~cols=60 rows=2]]></view.text2>
+		<view.text3><![CDATA[间隙文字3			###type~textbox		^style~cols=60 rows=2]]></view.text3>
+		<view.text4><![CDATA[间隙文字4			###type~textbox		^style~cols=60 rows=2]]></view.text4>
+		<view.text5><![CDATA[间隙文字5			###type~textbox		^style~cols=60 rows=2]]></view.text5>
+	</item>

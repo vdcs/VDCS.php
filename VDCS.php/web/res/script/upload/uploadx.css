@@ -1,0 +1,23 @@
+@charset "utf-8";
+@import url("swfupload/swfupload.css");
+
+#Uploadx .btn_ph{display:inline-block;width:119px;height:27px;overflow:hidden;}
+#Uploadx .btn_pic,
+#Uploadx .btn_camera{display:inline-block;width:119px;height:27px;line-height:27px;background:url("uploadx/btns_avatar.png") 0 0 no-repeat;overflow:hidden;}
+#Uploadx .btn_pic span,
+#Uploadx .btn_camera span{display:none;}
+
+#Uploadx .btn_pic{background-position:0 0;}
+#Uploadx .btn_pic:hover{background-position:0 -27px;}
+#Uploadx .btn_pic.pop{background-position:0 -54px;}
+#Uploadx .btn_pic.pop:hover{background-position:0 -81px;}
+
+#Uploadx .btn_camera{background-position:0 -108px;}
+#Uploadx .btn_camera:hover{background-position:0 -135px;}
+#Uploadx .btn_camera.pop{background-position:0 -162px;}
+#Uploadx .btn_camera.pop:hover{background-position:0 -189px;}
+
+#Uploadx .loading{background:url("/images/common/load/loading.gif") 0 0 no-repeat;}
+#Uploadx .guide{}
+#Uploadx .guide .tip{width:302px;height:302px;background:url("uploadx/tips_select.png") 0 0 no-repeat;}
+#Uploadx .tips{overflow:hidden;}

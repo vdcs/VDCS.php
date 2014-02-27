@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config xmlns:item="node">
+		<frame>search</frame>
+		<search.fields>orderno=6;username=6;{@order:table.px}realname=6;{@order:table.px}address=6;{@order:table.px}phone=6;{@order:table.px}email=6;{@order:table.px}explain=6</search.fields>
+		<search.times>{@order:table.px}tim</search.times>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>{@order:table.name}</table.name>
+		<table.px>{@order:table.px}</table.px>
+		<table.field.id>{@order:table.px}id</table.field.id>
+		<table.field.defineid>orderid</table.field.defineid>
+		<table.fields.value>id={@order:table.px}id;time={@order:table.px}tim</table.fields.value>
+		<table.fields.disp>{@order:table.px}ispay,{@order:table.px}type,{@order:table.px}dis_explain</table.fields.disp>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.field.append>pay.status,time</list.field.append>
+		<list.table.query.unaudit>{@order:table.px}status=2</list.table.query.unaudit>
+		<list.table.query.unsend>{@order:table.px}status=3</list.table.query.unsend>
+		<list.table.query.unreceive>{@order:table.px}status=4</list.table.query.unreceive>
+		<list.table.query.unrate>{@order:table.px}status=5</list.table.query.unrate>
+		<list.table.query.invalid>{@order:table.px}status=8</list.table.query.invalid>
+		<list.table.query.canceled>{@order:table.px}status=9</list.table.query.canceled>
+		<list.table.query.unpay>{@order:table.px}status=0</list.table.query.unpay>
+		
+		
+		<list.table.order>{@order:table.px}id desc</list.table.order>
+		<list.table.order.tim>{@order:table.px}tim desc</list.table.order.tim>
+		<list.handle.select.option>trans,intrans,untrans,repeal,delete</list.handle.select.option>
+		<list.handle.sql.trans>update {@order:table.name} set {@order:table.px}type=5 where {@order:table.px}id in ({$ids})</list.handle.sql.trans>
+		<list.handle.sql.intrans>update {@order:table.name} set {@order:table.px}type=1 where {@order:table.px}id in ({$ids})</list.handle.sql.intrans>
+		<list.handle.sql.untrans>update {@order:table.name} set {@order:table.px}type=0 where {@order:table.px}id in ({$ids})</list.handle.sql.untrans>
+		<list.handle.sql.repeal>update {@order:table.name} set {@order:table.px}type=2 where {@order:table.px}id in ({$ids})</list.handle.sql.repeal>
+		<list.handle.sql.delete>delete from {@orderi:table.name} where orderno in (select orderno from {@order:table.name} where {@order:table.px}id in ({$ids}))
+			$$$delete from {@order:table.name} where {@order:table.px}id in ({$ids})</list.handle.sql.delete>
+		
+		<view.field>*</view.field>
+		<view.query>{@order:table.px}id={$id}</view.query>
+		
+		<item:table.name>{@orderi:table.name}</item:table.name>
+		<item:table.px>{@orderi:table.px}</item:table.px>
+		<item:table.field.id>{@orderi:table.px}id</item:table.field.id>
+		<item:table.fields.edit>{@orderi:table.px}topic,{@orderi:table.px}serial,{@orderi:table.px}price,{@orderi:table.px}discount,{@orderi:table.px}emoney,{@orderi:table.px}num</item:table.fields.edit>
+	</config>
+	
+	<lang xmlns:item="node">
+		<title.name><![CDATA[{@order:name}]]></title.name>
+		<title.list><![CDATA[{@order:names}列表]]></title.list>
+		<title.list.><![CDATA[{@order:names}列表]]></title.list.>
+		<title.list.trans><![CDATA[已处理{@order:names}]]></title.list.trans>
+		<title.list.intrans><![CDATA[待处理{@order:names}]]></title.list.intrans>
+		<title.list.untrans><![CDATA[未处理{@order:names}]]></title.list.untrans>
+		<title.list.repeal><![CDATA[已撤销{@order:names}]]></title.list.repeal>
+		<title.edit><![CDATA[更新{@order:names}]]></title.edit>
+		<title.view><![CDATA[{@order:names}{@order:act}]]></title.view>
+		<title.edit.item><![CDATA[更新{@orderi:names}]]></title.edit.item>
+		
+		<title.frame.search><![CDATA[{@order:names}搜索]]></title.frame.search>
+		<search.fields.att>orderno={@order:names}号;{@order:table.px}realname=收件人;</search.fields.att>
+		
+		<error.not.exist><![CDATA[您要操作的 {@order:names} 不存在！]]></error.not.exist>
+		
+		<handle.ok.edit><![CDATA[成功更新了 1 {@order:unit}{@order:names}！]]></handle.ok.edit>
+		<handle.ok.trans><![CDATA[成功已处理了 {$total} {@order:unit}{@order:names}！]]></handle.ok.trans>
+		<handle.ok.intrans><![CDATA[成功待处理了 {$total} {@order:unit}{@order:names}！]]></handle.ok.intrans>
+		<handle.ok.untrans><![CDATA[成功未处理了 {$total} {@order:unit}{@order:names}！]]></handle.ok.untrans>
+		<handle.ok.repeal><![CDATA[成功撤销了 {$total} {@order:unit}{@order:names}！]]></handle.ok.repeal>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} {@order:unit}{@order:names}！]]></handle.ok.delete>
+		
+		<item:error.not.exist><![CDATA[您要操作的 {@orderi:names} 不存在！]]></item:error.not.exist>
+		<item:handle.ok.edit><![CDATA[成功更新了 1 {@orderi:unit}{@orderi:names}！]]></item:handle.ok.edit>
+	</lang>
+	
+	<template>
+		<list><![CDATA[
+<control:ui.value("listbox.heads")>
+<control:ui.value("list.bar.tr")>
+<!--<control:ui.value("list.bar.id")>-->
+<td class="bar-info">{@order:names}号</td>
+<td class="bar-user">订购人</td>
+<td class="bar-price">{@order:names}金额</td>
+<td class="bar-value">支付方式</td>
+<td class="bar-time"><exec:langs("title.time")></td>
+<td class="bar-status w80"><exec:langs("title.status")></td>
+<control:ui.value("list.bar.sd")>
+</tr>
+<loop:list>
+<control:ui.value("list.row.tr")>
+<!--<control:ui.value("list.row.id")>-->
+<td class="row-info"><a href="<var:url.view>">[item:orderno]</a></td>
+<td class="row-user"><script>put(app.toUserLink(0,"[item:username]","[item:{@order:table.px}realname]","[item:{@order:table.px}isuser]"));</script></td>
+<td class="row-price">[item:{@order:table.px}price]<em><app:unit.price></em></td>
+<td class="row-item">[item:{@order:table.px}payment]</td>
+<td class="row-time">[item:times]</td>
+<td class="row-status">[item:pay.status] <control:dict("file:sort=common.channel/{@channel}/data.order.type","[item:{@order:table.px}type]")></td>
+<control:ui.value("list.row.sd")>
+</tr>
+</loop>
+<control:ui.value("listbox.ends")>
+]]></list>
+		<view><![CDATA[
+<control:ui.value("listbox.head")>
+<div id="fbm-frame"></div>
+<script type="text/javascript">fbm.loading("","info={@order:names}信息;process={@order:names}处理;message=短信通知");</script>
+<tbody id="fbm-body-info" style="display:none;">
+<tr class="row"><td class="caption">{@order:names}号:</td><td class="input"><span class="b large mark"><dat:orderno></span></td></tr>
+<tr class="row"><td>运送方式:</td><td><span class="m-coll"><dat:{@order:table.px}carry></span>运送费用: <dat:{@order:table.px}carry_price> <app:unit.price></td></tr>
+<tr class="row"><td>总金额:</td><td><span class="price"><dat:{@order:table.px}price><em><app:unit.price></em></span></td></tr>
+<tr class="row"><td>付款方式:</td><td><span class="m-coll"><dat:{@order:table.px}payment></span><dat:pay.status> <dat:{@order:table.px}pay_tim></td></tr>
+<tr class="bar"><td colspan="2">送货信息</td></tr>
+<tr class="row"><td>收件人:</td><td><span class="m-coll"><dat:{@order:table.px}realname></span><dat:user.link></td></tr>
+<tr class="row"><td>联系电话:</td><td><dat:{@order:table.px}phone></td></tr>
+<tr class="row"><td>收件地址:</td><td><dat:{@order:table.px}address></td></tr>
+<tr class="row"><td>邮政编码:</td><td><dat:{@order:table.px}postcode></td></tr>
+<tr class="row"><td>电子邮箱:</td><td><dat:{@order:table.px}email></td></tr>
+<tr class="row"><td>备注信息:</td><td><dat:{@order:table.px}remark></td></tr>
+</tbody>
+<tbody id="fbm-body-process" style="display:none;">
+<tr class="row"><td class="caption">收款处理:</td><td class="input"><control:form.element("radio.{@order:names}ispay","<dat:{@order:table.px}ispay>","<control:att("dict","data.pay")>")></td></tr>
+<tr class="row"><td>{@order:names}状态:</td><td><control:form.element("radio.{@order:names}type","<dat:{@order:table.px}type>","<control:att("file","sort=common.channel/{@channel}/data.order.type")>")></td></tr>
+<tr class="row"><td>{@order:names}处理:</td><td><control:form.element("checkbox.isconsume","<dat:isconsume>","1:{@order:names}处理")> 将对该{@order:names}所包含{@names}进行 <font class="light">购买奖励</font> 及 <font class="light">供货数量</font> 等进行操作处理</td></tr>
+<tr class="row"><td class="caption caption-explain">处理信息:</td><td><textarea class="itxt" name="{@order:names}dis_remark" cols="60" rows="5"><dat:{@order:table.px}dis_remark></textarea></td></tr>
+</tbody>
+<tbody id="fbm-body-message" style="display:none;">
+<tr class="row"><td class="caption">发送短信:</td><td class="input"><input class="normal" type="checkbox" name="ismessage" value="yes" /> 选上为处理{@order:names}时发送一封站内短信给该会员，在下面填写短信内容</td></tr>
+<tr class="row"><td>短信标题:</td><td><input class="itxt" type="text" name="msg_topic" value="系统：{@order:names} <dat:orderno> 的处理反馈" size="60" maxlength="50" /> 不能超过50个字</td></tr>
+<tr class="row"><td class="caption caption-explain">短信内容:</td><td><textarea class="itxt" name="msg_remark" cols="60" rows="5"></textarea></td></tr>
+</tbody>
+<tr class="button"><td class="caption"></td><td class="input"><input type="submit" class="btn push" value="处理该{@order:names}" /> <input type="reset" class="btn reset" value="重新填写" /> <input type="button" class="btn goback" value="返回上一页" onclick="javascript:$p.goback();" /></td></tr>
+<control:ui.value("listbox.end")>
+<control:ui.value("space")>
+<control:ui.value("block.head","title={@names}清单")>
+<control:ui.value("list.head")>
+<control:ui.value("list.bar.tr")>
+<td class="bar-id">PID</td>
+<td class="bar-topic">{@names}名称</td>
+<td class="bar-data">数量</td>
+<td class="bar-data">折扣</td>
+<td class="bar-price">购买价格</td>
+<td class="bar-emoney">购买货币</td>
+<td class="bar-handle">操作</td>
+</tr>
+<loop:items>
+<control:ui.value("list.row.tr")>
+<td class="row-id">[item:productid]</td>
+<td class="row-topic"><a href="[item:linkurl]" target="_blank">[item:topic]</a></td>
+<td class="row-data">[item:amount]</td>
+<td class="row-data">[item:discount]%</td>
+<td class="row-price">[item:price]<em><app:unit.price></em></td>
+<td class="row-emoney">[item:emoney]<em><app:unit.emoney></em></td>
+<td class="row-handle"><a href="[item:url.edit]">编辑</a></td>
+</tr>
+</loop>
+<control:ui.value("list.end")>
+<control:ui.value("block.end")>
+]]></view>
+	</template>
+</xcml>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>put.sortid</type>
+		<property><![CDATA[item=;action=edit;type=int;max=;min=]]></property>
+		<style></style>
+		<caption><![CDATA[类别ID]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>input.sortid</type>
+		<property><![CDATA[item=;action=add;type=int;max=255;min=1]]></property>
+		<style>size=15 maxlength=15</style>
+		<caption><![CDATA[类别ID]]></caption>
+		<att></att>
+		<value>{$sortid}</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>select.fatherid</type>
+		<property><![CDATA[item=;action=add;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[所属类别]]></caption>
+		<att><![CDATA[0=作为一级类别;<control:att("sort","channel={@channel};classid={@classid}")>]]></att>
+		<value>{$fatherid}</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.name</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=1]]></property>
+		<style>size=50 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[类别名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.type</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=]]></property>
+		<style>size=20 maxlength=20 class="item"</style>
+		<caption><![CDATA[类型]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.type</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>size=50 maxlength=250 class="itxt"</style>
+		<caption><![CDATA[值]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.logo</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=50 maxlength=200</style>
+		<caption><![CDATA[类别Logo]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.summary</type>
+		<property><![CDATA[item=;action=;type=string;max=500;min=]]></property>
+		<style>cols=50 rows=4</style>
+		<caption><![CDATA[类别说明]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	
+	<input>
+		<type>input.orderid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style>size=15 maxlength=15</style>
+		<caption><![CDATA[排 序 值]]></caption>
+		<att></att>
+		<value>{$orderid}</value>
+		<explain><![CDATA[ <!---1表示让系统自行判断--> ]]></explain>
+	</input>
+	<input>
+		<type>radio.status</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[当前状态]]></caption>
+		<att><![CDATA[<control:att("dict","sort=data.hide")>]]></att>
+		<value>1</value>
+		<explain></explain>
+	</input>
+	
+</xcml>

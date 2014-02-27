@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<var>
+		<title>支持中心</title>
+		<title.about>关于我们</title.about>
+		<title.contact>联系方式</title.contact>
+	</var>
+	<num>
+	</num>
+	<config>
+		<faq.menu>about,contact,payment,help</faq.menu>
+		<faq.section></faq.section>
+	</config>
+</xcml>

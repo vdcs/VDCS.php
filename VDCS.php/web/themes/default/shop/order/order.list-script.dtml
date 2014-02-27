@@ -1,0 +1,46 @@
+
+<script type="text/javascript">
+$(function(){
+	var list=ui.list;//对象，传入存放内容的对象和模板对象
+	var opt={cont:$('#list'),tpl:$('#list_tpl'),paging:$('.paging')};
+	opt.serveVar={channel:'shop',p:'order',action:'list'};
+	//opt.paging=$('#paging');//放置分页按钮的对象
+	opt.bind=function(jitem){
+		var status=jitem.attr('_status');
+		if(status==0) jitem.find('[el=pay],[el=cancel]').show();
+		if(status==4) jitem.find('[el=confirm]').show();
+		if(status==5) jitem.find('[el=rate]').show();
+		
+		jitem.find('[el=cancel]').click(function(){
+			var orderid=jitem.attr('dataid');
+			_change(orderid,9,'您确定要取消订单吗？');
+		});
+		jitem.find('[el=confirm]').click(function(){
+			var orderid=jitem.attr('dataid');
+			_change(orderid,5,'您确定要确认收货吗？');
+		});
+	};
+	opt.binds=function(jcont,treeVar){
+		
+	};
+	opt.node_table='item';
+	list.init(opt);
+	list.parse();
+	
+	var _change=function(orderid,status,message){
+		var opt={};
+		opt.message=message;
+		opt.callback=function(){
+			var _url='/shop/order.x?action=change&orderid='+orderid+'&status='+status;
+			$ajax({url:_url,value:'xml',ready:function(xml){
+				var map=$util.toMapByXML(xml);
+				var treeVar=map.getItemTree('var');
+				ui.popups('succeed','操作成功！');
+				list.refresh();
+			},error:true});	
+				
+		};
+		ui.confirm(opt);
+	};
+});
+</script>

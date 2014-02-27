@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+		<sp.code>code=sp_code;remark={@tpx}remark</sp.code>
+		<script.begin><![CDATA[]]></script.begin>
+		<script.end><![CDATA[
+<script type="text/javascript">
+ui.fbm.relates({"upload":"base,content"});
+</script>
+]]></script.end>
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<explain><![CDATA[default=$$$base=基本信息;content={@xnames}内容;sp={@xnames}特性;status={@xnames}状态]]></explain>
+	</input>
+	<!--attr={@xnames}属性;-->
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=none</att>
+	</input>
+<label:include file="part.topic">
+<label:include file="part.key!">
+<label:include file="part.srvid!">
+<label:include file="part.classid">
+<label:include file="part.specialid">
+<label:include file="part.linkurl">
+<label:include file="part.pt.sa">
+<label:include file="part.summarys">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+<label:include file="part.m.content">
+<label:include file="part.m.upload">
+	
+	
+<label:include file="part.m.props">
+<label:include file="part.m.sp">
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=status;display=none</att>
+	</input>
+<label:include file="part.total.views">
+<label:include file="part.total.extend">
+<label:include file="part.orderid">
+<label:include file="part.prepage">
+<label:include file="part.statuss!a">
+<label:include file="part.username">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+</xcml>

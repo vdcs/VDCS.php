@@ -1,0 +1,20 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+
+
+<label:include file="inc/listc.struct.begin">
+<th>名称</th>
+<th class="total">{@data:names}</th>
+<th class="handle"><exec:langs("title.handle")></th>
+<label:include file="inc/listc.struct.end">
+<label:include file="inc/listc.tpl.begin">
+<td>[item:topic]</td>
+<td class="total"><a href="<exec:url("portal=data&rootid=[item:id]")>"><span class="b total">[item:_total.data]</span><span class="units">{@data:unit}</span></a></td>
+<td class="handle"><a href="#edit"><exec:langs("action.edit")></a><p><a href="<exec:url("p=data&rootid=[item:id]&action=add")>">添加{@data:names}</a></p></td>
+<label:include file="inc/listc.tpl.end">
+
+<label:include file="inc/lists.script">
+
+
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>name,url,config</field>
+		<title><![CDATA[]]></title>
+		<relate></relate>
+	</configure>
+	<item>
+		<name><![CDATA[{@topic:names}列表]]></name>
+		<url><![CDATA[params=action=list]]></url>
+		<config><![CDATA[icon=list;act=action.list]]></config>
+	</item>
+	<item>
+		<name><![CDATA[{@name}分类]]></name>
+		<url><![CDATA[channel=system;p=model;m=class;params=subchannel={@channel}]]></url>
+		<config><![CDATA[icon=class;act=model.class]]></config>
+	</item>
+	<item>
+		<name><![CDATA[频道配置]]></name>
+		<url><![CDATA[channel=system;p=model;m=configure;params=subchannel={@channel}]]></url>
+		<config><![CDATA[icon=configure;act=model.configure]]></config>
+	</item>
+	
+	<!--
+	<item>
+		<name><![CDATA[sub.{@names}审核]]></name>
+		<config><![CDATA[icon=system;act=action.list]]></config>
+	</item>
+	<item>
+		<name><![CDATA[未审核{@names}]]></name>
+		<url><![CDATA[params=action=list&mode=unaudit]]></url>
+		<config><![CDATA[icon=point;act=action.list]]></config>
+	</item>
+	-->
+</xcml>

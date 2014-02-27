@@ -1,0 +1,20 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @search.mini v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+.SearchMini,
+.SearchMini .keyword,
+.SearchMini .btns{background:url("../../common/struct/searchmini.gif") no-repeat;}
+.SearchMini{clear:both;height:25px;background-position:-57px -30px;padding-left:3px;overflow:hidden;}
+.SearchMini input{border:0;font-size:12px;}
+.SearchMini .keyword{float:left;background-position:0 0;background-repeat:repeat-x;height:17px;line-height:17px;padding:4px 0;}
+.SearchMini .btns{float:left;width:25px;height:25px;background-position:-32px -30px;text-indent:-9999px;cursor:pointer;}
+.SearchMini .btns{_width:25px;_background-position:-32px -30px;}
+.SearchMini-adv{height:25px;overflow:hidden;}
+.SearchMini-adv a{display:inline-block;height:25px;line-height:25px; padding:0 3px;margin-left:8px;}
+.SearchMini{width:150px;}
+.SearchMini .keyword{width:125px;}

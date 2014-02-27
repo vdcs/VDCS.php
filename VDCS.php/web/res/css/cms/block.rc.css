@@ -1,0 +1,27 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @block.rc v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######################### */
+/* ######### Block ######### */
+/* ######################### */
+.BlockBar,.BlockSub{border:0;background-color:transparent;background-image:url("../../common/struct/bars.gif");background-position:right -120px;}
+.BlockSub{background-repeat:repeat-x;background-position:0 0;border-left:1px solid #E7E7E7;border-right:1px solid #E7E7E7;}
+.BlockBar p{background-image:url("../../common/struct/bars.gif");background-position:0 -80px;margin-right:5px;padding-right:3px;}
+.BlockBar,.BlockSub,.BlockBar p,.BlockSub p{height:30px;line-height:30px;}
+
+/* ######################### */
+.CobBar,.CobBar p,.CobSub,.CobSub p,.CobHeader,.CobHeader p,.CobFooter,.CobFooter p,
+.Cobs .CobBar,.Cobs .CobBar p,.Cobs .CobSub,.Cobs .CobSub p,
+.Cobs .CobHeader,.Cobs .CobHeader p,.Cobs .CobFooter,.Cobs .CobFooter p{background-image:url("../../common/struct/cobs-blue.gif");}
+.CobBody,.CobInner,.CobContent,.CobList{background-image:url("../../common/struct/cob_bg-blue.gif");}
+.Cobs .CobBody,.Cobs .CobInner,.Cobs .CobContent,.Cobs .CobList{background-image:url("../../common/struct/cobs_bg-blue.gif");}
+
+/* ######################### */
+.BlockBar,.BlockBar p,.BlockSub,.BlockSub p,
+.CobBar,.CobBar p,.CobSub,.CobSub p,
+.Cobs .CobBar,.Cobs .CobBar p,.Cobs .CobSub,.Cobs .CobSub p{color:#29458C;}

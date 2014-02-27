@@ -1,0 +1,40 @@
+<label:include file="header.channel">
+
+<label:include file="frame.sideleft">
+<label:include file="element.list.heads">
+<label:include file="element.list.bar.tr">
+<td class="bar-item"></td>
+<td class="bar-info">竞拍<app:var.user></td>
+<td class="bar-price w80">出价</td>
+<td class="bar-status w150"><exec:langs("title.status")></td>
+<!--<td class="bar-handle w60"><exec:langs("title.handle")></td>-->
+</tr>
+<script type="text/javascript">
+toStatusValue=function(status,state,isauto){
+	var re="";
+	_name="出局";
+	if(toInt(state)==1) _name="领先";
+	re+=_name;
+	_name="";
+	if(toInt(isauto)==1) _name="自动出价";
+	if(_name) re+="&nbsp; "+_name;
+	return re;
+}
+</script>
+
+<loop:list>
+<label:include file="element.list.row.tr">
+<td class="row-item ar"><span class="s">第 [item:_sn] 拍</span>&nbsp;</td>
+<td class="row-info"><a href="<v:url.web.user>" target="_blank">[item:username]</a></td>
+<td class="row-price"><span class="price b big">[item:price!price]</span></td>
+<td class="row-status"> <script>put(toStatusValue('[item:status]','[item:state]','[item:isauto]'));</script>
+	<p class="s">[item:tim!time]</p></td>
+<!--<td class="row-handle"><a href="<v:url.edit>"></a></td>-->
+</tr>
+</loop>
+<label:include file="element.list.end">
+<label:include file="frame.sidespace">
+<label:include file="element.menus">
+<label:include file="frame.sideright">
+
+<label:include file="footer.channel">

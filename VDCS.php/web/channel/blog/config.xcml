@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre xmlns:data="node" xmlns:sort="node">
+		<channel>{@channel}</channel>
+		<table.namex>db_{@channel}_</table.namex>
+		<table.name>db_{@channel}</table.name>
+		<table.px>b_</table.px>
+		<name>博客</name>
+		<names>博客</names>
+		<act>浏览</act>
+		<act.view>浏览</act.view>
+		<unit>个</unit>
+		
+		<data:table.name>db_{@channel}_data</data:table.name>
+		<data:table.px>d_</data:table.px>
+		<data:name>日志</data:name>
+		<data:names>日志</data:names>
+		<data:act>阅读</data:act>
+		<data:unit>条</data:unit>
+		
+		<sort:table.name>db_{@channel}_sort</sort:table.name>
+		<sort:table.px></sort:table.px>
+		<sort:name>分类</sort:name>
+		<sort:names>分类</sort:names>
+		<sort:act>浏览</sort:act>
+		<sort:unit>个</sort:unit>
+	</pre>
+	<var>
+		<title>博客</title>
+		<title.index>null</title.index>
+		<title.list>博客列表</title.list>
+		<title.view>预览博客</title.view>
+		<title.search>博客搜索</title.search>
+		<title.class>博客分类</title.class>
+		
+		<title.create>开通新博客</title.create>
+		<title.my>我的博客</title.my>
+		<title.help>博客帮助</title.help>
+	</var>
+	<num>
+		<pic.width>0</pic.width>
+		<pic.height>0</pic.height>
+	</num>
+	<config>
+		<url>rewrite</url>
+		<create>1</create>
+		<create.status>1</create.status>
+		<put>1</put>
+		<put.status>1</put.status>
+		<put.premium>1</put.premium>
+		<put.audit></put.audit>
+		<put.premium.emoney>0</put.premium.emoney>
+		<put.premium.points>5</put.premium.points>
+	</config>
+</xcml>

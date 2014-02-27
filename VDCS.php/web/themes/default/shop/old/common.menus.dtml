@@ -1,0 +1,7 @@
+<label:include file="common.user">
+		<div class="space"></div>
+<label:include file="common.class.side">
+		<div class="space"></div>
+<label:include file="common.search">
+		<div class="space"></div>
+<label:include file="common.history">

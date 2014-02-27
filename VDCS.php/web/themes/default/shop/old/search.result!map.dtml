@@ -1,0 +1,27 @@
+<web:xml.string>
+<xcml version="1.0" model="map">
+	<configure>
+		<nodes>item</nodes>
+		<field.item>id,classid,topic,summary,time,linkurl</field.item>
+	</configure>
+	<var>
+		<format><web:format></format>
+		<formatkey><web:formatkey></formatkey>
+		<paging.listnum><paging:listnum></paging.listnum>
+		<paging.numend><paging:numend></paging.numend>
+		<paging.total><paging:total></paging.total>
+		<paging.pagenum><paging:pagenum></paging.pagenum>
+		<paging.page><paging:page></paging.page>
+		<paging.pagetotal><paging:pagetotal></paging.pagetotal>
+		<paging.pagebase><paging:pagebase></paging.pagebase>
+	</var>
+<label:list>	<item>
+		<id>[item:id]</id>
+		<classid>[item:classid]</classid>
+		<topic>[item:topic!xml]</topic>
+		<summary>[item:summary!xml]</summary>
+		<time>[item:tim]</time>
+		<linkurl>[item:linkurl]</linkurl>
+	</item>
+</label:end>
+</xcml>

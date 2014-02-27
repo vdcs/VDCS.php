@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<edit.table.query>uuid={$uid}</edit.table.query>
+		
+		<list.table.query>uuid={$uuid}</list.table.query>
+		<list.handle.sql.delete>delete from {@table.name} where {@table.px}id in ({$ids}) and uuid={$uid}</list.handle.sql.delete>
+		<list.handle.select.option>delete</list.handle.select.option>
+		<list.handle.put>delete</list.handle.put>
+		
+		<table.fields.add.value>uuid={$uid};uname={$uname};sp_poll_agree=0;sp_poll_oppose=0;sp_user_define=;{@table.px}istop=0;{@table.px}isgood=0;{@table.px}total_view=0;{@table.px}status={$status};{@table.px}tim={$time_now};orderid=0;{@table.px}total_day=0;{@table.px}total_week=0;{@table.px}total_month=0;{@table.px}total_comment=0;</table.fields.add.value>
+		<table.fields.edit.ignore>uuid,sp_poll_agree,sp_poll_oppose,sp_user_define,{@table.px}istop,{@table.px}isgood,{@table.px}total_view,{@table.px}status,{@table.px}tim,orderid,{@table.px}total_day,{@table.px}total_week,{@table.px}total_month,{@table.px}total_comment</table.fields.edit.ignore>
+		<table.fields.shortcut></table.fields.shortcut>
+	</config>
+	
+	<lang>
+		<title.list>我的{@names}</title.list>
+		<title.add>发布{@names}</title.add>
+		<title.edit>编辑{@names}</title.edit>
+		
+		<handle.ok.add><![CDATA[成功发布了 1 {@unit}{@names}！]]></handle.ok.add>
+	</lang>
+	<template>
+		<list><![CDATA[
+<control:ui.value("putbox.head")>
+<control:ui.value("list.bar.tr")>
+<control:ui.value("list.bar.sd")>
+<!--<td width="50">ID</td>-->
+<td class="bar-topic">{@names}<exec:langs("title.topic")></td>
+<td class="bar-time"><exec:langs("title.time")></td>
+<td class="bar-status w40"><exec:langs("title.status")></td>
+<td class="bar-handle w60"><exec:langs("title.handle")></td>
+</tr>
+<loop:list>
+<control:ui.value("list.row.tr")>
+<control:ui.value("list.row.sd")>
+<!--<td class="row-id"><a href="<var:url>" class="id">[item:id]</a></td>-->
+<td class="row-topic"><a href="<var:url.edit>" id="list-item[item:id]-topic" _status="[item:{@table.px}status]">[item:topic]</a></td>
+<td class="row-time">[item:times]</td>
+<td class="row-status"><control:dict("data.audit","[item:{@table.px}status]")></td>
+<td class="row-handle"><a id="list-item[item:id]-edit" href="<var:url.edit>"><exec:langs("action.edit")></a> <a id="list-item[item:id]-view" href="">浏览</a></td>
+</tr>
+<script type="text/javascript">app.put.addList("[item:id]");</script>
+</loop>
+<control:ui.value("putbox.end")>
+]]></list>
+	</template>
+</xcml>

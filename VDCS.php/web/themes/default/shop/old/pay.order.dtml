@@ -1,0 +1,52 @@
+<label:include file="header">
+<div class="framer">
+	<div class="side">
+<label:include file="common.menus">
+	</div>
+	<div class="cont">
+<label:include file="common.navbar">
+<label:include file="common.flow">
+
+
+<dtml:_message>
+<!--<web:var.title>-->
+<div style="padding:10px;">
+<div class="BoxMessage"><div class="BoxMessageFrame"><div class="BoxMessageBody">
+	<div class="partIcon icon-succeed"></div>
+	<div class="partTopic" id="box-topic">订购成功！</div>
+	<div class="partExplain" id="box-explain">恭喜！您的订单（<span class="light b large orderno"><var:orderno></span>）已成功处理！</div>
+	<div class="partMessage" id="box-message">
+<div class="h">
+<p>订单应付金额 <span class="price b large"><i>￥</i><var:prices.total!price><em><app:unit.coin></em></span></p>
+<p>您的订单预计在付款发货后3到7天内送达。</p>
+<!--{if isBool({$var:ispayment})}-->
+<p style="margin-top:15px;">您现在可以点击下方的按钮进行网上支付。在确认网上支付成功后，我们会及时为您发货。</p>
+<!--{/if}-->
+</div>
+	</div>
+	<div class="partButton">
+<!--{if isBool({$var:ispayment})}-->
+		<button id="btn-payment" class="btn btn120" onclick="javascript:$p.go('<url:common>payment.php?channel={@channel}&orderno=<var:orderno>');">立即在线支付</button>
+<!--{/if}-->
+		<button id="btn-index" class="btn btn80" onclick="javascript:$p.go('./');">继续选购</button>
+	</div>
+</div></div></div>
+</div>
+
+<div style="height:20px;"></div>
+<div class="x-body">
+<div style="height:18px; border-top:1px solid #ECECEC;"></div>
+<div style="padding:0 20px;">
+<p>*您可以在“<a href="<url:account>">我的帐户</a>”中管理您的订单，由于系统需要对订单进行预处理，订单相关信息您可稍候登录“<a href="<url:account>">我的帐户</a>”中查看。</p>
+<p>*网上支付方式未支付的订单将保留24小时，如果您现在不方便支付，可于24小时内到“<a href="<url:account>">我的帐户</a>”中完成支付。</p>
+</div>
+<div style="height:18px;"></div>
+<div style="height:18px; border-top:1px solid #ECECEC;"></div>
+<div style="padding:0 20px;">
+<p>感谢您的订购，如果您对网站购物过程中有任何意见或建议请告诉我们。<a href="<linkurl:support.suggest>">意见反馈</a></p>
+</div>
+</div>
+
+	</div></div>
+</div>
+<label:include file="footer">

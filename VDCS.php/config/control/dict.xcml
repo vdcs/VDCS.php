@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>sort,value,name,title,level</field>
+	</configure>
+	<item>
+		<sort>data.bool</sort>
+		<value>1</value>
+		<name><![CDATA[是]]></name>
+		<title><![CDATA[<font class="mark">是</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.bool</sort>
+		<value>0</value>
+		<name><![CDATA[否]]></name>
+		<title><![CDATA[<font class="gray">否</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.hide</sort>
+		<value>1</value>
+		<name><![CDATA[正常]]></name>
+		<title><![CDATA[<font class="mark">显示</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.hide</sort>
+		<value>0</value>
+		<name><![CDATA[隐藏]]></name>
+		<title><![CDATA[<font class="gray">隐藏</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.hidden</sort>
+		<value>1</value>
+		<name><![CDATA[正常]]></name>
+		<title><![CDATA[<font class="mark">正常</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.hidden</sort>
+		<value>0</value>
+		<name><![CDATA[隐藏]]></name>
+		<title><![CDATA[<font class="gray">隐藏</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.hidden</sort>
+		<value>5</value>
+		<name><![CDATA[删除]]></name>
+		<title><![CDATA[<font class="null">删除</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.status</sort>
+		<value>1</value>
+		<name><![CDATA[正常]]></name>
+		<title><![CDATA[<font class="mark">正常</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.status</sort>
+		<value>0</value>
+		<name><![CDATA[隐藏]]></name>
+		<title><![CDATA[<font class="gray">隐藏</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.status</sort>
+		<value>5</value>
+		<name><![CDATA[删除]]></name>
+		<title><![CDATA[<font class="null">删除</font>]]></title>
+		<level>0</level>
+	</item>
+	
+
+	<item>
+		<sort>data.enable</sort>
+		<value>1</value>
+		<name><![CDATA[启用]]></name>
+		<title><![CDATA[<font class="mark">启用</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.enable</sort>
+		<value>2</value>
+		<name><![CDATA[停用]]></name>
+		<title><![CDATA[<font class="light">停用</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.auth</sort>
+		<value>1</value>
+		<name><![CDATA[已认证]]></name>
+		<title><![CDATA[<font class="mark">已认证</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.auth</sort>
+		<value>2</value>
+		<name><![CDATA[待认证]]></name>
+		<title><![CDATA[<font class="error">待认证</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.auth</sort>
+		<value>0</value>
+		<name><![CDATA[未认证]]></name>
+		<title><![CDATA[<font class="gray">未认证</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.audit</sort>
+		<value>1</value>
+		<name><![CDATA[已审核]]></name>
+		<title><![CDATA[<font class="mark">已审核</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.audit</sort>
+		<value>2</value>
+		<name><![CDATA[待审核]]></name>
+		<title><![CDATA[<font class="error">待审核</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.audit</sort>
+		<value>0</value>
+		<name><![CDATA[未审核]]></name>
+		<title><![CDATA[<font class="gray">未审核</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.audit</sort>
+		<value>5</value>
+		<name><![CDATA[已删除]]></name>
+		<title><![CDATA[<font class="null">已删除</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.timed</sort>
+		<value>0</value>
+		<name><![CDATA[未计时]]></name>
+		<title><![CDATA[<font class="gray">未计时</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.timed</sort>
+		<value>1</value>
+		<name><![CDATA[已计时]]></name>
+		<title><![CDATA[<font class="mark">已计时</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.timed</sort>
+		<value>2</value>
+		<name><![CDATA[已过期]]></name>
+		<title><![CDATA[<font class="error">已过期</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.trans</sort>
+		<value>0</value>
+		<name><![CDATA[未处理]]></name>
+		<title><![CDATA[<font class="gray">未处理</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.trans</sort>
+		<value>2</value>
+		<name><![CDATA[待处理]]></name>
+		<title><![CDATA[<font class="error">待处理</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.trans</sort>
+		<value>1</value>
+		<name><![CDATA[已处理]]></name>
+		<title><![CDATA[<font class="mark">已处理</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.use</sort>
+		<value>1</value>
+		<name><![CDATA[已使用]]></name>
+		<title><![CDATA[<font class="mark">已使用</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.use</sort>
+		<value>2</value>
+		<name><![CDATA[正使用]]></name>
+		<title><![CDATA[<font class="light">正使用</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.use</sort>
+		<value>0</value>
+		<name><![CDATA[未使用]]></name>
+		<title><![CDATA[<font class="gray">未使用</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.valid</sort>
+		<value>1</value>
+		<name><![CDATA[有效]]></name>
+		<title><![CDATA[<font class="mark">有效</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.valid</sort>
+		<value>0</value>
+		<name><![CDATA[无效]]></name>
+		<title><![CDATA[<font class="error">无效</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.lock</sort>
+		<value>0</value>
+		<name><![CDATA[正常]]></name>
+		<title><![CDATA[<font class="gray">正常</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.lock</sort>
+		<value>1</value>
+		<name><![CDATA[锁定]]></name>
+		<title><![CDATA[<font class="error">锁定</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.hot</sort>
+		<value>0</value>
+		<name><![CDATA[普通]]></name>
+		<title><![CDATA[<font class="gray">普通</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.hot</sort>
+		<value>1</value>
+		<name><![CDATA[热门]]></name>
+		<title><![CDATA[<font class="light">热门</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.good</sort>
+		<value>0</value>
+		<name><![CDATA[未推荐]]></name>
+		<title><![CDATA[<font class="gray">未推荐</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.good</sort>
+		<value>1</value>
+		<name><![CDATA[已推荐]]></name>
+		<title><![CDATA[<font class="mark">已推荐</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	<item>
+		<sort>data.goods</sort>
+		<value>0</value>
+		<name><![CDATA[未推荐]]></name>
+		<title><![CDATA[<font class="gray">未推荐</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.goods</sort>
+		<value>1</value>
+		<name><![CDATA[推荐]]></name>
+		<title><![CDATA[<font class="mark">推荐</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.goods</sort>
+		<value>2</value>
+		<name><![CDATA[区推荐]]></name>
+		<title><![CDATA[<font class="error">区推荐</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.goods</sort>
+		<value>3</value>
+		<name><![CDATA[总推荐]]></name>
+		<title><![CDATA[<font class="light">总推荐</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.top</sort>
+		<value>0</value>
+		<name><![CDATA[未固顶]]></name>
+		<title><![CDATA[<font class="gray">未固顶</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.top</sort>
+		<value>1</value>
+		<name><![CDATA[已固顶]]></name>
+		<title><![CDATA[<font class="mark">已固顶</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	<item>
+		<sort>data.tops</sort>
+		<value>0</value>
+		<name><![CDATA[未固顶]]></name>
+		<title><![CDATA[<font class="gray">未固顶</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.tops</sort>
+		<value>1</value>
+		<name><![CDATA[固顶]]></name>
+		<title><![CDATA[<font class="mark">固顶</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.tops</sort>
+		<value>2</value>
+		<name><![CDATA[区固顶]]></name>
+		<title><![CDATA[<font class="error">区固顶</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.tops</sort>
+		<value>3</value>
+		<name><![CDATA[总固顶]]></name>
+		<title><![CDATA[<font class="light">总固顶</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.lines</sort>
+		<value>1</value>
+		<name><![CDATA[上线]]></name>
+		<title><![CDATA[<font class="mark">上线</font>]]></title>
+		<level>0</level>
+	</item>
+ 	<item>
+		<sort>data.lines</sort>
+		<value>0</value>
+		<name><![CDATA[下线]]></name>
+		<title><![CDATA[<font class="gray">下线</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.ons</sort>
+		<value>1</value>
+		<name><![CDATA[上线]]></name>
+		<title><![CDATA[<font class="mark">上线</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.ons</sort>
+		<value>0</value>
+		<name><![CDATA[下线]]></name>
+		<title><![CDATA[<font class="gray">下线</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	<item>
+		<sort>data.onoff</sort>
+		<value>1</value>
+		<name><![CDATA[开启]]></name>
+		<title><![CDATA[<font class="mark">开启</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.onoff</sort>
+		<value>0</value>
+		<name><![CDATA[关闭]]></name>
+		<title><![CDATA[<font class="gray">关闭</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.test</sort>
+		<value>1</value>
+		<name><![CDATA[已测试]]></name>
+		<title><![CDATA[<font class="mark">已测试</font>]]></title>
+		<level>0</level>
+	</item>
+ 	<item>
+		<sort>data.test</sort>
+		<value>0</value>
+		<name><![CDATA[未测试]]></name>
+		<title><![CDATA[<font class="gray">未测试</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.import</sort>
+		<value>0</value>
+		<name><![CDATA[未导入]]></name>
+		<title><![CDATA[<font class="gray">未导入</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.import</sort>
+		<value>1</value>
+		<name><![CDATA[已导入]]></name>
+		<title><![CDATA[<font class="mark">已导入</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	<item>
+		<sort>data.export</sort>
+		<value>0</value>
+		<name><![CDATA[未导出]]></name>
+		<title><![CDATA[<font class="gray">未导出</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.export</sort>
+		<value>1</value>
+		<name><![CDATA[已导出]]></name>
+		<title><![CDATA[<font class="mark">已导出</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.pay</sort>
+		<value>0</value>
+		<name><![CDATA[未付款]]></name>
+		<title><![CDATA[<font class="gray">未付款</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.pay</sort>
+		<value>2</value>
+		<name><![CDATA[待付款]]></name>
+		<title><![CDATA[<font class="error">待付款</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.pay</sort>
+		<value>1</value>
+		<name><![CDATA[已付款]]></name>
+		<title><![CDATA[<font class="mark">已付款</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	<item>
+		<sort>data.isdate</sort>
+		<value>0</value>
+		<name><![CDATA[不计时]]></name>
+		<title><![CDATA[<font class="gray">不计时</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.isdate</sort>
+		<value>1</value>
+		<name><![CDATA[计时]]></name>
+		<title><![CDATA[<font class="mark">计时</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.comment</sort>
+		<value>1</value>
+		<name><![CDATA[开放评论]]></name>
+		<title><![CDATA[<font class="gray">开放</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.comment</sort>
+		<value>0</value>
+		<name><![CDATA[关闭评论]]></name>
+		<title><![CDATA[<font class="light">关闭</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	<item>
+		<sort>data.read</sort>
+		<value>0</value>
+		<name><![CDATA[未阅读]]></name>
+		<title><![CDATA[<font class="gray">未阅读</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.read</sort>
+		<value>1</value>
+		<name><![CDATA[已阅读]]></name>
+		<title><![CDATA[<font class="mark">已阅读</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.read</sort>
+		<value>2</value>
+		<name><![CDATA[废件箱]]></name>
+		<title><![CDATA[<font class="error">废件箱</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.read</sort>
+		<value>3</value>
+		<name><![CDATA[全部]]></name>
+		<title><![CDATA[<font class="light">全部</font>]]></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.star</sort>
+		<value>0</value>
+		<name>无</name>
+		<title></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.star</sort>
+		<value>1</value>
+		<name>一星级</name>
+		<title></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.star</sort>
+		<value>2</value>
+		<name>二星级</name>
+		<title></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.star</sort>
+		<value>3</value>
+		<name>三星级</name>
+		<title></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.star</sort>
+		<value>4</value>
+		<name>四星级</name>
+		<title></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.star</sort>
+		<value>5</value>
+		<name>五星级</name>
+		<title></title>
+		<level>0</level>
+	</item>
+	
+	
+	<item>
+		<sort>data.reply</sort>
+		<value>0</value>
+		<name>待回复</name>
+		<title></title>
+		<level>0</level>
+	</item>
+	<item>
+		<sort>data.reply</sort>
+		<value>1</value>
+		<name>已回复</name>
+		<title></title>
+		<level>0</level>
+	</item>
+</xcml>

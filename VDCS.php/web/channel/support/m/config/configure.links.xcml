@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links,action</frame>
+		
+		<table.name>dbc_links</table.name>
+		<table.prefix></table.prefix>
+		<table.field.id>id</table.field.id>
+		<table.fields.value>id=id;time=tim</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.order>orderid desc</list.table.order>
+		<list.table.orders>orderid asc</list.table.orders>
+		<list.field.append>name,pic,url</list.field.append>
+		<list.handle.select.option>hide,show,delete</list.handle.select.option>
+		<list.handle.sql.hide>update dbc_links set status=0 where id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.show>update dbc_links set status=1 where id in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.delete>delete from dbc_links where id in ({$ids})</list.handle.sql.delete>
+	</config>
+	
+	<lang>
+		<title><![CDATA[链接管理]]></title>
+		<title.name><![CDATA[链接列表]]></title.name>
+		<title.list><![CDATA[链接列表]]></title.list>
+		<title.list.><![CDATA[链接列表]]></title.list.>
+		<title.add><![CDATA[添加链接]]></title.add>
+		<title.edit><![CDATA[编辑链接]]></title.edit>
+		<title.update><![CDATA[链接更新]]></title.update>
+		<title.move><![CDATA[链接移动]]></title.move>
+		
+		<error.sort><![CDATA[请先选择需添加链接的类型后操作！]]></error.sort>
+		<error.not.exist><![CDATA[您要编辑的链接不存在！]]></error.not.exist>
+		<error.move.top><![CDATA[移动失败，已经处于最上层！]]></error.move.top>
+		<error.move.bottom><![CDATA[移动失败，已经处于最下层！]]></error.move.bottom>
+		
+		<handle.ok.hide><![CDATA[成功隐藏了 {$count} 个链接！]]></handle.ok.hide>
+		<handle.ok.show><![CDATA[成功显示了 {$count} 个链接！]]></handle.ok.show>
+		<handle.ok.add><![CDATA[成功添加了 1 个链接！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 个链接！]]></handle.ok.edit>
+ 		<handle.ok.delete><![CDATA[成功删除了 {$count} 个链接！]]></handle.ok.delete>
+		<handle.ok.update><![CDATA[成功更新了所有链接！]]></handle.ok.update>
+		<handle.ok.move><![CDATA[成功移动了 1 个链接！]]></handle.ok.move>
+	</lang>
+	
+	<template>
+	</template>
+</xcml>

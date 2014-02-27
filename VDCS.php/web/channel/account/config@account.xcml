@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre xmlns:ua="node">
+		
+		<ua>account</ua>
+		<ua:key>account</ua:key>
+		<ua:table.name>db_account</ua:table.name>
+		<ua:table.px></ua:table.px>
+		<ua:field.id>id</ua:field.id>
+		<ua:name>帐号</ua:name>
+		<ua:names>帐号</ua:names>
+		<ua:act>浏览</ua:act>
+		<ua:unit>位</ua:unit>
+	</pre>
+	<var>
+	</var>
+	<num>
+		
+	</num>
+	<config>
+		
+	</config>
+</xcml>

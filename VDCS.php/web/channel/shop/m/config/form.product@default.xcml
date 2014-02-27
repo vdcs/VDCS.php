@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+		<sp.code>code=sp_code;remark={@tpx}remark</sp.code>
+		<script.begin><![CDATA[<script type="text/javascript">
+		ui.fbm.relates({"upload":"base,content"});
+</script>]]></script.begin>
+		<script.end><![CDATA[]]></script.end>
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<explain><![CDATA[default=$$$base=基本信息;content={@xnames}说明;attr={@xnames}属性;status={@xnames}状态]]></explain><!-- auction=拍卖设置;discount=折扣与奖励;sp={@xnames}特性; -->
+	</input>
+	<!--attr={@xnames}属性;-->
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=auction;display=none</att>
+	</input>
+<label:include file="part.auction">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=none</att>
+	</input>
+<label:include file="part.topic!n">
+<label:include file="part.key!">
+<label:include file="part.srvid!">
+<label:include file="part.classid">
+<label:include file="part.specialid!">
+	<input>
+		<type>select.brandid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style><![CDATA[ class="itxt"]]></style>
+		<caption><![CDATA[{@xnames}品牌]]></caption>
+		<att><![CDATA[0=请选择{@xnames}品牌..;<control:att("file","common.channel/{@channel}/brand")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+<label:include file="part.subtopic!">
+<label:include file="part.name!">
+	<input>
+		<type>hidden.{@tpx}brand</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=0]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[{@xnames}品牌]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}serial</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=60 maxlength=50 class="itxt"</style>
+		<caption><![CDATA[{@xnames}编号]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}price</type>
+		<property><![CDATA[item=;class=s;action=;type=num;max=255;min=0.01]]></property>
+		<style>size=15 maxlength=15 class="price"</style>
+		<caption><![CDATA[{@xnames}价格]]></caption>
+		<att></att>
+		<value>0.00</value>
+		<explain><![CDATA[<app:unit.price>$$${@xnames}实际价格={@xnames}价格%当前折扣 <a class="adv" href="javascript:$pf.sh('{@tpx}price_old,{@tpx}price_market,{@tpx}price_trade');"></a>]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}price_old</type>
+		<property><![CDATA[item=;action=;type=num;max=255;min=]]></property>
+		<style>style="display:none;"$$$size=15 maxlength=15 class="price"</style>
+		<caption><![CDATA[原 价 格]]></caption>
+		<att></att>
+		<value>0.00</value>
+		<explain><![CDATA[<app:unit.price>$$$此价格为原价格，仅做显示参考用]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}price_market</type>
+		<property><![CDATA[item=;action=;type=num;max=255;min=]]></property>
+		<style>style="display:none;"$$$size=15 maxlength=15 class="price"</style>
+		<caption><![CDATA[市场价格]]></caption>
+		<att></att>
+		<value>0.00</value>
+		<explain><![CDATA[<app:unit.price>$$$此价格为市场参考价格，仅做显示参考用]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}price_trade</type>
+		<property><![CDATA[item=;action=;type=num;max=255;min=]]></property>
+		<style>style="display:none;"$$$size=15 maxlength=15 class="price" style="display:none;"</style>
+		<caption><![CDATA[代理价格]]></caption>
+		<att></att>
+		<value>0.00</value>
+		<explain><![CDATA[<app:unit.price>$$$]]></explain>
+	</input>
+<label:include file="part.unit">
+<label:include file="part.weight">
+	<input>
+		<type>text.{@tpx}amounts</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style>size=15 maxlength=15 class="total"</style>
+		<caption><![CDATA[供货数量]]></caption>
+		<att></att>
+		<value>999999999</value>
+		<explain><![CDATA[<script>$pf.chooseValue('{@tpx}amounts','999999999=不限,0=停售');</script> 数量"999999999"表示不限，"0"表示停售]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}amount</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style>size=15 maxlength=15 class="total"</style>
+		<caption><![CDATA[剩余数量]]></caption>
+		<att></att>
+		<value>-1</value>
+		<explain><![CDATA[<script>$pf.chooseValue('{@tpx}amount','999999999=不限,0=停售');</script> 数量"999999999"表示不限，"0"表示停售]]></explain>
+	</input>
+<label:include file="part.summarys!s">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+<label:include file="part.m.content">
+<label:include file="part.m.upload">
+	
+	
+<label:include file="part.m.props">
+<label:include file="part.m.sp">
+	
+	<input>
+		<type>hidden.sp_score</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=10;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[{@xact}{@name}积分]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.score>$$${@xact}所要扣除的{@name}积分]]></explain>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=discount;display=none</att>
+	</input>
+	<input>
+		<type>text.{@tpx}discount</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style>size=15 maxlength=15 class="discount"</style>
+		<caption><![CDATA[当前折扣]]></caption>
+		<att></att>
+		<value>100</value>
+		<explain><![CDATA[%$$$]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}discount_time_start</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=]]></property>
+		<style>size=15 maxlength=10 class="date"</style>
+		<caption><![CDATA[折扣开始时间]]></caption>
+		<att></att>
+		<value><dcs:time.today></value>
+		<explain><![CDATA[<script>$pf.chooseTime('{@tpx}discount_time_start');</script>]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}discount_time_end</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=]]></property>
+		<style>size=15 maxlength=10 class="date"</style>
+		<caption><![CDATA[折扣结束时间]]></caption>
+		<att></att>
+		<value><dcs:time.today></value>
+		<explain><![CDATA[<script>$pf.chooseTime('{@tpx}discount_time_end');</script>]]></explain>
+	</input>
+	<input>
+		<type>select.{@tpx}discount_group</type>
+		<property><![CDATA[item=;action=;type=int;max=200;min=0]]></property>
+		<style></style>
+		<caption><![CDATA[折扣用户组]]></caption>
+		<att><![CDATA[=所有;<control:att("file","sort=user.group")>]]></att>
+		<value></value>
+		<explain>不选表示对所有人开放</explain>
+	</input>
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[购买奖励]]></caption>
+	</input>
+	<input>
+		<type>text.{@tpx}con_emoney</type>
+		<property><![CDATA[item=;action=;type=num;max=10;min=]]></property>
+		<style>size=15 maxlength=15 class="emoney"</style>
+		<caption><![CDATA[奖励货币]]></caption>
+		<att></att>
+		<value>0.0</value>
+		<explain><![CDATA[<app:unit.emoney>$$$]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}con_points</type>
+		<property><![CDATA[item=;action=;type=int;max=10;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[奖励积分]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.points>$$$]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}con_score</type>
+		<property><![CDATA[item=;action=;type=int;max=10;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[奖励{@name}积分]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.score>$$$]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}con_gift</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[奖励赠品]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[$$$]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=status;display=none</att>
+	</input>
+	<input>
+		<type>text.{@tpx}total_order</type>
+		<property><![CDATA[item=;action=;type=int;max=20;min=]]></property>
+		<style>size=20 maxlength=20 class="total"</style>
+		<caption><![CDATA[{@act.order}次数]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[次$$$]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}total_buy</type>
+		<property><![CDATA[item=;action=;type=int;max=20;min=]]></property>
+		<style>size=20 maxlength=20 class="total"</style>
+		<caption><![CDATA[{@act.buy}次数]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[次$$$]]></explain>
+	</input>
+<label:include file="part.total.data!">
+<label:include file="part.total.views">
+<label:include file="part.total.extend">
+<label:include file="part.orderid">
+	<input>
+		<type>radio.{@tpx}isnew</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否新品]]></caption>
+		<att><![CDATA[<control:att("file","common.channel/{@channel}/data.product.news")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}issale</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否促销]]></caption>
+		<att><![CDATA[<control:att("file","common.channel/{@channel}/data.product.sales")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+<label:include file="part.statuss!o">
+<label:include file="part.username!">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+</xcml>

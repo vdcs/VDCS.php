@@ -1,0 +1,96 @@
+
+.SWFUpload_progressWrapper {
+	width: 357px;
+	overflow: hidden;
+}
+
+.SWFUpload_progressContainer {
+	padding: 8px;
+	overflow: hidden;
+}
+.SWFUpload_progressContainers {
+	padding: 8px;
+	border: solid 1px #E8E8E8;
+	background-color: #F7F7F7;
+	overflow: hidden;
+}
+/* Message */
+.SWFUpload_message {
+	margin: 1em 0;
+	padding: 10px 20px;
+	border: solid 1px #FFDD99;
+	background-color: #FFFFCC;
+	overflow: hidden;
+}
+/* Error */
+.SWFUpload_red {
+	border: solid 1px #B50000;
+	background-color: #FFEBEB;
+}
+
+/* Current */
+.SWFUpload_green {
+	border: solid 1px #DDF0DD;
+	background-color: #EBFFEB;
+}
+
+/* Complete */
+.SWFUpload_blue {
+	border: solid 1px #CEE2F2;
+	background-color: #F0F5FF;
+}
+
+.SWFUpload_progressName {
+	font-weight: 700;
+	color: #006600;
+	width: 323px;
+	height: 14px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.SWFUpload_progressBarInProgress,
+.SWFUpload_progressBarComplete,
+.SWFUpload_progressBarError {
+	font-size: 0;
+	width: 0%;
+	height: 2px;
+	background-color: blue;
+	margin-top: 2px;
+}
+
+.SWFUpload_progressBarComplete {
+	width: 100%;
+	background-color: green;
+	visibility: hidden;
+}
+
+.SWFUpload_progressBarError {
+	width: 100%;
+	background-color: red;
+	visibility: hidden;
+}
+
+.SWFUpload_progressBarStatus {
+	margin-top: 2px;
+	width: 337px;
+	color: #888888;
+	text-align: left;
+	white-space: nowrap;
+}
+
+a.SWFUpload_progressCancel {
+	font-size: 0;
+	display: block;
+	height: 14px;
+	width: 14px;
+	background-image: url("cancel.gif");
+	background-repeat: no-repeat;
+	background-position: -14px 0px;
+	float: right;
+}
+
+a.SWFUpload_progressCancel:hover {
+	background-position: 0px 0px;
+}

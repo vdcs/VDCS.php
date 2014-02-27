@@ -1,0 +1,15 @@
+<div class="box">
+	<h2><t>链接类型</t></h2>
+	<div class="con">
+<div class="links">
+<ul>
+<li><a href="/manage/index.php/support/links?action=list"><span>全部</span></a></li>
+<loop:menu>
+<li><a href="[item:linkurl]" data-key="[item:key]"><span>[item:name]</span></a></li>
+</loop>
+<li class="space"></li>
+<li><a href="<exec:url("action=add")>"><span>添加链接</span></a></li>
+</ul>
+</div>
+	</div>
+</div>

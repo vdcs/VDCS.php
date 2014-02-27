@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre xmlns:ua="node">
+		<channel>{@channel}</channel>
+		<table.namex>db_{@channel}_</table.namex>
+		<name>服务中心</name>
+		<names>服务中心</names>
+		
+		<ua>merchant</ua>
+		<ua:channel>merchant</ua:channel>
+		<ua:key>merchant</ua:key>
+		<ua:table.name>db_merchant</ua:table.name>
+		<ua:table.px>m_</ua:table.px>
+		<ua:field.id>mid</ua:field.id>
+		<ua:name>商家</ua:name>
+		<ua:names>商家</ua:names>
+		<ua:act>浏览</ua:act>
+		<ua:unit>家</ua:unit>
+	</pre>
+	<var>
+		<title>服务中心</title>
+		<title.index>开始</title.index>
+		<title.c>控制台</title.c>
+		<title.my>帐户资料</title.my>
+		
+		<title.settings>帐号设置</title.settings>
+		<title.settings.info>修改资料</title.settings.info>
+		<title.settings.password>修改密码</title.settings.password>
+		<title.settings.notice>个性设置</title.settings.notice>
+		<title.settings.privacy>隐私设置</title.settings.privacy>
+		<title.settings.photo>上传图片</title.settings.photo>
+		<title.settings.photo.logo>上传Logo</title.settings.photo.logo>
+		<title.settings.auth>帐号认证</title.settings.auth>
+		<title.settings.auth.certic>营业执照认证</title.settings.auth.certic>
+		
+		<title.message>短信息</title.message>
+		<title.friend>好友</title.friend>
+		<title.fav>收藏夹</title.fav>
+		<title.linkman>联系人</title.linkman>
+		
+		<title.gbook>留言</title.gbook>
+		
+	</var>
+	<num>
+	</num>
+	<config>
+		<url>default</url>
+	</config>
+</xcml>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title></title>
+<script type="text/javascript" src="http://static.joekoe.cn/images/script/jquery.min.js"></script>
+<script type="text/javascript" src="http://static.joekoe.cn/images/script/_VDCS.js"></script>
+<script type="text/javascript" src="http://static.joekoe.cn/images/script/VDCS.ui.js"></script>
+<link rel="stylesheet" href="http://static.joekoe.cn/images/css/style.html5.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="http://static.joekoe.cn/images/css/comm/ui.css" type="text/css" charset="utf-8" />
+<style type="text/css">
+
+
+
+</style>
+</head>
+<body style="padding:100px;">
+
+<h2 class="large"><b>socket.io</b> Client Demo</h2>
+<sh></sh>
+
+<div id="service_base">
+	<input type="text" name="server" value="http://localhost:3300/" style="width:300px;" />
+	<a class="btn" el="connect">连接</a>
+</div>
+<sh></sh>
+<div id="request_status">
+	<h3>Status: (SID=<i>?</i>) <a class="btn s" el="btn">refresh</a></h3>
+	<p>wait..</p>
+</div>
+<sh></sh>
+<div id="request_login">
+	<input type="text" name="name" value="Ranom" style="width:200px;" />
+	<a class="btn" el="btn">登录</a>
+</div>
+<sh></sh>
+<div id="request_query">
+	<input type="text" name="value" value="test" style="width:200px;" />
+	<a class="btn" el="btn">查询</a>
+</div>
+<sh></sh>
+<div id="request_pm">
+	<p>发送给： <input type="text" name="sid" value="" placeholder="sid" style="width:148px;" /></p>
+	<input type="text" name="message" value="" style="width:200px;" />
+	<a class="btn" el="send">PM</a>
+</div>
+<sh></sh>
+<div><pre id="message"></pre></div>
+
+<script src="/images/script/external/socket.io.js"></script>
+
+<script type="text/javascript">
+var sockets={
+
+	initer:function(){
+		var that=this;
+		var jbase=$('#service_base'),jrequest;
+		this.jurl=jbase.find('input[name="server"]');
+		this.jconnect=jbase.finde('connect');
+		this.jconnect.click(function(){
+			that.connector($(this));
+			return false
+		});
+	},
+	binder:function(){
+		if(this.isbind) return false;
+		var that=this;
+		if(!this.sio){
+			this.debug('binder','socket error!');
+			return
+		}
+
+		//status
+		var jrequest_status=$('#request_status');
+		jrequest_status.finde('btn').off().on('click',function(){
+			that.debug('status.emit','refresh');
+			that.sio.emit('status');
+			return false
+		});
+		this.sio.on('status',function(data){
+			if(!that.isconnect(true)) return;
+			that.debug('status.on',data);
+			jrequest_status.find('p:first').html(JSON.stringify(data));
+			jrequest_status.find('i:first').html(data.sid);
+		});
+
+		//login
+		var jrequest_login=$('#request_login');
+		var jlogin=jrequest_login.finde('btn');
+		jlogin.off().on('click',function(){
+			if(!that.isconnect(true)) return;
+			if(that.login_lock){
+				that.debug('login','locked');
+				return false
+			}
+			that.login_lock=true;
+			var _name=jrequest_login.find('input[name="name"]').val();
+			var _send={name:_name};
+			if(that.islogin){
+				that.debug('logout.emit',_send);
+				that.sio.emit('logout',_send);
+				jlogin.html('退出中..');
+				return false
+			}
+			that.debug('login.emit',_send);
+			that.sio.emit('login',_send);
+			jlogin.html('登录中..');
+			return false
+		});
+		this.sio.on('login',function(data){
+			that.debug('login.on',data);
+			that.login_lock=false;
+			if(data.status=='succeed'){
+				that.islogin=true;
+				jlogin.addClass('c').html('退出');
+			}
+			else{
+				jlogin.html('登录!');
+			}
+		});
+		this.sio.on('logout',function(data){
+			that.debug('logout.on',data);
+			that.login_lock=false;
+			if(data.status=='succeed'){
+				that.islogin=false;
+				jlogin.removeClass('c').html('登录');
+			}
+			else{
+				jlogin.html('退出!');
+			}
+		});
+
+		//query
+		var jrequest_query=$('#request_query');
+		var jbtnquery=jrequest_query.finde('btn');
+		jbtnquery.off().on('click',function(){
+			if(!that.isconnect(true)) return;
+			if(that.query_lock){
+				that.debug('query','locked');
+				return false
+			}
+			that.query_lock=true;
+			jbtnquery.html('查询中..').attr('disabled','disabled');
+			var _value=jrequest_query.find('input[name="value"]').val();
+			var _send={value:_value};
+			that.debug('query.emit',_send);
+			that.sio.emit('query',_send);
+			return false
+		});
+		this.sio.on('query',function(data){
+			that.debug('query.on',data);
+			that.query_lock=false;
+			jbtnquery.html('查询').removeAttr('disabled');
+		});
+
+		//pm
+		var jrequest_pm=$('#request_pm');
+		var jbtnpm=jrequest_pm.finde('send');
+		var jpm_sid=jrequest_pm.find('input[name="sid"]');
+		var jpm_message=jrequest_pm.find('input[name="message"]');
+		var _pm_timer=0,_pm_space=3;
+		jbtnpm.off().on('click',function(){
+			if(!that.isconnect(true)) return;
+			if(_pm_timer && ($tim.timer()-_pm_timer)<_pm_space){
+				that.debug('pm','PM的太勤快了！');
+				return false
+			}
+			_pm_timer=$tim.timer();
+			var _sid=jpm_sid.val();
+			var _message=jpm_message.val();
+			if(!_message){
+				that.debug('pm','不说点什么嘛？');
+				return false
+			}
+			var _send={sid:_sid,name:jrequest_login.find('input[name="name"]').val(),message:_message};
+			that.debug('pm.emit',_send);
+			that.sio.emit('pm',_send);
+			jpm_message.val('');
+			return false
+		});
+		this.sio.on('pm',function(data){
+			that.debug('pm.on',data);
+			if(data){
+				jpm_sid.val(data.sid);
+				that.debug('PM',data.name+' 对你说：'+data.message);
+			}
+		});
+
+		//message
+		//this.sio.send('hi');
+		//this.sio.emit('message','hi');
+
+		//broadcast
+		this.sio.on('system',function(data){
+			that.debug('broadcast:system.on',data);
+		});
+
+		this.isbind=true;
+	},
+
+	connector:function(jbtn){
+		var that=this;
+		if(this._connect){
+			if(!this._lock){
+				jbtn.html('断开中..');
+			}
+			this.disconnect(function(){
+				jbtn.removeClass('c').html('连接');
+			});
+		}
+		else{
+			if(!this._lock){
+				jbtn.html('连接中..');
+			}
+			this.connect(function(){
+				that.binder();
+				jbtn.addClass('c').html('断开');
+			},function(){
+				jbtn.html('连接失败');
+			});
+		}
+	},
+
+	getURL:function(){return this.jurl.val()},
+
+	socket:null,_connect:false,_lock:false,_total:0,
+	isconnect:function(debug){
+		if(!this._connect && debug){
+			this.debug('isconnect','no');
+		}
+		return this._connect
+	},
+	connect:function(callback,callback_error){
+		var that=this;
+		if(this._lock){
+			this.debug('connect','locked');
+			return null;
+		}
+		this._lock=true;
+		var _url=this.getURL();
+		if(!_url){
+			this.debug('connect','need server url!');
+			return null;
+		}
+		this.debug('connect','ing..');
+		this._connect_callback=callback;
+		this._connect_callback_error=callback_error;
+		if(!this.sio){
+			this.debug('connect.server',_url);
+			this.sio=io.connect(_url);
+			//dbg.o(this.sio.socket);
+			this.connectEvent();
+		}
+		if(that._total>0){
+			this.debug('socket','reconnect');
+			this.sio.socket.reconnect()
+		}
+		return this.sio;
+	},
+	connectEvent:function(){
+		var that=this;
+		/*
+		this.sio.socket.of('/account')
+			.on('connect_failed', function (reason) {
+				console.error('unable to connect to namespace', reason);
+			})
+			.on('connect', function () {
+				console.info('sucessfully established a connection with the namespace');
+			});
+		*/
+		this.sio.socket.on('error',function(reason){
+			that.debug('socket.error',reason||'error');
+			//handshake unauthorized
+			that._lock=false;
+			if(that._connect_callback_error) that._connect_callback_error();
+		});
+		this.sio.on('connect',function(data){
+			that.debug('socket.on.connect',data||'succeed');
+			that._connect=true;
+			that._lock=false;
+			that._total++;
+			if(that._connect_callback) that._connect_callback();
+		});
+		this.sio.on('connecting',function(data){
+			that.debug('socket.on.connecting',data||'[trigger]');
+		});
+		this.sio.on('disconnect',function(data){
+			that.debug('socket.on.disconnect',data||'[trigger]');
+			that._lock=false;
+			that._connect=false;
+			if(that._disconnect_callback) that._disconnect_callback();
+		});
+		this.sio.on('connect_failed',function(reason){
+			that.debug('socket.on.connect_failed',reason||'[trigger]');
+		});
+		this.sio.on('error',function(reason){
+			that.debug('socket.on.error',reason||'[trigger]');
+			//handshake unauthorized
+			that._lock=false;
+			if(that._connect_callback_error) that._connect_callback_error();
+		});
+		this.sio.on('message',function(message,callback){
+			that.debug('socket.on.anything',message);
+		});
+		this.sio.on('anything',function(data,callback){
+			that.debug('socket.on.anything',data);
+		});
+		this.sio.on('reconnect_failed',function(data){
+			that.debug('socket.on.reconnect_failed',data||'[trigger]');
+		});
+		this.sio.on('reconnect',function(data){
+			that.debug('socket.on.reconnect',data||'[trigger]');
+		});
+		this.sio.on('reconnecting',function(nextRetry){
+			var data=nextRetry?('Reconnecting in '+nextRetry+' seconds.'):'';
+			that.debug('socket.on.reconnecting',data||'[trigger]');
+		});
+	},
+	disconnect:function(callback){
+		var that=this;
+		if(!this.sio){
+			this.debug('disconnect','socket error!');
+			return false;
+		}
+		if(this._lock){
+			this.debug('disconnect','locked');
+			return null;
+		}
+		this._lock=true;
+		this.debug('disconnect','ing..');
+		this._disconnect_callback=callback;
+		this.sio.disconnect();
+		return true;
+	},
+
+	debug:function(type,data){
+		this.jmessage=this.jmessage||$('#message');
+		var _type='['+$time.getNow(true)+']'+'['+type+']';
+		console.log(_type);
+		console.log(data);
+		this.jmessage.append(_type+JSON.stringify(data)+BR);
+	},
+
+};
+
+$(function(){
+	sockets.initer();
+});
+</script>
+
+</body>
+</html>
+<!--
+
+sio={
+	socket=[object]
+	name=
+	flags=[object]
+	json=[object]
+	ackPackets=0
+	acks=[object]
+	$events=[object]
+	on=[function]
+	addListener=[function]
+	once=[function]
+	removeListener=[function]
+	removeAllListeners=[function]
+	listeners=[function]
+	emit=[function]
+	$emit=[function]
+	of=[function]
+	packet=[function]
+	send=[function]
+	disconnect=[function]
+	onPacket=[function]
+}
+
+sio.socket={
+	options=[object]
+	connected=false
+	open=false
+	connecting=true
+	reconnecting=false
+	namespaces=[object]
+	buffer=[object]
+	doBuffer=false
+	on=[function]
+	addListener=[function]
+	once=[function]
+	removeListener=[function]
+	removeAllListeners=[function]
+	listeners=[function]
+	emit=[function]
+	of=[function]
+	publish=[function]
+	handshake=[function]
+	getTransport=[function]
+	connect=[function]
+	setHeartbeatTimeout=[function]
+	packet=[function]
+	setBuffer=[function]
+	flushBuffer=[function]
+	disconnect=[function]
+	disconnectSync=[function]
+	isXDomain=[function]
+	onConnect=[function]
+	onOpen=[function]
+	onClose=[function]
+	onPacket=[function]
+	onError=[function]
+	onDisconnect=[function]
+	reconnect=[function]
+}
+
+-->

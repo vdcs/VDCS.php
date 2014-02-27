@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,name</field>
+		<field.att.value>key</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<key>sys</key>
+		<name>系统</name>
+	</item>
+	<item>
+		<key>forum</key>
+		<name>论坛</name>
+	</item>
+	<item>
+		<key>shop</key>
+		<name>商城</name>
+	</item>
+</xcml>

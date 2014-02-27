@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links</frame>
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[勋章]]></title.name>
+		<title.add><![CDATA[添加新用户]]></title.add>
+		<title.edit><![CDATA[编辑勋章]]></title.edit>
+		<title.delete><![CDATA[删除勋章]]></title.delete>
+		<title.config><![CDATA[勋章配置]]></title.config>
+		
+		<error.value><![CDATA[您要添加的勋章值不符合规则！]]></error.value>
+		<error.exist.id><![CDATA[您要添加的勋章ID已经存在！]]></error.exist.id>
+		<error.not.exist><![CDATA[您要编辑的勋章不存在！]]></error.not.exist>
+		<error.not.exist.id><![CDATA[您要删除的勋章不存在！]]></error.not.exist.id>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 个新勋章！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 个勋章！]]></handle.ok.edit>
+		<handle.ok.delete><![CDATA[成功删除了 1 个勋章！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+		<menu.links><![CDATA[
+<div class="Block Block-Menu-Define">
+	<div class="BlockBar">勋章操作</div>
+	<div class="BlockLinks">
+<ul>
+<li><a href="<exec:url("action=list")>">勋章列表</a></li>
+<li><a href="<exec:url("action=add")>">添加勋章</a></li>
+</ul>
+	</div>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

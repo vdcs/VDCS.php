@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>passv</node>
+	</configure>
+	<passv>
+		<status>1</status>
+		<url><![CDATA[http://passv.cn/]]></url>
+		<unionid>100010</unionid>
+		<key>secret_code</key>
+		<interface><![CDATA[http://passv.com/login/union]]></interface>
+	</passv>
+</xcml>

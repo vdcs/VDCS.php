@@ -1,0 +1,18 @@
+<label:include file="frame/headers">
+
+
+<div class="cont">
+<label:include file="view-prop-header">
+<label:include file="view-prop-pic">
+<label:include file="view-prop-info">
+<label:include file="view-prop-footer">
+
+<label:include file="view-remark">
+
+<label:include file="/inc/view/comment.box">
+
+<label:include file="view-notes">
+</div>
+
+
+<label:include file="frame/footers">

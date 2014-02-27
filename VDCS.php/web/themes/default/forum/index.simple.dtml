@@ -1,0 +1,65 @@
+<label:include file="/headers">
+<style type="text/css">
+/* 首页style */
+ul.forum_index{overflow:hidden;}
+ul.forum_index *{box-sizing:border-box;}
+ul.forum_index li{overflow:hidden;border-bottom:1px dashed #ccc;}
+ul.forum_index li:last-child{border-bottom:none;}
+ul.forum_index li a:hover{cursor:pointer;}
+ul.forum_index li>.side,ul.forum_index li>.cent,ul.forum_index li>.sider{float:left;text-align:center;height:70px;}
+ul.forum_index li>.side{width:10%;}
+ul.forum_index li>.side>cite{display:inline-block;width:30px;height:30px;margin-top:20px;background:#abc;}
+ul.forum_index li>.cent{padding:10px;width:60%;text-align:left;}
+ul.forum_index li>.cent>h2 a{font-weight:bold;color:#333;}
+ul.forum_index li>.cent>h2 span{margin-left:5px;color:#F26C4F;}
+ul.forum_index li>.cent>p{color:#666;}
+ul.forum_index li>.cent>h3 a{color:#369;margin-left:5px;}
+ul.forum_index li>.sider{line-height:70px;width:30%;}
+ul.forum_index li>.sider>h4{width:40%;}
+ul.forum_index li>.sider>h4 cite{color:#369;}
+ul.forum_index li>.sider>h4 em{margin:0 5px;color:#666;}
+ul.forum_index li>.sider>h4 span{color:#666;}
+ul.forum_index li>.sider>h3{width:60%;}
+ul.forum_index li>.sider>h3 cite{color:#666;margin-right:5px;}
+</style>
+
+
+<div class="cont">
+
+
+	<div class="hide">
+		<div class="con">
+			<div><ul>
+<label:class("{@channel}","res=level;level=1;classid=;m=multi")>
+			</ul></div>
+		</div>
+	</div>
+	<div class="space"></div>
+	<div class="box">
+		<h2><t>[item:name]</t><r><a href="[item:linkurl]"><langs:chn.more></a></r></h2>
+		<div class="con">
+			
+			<ul class="forum_index">
+<@part:level1>
+			<li>
+			<div class="side"><cite></cite></div>
+			<div class="cent">
+			<h2><a href="[item:linkurl]">[item:name]</a><span>([item:total_day])</span></h2>
+			<p>this is summary this is sumthis is summary this is summary this is summary[item:summary]</p>
+			<h3><span>版主:</span><a>Alusa</a></h3>
+			</div>
+			<div class="sider">
+			<h4 class="fl"><cite>(主题)[item:total]</cite><em>/</em><span>(帖子)[item:total_data]</span></h4>
+			<h3 class="fr"><cite>[item:reply_tim]</cite><a>[item:unames]</a></h3>
+			</div>
+			</li>
+</label:end>
+			</ul>
+			
+		</div>
+	</div>
+
+</div>
+
+
+<label:include file="/footers">

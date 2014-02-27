@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+.sets_guide li dd p{color:#CCC;}
+.sets_guide li dd h2 a,
+.sets_guide li dd h5 a{color:#AAA;}
+.sets_guide li dd h2 a:hover,
+.sets_guide li dd h5 a:hover{color:#FFF;}

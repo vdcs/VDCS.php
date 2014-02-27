@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,name,explain</field>
+		<field.att.value>v</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<value>0</value>
+		<name>待审核</name>
+		<explain></explain>
+	</item>
+	<item>
+		<value>1</value>
+		<name>已审核</name>
+		<explain></explain>
+	</item>
+	<item>
+		<value>2</value>
+		<name>审核不通过</name>
+		<explain></explain>
+	</item>
+</xcml>

@@ -1,0 +1,8 @@
+<label:include file="inc/table.bar.end">
+<label:include file="inc/table.body">
+<label:include file="inc/table.end">
+	</div>
+	<div class="bod">
+<label:include file="inc/table.exts">
+	</div>
+</div>

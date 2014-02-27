@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>pre,config,lang,template</node>
+	</configure>
+	<pre>
+		<table.name>dba_staff</table.name>
+		<table.px></table.px>
+		<field.id>staffid</field.id>
+		<name>员工</name>
+		<names>员工</names>
+		<act>查看</act>
+		<unit>位</unit>
+	</pre>
+	<config xmlns:info="node">
+		<frame>search</frame>
+		<search.fields></search.fields>
+		<search.times>tim</search.times>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>{@table.name}</table.name>
+		<table.px></table.px>
+		<table.field.id>{@field.id}</table.field.id>
+		<table.fields.value>id=staffid;topic=name;time=tim</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.query.audit>status=1</list.table.query.audit>
+		<list.table.query.inaudit>status=2</list.table.query.inaudit>
+		<list.table.query.unaudit>status=0</list.table.query.unaudit>
+		<list.table.query.show>status=1</list.table.query.show>
+		<list.table.query.hide>status=0</list.table.query.hide>
+		<list.table.order>orderid desc,staffid asc</list.table.order>
+		<list.table.order.tim>tim desc</list.table.order.tim>
+		<list.handle.select.option>delete</list.handle.select.option>
+		<list.handle.sql.audit>update {@table.name} set status=1 where {@field.id} in ({$ids})</list.handle.sql.audit>
+		<list.handle.sql.inaudit>update {@table.name} set status=2 where {@field.id} in ({$ids})</list.handle.sql.inaudit>
+		<list.handle.sql.unaudit>update {@table.name} set status=0 where {@field.id} in ({$ids})</list.handle.sql.unaudit>
+		<list.handle.sql.show>update {@table.name} set status=1 where {@field.id} in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.hide>update {@table.name} set status=0 where {@field.id} in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.delete>delete from {@table.name} where {@field.id} in ({$ids})</list.handle.sql.delete>
+		
+		<view.sql>select * from {@table.name} where {@field.id}={$id}</view.sql>
+		
+		<info:table.name>{@table.name}_info</info:table.name>
+		<info:table.field.id>{@field.id}</info:table.field.id>
+		<info:table.fields.add></info:table.fields.add>
+		<info:table.fields.edit></info:table.fields.edit>
+		<info:list.table.fields></info:list.table.fields>
+	</config>
+	
+	<lang>
+		<title><![CDATA[{@name}]]></title>
+		<title.name><![CDATA[{@name}]]></title.name>
+		<title.names><![CDATA[{@names}]]></title.names>
+		<title.act><![CDATA[{@act}]]></title.act>
+		<title.unit><![CDATA[{@unit}]]></title.unit>
+		<title.list><![CDATA[{@names}列表]]></title.list>
+		<title.list.><![CDATA[{@names}列表]]></title.list.>
+		<title.list.payed><![CDATA[{@names}列表]]></title.list.payed>
+		<title.list.audit><![CDATA[已审核{@names}]]></title.list.audit>
+		<title.list.inaudit><![CDATA[待审核{@names}]]></title.list.inaudit>
+		<title.list.unaudit><![CDATA[未审核{@names}]]></title.list.unaudit>
+		<title.list.show><![CDATA[显示{@names}]]></title.list.show>
+		<title.list.hide><![CDATA[隐藏{@names}]]></title.list.hide>
+		<title.add><![CDATA[添加新{@names}]]></title.add>
+		<title.edit><![CDATA[编辑{@names}]]></title.edit>
+		<title.popedom><![CDATA[编辑了员工权限]]></title.popedom>
+		
+		<title.frame.class><![CDATA[{@names}分类]]></title.frame.class>
+		<title.frame.search><![CDATA[{@names}搜索]]></title.frame.search>
+		<search.fields.att></search.fields.att>
+		
+		<error.not.exist><![CDATA[您要操作的 {@names} 不存在！]]></error.not.exist>
+		
+		<error.no.ukey><![CDATA[请致少填写一项 {@names} 主要信息！]]></error.no.ukey>
+		<error.exist.id><![CDATA[相关 {@names}ID 已存在！]]></error.exist.id>
+		<error.exist.no><![CDATA[相关 {@names}编号 已存在！]]></error.exist.no>
+		<error.norule.no><![CDATA[{@names}编号 不符合规则！]]></error.norule.no>
+		<error.exist.name><![CDATA[相关 {@names}名称 已存在！]]></error.exist.name>
+		<error.norule.name><![CDATA[{@names}名称 不符合规则！]]></error.norule.name>
+		<error.exist.email><![CDATA[相关 电子邮箱 已存在！]]></error.exist.email>
+		<error.norule.email><![CDATA[电子邮箱 不符合规则！]]></error.norule.email>
+		<error.exist.mobile><![CDATA[相关 手机号码 已存在！]]></error.exist.mobile>
+		<error.norule.mobile><![CDATA[手机号码 不符合规则！]]></error.norule.mobile>
+		<error.exist.idcard><![CDATA[相关 证件号码 已存在！]]></error.exist.idcard>
+		<error.norule.idcard><![CDATA[证件号码 不符合规则！]]></error.norule.idcard>
+		
+		<error.norule.names><![CDATA[简称 不符合规则！]]></error.norule.names>
+		<error.norule.realname><![CDATA[真实姓名 不符合规则！]]></error.norule.realname>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 {@unit}{@names}！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 {@unit}{@names}！]]></handle.ok.edit>
+		<handle.ok.audit><![CDATA[成功待审核了 {$total} {@unit}{@names}！]]></handle.ok.audit>
+		<handle.ok.inaudit><![CDATA[成功待审核了 {$total} {@unit}{@names}！]]></handle.ok.inaudit>
+		<handle.ok.unaudit><![CDATA[成功未审核了 {$total} {@unit}{@names}！]]></handle.ok.unaudit>
+		<handle.ok.show><![CDATA[成功显示了 {$total} {@unit}{@names}！]]></handle.ok.show>
+		<handle.ok.hide><![CDATA[成功隐藏了 {$total} {@unit}{@names}！]]></handle.ok.hide>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} {@unit}{@names}！]]></handle.ok.delete>
+		<handle.ok.popedom><![CDATA[成功编辑了员工权限！]]></handle.ok.popedom>
+	</lang>
+	
+	<template>
+	</template>
+</xcml>

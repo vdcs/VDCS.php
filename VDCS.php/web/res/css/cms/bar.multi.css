@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @bar.multi v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######################### */
+table.multibar{width:100%;}
+table.multibar tr.multibar td,
+.multibar .multibar-items{height:30px;color:#333333;font-weight:bold;background-repeat:no-repeat;padding:0 8px;}
+.multibar .multibar-items a{float:left;display:block;height:30px;line-height:30px;color:#FFFFFF;text-decoration:none;background-repeat:no-repeat;background-position:right -120px;margin-right:5px;overflow:hidden;}
+.multibar .multibar-items a span{display:block;background-repeat:no-repeat;background-position:0 0;padding:0 5px 0 10px;margin-right:5px;}
+.multibar .multibar-items a:hover{color:#FFFFFF;background-position:right -180px;}
+.multibar .multibar-items a:hover span{background-position:0 -60px;}
+.multibar .multibar-items a.pop{background-position:right -150px;}
+.multibar .multibar-items a.pop span{background-position:0 -30px;}
+.multibar .multibar-items a.pop:hover{background-position:right -180px;}
+.multibar .multibar-items a.pop:hover span{background-position:0 -60px;}
+.multibar-loaddata{line-height:30px;padding-left:50px;}
+table.multibar tr.multibar td{padding-left:38px;}
+
+.multibar .multibar-items a,
+.multibar .multibar-items a span{background-image:url("../../common/struct/multibars.png");}

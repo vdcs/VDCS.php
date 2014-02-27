@@ -1,0 +1,6 @@
+
+<div class="box">
+	<div class="con">
+<label:include file="/inc/e/view-init">
+<div class="e_view" data-channel="{@channel}" data-id="{@id}"><!-- goods view begin -->
+	<h2><t><view:topic></t></h2>

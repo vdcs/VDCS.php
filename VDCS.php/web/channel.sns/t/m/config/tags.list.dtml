@@ -1,0 +1,17 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+
+
+<label:include file="inc/listc.struct.begin">
+<th class="info">类型</th>
+<th class="name">名称</th>
+<th class="handle"><exec:langs("title.handle")></th>
+<label:include file="inc/listc.struct.end">
+<label:include file="inc/listc.tpl.begin">
+<td><span data-dict="file:sort=common.channel/{@channel}/data.tags.sort" data-value="[item:sort]"></span></td>
+<td>[item:name]</td>
+<td class="handle"><a href="#edit"><exec:langs("action.edit")></a></td>
+<label:include file="inc/listc.tpl.end">
+<label:include file="inc/listc.script">
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

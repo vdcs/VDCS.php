@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="struct">
+	<configure>
+		<node>item</node>
+	</configure>
+	<!--
+	<item>
+		<__key><![CDATA[editor.plugins.cc]]></__key>
+		<__name><![CDATA[CC视频]]></__name>
+		<__file><![CDATA[common/script/editor/plugins/cc/config]]></__file>
+		<__cache><![CDATA[sys.data.plugins]]></__cache>
+		<bar.var><![CDATA[CC视频配置信息	###type~bar]]></bar.var>
+		<config.isuse><![CDATA[是否开启		###type~radio		^property.min~		^property.type~int		^att~0:关闭|1:开启]]></config.isuse>
+		<config.unionid><![CDATA[联盟ID		###property.min~1	^style~size=20	^explain~您在CC视频联盟的数字ID]]></config.unionid>
+		<config.style><![CDATA[选择按钮样式	###type~select	^property.min~1	^att~1:1(72x24)|2:2(72x24)|3:3(72x24)|4:4(72x24)|5:5(72x24)|6:6(72x24)|7:7(72x24)|8:8(71x24)|9:9(72x24)|10:10(72x24)|11:11(72x24)|12:12(72x24)|13:13(72x24)|14:14(72x24)|15:15(72x24)|16:16(86x22)]]></config.style>
+	</item>
+	-->
+</xcml>

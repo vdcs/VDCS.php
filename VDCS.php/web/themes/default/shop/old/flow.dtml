@@ -1,0 +1,185 @@
+<label:include file="/headers">
+<form class="order">
+<div class="box">
+<h2><t>收货人信息</t></h2>
+<div class="con">
+<table class="table tables table-striped table-hover table-list">
+<thead><tr><th>选择</th><th>姓名</th><th>手机</th><th>邮编</th><th>地址</th><th>操作</th></tr></thead>
+<tbody id="linkman_list">
+
+</tbody>
+</table>
+<div class="space"></div>
+<p><a class="btn primary-btn" el="add_linkman">使用新地址</a></p>
+</div>
+</div>
+<xmp id="linkman_list_tpl">
+<tr dataid="[item:id]" _type="[item:type]"><td><input type="radio" name="linkman" value="[item:id]" /></td><td>[item:name]</td><td>[item:mobile]</td><td>[item:postcode]</td><td>[item:address]</td><td><a class="btn" el="modify">修改</a> <a class="btn" el="default">设为默认地址</a></td></tr>
+</xmp>
+<div class="box">
+<h2><t>填写信息</t></h2>
+<div class="sider" style="float:left;">
+	<dl class="forms">
+	<dt><h2>运送方式</h2><h3><p class="items" el="shipping">
+	<loop:shipping>
+	<input type="radio" name="shipping" value="[item:name]" _price="[item:price]" />[item:name] [item:price]元 ([item:explain]))<br />
+	</loop>
+	</p></h3></dt>
+	<dt><h2>送货时间</h2><h3><p class="items" el="dtime">
+	<loop:dtime>
+	<input type="radio" name="dtime" value="[item:name]" />[item:name]([item:explain])<br />
+	</loop>
+	</p></h3></dt>
+	</dl>
+</div>
+<div class="cent">
+	<dl class="forms">
+	<dt><h2>给卖家留言</h2><h3><p class="items"><textarea name="message"></textarea></p></h3></dt>
+	<input type="hidden" name="shipping_price" value="0" />
+	<input type="hidden" name="money" value="0" />
+	</dl>
+</div>
+</div>
+<div class="space"></div>
+
+
+<div class="box">
+<h2><t>确认订单信息</t></h2>
+<div class="con">
+<table class="table tables table-striped table-hover table-list">
+<thead><tr><th>产品名称</th><th>单价</th><th>数量</th><th>合计</th></tr></thead>
+<tbody id="list">
+
+</tbody>
+<tfoot><td colspan="5"><a class="btn" href="/{@channel}/cart">返回购物车</a><cite>合计:<span el="moneys">0</span>元</cite> <cite>账户余额<ua:money></cite></td></tfoot>
+</table>
+<div class="space"></div>
+<div style="text-align:center;">
+<div class="tips hide"><h3><p class="itip"><em></em><span>提示信息</span></p></h3></dt></h3></div>
+<a class="btn" el="submit"><span>提交订单</span></a>
+</div>
+</div>
+</div>
+</form>
+<xmp id="list_tpl">
+<tr dataid="[item:id]"><td>[item:p_topic]</td><td el="price">[item:price]</td><td>[item:amount]</td><td el="money">[item:money]</td></tr>
+</xmp>
+<label:include script="VDCS.ui.page.js">
+<label:include script="VDCS.ui.pages.js">
+<script type="text/javascript">
+$(function(){
+	$('[el=shipping],[el=dtime]').find('input[type=radio]:first').checked(true);
+	var pro_money=0;
+	var _computeMoney=function(){
+		var ship_money=parseFloat($('input[name=shipping]:checked').attr('_price'));
+		$('input[name=shipping_price]').val(ship_money);
+		var moneys=pro_money+ship_money;
+		$('[el=moneys]').text(moneys);
+		$('input[name=money]').val(moneys);
+	};
+	
+	var list=ui.list;//对象，传入存放内容的对象和模板对象
+	var opt={cont:$('#list'),tpl:$('#list_tpl')};
+	opt.serveVar={channel:'{@channel}',p:'checkout',action:'list',params:''};
+	//opt.paging=$('#paging');//放置分页按钮的对象
+	opt.bind=function(jitem){
+	};
+	opt.binds=function(jcont,treeVar){
+		pro_money=parseFloat(treeVar.v('moneys'));
+		_computeMoney();
+	};
+	opt.node_table='item';
+	list.init(opt);
+	list.parse();
+	
+	$('input[name=shipping]').change(function(){
+		_computeMoney();
+	});
+	
+	
+	var _getlinkman=function(){
+		var list=new VDCS.list();//对象，传入存放内容的对象和模板对象
+		var opt={cont:$('#linkman_list'),tpl:$('#linkman_list_tpl')};
+		opt.serveVar={channel:'{@channel}',p:'linkman',action:'list',params:''};
+		//opt.paging=$('#paging');//放置分页按钮的对象
+		opt.bind=function(jitem){
+			var linkid=jitem.attr('dataid');
+			jitem.find('[el=modify]').click(function(){
+				ui.pages.channel='{@channel}';
+				var opt={
+					serveE:{p:'linkman',action:'add',params:'id='+linkid},
+					serveX:{p:'linkman',action:'edit'},
+					title:'编辑收货信息',
+					succeed:function(){
+						_getlinkman();	
+					},
+				};
+				ui.pages.recordClick($(this),opt);
+			});
+			jitem.find('[el=default]').click(function(){
+				var _url='/{@channel}/linkman.x?action=default&id='+linkid;
+				$ajax({url:_url,value:'xml',ready:function(xml){
+					var map=$util.toMapByXML(xml);
+					var treeVar=map.getItemTree('var');
+					if(treeVar.v('status')=='succeed'){
+						ui.popups('succeed','设置成功!');
+					}else{
+						ui.popups('info','设置失败!');
+					}
+				},error:true});
+			});
+		};
+		opt.binds=function(jcont,treeVar){
+			jcont.find('[_type=default] [name=linkman]').checked(true);
+			if(jcont.find('[_type=default]').length<1){
+				jcont.find('[name=linkman]:first').checked(true);	
+			}
+		};
+		opt.node_table='item';
+		list.init(opt);
+		list.parse();
+	};
+	
+	var _addlinkman=function(){
+		ui.pages.channel='{@channel}';
+		var opt={
+			serveE:{p:'linkman',action:'add'},
+			serveX:{p:'linkman',action:'add'},
+			title:'填写收货信息',
+			succeed:function(){
+				_getlinkman();	
+			},
+		};
+		ui.pages.record($('[el=add_linkman]'),opt);
+	};
+	_getlinkman();
+	_addlinkman();
+	
+	
+	var _submit=function(){
+		if(!$('[name=linkman]:checked').val()){
+			ui.popups('info','请选择联系人！');
+			return;
+		}
+		var _params=$('.order').serialize();
+		var _url='/{@channel}/flow.x?action=add&'+_params;
+		$ajax({url:_url,value:'xml',ready:_parseAsync,error:true});
+	};
+	var _parseAsync=function(xml){
+		var map=$util.toMapByXML(xml);
+		var treeVar=map.getItemTree('var');
+		if(treeVar.v('status')=='succeed'){
+			ui.popups('succeed','订单提交成功!');
+			var orderid=treeVar.v('orderid');
+			setTimeout(function(){
+				location.href='/{@channel}/checkout?orderid='+orderid+'';
+			},1000);
+		}else{
+			ui.popups('info','订单提交失败!');
+		}
+	};
+	
+	$('[el=submit]').click(_submit);
+});
+</script>
+<label:include file="/footers">

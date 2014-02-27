@@ -1,0 +1,32 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @nav.side v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######################### */
+.nav_side{min-height:350px;_height:350px;padding:0;}
+.nav_side ul{}
+.nav_side li{height:39px;font-size:14px;background-image:none;padding:0;margin:0 0 5px 0;}
+.nav_side li a{display:block;height:39px;line-height:39px;background:url("../../common/struct/nav_side.png") 0 -0px no-repeat;text-decoration:none;overflow:hidden;}
+.nav_side li.pop a,
+.nav_side li a:hover{color:#000;background-position:0 -40px;}
+.nav_side li a span{display:block;text-indent:65px;}
+.nav_side li a span{
+	-webkit-transition:margin-left .2s ease-in-out;
+	   -moz-transition:margin-left .2s ease-in-out;
+	     -o-transition:margin-left .2s ease-in-out;
+	    -ms-transition:margin-left .2s ease-in-out;
+		transition:margin-left .2s ease-in-out;
+}
+.nav_side li a:hover span{margin-left:10px;}
+
+
+
+/*
+.nav_side li.pop a,
+.nav_side li a.pop,
+.nav_side li a:hover{color:#FFF;background-position:0 -80px;}
+*/

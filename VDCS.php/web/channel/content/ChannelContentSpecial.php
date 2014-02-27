@@ -1,0 +1,6 @@
+<?
+class ChannelContentSpecial extends ChannelContentList
+{
+	
+}
+?>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,key,name</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<value>0</value>
+		<key>gu</key>
+		<name><![CDATA[<app:var.gu>]]></name>
+	</item>
+	<item>
+		<value>1</value>
+		<key>yes</key>
+		<name><![CDATA[已婚]]></name>
+	</item>
+	<item>
+		<value>2</value>
+		<key>dv</key>
+		<name><![CDATA[离异]]></name>
+	</item>
+	<item>
+		<value>3</value>
+		<key>no</key>
+		<name><![CDATA[未婚]]></name>
+	</item>
+</xcml>

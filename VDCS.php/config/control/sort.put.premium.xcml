@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,title,level</field>
+	</configure>
+	<item>
+		<value>0</value>
+		<title><![CDATA[不奖励]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<value>1</value>
+		<title><![CDATA[审核后奖励]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<value>2</value>
+		<title><![CDATA[立即奖励]]></title>
+		<level>0</level>
+	</item>
+</xcml>

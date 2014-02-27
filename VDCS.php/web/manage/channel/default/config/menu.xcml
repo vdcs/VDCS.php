@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>name,url,config</field>
+		<title><![CDATA[]]></title>
+		<relate></relate>
+		<url.init>{$url.main}</url.init>
+	</configure>
+	<item>
+		<name><![CDATA[欢迎登录]]></name>
+		<url><![CDATA[{$url.main}]]></url>
+		<config><![CDATA[icon=page;act=]]></config>
+	</item>
+	<item>
+		<name><![CDATA[修改密码]]></name>
+		<url><![CDATA[p=account;params=action=password]]></url>
+		<config><![CDATA[icon=password;act=]]></config>
+	</item>
+</xcml>

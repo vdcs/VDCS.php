@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>common,message</node>
+	</configure>
+	<common>
+		<test><![CDATA[]]></test>
+	</common>
+	<message>
+		<vcode><![CDATA[验证码 为空或不符合规则]]></vcode>
+		<banip><![CDATA[您的IP已被系统列入违禁列表中！]]></banip>
+		<banip.post><![CDATA[您的IP已被系统列入违禁发布列表中！]]></banip.post>
+		<banip.passport><![CDATA[您的IP已被系统列入违禁登录及注册列表中！]]></banip.passport>
+		<badword><![CDATA[您提交的信息含有系统违禁字符串！]]></badword>
+	</message>
+</xcml>

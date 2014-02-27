@@ -1,0 +1,6 @@
+	<h3>
+		<t class="tim"><i><view:tim!time></i></t> <s></s>
+		<t class="source"><i><view:source></i></t> <s></s>
+		<t class="stat"><channel:var("act")><i><view:total_view></i></t>
+		<t class="comment"><a href="#comment">已有<i><view:total_comment></i>人评价</a></t> <s></s>
+	</h3>

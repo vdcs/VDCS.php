@@ -1,0 +1,3 @@
+
+<label:include script="<url:images>themes/default/app.view.js">
+<script type="text/javascript">if(view) view.init("{@channel}","{@id}");</script>

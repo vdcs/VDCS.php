@@ -1,0 +1,8 @@
+﻿<div id="footer">
+	<div class="version">Processed in <web:stat.exectime> s, <web:stat.query> queries. Gzip <web:stat.gzip>, Memory usage <web:stat.memory>
+		<span title="App Updated in <app:app.version.update>.&#10;&#13;Power by <app:app.version> <app:app.version.build>">.</span>
+	<!--<span>Power by <app:web.version></span>-->
+	</div>
+</div>
+<!--</center>-->
+<label:include file="/footer.blank">

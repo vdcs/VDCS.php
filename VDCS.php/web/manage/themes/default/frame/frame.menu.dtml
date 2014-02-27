@@ -1,0 +1,49 @@
+<label:include file="header.frame">
+
+<div id="menus"></div>
+<xmp id="element-menu-frame">
+<div class="Block">
+{$bar}
+	<div class="BlockContent" id="FrameMenu-Items-{$sn}"><div class="BlockInner">
+		<div class="items">
+		<ul>
+{$items}
+		</ul>
+		</div>
+	</div></div>
+	<div class="BlockFooter"><p></p></div>
+</div>
+</xmp>
+<xmp id="element-menu-bar">
+<div class="BlockBar hand" onclick="javascript:return mframe.doMenuSwitchChange('FrameMenu-Items-{$sn}');"><p>{$name}</p><r></r></div>
+</xmp>
+<xmp id="element-menu-sub">
+<div class="BlockBar BlockSub hand" onclick="javascript:return mframe.doMenuSwitchChange('FrameMenu-Items-{$sn}');"><p>{$name}</p><r></r></div>
+</xmp>
+<xmp id="element-menu-item">
+<li><a class="act act-{$icon}" style="" href="{$url}" {$script}>{$name}</a></li>
+</xmp>
+<xmp id="element-menu-icon">
+<img class="icon" src="<app:url.manage.themes>frame/icon/{$icon}.gif" />
+</xmp>
+<xmp id="element-menu-space">
+<div class="space"></div>
+</xmp>
+
+<script type="text/javascript">
+mframe.set("frame","menu");
+mframe.set("init.url","<var:url.init>");
+mframe.menu=new mframe.libMenu();
+<loop:menu>
+mframe.menu.addItems("[item:type]","[item:name]","[item:url]","[item:icon]","[item:script!js]");
+</loop>
+$(function(){
+	mframe.menu.doParse();
+	var jitema=$('#menus').find('.items a:first');
+	jitema.click();
+	parent.$('iframe[name="ifrm_main"]').attr('src',jitema.attr('href'));
+});
+//background-image:url('<url:manage.themes>frame/icon/{$icon}.gif');
+</script>
+
+<label:include file="footer.frame">

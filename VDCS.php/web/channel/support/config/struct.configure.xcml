@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="struct">
+	<configure>
+		<node>item</node>
+	</configure>
+	<item>
+		<__key><![CDATA[config.base]]></__key>
+		<__name><![CDATA[基本配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.var><![CDATA[名称设定			###type~bar]]></bar.var>
+		<pre.name><![CDATA[频道简称			###property.min~1	^style~size=30]]></pre.name>
+		<pre.names><![CDATA[页面名称			###property.min~1	^style~size=30]]></pre.names>
+		<bar.title><![CDATA[页面标题设定		###type~bar]]></bar.title>
+		<var.title><![CDATA[首页			###property.min~1	^style~size=30]]></var.title>
+		<var.title.about><![CDATA[关于页		###property.min~1	^style~size=30]]></var.title.about>
+		<var.title.cases><![CDATA[案例页		###property.min~1	^style~size=30]]></var.title.cases>
+		<var.title.join><![CDATA[加入页			###property.min~1	^style~size=30]]></var.title.join>
+		<var.title.contact><![CDATA[联系页		###property.min~1	^style~size=30]]></var.title.contact>
+		<var.title.payment><![CDATA[购买页		###property.min~1	^style~size=30]]></var.title.payment>
+		<var.title.help><![CDATA[帮助页			###property.min~1	^style~size=30]]></var.title.help>
+		<var.title.copyright><![CDATA[版权页		###property.min~1	^style~size=30]]></var.title.copyright>
+		<var.title.agreement><![CDATA[协议页		###property.min~1	^style~size=30]]></var.title.agreement>
+		<var.title.privacy><![CDATA[隐私页		###property.min~1	^style~size=30]]></var.title.privacy>
+		<var.title.dict><![CDATA[名词页			###property.min~1	^style~size=30]]></var.title.dict>
+		<var.title.culture><![CDATA[文化页		###property.min~1	^style~size=30]]></var.title.culture>
+		<var.title.values><![CDATA[价值观页		###property.min~1	^style~size=30]]></var.title.values>
+		<var.title.credit><![CDATA[荣誉页		###property.min~1	^style~size=30]]></var.title.credit>
+		<var.title.vip><![CDATA[VIP页			###property.min~1	^style~size=30]]></var.title.vip>
+		<var.title.quality><![CDATA[质量页		###property.min~1	^style~size=30]]></var.title.quality>
+		<var.title.online><![CDATA[在线服务页		###property.min~1	^style~size=30]]></var.title.online>
+		<var.title.announce><![CDATA[公告页		###property.min~1	^style~size=30]]></var.title.announce>
+		<var.title.vote><![CDATA[调查页			###property.min~1	^style~size=30]]></var.title.vote>
+		<var.title.gbook><![CDATA[留言页		###property.min~1	^style~size=30]]></var.title.gbook>
+		<var.title.links><![CDATA[链接页		###property.min~1	^style~size=30]]></var.title.links>
+		<var.title.sitemap><![CDATA[地图页		###property.min~1	^style~size=30]]></var.title.sitemap>
+		
+	</item>
+	<item>
+		<__key><![CDATA[config.adv]]></__key>
+		<__name><![CDATA[高级配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.url><![CDATA[SEO设定			###type~bar]]></bar.url>
+		<config.url><![CDATA[URL模式			###type~radio		^att~<control:att("file","url.mode")>]]></config.url>
+		<bar.config><![CDATA[页面设定			###type~bar]]></bar.config>
+		<config.faq.menu><![CDATA[菜单设置		###property.min~0	^style~size=60 class="itxt"]]></config.faq.menu>
+		<config.faq.section><![CDATA[问题截面		###property.min~0	^style~size=60 class="itxt"]]></config.faq.section>
+	</item>
+	<item>
+		<__key><![CDATA[config.url]]></__key>
+		<__name><![CDATA[地址配置]]></__name>
+		<__file><![CDATA[configure]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.url.script><![CDATA[动态URL地址配置	###type~bar]]></bar.url.script>
+		<url.script.index><![CDATA[首页			###property.min~1	^style~size=60 class="itxt"]]></url.script.index>
+		<url.script.faq><![CDATA[FAQ页			###property.min~1	^style~size=60 class="itxt"]]></url.script.faq>
+		<url.script.faq.key><![CDATA[FAQ节点页		###property.min~1	^style~size=60 class="itxt"]]></url.script.faq.key>
+		<url.script.page><![CDATA[页面			###property.min~1	^style~size=60 class="itxt"]]></url.script.page>
+		<url.script.app><![CDATA[应用页			###property.min~1	^style~size=60 class="itxt"]]></url.script.app>
+		<url.script.apps><![CDATA[应用页2		###property.min~1	^style~size=60 class="itxt"]]></url.script.apps>
+		<url.script.join><![CDATA[加入页		###property.min~1	^style~size=60 class="itxt"]]></url.script.join>
+		<url.script.join.apply><![CDATA[加入申请页	###property.min~1	^style~size=60 class="itxt"]]></url.script.join.apply>
+		<url.script.announce><![CDATA[公告页		###property.min~1	^style~size=60 class="itxt"]]></url.script.announce>
+		<url.script.announce.list><![CDATA[公告列表页	###property.min~1	^style~size=60 class="itxt"]]></url.script.announce.list>
+		<url.script.announce.list.page><![CDATA[公告列表分页	###property.min~1	^style~size=60 class="itxt"]]></url.script.announce.list.page>
+		<url.script.announce.view><![CDATA[公告浏览页	###property.min~1	^style~size=60 class="itxt"]]></url.script.announce.view>
+		<url.script.vote><![CDATA[投票页		###property.min~1	^style~size=60 class="itxt"]]></url.script.vote>
+		<url.script.vote.page><![CDATA[投票页面		###property.min~1	^style~size=60 class="itxt"]]></url.script.vote.page>
+		<url.script.vote.act><![CDATA[投票请求		###property.min~1	^style~size=60 class="itxt"]]></url.script.vote.act>
+		<url.script.vote.acts><![CDATA[投票请求2	###property.min~1	^style~size=60 class="itxt"]]></url.script.vote.acts>
+		<url.script.gbook><![CDATA[留言页		###property.min~1	^style~size=60 class="itxt"]]></url.script.gbook>
+		<url.script.gbook.page><![CDATA[留言页面	###property.min~1	^style~size=60 class="itxt"]]></url.script.gbook.page>
+		<url.script.gbook.post><![CDATA[留言发表页	###property.min~1	^style~size=60 class="itxt"]]></url.script.gbook.post>
+		<url.script.links><![CDATA[链接页		###property.min~1	^style~size=60 class="itxt"]]></url.script.links>
+		<url.script.sitemap><![CDATA[地图页		###property.min~1	^style~size=60 class="itxt"]]></url.script.sitemap>
+		<bar.url.rewrite><![CDATA[静态URL地址配置(ISAPI Rewrite)		###type~bar]]></bar.url.rewrite>
+		<url.rewrite.index><![CDATA[首页		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.index>
+		<url.rewrite.faq><![CDATA[FAQ页			###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.faq>
+		<url.rewrite.faq.key><![CDATA[FAQ节点页		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.faq.key>
+		<url.rewrite.page><![CDATA[页面			###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.page>
+		<url.rewrite.app><![CDATA[应用页		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.app>
+		<url.rewrite.apps><![CDATA[应用页2		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.apps>
+		<url.rewrite.join><![CDATA[加入页		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.join>
+		<url.rewrite.join.apply><![CDATA[加入申请页	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.join.apply>
+		<url.rewrite.announce><![CDATA[公告页		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.announce>
+		<url.rewrite.announce.list><![CDATA[公告列表页	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.announce.list>
+		<url.rewrite.announce.list.page><![CDATA[公告列表分页	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.announce.list.page>
+		<url.rewrite.announce.view><![CDATA[公告浏览页	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.announce.view>
+		<url.rewrite.vote><![CDATA[投票页		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.vote>
+		<url.rewrite.vote.page><![CDATA[投票页面	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.vote.page>
+		<url.rewrite.vote.act><![CDATA[投票请求		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.vote.act>
+		<url.rewrite.vote.acts><![CDATA[投票请求2	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.vote.acts>
+		<url.rewrite.gbook><![CDATA[留言页		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.gbook>
+		<url.rewrite.gbook.page><![CDATA[留言页面	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.gbook.page>
+		<url.rewrite.gbook.post><![CDATA[留言发表页	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.gbook.post>
+		<url.rewrite.links><![CDATA[链接页		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.links>
+		<url.rewrite.sitemap><![CDATA[地图页	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.sitemap>
+	</item>
+</xcml>

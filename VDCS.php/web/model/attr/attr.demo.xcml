@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,name,type,inputtype,inputmin,values,value,explain,money,index,linked</field>
+	</configure>
+	<item>
+		<key></key>
+		<name>颜色</name>
+		<type>single</type>
+		<inputtype>radio</inputtype>
+		<inputmin></inputmin>
+		<values>黑色$$$白色$$$红色$$$蓝色$$$金色$$$粉色$$$银色$$$灰色</values>
+		<value></value>
+		<explain></explain>
+		<money></money>
+		<index>0</index>
+		<linked>0</linked>
+	</item>
+	<item>
+		<key></key>
+		<name>样式</name>
+		<type></type>
+		<inputtype>text</inputtype>
+		<inputmin></inputmin>
+		<values></values>
+		<value></value>
+		<explain></explain>
+		<money></money>
+		<index>0</index>
+		<linked>0</linked>
+	</item>
+</xcml>

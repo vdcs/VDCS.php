@@ -1,0 +1,26 @@
+
+<script type="text/javascript">
+pages.listExtendOpt=function(opt){
+	opt.bindItem=function(jitem){
+		var uuid=jitem.attr('data-id');
+			jitem.find('[el=remit]').click(function(){
+				ui.pages.channel='{@channel}';
+				var optpay={
+					serveE:{p:'assets',m:'remit',action:'apply',params:'uuid='+uuid},
+					serveX:{p:'assets',m:'remit',action:'apply',params:'uuid='+uuid},				
+					title:'汇款',
+					succeed:function(){
+						ui.popups('succeed','汇款成功',1);
+						setTimeout(function(){
+							pages.list.refresh();
+							//tpl.refresh();
+						},1000);
+					},
+				};
+				ui.pages.recordClick('',optpay);
+			});			
+	};
+	return opt
+};
+</script>
+<label:include file="inc/listc.script">

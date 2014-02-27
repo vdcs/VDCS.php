@@ -1,0 +1,24 @@
+<label:include file="/channel/frame/header">
+
+
+<label:include script="<web:url.themes>images/welcome/welcome.css" type="css">
+<div class="Welcome">
+<div class="partInner"><div class="partBody"></div></div>
+</div>
+
+<!--
+<manager:name>, welcome.<br/>
+password.md5: <manager:password>
+
+
+<div class="Block">
+	<div class="BlockBar"><p>main</p></div>
+	<div class="BlockContent"><div class="BlockInner">
+	welcome
+	</div></div>
+	<div class="BlockFooter"><p></p></div>
+</div>
+-->
+
+
+<label:include file="/channel/frame/footer">

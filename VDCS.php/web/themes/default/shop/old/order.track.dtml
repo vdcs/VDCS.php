@@ -1,0 +1,75 @@
+<label:include file="/headers">
+<div class="box">
+<h2><t>订单概览</t></h2>
+<div class="con">
+<table class="table tables table-striped table-hover table-list">
+<tbody>
+<tr><th>订单号</th><td><view:no></td><th>总额</th><td><view:money></td></tr>
+<tr><th>联系人</th><td><view:linkman></td><th>联系电话</th><td><view:mobile></td></tr>
+<tr><th>邮编</th><td><view:postcode></td><th>支付方式</th><td><view:payment.name></td></tr>
+<tr><th>运送方式</th><td><view:shipping></td><th>送货时间</th><td><view:dtime></td></tr>
+<tr><th>订单状态</th><td><view:status.name></td><th>邮费</th><td><view:shipping_price></td></tr>
+<tr><th>地址</th><td colspan="3"><view:address></td></tr>
+<tr><th>买家留言</th><td colspan="3"><view:message></td></tr>
+</tbody>
+<tfoot><tr><th colspan="4"><a el="pay" class="btn s hide" style="display: none;" href="/{@channel}/checkout?orderid=<view:id>">去付款</a> <a class="btn s hide" style="display: none;" el="cancel">取消订单</a> <a class="btn s hide" style="display: none;" el="confirm">确认收货</a> <a class="btn s hide" style="display: none;" el="rate">去评价</a></th></tr></tfoot>
+</table>
+</div>
+</div>
+<div class="space"></div>
+<div class="box">
+<h2><t>订单详情</t></h2>
+<div class="con">
+<table class="table tables table-striped table-hover table-list">
+<thead><tr><th>产品标题</th><th>金额</th><th>操作</th></tr></thead>
+<tbody>
+<loop:list>
+<tr><td>[item:topic]</td><td>[item:money]</td><td><a href="/{@channel}/view_[item:resid]">查看产品</a></td></tr>
+</loop>
+</tbody>
+</table>
+</div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+	var _init=function(){
+		var jitem=$('tfoot');
+		var status='<view:status>';
+		if(status==0) jitem.find('[el=pay],[el=cancel]').show();
+		if(status==4) jitem.find('[el=confirm]').show();
+		if(status==5) jitem.find('[el=rate]').show();
+		
+		jitem.find('[el=cancel]').click(function(){
+			var orderid='<view:id>';
+			_change(orderid,9,'您确定要取消订单吗？');
+		});
+		jitem.find('[el=confirm]').click(function(){
+			var orderid='<view:id>';
+			_change(orderid,5,'您确定要确认收货吗？');
+		});
+	};
+	
+	var _change=function(orderid,status,message){
+		var opt={};
+		opt.message=message;
+		opt.callback=function(){
+			//var _url='/p.php?cp=product&p=checkout&m=&x=x&action=cancel&orderid='+orderid+'';
+			var _url='/{@channel}/order.x?action=change&orderid='+orderid+'&status='+status;
+			$ajax({url:_url,value:'xml',ready:function(xml){
+				var map=$util.toMapByXML(xml);
+				var treeVar=map.getItemTree('var');
+				ui.popups('succeed','操作成功！');
+				setTimeout(function(){
+					location.reload();
+				},1000);
+			},error:true});	
+				
+		};
+		ui.confirm(opt);
+	};
+	
+	_init();
+});
+</script>
+<label:include file="/footers">

@@ -1,0 +1,62 @@
+<label:include file="header">
+<label:include file="common.header.nav">
+<label:include script="<web:url.themed>shop/appc.cart.js">
+
+<div class="framer">
+	<div class="side">
+<label:include file="common.menus">
+	</div>
+	<div class="cont">
+<label:include file="common.navbar">
+<label:include file="common.flow">
+
+<div class="box">
+	<!--<div class="BlockHeader"><p></p></div>-->
+	<h2><t><web:var.title></t></h2>
+	<div class="cont">
+<div class="page-line"></div>
+<table class="frm table-break products">
+<thead>
+<tr class="sub ac">
+<td class="bar-item" style="width:130px;"></td>
+<td class="bar-info"><channel:var("names")>信息</td>
+<td class="bar-price" style="width:80px;">单价(<app:unit.coin>)</td>
+<td class="bar-amount" style="width:80px;"><a class="btn-cart-modify" href="javascript:;" onclick="javascript:modifyItems();">更新</a>
+	数量</td>
+</tr>
+</thead>
+<tbody id="">
+
+</tbody>
+</table>
+	</div></div>
+	<div class="cont">
+<div class="rlt" style="height:70px;">
+<div class="m">
+<p>扣除商品积分：<span class="score" id="cart-scores-minus">0</span> <app:unit.score></p>
+</div>
+<div class="r ar">
+<p><uac:level.name>优惠：<span class="price b" id="cart-prices-off">0</span> <app:unit.coin></p>
+<p>运费：<span class="price b" id="cart-prices-shipping">0</span> <app:unit.coin></p>
+<p>商品金额总计：<span class="price b" id="cart-prices-total">0</span> <app:unit.coin></p>
+<p><span class="gray">本次订单可获得{@names}积分: <span class="score" id="cart-con-scores">0</span> <app:unit.score></span></p>
+</div>
+</div>
+	</div></div>
+	<div class="cont">
+<div class="rlt rlt-top">
+<div class="m">
+<a class="btn-t4 btn-flow-continue" href="<linkurl:{@channel}.index>"><span>继续购物</span></a>
+</div>
+<div class="r ar">
+<a class="btn-t4 btn-flow-next" href="<chn:linkurl("{@channel}","pay")>"><span>确认购买</span></a>
+</div>
+</div>
+	</div></div>
+</div>
+
+<script type="text/javascript">appc.cart.binds("cart");</script>
+
+	</div></div>
+</div>
+<label:include file="footer">

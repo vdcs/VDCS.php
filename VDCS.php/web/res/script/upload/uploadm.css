@@ -1,0 +1,17 @@
+
+.uploadm{width:400px;}
+.uploadm a{text-decoration:none;}
+.uploadm .bars{height:24px;border-bottom:1px solid #ccc;padding:0 20px;}
+.uploadm .bars a{display:inline-block;height:23px;line-height:24px;border:1px solid #ccc;background-color:#F3F3F3;padding:0 20px;margin-bottom:-1px;overflow:hidden;}
+.uploadm .bars a.pop{border-bottom-color:#FFF;background-color:#FFF;}
+.uploadm .bars{}
+.uploadm .bars{}
+.uploadm .cons{text-align:center;padding:20px;}
+.uploadm .con_upload{}
+.uploadm .con_upload .upload{display:inline-block;height:24px;line-height:24px;border:1px solid #ccc;background-image:none;background-color:#F3F3F3;padding:0 20px;overflow:hidden;}
+.uploadm .con_upload .upload:hover{}
+.uploadm .con_web{}
+.uploadm .con_web .url{width:200px;margin-right:10px;}
+.uploadm .items{height:90px;}
+.uploadm .items li{float:left;display:inline-block;margin-right:5px;}
+.uploadm .items li img{min-width:50px;height:80px;}

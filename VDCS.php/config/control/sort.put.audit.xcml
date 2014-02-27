@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,title,level</field>
+	</configure>
+	<item>
+		<value>edit</value>
+		<title><![CDATA[编辑]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<value>delete</value>
+		<title><![CDATA[删除]]></title>
+		<level>0</level>
+	</item>
+</xcml>

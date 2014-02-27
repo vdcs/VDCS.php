@@ -1,0 +1,5 @@
+<?
+class apiBase extends apiBaseSSO
+{
+	
+}

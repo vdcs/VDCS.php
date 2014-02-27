@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,regex</field>
+	</configure>
+	<item>
+		<key>(.[key]*)</key>
+		<regex><![CDATA[(.[^\"\'\:\f\\t\]]*)]]></regex>
+	</item>
+	<item>
+		<key>(.[file]*)</key>
+		<regex><![CDATA[(.[^\"\'\:\]]*)]]></regex>
+	</item>
+	<item>
+		<key>(.[url]*)</key>
+		<regex><![CDATA[(.[^\"\]]*)]]></regex>
+	</item>
+</xcml>

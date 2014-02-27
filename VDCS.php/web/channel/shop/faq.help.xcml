@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,topic,content</field>
+	</configure>
+	<item>
+		<key>secure</key>
+		<topic><![CDATA[安全交易]]></topic>
+		<content><![CDATA[]]></content>
+	</item>
+	<item>
+		<key>flow</key>
+		<topic><![CDATA[购物流程]]></topic>
+		<content><![CDATA[]]></content>
+	</item>
+	<item>
+		<key>carry</key>
+		<topic><![CDATA[支付配送方式]]></topic>
+		<content><![CDATA[]]></content>
+	</item>
+	<item>
+		<key>contact</key>
+		<topic><![CDATA[联系我们]]></topic>
+		<content><![CDATA[]]></content>
+	</item>
+</xcml>

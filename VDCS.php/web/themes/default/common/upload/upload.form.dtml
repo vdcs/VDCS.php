@@ -1,0 +1,35 @@
+﻿<label:include file="upload-header">
+<script type="text/javascript">
+up.doCheckForm=function(){
+	var re=true;
+	var _file=$f.v("frm_upload.file1");
+	if(!_file){
+		alert("请先选择要上传的文件！");
+		re=false;
+	}
+	else{
+		$f.v("frm_upload.file_1",_file);
+		$("#up_tips").show();
+		$("#up_tips .info").val("文件上传中，请稍候..");
+		//re=false;
+	}
+	return re;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%" id="__tables">
+<tr><td align="left">
+<div id="up_tips" class="TipsFloat" style="display:none;"><span class="info">loading..</span></div>
+<form name="frm_upload" action="" method="post" enctype="multipart/form-data">
+<input type="hidden" name="<vcp:form.field>" value="<vcp:code>" />
+<input type="hidden" name="file_1" value="" />
+<input type="file" class="txt" name="file1" value="" size="20" style="width:60%;" />
+<input type="submit" class="btn" name="_sbt" value="上传" onclick="javascript:return up.doCheckForm();" />
+</form>
+</td></tr>
+</table>
+<script type="text/javascript">
+$d.load(function(){
+	up.doPageInit();
+});
+</script>
+<label:include file="upload-footer">

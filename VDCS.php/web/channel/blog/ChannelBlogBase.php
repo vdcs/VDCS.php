@@ -1,0 +1,3 @@
+<?
+class ChannelBlogBase extends ChannelBlogBasic{}
+?>

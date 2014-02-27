@@ -1,0 +1,198 @@
+<label:include file="/headers">
+<form name="frm_order">
+<div class="box">
+<h2><t>填写信息</t></h2>
+<div class="sider" style="float:left;">
+	<dl class="forms">
+	<dt><h2>运送方式</h2><h3><p class="items" el="shipping">
+	<loop:shipping>
+	<input type="radio" name="shipping" value="[item:name]" _price="[item:price]" />[item:name] [item:price]元 ([item:explain]))<br />
+	</loop>
+	</p></h3></dt>
+	<dt><h2>送货时间</h2><h3><p class="items" el="dtime">
+	<loop:dtime>
+	<input type="radio" name="dtime" value="[item:name]" />[item:name]([item:explain])<br />
+	</loop>
+	</p></h3></dt>
+	</dl>
+</div>
+<div class="cent">
+	<dl class="forms">
+	<dt><h2>姓名</h2><h3><p class="items"><input name="linkman" /></p></h3></dt>
+	<dt><h2>手机</h2><h3><p class="items"><input name="mobile" /></p></h3></dt>
+	<dt><h2>邮编</h2><h3><p class="items"><input name="postcode" /></p></h3></dt>
+	<dt><h2>地址</h2><h3><p class="items"><textarea name="address"></textarea></p></h3></dt>
+	<dt><h2>给卖家留言</h2><h3><p class="items"><textarea name="message"></textarea></p></h3></dt>
+	<input type="hidden" name="shipping_price" value="0" />
+	<input type="hidden" name="money" value="0" />
+	<input type="hidden" name="cid" value="0" />
+	<input type="hidden" name="discount" value="0" />
+	</dl>
+</div>
+</div>
+<div class="space"></div>
+<div class="box">
+<h2><t>可用优惠券</t></h2>
+<div class="con">
+<div id="list_coupon"></div>
+</div>
+</div>
+
+<div class="space"></div>
+<div class="box">
+<h2><t>确认订单信息</t></h2>
+<div class="con">
+<table class="table tables table-striped table-hover table-list">
+<thead><tr><th>产品名称</th><th>单价</th><th>数量</th><th>优惠</th><th>合计</th></tr></thead>
+<tbody id="list">
+
+</tbody>
+<tfoot><td colspan="5"><a class="btn" href="/{@channel}/cart">返回购物车</a><cite>合计:<span el="moneys">0</span>元</cite> <cite>账户余额<ua:money></cite></td></tfoot>
+</table>
+<div class="space"></div>
+<div style="text-align:center;">
+<div class="tips hide"><h3><p class="itip"><em></em><span>提示信息</span></p></h3></dt></h3></div>
+<a class="btn" el="submit"><span>提交订单</span></a>
+</div>
+</div>
+</div>
+</form>
+<xmp id="list_tpl">
+<tr dataid="[item:id]"><td>[item:p_topic]</td><td el="price">[item:price]</td><td el="_amount">[item:amount]</td><td el="_discount">[item:discount]</td><td el="money">0</td></tr>
+</xmp>
+
+
+<xmp id="list_coupon_tpl">
+<p cid="[item:id]" _discount="[item:money]"><a class="btn">优惠[item:money]元</a></p>
+</xmp>
+<label:include script="VDCS.ui.page.js">
+<script type="text/javascript">
+$(function(){
+	_computeMoney=function(jitem,iscoupon){
+		var money=0;
+		var _amount=jitem.find('[el=_amount]').text();
+		var _price=jitem.find('[el=price]').text();
+		var money=parseInt(_amount)*parseFloat(_price);
+		if(iscoupon){
+			var discount=parseFloat(jitem.find('[el=_discount]').text());
+			money-=discount;
+		}
+		jitem.find('[el=money]').text(money);
+		_computeMoneys(iscoupon);
+	};
+	_computeMoneys=function(iscoupon){
+		var moneys=0;
+		$('#list').find('tr [el=money]').each(function(){
+			var money=$(this).text();
+			moneys+=parseFloat(money);
+		});
+		
+		//邮费
+		var ship_money=parseFloat($('input[name=shipping]:checked').attr('_price'));
+		$('input[name=shipping_price]').val(ship_money);
+		
+		moneys+=ship_money;	
+		if(iscoupon){
+			var discount=parseFloat($('input[name=discount]').val());
+			moneys-=discount;
+		}
+		$('[el=moneys]').text(moneys);
+		$('input[name=money]').val(moneys);
+	};
+	
+	$('[el=shipping],[el=dtime]').find('input[type=radio]:first').checked(true);
+
+	var list=ui.list;//对象，传入存放内容的对象和模板对象
+	var opt={cont:$('#list'),tpl:$('#list_tpl')};
+	opt.serveVar={channel:'{@channel}',p:'coupon',action:'coupon',params:''};
+	//opt.paging=$('#paging');//放置分页按钮的对象
+	opt.bind=function(jitem){
+		_computeMoney(jitem,true);
+	};
+	opt.binds=function(jcont,treeVar){
+		$moneys=parseFloat($('[el=moneys]').text());
+		_getCoupon($moneys);
+		_computeMoneys(true);
+	};
+	opt.node_table='item';
+	list.init(opt);
+	list.parse();
+	
+	$('input[name=shipping]').change(function(){
+		_computeMoneys(true);
+	});
+
+	$f.bindi();
+	var opt={
+		frm			: 'frm_order',
+		names			: '提交订单',
+		message_formcheck	: '请填写必要的信息！',
+		message_parser		: '数据保存..',
+		message_succeed		: '保存成功！转接中..',
+		submit_ing		: '数据保存中..',
+		submit_succeed		: '保存成功！',
+		serv_method		: 'post',
+		goback			: false,
+		servURL			: '/{@channel}/flow.x?action=add',
+		callback:		function(status,treeVar){//订单提交成功
+						//付款
+						var orderid=treeVar.v('orderid');
+						ui.popups('succeed','订单提交成功',0);
+						setTimeout(function(){
+							location.href='/{@channel}/checkout?orderid='+orderid+'';
+							
+						},1000);
+					}
+		};
+	app.xform.initer(opt);
+	
+	//获取优惠券
+	var _getCoupon=function($money){
+		var list=new VDCS.list();//对象，传入存放内容的对象和模板对象
+		var opt={cont:$('#list_coupon'),tpl:$('#list_coupon_tpl')};
+		opt.serveVar={channel:'{@channel}',p:'coupon',action:'get',params:'type=2&money='+$money};
+		opt.bind=function(jo){
+			jo.click(function(){
+				var cid=$(this).attr('cid');
+				var _html='<div><p>优惠码<input name="code" type="text" /></p></div>';
+				var j=$(_html);
+				var opt={};
+				opt.title='请输入优惠码';
+				opt.onsubmit=function(jbox){
+					var code=jbox.find('input[name=code]').val();
+					_checkCode(cid,code,jo);	
+				};
+				ui.box(j,opt);
+			});
+		};
+		opt.binds=function(jcont,treeVar){
+			
+		};
+		opt.node_table='item';
+		list.init(opt);
+		list.parse();
+	};
+	
+	var _checkCode=function(cid,code,jo){
+		var _url='/{@channel}/coupon.x?action=check&type=2&cid='+cid+'&code='+code;
+		$ajax({url:_url,value:'xml',ready:function(xml){codeAsync(xml,cid,jo);},error:true});
+	};
+	
+	var codeAsync=function(xml,cid,jo){
+		var map=$util.toMapByXML(xml);
+		var treeVar=map.getItemTree('var');
+		if(treeVar.v('status')=='succeed'){
+			ui.popups('succeed','已使用优惠券');
+			$('input[name=cid]').val(cid);
+			var discount=jo.attr('_discount');
+			$('input[name=discount]').val(discount);
+			$('#list_coupon').hide();
+			_computeMoneys(true);
+		}else{
+			ui.popups('info',treeVar.v('message'));
+		}
+	};
+	
+});
+</script>
+<label:include file="/footers">

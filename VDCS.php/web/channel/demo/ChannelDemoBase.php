@@ -1,0 +1,2 @@
+<?
+class ChannelDemoBase extends ChannelDemoBasic{}

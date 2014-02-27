@@ -1,0 +1,26 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @menus v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+.Menus{clear:both;width:150px;text-align:left;overflow:hidden;}
+.Menus .partIcon{text-align:center;padding:8px 0;overflow:hidden;}
+.Menus .partBar{height:30px;font-size:14px;color:#00456C;font-weight:bold;background-repeat:no-repeat;background-position:0 0;overflow:hidden;}
+.Menus .partBar span{display:block;line-height:30px;padding:0 0 0 20px;}
+.Menus .partItems{padding:5px 0;}
+.Menus .partItems ul{}
+.Menus .partItems li{height:30px;color:#333333;margin:5px 0;}
+.Menus .partItems li a{display:block;width:150px;height:30px;font-size:13px;color:#333333;text-align:left;text-decoration:none;background-repeat:no-repeat;background-position:0 -180px;overflow:hidden;}
+.Menus .partItems li a:hover,
+.Menus .partItems li a:active{color:#000000;font-weight:bold;background-position:0 -210px;}
+.Menus .partItems li a span{display:block;line-height:30px;line-height:33px\9;background-repeat:no-repeat;background-position:0 0;margin-left:30px;padding:0 0 0 22px;}
+.Menus .partItems li.jut{}
+.Menus .partItems li.jut a{background-position:0 -210px;}
+.Menus .partItems li.jut a:hover{background-position:0 -210px;}
+.Menus .partItems li.pop{}
+.Menus .partItems li.pop a{font-weight:bold;background-position:0 -210px;}
+.Menus .partItems li.pop a:hover{background-position:0 -210px;}
+.Menus .partItems li.space{height:5px;overflow:hidden;margin:0;padding:0;}

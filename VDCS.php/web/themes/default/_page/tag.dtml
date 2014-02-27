@@ -1,0 +1,28 @@
+<label:include file="frame/headers">
+<div class="framer">
+<div class="side">
+<label:include file="_shortcut">
+</div>
+<div class="cont">
+	<div class="box">
+		<h2><t>Demo[<label:pre.page>-<web:var.title>]</p></div>
+		<div class="BlockContent"><!--tag.define.content--></div>
+		<div class="con">
+&lt;label:pre.page&gt;=<label:pre.page>
+		</div></div>
+		<div class="con">
+&lt;web:var.title&gt;=<web:var.title>
+		</div></div>
+		<div class="con">
+&lt;label:dtml.abc&gt;=[dtml:abc]=<label:dtml.abc>
+		</div></div>
+		<div class="con">
+&lt;label:dtml.hehe&gt;=[dtml:hehe]=<label:dtml.hehe>
+		</div></div>
+		<div class="con">
+&lt;label:dtml.haha&gt;=[dtml:haha]=<label:dtml.haha>
+		</div>
+	</div>
+</div>
+</div>
+<label:include file="frame/footers">

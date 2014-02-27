@@ -1,0 +1,2 @@
+<?
+class ChannelApiBase extends ChannelApiBasic{}

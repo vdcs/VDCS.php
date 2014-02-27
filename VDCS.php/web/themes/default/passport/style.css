@@ -1,0 +1,8 @@
+
+.xform > .bar{clear:both;margin-left:110px;margin-bottom:20px;}
+.xform > .bar cite{display:inline-block;font-size:1.8em;}
+.xform > .bar t{display:inline-block;}
+
+.sider_tips {min-height:280px;_height:280px;border-left:1px solid #E1E1E1;margin-top:70px;}
+.sider_tips p {margin-top:5px;}
+.sider_tips .inner {font-size:14px;margin:10px 0 0 20px;color:rgb(153, 153, 153);float:left;}

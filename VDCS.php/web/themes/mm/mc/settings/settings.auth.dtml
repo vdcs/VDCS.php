@@ -1,0 +1,30 @@
+<label:include file="frame/header">
+<label:include file="frame/frame.left">
+<label:include file="settings-menu">
+<label:include file="frame/frame.space">
+<div class="ContentBody">
+<dtml:_message>
+
+<label:include script="res/app.uploadx.js" type="js">
+<div id="UploadxLoading" style="padding:40px 80px;"><img class="icon" src="<url:images>common/load/loading.gif" /></div>
+<div id="UploadxBarBtn" class="hide">
+<span id="UploadxBtnSWFU"><span id="UploadxBtnSWFUpload"></span></span>
+</div>
+<div class="space"></div>
+<div id="UploadxGuide" class="hide">请选择要上传的文件</div>
+<div id="UploadxUpload" class="hide"><div id="UploadxFPContainer"></div></div>
+<div id="UploadxLayout" class="hide"></div>
+<div class="space"></div>
+<div id="UploadxTips" class="hide"><div class="TipsAlert"><p>提示信息</p></div></div>
+<div class="space"></div>
+
+</div>
+<div class="ContentSide">
+
+</div>
+<script type="text/javascript">
+var xmlsServe=$url.link($c.url("root")+"{@channel}/"+"{@portal}."+$c.EXT,"m={@module}x&action=<ctl:action>");
+
+</script>
+<label:include file="frame/frame.right">
+<label:include file="frame/footer">

@@ -1,0 +1,46 @@
+<label:include file="frame/headers">
+<div class="cont">
+
+
+<div class="xform">
+<label:include file="/inc/form/forms.head">
+<dt el="password_login">
+	<h2>登录密码</h2>
+	<h3><p><input class="tipi" type="password" name="password_login" value="" placeholder="登录密码" minlength="4" maxlength="20" tabindex="1" /><em class="it password"></em><em class="ih require" title="请输入您当前的登录密码"></em></p></h3>
+</dt>
+<dt el="question1">
+	<h2>问题一</h2>
+	<h3><p><control:form.element("select.pivotal_safe_question1","__value","file","sort=question2")><em class="ih require" title="请选择 问题一"></em></p></h3>
+</dt>
+<!--common.channel/account/sort.question-->
+<dt el="answer1">
+	<h2>答案一</h2>
+	<h3><p><input type="text" name="pivotal_safe_answer1" value="<data:answer1!input>" minlength="3" maxlength="20" /><em class="ih require" title="请输入 答案一"></em></p></h3>
+</dt>
+<dt el="question2">
+	<h2>问题二</h2>
+	<h3><p><control:form.element("select.pivotal_safe_question2","__value","file","sort=question2")><em class="ih require" title="请选择 问题二"></em></p></h3>
+</dt>
+<dt el="answer2">
+	<h2>答案二</h2>
+	<h3><p><input type="text" name="pivotal_safe_answer2" value="<data:answer2!input>" minlength="3" maxlength="20" /><em class="ih require" title="请输入 答案二"></em></p></h3>
+</dt>
+<dt el="question3">
+	<h2>问题三</h2>
+	<h3><p><control:form.element("select.pivotal_safe_question3","__value","file","sort=question2")><em class="ih require" title="请选择 问题三"></em></p></h3>
+</dt>
+<dt el="answer3">
+	<h2>答案三</h2>
+	<h3><p><input type="text" name="pivotal_safe_answer3" value="<data:answer3!input>" minlength="3" maxlength="20" /><em class="ih require" title="请输入 答案三"></em></p></h3>
+</dt>
+<label:include file="/inc/form/forms.vcode">
+<label:include file="/inc/form/forms.btn">
+<label:include file="/inc/form/forms.end">
+<label:include file="/inc/form/forms.script">
+</div>
+
+<label:include file="{#portal}-script">
+
+
+</div>
+<label:include file="frame/footers">

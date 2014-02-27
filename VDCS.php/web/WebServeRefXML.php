@@ -1,0 +1,6 @@
+<?
+trait WebServeRefXML
+{
+	use WebServeRefX;
+	
+}

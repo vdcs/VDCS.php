@@ -1,0 +1,95 @@
+<label:include file="/headers">
+<div class="box">
+<h2><t>地址列表</t></h2>
+<div class="con">
+<p><a class="btn primary-btn" el="add_linkman">添加新的地址</a></p>
+<div class="space"></div>
+<table class="table tables table-striped table-hover table-list">
+<thead><tr><th>姓名</th><th>手机</th><th>邮编</th><th>地址</th><th>操作</th></tr></thead>
+<tbody id="linkman_list">
+
+</tbody>
+</table>
+</div>
+<div class="space"></div>
+<div id="paging" class="ac"></div>
+</div>
+<xmp id="linkman_list_tpl">
+<tr dataid="[item:id]" _type="[item:type]"><td>[item:name]</td><td>[item:mobile]</td><td>[item:postcode]</td><td>[item:address]</td><td><a class="btn" el="modify">修改</a> <a class="btn" el="del">删除</a> <a class="btn" el="default">设为默认地址</a></td></tr>
+</xmp>
+<label:include script="VDCS.ui.page.js">
+<label:include script="VDCS.ui.pages.js">
+<script type="text/javascript">
+$(function(){
+	var _getlinkman=function(){
+		var list=new VDCS.list();//对象，传入存放内容的对象和模板对象
+		var opt={cont:$('#linkman_list'),tpl:$('#linkman_list_tpl')};
+		opt.serveVar={channel:'{@channel}',p:'linkman',action:'list',params:''};
+		opt.paging=$('#paging');//放置分页按钮的对象
+		opt.bind=function(jitem){
+			var linkid=jitem.attr('dataid');
+			jitem.find('[el=modify]').click(function(){
+				ui.pages.channel='{@channel}';
+				var opt={
+					serveE:{p:'linkman',action:'add',params:'id='+linkid},
+					serveX:{p:'linkman',action:'edit'},
+					title:'编辑收货信息',
+					succeed:function(){
+						_getlinkman();	
+					},
+				};
+				ui.pages.recordClick($(this),opt);
+			});
+			jitem.find('[el=default]').click(function(){
+				var _url='/{@channel}/linkman.x?action=default&id='+linkid;
+				_parseAsync(_url);
+			});
+			jitem.find('[el=del]').click(function(){
+				var _url='/{@channel}/linkman.x?action=del&id='+linkid;
+				_parseAsync(_url);
+			});
+		};
+		opt.binds=function(jcont,treeVar){
+		};
+		opt.node_table='item';
+		list.init(opt);
+		list.parse();
+	};
+	var _parseAsync=function(_url){
+		$ajax({url:_url,value:'xml',ready:function(xml){
+			var map=$util.toMapByXML(xml);
+			var treeVar=map.getItemTree('var');
+			if(treeVar.v('status')=='succeed'){
+				ui.popups('succeed','操作成功!');
+				setTimeout(function(){
+					_getlinkman();
+				},1000);
+			}else{
+				ui.popups('info','操作失败!');
+			}
+		},error:true});
+	};
+	
+	var _addlinkman=function(){
+		ui.pages.channel='{@channel}';
+		var opt={
+			serveE:{p:'linkman',action:'add'},
+			serveX:{p:'linkman',action:'add'},
+			title:'填写收货信息',
+			succeed:function(){
+				_getlinkman();
+			},
+		};
+		ui.pages.record($('[el=add_linkman]'),opt);
+	};
+	
+	var _del=function(){
+		
+	};
+	
+	_getlinkman();
+	_addlinkman();
+	
+});
+</script>
+<label:include file="/footers">

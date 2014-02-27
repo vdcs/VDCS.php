@@ -1,0 +1,13 @@
+<div>
+<form>
+<p style="margin:10px 0;">汇款金额：&nbsp;<input type="text" name="rechar" style="width:70px;" /></p>
+<p>汇款银行：&nbsp;<td><select name="bankname">
+<loop:list>
+<item>
+<option value="[item:type]">[item:name]</option>
+</item>
+</loop>
+</select></p>
+<p style="margin:10px 0;">备注信息：&nbsp;<textarea name="summary" style="width:150px;"></textarea></p>
+</form>
+</div>

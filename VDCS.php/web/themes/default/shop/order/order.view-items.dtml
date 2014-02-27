@@ -1,0 +1,19 @@
+
+<table class="table tables table-striped table-hover table-list">
+<thead>
+	<tr>
+		<th>产品标题</th>
+		<th>金额</th>
+		<th>操作</th>
+		</tr>
+	</thead>
+<tbody>
+<loop:items>
+	<tr>
+		<td>[item:topic]</td>
+		<td>[item:money]</td>
+		<td><a href="/{@channel}/view_[item:resid]">查看产品</a></td>
+	</tr>
+</loop>
+</tbody>
+</table>

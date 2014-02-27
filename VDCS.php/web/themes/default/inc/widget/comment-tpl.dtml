@@ -1,0 +1,8 @@
+<dl>
+<dt><a class="avatarm"><img src="/avatar/[item:uuid]_s.gif" /></a></dt>
+<dd>
+	<h3><t><a href="[item:uuid!ulink]">[item:unames]</a></t><i></i></h3>
+	<h4>[item:message]</h4>
+	<h5><t>[item:tim!date]</t></h5>
+</dd>
+</dl>

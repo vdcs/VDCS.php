@@ -1,0 +1,67 @@
+<script type="text/javascript">
+	//获取用户信息
+	var _getInfos=function(_url,jitem){
+		if(!_url){
+			ui.popups('error','url not found');
+			return;
+		}
+		if(!jitem) jitem=$('#infos');
+		$ajax({url:_url,value:'xml',ready:function(xml){
+			var map=$util.toMapByXML(xml);
+			var treeVar=map.getItemTree('var');
+			if(treeVar.v('status')=='succeed'){
+				var infokey=jitem.attr('infokey');
+				jitem.find('['+infokey+']').each(function(){
+					var key=$(this).attr(infokey);
+					var value=treeVar.v(infokey+'.'+key);
+					if(value) $(this).text(value);
+				});
+			}else{
+				//ui.popups('info','信息获取失败，请联系管理员');
+			}
+		},error:true});
+	};
+	
+	var _getUserInfo=function(){
+		var _url='/manage/index.php/account/account.x?action=viewi&uid=<view:uuid>';
+		_getInfos(_url,$('[infokey=uinfo]'));
+	};
+	$('[el=user]').on('click',function(){
+		$(this).attri('yes',_getUserInfo);
+	});
+	
+	var _getAmInfo=function(){
+		var _url='/manage/index.php/common/em/staff.x?action=viewi&uid=<view:uuid>';
+		_getInfos(_url,$('[infokey=staffinfo]'));
+	};
+	$('[el=am]').click(function(){
+		$(this).attri('yes',_getAmInfo);
+	});
+	
+	//产品信息
+	var _getProInfo=function(){
+		var _url='/manage/index.php/product/products.x?action=viewi&pid=<view:rootid>';
+		_getInfos(_url,$('[infokey=pinfo]'));
+	};
+	$('[el=pro]').click(function(){
+		$(this).attri('yes',_getProInfo);
+	});
+	
+	
+	
+	//审核记录
+	var _getRaInfo=function(module){
+		if(!module) module='remit';
+		var _url='/manage/index.php/common/audit.x?action=viewi&module='+module+'&rootid=<view:id>';
+		_getInfos(_url,$('[infokey=rainfo]'));
+	};
+	
+	/*
+	$('[el=ra]').on('click',function(){
+		$(this).attri('yes',_getRaInfo);
+	});
+	*/
+	
+	
+
+</script>

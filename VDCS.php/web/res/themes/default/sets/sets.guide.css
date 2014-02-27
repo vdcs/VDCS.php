@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+.sets_guide{clear:both;text-align:center;margin:20px 0;}
+.sets_guide ul{display:inline-block;width:810px;margin:0 auto;}
+.sets_guide li{float:left;display:inline-block;width:385px;height:150px;text-align:left;padding:0;margin-right:20px;margin-bottom:20px;}
+.sets_guide li:after{content:"";display:table;clear:both;}
+.sets_guide li dl{}
+.sets_guide li dt{float:left;display:inline-block;width:132px;}
+.sets_guide li dt a{display:inline-block;width:120px;height:120px;background:url("sets_menu_icon_big.png") 0 0 no-repeat;position:relative;}
+.sets_guide li dt a{-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;}
+.sets_guide li dt a:hover{background-position:-120px 0;}
+.sets_guide li dt a span{display:none;}
+.sets_guide li dt a em{display:none;width:20px;height:20px;background:url("sets_menu_icon_symbol.png") -170px -10px no-repeat;position:absolute;right:5px;bottom:5px;}
+.sets_guide li dt a em.search{background-position:-50px -10px;}
+.sets_guide li dt a em.yes{background-position:-90px -10px;}
+.sets_guide li dt a em.eye{background-position:-130px -10px;}
+.sets_guide li dt a em.select{background-position:-170px -10px;}
+.sets_guide li dt a:hover em{display:inline-block;}
+.sets_guide li dt a.index{background-position:0 0;}
+.sets_guide li dt a.index.pop,
+.sets_guide li dt a.index:hover{background-position:-120px 0;}
+.sets_guide li dt a.home{background-position:0 0;}
+.sets_guide li dt a.home.pop,
+.sets_guide li dt a.home:hover{background-position:-120px 0;}
+.sets_guide li dt a.profile{background-position:0 -120px;}
+.sets_guide li dt a.profile.pop,
+.sets_guide li dt a.profile:hover{background-position:-120px -120px;}
+.sets_guide li dt a.info{background-position:0 -120px;}
+.sets_guide li dt a.info.pop,
+.sets_guide li dt a.info:hover{background-position:-120px -120px;}
+.sets_guide li dt a.friends{background-position:0 -240px;}
+.sets_guide li dt a.friends.pop,
+.sets_guide li dt a.friends:hover{background-position:-120px -240px;}
+.sets_guide li dt a.contacts{background-position:0 -240px;}
+.sets_guide li dt a.contacts.pop,
+.sets_guide li dt a.contacts:hover{background-position:-120px -240px;}
+.sets_guide li dt a.social{background-position:0 -360px;}
+.sets_guide li dt a.social.pop,
+.sets_guide li dt a.social:hover{background-position:-120px -360px;}
+.sets_guide li dt a.message{background-position:0 -480px;}
+.sets_guide li dt a.message.pop,
+.sets_guide li dt a.message:hover{background-position:-120px -480px;}
+.sets_guide li dt a.inbox{background-position:0 -600px;}
+.sets_guide li dt a.inbox.pop,
+.sets_guide li dt a.inbox:hover{background-position:-120px -600px;}
+.sets_guide li dt a.notices{background-position:0 -720px;}
+.sets_guide li dt a.notices.pop,
+.sets_guide li dt a.notices:hover{background-position:-120px -720px;}
+.sets_guide li dt a.settings{background-position:0 -840px;}
+.sets_guide li dt a.settings.pop,
+.sets_guide li dt a.settings:hover{background-position:-120px -840px;}
+.sets_guide li dt a.prefer{background-position:0 -960px;}
+.sets_guide li dt a.prefer.pop,
+.sets_guide li dt a.prefer:hover{background-position:-120px -960px;}
+.sets_guide li dt a.security{background-position:0 -1080px;}
+.sets_guide li dt a.security.pop,
+.sets_guide li dt a.security:hover{background-position:-120px -1080px;}
+.sets_guide li dt a.privacy{background-position:0 -1200px;}
+.sets_guide li dt a.privacy.pop,
+.sets_guide li dt a.privacy:hover{background-position:-120px -1200px;}
+.sets_guide li dt a.fav{background-position:0 -1320px;}
+.sets_guide li dt a.fav.pop,
+.sets_guide li dt a.fav:hover{background-position:-120px -1320px;}
+.sets_guide li dt a.gift{background-position:0 -1440px;}
+.sets_guide li dt a.gift.pop,
+.sets_guide li dt a.gift:hover{background-position:-120px -1440px;}
+.sets_guide li dt a.app{background-position:0 -1560px;}
+.sets_guide li dt a.app.pop,
+.sets_guide li dt a.app:hover{background-position:-120px -1560px;}
+.sets_guide li dt a.plus{background-position:0 -1680px;}
+.sets_guide li dt a.plus.pop,
+.sets_guide li dt a.plus:hover{background-position:-120px -1680px;}
+
+.sets_guide li dd{float:left;display:inline-block;width:250px;height:120px;position:relative;}
+.sets_guide li dd h2{height:25px;line-height:25px;font-size:1.5em;font-weight:bold;text-align:left;padding:0;margin:0;overflow:hidden;}
+.sets_guide li dd h3{height:25px;font-size:1em;padding:0;margin:0;margin-top:8px;}
+.sets_guide li dd h3{margin-right:2px;}
+.sets_guide li dd p{line-height:20px;color:#999;margin-top:3px;}
+.sets_guide li dd h5{position:absolute;bottom:0;}
+.sets_guide li dd h5{margin-right:5px;color:#e8e8e8;font-size:14px;text-decoration:none;}
+.sets_guide li dd h5:hover{text-decoration:underline;}
+.sets_guide li dd{}
+.sets_guide li dd h2 a,
+.sets_guide li dd h5 a{text-decoration:none;}

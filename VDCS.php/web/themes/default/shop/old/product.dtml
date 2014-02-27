@@ -1,0 +1,37 @@
+<label:include file="/headers">
+<div class="box">
+<h2><t><web:var.title></t></h2>
+<div class="con">
+<table class="table tables table-striped table-hover table-list">
+<thead><tr><th>产品名称</th><th>价格</th><th>操作</th></tr></thead>
+<tbody id="list">
+
+</tbody>
+</table>
+<div class="space"></div>
+<div id="paging"></div>
+</div>
+</div>
+
+<xmp id="list_tpl">
+<tr dataid="[item:p_id]"><td>[item:p_topic]</td><td>[item:p_price]</td><td><a href="/{@channel}/product/view?p_id=[item:p_id]">查看商品</a></td></tr>
+</xmp>
+<label:include script="VDCS.ui.page.js">
+<script type="text/javascript">
+$(function(){
+	var list=ui.list;//对象，传入存放内容的对象和模板对象
+	var opt={cont:$('#list'),tpl:$('#list_tpl')};
+	opt.serveVar={channel:'{@channel}',p:'product',action:'list',params:''};
+	opt.paging=$('#paging');//放置分页按钮的对象
+	opt.bind=function(jitem){
+		
+	};
+	opt.binds=function(jcont,treeVar){
+		
+	};
+	opt.node_table='item';
+	list.init(opt);
+	list.parse();
+});
+</script>
+<label:include file="/footers">

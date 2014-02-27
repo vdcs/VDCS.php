@@ -1,0 +1,11 @@
+<label:include file="frame/header">
+<div id="wrap"><div id="wrapper">
+<div id="content">
+
+
+<label:include file="message.e">
+
+
+</div>
+</div></div>
+<label:include file="frame/footer">

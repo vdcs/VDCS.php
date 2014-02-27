@@ -1,0 +1,4 @@
+<script type="text/javascript">
+$o("__tables").cssStyle("height:30px;");
+</script>
+<label:include file="/footer.blank">

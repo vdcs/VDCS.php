@@ -1,0 +1,6 @@
+<?
+class ChannelArticleSpecial extends ChannelArticleList
+{
+	
+}
+?>

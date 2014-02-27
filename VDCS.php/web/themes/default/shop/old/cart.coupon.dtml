@@ -1,0 +1,205 @@
+<label:include file="/headers">
+
+
+<div class="box">
+	<h2><t><web:var.title></t></h2>
+	<div class="con notempty hide">
+	<table class="table tables table-striped table-hover table-list">
+	<thead><tr><th style="width:15%;">产品名称</th><th style="width:15%;">价格</th><th style="width:20%;">数量</th><th style="width:15%;">合计</th><th style="width:15%;">优惠</th><th>操作</th></tr></thead>
+	<tbody id="list">
+
+	</tbody>
+	<tfoot><td colspan="6"><a el="checkout" class="btn" >去结算</a><a el="clear" class="btn">清空购物车</a><cite>合计:<span el="moneys">0</span>元</cite></td></tfoot>
+	</table>
+	</div>
+	<div class="con empty hide">
+	购物车为空，去买点东西吧！
+	<a href="/{@channel}/product">去看看</a>
+	</div>
+</div>
+
+<xmp id="list_tpl">
+<tr dataid="[item:id]" p_id="[item:p_id]" _price="[item:price]"><td>[item:p_topic]</td><td el="price">[item:price]</td><td><a class="btn s" el="minus">-</a><input type="text" name="amount" value="[item:amount]" style="width:30px;" /><a class="btn s" el="plus">+</a></td><td el="money">[item:money]</td><td class="coupon_box" _discount="0"></td><td><a el="del">删除</a></td></tr><!--  || <a el="coupon">查看优惠券</a> -->
+</xmp>
+
+<xmp id="coupon_tpl">
+<a class="btn s" cid="[item:id]" el="use" _money="[item:money]">优惠[item:money!price]元</a>
+</xmp>
+<label:include script="VDCS.ui.page.js">
+<script type="text/javascript">
+$(function(){
+	var checkCart=function(){
+		var _items=$('#list').find('tr').length;
+		if(_items<1){
+			$('.empty').show();
+			$('.notempty').hide();
+		}else{
+			$('.notempty').show();
+			$('.empty').hide();
+		}
+	};
+	var parseDel=function(xml,jitem){
+		var map=$util.toMapByXML(xml);
+		var treeVar=map.getItemTree('var');
+		if(treeVar.v('status')=='succeed'){
+			ui.popups('succeed','删除成功！');
+			jitem.remove();
+			checkCart();
+			_computeMoneys();
+		}else{
+			ui.popups('info',treeVar.v('message'));
+		}
+	};
+	
+	var list=ui.list;//对象，传入存放内容的对象和模板对象
+	var opt={cont:$('#list'),tpl:$('#list_tpl')};
+	opt.serveVar={channel:'{@channel}',p:'cart',action:'list',params:''};
+	//opt.paging=$('#paging');//放置分页按钮的对象
+	opt.bind=function(jitem){
+		jitem.find('[el=del]').click(function(){
+			var id=jitem.attr('dataid');
+			var _url='/{@channel}/cart.x?action=delete&id='+id;
+			$ajax({url:_url,value:'xml',ready:function(xml){
+				parseDel(xml,jitem);
+			},error:true});
+		});
+		
+		jitem.find('[el=minus]').click(function(){
+			var id=jitem.attr('dataid');
+			_changeAmount(jitem,id,'minus');
+		});
+		
+		jitem.find('[el=plus]').click(function(){
+			var id=jitem.attr('dataid');
+			_changeAmount(jitem,id,'plus');
+		});
+		
+		jitem.find('input[name=amount]').change(function(){
+			var id=jitem.attr('dataid');
+			_changeAmount(jitem,id);
+		});
+		
+		var p_id=jitem.attr('p_id');
+		_getCoupon(jitem,p_id)
+	};
+	opt.binds=function(jcont,treeVar){
+		$('[el=moneys]').text(treeVar.v('moneys'));
+		checkCart();
+	};
+	opt.node_table='item';
+	list.init(opt);
+	list.parse();
+	
+	
+	$('[el=clear]').click(function(){
+		var _url='/{@channel}/cart.x?action=delete&type=clear';
+		$ajax({url:_url,value:'xml',ready:function(xml){
+			var map=$util.toMapByXML(xml);
+			var treeVar=map.getItemTree('var');
+			if(treeVar.v('status')=='succeed'){
+				ui.popups('succeed','清空购物车成功！');
+				$('#list').empty();
+				checkCart();
+			}else{
+				ui.popups('info',treeVar.v('message'));
+			}
+		},error:true});
+	});
+	
+	$('[el=checkout]').click(function(){
+		var oamount=$('input[name=amount]');
+		var amount=parseInt(oamount.val());
+		if(amount<1) return;
+		location.href='/{@channel}/flow';
+	});
+	
+	var _changeAmount=function(jitem,id,type){
+		var oamount=jitem.find('input[name=amount]');
+		var amount=parseInt(oamount.val());
+		if(type=='minus') amount--;
+		if(type=='plus') amount++;
+		if(amount<1) amount=1;
+		oamount.val(amount);
+		
+		var _url='/{@channel}/cart.x?action=change&amount='+amount+'&id='+id;
+		$ajax({url:_url,value:'xml',ready:function(xml){
+			var map=$util.toMapByXML(xml);
+			var treeVar=map.getItemTree('var');
+			if(treeVar.v('status')=='succeed'){
+				_computeMoney(jitem,true);
+			}else{
+				ui.popups('info',treeVar.v('message'));
+			}
+		},error:true});
+	};
+	
+	_computeMoney=function(jitem,iscoupon){
+		var _amount=jitem.find('[name=amount]').val();
+		var _price=jitem.attr('_price');
+		var money=parseInt(_amount)*parseFloat(_price);
+		if(iscoupon) money-=parseFloat(jitem.find('.coupon_box').attr('_discount'));
+		jitem.find('[el=money]').text(money);
+		_computeMoneys();
+	};
+	_computeMoneys=function(){
+		var moneys=0;
+		$('#list').find('tr [el=money]').each(function(){
+			var money=$(this).text();
+			moneys+=parseFloat(money);
+		});	
+		$('[el=moneys]').text(moneys);
+	};
+	
+	
+	//获取优惠券
+	var _getCoupon=function(jitem,p_id){
+		var cartid=jitem.attr('dataid');
+		var list=new VDCS.list();//对象，传入存放内容的对象和模板对象
+		var opt={cont:jitem.find('.coupon_box'),tpl:$('#coupon_tpl')};
+		opt.serveVar={channel:'{@channel}',p:'coupon',action:'get',params:'type=1&p_id='+p_id};
+		opt.bind=function(jo){
+			jo.click(function(){
+				var cid=$(this).attr('cid');
+				var _html='<div><p>优惠码<input name="code" type="text" /></p></div>';
+				var j=$(_html);
+				var opt={};
+				opt.title='请输入优惠码';
+				opt.onsubmit=function(jbox){
+					var code=jbox.find('input[name=code]').val();
+					_checkCode(jo,cid,p_id,code,cartid);	
+				};
+				ui.box(j,opt);
+			});
+		};
+		opt.binds=function(jcont,treeVar){
+			
+		};
+		opt.node_table='item';
+		list.init(opt);
+		list.parse();
+	};
+	
+	var _checkCode=function(jo,cid,p_id,code,cartid){
+		var _url='/{@channel}/coupon.x?action=check&type=1&cid='+cid+'&cartid='+cartid+'&p_id='+p_id+'&code='+code;
+		$ajax({url:_url,value:'xml',ready:function(xml){codeAsync(xml,jo,cartid);},error:true});
+	};
+	
+	var codeAsync=function(xml,jo,cartid){
+		var map=$util.toMapByXML(xml);
+		var treeVar=map.getItemTree('var');
+		if(treeVar.v('status')=='succeed'){
+			ui.popups('succeed','已使用优惠券');
+			var jitem=jo.parents('tr');
+			var _money=jo.attr('_money');
+			jo.parents('.coupon_box').attr('_discount',_money);
+			var _text=jo.html();
+			jo.parents('.coupon_box').text(_text);
+			_computeMoney(jitem,true);
+		}else{
+			ui.popups('info',treeVar.v('message'));
+		}
+	};
+	
+});
+</script>
+<label:include file="/footers">

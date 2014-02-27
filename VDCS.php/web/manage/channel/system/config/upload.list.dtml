@@ -1,0 +1,22 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+
+
+<label:include file="inc/listc.struct.begin">
+<th class="item"><exec:langs("title.channel")></th>
+<th class="info"><exec:langs("title.filename")></th>
+<th class="size"><exec:langs("title.size")></th>
+<th class="status"><exec:langs("title.status")></th>
+<label:include file="inc/listc.struct.end">
+<label:include file="inc/listc.tpl.begin">
+<td class="iteml">[item:channel.name]</td>
+<td class="info"><r><em class="icon1"><img src="<url:images>common/filetype/[item:ext].gif" /></em></r><a href="[item:url!upload]" target="_blank" title="[item:realname!html]">[item:filename!html]</a></td>
+<td class="size"><a href="#download" target="_blank">[item:size!filesize]</a></td>
+<td class="status"><span data-dict="data.valid" data-value="[item:status]"></span>
+	<label:include file="inc/row.item.timed"></td>
+<label:include file="inc/listc.tpl.end">
+<label:include file="inc/listc.script">
+
+
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

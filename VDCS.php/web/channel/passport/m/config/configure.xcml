@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links,action</frame>
+	</config>
+	
+	<lang>
+		<title><![CDATA[{@name}]]></title>
+		<title.name><![CDATA[条目列表]]></title.name>
+		<title.list><![CDATA[节点列表]]></title.list>
+		<title.list.><![CDATA[节点列表]]></title.list.>
+		<title.add><![CDATA[添加节点]]></title.add>
+		<title.edit><![CDATA[编辑节点]]></title.edit>
+		<title.delete><![CDATA[删除节点]]></title.delete>
+		
+		<error.key><![CDATA[您要操作的条目值有错误存在！]]></error.key>
+		<error.exist.add><![CDATA[您要添加的条目已经存在！]]></error.exist.add>
+		<error.exist.key><![CDATA[您要操作的节点有错误或者已经存在！]]></error.exist.key>
+		<error.not.exist><![CDATA[您要编辑的条目不存在！]]></error.not.exist>
+		<error.not.select><![CDATA[请选择一个您要编辑的节点！]]></error.not.select>
+		<error.not.key><![CDATA[请选择一个您要操作的节点！]]></error.not.key>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 个节点！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 个节点！]]></handle.ok.edit>
+ 		<handle.ok.delete><![CDATA[成功删除了 1 个节点！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+		<menu.links><![CDATA[
+@@@title=选择条目;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<var:menu.links>
+</ul>
+</div>
+]]></menu.links>
+		<menu.action><![CDATA[
+@@@title=条目操作;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<var:menu.action>
+</ul>
+</div>
+]]></menu.action>
+	</template>
+</xcml>

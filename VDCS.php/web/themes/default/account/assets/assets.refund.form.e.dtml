@@ -1,0 +1,8 @@
+<div><table class="table tables table-striped table-hover table-list" style="width:400px;">
+<tr><th>账户余额</th><td><ua:money></td></tr>
+<tr><th>提现金额</th><td><input type="text" name="money" /></td></tr>
+<tr><th>银行名称</th><td><input type="text" name="bank" /></td></tr>
+<tr><th>银行账号</th><td><input type="text" name="bankno" /></td></tr>
+<tr><th>备注</th><td><textarea name="summary"></textarea></td></tr>
+</table>
+</div>

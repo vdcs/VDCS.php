@@ -1,0 +1,38 @@
+﻿<label:include file="headers">
+
+
+<label:include script="jquery/extends.min.js">
+<label:include script="res/app.uploadx.js">
+<label:include script="<url:images>common/upload/uploadm.js">
+<label:include script="<url:images>common/upload/uploadm.css" type="css">
+
+<div class="boxs" style="padding:50px;background-color:#ddd;">
+<div class="uploadm" sessionid="<dcs:session.id>" style="background-color:#fff;">
+<div class="bars">
+	<a class="upload"><span>本地图片</span></a>
+	<!--<a class="album"><span>我的相册</span></a>-->
+	<a class="web"><span>网络图片</span></a>
+</div>
+<div class="cons con_upload">
+	<h3><a class="upload rc5" sessionid="<dcs:session.id>"><span>上传本地图片</span></a></h3>
+	<p>可按住Ctrl键多选图片，最多可选择10张。</p>
+</div>
+<div class="cons con_web">
+	<h3>图片：<input class="url" type="text" value="http://dev.gameadd.com/themes/gameadd/images/t/btn.png" /><a class="sbtnb add"><span>添加</span></a></h3>
+	<p>请输入图片网址，支持JPG、PNG、GIF图片文件。</p>
+	<p class="tips ac" hint="yes" id="hint1"><span data-value="请输入一张图片的有效网址！"></span></p>
+</div>
+<div class="items">
+	<ul></ul>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	$uploadm.set('upload',{upload_channel:'t',upload_sorts:'image'});
+	$uploadm.init();
+});
+</script>
+
+
+<label:include file="footers">

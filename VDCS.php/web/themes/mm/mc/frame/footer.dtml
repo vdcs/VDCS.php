@@ -1,0 +1,15 @@
+<div class="FramerFloor"><div class="SpaceMain"></div></div>
+<div id="Footer"><div id="FooterFrame"><div id="FooterBody">
+	<div id="FooterInfo">
+<div class="left">
+<a href="<url:root>" target="_blank"><app:web.name></a> - <a href="<url:client>"><web:var.chntitle></a>
+</div>
+<div class="right">
+<a href="<url:manage>">&nbsp;</a>
+<span title="Processed in <web:stat.exectime> s, <web:stat.query> queries">&nbsp;</span>
+<app:web.copyright>
+</div>
+	</div>
+</div></div></div>
+</center>
+<label:include file="/footer.blank">

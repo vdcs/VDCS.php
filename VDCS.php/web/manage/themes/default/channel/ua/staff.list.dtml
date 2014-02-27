@@ -1,0 +1,31 @@
+<label:include file="header.channel">
+
+<label:include file="frame.sideleft">
+<label:include file="element.list.heads">
+<label:include file="element.list.bar.tr">
+<td class="bar-id">UID</td>
+<td class="bar-info">{@staff:names}名称</td>
+<td class="bar-emoney"><exec:langs("title.coin")></td>
+<td class="bar-status w110"><exec:langs("title.status")></td>
+<td class="bar-handle"><exec:langs("title.handle")></td>
+<label:include file="element.list.bar.sd">
+</tr>
+<loop:list>
+<label:include file="element.list.row.tr">
+<label:include file="element.list.row.id">
+<td class="row-name">
+<span class="right">[item:icon.moderator][item:icon.grade][item:icon.group]</span>
+<a href="<v:url.edit>" title="名称: [item:<v:table.px>name]&#10;姓名: [item:<v:table.px>realname]&#10;昵称: [item:<v:table.px>nickname]&#10;邮箱: [item:<v:table.px>email]&#10;手机: [item:<v:table.px>mobile]&#10;证件: [item:<v:table.px>idcard]&#10;<app:var.rank>: [item:<v:table.px>rank]&#10;QQ: [item:<v:table.px>im1]&#10;MSN: [item:<v:table.px>im2]">[item:<v:table.px>name]</a></td>
+<td class="row-emoney"><span title="<app:var.credit>: [item:<v:table.px>credit]&#10;<app:var.money>: [item:<v:table.px>money]&#10;<app:var.emoney>: [item:<v:table.px>emoney]&#10;<app:var.points>: [item:<v:table.px>points]&#10;<app:var.exp>: [item:<v:table.px>exp]">[item:<v:table.px>emoney]</span></td>
+<td class="row-status"><control:dict("data.audit","{$$list:<v:table.px>status}")> <control:dict("data.auth","{$$list:<v:table.px>isauth}")> <control:dict("data.lock","{$$list:<v:table.px>islock}")>
+	<p class="s"><control:ui.value("list.rowi.timed")></p></td>
+<td class="row-handle"><a href="<v:url.edit>"><exec:langs("action.edit")></a></td>
+<label:include file="element.list.row.sd">
+</tr>
+</loop>
+<label:include file="element.list.ends">
+<label:include file="frame.sidespace">
+<label:include file="element.menus">
+<label:include file="frame.sideright">
+
+<label:include file="footer.channel">

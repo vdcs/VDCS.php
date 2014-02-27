@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre>
+		<channel>{@channel}</channel>
+		<table.namex>dbc_</table.namex>
+		<name>网站支持</name>
+		<names>页面</names>
+	</pre>
+	<var>
+		<title>支持中心</title>
+		<title.about>关于我们</title.about>
+		<title.contact>联系方式</title.contact>
+		<title.join>加入我们</title.join>
+		<title.online>在线服务</title.online>
+		<title.payment>购买指南</title.payment>
+		<title.help>网站帮助</title.help>
+		
+		<title.culture>企业文化</title.culture>
+		<title.values>价值观</title.values>
+		<title.quality>质量保证</title.quality>
+		<title.credit>获得荣誉</title.credit>
+		<title.history>发展历程</title.history>
+		<title.dict>名词解释</title.dict>
+		
+		<title.cases>客户案例</title.cases>
+		<title.vip>VIP客户</title.vip>
+		
+		<title.agreement>服务协议</title.agreement>
+		<title.copyright>版权申明</title.copyright>
+		<title.privacy>隐私保护</title.privacy>
+		
+		<title.announce>网站公告</title.announce>
+		<title.vote>网站调查</title.vote>
+		<title.gbook>网站留言</title.gbook>
+		<title.links>友情链接</title.links>
+	</var>
+	<num>
+	</num>
+	<config>
+		<url>default</url>
+		<faq.menu>about,contact,payment,help</faq.menu>
+		<faq.section></faq.section>
+	</config>
+</xcml>

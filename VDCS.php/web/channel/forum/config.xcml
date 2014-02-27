@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre xmlns:class="node" xmlns:topic="node" xmlns:data="node" xmlns:vote="node" xmlns:event="node" xmlns:ua="node">
+		<channel>{@channel}</channel>
+		<table.namex>db_{@channel}_</table.namex>
+		<table.px></table.px>
+		<name>论坛</name>
+		<names>论坛</names>
+		
+		<class:table.name>db_{@channel}_class</class:table.name>
+		<class:table.px>c_</class:table.px>
+		<class:name>分类</class:name>
+		<class:names>分类</class:names>
+		<class:act>查看</class:act>
+		<class:unit>个</class:unit>
+		
+		<topic:table.name>db_{@channel}_topic</topic:table.name>
+		<topic:table.px>t_</topic:table.px>
+		<topic:name>主题</topic:name>
+		<topic:names>主题</topic:names>
+		<topic:act>浏览</topic:act>
+		<topic:unit>贴</topic:unit>
+		
+		<data:table.name>db_{@channel}_data</data:table.name>
+		<data:table.px>d_</data:table.px>
+		<data:name>帖子</data:name>
+		<data:names>帖子</data:names>
+		<data:act>查看</data:act>
+		<data:unit>贴</data:unit>
+		
+		<event:table.name>db_{@channel}_event</event:table.name>
+		<event:table.px>e_</event:table.px>
+		<event:name>事件</event:name>
+		<event:names>事件</event:names>
+		<event:act>查看</event:act>
+		<event:unit>条</event:unit>
+		
+		<ua:table.name>db_{@channel}_user</ua:table.name>
+		<ua:table.px></ua:table.px>
+		<ua:name>用户</ua:name>
+		<ua:names>用户</ua:names>
+		<ua:act>查看</ua:act>
+		<ua:unit>个</ua:unit>
+	</pre>
+	<var>
+		<title>论坛</title>
+		<title.index>null</title.index>
+		<title.list>论坛列表</title.list>
+		<title.view>帖子浏览</title.view>
+		<title.post>发表帖子</title.post>
+		<title.post.new>发表新贴</title.post.new>
+		<title.post.new.quick>快速发贴</title.post.new.quick>
+		<title.post.reply>发表回复</title.post.reply>
+		<title.post.reply.quick>快速回复</title.post.reply.quick>
+		<title.post.edit>编辑帖子</title.post.edit>
+		<title.event>论坛事件</title.event>
+		
+		<title.help>论坛帮助</title.help>
+		
+		<title.my>个人中心</title.my>
+		<title.moderator>版主控制面版</title.moderator>
+		
+		<title.search>论坛搜索</title.search>
+		<title.search.new>论坛新贴</title.search.new>
+		<title.search.order>最新回复</title.search.order>
+		<title.search.hot>论坛热贴</title.search.hot>
+		<title.search.good>论坛精华</title.search.good>
+		<title.search.top>论坛置顶</title.search.top>
+		<title.search.my>我发表的主题</title.search.my>
+		<title.search.my.reply>我参与的主题</title.search.my.reply>
+	</var>
+	<num>
+		<pic.width>0</pic.width>
+		<pic.height>0</pic.height>
+	</num>
+	<config>
+		<url>default</url>
+		<post.min.tim>10</post.min.tim>
+		<post.min.online>10</post.min.online>
+		<post.overtime.edit>90</post.overtime.edit>
+		<post.overtime.reply>90</post.overtime.reply>
+		<post.color.points>100</post.color.points>
+		<post.bold.points>50</post.bold.points>
+		<post.emoney>0</post.emoney>
+		<post.points>10</post.points>
+		<post.exp>10</post.exp>
+		<post.strength>-10</post.strength>
+		<post.reply.emoney>0</post.reply.emoney>
+		<post.reply.points>5</post.reply.points>
+		<post.reply.exp>5</post.reply.exp>
+		<post.reply.strength>-5</post.reply.strength>
+		
+		<userc.use>1</userc.use>
+		<userc.use.score>0</userc.use.score>
+	</config>
+</xcml>

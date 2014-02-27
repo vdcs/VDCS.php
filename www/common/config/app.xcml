@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>web,com,url,unit,var</node>
+	</configure>
+	<web>
+		<name>VDCS</name>
+		<shortname>VDCS</shortname>
+		<title>VDCS</title>
+		<domain>vdcs.cn</domain>
+		<urls>http://www.vdcs.cn/</urls>
+		<email>contact@vdcs.cn</email>
+		<master>XX市XXXXX有限责任公司</master>
+		<copyright><![CDATA[&copy; {year} XX市XXXXX有限责任公司 版权所有]]></copyright>
+		<keywords>网站关键字</keywords>
+		<description>网站描述</description>
+	</web>
+	<com>
+		<name>XX市XXXXX有限责任公司</name>
+		<explain>专业服务</explain>
+		<cause>平台价值</cause>
+		<email>contact@vdcs.cn</email>
+		<qq>107850</qq>
+		<phone>(86)000-88888888</phone>
+		<fax>(86)000-88888888</fax>
+		<hotline>400-888-8888</hotline>
+		<careline>(86)000-88888888</careline>
+		<mobile>(86)13888888888</mobile>
+		<address>XX市XXX路XX号XX室</address>
+		<postcode>200000</postcode>
+		<location>靠近XXXXX</location>
+	</com>
+	<url>
+	</url>
+	<unit>
+	</unit>
+	<var>
+		<url.mode>rewrite</url.mode>
+		<pic.width>120</pic.width>
+		<pic.height>90</pic.height>
+	</var>
+</xcml>

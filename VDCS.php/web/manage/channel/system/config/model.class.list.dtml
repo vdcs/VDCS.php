@@ -1,0 +1,45 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+
+
+<label:include file="inc/listc.struct.begini">
+<th>ClassID</th>
+<th>分类名称</th>
+<th>排序</th>
+<th class="status w80"><exec:langs("title.status")></th>
+<th class="handle"><exec:langs("title.handle")></th>
+<label:include file="inc/listc.struct.endi">
+<label:include file="inc/listc.tpl.begini">
+<td><a href="#edit">[item:classid]</a></td>
+<td><span style="padding-left:[item:levelid]0px;">[item:name]</span></td>
+<td><span class="orders_value"><input type="text" name="[item:classid]" value="[item:orderid]" style="width:20px;margin-left:5px;" /></span></td>
+<td class="status"><span data-dict="data.hidden" data-value="[item:status]"></span></td>
+<td class="handle"><p><a href="#edit"><exec:langs("action.edit")></a></p><a href="#view"><exec:langs("action.view")></a></td><!-- <p><a href="#view"><exec:langs("action.view")></a></p> -->
+<label:include file="inc/listc.tpl.endi">
+<div class="space"></div>
+<a id="set_orders" class="btn btn-primary">保存排序</a>
+<label:include file="inc/listc.script">
+<script type="text/javascript">
+$(function(){
+	$('#set_orders').click(function(){
+		var send=[];
+		$('.orders_value').find('input').each(function(){
+			var key=$(this).attr('name');
+			var value=$(this).val();
+			send[key]=value;
+		});
+		var channeli=$p.q('subchannel') || $p.q('channeli');
+		var url=ui.serve.getURL({channel:'{@channel}',p:'model',m:'class',action:'sort',params:'channeli='+channeli});
+		//jlist.find('.xlist').data();
+		$ajax({url:url,value:'xml',send:send,ready:function(xml){
+			var maps=$util.toMapByXML(xml);
+			var treeVar=maps.getItemTree('var');
+			if(treeVar.v('status')=='succeed'){
+				pages.list.refresh();
+			}
+		}});
+	});
+});
+</script>
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

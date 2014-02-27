@@ -1,0 +1,15 @@
+
+<label:include file="inc/searchbar">
+
+<div class="box">
+	<h2><t>状态</t></h2>
+	<div class="con">
+		<ul>
+		<li><a href="<exec:url("action=list&mode=")>">所有</a></li>
+		<li><a href="<exec:url("action=list&mode=payed")>">已支付</a></li>
+		<li><a href="<exec:url("action=list&mode=unpay")>">未支付</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="space"></div>

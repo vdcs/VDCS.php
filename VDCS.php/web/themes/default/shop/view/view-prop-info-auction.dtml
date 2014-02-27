@@ -1,0 +1,39 @@
+
+<div class="partInfo" id="view-info">
+<!-- StructView partInfo -->
+<div class="atts"><ul>
+<li class="prc"><cite>当前价格:</cite><span class="price"><s>￥</s><font id="price_bid"><auction:price_bid!price></font></span></li>
+<li><cite>竞拍人次:</cite><span class="mark"><auction:total_bid></span> 次</li>
+<li class="prc"><cite>起拍价格:</cite><span class="price b big"><s>￥</s><auction:price_start!price></span></li>
+<li><cite>出价幅度:</cite><span class="money"><auction:price_degree!money><em><app:unit.money></em></span></li>
+<li><cite>开始时间:</cite><span><auction:tim_begin!time></span></li>
+<li><cite>结束时间:</cite><span><auction:tim_end!time></span></li>
+<li id="bid_offer_body" class="hide"><cite></cite><input id="bid_offer" class="money" type="text" value="<auction:price_bid_offer!money>" style="width:80px;" /><span class="money"><em><app:unit.money></em></span></li>
+<li id="bid_offer_btns" class="hide"><cite></cite><a class="btnc btn-t4" href="javascript:;" onclick="javascript:auction.bid.offer();"><span>我要出价</span></a>
+	<a class="btnc btn-t4" href="javascript:;" onclick="javascript:auction.agent.set();"><span>代理竞价</span></a>
+	</li>
+<!--{if (toNum({$view:price_old})>0)}--><li><cite>原始价格:</cite><span class="t gray">￥<view:price_old></span></li><!--{/if}-->
+<!--{if (toNum({$view:price_market})>0)}--><li><cite>市场价格:</cite><span class="t gray">￥<view:price_market></span></li><!--{/if}-->
+<!--<li><cite>库　　存:</cite><em><view:amount></em><view:unit></li>-->
+<li><cite>商品评分:</cite><a class="stars star5"></a><a class="comment" href="#comment">(已有<em><view:total_comment></em>人评价)</a></li>
+</ul></div>
+<div class="chooses">
+<loop:attrs>
+	<dl class="attr">
+		<dt>[item:name]：</dt>
+		<dd>[item:value]</dd>
+	</dl>
+</loop>
+	<!--
+	<dl class="btns">
+		<dt></dt>
+		<dd>
+			<a class="btnc btn-t4" href="<chn:linkurl("{@channel}","auction","module=bid&id=<view:id>")>"><span>我要出价</span></a>
+			&nbsp;
+			<a class="btnc btn-t4" href="<chn:linkurl("{@channel}","auction","module=auto&id=<view:id>")>"><span>代理竞拍</span></a>
+		</dd>
+	</dl>
+	-->
+</div>
+<!-- StructView partInfo end -->
+</div>

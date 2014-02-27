@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config xmlns:basic="node" xmlns:info="node">
+		<frame>links,search</frame>
+		<search.fields>{@ua:table.px}company=6;{@ua:table.px}name=6;{@ua:table.px}email=6;{@ua:field.id}=3</search.fields>
+		<search.relations>{@ua:table.name}={@ua:table.px}company,{@ua:table.px}name,{@ua:table.px}email,{@ua:field.id}@uuid,{@ua:field.id}</search.relations>
+		<search.times>tim</search.times>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>dbu_auth</table.name>
+		<table.px></table.px>
+		<table.field.id>id</table.field.id>
+		<table.field.relateid>uuid</table.field.relateid>
+		<table.fields.value>id=id;time=tim</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		<list.table.field>*</list.table.field>
+		<list.table.query><![CDATA[channel='{@channel}' and uurc='{@ua:key}' and trans=0]]></list.table.query>
+		<list.field.append></list.field.append>
+		<list.table.query.all><![CDATA[channel='{@channel}' and uurc='{@ua:key}']]></list.table.query.all>
+		<list.table.query.auth><![CDATA[channel='{@channel}' and uurc='{@ua:key}' and trans=1]]></list.table.query.auth>
+		<list.table.query.inauth><![CDATA[channel='{@channel}' and uurc='{@ua:key}' and trans=2]]></list.table.query.inauth>
+		<list.table.query.unauth><![CDATA[channel='{@channel}' and uurc='{@ua:key}' and trans=0]]></list.table.query.unauth>
+		<list.table.order>id desc</list.table.order>
+		
+		<list.handle.select.option>auth,inauth,unauth,delete</list.handle.select.option>
+		<list.handle.sql.auth>update dbu_auth set trans=1,trans_status=1,trans_tim={$tim} where id in ({$ids})$$$
+			update {@ua:table.name} set {@ua:table.px}auth_cert=1 where {@ua:field.id} in (select uuid from dbu_auth where channel='{@channel}' and uurc='{@ua:key}' and id in ({$ids}))$$$
+			update dbd_upload set status=1 where channel='{@channel}' and sorts='idcard' and uurc='{@ua:key}' and uuid in (select uuid from dbu_auth where channel='{@channel}' and uurc='{@ua:key}' and id in ({$ids}))</list.handle.sql.auth>
+		<list.handle.sql.inauth>update dbu_auth set trans=2,trans_status=2,trans_tim={$tim} where id in ({$ids})$$$
+			update {@ua:table.name} set {@ua:table.px}auth_cert=2 where {@ua:field.id} in (select uuid from dbu_auth where channel='{@channel}' and uurc='{@ua:key}' and id in ({$ids}))$$$
+			update dbd_upload set status=2 where channel='{@channel}' and sorts='idcard' and uurc='{@ua:key}' and uuid in (select uuid from dbu_auth where channel='{@channel}' and uurc='{@ua:key}' and id in ({$ids}))</list.handle.sql.inauth>
+		<list.handle.sql.unauth>update dbu_auth set trans=0,trans_status=0,trans_tim={$tim} where id in ({$ids})$$$
+			update {@ua:table.name} set {@ua:table.px}auth_cert=0 where {@ua:field.id} in (select uuid from dbu_auth where channel='{@channel}' and uurc='{@ua:key}' and id in ({$ids}))$$$
+			update dbd_upload set status=0 where channel='{@channel}' and sorts='idcard' and uurc='{@ua:key}' and uuid in (select uuid from dbu_auth where channel='{@channel}' and uurc='{@ua:key}' and id in ({$ids}))</list.handle.sql.unauth>
+		<list.handle.sql.delete>delete from dbu_auth where id in ({$ids})$$$
+			update {@ua:table.name} set {@ua:table.px}auth_cert=0 where {@ua:field.id} in (select uuid from dbu_auth where channel='{@channel}' and uurc='{@ua:key}' and id in ({$ids}))$$$
+			update dbd_upload set status=0 where channel='{@channel}' and sorts='idcard' and uurc='{@ua:key}' and uuid in (select uuid from dbu_auth where channel='{@channel}' and uurc='{@ua:key}' and id in ({$ids}))</list.handle.sql.delete>
+		
+		<basic:table.name>{@ua:table.name}</basic:table.name>
+		<basic:table.field.id>{@ua:field.id}</basic:table.field.id>
+		<basic:list.table.fields>{@ua:table.px}company,{@ua:table.px}name,{@ua:table.px}email,{@ua:field.id}</basic:list.table.fields>
+		
+		<info:table.name></info:table.name>
+		<info:table.field.id>{@ua:field.id}</info:table.field.id>
+		<info:list.table.fields>{@ua:table.px}realname</info:list.table.fields>
+		
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[证件]]></title.name>
+		<title.list><![CDATA[未认征证件]]></title.list>
+		<title.list.><![CDATA[未认征证件]]></title.list.>
+		<title.list.all><![CDATA[所有证件]]></title.list.all>
+		<title.list.auth><![CDATA[已认征证件]]></title.list.auth>
+		<title.list.inauth><![CDATA[待认征证件]]></title.list.inauth>
+		<title.list.unauth><![CDATA[未认征证件]]></title.list.unauth>
+		<title.add><![CDATA[添加新证件]]></title.add>
+		<title.edit><![CDATA[编辑证件资料]]></title.edit>
+		<title.edit_info><![CDATA[编辑证件详细信息]]></title.edit_info>
+		
+		<title.frame.group><![CDATA[证件组]]></title.frame.group>
+		<title.frame.search><![CDATA[证件搜索]]></title.frame.search>
+		<search.fields.att>{@ua:table.px}company=单位名称;{@ua:table.px}name={@ua:names}名称;{@ua:table.px}email=电子邮件;{@ua:field.id}={@ua:names}ID</search.fields.att>
+		
+		
+		<error.not.exist><![CDATA[您要操作的 证件 不存在！]]></error.not.exist>
+		
+		<error.exist.id><![CDATA[相关 证件ID 已存在！]]></error.exist.id>
+		<error.exist.no><![CDATA[相关 证件编号 已存在！]]></error.exist.no>
+		<error.norule.no><![CDATA[证件编号 不符合规则！]]></error.norule.no>
+		<error.exist.name><![CDATA[相关 证件名称 已存在！]]></error.exist.name>
+		<error.norule.name><![CDATA[证件名称 不符合规则！]]></error.norule.name>
+		<error.exist.email><![CDATA[相关 电子邮箱 已存在！]]></error.exist.email>
+		<error.norule.email><![CDATA[电子邮箱 不符合规则！]]></error.norule.email>
+		<error.exist.mobile><![CDATA[相关 手机号码 已存在！]]></error.exist.mobile>
+		<error.norule.mobile><![CDATA[手机号码 不符合规则！]]></error.norule.mobile>
+		<error.exist.idcard><![CDATA[相关 证件号码 已存在！]]></error.exist.idcard>
+		<error.norule.idcard><![CDATA[证件号码 不符合规则！]]></error.norule.idcard>
+		
+		<error.norule.names><![CDATA[简称 不符合规则！]]></error.norule.names>
+		<error.norule.realname><![CDATA[真实姓名 不符合规则！]]></error.norule.realname>
+		
+		
+		<handle.ok.add><![CDATA[成功添加了 1 张证件！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 张证件的资料！]]></handle.ok.edit>
+		<handle.ok.edit.info><![CDATA[成功编辑了 1 张证件的详细信息！]]></handle.ok.edit.info>
+		<handle.ok.auth><![CDATA[成功认征了 {$total} 张证件！]]></handle.ok.auth>
+		<handle.ok.inauth><![CDATA[成功待认征了 {$total} 张证件！]]></handle.ok.inauth>
+		<handle.ok.unauth><![CDATA[成功取消认征了 {$total} 张证件！]]></handle.ok.unauth>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} 张证件！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+		<menu.links><![CDATA[
+@@@title=实名认证;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("action=list&mode=all")>">所有证件</a></li>
+<li class="space"></li>
+<li><a href="<exec:url("action=list&mode=unauth")>">未认证</a></li>
+<li><a href="<exec:url("action=list&mode=inauth")>">待认证</a></li>
+<li><a href="<exec:url("action=list&mode=auth")>">已认证</a></li>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

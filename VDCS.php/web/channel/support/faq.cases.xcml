@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,topic,content</field>
+	</configure>
+	<item>
+		<key>cases</key>
+		<topic><![CDATA[客户案例]]></topic>
+		<content><![CDATA[
+客户案例的说明<br/>
+]]></content>
+	</item>
+</xcml>

@@ -1,0 +1,29 @@
+<div class="box">
+<h2><cite>部门列表</cite></h2>
+<div class="con">
+	<div>
+		<ul>
+		<li><a href="<exec:url("channel={@channel}&p=em&m=staff&mi=null&action=list")>">全部</a></li>
+		</ul>
+		<ul id="depar_list"></ul>
+	</div>
+</div>
+</div>
+<xmp id="depar_list_tpl">
+	<li id="[item:deptid]"><a href="<exec:url("channel={@channel}&p=em&m=staff&mi=null&action=list&deptid=[item:deptid]")>">[item:name]</a></li>
+</xmp>
+<script type="text/javascript">
+$(function(){
+	var staff_list=ui.list;//对象，传入存放内容的对象和模板对象
+	var opt={cont:$('#depar_list'),tpl:$('#depar_list_tpl')};
+	opt.serveVar={channel:'{@channel}',p:'em',m:'department',action:'listdepar'};
+	opt.bind=function(jitem){
+		
+	};
+	opt.binds=function(jcont){	
+	};
+	opt.node_table='item';
+	staff_list.init(opt);
+	staff_list.parse();
+});
+</script>

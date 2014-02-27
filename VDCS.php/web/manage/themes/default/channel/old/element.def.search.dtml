@@ -1,0 +1,20 @@
+
+<div class="Block Block-Menu-Search">
+	<div class="BlockBar"><p>搜索</p></div>
+	<div class="BlockContent BlockSearch"><div class="BlockInner">
+<form class="search" name="frm_search" action="?" method="get">
+<input type="hidden" name="portals" value="kb" />
+<input type="hidden" name="action" value="list" />
+<div class="sea-keyword"><input type="text" class="keyword" name="keyword" value="" size="10" maxlength="50" /></div>
+<div class="sea-field"><a class="input"><select name="sea_field" >
+<option value="a_topic">标题</option>
+<option value="sp_keyword">关键字</option>
+<option value="username">发布人</option>
+</select></a></div>
+<div class="sea-term"><input type="radio" class="normal" name="sea_term" value="and"  checked  />与 <input type="radio" class="normal" name="sea_term" value="or"   />或 <input type="radio" class="normal" name="sea_term" value="exact"   />精确 </div>
+<div class="sea-button"><input type="submit" class="sea-btn" value="搜索" /></div>
+</form>
+	</div></div>
+	<div class="BlockFooter"><p></p></div>
+</div>
+<div class="space"></div>

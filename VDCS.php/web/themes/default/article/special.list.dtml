@@ -1,0 +1,23 @@
+<label:include file="/article/frame/headers">
+
+
+<div class="cont">
+	<div class="box">
+		<h2><t><channel:nav("")></t></h2>
+		<div class="con">
+<span class="gray"><langs:search.caption.special>: <a href="<special:linkurl>"><special:name></a></span>
+<span class="gray small">(<paging:total> <langs:chn.units>)</span>
+		</div>
+		<div class="con">
+<div class="StructLists"><ul>
+<label:list>
+<label:include file="/inc/e/list.item">
+</label:end>
+</ul></div>
+		</div>
+<label:include file="/inc/e/paging.box">
+	</div>
+</div>
+
+
+<label:include file="/article/frame/footers">

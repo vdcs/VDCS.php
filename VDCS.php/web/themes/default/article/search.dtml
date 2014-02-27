@@ -1,0 +1,69 @@
+<label:include file="/article/frame/headers">
+
+
+<div class="cont">
+	<div class="Halfs"><div class="HalfLeft widCenter">
+	<div class="box">
+		<h2><t><channel:nav("")></t></h2>
+		<div class="con">
+<div class="PostForm">
+<form name="frm_search" action="<linkurl:{@channel}.search.act>" method="get">
+<div class="PostFormItem">
+<div class="itemCaption"><langs:search.caption.keyword>:</div>
+<div class="itemInput"><input type="text" class="keyword" name="keyword" value="" size="50" maxlength="50" style="width:200px;">
+	<div class="explain"><langs:search.explain.keyword></div>
+</div>
+</div>
+<div class="PostFormItem">
+<div class="itemCaption"><langs:search.caption.class>:</div>
+<div class="itemInput"><select name="classid" style="width:210px;">
+<option value="" selected="selected"><langs:search.default.class></option>
+<label:class("{@channel}","res=all")>
+<option value="[item:id]">&nbsp; [item:space][item:name]</option>
+</label:end>
+</select>
+	<div class="explain"></div>
+</div>
+</div>
+<div class="PostFormItem">
+<div class="itemCaption"><langs:search.caption.field>:</div>
+<div class="itemInput"><select name="sea_field" style="width:210px;">
+<option value="topic"><langs:search.field.topic></option>
+<option value="sp_keyword"><langs:search.field.keyword></option>
+<option value="username"><langs:search.field.username></option>
+</select>
+	<div class="explain"></div>
+</div>
+</div>
+<script type="text/javascript">
+/*dcs.xSelect.doReplace($f.o("frm_search.classid"));
+dcs.xSelect.doReplace($f.o("frm_search.sea_field"),{theme:"ubox"});*/
+</script>
+<div class="PostFormItem">
+<div class="itemCaption"><langs:search.caption.att>:</div>
+<div class="itemInput"><input type="radio" class="radio" name="mode" value="" checked><langs:search.att.all> <input type="radio" class="radio" name="mode" value="pic"><langs:search.att.pic>
+	<div class="explain"></div>
+</div>
+</div>
+<div class="PostFormItem">
+<div class="itemCaption"><langs:search.caption.term>:</div>
+<div class="itemInput"><input type="radio" class="radio" name="sea_term" value="and" checked><langs:search.field.term.and> <input type="radio" class="radio" name="sea_term" value="or"><langs:search.field.term.or> <input type="radio" class="radio" name="sea_term" value="exact"><langs:search.field.term.exact>
+	<div class="explain"></div>
+</div>
+</div>
+<div class="PostFormItem PostFormItemButton">
+<div class="itemCaption"></div>
+<div class="itemButton"><button type="submit" class="btn push" accesskey="S"><langs:search.submit>(<ins>S</ins>)</button> <input type="reset" class="btn reset" name="_rst" value="<langs:search.reset>" /></div>
+</div>
+</form>
+</div>
+		</div>
+	</div>
+</div>
+<div class="sider">
+<label:include file="/article/frame/sider">
+</div>
+</div>
+
+
+<label:include file="/article/frame/footers">

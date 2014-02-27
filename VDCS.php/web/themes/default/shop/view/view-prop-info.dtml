@@ -1,0 +1,27 @@
+
+<form action="#view" method="get">
+<input type="hidden" name="id" value="<view:id>" />
+<div class="infos">
+<div class="atts">
+<dl><dt>当前价格：</cite></dt><dd><span class="price"><view:price></span></dd></dl>
+<!--{if (len({$view:serial})>0)}--><dl><dt>商品编号：</dt><dd><span><view:serial></span></dd></dl><!--{/if}-->
+<!--{if (toNum({$view:price_old})>0)}--><dl><dt>原始价格：</dt><dd><span class="gray"><view:price_old></span></dd></dl><!--{/if}-->
+<!--{if (toNum({$view:price_market})>0)}--><dl><dt>市场价格：</dt><dd>span class="gray"><view:price_market></span></dd></dl><!--{/if}-->
+<dl><dt>库　　存：</dt><dd><em><view:amounts></em><view:unit></dd></dl>
+<dl><dt>商品评分：</dt><dd><a class="stars star5"></a><a class="comment" href="#comment">(已有<i><view:total_comment></i>人评价)</a></dd></dl>
+</div>
+<div class="atts choose">
+<dl>
+	<dt>我要买：</dt>
+	<dd><div class="amount_c"><a class="reduce" href="#reduce" el="minus">-</a><input type="text" name="amount" value="1" onkeyup="appc.amount.modify('#pamount')" /><a class="plus" href="#plus" el="plus">+</a></div></dd>
+</dl>
+<dl class="btns">
+	<dt></dt>
+	<dd>
+		<a class="btn m" href="#cart.add"><span>添加到购物车</span></a>
+		<a class="btn c" href="<chn:linkurl("{@channel}","pa","p=cart")>"><span>购物车</span></a>
+	</dd>
+</dl>
+</div>
+</div>
+</form>

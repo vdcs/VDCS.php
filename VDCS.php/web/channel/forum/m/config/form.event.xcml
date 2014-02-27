@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>text.username</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=20 maxlength=50</style>
+		<caption><![CDATA[操作人]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[如果不填写表示对所有操作人进行操作！]]></explain>
+	</input>
+	<input>
+		<type>text.operator</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=20 maxlength=50</style>
+		<caption><![CDATA[被操作人]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[如果不填写表示对所有被操作人进行操作！]]></explain>
+	</input>
+	<input>
+		<type>text.time_star</type>
+		<property><![CDATA[item=;action=;type=date;max=10;min=1]]></property>
+		<style>size=15 maxlength=10 class="date"</style>
+		<caption><![CDATA[开始时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.today>]]></value>
+		<explain><![CDATA[<script>$pf.chooseTime('time_star');</script> 格式:<dcs:time.today>]]></explain>
+	</input>
+	<input>
+		<type>text.time_end</type>
+		<property><![CDATA[item=;action=;type=date;max=10;min=1]]></property>
+		<style>size=15 maxlength=10 class="date"</style>
+		<caption><![CDATA[结束时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.today>]]></value>
+		<explain><![CDATA[<script>$pf.chooseTime('time_end');</script> 格式:<dcs:time.today>]]></explain>
+	</input>
+	<input>
+		<type>text.ip</type>
+		<property><![CDATA[item=;action=;type=string;max=15;min=]]></property>
+		<style></style>
+		<caption><![CDATA[IP数据段]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[可填写IP段，如果不填写表示对所有进行操作！]]></explain>
+	</input>
+</xcml>

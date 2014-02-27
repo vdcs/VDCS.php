@@ -1,0 +1,8 @@
+
+<div class="space"></div>
+<div class="box">
+	<h2><t>购物说明</t></h2>
+	<div class="con">
+<label:include file="e.notes">
+	</div>
+</div>

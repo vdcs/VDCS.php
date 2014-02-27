@@ -1,0 +1,7 @@
+	<h3>
+		<t class="source"><langs:view.source>: <i><view:source></i></t> <s></s>
+		<t class="tim"><langs:view.updated>: <i><view:tim!time></i></t> <s></s>
+		<t class="stat"><channel:var("act")><i class="total-view"><view:total_view></i><langs:chn.views></t> <s></s>
+		<t class="comt"><a href="#comment"><langs:comment.names>(<i><view:total_comment></i>)<langs:comment.unit></a></t> <s></s>
+		<t class="resizes"><a class="normal" href="#normal"><langs:view.resize.normal></a><a class="big" href="#big"><langs:view.resize.big></a></t> <s></s>
+	</h3>

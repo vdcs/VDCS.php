@@ -1,0 +1,3 @@
+<?
+class ChannelForumBase extends ChannelForumBasic{}
+?>

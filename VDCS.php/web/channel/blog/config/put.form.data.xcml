@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+		<sp.code>code=sp_code;remark=d_remark</sp.code>
+		<script.begin><![CDATA[]]></script.begin>
+		<script.end><![CDATA[]]></script.end>
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<explain><![CDATA[default=$$$base=基本信息;popedom={@act.data}权限;status={@names.data}状态]]></explain>
+	</input>
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=none</att>
+	</input>
+	<input>
+		<type>text.d_topic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=0]]></property>
+		<style>size=60 maxlength=200</style>
+		<caption><![CDATA[{@names.data}名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<br>不填系统将按顺序命名，如：地址1]]></explain>
+	</input>
+	<input>
+		<type>radio.d_sort</type>
+		<property><![CDATA[item=;action=;type=string;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[{@names.data}类型]]></caption>
+		<att><![CDATA[<control:att("file","common.channel/{@channel}/data.sort")>]]></att>
+		<value>_no1</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.d_type</type>
+		<property><![CDATA[item=;action=;type=string;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[{@names.data}类别]]></caption>
+		<att><![CDATA[<control:att("file","common.channel/{@channel}/data.type")>]]></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.d_size</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=0]]></property>
+		<style>size=20 maxlength=20 style="text-align:right;"</style>
+		<caption><![CDATA[{@names.data}大小]]></caption>
+		<att></att>
+		<value>MB</value>
+		<explain><![CDATA[例: 2.15MB]]></explain>
+	</input>
+	<input>
+		<type>textbox.d_summary</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=0]]></property>
+		<style>cols=60 rows=6 style="width:388px;"</style>
+		<caption><![CDATA[{@names.data}摘要]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>select.sp_serverid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style><![CDATA[style="width:340px;"]]></style>
+		<caption><![CDATA[服 务 器]]></caption>
+		<att><![CDATA[0:请选择服务器..|<control:att("server","channel={@channel}")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.d_url</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=1]]></property>
+		<style>size=60 maxlength=200</style>
+		<caption><![CDATA[文件地址]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<control:form.element("upload.linkurl","","channel={@channel};filetype={@up.filetype.d_url};filename={@up.filename.d_url};fileinput=d_url;inputtype=;title=上传文件")>]]></explain>
+	</input>
+	<input>
+		<type>upload</type>
+		<property><![CDATA[item=;action=;type=;max=;min=]]></property>
+		<style></style>
+		<caption><![CDATA[文件上传]]></caption>
+		<att><![CDATA[channel={@channel};filetype={@up.filetype.d_url};filename={@up.filename.d_url};fileinput=d_url;inputtype=]]></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=popedom;display=none</att>
+	</input>
+	<input>
+		<type>checkbox.sp_popedom</type>
+		<property><![CDATA[item=;class=sp;action=;type=string;max=250;min=]]></property>
+		<style></style>
+		<caption><![CDATA[{@act.data}权限]]></caption>
+		<att><![CDATA[<control:att("file","user.group")>]]></att>
+		<value></value>
+		<explain>不选表示对所有人开放</explain>
+	</input>
+	<input>
+		<type>text.sp_emoney</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=10;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[{@act}货币]]></caption>
+		<att></att>
+		<value>0.0</value>
+		<explain><![CDATA[<app:unit.emoney>$$${@data:act}所要扣除的货币]]></explain>
+	</input>
+	<input>
+		<type>text.sp_points</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=10;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[{@act}积分]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.points>$$${@data:act}所要扣除的积分]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=status;display=none</att>
+	</input>
+	<input>
+		<type>radio.d_status</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[当前状态]]></caption>
+		<att><![CDATA[<control:att("dict","data.hide")>]]></att>
+		<value>1</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.orderid</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=]]></property>
+		<style>size=15 maxlength=15 class="total"</style>
+		<caption><![CDATA[排 序 值]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[$$$排序值越大越靠前，而不受发布时间限制]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+</xcml>

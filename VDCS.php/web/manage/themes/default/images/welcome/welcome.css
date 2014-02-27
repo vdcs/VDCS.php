@@ -1,0 +1,5 @@
+
+.Welcome { text-align:left; }
+.Welcome .partFrame { }
+.Welcome .partInner { }
+.Welcome .partBody { width:300px;height:150px; background:url("welcome.jpg") 0 0 no-repeat; margin:150px; }

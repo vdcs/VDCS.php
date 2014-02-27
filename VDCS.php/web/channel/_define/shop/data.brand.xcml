@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>id,name,title,company,pic,explain,keyword,isgood</field>
+		<field.att.value>id</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<id>1</id>
+		<name>品牌1</name>
+		<title></title>
+		<company></company>
+		<pic></pic>
+		<explain></explain>
+		<keyword></keyword>
+		<isgood>0</isgood>
+	</item>
+	<item>
+		<id>2</id>
+		<name>品牌2</name>
+		<title></title>
+		<company></company>
+		<pic></pic>
+		<explain></explain>
+		<keyword></keyword>
+		<isgood>0</isgood>
+	</item>
+</xcml>

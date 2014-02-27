@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links,brand</frame>
+		
+		<table.name>{@brand:table.name}</table.name>
+		<table.px>{@brand:table.px}</table.px>
+		<table.field.id>id</table.field.id>
+		<table.field.defineid>brandid</table.field.defineid>
+		<table.fields.value></table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.order>id desc</list.table.order>
+		<list.field.append>topic</list.field.append>
+		<list.handle.select.option>hide,show,delete</list.handle.select.option>
+		<list.handle.sql.hide>update db_shop_brand set status=0 where id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.show>update db_shop_brand set status=1 where id in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.delete>delete from db_shop_brand where id in ({$ids})</list.handle.sql.delete>
+	</config>
+	
+	<lang>
+		<title><![CDATA[{@brand:name}]]></title>
+		<title.name><![CDATA[{@brand:names}]]></title.name>
+		<title.list><![CDATA[{@brand:names}列表]]></title.list>
+		<title.list.><![CDATA[{@brand:names}列表]]></title.list.>
+		<title.add><![CDATA[添加{@brand:names}]]></title.add>
+		<title.edit><![CDATA[编辑{@brand:names}]]></title.edit>
+		<title.del><![CDATA[删除{@brand:names}]]></title.del>
+		
+		<error.not.exist><![CDATA[您要操作的 {@brand:names} 不存在！]]></error.not.exist>
+		<error.exist.data><![CDATA[您要删除的{@brand:names}有数据存在！]]></error.exist.data>
+		<error.exist.add><![CDATA[相关 {@brand:names}ID 已存在！]]></error.exist.add>
+		
+		<error.norule.id><![CDATA[{@brand:names} ID 不符合规则！]]></error.norule.id>
+		<error.norule.topic><![CDATA[{@brand:names} 名称 不符合规则！]]></error.norule.topic>
+		<error.norule.remark><![CDATA[{@brand:names} 内容 不符合规则！]]></error.norule.remark>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 个{@brand:names}！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 个{@brand:names}！]]></handle.ok.edit>
+		<handle.ok.hide><![CDATA[成功隐藏了 {$count} {@brand:unit}{@brand:names}！]]></handle.ok.hide>
+		<handle.ok.show><![CDATA[成功显示了 {$count} {@brand:unit}{@brand:names}！]]></handle.ok.show>
+		<handle.ok.del><![CDATA[成功删除了 1 {@brand:unit}{@brand:names}！]]></handle.ok.del>
+		<handle.ok.delete><![CDATA[成功删除了 {$count} {@brand:unit}{@brand:names}！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+		<menu.links><![CDATA[
+<div class="Block">
+	<div class="BlockBar"><p>{@brand:names}操作<p></div>
+	<div class="BlockContent"><div class="BlockInner">
+	<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("action=list")>">{@brand:names}列表</a></li>
+<li><a href="<exec:url("action=add")>">添加新{@brand:names}</a></li>
+</ul>
+	</div></div>
+	<div class="BlockFooter"><p></p></div>
+</div>
+</div>
+		]]></menu.links>
+	</template>
+</xcml>

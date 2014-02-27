@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>var,alipay,i99bill,yeepay</node>
+		<field></field>
+	</configure>
+	<var>
+		
+	</var>
+	<alipay>
+		<name>支付宝</name>
+		<email>payment@domain.com</email>
+		<pid>88888888</pid>
+		<key>secure_key</key>
+		<currency>01</currency>
+		<interface>https://mapi.alipay.com/gateway.do</interface>
+		<module>direct</module>
+		<sort></sort>
+		<url></url>
+		<explain>支付宝 AliPay.com</explain>
+	</alipay>
+	<i99bill>
+		<name>快钱</name>
+		<email>payment@domain.com</email>
+		<pid>88888888</pid>
+		<key>secure_key</key>
+		<currency>01</currency>
+		<interface>https://mapi.99bill.com/gateway.do</interface>
+		<sort></sort>
+		<url></url>
+		<explain>快钱 99Bill.com</explain>
+	</i99bill>
+	<yeepay>
+		<name>易宝支付</name>
+		<email>payment@domain.com</email>
+		<pid>88888888</pid>
+		<key>secure_key</key>
+		<currency></currency>
+		<interface>https://www.yeepay.com/app-merchant-proxy/node</interface>
+		<sort></sort>
+		<url></url>
+		<explain>易宝支付 Yeepay.com</explain>
+	</yeepay>
+</xcml>

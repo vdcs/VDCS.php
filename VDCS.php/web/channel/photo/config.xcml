@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre xmlns:data="node">
+		<channel>{@channel}</channel>
+		<table.name>db_{@channel}</table.name>
+		<table.px>c_</table.px>
+		<name>图片</name>
+		<names>图集</names>
+		<unit>个</unit>
+		<act>浏览</act>
+		<act.get>获取</act.get>
+		<act.view>浏览</act.view>
+		
+		<data:type>s</data:type>
+		<data:table.name>dbd_data</data:table.name>
+		<data:table.px></data:table.px>
+		<data:name>图片</data:name>
+		<data:names>图片</data:names>
+		<data:unit>张</data:unit>
+		<data:act>浏览</data:act>
+	</pre>
+	<var>
+		<title>图集</title>
+		<title.index>null</title.index>
+		<title.list>图集列表</title.list>
+		<title.view>浏览图集</title.view>
+		<title.view.data>浏览图片</title.view.data>
+		<title.search>图集搜索</title.search>
+		<title.class>图集分类</title.class>
+		<title.special>图集专题</title.special>
+	</var>
+	<num>
+		<pic.width>0</pic.width>
+		<pic.height>0</pic.height>
+	</num>
+	<config>
+		<url>default</url>
+		<put>0</put>
+		<put.status>0</put.status>
+		<put.premium>1</put.premium>
+		<put.audit></put.audit>
+		<put.premium.emoney>0</put.premium.emoney>
+		<put.premium.points>5</put.premium.points>
+	</config>
+</xcml>

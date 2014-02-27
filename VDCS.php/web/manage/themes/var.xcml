@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>common,frame,ad</node>
+	</configure>
+	<common>
+	</common>
+	<frame>
+		<powerby><![CDATA[本站基于 <app:web.version> 技术架构]]></powerby>
+		<pass5.support><![CDATA[<a id="Pass5-Support" href="http://www.pass5.com/" target="_blank" title="Pass5 Network 支持站点"><span>&nbsp;</span></a>]]></pass5.support>
+		<power-by><![CDATA[<a id="Power-by-Joekoe" href="http://www.joekoe.com.cn/" target="_blank" title="乔客网科旗下网站&#10;Power by Joekoe"><span>&nbsp;</span></a>]]></power-by>
+		<ver>2010</ver>
+		<beian>沪ICP备88888888号</beian>
+		<copyright><![CDATA[&copy; 2010 <app:com.name> 保留所有权利。]]></copyright>
+		<stat><![CDATA[<!--统计代码1-->]]></stat>
+		<header.nav><![CDATA[<div class="nav-index">
+<a class="button button-index" href="http://www.joekoe.com.cn/" target="_blank"><span>乔客网科</span></a>
+</div>
+<div class="nav-left">
+<a class="button button-abc" href="http://www.joekoe.com/" target="_blank"><span>Joekoe CMS 5.0 官方网站</span></a>
+<a class="button button-abc" href="http://www.joekoe.com/forum/" target="_blank"><span>Joekoe CMS 5.0 官方论坛</span></a>
+<a class="button button-abc" href="http://www.joekoe.com/forum/list_1.vhtml" target="_blank"><span>Joekoe CMS 5.0 问题反馈</span></a>
+</div>]]></header.nav>
+		<header.code><![CDATA[<!--header.code-->]]></header.code>
+		<footer.code><![CDATA[<div id="gotop" class="xfloat"><a id="gotop-link" href="javascript:;" onclick="javascript:return $p.gotop();"><span>&nbsp;</span></a></div>
+<script type="text/javascript">
+var xgotop=new VDCS.xFloat("xgotop",$("gotop"));
+xgotop.setPlace({right:-5,bottom:80});
+//xgotop.init();
+</script>]]></footer.code>
+	</frame>
+	<ad>
+		<banner.head><![CDATA[<!--ad.banner.head-->]]></banner.head>
+		<fullbanner.head><![CDATA[<!--ad.fullbanner.head-->]]></fullbanner.head>
+		<banner.foot><![CDATA[<!--ad.banner.foot-->]]></banner.foot>
+		<fullbanner.foot><![CDATA[<!--ad.fullbanner.foot-->]]></fullbanner.foot>
+		<footer><![CDATA[<!--ad.foot-->]]></footer>
+	</ad>
+</xcml>

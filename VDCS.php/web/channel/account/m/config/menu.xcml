@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>name,url,config</field>
+		<title><![CDATA[]]></title>
+		<relate></relate>
+	</configure>
+	<item>
+		<name><![CDATA[{@ua:names}列表]]></name>
+		<url><![CDATA[p={#ua};params=action=list]]></url>
+		<config><![CDATA[icon=list;act={#ua}@action.list]]></config>
+	</item>
+	<item>
+		<name><![CDATA[sup.添加]]></name>
+		<url><![CDATA[p={#ua};params=action=add]]></url>
+		<config><![CDATA[icon=add;act={#ua}@action.add]]></config>
+	</item>
+	<!--
+	<item>
+		<name><![CDATA[{@ua:names}组管理]]></name>
+		<config><![CDATA[icon=class;act=group.action.list]]></config>
+	</item>
+	<item>
+		<name><![CDATA[频道配置]]></name>
+		<url><![CDATA[channel=system;p=model;m=configure;params=subchannel={$channel}]]></url>
+		<config><![CDATA[icon=configure;act=model.configure]]></config>
+	</item>
+	-->
+	
+	<item>
+		<name><![CDATA[sub.财务信息]]></name>
+		<config><![CDATA[icon=system;act=assets.remit@action.list]]></config>
+	</item>
+	<item>
+		<name><![CDATA[汇款信息]]></name>
+		<url><![CDATA[p=assets;m=remit;params=action=list]]></url>
+		<config><![CDATA[icon=system;act=assets.remit@action.list]]></config>
+	</item>
+	<item>
+		<name><![CDATA[sup.添加]]></name>
+		<url><![CDATA[p=assets;m=remit;params=action=add]]></url>
+		<config><![CDATA[icon=system;act=assets.remit@action.add]]></config>
+	</item>
+
+	<item>
+		<name><![CDATA[提现信息]]></name>
+		<url><![CDATA[p=assets;m=refund;params=action=list]]></url>
+		<config><![CDATA[icon=system;act=assets.refund@action.list]]></config>
+	</item>
+	<item>
+		<name><![CDATA[sup.添加]]></name>
+		<url><![CDATA[p=assets;m=refund;params=action=add]]></url>
+		<config><![CDATA[icon=system;act=assets.remit@action.add]]></config>
+	</item>
+
+	<item>
+		<name><![CDATA[资金流动]]></name>
+		<url><![CDATA[p=assets;m=transaction;params=action=list]]></url>
+		<config><![CDATA[icon=system;act=assets.refund@action.list]]></config>
+	</item>
+
+	<item>
+		<name><![CDATA[账单列表]]></name>
+		<url><![CDATA[p=bill;params=action=list]]></url>
+		<config><![CDATA[icon=system;act=bill@action.list]]></config>
+	</item>
+	
+	
+	<item>
+		<name><![CDATA[sub.优惠券]]></name>
+		<config><![CDATA[icon=system;act=coupon@action.list]]></config>
+	</item>
+	<item>
+		<name><![CDATA[优惠券列表]]></name>
+		<url><![CDATA[p=coupon;params=action=list]]></url>
+		<config><![CDATA[icon=system;act=coupon@action.list]]></config>
+	</item>
+	<item>
+		<name><![CDATA[sup.添加]]></name>
+		<url><![CDATA[p=coupon;params=action=add]]></url>
+		<config><![CDATA[icon=system;act=coupon@action.add]]></config>
+	</item>
+	
+	
+	<item>
+		<name><![CDATA[sub.功能管理]]></name>
+		<config><![CDATA[icon=system;act=action.list]]></config>
+	</item>
+	<item>
+		<name><![CDATA[实名认证]]></name>
+		<url><![CDATA[p=auth;m=idcard;params=action=]]></url>
+		<config><![CDATA[icon=system;act=action.list]]></config>
+	</item>
+
+	<item>
+		<name><![CDATA[短信管理]]></name>
+		<url><![CDATA[portal=message]]></url>
+		<config><![CDATA[icon=quote;act=message.action.list]]></config>
+	</item>
+	<item>
+		<name><![CDATA[收藏夹管理]]></name>
+		<url><![CDATA[portal=bookmark]]></url>
+		<config><![CDATA[icon=page;act=bookmark.action.list]]></config>
+	</item>
+	
+	<!--
+	<item>
+		<name><![CDATA[自动登录]]></name>
+		<url><![CDATA[p={#ua};params=action=autologin]]></url>
+		<config><![CDATA[icon=system;act=action.autologin]]></config>
+	</item>
+	<item>
+		<name><![CDATA[勋章管理]]></name>
+		<url><![CDATA[portal=honor]]></url>
+		<config><![CDATA[icon=list;act=honor.action.list]]></config>
+	</item>
+	
+	<item>
+		<name><![CDATA[充值卡管理]]></name>
+		<url><![CDATA[portal=card]]></url>
+		<config><![CDATA[icon=system;act=card.action.list]]></config>
+	</item>
+	-->
+</xcml>

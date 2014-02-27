@@ -1,0 +1,18 @@
+<label:include file="/header.blank">
+<style type="text/css">
+.Message { line-height:30px; padding-left:8px; }
+.TipsFloat { clear:both; position:absolute;top:0;right:0; width:100%;height:100%; text-align:right; }
+.TipsFloat .info { color:#000080;line-height:30px; background:url("<url:images>common/load/16x16.gif") 0 0 no-repeat; padding-left:18px; margin-right:12px; }
+.TipsFloat { background-color:#EDEDED; filter:Alpha(opacity=90);-moz-opacity:.9;opacity:0.9; }
+</style>
+<script type="text/javascript">
+//if (top.location==self.location) { top.location="./"; }
+
+var up={};
+up.paths="<dcs:browse.paths>";
+
+up.doPageInit=function(){
+	var _h=$w.h;if(_h<1)_h=30;if(_h>30)_h=30;
+	$o("__tables").cssStyle("height:"+_h+"px;");
+}
+</script>

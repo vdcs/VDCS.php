@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links</frame>
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.order>t_id desc</list.table.order>
+		<list.handle.select.option>show,hide,delete</list.handle.select.option>
+		<list.handle.sql.show>update db_table set t_status=1 where t_id in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.hide>update db_table set t_status=0 where t_id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.delete>delete from db_table where t_id in ({$ids})</list.handle.sql.delete>
+
+		<table.name>db_table</table.name>
+		<table.px>t_</table.px>
+		<table.field.id>t_id</table.field.id>
+		<table.fields.add>field1,field2</table.fields.add>
+		<table.fields.edit>field1,field2</table.fields.edit>
+	</config>
+
+	<lang>
+		<title.name><![CDATA[论坛]]></title.name>
+		<title><![CDATA[批量删除]]></title>
+		<title.batch><![CDATA[批量删除]]></title.batch>
+
+		<error.not.exist.username><![CDATA[您要操作的用户不存在！]]></error.not.exist.username>
+		<error.not.exist.fid><![CDATA[您要操作的论坛不存在！]]></error.not.exist.fid>
+		<error.not.time><![CDATA[开始时间 或 结束时间错误！]]></error.not.time>
+		<error.bulk.time><![CDATA[开始时间 不能大于 结束时间！]]></error.bulk.time>
+
+		<handle.ok.batch><![CDATA[成功删除了相关数据库记录！]]></handle.ok.batch>
+	</lang>
+
+	<template>
+		<menu.links><![CDATA[
+@@@title=数据管理;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("portal=forum&module=combine")>">数据合并</a></li>
+<li><a href="<exec:url("portal=forum&module=batch")>">批量删除</a></li>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

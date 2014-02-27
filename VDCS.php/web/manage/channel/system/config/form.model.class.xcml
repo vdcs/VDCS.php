@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<explain><![CDATA[default=$$$base=基本信息;popedpm=权限信息]]></explain>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=none</att>
+	</input>
+	<input>
+		<type>put.classid</type>
+		<property><![CDATA[item=;action=edit;type=int;max=;min=]]></property>
+		<style></style>
+		<caption><![CDATA[分类ID]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>input.classid</type>
+		<property><![CDATA[item=;action=add;type=int;max=255;min=1]]></property>
+		<style>size=15 maxlength=15</style>
+		<caption><![CDATA[分类ID]]></caption>
+		<att></att>
+		<value>{$classid}</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.name</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=1]]></property>
+		<style>size=50 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[分类名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>select.fatherid</type>
+		<property><![CDATA[item=;action=add;type=int;max=255;min=]]></property>
+		<style> class="itxt"</style>
+		<caption><![CDATA[所属分类]]></caption>
+		<att><![CDATA[0=[作为主分类];<control:att("class_father","channel={$channeli}")>]]></att>
+		<value>{$fatherid}</value>
+		<explain></explain>
+	</input>
+	
+	<input>
+		<type>text.logo</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=50 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[分类Logo]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>textbox.summary</type>
+		<property><![CDATA[item=;action=;type=string;max=500;min=]]></property>
+		<style>cols=50 rows=4 class="itxt"</style>
+		<caption><![CDATA[分类简介]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	
+	<input>
+		<type>hidden.popedom</type>
+		<property><![CDATA[item=;action=edit;type=string;max=250;min=]]></property>
+		<style></style>
+		<caption><![CDATA[权限]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>hidden.managers</type>
+		<property><![CDATA[item=;action=edit;type=string;max=250;min=]]></property>
+		<style></style>
+		<caption><![CDATA[管理员]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>hidden.configure</type>
+		<property><![CDATA[item=;action=edit;type=string;max=1000;min=]]></property>
+		<style></style>
+		<caption><![CDATA[配置]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>hidden.dirname</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=0]]></property>
+		<style>size=30 maxlength=50</style>
+		<caption><![CDATA[目录]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>hidden.dirnpath</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=0]]></property>
+		<style>size=30 maxlength=250</style>
+		<caption><![CDATA[路径]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>hidden.dirnpaths</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=0]]></property>
+		<style>size=30 maxlength=250</style>
+		<caption><![CDATA[路径]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>input.orderid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style>size=15 maxlength=15</style>
+		<caption><![CDATA[排 序 值]]></caption>
+		<att></att>
+		<value>{$orderid}</value>
+		<explain><![CDATA[ <!---1表示让系统自行判断--> ]]></explain>
+	</input>
+	<input>
+		<type>radio.status</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[当前状态]]></caption>
+		<att><![CDATA[<control:att("dict","sort=data.hide")>]]></att>
+		<value>1</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=popedpm;display=none</att>
+	</input>
+	<!--
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[权限控制]]></caption>
+	</input>
+	-->
+	<input>
+		<type>radio.issp</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否启用]]></caption>
+		<att><![CDATA[<control:att("dict","sort=data.bool")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>checkbox.sp_popedom</type>
+		<property><![CDATA[item=;class=sp;action=;type=string;max=50;min=]]></property>
+		<style></style>
+		<caption><![CDATA[权限值]]></caption>
+		<att><![CDATA[<control:att("file","user.group")>]]></att>
+		<value></value>
+		<explain>不选表示全部</explain>
+	</input>
+	<input>
+		<type>text.sp_emoney</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=10;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[货币值]]></caption>
+		<att></att>
+		<value>0.0</value>
+		<explain><![CDATA[<app:unit.emoney>$$$]]></explain>
+	</input>
+	<input>
+		<type>text.sp_points</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=10;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[积分值]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.points>$$$]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+</xcml>

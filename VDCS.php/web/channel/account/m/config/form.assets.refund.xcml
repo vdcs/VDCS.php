@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+		<sp.code>code=sp_code;remark={@tpx}remark</sp.code>
+		<script.begin><![CDATA[]]></script.begin>
+		<script.end><![CDATA[]]></script.end>
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<explain><![CDATA[default=$$$base=基本信息]]></explain>
+	</input>
+	<!--attr={@xnames}属性;-->
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=none</att>
+	</input>
+	
+<label:include file="choose.ua">
+	
+	<input>
+		<type>text.{@tpx}money</type>
+		<property><![CDATA[item=;action=;type=num;max=255;min=1;classi=money]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[提现金额]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.money>$$$]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}payee</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=;classi=item]]></property>
+		<style>size=15 maxlength=15 class="itxt"</style>
+		<caption><![CDATA[提现人]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}bank</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=;classi=items]]></property>
+		<style>size=40 maxlength=50</style>
+		<caption><![CDATA[银行名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}bankno</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=;classi=items]]></property>
+		<style>size=40 maxlength=50</style>
+		<caption><![CDATA[银行帐号]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>textbox.{@tpx}summary</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>cols=60 rows=5 class="itxt"</style>
+		<caption><![CDATA[备注]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+
+</xcml>

@@ -1,0 +1,55 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @menu v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######################### */
+/* ######### Menu ########## */
+/* ######################### */
+.Menu{clear:both;}
+.Menu ul{}
+.Menu li{list-style:none;background-repeat:no-repeat;background-position:9px 11px;padding:8px 0 8px 22px;}
+.Menu li a{font-size:14px;}
+
+.MenuBar{clear:both;text-align:left;}
+.MenuBar ul{clear:both;}
+.MenuBar li{display:inline;background-repeat:no-repeat;background-position:2px 2px;padding:3px 5px 3px 20px;}
+.MenuBar li.abc{background-position:2px 2px;}
+
+.MenuSide{font-size:14px;padding:1px 15px 1px 15px;}
+.MenuSide ul{padding:0;}
+.MenuSide li{clear:both;list-style:none;background-repeat:no-repeat;background-position:0 3px;padding:4px 0 2px 15px;}
+.MenuSide li.abc{background-position:0 4px;}
+
+.MenuList{font-size:12px;padding:0;}
+.MenuList ul{padding:0;}
+.MenuList li{clear:both;list-style:none;background-repeat:no-repeat;background-position:0 0;padding:2px 0 2px 15px;}
+.MenuList li.abc{background-position:0 4px;}
+
+.MenuPic{clear:both;text-align:center;}
+.MenuPic ul{clear:both;}
+.MenuPic li{display:inline;background:none;margin:0 5px;}
+
+.MenuBtn{clear:both;text-align:center;}
+.MenuBtn ul{clear:both;}
+.MenuBtn li{display:inline;background:none;margin:0 3px;}
+.MenuBtn li a{display:inline-block;height:25px;font-size:14px;color:#00456C;text-decoration:none;background-repeat:no-repeat;background-position:0% 0;margin:0;padding:0 0 0 5px;}
+.MenuBtn li a,.MenuBtn li a:link,.MenuBtn li a:visited,.MenuBtn li a:hover,
+.MenuBtn li a:active{text-decoration:none!important;}
+.MenuBtn li a span{display:block;line-height:23px;background-repeat:no-repeat;background-position:100% 0;padding:2px 8px 0 3px;}
+.MenuBtn li a span{float:none;}
+
+.MenuLinks ul{padding:0;}
+.MenuLinks li{background:url("../../common/icon/links.gif") no-repeat 1px 4px;background-position:1px 1px\9;padding:3px 0 3px 21px;}
+.MenuLinks li.space{clear:both;background-image:none;height:6px;padding:0;overflow:hidden;}
+
+
+.Menu li{background-image:url("../../common/block/icon_menu.gif");}
+.MenuBar li{background-image:url("../../common/block/icon_menu_bar.gif");}
+.MenuSide li{background-image:url("../../common/block/icon_menu_side.gif");}
+.MenuList li{background-image:url("../../common/block/icon_menu_list.gif");}
+.MenuBtn li a{background-image:url("../../common/block/bg_btn.gif");}
+.MenuBtn li a span{background-image:url("../../common/block/bg_btn.gif");}

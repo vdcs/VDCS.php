@@ -1,0 +1,24 @@
+<label:include file="frame/headers">
+
+
+<div class="cont">
+	<div class="box">
+		<h2><t>订单概览</t></h2>
+		<div class="con">
+<label:include file="/shop/order/order.view-info">
+		</div>
+	</div>
+	
+	<div class="space"></div>
+	<div class="box">
+		<h2><t>订单详情</t></h2>
+		<div class="con">
+<label:include file="/shop/order/order.view-items">
+		</div>
+	</div>
+</div>
+
+<label:include file="/shop/order/order.view-script">
+
+
+<label:include file="frame/footers">

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>type,channel,status</field>
+	</configure>
+	<item>
+		<type>1</type>
+		<channel>article</channel>
+		<status></status>
+	</item>
+	<item>
+		<type>1</type>
+		<channel>news</channel>
+		<status></status>
+	</item>
+	<item>
+		<type>2</type>
+		<channel>content</channel>
+		<status></status>
+	</item>
+	<item>
+		<type>2</type>
+		<channel>photo</channel>
+		<status></status>
+	</item>
+	<item>
+		<type>2</type>
+		<channel>down</channel>
+		<status></status>
+	</item>
+	
+	<item>
+		<type>5</type>
+		<channel>shop</channel>
+		<status></status>
+	</item>
+	
+	<item>
+		<type>20</type>
+		<channel>ask</channel>
+		<status></status>
+	</item>
+	<item>
+		<type>30</type>
+		<channel>blog</channel>
+		<status></status>
+	</item>
+	
+	<item>
+		<type>40</type>
+		<channel>forum</channel>
+		<status></status>
+	</item>
+	
+	
+	<item>
+		<type>55</type>
+		<channel>account</channel>
+		<status></status>
+	</item>
+	<item>
+		<type>56</type>
+		<channel>passport</channel>
+		<status></status>
+	</item>
+	<item>
+		<type>50</type>
+		<channel>support</channel>
+		<status></status>
+	</item>
+</xcml>

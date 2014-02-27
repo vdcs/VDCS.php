@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>var,config,url.script,url.rewrite</node>
+	</configure>
+	<var xmlns:announce="node">
+		<name>{@name}</name>
+		<names>{@names}</names>
+		<announce:name>{@data:name}</announce:name>
+		<announce:names>{@data:names}</announce:names>
+		<announce:act>{@data:act}</announce:act>
+		<announce:unit>{@data:unit}</announce:unit>
+	</var>
+	<config>
+		<model>configure</model>
+	</config>
+	<url.script>
+		<news><![CDATA[{@rootc.script}&p=announce]]></news>
+		<news.list><![CDATA[{@rootc.script}&p=announce&subchannel={$channel}]]></news.list>
+		<news.list.page><![CDATA[{@rootc.script}&p=announce&subchannel={$channel}&page={$page}]]></news.list.page>
+		<news.view><![CDATA[{@rootc.script}&p=announce&m=view&id={$id}]]></news.view>
+		<announce><![CDATA[{@rootc.script}&p=announce]]></announce>
+		<announce.list><![CDATA[{@rootc.script}&p=announce&subchannel={$channel}]]></announce.list>
+		<announce.list.page><![CDATA[{@rootc.script}&p=announce&subchannel={$channel}&page={$page}]]></announce.list.page>
+		<announce.view><![CDATA[{@rootc.script}&p=announce&m=view&id={$id}]]></announce.view>
+		
+		<faq><![CDATA[{@rootc.script}&p=faq&page={$page}]]></faq>
+		<faq.key><![CDATA[{@rootc.script}&p=faq&page={$page}&key={$key}]]></faq.key>
+	</url.script>
+	<url.rewrite>
+		<news><![CDATA[{@rootc.rewrite}news<app:rewrite.ext>]]></news>
+		<news.list><![CDATA[{@rootc.rewrite}news_{$channel}<app:rewrite.ext>]]></news.list>
+		<news.list.page><![CDATA[{@rootc.rewrite}news_{$channel}_{$page}<app:rewrite.ext>]]></news.list.page>
+		<news.view><![CDATA[{@rootc.rewrite}news_{$id}<app:rewrite.ext>]]></news.view>
+		<announce><![CDATA[{@rootc.rewrite}announce<app:rewrite.ext>]]></announce>
+		<announce.list><![CDATA[{@rootc.rewrite}announce_{$channel}<app:rewrite.ext>]]></announce.list>
+		<announce.list.page><![CDATA[{@rootc.rewrite}announce_{$channel}_{$page}<app:rewrite.ext>]]></announce.list.page>
+		<announce.view><![CDATA[{@rootc.rewrite}announce_view_{$id}<app:rewrite.ext>]]></announce.view>
+		
+		<faq><![CDATA[{@root}about/{$page}<app:rewrite.ext>]]></faq>
+		<faq.key><![CDATA[{@root}about/{$page}<app:rewrite.ext>#{$key}]]></faq.key>
+	</url.rewrite>
+</xcml>

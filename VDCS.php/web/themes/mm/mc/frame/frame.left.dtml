@@ -1,0 +1,12 @@
+<div class="FramerFloor">
+	<div class="MainMenu" id="MainMenu"><div class="MainMenuFrame">
+<div class="Menus"><div class="MenusInner"><div class="MenusFrame"><div class="MenusBody">
+<div class="partIcon" id="menus-icon">
+	<div class="avatar"><a href="<url:{@channel}>"><img id="account-user-face" class="icon" src="<web:url.theme>{@channel}/images/frame/avatar.gif" /></a></div>
+	<div class="name"><span class="big b"><{@uao}:name></span></div>
+	<div class="no">工号：<em><{@uao}:no></em></div>
+</div>
+<div class="partMain">
+<!--
+	<div class="partBar"><span><web:var.title></span></div>
+-->

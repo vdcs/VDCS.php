@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>id,name,value</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<id>1</id>
+		<name>壁纸</name>
+		<value>def</value>
+	</item>
+	<item>
+		<id>2</id>
+		<name>动画</name>
+		<value>gif</value>
+	</item>
+	<item>
+		<id>3</id>
+		<name>Logo</name>
+		<value>logo</value>
+	</item>
+	<item>
+		<id>4</id>
+		<name>other</name>
+		<value>other</value>
+	</item>
+</xcml>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>search</frame>
+		<search.fields>e_topic=6;e_remark=6;username=6;sp_ip=6;sp_agent=6</search.fields>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>dbs_event</table.name>
+		<table.px>e_</table.px>
+		<table.field.id>e_id</table.field.id>
+		<table.fields.value>id=e_id;topic=e_topic;time=e_tim</table.fields.value>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.field.append>topic,content,time</list.field.append>
+		<list.table.order>e_id desc</list.table.order>
+		<list.table.order.tim>e_tim desc,e_id desc</list.table.order.tim>
+		<list.handle.select.option>delete</list.handle.select.option>
+		<list.handle.sql.delete>delete from dbs_event where e_id in ({$ids})</list.handle.sql.delete>
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[事件]]></title.name>
+		<title.list><![CDATA[事件列表]]></title.list>
+		<title.list.><![CDATA[事件列表]]></title.list.>
+		<title.list.hide><![CDATA[已审核事件]]></title.list.hide>
+		<title.list.show><![CDATA[未审核事件]]></title.list.show>
+		<title.add><![CDATA[添加新事件]]></title.add>
+		<title.edit><![CDATA[编辑事件]]></title.edit>
+		
+		<title.frame.search><![CDATA[事件搜索]]></title.frame.search>
+		<search.fields.att>e_topic=事件标题;e_remark=事件内容;username=用户名;sp_ip=IP;sp_agent=系统信息</search.fields.att>
+		
+		<error.not.exist><![CDATA[您要操作的 事件 不存在！]]></error.not.exist>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 条事件！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 条事件！]]></handle.ok.edit>
+		
+		<handle.ok.hide><![CDATA[成功待审核了 {$count} 条事件！]]></handle.ok.hide>
+		<handle.ok.show><![CDATA[成功审核了 {$count} 条事件！]]></handle.ok.show>
+		<handle.ok.isgood><![CDATA[成功推荐了 {$count} 条事件！]]></handle.ok.isgood>
+		<handle.ok.ungood><![CDATA[成功取消推荐了 {$count} 条事件！]]></handle.ok.ungood>
+		<handle.ok.delete><![CDATA[成功删除了 {$count} 条事件！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+		<list><![CDATA[
+<control:ui.value("listbox.heads")>
+<control:ui.value("list.bar.tr")>
+<control:ui.value("list.bar.id")>
+<td class="bar-item w30"><exec:langs("title.type")></td>
+<td class="bar-user"><exec:langs("title.user")></td>
+<td class="bar-value al w100">事件<exec:langs("title.topic")></td>
+<td class="bar-info">事件<exec:langs("title.content")></td>
+<td class="bar-time"><exec:langs("title.time")></td>
+<control:ui.value("list.bar.sd")>
+</tr>
+<loop:list>
+<control:ui.value("list.row.tr")>
+<control:ui.value("list.row.id")>
+<td class="row-item"><span alt="IP: [item:sp_ip]&#10;Agent: [item:sp_agent]"><control:dict("file:sort=manage.config/data.event.type","[item:<var:table.px>type]")></span></td>
+<td class="row-user">[item:username]</td>
+<td class="row-value al">[item:<var:table.px>topic]</td>
+<td class="row-info">[item:<var:table.px>remark]</td>
+<td class="row-time">[item:times]</td>
+<control:ui.value("list.row.sd")>
+</tr>
+</loop>
+<control:ui.value("listbox.ends")>
+]]></list>
+	</template>
+</xcml>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>type,name</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<type>demo</type>
+		<name>示例</name>
+	</item>
+	<item>
+		<type>mobile</type>
+		<name>手机</name>
+	</item>
+	<item>
+		<type>cosmetic</type>
+		<name>化妆品</name>
+	</item>
+	<item>
+		<type>clothing</type>
+		<name>衣服</name>
+	</item>
+</xcml>
+<!--
+	<item>
+		<key></key>
+		<name>外观样式</name>
+		<type>only,single,multi</type>
+		<inputtype>text,radio,checkbox,select</inputtype>
+		<inputmin></inputmin>
+		<values>翻盖$$$滑盖$$$直板$$$折叠</values>
+		<value></value>
+		<explain></explain>
+		<money></money>
+		<index>0</index>
+		<linked>0</linked>
+	</item>
+-->

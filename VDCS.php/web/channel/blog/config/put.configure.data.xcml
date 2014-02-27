@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<edit.table.query>rootid={$rootid}</edit.table.query>
+		
+		<list.table.query>rootid={$rootid}</list.table.query>
+		<list.handle.sql.delete>delete from {@table.data.name} where rootid={$rootid}and {@table.px}id in ({$ids})</list.handle.sql.delete>
+		<list.handle.select.option>delete</list.handle.select.option>
+		<list.handle.put></list.handle.put>
+		
+		<table.fields.add.value>rootid={$rootid};sp_poll_agree=0;sp_poll_oppose=0;sp_user_define=;d_istop=0;d_isgood=0;d_total_view=0;d_tim={$time_now};</table.fields.add.value>
+		<table.fields.edit.ignore>rootid,sp_poll_agree,sp_poll_oppose,sp_user_define,d_istop,d_isgood,d_total_view,d_tim</table.fields.edit.ignore>
+	</config>
+	
+	<lang>
+		<title.list>{@names.data}列表</title.list>
+		<title.add>添加{@names.data}</title.add>
+		<title.edit>编辑{@names.data}</title.edit>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 {@unit.data}{@names.data}！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 {@unit.data}{@names.data}！]]></handle.ok.edit>
+	</lang>
+	<template>
+		<list><![CDATA[
+<control:ui.form("head")>
+<table cellspacing="0" cellpadding="4" class="list lists table-break">
+<tr class="bar align-center">
+<td width="20" class="re-option"><control:ui.form("select.data")></td>
+<!--<td width="50">ID</td>-->
+<td width="*" class="re-topic">{@names.data}<exec:langs("title.name")></td>
+<td width="70"><exec:langs("title.time")></td>
+<td width="40"><exec:langs("title.status")></td>
+<td width="40"><exec:langs("title.handle")></td>
+</tr>
+<loop:item>
+<tr class="row align-center" onMouseOver="javascript:this.className='row pop align-center';" onMouseOut="javascript:this.className='row align-center';">
+<td class="row-selectid re-option"><control:ui.form("select.id","[item:selectid]")></td>
+<!--<td class="row-id"><a href="<var:url>" class="id">[item:id]</a></td>-->
+<td class="row-topic"><a href="<var:url.edit>" id="data-item[item:id]-topic">[item:topic]</a></td>
+<td class="row-time">[item:times]</td>
+<td class="row-status"><control:dict("data.hide","[item:<var:table.px>status]")></td>
+<td class="row-handle"><a href="<var:url.edit>"><exec:langs("action.edit")></a></td>
+</tr>
+<script type="text/javascript">app.put.addData("[item:id]");app.put.doDataTopicRename("[item:id]");</script>
+</loop>
+<tbody id="data-items-nodata" style="display:none;">
+<tr class="row align-center"><td colspan="5">
+<div style="padding:10px;">您还没有添加{@names.data} <a href="<exec:url("action=add")>">现在添加</a></div>
+</td></tr>
+</tbody>
+<tr class="btn align-center"><td colspan="5">
+<div class="handle">
+<control:ui.form("select.buttons","<var:select.option>")>
+</div>
+<div class="data-paging"><paging:string></div>
+</td></tr>
+</table>
+<control:ui.form("end")>
+]]></list>
+	</template>
+</xcml>

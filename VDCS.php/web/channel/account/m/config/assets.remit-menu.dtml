@@ -1,0 +1,16 @@
+<label:include file="inc/search.begin">
+<label:include file="inc/search.date">
+<label:include file="inc/search.end">
+<div class="box">
+<h2><cite>汇款筛选</cite></h2>
+<div class="con">
+	<div>
+		<ul>
+		<li><a href="<exec:url("action=list&mi=null")>">全部</a></li>
+		<li><a href="<exec:url("action=list&mi=null&mode=audit")>">已审核</a></li>
+		<li><a href="<exec:url("action=list&mi=null&mode=unaudit")>" {$script}="">待审核</a></li>
+		<li><a href="<exec:url("action=list&mi=null&mode=inaudit")>" {$script}="">审核不通过</a></li>
+		</ul>
+	</div>
+</div>
+</div>

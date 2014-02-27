@@ -1,0 +1,6 @@
+<?
+class ChannelAccountBase extends ChannelAccountBasic
+{
+	
+	
+}

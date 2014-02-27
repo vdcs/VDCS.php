@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>search,class</frame>
+		<search.fields></search.fields>
+		<search.times>{@table.px}tim</search.times>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>dbu_bill</table.name>
+		<table.px></table.px>
+		<table.field.id>{@table.px}id</table.field.id>
+		<table.field.pic>{@table.px}pic</table.field.pic>
+		<table.fields.value>id={@table.px}id;time={@table.px}tim</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		<!--
+		{@table.px}remark,sp_code,sp_defined,{@table.px}prepage,
+		-->
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.query.notpay>{@table.px}ispay=0</list.table.query.notpay>
+		<list.table.query.payed>{@table.px}ispay=1</list.table.query.payed>
+		<list.table.query.paying>{@table.px}ispay=2</list.table.query.paying>
+		
+		<list.table.query.cancel>{@table.px}status=9</list.table.query.cancel>
+		<list.table.query.audit>{@table.px}status=1</list.table.query.audit>
+		<list.table.query.inaudit>{@table.px}status=2</list.table.query.inaudit>
+		<list.table.query.unaudit>{@table.px}status=0</list.table.query.unaudit>
+		<list.table.query.show>{@table.px}status=1</list.table.query.show>
+		<list.table.query.hide>{@table.px}status=0</list.table.query.hide>
+		<list.table.order>{@table.px}tim desc</list.table.order>
+		<list.table.order.tim>{@table.px}tim desc</list.table.order.tim>
+		<list.handle.select.option>audit,inaudit,unaudit,show,hide,delete</list.handle.select.option>
+		<list.handle.sql.audit>update {@table.name} set {@table.px}status=1 where {@table.px}id in ({$ids})</list.handle.sql.audit>
+		<list.handle.sql.inaudit>update {@table.name} set {@table.px}status=2 where {@table.px}id in ({$ids})</list.handle.sql.inaudit>
+		<list.handle.sql.unaudit>update {@table.name} set {@table.px}status=0 where {@table.px}id in ({$ids})</list.handle.sql.unaudit>
+		<list.handle.sql.show>update {@table.name} set {@table.px}status=1 where {@table.px}id in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.hide>update {@table.name} set {@table.px}status=0 where {@table.px}id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.delete>delete from {@table.name} where {@table.px}id in ({$ids})</list.handle.sql.delete>
+		
+		<view.sql>select top 1 * from {@table.name} where {@table.px}id={$id}</view.sql>
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[账单]]></title.name>
+		<title.view><![CDATA[账单明细]]></title.view>
+		<title.list><![CDATA[账单列表]]></title.list>
+		<title.list.><![CDATA[{@names}列表]]></title.list.>
+		<title.list.payed><![CDATA[{@names}列表]]></title.list.payed>
+		<title.list.audit><![CDATA[已审核{@names}]]></title.list.audit>
+		<title.list.inaudit><![CDATA[待审核{@names}]]></title.list.inaudit>
+		<title.list.unaudit><![CDATA[未审核{@names}]]></title.list.unaudit>
+		<title.list.show><![CDATA[显示{@names}]]></title.list.show>
+		<title.list.hide><![CDATA[隐藏{@names}]]></title.list.hide>
+		<title.add><![CDATA[添加新{@names}]]></title.add>
+		<title.edit><![CDATA[编辑{@names}]]></title.edit>
+		
+		<title.frame.class><![CDATA[{@names}分类]]></title.frame.class>
+		<title.frame.search><![CDATA[{@names}搜索]]></title.frame.search>
+		<search.fields.att></search.fields.att>
+		
+		<error.not.exist><![CDATA[您要操作的 {@names} 不存在！]]></error.not.exist>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 {@unit}{@names}！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 {@unit}{@names}！]]></handle.ok.edit>
+		<handle.ok.audit><![CDATA[成功待审核了 {$total} {@unit}{@names}！]]></handle.ok.audit>
+		<handle.ok.inaudit><![CDATA[成功待审核了 {$total} {@unit}{@names}！]]></handle.ok.inaudit>
+		<handle.ok.unaudit><![CDATA[成功未审核了 {$total} {@unit}{@names}！]]></handle.ok.unaudit>
+		<handle.ok.show><![CDATA[成功显示了 {$total} {@unit}{@names}！]]></handle.ok.show>
+		<handle.ok.hide><![CDATA[成功隐藏了 {$total} {@unit}{@names}！]]></handle.ok.hide>
+		<handle.ok.good><![CDATA[成功推荐了 {$total} {@unit}{@names}！]]></handle.ok.good>
+		<handle.ok.goodz><![CDATA[成功区推荐了 {$total} {@unit}{@names}！]]></handle.ok.goodz>
+		<handle.ok.goods><![CDATA[成功总推荐了 {$total} {@unit}{@names}！]]></handle.ok.goods>
+		<handle.ok.ungood><![CDATA[成功取消推荐了 {$total} {@unit}{@names}！]]></handle.ok.ungood>
+		<handle.ok.top><![CDATA[成功固顶了 {$total} {@unit}{@names}！]]></handle.ok.top>
+		<handle.ok.topz><![CDATA[成功区固顶了 {$total} {@unit}{@names}！]]></handle.ok.topz>
+		<handle.ok.tops><![CDATA[成功总固顶了 {$total} {@unit}{@names}！]]></handle.ok.tops>
+		<handle.ok.untop><![CDATA[成功取消固顶了 {$total} {@unit}{@names}！]]></handle.ok.untop>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} {@unit}{@names}！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+	</template>
+</xcml>

@@ -1,0 +1,3 @@
+<?
+class ChannelAskBase extends ChannelAskBasic{}
+?>

@@ -1,0 +1,268 @@
+<label:include file="/headers">
+<style type="text/css">
+.forum_datas{box-sizing:border-box;}
+.forum_datas *{box-sizing:border-box;}
+.forum_datas dl{position:relative;min-height:100px;padding:10px;border:1px solid #cdcdcd;border-bottom:none;}
+.forum_datas dl:last-child{border-bottom:1px solid #cdcdcd;}
+.forum_datas dt{text-align:center;float:left;width:15%;}
+.forum_datas dt>h3{height:35px;line-height:35px;border-bottom:1px dashed #ccc;}
+.forum_datas dt a.avatar{display:inline-block;width:50px;height:50px;margin-top:5px;}
+.forum_datas dt a.avatar img{width:50px;height:50px;}
+.forum_datas dd{padding:0 10px;text-align:left;padding-top:0;margin-left:15%;}/*margin-left:100px;margin-left:15%;*/
+.forum_datas dd>div{padding-top:0;}
+.forum_datas dd>div h3{height:35px;line-height:35px;border-bottom:1px dashed #ccc;}
+.forum_datas dd>div div{margin-bottom:45px;padding:10px 0;}
+.forum_datas dd>div p{text-indent:2em;}
+.forum_datas dd>div em{display:inline-block;margin-bottom:25px;height:1px;width:100%;border-top:1px dashed #ccc;}
+.forum_datas dd>div h5{height:35px;line-height:35px;position:absolute;bottom:0;}
+
+.forum_datas dl.mydata{}
+.forum_datas dl.mydata dt{float:right;}
+.forum_datas dl.mydata dd{margin-left:0;margin-right:15%;text-align:right;}
+
+
+
+/*base*/
+.bubble{}
+.bubble {
+	position: relative;
+	display: inline-block;
+	/*
+	min-width: 30px;
+	max-width: 300px;
+	*/
+	word-break: break-all;
+	word-wrap: break-word;
+	min-height: 22px;
+	background: #d2d2d2;
+	border-radius: 15px;
+	margin-bottom: 20px;
+	padding: 6px 8px;
+	-webkit-box-shadow: 0px 1px 2px #000, inset 0px 4px 4px rgba(0,0,0,.3), inset 0px -4px 4px rgba(255,255,255,.5);
+	-moz-shadow: 0px 1px 2px #000, inset 0px 4px 4px rgba(0,0,0,.3), inset 0px -4px 4px rgba(255,255,255,.5);
+	box-shadow: 0px 1px 2px #000, inset 0px 4px 4px rgba(0,0,0,.3), inset 0px -4px 4px rgba(255,255,255,.5);
+}
+.bubble:before {
+	content: '';
+	display: block;
+	font-size: 0;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top:17px;
+	left:-31px;
+	border-width:10px 30px 0 0; 
+	border-style:dashed dashed solid solid ;
+	border-color:transparent #4a4c50; 
+}
+.bubble:after {
+	content: '';
+	display: block;
+	font-size: 0;
+	position: absolute;
+	top:16px;
+	left:-31px;
+	width: 0;
+	height: 0;
+	border-width:10px 30px 0 0; 
+	border-style: solid dashed dashed solid;
+	border-color:transparent #e8e8e8; 
+}
+.bubble .content {
+	position: relative;
+	padding: 0 4px;
+}
+.bubble .content:before {
+	content: '';
+	position: absolute;
+	margin: auto;
+	top: -5px;
+	left: 0;
+	width: 100%;
+	height: 12px;
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.2) 90%, rgba(255,255,255,0) 90% );
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.2) 90%, rgba(255,255,255,0) 90% );
+	border-radius: 10px
+}
+
+/* color */
+/* green */
+.bubble.green {
+	background: #b7da2b;
+}
+.bubble.green:after {
+	border-color: transparent #daec93;
+}
+
+/* orange */
+.bubble.orange {
+	background: #f6d031;
+}
+.bubble.orange:after {
+	border-color: transparent #fae796;
+}
+
+/* yellow */
+.bubble.yellow {
+	background: #feed24;
+}
+.bubble.yellow:after {
+	border-color:transparent #fef690;
+}
+
+.mydata .bubble:before{
+	left:auto;
+	right:-31px;
+	border-width:10px 0 0px 30px;
+}
+.mydata .bubble:after{
+	left:auto;
+	right:-31px;
+	border-width:10px 0 0px 30px;
+}
+
+</style>
+
+
+<div class="cont">
+<h2><topic:topic></h2>
+<div class="forum_datas">
+<loop:datas>
+<dl dataid=[item:id] class="">
+<dt>
+	<h3>[item:uid]</h3>
+	<a class="avatar"><img src="<chn:linkurl("account","avatar","res=s&id=[item:uid]")>" title="[item:uid]" alt="[item:uid]" /></a>
+</dt>
+<dd>
+	<div class="">
+		<h3>发表于 [item:tim!date]</h3>
+		<div><p>[item:remark]</p></div>
+		<em></em>
+		<h5><a el="reply" class="btn s">回复</a></h5>
+	</div>
+</dd>
+</dl>
+</loop>
+</div>
+</div>
+<div class="space"></div>
+<label:include file="/inc/e/paging.box">
+<div class="space"></div>
+<div class="box"><h2><cite>发表评论</cite></h2>
+<div class="con" id="comment_box">
+	<p><textarea name="remark"></textarea></p>
+	<input type="hidden" name="classid" value="<topic:classid>" />
+	<input type="hidden" name="rootid" value="<topic:id>" />
+	<input type="hidden" name="type" value="1" />
+	<div class="space"></div>
+	<a el="submit" class="btn btn-primary">确认评论</a>
+</div>
+</div>
+
+<div id="reply_box" style="display:none;width:500px;">
+<div class="jbox">
+	<p><a class="btn btn-danger" el="close">关闭</a></p>
+	<p>回复内容<textarea name="remark"></textarea></p>
+	<input type="hidden" name="classid" value="<topic:classid>" />
+	<input type="hidden" name="rootid" value="<topic:id>" />
+	<input type="hidden" name="type" value="2" />
+	<input type="hidden" name="replyid" value="" />
+	<div class="space"></div>
+	<a el="submit" class="btn btn-primary">确认回复</a>
+</div></div>
+<script type="text/javascript">
+$(function(){
+	//获取post数据
+	var _getContent=function(jbox){
+		var data={};
+		jbox.find('input,textarea').each(function(){
+			var field=$(this).attr('name');
+			var value=$(this).val();
+			if(field) data[field]=value;
+		});
+		return data;
+	};
+	
+	//发送数据
+	var _sendData=function(data,action,callback){
+		if(!action) action='comment';
+		var _url='/{@channel}/post.x?action='+action;
+		//dbg.o(data);return;
+		$ajax({url:_url,value:'xml',send:data,ready:function(xml){
+			var map=$util.toMapByXML(xml);
+			var treeVar=map.getItemTree('var');
+			var message=treeVar.v('message');
+			if(treeVar.v('status')=='succeed'){
+				if(!message) message='操作成功';
+				ui.popups('succeed',message);
+				if(callback) callback();
+			}else{
+				if(!message) message='操作失败';
+				ui.popups('error',message);
+			}
+		},error:false});
+	};
+	
+	//comment
+	var _getComment=function(){
+		
+	};
+	
+	var _clearCommentBox=function(){
+		$('#comment_box').find('textarea[name=remark]').val('');
+		_getComment();
+	};
+	
+	var _initCommentBox=function(){
+		$('#comment_box').find('[el=submit]').click(function(){
+			var data={};
+			data=_getContent($('#comment_box'));
+			_sendData(data,'comment',_clearCommentBox);
+		});
+	};
+	_initCommentBox();
+	
+	//reply
+	var replybox;
+	
+	var _clearReplyBox=function(){
+		replybox.find('input[name=replyid],textarea[name=remark]').val('');
+		//replybox.detach();
+		_getComment();
+	};
+	
+	var _initReplybox=function(){
+		replybox=$('#reply_box');
+		replybox.find('[el=close]').click(_hideReplyBox);
+		_clearReplyBox();
+		replybox.find('[el=submit]').click(function(){
+			var data={};
+			data=_getContent(replybox);
+			_sendData(data,'comment',_hideReplyBox);
+		});
+	}
+	
+	var _showReplyBox=function(jitem){
+		var replyid=jitem.attr('dataid');
+		replybox.find('[name=replyid]').val(replyid);
+		ui.floatBox(replybox);
+	};
+	
+	var _hideReplyBox=function(){
+		ui.hide(replybox);
+		ui.cover.hide();
+		_clearReplyBox();
+	}
+	
+	_initReplybox();
+	
+	$('[el=reply]').click(function(){
+		var jitem=$(this).parents('dl');
+		_showReplyBox(jitem);
+	});
+	
+	
+});
+</script>
+
+<label:include file="/footers">

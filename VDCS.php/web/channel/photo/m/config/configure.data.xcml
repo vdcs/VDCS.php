@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>root,search</frame>
+		<search.fields>{@data:table.px}topic=6;{@data:table.px}url=6</search.fields>
+		<search.times></search.times>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>{@data:table.name}</table.name>
+		<table.px>{@data:table.px}</table.px>
+		<table.field.rootid>rootid</table.field.rootid>
+		<table.field.id>{@data:table.px}id</table.field.id>
+		<table.field.spic>{@data:table.px}pic</table.field.spic>
+		<table.field.pic>{@data:table.px}url</table.field.pic>
+		<table.fields.value>id={@data:table.px}id;topic={@data:table.px}topic;time={@data:table.px}tim</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.query.show>{@data:table.px}status=1</list.table.query.show>
+		<list.table.query.hide>{@data:table.px}status=0</list.table.query.hide>
+		<list.table.query.gooda>{@data:table.px}isgood>0</list.table.query.gooda>
+		<list.table.query.good>{@data:table.px}isgood=1</list.table.query.good>
+		<list.table.query.ungood>{@data:table.px}isgood=0</list.table.query.ungood>
+		<list.table.order>{@data:table.px}id asc</list.table.order>
+		<list.table.order.tim>{@data:table.px}tim desc</list.table.order.tim>
+		<list.handle.select.option>show,hide,good,ungood,delete</list.handle.select.option>
+		<list.handle.sql.show>update {@data:table.name} set {@data:table.px}status=1 where {@data:table.px}id in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.hide>update {@data:table.name} set {@data:table.px}status=0 where {@data:table.px}id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.good>update {@data:table.name} set {@data:table.px}isgood=1 where {@data:table.px}id in ({$ids})</list.handle.sql.good>
+		<list.handle.sql.ungood>update {@data:table.name} set {@data:table.px}isgood=0 where {@data:table.px}id in ({$ids})</list.handle.sql.ungood>
+		<list.handle.sql.delete>delete from {@data:table.name} where {@data:table.px}id in ({$ids})</list.handle.sql.delete>
+		
+		<update.sql.root.data>update {@table.name} set {@table.px}total_data={$total.data} where {@table.px}id={$rootid}</update.sql.root.data>
+		<view.sql>select top 1 * from {@data:table.name} where rootid={$id}</view.sql>
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[{@data:name}]]></title.name>
+		<title.list><![CDATA[{@data:names}列表]]></title.list>
+		<title.list.><![CDATA[{@data:names}列表]]></title.list.>
+		<title.list.show><![CDATA[显示{@data:names}]]></title.list.show>
+		<title.list.hide><![CDATA[隐藏{@data:names}]]></title.list.hide>
+		<title.list.gooda><![CDATA[已推荐{@data:names}]]></title.list.gooda>
+		<title.list.good><![CDATA[推荐{@data:names}]]></title.list.good>
+		<title.list.ungood><![CDATA[未推荐{@data:names}]]></title.list.ungood>
+		<title.add><![CDATA[添加{@data:names}]]></title.add>
+		<title.edit><![CDATA[编辑{@data:names}]]></title.edit>
+		
+		<title.frame.search><![CDATA[{@data:names}搜索]]></title.frame.search>
+		<search.fields.att>{@data:table.px}url=地址</search.fields.att>
+		
+		<error.not.exist.root><![CDATA[您要操作的 {@names} 不存在！]]></error.not.exist.root>
+		<error.not.exist><![CDATA[您要操作的 {@data:names} 不存在！]]></error.not.exist>
+		
+		
+		<error.no.root><![CDATA[您要操作的 {@names} 不存在！]]></error.no.root>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 个{@data:names}！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 个{@data:names}！]]></handle.ok.edit>
+		<handle.ok.shortcut><![CDATA[成功批量处理了 {$total} {@data:unit}{@data:names}！]]></handle.ok.shortcut>
+		<handle.ok.show><![CDATA[成功显示了 {$total} {@data:unit}{@data:names}！]]></handle.ok.show>
+		<handle.ok.hide><![CDATA[成功隐藏了 {$total} {@data:unit}{@data:names}！]]></handle.ok.hide>
+		<handle.ok.good><![CDATA[成功推荐了 {$total} {@data:unit}{@data:names}！]]></handle.ok.good>
+		<handle.ok.ungood><![CDATA[成功取消推荐了 {$total} {@data:unit}{@data:names}！]]></handle.ok.ungood>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} {@data:unit}{@data:names}！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+		<menu.root><![CDATA[
+@@@title=所属{@names};style=s;classa=@@@
+<p><span class="b"><var:root.topic></span></p>
+<p><span class="gray">共 <span class="total"><var:root.total_data></span> {@data:unit}{@data:names}</span></p>
+<div class="space"></div>
+<div class="h">
+<p><a href="<exec:url("action=list")>">{@data:names}列表</a> &nbsp; <a href="<exec:url("action=add")>">添加{@data:names}</a></p>
+<p><a href="<exec:url("portal=&id=<var:root.id>&action=edit!ip")>">编辑{@names}</a> &nbsp; <a href="<exec:url("portal=&action=list!ip")>">返回列表</a></p>
+</div>
+]]></menu.root>
+	</template>
+</xcml>

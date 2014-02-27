@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>search</frame>
+		<search.fields>{@mlog:table.px}message=6;username=6</search.fields>
+		<search.times>{@mlog:table.px}tim</search.times>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>{@mlog:table.name}</table.name>
+		<table.px>{@mlog:table.px}</table.px>
+		<table.field.id>{@mlog:table.px}id</table.field.id>
+		<table.field.pic>{@mlog:table.px}pic</table.field.pic>
+		<table.fields.value>id={@mlog:table.px}id;topic={@mlog:table.px}message;time={@mlog:table.px}tim</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.query.audit>{@mlog:table.px}status=1</list.table.query.audit>
+		<list.table.query.inaudit>{@mlog:table.px}status=2</list.table.query.inaudit>
+		<list.table.query.unaudit>{@mlog:table.px}status=0</list.table.query.unaudit>
+		<list.table.query.show>{@mlog:table.px}status=1</list.table.query.show>
+		<list.table.query.hide>{@mlog:table.px}status=0</list.table.query.hide>
+		<list.table.query.gooda>{@mlog:table.px}isgood>0</list.table.query.gooda>
+		<list.table.query.good>{@mlog:table.px}isgood=1</list.table.query.good>
+		<list.table.query.goodz>{@mlog:table.px}isgood=2</list.table.query.goodz>
+		<list.table.query.goods>{@mlog:table.px}isgood=3</list.table.query.goods>
+		<list.table.query.ungood>{@mlog:table.px}isgood=0</list.table.query.ungood>
+		<list.table.query.topa>{@mlog:table.px}istop>0</list.table.query.topa>
+		<list.table.query.top>{@mlog:table.px}istop=1</list.table.query.top>
+		<list.table.query.topz>{@mlog:table.px}istop=2</list.table.query.topz>
+		<list.table.query.tops>{@mlog:table.px}istop=3</list.table.query.tops>
+		<list.table.query.untop>{@mlog:table.px}istop=0</list.table.query.untop>
+		<list.table.order>{@mlog:table.px}id desc</list.table.order>
+		<list.table.order.tim>{@mlog:table.px}tim desc</list.table.order.tim>
+		<list.handle.select.option>audit,inaudit,unaudit,show,hide,good,goodz,goods,ungood,top,topz,tops,untop,delete</list.handle.select.option>
+		<list.handle.sql.audit>update {@mlog:table.name} set {@mlog:table.px}status=1 where {@mlog:table.px}id in ({$ids})</list.handle.sql.audit>
+		<list.handle.sql.inaudit>update {@mlog:table.name} set {@mlog:table.px}status=2 where {@mlog:table.px}id in ({$ids})</list.handle.sql.inaudit>
+		<list.handle.sql.unaudit>update {@mlog:table.name} set {@mlog:table.px}status=0 where {@mlog:table.px}id in ({$ids})</list.handle.sql.unaudit>
+		<list.handle.sql.show>update {@mlog:table.name} set {@mlog:table.px}status=1 where {@mlog:table.px}id in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.hide>update {@mlog:table.name} set {@mlog:table.px}status=0 where {@mlog:table.px}id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.good>update {@mlog:table.name} set {@mlog:table.px}isgood=1 where {@mlog:table.px}id in ({$ids})</list.handle.sql.good>
+		<list.handle.sql.goodz>update {@mlog:table.name} set {@mlog:table.px}isgood=2 where {@mlog:table.px}id in ({$ids})</list.handle.sql.goodz>
+		<list.handle.sql.goods>update {@mlog:table.name} set {@mlog:table.px}isgood=3 where {@mlog:table.px}id in ({$ids})</list.handle.sql.goods>
+		<list.handle.sql.ungood>update {@mlog:table.name} set {@mlog:table.px}isgood=0 where {@mlog:table.px}id in ({$ids})</list.handle.sql.ungood>
+		<list.handle.sql.top>update {@mlog:table.name} set {@mlog:table.px}istop=1 where {@mlog:table.px}id in ({$ids})</list.handle.sql.top>
+		<list.handle.sql.topz>update {@mlog:table.name} set {@mlog:table.px}istop=2 where {@mlog:table.px}id in ({$ids})</list.handle.sql.topz>
+		<list.handle.sql.tops>update {@mlog:table.name} set {@mlog:table.px}istop=3 where {@mlog:table.px}id in ({$ids})</list.handle.sql.tops>
+		<list.handle.sql.untop>update {@mlog:table.name} set {@mlog:table.px}istop=0 where {@mlog:table.px}id in ({$ids})</list.handle.sql.untop>
+		<list.handle.sql.delete>delete from {@mlog:table.name} where {@mlog:table.px}id in ({$ids})</list.handle.sql.delete>
+		
+		<view.sql>select top 1 * from {@mlog:table.name} where {@mlog:table.px}id={$id}</view.sql>
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[{@mlog:name}]]></title.name>
+		<title.list><![CDATA[{@mlog:names}列表]]></title.list>
+		<title.list.><![CDATA[{@mlog:names}列表]]></title.list.>
+		<title.list.audit><![CDATA[已审核{@mlog:names}]]></title.list.audit>
+		<title.list.inaudit><![CDATA[待审核{@mlog:names}]]></title.list.inaudit>
+		<title.list.unaudit><![CDATA[未审核{@mlog:names}]]></title.list.unaudit>
+		<title.list.show><![CDATA[显示{@mlog:names}]]></title.list.show>
+		<title.list.hide><![CDATA[隐藏{@mlog:names}]]></title.list.hide>
+		<title.list.gooda><![CDATA[已推荐{@mlog:names}]]></title.list.gooda>
+		<title.list.good><![CDATA[推荐{@mlog:names}]]></title.list.good>
+		<title.list.goodz><![CDATA[区推荐{@mlog:names}]]></title.list.goodz>
+		<title.list.goods><![CDATA[总推荐{@mlog:names}]]></title.list.goods>
+		<title.list.ungood><![CDATA[未推荐{@mlog:names}]]></title.list.ungood>
+		<title.list.topa><![CDATA[已固顶{@mlog:names}]]></title.list.topa>
+		<title.list.top><![CDATA[固顶{@mlog:names}]]></title.list.top>
+		<title.list.topz><![CDATA[区固顶{@mlog:names}]]></title.list.topz>
+		<title.list.tops><![CDATA[总固顶{@mlog:names}]]></title.list.tops>
+		<title.list.untop><![CDATA[未固顶{@mlog:names}]]></title.list.untop>
+		<title.add><![CDATA[添加新{@mlog:names}]]></title.add>
+		<title.edit><![CDATA[编辑{@mlog:names}]]></title.edit>
+		
+		<title.frame.class><![CDATA[{@mlog:names}分类]]></title.frame.class>
+		<title.frame.search><![CDATA[{@mlog:names}搜索]]></title.frame.search>
+		<search.fields.att>message=信息</search.fields.att>
+		
+		<error.not.exist><![CDATA[您要操作的 {@mlog:names} 不存在！]]></error.not.exist>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 {@mlog:unit}{@mlog:names}！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 {@mlog:unit}{@mlog:names}！]]></handle.ok.edit>
+		<handle.ok.audit><![CDATA[成功待审核了 {$total} {@mlog:unit}{@mlog:names}！]]></handle.ok.audit>
+		<handle.ok.inaudit><![CDATA[成功待审核了 {$total} {@mlog:unit}{@mlog:names}！]]></handle.ok.inaudit>
+		<handle.ok.unaudit><![CDATA[成功未审核了 {$total} {@mlog:unit}{@mlog:names}！]]></handle.ok.unaudit>
+		<handle.ok.show><![CDATA[成功显示了 {$total} {@mlog:unit}{@mlog:names}！]]></handle.ok.show>
+		<handle.ok.hide><![CDATA[成功隐藏了 {$total} {@mlog:unit}{@mlog:names}！]]></handle.ok.hide>
+		<handle.ok.good><![CDATA[成功推荐了 {$total} {@mlog:unit}{@mlog:names}！]]></handle.ok.good>
+		<handle.ok.goodz><![CDATA[成功区推荐了 {$total} {@mlog:unit}{@mlog:names}！]]></handle.ok.goodz>
+		<handle.ok.goods><![CDATA[成功总推荐了 {$total} {@mlog:unit}{@mlog:names}！]]></handle.ok.goods>
+		<handle.ok.ungood><![CDATA[成功取消推荐了 {$total} {@mlog:unit}{@mlog:names}！]]></handle.ok.ungood>
+		<handle.ok.top><![CDATA[成功固顶了 {$total} {@mlog:unit}{@mlog:names}！]]></handle.ok.top>
+		<handle.ok.topz><![CDATA[成功区固顶了 {$total} {@mlog:unit}{@mlog:names}！]]></handle.ok.topz>
+		<handle.ok.tops><![CDATA[成功总固顶了 {$total} {@mlog:unit}{@mlog:names}！]]></handle.ok.tops>
+		<handle.ok.untop><![CDATA[成功取消固顶了 {$total} {@mlog:unit}{@mlog:names}！]]></handle.ok.untop>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} {@mlog:unit}{@mlog:names}！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+	</template>
+</xcml>

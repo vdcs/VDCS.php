@@ -1,0 +1,11 @@
+﻿
+<div class="nav_side"><ul>
+<loop:menu>
+<li><a href="[item:url]"><span>[item:title]</span></a></li>
+</loop>
+</ul></div>
+<script type="text/javascript">
+$(function(){
+	$('.side .nav_side li a[href="/about/'+$b.url('script')+'"]').parents('li').addClass('pop');
+});
+</script>

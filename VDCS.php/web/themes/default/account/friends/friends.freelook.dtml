@@ -1,0 +1,34 @@
+<label:include file="/header.bars">
+<div id="wrap"><div id="wrapper">
+<label:include script="<web:url.themes>images/friends/friends.css" type="css">
+<div class="fribody">
+	<div class="frisStep boxr"></div>
+	<div class="fri_con">
+	<label:include file="frame/friends.nav">
+        <div class="fri_main">
+		<div class="tags_nav">
+		<label:include file="frame/friends.nav.find">
+		<div class="fri_checkall">
+			<a class="checkall_btn"><span>选中本栏全部</span></a>
+			<a class="do_act"><span><em></em></span></a>
+		</div>   
+		</div><!-- //End tags_nav -->
+		<div class="fri_items">
+			
+		</div><div class="ipaging"></div><!-- //End fri_items -->
+        </div><!-- //End fri_main -->   
+	</div><!-- //End tags_con fri_con -->
+	
+	
+
+</div><!-- // End fribody -->
+<label:include file="frame/friends.gamecard">
+<label:include script="<web:url.themes>app.t.gcard.js">
+<label:include script="<web:url.themes>app.t.friends.extend.js">
+<script type="text/javascript">
+	$(function(){
+		$('.tags_navlist').find('.nav_freelook').addClass('pop');
+		appt.freelookfri.initer('.fribody',{search:false});
+	});
+</script>
+<label:include file="frame/footer">

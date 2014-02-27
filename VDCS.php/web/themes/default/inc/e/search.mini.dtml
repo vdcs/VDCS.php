@@ -1,0 +1,11 @@
+﻿
+<div class="full" style="padding-left:30px;">
+<div class="search_mini">
+<form name="frm_searchmini" action="<linkurl:{@channel}.search.act>" method="get">
+<input type="hidden" name="sea_field" value="topic" />
+<input class="none keyword" type="text" name="keyword" value="" size="20" maxlength="50" />
+<input class="none btni" type="submit" value="<langs:search.quick.submit>" />
+</form>
+<span class="opt"><a href="<linkurl:{@channel}.search>"><langs:search.advance></a></span>
+</div>
+</div>

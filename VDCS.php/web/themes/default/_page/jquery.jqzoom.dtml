@@ -1,0 +1,27 @@
+<label:include file="frame/headers">
+<div class="framer">
+
+
+<label:include script="<url:images>script/external/jqzoom/jqzoom.css" type="css">
+<label:include script="external/jqzoom/jqzoom.js">
+<script type="text/javascript">
+$(d).ready(function(){
+	$(".jqzoom").jqueryzoom({
+		xzoom: 300,		//zooming div default width(default width value is 200)
+		yzoom: 300,		//zooming div default width(default height value is 200)
+		offset: 10,		//zooming div default offset(default offset value is 10)
+		position: "right",	//zooming div position(default position value is "right")
+		preload: 1,		//preload of images: 1 by default
+		lens:1  		//lens over the image: 1 by default
+	});
+});
+/*
+lens:false,
+*/
+</script>
+
+<a class="jqzoom"><img src="/upload/mall/201110/20111024024950tgs.jpg" bigimg="/upload/mall/201110/20111024032516zj.jpg" /></a>
+
+
+</div>
+<label:include file="frame/footers">

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links,search</frame>
+		<search.fields>m_title=6;m_url=6;m_topic=6;m_remark=6;m_realname=6;m_email=6;sp_ip=6;sp_agent=6;username=6</search.fields>
+		<search.times>m_tim</search.times>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>dbd_report</table.name>
+		<table.px>m_</table.px>
+		<table.field.id>m_id</table.field.id>
+		<table.fields.value>id=m_id;time=m_tim</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit>sp_trans,m_status</table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.field.append>channel.name,time</list.field.append>
+		<list.table.query></list.table.query>
+		<list.table.query.audit>m_status=1</list.table.query.audit>
+		<list.table.query.inaudit>m_status=2</list.table.query.inaudit>
+		<list.table.query.unaudit>m_status=0</list.table.query.unaudit>
+		<list.table.query.show>m_status=1</list.table.query.show>
+		<list.table.query.hide>m_status=0</list.table.query.hide>
+		<list.table.query.trans>se_trans=1</list.table.query.trans>
+		<list.table.query.untrans>se_trans=0</list.table.query.untrans>
+		<list.table.query.intrans>se_trans=2</list.table.query.intrans>
+		<list.table.order>m_id desc</list.table.order>
+		<list.table.order.tim>m_tim desc,m_id desc</list.table.order.tim>
+		<list.handle.select.option>trans,untrans,intrans,audit,inaudit,unaudit,delete</list.handle.select.option>	<!-- show,hide, -->
+		<list.handle.sql.audit>update dbd_report set m_status=1 where m_id in ({$ids})</list.handle.sql.audit>
+		<list.handle.sql.inaudit>update dbd_report set m_status=2 where m_id in ({$ids})</list.handle.sql.inaudit>
+		<list.handle.sql.unaudit>update dbd_report set m_status=0 where m_id in ({$ids})</list.handle.sql.unaudit>
+		<list.handle.sql.show>update dbd_report set m_status=1 where m_id in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.hide>update dbd_report set m_status=0 where m_id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.trans>update dbd_report set se_trans=1 where m_id in ({$ids})</list.handle.sql.trans>
+		<list.handle.sql.untrans>update dbd_report set se_trans=0 where m_id in ({$ids})</list.handle.sql.untrans>
+		<list.handle.sql.intrans>update dbd_report set se_trans=2 where m_id in ({$ids})</list.handle.sql.intrans>
+		<list.handle.sql.delete>delete from dbd_report where m_id in ({$ids})</list.handle.sql.delete>
+	</config>
+	
+	<lang>
+		<title><![CDATA[报错]]></title>
+		<title.name><![CDATA[报错]]></title.name>
+		<title.names><![CDATA[报错]]></title.names>
+		<title.list><![CDATA[报错列表]]></title.list>
+		<title.list.><![CDATA[报错列表]]></title.list.>
+		<title.list.audit><![CDATA[已审核报错]]></title.list.audit>
+		<title.list.inaudit><![CDATA[待审核报错]]></title.list.inaudit>
+		<title.list.unaudit><![CDATA[未审核报错]]></title.list.unaudit>
+		<title.list.show><![CDATA[显示报错]]></title.list.show>
+		<title.list.hide><![CDATA[隐藏报错]]></title.list.hide>
+		<title.list.trans><![CDATA[已处理报错]]></title.list.trans>
+		<title.list.untrans><![CDATA[未处理报错]]></title.list.untrans>
+		<title.list.intrans><![CDATA[待处理报错]]></title.list.intrans>
+		<title.trans><![CDATA[报错处理]]></title.trans>
+		
+		<title.frame.search><![CDATA[报错搜索]]></title.frame.search>
+		<search.fields.att>m_title=主题;m_url=URL;m_topic=标题</search.fields.att>
+		
+		<error.not.exist><![CDATA[您要处理的报错不存在！]]></error.not.exist>
+		
+		<handle.ok.audit><![CDATA[成功待审核了 {$total} 条报错！！]]></handle.ok.audit>
+		<handle.ok.inaudit><![CDATA[成功待审核了 {$total} 条报错！！]]></handle.ok.inaudit>
+		<handle.ok.unaudit><![CDATA[成功未审核了 {$total} 条报错！！]]></handle.ok.unaudit>
+		<handle.ok.show><![CDATA[成功显示了 {$total} 条报错！！]]></handle.ok.show>
+		<handle.ok.hide><![CDATA[成功隐藏了 {$total} 条报错！！]]></handle.ok.hide>
+		<handle.ok.trans><![CDATA[成功已处理了 {$total} 条报错！]]></handle.ok.trans>
+		<handle.ok.untrans><![CDATA[成功未处理了 {$total} 条报错！]]></handle.ok.untrans>
+		<handle.ok.intrans><![CDATA[成功待处理了 {$total} 条报错！]]></handle.ok.intrans>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} 条报错！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+		<menu.links><![CDATA[
+@@@title=报错管理;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("action=list&mode=")>">所有报错</a></li>
+<li class="space"></li>
+<li><a href="<exec:url("action=list&mode=untrans")>">未处理</a></li>
+<li><a href="<exec:url("action=list&mode=intrans")>">待处理</a></li>
+<li><a href="<exec:url("action=list&mode=trans")>">已处理</a></li>
+<li class="space"></li>
+<li><a href="<exec:url("action=list&mode=unaudit")>">未审核</a></li>
+<li><a href="<exec:url("action=list&mode=inaudit")>">待审核</a></li>
+<li><a href="<exec:url("action=list&mode=audit")>">已审核</a></li>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

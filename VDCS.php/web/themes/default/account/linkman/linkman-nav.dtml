@@ -1,0 +1,11 @@
+
+<div class="bars">
+<h2><web:var.title.p></h2>
+<p>我的<web:var.title.p>信息</p>
+</div>
+
+<div class="links">
+<ul>
+<li el="index"><a href="<chn:linkurl("{@channel}","pam","p={@portal}")>"><span><chn:var("{@channel}","title.{@portal}")></span></a></li>
+</ul>
+</div>

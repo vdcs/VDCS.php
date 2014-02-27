@@ -1,0 +1,4 @@
+<li class="sn[item:sn]">
+<pic><a href="[item:linkurl]"><img src="[item:pic.url]" /></a></pic>
+<h3><a href="[item:linkurl]">[item:topic!html!38]</a></h3>
+</li>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>var,config</node>
+	</configure>
+	<var>
+		<fields.edit><![CDATA[gender,email,mobile,idtype,idcard,names,nickname,realname]]></fields.edit>
+	</var>
+	<config>
+		<model>configure</model>
+		<demo><![CDATA[demo]]></demo>
+	</config>
+</xcml>

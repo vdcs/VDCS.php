@@ -1,0 +1,45 @@
+<label:include file="/headers">
+<div class="box">
+<h2><t>商品详情页</t></h2>
+<div class="con">
+<form>
+<table class="table tables table-bordered table-striped table-hover">
+<tbody>
+<tr><th>商品名</th><td><view:p_topic></td></tr>
+<tr><th>价格</th><td><view:p_price></td></tr>
+<tr><th>购买数量</th><td><input type="text" name="amount" value="1" /></td></tr>
+<input type="hidden" name="p_topic" value="<view:p_topic>" />
+<input type="hidden" name="price" value="<view:p_price>" />
+<input type="hidden" name="p_id" value="<view:p_id>" />
+</tbody>
+<tfoot><tr><td colspan="2"><a class="btn btn-primary s" el="add">加入购物车</a> <a class="btn s" href="/{@channel}/cart">去购物车</a></td></tr></tfoot>
+</table>
+</form>
+</div>
+</div>
+
+<label:include script="VDCS.ui.page.js">
+<script type="text/javascript">
+$(function(){
+	var _add=function(){
+		var _params=$('form').serialize();
+		var _url='/{@channel}/cart.x?action=add&'+_params;
+		//dbg.t(_url);
+		$ajax({url:_url,value:'xml',ready:function(xml){parseAsync(xml);},error:true});
+	};
+	
+	var parseAsync=function(xml){
+		var map=$util.toMapByXML(xml);
+		var treeVar=map.getItemTree('var');
+		if(treeVar.v('status')=='succeed'){
+			ui.popups('succeed','已加入购物车');
+		}else{
+			ui.popups('info',treeVar.v('message'));
+		}
+	};
+	
+	$('[el=add]').click(_add);
+		
+});
+</script>
+<label:include file="/footers">

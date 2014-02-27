@@ -1,0 +1,131 @@
+<label:include file="oauth-header">
+
+
+<div class="box">
+	<h2><t><var:title> - 完善帐号信息</t></h2>
+	<div class="con">
+
+<div class="forms m">
+<form name="frm_post" action="" method="post" >
+<input type="hidden" name="_chk" value="yes" />
+<dl>
+<dt el="names">
+	<h2>昵称</h2>
+	<h3><p><input type="text" class="tipi" name="names" value="" placeholder="个性昵称" minlength="0" maxlength="20" tabindex="3"
+		_exist="抱歉！昵称已存在。" _right="恭喜！昵称可用。" /><em class="it names"></em><em class="ih require" title="可以是您习惯的个人称呼"></em></p></h3>
+</dt>
+<dt el="account">
+	<h2>帐号</h2>
+	<h3><p><input type="text" class="tipi" name="account" value="" placeholder="手机号/电子邮箱" data-min="5" minlength="5" maxlength="50" tabindex="1"
+		/><em class="it account"></em><em class="ih require" title="可以输入您的手机号/电子邮箱作为帐号首选登录方式"></em></p></h3>
+</dt>
+<dt el="email" class="hided">
+	<h2>电子邮箱</h2>
+	<h3><p><input type="text" class="tipi" name="email" value="" placeholder="电子邮箱" data-min="5" minlength="0" maxlength="50" tabindex="1"
+		_exist="抱歉！电子邮箱已存在。" _right="恭喜！电子邮箱可用。" /><em class="it email"></em><em class="ih require" title="可以输入您的常用邮件地址作为帐号首选登录方式"></em></p></h3>
+</dt>
+<dt el="mobile" class="hided">
+	<h2>手机号</h2>
+	<h3><p><input type="text" class="tipi" name="mobile" value="" placeholder="手机号" data-min="11" minlength="0" maxlength="11" tabindex="2"
+		_exist="抱歉！手机号已存在。" _right="恭喜！手机号可用。" /><em class="it mobile"></em><em class="ih require" title="可以输入您的手机号作为帐号首选登录方式"></em></p></h3>
+</dt>
+<dt el="mobile_dcode" class="hided">
+	<h2></h2>
+	<h3><p class="itemi compact"><input type="text" class="tipi" name="mobile_dcode" value="" placeholder="动态码" data-min="4" minlength="0" maxlength="10" /><em class="it dcode"></em><em class="ih"></em></p>
+		<cite><a class="btn" href="javascript:;" el="dcode_send" data-second="60" data-hint="短信动态码已发送，请注意查收！">发送</a></cite></h3>
+</dt>
+<dt el="password">
+	<h2>密码</h2>
+	<h3><p><input type="password" class="tipi" name="password" value="" placeholder="登录密码" minlength="4" maxlength="20" tabindex="2" /><em class="it password"></em><em class="ih"></em></p></h3>
+</dt>
+<dt el="password2">
+	<h2>重复密码</h2>
+	<h3><p><input type="password" class="tipi" name="password2" value="" placeholder="重复密码" minlength="4" maxlength="20" tabindex="2" /><em class="it password"></em><em class="ih"></em></p></h3>
+</dt>
+<dd class="tips"><h3><p class="itip"><em></em><span>提示信息</span></p></h3></dd>
+<dd>
+	<h3>
+	<label><input type="checkbox" name="agreement" value="yes" checked />我已阅读并同意<app:app.shortname></label>
+	<a href="<chn:linkurl("{@channel}","pa","p=agreement")>"><chn:var("{@channel}","title.agreement")></a>
+	</h3>
+</dd>
+<input type="hidden" name="avatar" value="" />
+<input type="hidden" name="sign" value="" />
+<input type="hidden" name="gender" value="0" />
+<dd el="btns">
+	<h3>
+	<span el="loading"><img src="<url:images>common/load/16_bar.gif" /> 数据准备中..</span>
+	<span el="btn" class="hide"><a class="btn b m" href="javascript:;" el="submit"><span>完成</span></a></span>
+	<a class="btn b" el="login" href="<var:url.login>"><span><chn:var("passport","title.login")></span></a>
+	</h3>
+</dd>
+</dl>
+</form>
+</div>
+
+<label:include file="inc/register.script">
+<label:include file="inc/dcode.mobile.script">
+<script type="text/javascript">
+var authrc='<var:authrc>',openid='<var:openid>';
+var jforms=$('.forms'),jbtns=jforms.finde('btns');
+
+var oauth_inited=function(){
+	$f.bindi();
+	app.xregister.initer({tips_succeed:false,message_succeed:'绑定中..',callback:function(){
+		var _url='/passport/oauth.x?action=bind&authrc='+authrc+'&openid='+openid;
+		$ajax({url:_url,value:'xml',ready:function(xml){
+			var maps=$util.toMapByXML(xml);
+			var treeVar=maps.getItemTree('var');
+			var status=treeVar.v('status');
+			if(status=='succeed' || status=='binded'){
+				app.xregister.submitSet('注册成功！');
+				app.xregister.parserTips({message:'注册绑定成功！，正在为您转接..'});
+			}
+			else{
+				app.popup('error','绑定错误('+status+')');
+			}
+		},error:true});
+	}});
+	
+	app.xregister.autoAccount();
+	jforms.finde('dcode_send').click(function(){app.dcode.click($(this))});
+};
+
+var oauth_loadInfo=function(){
+	var _url='/passport/oauth.x?action=info&authrc='+authrc+'&openid='+openid;
+	$ajax({url:_url,value:'xml',ready:function(xml){
+		//alert(xml);	//_name,_avatar,_sign,_gender
+		var maps=$util.toMapByXML(xml);
+		var treeVar=maps.getItemTree('var');
+		var status=treeVar.v('status');
+		switch(status){
+			case 'succeed':
+				jforms.find('input[name="names"]').valer(treeVar.v('info._name'));
+				jforms.find('input[name="avatar"]').valer(treeVar.v('info._avatar'));
+				jforms.find('input[name="sign"]').valer(treeVar.v('info._sign'));
+				jforms.find('input[name="gender"]').valer(treeVar.v('info._gender'));
+				jbtns.finde('loading').hide();jbtns.finde('btn').show();
+				oauth_inited();
+				break;
+			case 'mobile':
+				app.popup('error','请填写正确的手机号码！');
+				break;
+			case 'valid':
+				app.popup('error','动态码已经发送！如未收到，请稍候重试。');
+				break;
+			default:
+				app.popup('error','未知错误('+status+')');
+				break;
+		}
+	},error:true});
+};
+$(function(){
+	oauth_loadInfo();
+	
+});
+</script>
+	</div>
+</div>
+
+
+<label:include file="oauth-footer">

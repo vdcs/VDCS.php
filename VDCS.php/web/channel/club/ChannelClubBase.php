@@ -1,0 +1,3 @@
+<?
+class ChannelClubBase extends ChannelClubBasic{}
+?>

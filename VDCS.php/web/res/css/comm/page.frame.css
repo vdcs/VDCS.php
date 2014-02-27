@@ -1,0 +1,35 @@
+@charset "utf-8";
+/*
+Version:	VDCS comm @page.frame v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-09-00
+*/
+
+#header{height:120px;}
+#header > .inners{height:100%;}
+#header .logo{clear:both;width:300px;height:50px;text-align:center;position:absolute;top:15px;left:15px;overflow:hidden;}
+#header .logo a{float:left;display:inline-block;width:150px;height:50px;background:url("/images/logo_header.png") 0 0 no-repeat;_background-image:url("/images/logo_header.gif");}
+#header .logo a.extend{width:150px;background-image:url("/images/logo_extend.png");_background-image:url("/images/logo_extend.gif");}
+#header .logo a,
+#header .logo a span{text-indent:-999px;overflow:hidden;}
+#header .menu{clear:both;width:100%;position:absolute;top:75px;left:0;}
+#header .menu ul{display:block;height:40px;}
+#header .menu li{float:left;display:inline-block;height:100%;}
+#header .menu li.linev{}
+#header .menu li a{display:block;height:100%;line-height:2.6em;vertical-align:middle;font-size:1.2em;font-weight:bold;padding:0 20px;}
+#header .menu a{color:#000;}
+#header .menu a:hover{text-decoration:none;}
+
+
+#footer .menu,
+#footer .info{width:100%;text-align:center;}
+
+#footer .menu ul{margin:0 auto;}
+#footer .menu li{display:inline-block;}
+#footer .menu li a{display:block;margin:0 5px;}
+
+#footer .logo a{display:inline-block;width:150px;height:50px;background:url("/images/logo_footer.png") 0 0 no-repeat;_background-image:url("/images/logo_footer.gif");}
+#footer .logo a,
+#footer .logo a span{text-indent:-999px;overflow:hidden;}
+
+#footer .info p{line-height:150%;}

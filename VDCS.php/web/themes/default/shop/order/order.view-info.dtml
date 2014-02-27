@@ -1,0 +1,22 @@
+
+<table class="table tables table-striped table-hover table-list">
+<tbody>
+	<tr><th>订单号</th><td><view:orderno></td><th>总额</th><td><view:money></td></tr>
+	<tr><th>联系人</th><td><view:linkman></td><th>联系电话</th><td><view:mobile></td></tr>
+	<tr><th>邮编</th><td><view:postcode></td><th>支付方式</th><td><view:payment.name></td></tr>
+	<tr><th>运送方式</th><td><view:shipping></td><th>送货时间</th><td><view:dtime></td></tr>
+	<tr><th>订单状态</th><td><view:status.name></td><th>邮费</th><td><view:shipping_price></td></tr>
+	<tr><th>地址</th><td colspan="3"><view:address></td></tr>
+	<tr><th>买家留言</th><td colspan="3"><view:message></td></tr>
+</tbody>
+<tfoot>
+	<tr>
+		<th colspan="4">
+			<a el="pay" class="btn s hide" style="display: none;" href="/{@channel}/checkout?orderid=<view:id>">去付款</a>
+			<a class="btn s hide" style="display: none;" el="cancel">取消订单</a>
+			<a class="btn s hide" style="display: none;" el="confirm">确认收货</a>
+			<a class="btn s hide" style="display: none;" el="rate">去评价</a>
+		</th>
+	</tr>
+</tfoot>
+</table>

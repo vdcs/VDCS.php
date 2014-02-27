@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,topic,content</field>
+	</configure>
+	<item>
+		<key>duty</key>
+		<topic><![CDATA[免责申明]]></topic>
+		<content><![CDATA[
+免责申明的信息</br>
+]]></content>
+	</item>
+</xcml>

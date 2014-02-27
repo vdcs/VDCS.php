@@ -1,0 +1,19 @@
+<label:include file="frame/header">
+<label:include file="frame/frame.left">
+<label:include file="gbook-menu">
+<label:include file="frame/frame.space">
+<label:include file="gbook-common">
+<div class="ContentMain">
+
+<label:include file="/common/handle.message.part">
+<script type="text/javascript">
+HMSG.lang({
+	'ok.password'		:'您成功修改了您的登陆密码及安全信息！',
+	'ok.info'		:'您成功修改了您的资料信息！',
+	'ok.avatar'		:'您成功修改了您的个人形像！',
+'':''});
+</script>
+
+</div>
+<label:include file="frame/frame.right">
+<label:include file="frame/footer">

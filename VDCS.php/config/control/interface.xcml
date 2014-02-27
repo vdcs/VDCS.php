@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="template">
+	<configure>
+		<node>item</node>
+		<field>key,name,value</field>
+		<field_att></field_att>
+	</configure>
+	<item>
+		<key>page.header</key>
+		<name></name>
+		<value><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<web:meta.charset>" />
+<web:header.append><web:header.xcompat>
+<title><app:web.name> 管理后台 page</title>
+<link rel="stylesheet" type="text/css" href="<url:images>css/style.public.css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="<url:images>css/browse.ie.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="<url:manage.themes>style.css" />
+<script type="text/javascript" src="<url:script>jquery.min.js"></script>
+<script type="text/javascript" src="<url:script>VDCS-full.js"></script>
+<script type="text/javascript">$c.setPath("<app:dir.root>","<url:root>");</script>
+<script type="text/javascript" src="<url:script>VDCS.post.js"></script>
+<script type="text/javascript" src="<url:script><web:script.public>.js"></script>
+<script type="text/javascript" src="<url:manage.data>manage.js"></script>
+<script type="text/javascript" src="<url:manage.themes>app.js"></script>
+<script type="text/javascript" src="<url:manage.themes>frame.js"></script>
+<script type="text/javascript">
+$d.load(function(){manage.initPage()});
+</script>
+</head>
+<body>
+]]></value>
+	</item>
+	<item>
+		<key>page.footer</key>
+		<name></name>
+		<value><![CDATA[
+<div class="space"></div>
+<div id="Footer">
+<div id="FooterFrame">
+	<div id="FooterCopyright"><app:web.name> Management Platform.</div>
+	<div id="FooterVersion"><span alt="Gzip <web:stat.gzip>, Memory usage <web:stat.memory>.">Processed in <web:stat.exectime> s, <web:stat.query> queries.</span> <span class="versions" title="App Updated in <app:app.version.update>"><app:web.version> <app:web.version.bulid></span></div>
+</div>
+</div>
+</body>
+</html>]]></value>
+	</item>
+	
+	
+	<item>
+		<key>page.table.head</key>
+		<name></name>
+		<value><![CDATA[<table class="tab tabs table-break">]]></value>
+	</item>
+	<item>
+		<key>page.table.head.form</key>
+		<name></name>
+		<value><![CDATA[<table class="frm table-break">]]></value>
+	</item>
+	<item>
+		<key>page.table.end</key>
+		<name></name>
+		<value><![CDATA[</table>]]></value>
+	</item>
+	<item>
+		<key>page.table.bar</key>
+		<name></name>
+		<value><![CDATA[<tr class="{$class}"><td colspan="{$cols}">{$title}</td></tr>]]></value>
+	</item>
+	
+	
+	<item>
+		<key>page.list.head</key>
+		<name></name>
+		<value><![CDATA[<table class="frm table-break">]]></value>
+	</item>
+	<item>
+		<key>page.list.end</key>
+		<name></name>
+		<value><![CDATA[</table>]]></value>
+	</item>
+	
+	<item>
+		<key>page.list.bar.tr</key>
+		<name></name>
+		<value><![CDATA[<tr class="sub align-center">]]></value>
+	</item>
+	<item>
+		<key>page.list.bar.id</key>
+		<name></name>
+		<value><![CDATA[<td class="bar-id">ID</td>]]></value>
+	</item>
+	<item>
+		<key>page.list.bar.sd</key>
+		<name></name>
+		<value><![CDATA[<td class="bar-selectbox re-option"><control:ui.form("select.data")></td>]]></value>
+	</item>
+	<item>
+		<key>page.list.row.tr</key>
+		<name></name>
+		<value><![CDATA[<tr class="row ac" onMouseOver="javascript:this.className='row pop ac';" onMouseOut="javascript:this.className='row ac';">]]></value>
+	</item>
+	<item>
+		<key>page.list.row.id</key>
+		<name></name>
+		<value><![CDATA[<td class="row-id"><a href="<var:url.web>" target="_blank" class="id">[item:id]</a></td>]]></value>
+	</item>
+	<item>
+		<key>page.list.row.sd</key>
+		<name></name>
+		<value><![CDATA[<td class="row-selectbox re-option"><control:ui.form("select.id","[item:selectid]")></td>]]></value>
+	</item>
+	
+	<item>
+		<key>page.list.rowi.timed</key>
+		<name></name>
+		<value><![CDATA[<span class="time" title="[item:_tim!time]">[item:_tim!date]</span>]]></value>
+	</item>
+	
+	
+	<item>
+		<key>page.listbox.head</key>
+		<name></name>
+		<value><![CDATA[
+<div class="Block Block-List">
+<control:ui.form("head")>
+<div class="BlockBar"><p><var:title></p></div>
+<div class="BlockBody"><div class="BlockInner">
+<div id="fbm-frame"></div>
+<table class="frm table-break">
+]]></value>
+	</item>
+	<item>
+		<key>page.listbox.end</key>
+		<name></name>
+		<value><![CDATA[
+</table>
+</div></div>
+<div class="BlockFooter"><p></p></div>
+<control:ui.form("end")>
+</div>
+]]></value>
+	</item>
+	<item>
+		<key>page.listbox.heads</key>
+		<name></name>
+		<value><![CDATA[
+<div class="Block Block-List">
+<control:ui.form("head")>
+<div class="BlockBar"><p><var:title></p></div>
+<div class="BlockBody"><div class="BlockInner">
+<div id="fbm-frame"></div>
+<table class="frm table-break">
+]]></value>
+	</item>
+	<item>
+		<key>page.listbox.ends</key>
+		<name></name>
+		<value><![CDATA[
+</table>
+</div></div>
+<div class="BlockDof"><div class="BlockInner"><paging:string><control:ui.form("select.buttons","<var:select.option>")></div></div>
+<div class="BlockFooter"><p></p></div>
+<control:ui.form("end")>
+</div>
+]]></value>
+	</item>
+	
+	
+	<item>
+		<key>page.putbox.head</key>
+		<name></name>
+		<value><![CDATA[
+<control:ui.form("head")>
+<table class="list lists table-break">
+]]></value>
+	</item>
+	<item>
+		<key>page.putbox.end</key>
+		<name></name>
+		<value><![CDATA[
+</table>
+<table class="list lists table-break">
+<tbody id="list-items-nodata" style="display:none;">
+<tr class="row align-center"><td>
+<div style="padding:10px;">还没有记录！ &nbsp; <a href="<exec:url("action=add")>">现在发布</a></div>
+</td></tr>
+</tbody>
+<tr class="btn align-center"><td>
+<div class="handle">
+<control:ui.form("select.buttons","<var:select.option>")>
+</div>
+<div class="data-paging"><paging:string></div>
+</td></tr>
+</table>
+<control:ui.form("end")>
+]]></value>
+	</item>
+	
+	
+	<item>
+		<key>page.vbox.head</key>
+		<name></name>
+		<value><![CDATA[
+<div class="Block Block-Box">
+<control:ui.form("head")>
+	<div class="BlockBar"><p><var:title></p></div>
+	<div class="BlockContent"><div class="BlockInner">
+]]></value>
+	</item>
+	<item>
+		<key>page.vbox.end</key>
+		<name></name>
+		<value><![CDATA[
+	</div></div>
+	<div class="BlockFooter"><p></p></div>
+<control:ui.form("end")>
+</div>
+]]></value>
+	</item>
+	
+	
+	<item>
+		<key>page.vblock.head</key>
+		<name></name>
+		<value><![CDATA[
+<div class="Block <var:classa>">
+	<div class="BlockBar"><p><var:title></p></div>
+	<div class="BlockBody"><div class="BlockInner">
+]]></value>
+	</item>
+	<item>
+		<key>page.vblocks.head</key>
+		<name></name>
+		<value><![CDATA[
+<div class="Block <var:classa>">
+	<div class="BlockBar"><p><var:title></p></div>
+	<div class="BlockContent"><div class="BlockInner">
+]]></value>
+	</item>
+	<item>
+		<key>page.vblock.end</key>
+		<name></name>
+		<value><![CDATA[
+	</div></div>
+	<div class="BlockFooter"><p></p></div>
+</div>
+]]></value>
+	</item>
+	
+	
+	<item>
+		<key>page.block.head</key>
+		<name></name>
+		<value><![CDATA[
+<div class="Block {$classa}">
+	<div class="BlockBar"><p>{$title}</p></div>
+	<div class="BlockBody"><div class="BlockInner">
+]]></value>
+	</item>
+	<item>
+		<key>page.blocks.head</key>
+		<name></name>
+		<value><![CDATA[
+<div class="Block {$classa}">
+	<div class="BlockBar"><p>{$title}</p></div>
+	<div class="BlockContent"><div class="BlockInner">
+]]></value>
+	</item>
+	<item>
+		<key>page.block.end</key>
+		<name></name>
+		<value><![CDATA[
+	</div></div>
+	<div class="BlockFooter"><p></p></div>
+</div>
+]]></value>
+	</item>
+	
+	<item>
+		<key>page.block</key>
+		<name></name>
+		<value><![CDATA[
+<div class="Block {$classa}">
+	<div class="BlockBar"><p>{$title}</p></div>
+	<div class="BlockBody"><div class="BlockInner">
+{$content}
+	</div></div>
+	<div class="BlockFooter"><p></p></div>
+</div>
+]]></value>
+	</item>
+	<item>
+		<key>page.blocks</key>
+		<name></name>
+		<value><![CDATA[
+<div class="Block {$classa}">
+	<div class="BlockBar"><p>{$title}</p></div>
+	<div class="BlockContent"><div class="BlockInner">
+{$content}
+	</div></div>
+	<div class="BlockFooter"><p></p></div>
+</div>
+]]></value>
+	</item>
+	
+	<item>
+		<key>page.message</key>
+		<name></name>
+		<value><![CDATA[
+<div class="Block Block-Message">
+	<div class="BlockBar"><p>{$title}</p></div>
+	<div class="BlockBody"><div class="BlockInner">
+<table class="tab tabs">
+<tr class="row align-center"><td style="padding:40px 10px;">{$message}</td></tr>
+</table>
+	</div></div>
+	<div class="BlockFooter"><p></p></div>
+</div>
+]]></value>
+	</item>
+	<item>
+		<key>page.message_url</key>
+		<name></name>
+		<value><![CDATA[
+<div class="Block Block-Message">
+	<div class="BlockBar"><p>{$title}</p></div>
+	<div class="BlockBody"><div class="BlockInner">
+<table class="tab tabs">
+<tr class="row align-center"><td style="padding:40px 10px;">
+{$message}<br>
+<br>
+<input type="button" class="btn goback" value="点击返回" onclick="javascript:$p.go('{$url}');" />
+</td></tr>
+</table>
+	</div></div>
+	<div class="BlockFooter"><p></p></div>
+</div>
+]]></value>
+	</item>
+	<item>
+		<key>page.space</key>
+		<name></name>
+		<value><![CDATA[<div class="space"></div>]]></value>
+	</item>
+	<item>
+		<key>page.space.line</key>
+		<name></name>
+		<value><![CDATA[<div class="space"></div>]]></value>
+	</item>
+	
+	
+	<item>
+		<key>page.frame.sideleft</key>
+		<name></name>
+		<value><![CDATA[
+<div class="MainFrame" id="MainFrame">
+<div class="MainFrameContent" id="MainFrameContent">
+]]></value>
+	</item>
+	<item>
+		<key>page.frame.sidespace</key>
+		<name></name>
+		<value><![CDATA[
+</div>
+<div class="MainFrameNav" id="MainFrameNav">
+]]></value>
+	</item>
+	<item>
+		<key>page.frame.sideright</key>
+		<name></name>
+		<value><![CDATA[
+</div>
+</div>
+]]></value>
+	</item>
+	
+	
+	<item>
+		<key>page.frame.left</key>
+		<name></name>
+		<value><![CDATA[
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr align="center" valign="top">
+<td width="150" align="center" valign="top">]]></value>
+	</item>
+	<item>
+		<key>page.frame.middle</key>
+		<name></name>
+		<value><![CDATA[
+</td>
+<td width="5"></td>
+<td width="*" align="center" valign="top">]]></value>
+	</item>
+	<item>
+		<key>page.frame.right</key>
+		<name></name>
+		<value><![CDATA[
+</td>
+</tr>
+</table>]]></value>
+	</item>
+</xcml>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+	</config>
+	
+	<lang>
+		<names><![CDATA[密码]]></names>
+		<name><![CDATA[修改]]></name>
+		<title.password><![CDATA[修改密码]]></title.password>
+		
+		<error.no.password><![CDATA[请先输入您当前的登陆密码！]]></error.no.password>
+		<error.no.newpassword><![CDATA[请先输入您需要修改的新密码！]]></error.no.newpassword>
+		<error.no.passwordaccord><![CDATA[您输入的 新密码 与 确认密码 不一至！]]></error.no.passwordaccord>
+		<error.no.passwordcheck><![CDATA[您输入的当前登陆密码有错误存在！]]></error.no.passwordcheck>
+		
+		<handle.ok.password><![CDATA[您已成功修改了您的登陆密码！]]></handle.ok.password>
+	</lang>
+	
+	<template>
+	</template>
+</xcml>

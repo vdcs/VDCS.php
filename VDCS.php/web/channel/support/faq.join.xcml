@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,topic,content</field>
+	</configure>
+	<item>
+		<key>join</key>
+		<topic><![CDATA[加入我们]]></topic>
+		<content><![CDATA[
+加入我们的说明<br/>
+]]></content>
+	</item>
+</xcml>

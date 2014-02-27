@@ -1,0 +1,12 @@
+
+<div id="navbar"><div class="inners">
+	<h2><web:var.chntitle></h2>
+	<h3><a
+		data-titles="<web:nav.title.values>" data-place="p,m" data-uri="<url:root>{channel}/{p}/{m}/{mi}.html"
+		href="<url:root>"><em></em><t><chn:var("common","title.index")></t></a>
+		<xmp el="tpl"><a><em></em><t></t></a></xmp>
+		<a el="chn" href="<chn:linkurl("{@channel}","index")>"><em></em><t><web:var.chntitle></t></a>
+		<a el="now" href="<web:var.url>"><em></em><t><web:var.title></t></a>
+	</h3>
+	<h4><a class="relate banner" href="javascript:;"></a></h4>
+</div></div>

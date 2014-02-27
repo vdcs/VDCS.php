@@ -1,0 +1,6 @@
+<?
+class ChannelAskPutAnswer extends ChannelAskMyPutAnswer
+{
+	
+}
+?>

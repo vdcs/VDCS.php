@@ -1,0 +1,20 @@
+<div class="FramerFloor">
+	<div class="MainMenu" id="MainMenu"><div class="MainMenuFrame">
+<div class="Menus"><div class="MenusInner"><div class="MenusFrame"><div class="MenusBody">
+<div class="partIcon" id="menus-icon">
+	<div class="uax">
+<div class="uax_info"><dl>
+	<dt><a href="<linkurl:account.index>" title="<ua:names>"><span class="avatarm"><img id="img-ua-avatar" class="icon" src="<url:images>ua/avatar.gif" /></span></a></dt>
+	<dd>
+		<p class="name"><a href="<linkurl:account.index>" title="<ua:name>"><ua:names></a></p>
+		<p class="no"><ua:id></p>
+	</dd>
+</dl></div>
+	</div>
+</div>
+<script type="text/javascript">
+user.loadFace("img-ua-avatar","<ua:face!url>");
+user.loadFace("img-ua-avatar1","<ua:avatar!url>");
+user.group.bind($es($o("menus-icon"),"span","icon-group")[0],{id:"<ua:groupid>",type:"icon"});
+</script>
+<div class="partMain">

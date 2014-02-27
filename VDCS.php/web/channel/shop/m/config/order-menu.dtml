@@ -1,0 +1,14 @@
+<div class="box"><h2><t>账单筛选</t></h2>
+<div class="con">
+<ul>
+	<li><a href="<exec:url("mode=")>">全部</a></li>
+	<li><a href="<exec:url("mode=unpay")>">待付款</a></li>
+	<li><a href="<exec:url("mode=unaudit")>">待审核</a></li>
+	<li><a href="<exec:url("mode=unsend")>">待发货</a></li>
+	<li><a href="<exec:url("mode=unreceive")>">待收货</a></li>
+	<li><a href="<exec:url("mode=unrate")>">待评价</a></li>
+	<li><a href="<exec:url("mode=canceled")>">已取消</a></li>
+	<li><a href="<exec:url("mode=invalid")>">无效</a></li>
+</ul>
+</div>
+</div>

@@ -1,0 +1,19 @@
+<label:include file="frame/headers">
+
+
+<div class="framer">
+	<div class="MainSide">
+		<div class="space"></div>
+<pre>
+{$web:abc.aer}
+<var:password!form.input>
+</pre>
+	</div>
+	<div class="MainContent MainFrame">
+		<div class="space"></div>
+		
+	</div>
+</div>
+
+
+<label:include file="frame/footers">

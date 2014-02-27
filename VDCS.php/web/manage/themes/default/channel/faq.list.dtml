@@ -1,0 +1,22 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+
+
+<label:include file="inc/listc.struct.begin">
+<!--<th class="item w100">节点名称</th>-->
+<th class="topic w120">节点标题</th>
+<th class="info">节点摘要</th>
+<th class="handle w60"><exec:langs("title.handle")></th>
+<label:include file="inc/listc.struct.end">
+<label:include file="inc/listc.tpl.begin">
+<!--<td class="item">[item:key]</td>-->
+<td class="topic">[item:topic]</td>
+<td class="info">[item:content!explain!120]</td>
+<td class="handle"><a href="#edit"><exec:langs("action.edit")></a>
+<a href="#delete" data-confirm="删除此节点" data-confirm-mode="2"><exec:langs("action.delete")></a></td>
+<label:include file="inc/listc.tpl.end">
+<label:include file="inc/listc.script">
+
+
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

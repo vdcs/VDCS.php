@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,topic,content</field>
+	</configure>
+	<item>
+		<key>pricacy</key>
+		<topic><![CDATA[隐私条约]]></topic>
+		<content><![CDATA[
+隐私条约的信息</br>
+]]></content>
+	</item>
+</xcml>

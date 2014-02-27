@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>table,name</field>
+	</configure>
+	<item>
+		<table>db_bbs_data</table>
+		<name>数据表1</name>
+	</item>
+</xcml>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,name</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<value>0</value>
+		<name>未付款</name>
+	</item>
+	<item>
+		<value>1</value>
+		<name>已付款</name>
+	</item>
+	<item>
+		<value>2</value>
+		<name>待付款</name>
+	</item>
+</xcml>

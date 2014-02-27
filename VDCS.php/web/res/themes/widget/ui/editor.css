@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+
+.winbox{display:none;float:left;position:relative;z-index:1110;}
+.winbox > .inner{border:1px solid #cccccc;background-color:#FFF;padding:20px;}
+.winbox > .inner{-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;overflow:hidden;}
+.winbox .winop{position:absolute;top:5px;right:5px;}
+.winbox .winop .close{display:inline-block;width:13px;height:13px;background:url("/images/common/struct/closed.gif") 0 0 no-repeat;}
+.winbox .winop .close:hover{background-position:0 -13px;}
+.winbox .action{text-align:center;margin-top:10px;}
+.winbox .action i{display:inline-block;width:5px;}
+
+.at_items{border:1px solid #E6E9E9;max-height:200px;overflow-x:hidden;overflow-y:auto;}
+.at_items a{display:block;height:25px;line-height:25px;padding:0 5px;width:110px;}
+.at_items a:hover{background-color:#F5F5F5;}
+.at_search{position:relative;}
+.at_search input{border-bottom:none;border-color:#E6E9E9;height:28px;}
+.at_search span.search_icon{width:21px;height:21px;background:url('search_icon.png') no-repeat 0 0;display:inline-block;position:absolute;left:2px;top:5px;}
+.at_search span.hide{display:none;}
+
+.box_em{}
+.box_em .items{position:relative;}
+.box_em .items .previews{display:none;position:absolute;top:0;left:0;}
+.box_em .items table{clear:bloth;padding:0;margin:0;}
+.box_em .items td{border:1px solid #E8E8E8;margin:0;}
+.box_em .items td a,
+.box_em .items td a span{display:block;}
+.emotes_em a{padding:3px;}
+.emotes_em a:hover{border-color:#0095cd;background-color:#fff9ec;}
+.emotes_em a,
+.emotes_em a span{width:24px;height:24px;}
+.emotes_em span{background:url("/images/emotes/icons_em.gif") 0 0 no-repeat;}
+.emotes_em .n1 span{background-position:0 0;}
+.emotes_em .n2 span{background-position:0 -22px;}
+.emotes_em .n3 span{background-position:0 -44px;}
+.emotes_em .n4 span{background-position:0 -66px;}
+.emotes_em .n5 span{background-position:0 -88px;}
+.emotes_em .n6 span{background-position:0 -110px;}
+.emotes_em .n7 span{background-position:0 -132px;}
+.emotes_em .n8 span{background-position:0 -154px;}
+.emotes_em .n9 span{background-position:0 -176px;}
+.emotes_em .n10 span{background-position:0 -198px;}
+.emotes_em .n11 span{background-position:0 -220px;}
+.emotes_em .n12 span{background-position:0 -242px;}
+.emotes_em .n13 span{background-position:0 -264px;}
+.emotes_em .n14 span{background-position:0 -286px;}
+.emotes_em .n15 span{background-position:0 -308px;}
+.emotes_em .n16 span{background-position:0 -330px;}
+.emotes_em .n17 span{background-position:0 -352px;}
+.emotes_em .n18 span{background-position:0 -374px;}
+.emotes_em .n19 span{background-position:0 -396px;}
+.emotes_em .n20 span{background-position:0 -418px;}
+.emotes_em .n21 span{background-position:0 -440px;}
+.emotes_em .n22 span{background-position:0 -462px;}
+.emotes_em .n23 span{background-position:0 -484px;}
+.emotes_em .n24 span{background-position:0 -506px;}
+.emotes_em .n25 span{background-position:0 -528px;}
+.emotes_em .n26 span{background-position:0 -550px;}
+.emotes_em .n27 span{background-position:0 -572px;}
+.emotes_em .n28 span{background-position:0 -594px;}
+.emotes_em .n29 span{background-position:0 -616px;}
+.emotes_em .n30 span{background-position:0 -638px;}

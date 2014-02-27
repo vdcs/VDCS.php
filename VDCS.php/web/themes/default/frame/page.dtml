@@ -1,0 +1,9 @@
+﻿<label:include file="frame/headers">
+<div class="FramerFloor">
+
+
+{@channel}.{@portal}.{@module}
+
+
+</div>
+<label:include file="frame/footers">

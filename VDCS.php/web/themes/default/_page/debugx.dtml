@@ -1,0 +1,88 @@
+<label:include file="frame/headers">
+<div class="framer">
+<div class="side">
+<label:include file="_shortcut">
+</div>
+<div class="cont">
+
+
+<div id="api_debug">
+<p><b>API调试器</b></p>
+<p>
+	/p.php ? router=<input type="text" name="chn" placeholder="channel" value="common" style="width:80px;" />
+	/<input type="text" name="p" placeholder="portal" value="demo" style="width:80px;" />
+	/<input type="text" name="m" placeholder="module" value="" style="width:80px;" />
+	/<input type="text" name="mi" placeholder="modulei" value="" style="width:80px;" />
+	?action=<input type="text" name="action" placeholder="action" value="" style="width:80px;" />
+</p>
+<p style="margin:10px 0;">
+	<input type="checkbox" name="mode" value="url" /> URL: 
+	<textarea name="url" placeholder="/api/entry/common.status.xml?action=" style="width:90%;height:40px;min-height:40px;" />/api/entry/common.status.xml?action=</textarea>
+</p>
+<p>
+	Query: <input type="text" name="querys" placeholder="query append" value="" style="width:90.5%;" />
+</p>
+<p style="margin:10px 0;">
+	POST:<br/>
+	<textarea name="posts" placeholder="post data" style="width:96%;height:50px;" /></textarea>
+</p>
+<p>
+	<a class="btn" el="submit">查询</a>
+</p>
+<p style="margin:10px 0;">
+	<div el="url"></div>
+	<pre el="results"></pre>
+</p>
+</div>
+<script type="text/javascript">
+$(function(){
+	var jbox=$('#api_debug'),jurl=jbox.find('[el=url]'),jresults=jbox.find('[el=results]');
+	var mode,url,chn,p,m,mi,action,querys,posts,results;
+	url=query('url');
+	if(url){
+		jbox.find('input[name="mode"]').checked(true);
+		jbox.find(':input[name="url"]').val(url);
+	}
+	var _queryurl=function(){
+		mode=jbox.find('input[name="mode"]:checked').val();
+		url=jbox.find(':input[name="url"]').val();
+		chn=jbox.find('input[name="chn"]').val();
+		p=jbox.find('input[name="p"]').val();
+		m=jbox.find('input[name="m"]').val();
+		mi=jbox.find('input[name="mi"]').val();
+		action=jbox.find('input[name="action"]').val();
+		querys=jbox.find('input[name="querys"]').val();
+		var re='/p.php?router='+chn+'/'+p+'/'+m+'/'+mi+'.x&action='+action+'&'+querys;
+		re=ui.serve.filterURL(re);
+		if(mode=='url') re=$url.link(url,querys);
+		return re;
+	};
+	var _query=function(){
+		posts=jbox.find(':input[name="posts"]').val();
+		var _url=_queryurl(),_send=[];
+		if(!_url){
+			ui.popups('info','Require URL!');
+			return;
+		}
+		_send=posts;
+		//dbg.t("url",_url);
+		jresults.html('query in..');
+		jurl.html('<a href="'+_url+'" target=_blank>'+_url+'</a>');
+		$ajax({url:_url,send:_send,value:'xml',ready:function(o){_result(o)},error:true});
+	};
+	var _result=function(o){
+		//alert(o)
+		jresults.html($code.toHTML(o));
+	};
+	jbox.find('[el=submit]').click(_query);
+});
+</script>
+
+
+</div>
+<div class="sider">
+
+</div>
+</div>
+
+<label:include file="frame/footers">

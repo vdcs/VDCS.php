@@ -1,0 +1,145 @@
+﻿<label:include file="headers">
+
+
+<div style="width:350px;background:#FFF;">
+<div class="forms">
+<form name="frm_post" action="" method="post" >
+<input type="hidden" name="_chk" value="yes" />
+<dl>
+<dt el="id">
+	<h2>帐号</h2>
+	<h3><p><input type="text" class="tipi" name="name" value="" placeholder="您的ID/邮箱/手机号" minlength="2" maxlength1="16" tabindex="1"
+		_error="很抱歉！有人已使用此昵称。" _exist="很抱歉！有人已使用此昵称。" _right="恭喜您！此昵称可用。" /><em class="it name"></em><em class="ih require"></em></p></h3>
+</dt>
+<dt el="password">
+	<h2>密码</h2>
+	<h3><p><input type="password" class="tipi" name="password" value="" placeholder="登录密码" minlength="4" maxlength="16" tabindex="2" /><em class="it password"></em><em class="ih"></em></p></h3>
+</dt>
+<dd><h3><p class="itip alert"><em></em><span>提示信息提示信息提示信息提示<br/>信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息</span></p>
+	<p class="itip info"><em></em><span>提示信息</span></p>
+	<p class="itip info"><em></em><span>提示信息</span></p></h3></dd>
+<dd><h3><p class="itip info"><em></em><span>提示信息</span></p></h3></dd>
+<dd><h3><p class="itip error"><em></em><span>提示信息</span></p></h3></dd>
+<dd><h3><p class="itip succeed"><em></em><span>提示信息</span></p></h3></dd>
+<dd>
+	<h3>
+	<label><em class="icheck" for="remember_info"></em>自动登录</label>
+	<input type="hidden" name="remember_info" value="yes" />
+	<a href="/passport/p.php?p=getpass">忘记密码</a>
+	</h3>
+</dd>
+<dd>
+	<h3>
+	<a class="btn m" el="_submit"><span>登录</span></a>
+	<a class="btn" href="<url:register>"><span>注册</span></a>
+	</h3>
+</dd>
+</dl>
+</form>
+</div>
+</div>
+
+
+<div style="height:50px;"></div>
+
+
+<div style="width:450px;background:#FFF;">
+<div class="forms m">
+<form name="frm_post" action="" method="post" >
+<input type="hidden" name="_chk" value="yes" />
+<dl>
+<dt el="id">
+	<h2>帐号</h2>
+	<h3><p><input type="text" class="tipi" name="name" value="" placeholder="您的ID/邮箱/手机号" minlength="2" maxlength1="16" tabindex="1"
+		_error="很抱歉！有人已使用此昵称。" _exist="很抱歉！有人已使用此昵称。" _right="恭喜您！此昵称可用。" /><em class="it name"></em><em class="ih require"></em></p></h3>
+</dt>
+<dt el="password">
+	<h2>密码</h2>
+	<h3><p><input type="password" class="tipi" name="password" value="" placeholder="登录密码" minlength="4" maxlength="16" tabindex="2" /><em class="it password"></em><em class="ih"></em></p></h3>
+</dt>
+<dd>
+	<h3>
+	<label><em class="icheck" for="remember_info"></em>自动登录</label>
+	<input type="hidden" name="remember_info" value="yes" />
+	<a href="/passport/p.php?p=getpass">忘记密码</a>
+	</h3>
+</dd>
+<dd>
+	<h3>
+	<a class="btn m" el="_submit"><span>登录</span></a>
+	<a class="btn" href="<url:register>"><span>注册</span></a>
+	</h3>
+</dd>
+</dl>
+</form>
+</div>
+</div>
+
+
+<div style="height:50px;"></div>
+
+
+<div style="width:180px;background:#FFF;">
+<div class="forms">
+<form name="frm_post" action="" method="post" >
+<input type="hidden" name="_chk" value="yes" />
+<dl>
+<dt el="id">
+	<p><input type="text" class="tipi" name="name" value="" placeholder="您的ID/邮箱/手机号" minlength="2" maxlength1="16" tabindex="1"
+		_error="很抱歉！有人已使用此昵称。" _exist="很抱歉！有人已使用此昵称。" _right="恭喜您！此昵称可用。" /><em class="it name"></em><em class="ih require"></em></p>
+</dt>
+<dt el="password">
+	<p><input type="password" class="tipi" name="password" value="" placeholder="登录密码" minlength="4" maxlength="16" tabindex="2" /><em class="it password"></em><em class="ih"></em></p>
+</dt>
+<dd class="ac">
+	<label><em class="icheck" for="remember_info"></em>自动登录</label>
+	<input type="hidden" name="remember_info" value="" />
+	<a href="/passport/p.php?p=getpass">忘记密码</a>
+</dd>
+<dd class="ac">
+	<a class="btn m" el="_submit"><span>登录</span></a>
+	<a class="btn" href="<url:register>"><span>注册</span></a>
+</dd>
+</dl>
+</form>
+</div>
+</div>
+
+
+<div style="height:50px;"></div>
+
+
+<div style="width:250px;background:#FFF;">
+<div class="forms m">
+<form name="frm_post" action="" method="post" >
+<input type="hidden" name="_chk" value="yes" />
+<dl>
+<dt el="id">
+	<p><input type="text" class="tipi" name="name" value="" placeholder="您的ID/邮箱/手机号" minlength="2" maxlength1="16" tabindex="1"
+		_error="很抱歉！有人已使用此昵称。" _exist="很抱歉！有人已使用此昵称。" _right="恭喜您！此昵称可用。" /><em class="it name"></em><em class="ih require"></em></p>
+</dt>
+<dt el="password">
+	<p><input type="password" class="tipi" name="password" value="" placeholder="登录密码" minlength="4" maxlength="16" tabindex="2" /><em class="it password"></em><em class="ih"></em></p>
+</dt>
+<dd class="ac">
+	<label><em class="icheck" for="remember_info"></em>自动登录</label>
+	<input type="hidden" name="remember_info" value="" />
+	<a href="/passport/p.php?p=getpass">忘记密码</a>
+</dd>
+<dd class="ac">
+	<a class="btn m" el="_submit"><span>登录</span></a>
+	<a class="btn" href="<url:register>"><span>注册</span></a>
+</dd>
+</dl>
+</form>
+</div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+	$f.bindi();
+});
+</script>
+
+
+<label:include file="footers">

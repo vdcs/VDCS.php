@@ -1,0 +1,57 @@
+﻿<label:include file="frame/headers">
+
+
+
+<div class="cont" id="contacts">
+	<div class="con">
+<!--
+<div class="MenuTip">
+        <div class="ViewChoose"><cite>已有 <em>0</em> 位朋友关注你</cite></div>
+        <div class="Search">
+		<div class="search_bar" el="search_person">
+			<form name="search_person" method="post">
+			<span><input type="text" name="keyword" class='uname' /></span>
+			<cite><input type="submit" value="搜索" /><em></em></cite>
+			</form>
+		</div>
+        </div>
+</div>
+-->
+	</div>
+	<div class="con">
+		<div class="contacts fans"><ul></ul></div>
+		<xmp id="tpl_contacts">
+			<li data-id="[item:id]" data-uid="[item:uuid]" data-uid2="[item:uuid2]" data-eacho="[item:eacho]">
+				<div class="avatar"><a class="avatarm" href="[item:u.link]" target="_blank"><img src="[item:u.avatar]" /></a></div>
+				<div class="info">
+					<h2><t><a target="_blank" href="[item:u.link]"><span>[item:unames]</span></a></t></h2>
+					<p>[item:usign]</p>
+				</div>
+				<opt>
+					<cite class="unfollow hide[item:eacho]">
+						<a class="btn m follow" href="#follow"><span><i></i><b>关注</b></span></a>
+					</cite>
+					<cite class="followed show[item:eacho]">
+						<a class="btn c cancel" href="#cancel"><span><i></i>相互关注</span></a>
+						<a class="btn inbox" href="#inbox"><span><i></i>私信</span></a>
+						<!--<a href="#mark"><span>标记</span></a>-->
+					</cite>
+					
+				</opt>
+			</li>
+		</xmp>
+	</div>
+	<div class="con bos">
+		<div class="paging"></div>
+	</div>
+</div>
+
+<label:include script="!~~@contacts.js">
+<script type="text/javascript">
+$(function(){
+	contacts.fansIniter('#contacts',{as_total:$('.ViewChoose cite em')});
+});
+</script>
+
+
+<label:include file="frame/footers">

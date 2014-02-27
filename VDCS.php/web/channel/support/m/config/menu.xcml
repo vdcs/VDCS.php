@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>name,url,config</field>
+		<title><![CDATA[]]></title>
+		<relate></relate>
+	</configure>
+	<item>
+		<name><![CDATA[{$names}管理]]></name>
+		<url><![CDATA[p=faq;params=action=list]]></url>
+		<config><![CDATA[icon=list;act=faq@action.list]]></config>
+	</item>
+	<item>
+		<name><![CDATA[频道配置]]></name>
+		<url><![CDATA[portals=system;p=model;m=configure;params=subchannel={$channel}]]></url>
+		<config><![CDATA[icon=configure;act=model.configure]]></config>
+	</item>
+	
+	<item>
+		<name><![CDATA[sub.功能管理]]></name>
+		<config><![CDATA[icon=kernel;act=]]></config>
+	</item>
+	<item>
+		<name><![CDATA[公告管理]]></name>
+		<url><![CDATA[p=announce;params=action=list]]></url>
+		<config><![CDATA[icon=system;act=announce@action.list]]></config>
+	</item>
+	<item>
+		<name><![CDATA[链接管理]]></name>
+		<url><![CDATA[p=links;params=action=list]]></url>
+		<config><![CDATA[icon=system;act=links@action.list]]></config>
+	</item>
+	<!--
+	<item>
+		<name><![CDATA[调查管理]]></name>
+		<url><![CDATA[p=vote;params=action=list]]></url>
+		<config><![CDATA[icon=system;act=vote@action.list]]></config>
+	</item>
+	<item>
+		<name><![CDATA[留言管理]]></name>
+		<url><![CDATA[p=gbook;params=action=list]]></url>
+		<config><![CDATA[icon=system;act=gbook@action.list]]></config>
+	</item>
+	-->
+	
+	<item>
+		<name><![CDATA[页面源管理]]></name>
+		<url><![CDATA[p=page;params=action=list]]></url>
+		<config><![CDATA[icon=system;ver=9e;act=page@action.list]]></config>
+	</item>
+	<!--
+	<item>
+		<name><![CDATA[广告管理]]></name>
+		<url><![CDATA[p=ads;params=action=list]]></url>
+		<config><![CDATA[icon=system;ver=e9;act=ads@action.list]]></config>
+	</item>
+	-->
+	<item>
+		<name><![CDATA[广告位管理]]></name>
+		<url><![CDATA[p=adr;params=action=list]]></url>
+		<config><![CDATA[icon=system;ver=9e;act=adr@action.list]]></config>
+	</item>
+</xcml>

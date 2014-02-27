@@ -1,0 +1,77 @@
+@charset "utf-8";
+/*
+Version:	VDCS comm @box v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-11-00
+*/
+
+
+.box{border:1px solid #E7E7E7;}
+.box{-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;overflow:hidden;}
+
+
+.box > h2{height:32px;line-height:32px;font-size:1em;padding:0 15px;}
+/*
+.box > h2{background:url("/images/common/struct/bars.gif") 0 -1px repeat-x;}
+.box > h2{border:1px solid #E7E7E7;border-top:0;border-bottom:0;}
+*/
+.box > h2{
+	color: #555;
+	border-color: #ccc;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1);
+	background: #f2f2f2 repeat-x left bottom;
+	background-image: -ms-linear-gradient(top, #fcfcfc, #f2f2f2);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fcfcfc), to(#f2f2f2));
+	background-image: -webkit-linear-gradient(top, #fcfcfc, #f2f2f2);
+	background-image: -o-linear-gradient(top, #fcfcfc, #f2f2f2);
+	background-image: -moz-linear-gradient(top, #fcfcfc, #f2f2f2);
+	background-image: linear-gradient(top, #fcfcfc, #f2f2f2);
+}
+.box > h2 a{text-decoration:none;}
+.box > h2 t{display:inline-block;font-size:1.2em;font-weight:bold;}
+.box > h2 t2{display:inline-block;font-size:12px;margin-left:10px;}
+
+.box > h2.open i{background-position:0 -27px;}
+.box > h2.close i{background-position:0 0;}
+.box > h2 r{}
+
+.box > h5{height:20px;line-height:20px;padding:0 0;margin-bottom:10px;}
+
+
+.box > .bod,
+.box > .con{background-color:#FFF;}
+.box > .bod > .con,
+.box > .con{padding:10px 15px;}
+
+
+.box .tab-nav{margin-top:10px;}
+.box .tab-nav li:first-child{margin-left:15px;}
+.box .bos{}
+
+
+.box > .bod:before,
+.box > .bod:after,
+.box > .con:before,
+.box > .con:after,
+.box > .bos:before,
+.box > .bos:after,
+.box > h5:before,
+.box > h5:after,
+.box > h2:before,
+.box > h2:after{clear:both;display:table;content:"";}
+
+
+.box.bulk{border-color:#dfdfdf;background-color:#f7f7f7;}
+.box.bulk > h2{}
+.box.bulk > .con{}
+.box.i{}
+.box.i > h2{}
+.box.i > .con{}
+.box.m{}
+.box.m > h2{}
+.box.m > .con{}
+
+
+.xform .box .tab-nav li:first-child{margin-left:52px;}

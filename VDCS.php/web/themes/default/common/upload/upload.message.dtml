@@ -1,0 +1,115 @@
+<label:include file="upload-header">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%" id="__tables">
+<tr><td align="left">
+<div id="up_message" class="Message">status=<up:status></div>
+</td></tr>
+</table>
+<script type="text/javascript">
+up.status="<up:status>";
+
+up.toLinkURL=function(t){
+	var re="";
+	switch (t){
+		case "back":
+			re="<a href=\""+up.paths+"\">返回</a>";
+			break;
+		case "again":
+			re="<a href=\""+up.paths+"\">继续上传</a>";
+			break;
+	}
+	return re;
+}
+
+up.toStatusString=function(s){
+	var re="";
+	switch(s){
+		case "close":		re="对不起，系统暂时关闭上传功能！";break;
+		case "unknown":		re="<font class=\"light\">提示:</font> 未知的系统错误！";break;
+		case "noinit":		re="<font class=\"light\">提示:</font> 上传系统初始化错误！";break;
+		case "nologin":		re="<font class=\"light\">提示:</font> 您还没有登录认证！";break;
+		case "noparam":		re="<font class=\"light\">提示:</font> 参数异常(<up:message>)！";break;
+		case "noupload":	re="<font class=\"light\">提示:</font> 您的帐户禁止上传文件.";break;
+		case "nofile":		re="<font class=\"light\">提示:</font> 系统没有发现要上传的文件 "+up.toLinkURL("back")+"";break;
+		case "maxtotal":	re="<font class=\"light\">提示:</font> 您今日上传已经超过 <up:total.max> 个.";break;
+		case "vcode":		re="<font class=\"light\">提示:</font> 验证码错误(不可外部或重复提交)";break;
+		case "maxsize":		re="<font class=\"light\">提示:</font> 上传文件超过最大值 <up:maxsizes!filesize!1> "+up.toLinkURL("back")+"";break;
+		case "ext":		re="<font class=\"light\">提示:</font> 文件格式只能为: <up:allowext> "+up.toLinkURL("back")+"";break;
+		case "savedir":		re="<font class=\"light\">提示:</font> 上传目录不存在或不可写入";break;
+		default:
+			re="<up:message>";
+			if("<data:isurl>"=="1") re+="<font class=gray>[<a href=\"<dcs:browse.paths>\"><data:url.name></a>]</font>";
+			break;
+	}
+	return re;
+}
+
+up.doParse=function(){
+	var _var=new Array();
+	_var["linkmode"]="<up:linkmode>";
+	_var["formname"]="<up:formname>";
+	_var["form.mode"]="<up:form.mode>";
+	_var["form.fileinput"]="<up:fileinput>";
+	_var["form.filevalue"]="<up:form.filevalue!js>";
+	_var["form.thumbinput"]="<up:thumbinput>";
+	_var["form.thumbvalue"]="<up:form.thumbvalue!js>";
+	_var["valuemode"]="<up:valuemode>";
+	_var["inputtype"]="<up:inputtype>";
+	_var["file.ext"]="<up:file.ext>";
+	_var["file.size"]=<up:file.size!int>;
+	_var["file.sizes"]="<up:file.size!filesize>";
+	_var["file.id"]=<up:file.id!int>;
+	_var["thumb.id"]=<up:thumb.id!int>;
+	
+	try{if(parent.window&&parent.window.dcs&&parent.window.$p){var winp=parent.window;
+		if(ise(_var["formname"])) _var["formname"]="frm_post";
+		var formnamec=_var["formname"]?_var["formname"]+".":"";
+		if(!ise(_var["form.fileinput"])){
+			var tmpValue=_var["form.filevalue"];
+			if(_var["form.mode"]=="append") tmpValue="\n"+tmpValue;
+			if(_var["form.fileinput"].substring(0,2)=="i."){
+				winp.$post.setInterfaceValue(_var["form.fileinput"].substring(2),tmpValue,_var["form.mode"]);
+			}
+			else{
+				winp.$f.v(_var["form.fileinput"],tmpValue,_var["form.mode"]);
+			}
+		}
+		if(!ise(_var["form.thumbinput"])){
+			winp.$f.v(formnamec+_var["form.thumbinput"],_var["form.thumbvalue"],_var["form.mode"]);
+		}
+		if(_var["file.id"]>0) winp.$f.v(formnamec+"_upid",","+_var["file.id"],"append");
+		if(_var["thumb.id"]>0) winp.$f.v(formnamec+"_upid",","+_var["thumb.id"],"append");
+		var filesize=$req.getQuery("filesize");
+		if(!filesize) filesize=$req.getQuery("fileinputsize");
+		if(filesize){
+			var _inputname=filesize;
+			var _inputvalue=_var["file.size"];
+			if(filesize.substring(0,2)=="s."){
+				_inputname=filesize.substring(2);
+				_inputvalue=_var["file.sizes"];
+			}
+			winp.$f.v(formnamec+_inputname,_inputvalue);
+		}
+	}}catch(_e){dbg.o(_e)}
+	var msg="<font class=\"light\">上传成功</font> <a href=\"<up:file.urls>\" target=\"_blank\"><up:file.name></a> <span class=\"s\"><up:file.size!filesize></span>";
+	msg+=" ";
+	msg+=up.toLinkURL(_var["linkmode"]);
+	up.doMessage(msg);
+}
+
+up.doMessage=function(s){
+	$o("up_message").html(s);
+}
+
+$d.load(function(){
+	up.doPageInit();
+	
+	if(up.status=="succeed"){
+		up.doParse();
+	}
+	else{
+		up.doMessage(up.toStatusString(up.status));
+	}
+	
+});
+</script>
+<label:include file="upload-footer">

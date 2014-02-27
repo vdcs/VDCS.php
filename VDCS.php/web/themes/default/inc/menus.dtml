@@ -1,0 +1,8 @@
+﻿
+<div class="nav_side"><ul>
+<themes:menu("sidec")>
+<li [menu:atts]><a href="[menu:url]" [menu:att]><span>[menu:name]</span></a></li>
+<@part:space>
+<li class="space"><a><span></span></a></li>
+</themes>
+</ul></div>

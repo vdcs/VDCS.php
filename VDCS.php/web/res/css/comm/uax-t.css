@@ -1,0 +1,63 @@
+@charset "utf-8";
+/*
+Version:	VDCS comm @uax v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2014-02-07
+*/
+
+
+/* ########## Ua X ######### */
+.uax_info{clear:both;text-align:left;}
+.uax_info dl:before,
+.uax_info dl:after{content:"";display:table;}
+.uax_info dl:after{clear:both}
+.uax_info dt,
+.uax_info dd{float:left;display:inline;}
+.uax_info dt{width:50px;margin:0 10px 0 0;}
+.uax_info dt.big{width:96px;}
+.uax_info dd{width:75px;overflow:hidden;word-wrap:break-word;}
+.uax_info dd p{height:auto;padding:1px 0;white-space:normal;word-wrap:break-word;}
+.uax_info dd .no{color:#999966;font-size:80%;}
+.uax_info dd .name{font-weight:bold;padding-top:0;}
+.uax_info dd .name a{font-weight:bold;}
+
+.uax_atten{clear:both;text-align:left;}
+.uax_atten dl:before,
+.uax_atten dl:after{content:"";display:table;clear:both;}
+.uax_atten dd{float:left;}
+.uax_atten dd a{display:block;border-right:1px solid #DDD;padding:0 5px;}
+.uax_atten dd.last a,
+.uax_atten dd:last-child a{border:0;}
+.uax_atten dd a em{display:block;font-size:16px;font-weight:bold;padding-bottom:5px;}
+.uax_atten dd a span{display:block;}
+.uax_atten dd a:hover{text-decoration:none;}
+.uax_atten dd a:hover span{}
+
+
+.uax_card{width:335px;padding-top:10px;border:1px solid #c6c6c6;-moz-border-radius:5px;-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;color:#737373;background-color:#fff;margin:0 auto;}
+.uax_card a{color:#0082cb;text-decoration:none;}
+.uax_card a:hover{color:#390;}
+.uax_card dl{margin-bottom:10px;}
+.uax_card dl dt{float:left;margin-left:10px;}
+.uax_card dl dt a{display:inline-block;width:50px;height:50px;padding:3px;border:1px solid #CBC9CC;}
+.uax_card dl dt a img{width:50px;height:50px;}
+.uax_card dl dd{height:58px;margin-left:75px;margin-right:15px;}
+.uax_card dl dd h3,
+.uax_card dl dd h5{height:18px;line-height:18px;}
+.uax_card dl dd h4{height:20px;line-height:20px;}
+.uax_card dl dd h4 em{width:18px;height:18px;display:inline-block;background:url("icon_gender.jpg") no-repeat 0 0;float:left;}
+.uax_card h2{margin:0 15px 10px 10px;}
+.uax_card h1{height:35px;padding-right:5px;background:#F5F5F5;}
+.uax_card h1 a{float:right;margin-top:3px;}
+
+
+/*
+.uas{}
+.uas .uax_info{margin:16px 16px 0 16px;}
+.uas .uax_atten{background-color:#F3EEC0;margin-top:15px;}
+.uas .uax_atten dd{width:75px;}
+.uas .uax_atten dd a{border-right-color:#E6E698;padding:10px;}
+.uas .uax_atten dd a:hover{background-color:#E6E698;}
+.uas .uax_atten dd.first{width:74px;}
+.uas .uax_atten dd.first a{padding-left:20px;}
+*/

@@ -1,0 +1,6 @@
+
+<a class="act act-print" href="javascript:;" onclick="javascript:common.doPrint('{@channel}');"><langs:view.act-print></a>
+<a class="act act-fav" href="javascript:;" onclick="javascript:common.doFavAdd('{@channel}');"><langs:view.act-fav></a>
+<a class="act act-commend" href="javascript:;" onclick="javascript:common.doCommend('{@channel}');"><langs:view.act-recommend></a>
+<a class="act act-report" href="javascript:;" onclick="javascript:common.doReport('{@channel}');"><langs:view.act-report></a>
+<!--<a class="act act-put" href="javascript:;" onclick="javascript:common.doPutAdd('{@channel}');"><langs:view.act-put></a>-->

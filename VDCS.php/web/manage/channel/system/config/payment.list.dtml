@@ -1,0 +1,25 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+
+
+<label:include file="inc/listc.struct.begin">
+<th class="item"><exec:langs("title.module")></th>
+<th class="money"><exec:langs("title.money")></th>
+<th class="ua"><exec:langs("title.uainfo")></th>
+<th class="item"></th>
+<th class="status"><exec:langs("title.status")></th>
+<!--<th class="handle"><exec:langs("title.handle")></th>-->
+<label:include file="inc/listc.struct.end">
+<label:include file="inc/listc.tpl.begin">
+<td class="channel">[item:module]</td>
+<td class="money">[item:money!money]</td>
+<td class="ua"><span class="ua" title="ID: [item:uuid]&#10;名称: [item:uname]&#10;真实姓名: [item:urealname]&#10;电子邮箱: [item:uemail]" data-align="left">[item:unames]</span></td>
+<td class="item"><span data-dict="data.pay" data-value="[item:ispay]"></span></td>
+<td class="status"><label:include file="inc/row.item.timed"></td>
+<!--<td class="handle"><a href="#view"><exec:langs("action.view")></a></td>-->
+<label:include file="inc/listc.tpl.end">
+<label:include file="inc/listc.script">
+
+
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

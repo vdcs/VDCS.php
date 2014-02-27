@@ -1,0 +1,10 @@
+
+#define-begin#
+
+#rewrite ^/(channel)/((\w+)/)?((\w+)/)?((\w+))?(\.html)?(\?(.*))?$			/p.php?router=$1/pa&&ap=$3&am=$5&&ami=$7&$10 last;
+#rewrite ^/(channel)(/(\w+))?((\w+)/)?((\w+)/)?(\.html)?(\?(.*))?$			/p.php?router=$1/pa&&ap=$3&am=$5&&ami=$7&$10 last;
+
+#api
+rewrite ^/(api)/(\w+)/(.*)\.(.[^\?]*)?(\?(.*))?$					/p.php?router=$1/$2.$4&api=$3&$6 last;
+
+#define-end#

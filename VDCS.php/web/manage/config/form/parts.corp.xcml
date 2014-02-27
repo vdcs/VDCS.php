@@ -1,0 +1,9 @@
+
+<!--
+corp={@xnames}信息;pivotal=关键信息;nums=分值信息;infod=描述资料;infos=详细资料;status={@xnames}状态
+attr={@xnames}属性;infoo=其它资料;
+-->
+
+<label:include file="parts.corp.base">
+
+<label:include file="parts.corp.info">

@@ -1,0 +1,7 @@
+<?
+class WebHandleMessage
+{
+	use WebPortalRefMessage;
+	
+}
+?>

@@ -1,0 +1,4 @@
+﻿<div class="space"></div>
+<div><a href="<app:web.urls>" target="_blank"><app:web.name></a> <xcml:themes("frame.copyright")></div>
+</center>
+<label:include file="/footer.blank">

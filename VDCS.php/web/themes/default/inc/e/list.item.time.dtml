@@ -1,0 +1,4 @@
+<li>
+<div class="topics"><span class="right"><span class="time">[item:tim!date]</span></span><span class="left"><span class="topic pic[item:ispic]"><a href="[item:linkurl]">[item:topic!html!45]</a></span><span class="after"><a class="icon newwin" href="[item:linkurl]" target="_blank" title="<langs:chn.newwin>"></a></span> <span class="class">[item:class]</span></span></div>
+<div class="infos"><span class="summary">[item:summary!text!200]</span> <span class="time">[item:tim!date]</span></div>
+</li>

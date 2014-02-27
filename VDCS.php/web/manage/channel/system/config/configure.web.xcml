@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links</frame>
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[网站状态]]></title.name>
+		<title.list><![CDATA[网站状态查看]]></title.list>
+		<title.list.><![CDATA[网站状态查看]]></title.list.>
+		<title.setting><![CDATA[网站状态设置]]></title.setting>
+		
+		<handle.ok.setting><![CDATA[成功设置了网站状态！]]></handle.ok.setting>
+	</lang>
+	
+	<template>
+		<list><![CDATA[
+<div class="Block">
+	<div class="BlockBar"><p>网站状态查看</p></div>
+	<div class="BlockContent"><div class="BlockInner">
+<table cellspacing="0" cellpadding="8" class="list lists table-break">
+<tr class="row">
+<td width="100" class="align-right">网站名称：</td>
+<td width="*"><a href="<app:web.url>" target="_blank"><span class="large b"><app:web.name></span></a></td>
+</tr>
+<tr class="row">
+<td class="align-right"></td>
+<td><a href="<app:web.urls>" target="_blank"><app:web.urls></a></td>
+</tr>
+<tr class="row">
+<td class="align-right">当前状态：</td>
+<td><script>
+switch("<app:app.status>"){
+case "close":
+	put("<img class=\"icon\" src=\"<app:url.manage.images>common/web_close.gif\" /> <span class=\"light\">网站已经关闭</span>");
+	break;
+default:
+	put("<img class=\"icon\" src=\"<app:url.manage.images>common/web_open.gif\" /> <span class=\"mark\">网站正常运行</span>");
+	break;
+}
+</script></td>
+</tr>
+<tr class="row">
+<td class="align-right">数据库类型：</td>
+<td><script>if("<var:db.typename>"=="sql"){put("SQL Server");}else{put("Access");}</script></td>
+</tr>
+<tr class="row">
+<td class="align-right">安装目录：</td>
+<td><dir:base.dir></td>
+</tr>
+<tr class="row">
+<td class="align-right">磁盘路径：</td>
+<td><dir:base.path></td>
+</tr>
+<tr class="row">
+<td class="align-right">程序版本：</td>
+<td><app:web.version></td>
+</tr>
+<tr class="row blank">
+<td class="align-right"></td>
+<td><span class="gray">更新于 <app:app.version.update></span></td>
+</tr>
+</table>
+	</div></div>
+	<div class="BlockFooter"><p></p></div>
+</div>]]></list>
+		<menu.links><![CDATA[
+@@@title=网站状态;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("action=")>">状态查看</a></li>
+<li><a href="<exec:url("action=setting")>">状态设置</a></li>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

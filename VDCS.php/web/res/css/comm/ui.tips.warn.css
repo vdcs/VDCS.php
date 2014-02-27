@@ -1,0 +1,60 @@
+@charset "utf-8";
+/*
+Version:	VDCS comm @tips v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-07-00
+*/
+
+
+.itip{clear:both;text-align:left;padding:3px 0;margin:0;position:relative;}
+.itip:after{content:"";display:table;clear:both;}
+.itip em{float:left;display:inline-block;width:16px;height:16px;background:url("/images/common/struct/tips_warn.png") 0 -200px no-repeat;position:absolute;top:3px;left:0;}
+@-moz-document url-prefix(){.itip em{top:4px;}}
+.itip.load em{background:url("/images/common/load/16_leaf.gif") 0 0 no-repeat;}
+.itip.info em{background-position:0 -200px;}
+.itip.alert em{background-position:0 -100px;}
+.itip.error em{background-position:0 -50px;color:normal;}
+.itip.succeed em{background-position:0 -0px;}
+.itip span{display:inline-block;line-height:1.5em;margin-left:22px;}
+
+.itip.infos,
+.itip.alerts,
+.itip.errors,
+.itip.succeeds{border:1px solid #EBEBEB;padding:10px 15px;
+	-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;overflow:hidden;
+}
+.itip.infos em,
+.itip.alerts em,
+.itip.errors em,
+.itip.succeeds em{top:11px;left:12px;}
+
+.itip.alerts{color:#3399CC;border-color:#bce8f1;background-color:#d9edf7;}
+.itip.errors{color:#b94a48;border-color:#eed3d7;background-color:#F2DEDE;}
+.itip.succeeds{color:#468847;border-color:#d6e9c6;background-color:#dff0d8;}
+
+.itip.m{font-size:1.4em;}
+.itip.m em{width:28px;height:24px;background-position:-100px -200px;}
+.itip.m.load em{background:url("/images/common/load/24_p.gif") 0 0 no-repeat;}
+.itip.m.info em{background-position:-100px -200px;}
+.itip.m.alert em{background-position:-100px -100px;}
+.itip.m.error em{background-position:-100px -50px;color:normal;}
+.itip.m.succeed em{background-position:-100px -0px;}
+.itip.m span{margin-left:32px;}
+
+
+.mtip{clear:both;display:inline-block;text-align:left;margin:0 auto;padding-left:70px;position:relative;}
+.mtip cite{display:block;width:60px;height:60px;position:absolute;top:0px;left:0;}
+.mtip cite em{display:inline-block;width:50px;height:45px;background:url("/images/common/struct/tips_warn.png") -150px -200px no-repeat;}
+.mtip cite.info em{background-position:-150px -200px;}
+.mtip cite.alert em{background-position:-150px -100px;}
+.mtip cite.failed em,
+.mtip cite.error em{background-position:-150px -50px;}
+.mtip cite.succeed em{background-position:-150px -0px;}
+.mtip > h3{color:#004080;font-size:2em;font-weight:bold;padding-top:4px;}
+.mtip > h4{color:#988B87;font-size:1em;line-height:1.5em;margin-left:0px;margin-top:20px;}
+.mtip > h5{margin-top:20px;}
+.mtip > h5 a{margin-right:8px;}
+
+
+.iconfirm{clear:both;min-width:250px;padding:20px 50px;}
+.iconfirm .itip{margin-left:auto;margin-right:auto;}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>text.value</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=1]]></property>
+		<style>size=40 maxlength=20</style>
+		<caption><![CDATA[勋章代码]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[只能由英文和数字组成]]></explain>
+	</input>
+	<input>
+		<type>text.name</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=1]]></property>
+		<style>size=40 maxlength=10</style>
+		<caption><![CDATA[勋章名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.pic</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=1]]></property>
+		<style>size=40 maxlength=10</style>
+		<caption><![CDATA[图片名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>textarea.img</type>
+		<property><![CDATA[item=;action=;type=string;max=;min=]]></property>
+		<style>cols=50 rows=3</style>
+		<caption><![CDATA[图片字符串]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[不填将由系统自动生成]]></explain>
+	</input>
+	<input>
+		<type>textarea.icons</type>
+		<property><![CDATA[item=;action=;type=string;max=;min=]]></property>
+		<style>cols=50 rows=3</style>
+		<caption><![CDATA[图标字符串]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[不填将由系统自动生成]]></explain>
+	</input>
+	<input>
+		<type>textarea.explain</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=0]]></property>
+		<style>cols=50 rows=4</style>
+		<caption><![CDATA[勋章说明$$$250个字以内]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+</xcml>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>pre,config,lang,template</node>
+	</configure>
+	<pre>
+		<table.name>dbd_upload</table.name>
+		<table.px></table.px>
+		<field.id>id</field.id>
+		<names>上传</names>
+		<act>查看</act>
+		<unit>条</unit>
+	</pre>
+	<config>
+		<frame>links,linkrelate,search</frame>
+		<search.fields>url=6;filename=6;username=6</search.fields>
+		<search.times>tim</search.times>
+		<search.term.type></search.term.type>
+		
+		<table.name>{@table.name}</table.name>
+		<table.px></table.px>
+		<table.field.id>{@field.id}</table.field.id>
+		<table.fields.value>id={@field.id};topic=filename;time=tim</table.fields.value>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.query.valided>status=1</list.table.query.valided>
+		<list.table.query.unvalid>status=0</list.table.query.unvalid>
+		<list.table.order>{@field.id} desc</list.table.order>
+		<list.table.order.tim>tim desc,{@field.id} desc</list.table.order.tim>
+		<list.handle.select.option>valided=有效;unvalid=无效;delete</list.handle.select.option>
+		<list.handle.sql.valided>update {@table.name} set status=1 where {@field.id} in ({$ids})</list.handle.sql.valided>
+		<list.handle.sql.unvalid>update {@table.name} set status=0 where {@field.id} in ({$ids})</list.handle.sql.unvalid>
+		<list.handle.sql.delete>delete from {@table.name} where {@field.id} in ({$ids})</list.handle.sql.delete>
+	</config>
+	
+	<lang>
+		<title><![CDATA[{@names}]]></title>
+		<title.name><![CDATA[{@names}]]></title.name>
+		<title.list><![CDATA[{@names}列表]]></title.list>
+		<title.list.><![CDATA[{@names}列表]]></title.list.>
+		<title.list.valid><![CDATA[有效{@names}]]></title.list.valid>
+		<title.list.invalid><![CDATA[无效{@names}]]></title.list.invalid>
+		
+		<title.frame.search><![CDATA[{@names}搜索]]></title.frame.search>
+		<search.fields.att>url=地址;filename=文件名</search.fields.att>
+		
+		<handle.ok.valided><![CDATA[成功有效处理了 {$total} {@unit}{@names}记录！]]></handle.ok.valided>
+		<handle.ok.unvalid><![CDATA[成功无效处理了 {$total} {@unit}{@names}记录！]]></handle.ok.unvalid>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} {@unit}{@names}记录！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+		<menu.links><![CDATA[
+@@@title=上传管理;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("mode=")>">所有上传</a></li>
+<li><a href="<exec:url("mode=valid")>">有效上传</a></li>
+<li><a href="<exec:url("mode=invalid")>">无效上传</a></li>
+</ul>
+</div>
+]]></menu.links>
+		<menu.linkrelate><![CDATA[
+@@@title=相关链接;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("portal=configure&mode=upload")>">上传配置</a></li>
+</ul>
+</div>
+]]></menu.linkrelate>
+	</template>
+</xcml>

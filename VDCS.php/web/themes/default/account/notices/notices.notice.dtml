@@ -1,0 +1,19 @@
+<label:include file="frame/headers">
+<div class="cont">
+
+
+<label:include script="<web:url.themes>account/images/notice.css" type="css">
+<table>
+	<tr><th>通知内容</th><th>通知时间</th></tr>
+</table>
+
+<label:include script="<web:url.themes>app.t.notice.js">
+<script type="text/javascript">
+$(function(){
+	appt.notice.initer('list');			
+});
+</script>
+
+
+</div>
+<label:include file="frame/footers">

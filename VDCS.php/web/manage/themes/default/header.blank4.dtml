@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--[if lte IE 8 ]><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><![endif]--><!--[if gte IE 9 ]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]--><web:header.xcompat>
+<meta http-equiv="Content-Type" content="text/html; charset=<web:meta.charset>" /><meta http-equiv="Content-Language" content="<web:meta.language>" /><web:header.append>
+<title><app:web.name> - 管理中心</title>
+<label:include script="style.public.css" type="css">
+<label:include script="<web:url.themes>images/style.css" type="css">
+<!--[if lt IE 9]><script src="dist/html5shiv.js"></script><![endif]-->
+<label:include script="jquery/1.8.3.min.js"><label:include script="jquery/extend.min.js"><label:include script="jquery/ui.min.js">
+<label:include script="jquery/ui.extend.js"><label:include script="<url:images>script/jquery/ui.css" type="css">
+<label:include script="VDCS.js"><label:include script="VDCS.ui.js"><label:include script="VDCS.post.js">
+<label:include script="public.js"><label:include script="<url:manage.data>public.js"><label:include script="<url:manage.data>app.js">
+<script type="text/javascript">
+$c.setv("<dcs:time.now>","<app:var.script.d>","<app:url.mode>");$c.setPath("<app:dir.root>","<url:root>","<url:manage.themes>");
+extendo($v.unit,{coin:"<app:unit.coin>",price:"<app:unit.price>",money:"<app:unit.money>",emoney:"<app:unit.emoney>",points:"<app:unit.points>",exp:"<app:unit.exp>",strength:"<app:unit.strength>",prestige:"<app:unit.prestige>"});
+if(typeof manager !== 'undefined'){manager.id=toi("<manager:id>");manager.name="<manager:name>";}
+</script>
+</head>
+<body>

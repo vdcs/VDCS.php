@@ -1,0 +1,22 @@
+<label:include file="frame/headers">
+
+
+<div class="cont">
+	<div class="box">
+		<h2><t><web:var.classtitle></t><t2><i><paging:total></i><langs:chn.units></t2></h2>
+		<div class="con">
+<div class="e_list e_list_down">
+<!--<label:include file="e.list.bar">-->
+<ul>
+<label:list>
+<label:include file="/inc/e/item.pro">
+</label:end>
+</ul>
+</div>
+		</div>
+<label:include file="/inc/e/paging.box">
+	</div>
+</div>
+
+
+<label:include file="frame/footers">

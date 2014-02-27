@@ -1,0 +1,14 @@
+<div class="xlist" 
+	data-channel="{@channel}" data-p="{@portal}" data-m="{@module}" data-x="{@extend}" data-action="<ctl:action>" data-mode="<ctl:mode>" data-taxis="<ctl:taxis>" data-params="<dtml:x.params>" data-params_a="<dtml:a.params>"
+	data-title="<var:title>" data-names="<var:names>" data-name="<var:name>"
+	_channel="{@channel}" _p="{@portal}" _m="{@module}" _x="{@extend}" _action="<ctl:action>" _mode="<ctl:mode>" _taxis="<ctl:taxis>" _params="<dtml:x.params>"
+	_title="<var:title>" _names="<var:names>" _name="<var:name>">
+<div class="box">
+	<h2><t><var:title></t></h2>
+	<div class="toolbar">
+		
+	</div>
+	<div class="bod">
+<form name="frm_list" action="" method="post">
+<table class="table tables table-striped table-hover table-list">
+<label:include file="inc/table.bar.begin">

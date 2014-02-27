@@ -1,0 +1,33 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @code v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######################### */
+/* ######### Codes ######### */
+/* ######################### */
+.CodesQuote{min-height:50px;}
+.CodesQuoteBody{margin-left:55px;margin-top:10px;}
+.CodesQuote .bar{color:#808080;font-size:12px;padding-top:8px;padding-bottom:5px;_height:20px;_padding-top:15px;}
+.CodesQuote .bar em{display:none;}
+.CodesQuote .bar span{color:#333333;font-weight:bold;text-decoration:underline;}
+.CodesQuote .content{}
+
+.CodesCode{min-height:50px;}
+.CodesCodeBody{margin-left:55px;margin-top:10px;}
+.CodesCode .bar{color:#808080;font-size:12px;padding-top:8px;padding-bottom:5px;_height:20px;_padding-top:15px;}
+.CodesCode .bar em{display:none;}
+.CodesCode .bar span{color:#333333;font-weight:bold;text-decoration:underline;}
+.CodesCode .content{color:#666666;font-family:Courier,Courier New;font-size:11px!important;font-weight:normal;}
+
+.CodesEdit{width:auto;padding:3px;text-align:right;color:#808080;}
+.CodesEdit .username,
+.CodesEdit .author{color:#333333;font-weight:bold;text-decoration:underline;}
+.CodesEdit .time{color:#333333;text-decoration:underline;}
+
+
+.CodesQuote{background:url("../../common/block/icon_quote.gif") 10px 0 no-repeat;}
+.CodesCode{background:url("../../common/block/icon_code.gif") 10px 0 no-repeat;}

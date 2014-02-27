@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>lang,tpl</node>
+	</configure>
+	<lang>
+		<unit><![CDATA[]]></unit>
+		<names><![CDATA[]]></names>
+	</lang>
+	<tpl>
+		<frame><![CDATA[
+<div class="pagination" total="{$total}" listnum="{$listnum}" page="{$page}" pagetotal="{$pagetotal}" url="{$urls}">
+<ul>
+{$items}
+</ul>
+</div>
+]]></frame>
+		<first><![CDATA[<li><a href="javascript:;" page="1">«</a></li>]]></first>
+		<firsts><![CDATA[]]></firsts>
+		<prev><![CDATA[<li><a href="javascript:;" page="0">&lt;</a></li>]]></prev>
+		<prevs><![CDATA[]]></prevs>
+		<item><![CDATA[<li><a href="{$urls}" page="{$page}">{$page}</a></li>]]></item>
+		<items><![CDATA[<li class="active"><a href="{$urls}" page="{$page}">{$page}</a></li>]]></items>
+		<next><![CDATA[<li><a href="javascript:;" page="{$pagetotal}">&gt;</a></li>]]></next>
+		<nexts><![CDATA[]]></nexts>
+		<last><![CDATA[<li><a href="javascript:;" page="{$pagetotal}">»</a></li>]]></last>
+		<lasts><![CDATA[]]></lasts>
+	</tpl>
+</xcml>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,key,title,level</field>
+	</configure>
+	<item>
+		<value>0</value>
+		<key>text</key>
+		<title><![CDATA[文本模式]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<value>1</value>
+		<key>ubb</key>
+		<title><![CDATA[UBB模式]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<value>2</value>
+		<key>html</key>
+		<title><![CDATA[HTML模式]]></title>
+		<level>0</level>
+	</item>
+</xcml>

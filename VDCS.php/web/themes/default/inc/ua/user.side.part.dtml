@@ -1,0 +1,8 @@
+
+<!--{if isBool({$ua.isLogin()})}-->
+<p><span class="user"><ua:name></span>, <langs:user.hello></p>
+<p>您有 <span class="emoney"><ua:emoney></span> <app:unit.emoney>和 <span class="points"><ua:points></span> <app:unit.points></p>
+<!--{else}-->
+<p><span class="user"><ua:name></span>, <langs:user.hello></p>
+<p><a href="<linkurl:passport.register>"><chn:var("passport","title.register")></a> &nbsp; <a href="<linkurl:passport.login>"><chn:var("passport","title.login")></a></p>
+<!--{/if}-->

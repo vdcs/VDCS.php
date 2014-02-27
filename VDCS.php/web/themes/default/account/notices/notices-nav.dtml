@@ -1,0 +1,11 @@
+
+<div class="bars">
+<h2><web:var.title.p></h2>
+<p>系统给您发送的通知消息。</p>
+</div>
+
+<div class="links">
+<ul>
+<li el="notice"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=notice")>"><span><chn:var("{@channel}","title.{@portal}.notice")></span></a></li>
+</ul>
+</div>

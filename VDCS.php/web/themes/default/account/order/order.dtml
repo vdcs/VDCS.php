@@ -1,0 +1,19 @@
+<label:include file="frame/headers">
+
+
+<div class="cont">
+<div class="box">
+	<h2><t>订单列表</t></h2>
+	<div class="con">
+<label:include file="/shop/order/order.list-items">
+	</div>
+	<div class="con bos">
+		<div class="paging"></div>
+	</dib>
+</div>
+</div>
+
+<label:include file="/shop/order/order.list-script">
+
+
+<label:include file="frame/footers">

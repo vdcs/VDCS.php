@@ -1,0 +1,36 @@
+<label:include file="frame/headers">
+
+
+<style type="text/css">
+
+
+</style>
+<div class="framer">
+<div class="side">
+	side
+</div>
+<div class="cent">
+	cent
+</div>
+<div class="sider">
+	sider
+</div>
+</div>
+<div class="framesh"></div>
+<div class="framer">
+<div class="side">
+	side
+</div>
+<div class="cont">
+	cont
+</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	
+	
+});
+</script>
+
+
+<label:include file="frame/footers">

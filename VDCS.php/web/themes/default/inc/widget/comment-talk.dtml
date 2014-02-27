@@ -1,0 +1,21 @@
+
+<div class="talki"><div class="inner">
+	<form>
+	<input type="hidden" name="pic" value="" />
+	<h2><t></t>
+		<r><span class="stats">已有<i class="total">0</i>条评论，共<i class="ua">0</i>人参与</span></r>
+	</h2>
+	<h3 class="txtbox">
+		<p><textarea name="message" maxlength="250" placeholder="请输入评论内容"></textarea></p>
+	</h3>
+	<h5 class="hide">
+		<div class="toolbar" data-target="message" data-format="bb" sessionid="<dcs:session.id>">
+			<a class="em" cmd="em" href="#em"><span></span></a>
+		</div>
+		<r>
+			<!--<span class="counts">你还可以输入<i>200</i>字</span>-->
+			<a class="btn c send" data-title="Ctrl + Enter 快速提交"><span>发布</span></a>
+		</r>
+	</h5>
+	</form>
+</div></div>

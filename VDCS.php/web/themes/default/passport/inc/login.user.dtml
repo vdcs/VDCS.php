@@ -1,0 +1,47 @@
+﻿
+<div class="forms m">
+<form name="frm_login" action="" method="post" >
+<input type="hidden" name="_chk" value="yes" />
+<dl>
+<dt el="id">
+	<h2>帐号</h2>
+	<h3><p><input type="text" class="tipi" name="name" value="" placeholder="邮箱/手机号" minlength="5" maxlength="50" tabindex="1" /><em class="it name"></em><em class="ih require" title="可以输入您帐号相关的邮箱/手机号"></em></p></h3>
+</dt>
+<dt el="password">
+	<h2>密码</h2>
+	<h3><p><input type="password" class="tipi" name="password" value="" placeholder="登录密码" minlength="2" maxlength="20" tabindex="2" /><em class="it password"></em><em class="ih"></em></p></h3>
+</dt>
+<dd class="tips"><h3><p class="itip"><em></em><span>提示信息</span></p></h3></dd>
+<dd>
+	<h3>
+	<label><input type="checkbox" name="remember_info" value="yes" checked data-bind="check" data-style="m" />自动登录</label>
+	&nbsp; &nbsp;
+	<a href="<chn:linkurl("passport","pam","p=forgot&m=password")>"><chn:var("{@channel}","title.forgot.password")></a>
+	</h3>
+</dd>
+<dd>
+	<h3>
+	<a class="btn b m" href="<url:login>" el="submit"><span>登录</span></a>
+	</h3>
+</dd>
+<dd>
+	<h3>
+<div class="h">
+<label:include file="inc/oauth.links">
+</div>
+	</h3>
+</dd>
+</dl>
+</form>
+</div>
+
+
+<label:include file="inc/login.script">
+<script type="text/javascript">
+$(function(){
+	$f.bindi();
+	//app.xlogin.debugxml=true;
+	app.xlogin.initer({backurl:"<var:url.back>"});
+	app.xlogin.setValue({name:"",password:""});
+});
+</script>

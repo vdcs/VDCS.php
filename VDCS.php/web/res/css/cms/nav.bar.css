@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @nav.bar v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######################### */
+.NavBarH,
+#NavBar{clear:both;height:25px;text-align:left;margin-bottom:8px;overflow:hidden;}
+#NavBar .partFrame{}
+#NavBar .partInner{clear:both;height:25px;position:relative;overflow:hidden;}
+#NavBar .partMain{clear:both;line-height:25px;}
+#NavBar .partMain em{color:#A09683;font-family:"SimHei","Arial","Verdana";margin:0 5px;}
+#NavBar .partMain a{ font-weight:bold;font-size:13px;text-decoration:none;}
+#NavBar .partMain a.index,
+#NavBar .partMain .item{float:left;display:inline-block;line-height:25px;}
+#NavBar .partMain .index{background:url("../../common/icon/home.gif") 1px 4px no-repeat;padding-left:22px;}
+#NavBar .partMain em{margin:0 5px;}
+#NavBar .partMain .item a{}
+#NavBar .partRelate{clear:both;position:absolute;top:0;right:0;width:150px;height:25px;}
+#NavBar .partRelate .relate{display:block;height:25px;line-height:25px;}
+#NavBar .partRelate .banner{background:url("page/navbar_banner.gif");}
+#NavBanner{display:none;height:120px;margin-bottom:6px;overflow:hidden;}
+#NavBanner .partMain{}
+#NavBanner .partMain a{display:inline-block;}
+#NavBanner .partMain a{background-position:100% 0;background-repeat:no-repeat;}
+#NavBar .partRelate {width:150px;}
+
+#NavBar .partRelate .relate .SearchMini .btns{margin-left:-3px;_margin-left:0;}

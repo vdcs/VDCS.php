@@ -1,0 +1,20 @@
+
+
+<div class="box">
+	<div class="BlockHeader"><p></t></h2>
+	<div class="cont">
+<div class="flow-stat">
+<div class="m" style="margin-right:10px;">
+<!--{if (toInt({$var:scores.minus})>0)}--><p>扣除<channel:var("names")>积分：<span class="score" id="cart-scores-minus"><var:scores.minus></span> <app:unit.score></p><!--{/if}-->
+</div>
+</div>
+<div class="ar">
+<!--{if (toInt({$var:prices.off})>0)}--><p><uac:level.name>优惠：<span class="price b" id="cart-prices-off"><var:prices.off!price></span> <app:unit.coin></p><!--{/if}-->
+<!--{if (toInt({$var:scores.con})>0)}--><p><span class="gray">本次订单可获得{@names}积分: <span class="score" id="cart-con-scores"><var:scores.con></span> <app:unit.score></span></p><!--{/if}-->
+<div class="space"></div>
+<p>运费：<font class="price b">￥<var:prices.shipping!price></font></p>
+<div class="space"></div>
+<p>实付款：<font class="price b huge">￥<var:prices.total!price></font></p>
+</div>
+	</div></div>
+</div>

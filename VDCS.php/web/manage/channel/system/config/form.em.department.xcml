@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>	
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<caption><![CDATA[详细信息]]></caption>
+		<explain><![CDATA[default=$$$base=基本信息]]></explain>
+	</input>
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=none</att>
+	</input>
+	<input>
+		<type>text.deptid</type>
+		<property><![CDATA[item=;action=edit;type=int;max=10;min=1;classi=id]]></property>
+		<style>size=20 maxlength=20 class="item"</style>
+		<caption><![CDATA[部门ID]]></caption>
+		<att></att>
+		<value><![CDATA[{$id}]]></value>
+		<explain><![CDATA[唯一]]></explain>
+	</input>
+	
+	<input>
+		<type>text.{@tpx}name</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=1;classi=email]]></property>
+		<style>size=40 maxlength=100 class="ivar"</style>
+		<caption><![CDATA[部门全称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	
+	<input>
+		<type>radio.{@tpx}types</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=3;min=;classi=name]]></property>
+		<style>size=20 maxlength=3 class="item"</style>
+		<caption><![CDATA[部门类型]]></caption>
+		<att><![CDATA[<control:att("file","manage.config/data.department.types")>]]></att>
+		<value>1</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}sort</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=3;min=;classi=name]]></property>
+		<style>size=20 maxlength=3 class="item"</style>
+		<caption><![CDATA[部门区域]]></caption>
+		<att><![CDATA[<control:att("file","manage.config/data.department.area")>]]></att>
+		<value>1</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}shortname</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=0;classi=name]]></property>
+		<style>size=20 maxlength=20 class="item"</style>
+		<caption><![CDATA[部门简称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	
+	<input>
+		<type>text.{@tpx}total_staff</type>
+		<property><![CDATA[item=;action=;type=int;max=10;min=0;classi=name]]></property>
+		<style>size=20 maxlength=20 class="item"</style>
+		<caption><![CDATA[总共人数]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	
+	<input>
+		<type>text.{@tpx}orderid</type>
+		<property><![CDATA[item=;action=;type=int;max=10;min=;classi=id]]></property>
+		<style>size=20 maxlength=20 class="item"</style>
+		<caption><![CDATA[排序值]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[排序值大的排在前面]]></explain>
+	</input>
+
+	<input>
+		<type>radio.{@tpx}status</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=3;min=;classi=name]]></property>
+		<style>size=20 maxlength=3 class="item"</style>
+		<caption><![CDATA[状态]]></caption>
+		<att>1=正常;0=不正常</att>
+		<value>1</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+		
+	<input>
+		<type>textarea.{@tpx}summary</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=0;classi=name]]></property>
+		<style>size=20 maxlength=20 class="item"</style>
+		<caption><![CDATA[部门简介]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}tim</type>
+		<property><![CDATA[item=;action=add;type=time;max=20;min=1;classi=time]]></property>
+		<style>size=20 maxlength=20 class="time"</style>
+		<caption><![CDATA[创建时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}tim</type>
+		<property><![CDATA[item=;action=edit;type=time;max=20;min=1;classi=time]]></property>
+		<style>size=20 maxlength=20 class="time"</style>
+		<caption><![CDATA[更新时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain></explain>
+	</input>
+	
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	
+</xcml>

@@ -1,0 +1,22 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+
+
+<label:include file="inc/listc.struct.begin">
+<th class="topic">公告<exec:langs("title.topic")></th>
+<th>公告类型</th>
+<th class="status w80"><exec:langs("title.status")></th>
+<th class="handle"><exec:langs("title.handle")></th>
+<label:include file="inc/listc.struct.end">
+<label:include file="inc/listc.tpl.begin">
+<td class="topic"><a href="#edit">[item:topic]</a></td>
+<td><span data-dict="file:sort=common.channel/{@channel}/data.announce.module" data-value="[item:module]"></span></td>
+<td class="status"><control:dict("data.audit","{$$list:<v:table.px>status}")> <control:dict("data.goods","{$$list:<v:table.px>isgood}")>
+	<label:include file="inc/row.item.timed"></td>
+<td class="handle"><a href="#edit"><exec:langs("action.edit")></a></td>
+<label:include file="inc/listc.tpl.end">
+<label:include file="inc/listc.script">
+
+
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

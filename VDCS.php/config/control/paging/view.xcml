@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>lang,tpl</node>
+	</configure>
+	<lang>
+		<unit><![CDATA[页]]></unit>
+		<names><![CDATA[]]></names>
+	</lang>
+	<tpl>
+		<frame><![CDATA[<table border="0" cellspacing="2" cellpadding="0">
+<tr>
+<!--<font class="total">{$total}</font>{$unit}{$names}, -->
+<td>{$page}/{$pagetotal}页次 {$items}</td>
+<input type="hidden" name="paging_url" value="{$urls}">
+<td><input type="text" class="txt" name="paging_num" value="{$page}" size="3" style="text-align:center;"> <input type=button class=btn value="GO" onclick="javascript:dcs.paging.go();"></td>
+</tr>
+</table>]]></frame>
+		<first><![CDATA[<a href="{$urls}">第一页</a> ]]></first>
+		<firsts><![CDATA[]]></firsts>
+		<prev><![CDATA[<a href="{$urls}">上一页</a> ]]></prev>
+		<prevs><![CDATA[]]></prevs>
+		<item><![CDATA[<a href="{$urls}">第{$page}页</a> ]]></item>
+		<items><![CDATA[<strong><u>第{$page}页</u></strong> ]]></items>
+		<next><![CDATA[<a href="{$urls}">下一页</a> ]]></next>
+		<nexts><![CDATA[]]></nexts>
+		<last><![CDATA[<a href="{$urls}">最后一页</a>]]></last>
+		<lasts><![CDATA[]]></lasts>
+	</tpl>
+</xcml>

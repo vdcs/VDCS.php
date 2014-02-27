@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>select.c_id</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style><![CDATA[style="width:280px;"]]></style>
+		<caption><![CDATA[操作论坛]]></caption>
+		<att><![CDATA[0=所有论坛版面..;<control:att("bbs_forum","")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.username</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=20 maxlength=50</style>
+		<caption><![CDATA[操作用户]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[如果不填写表示对所有用户进行操作！]]></explain>
+	</input>
+	<input>
+		<type>text.time_star</type>
+		<property><![CDATA[item=;action=;type=date;max=10;min=1]]></property>
+		<style>size=15 maxlength=10 class="date"</style>
+		<caption><![CDATA[开始时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.today>]]></value>
+		<explain><![CDATA[<script>$pf.chooseTime('time_star');</script> 格式:<dcs:time.today>]]></explain>
+	</input>
+	<input>
+		<type>text.time_end</type>
+		<property><![CDATA[item=;action=;type=date;max=10;min=1]]></property>
+		<style>size=15 maxlength=10 class="date"</style>
+		<caption><![CDATA[结束时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.today>]]></value>
+		<explain><![CDATA[<script>$pf.chooseTime('time_end');</script> 格式:<dcs:time.today>]]></explain>
+	</input>
+	<input>
+		<type>radio.f_type</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[数据类型]]></caption>
+		<att><![CDATA[1=主贴;2=回贴]]></att>
+		<value>1</value>
+		<explain></explain>
+	</input>
+</xcml>

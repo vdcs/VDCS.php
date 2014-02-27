@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<caption><![CDATA[详细信息]]></caption>
+		<explain><![CDATA[default=$$$base=基本信息;popedom=角色权限]]></explain>
+	</input>
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=none</att>
+	</input>
+	<input>
+		<type>text.{@tpx}name</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=1;classi=no]]></property>
+		<style></style>
+		<caption><![CDATA[角色名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[唯一，建议长度为4-16位]]></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}status</type>
+		<property><![CDATA[item=;action=;type=int;max=3;min=]]></property>
+		<style></style>
+		<caption><![CDATA[状态]]></caption>
+		<att>1=启用;0=不启用</att>
+		<value>1</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=popedom;display=none</att>
+	</input>
+	
+	{@popedoms}
+	
+	<input>
+		<type>multibar.foot</type>
+	</input>
+</xcml>

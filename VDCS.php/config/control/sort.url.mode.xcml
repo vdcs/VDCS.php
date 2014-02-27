@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,title,level</field>
+	</configure>
+	<item>
+		<value>default</value>
+		<title><![CDATA[默认模式]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<value>script</value>
+		<title><![CDATA[PHP脚本模式]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<value>rewrite</value>
+		<title><![CDATA[HTML模拟静态模式(ISAPI Rewrite)]]></title>
+		<level>0</level>
+	</item>
+</xcml>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>name,value</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<name>WinXP</name>
+		<value>WinXP</value>
+	</item>
+	<item>
+		<name>Win7</name>
+		<value>Win7</value>
+	</item>
+	<item>
+		<name>Linux</name>
+		<value>Linux</value>
+	</item>
+	<item>
+		<name>iOS</name>
+		<value>iOS</value>
+	</item>
+	<item>
+		<name>Android</name>
+		<value>Android</value>
+	</item>
+</xcml>

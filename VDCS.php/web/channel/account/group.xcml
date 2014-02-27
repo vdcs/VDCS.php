@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>id,name,key,config,style</field>
+		<field.att.value>id</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<id>1</id>
+		<name>普通用户</name>
+		<key>user</key>
+		<config></config>
+		<style><![CDATA[<font style="color:#000000;">{$name}</font>]]></style>
+	</item>
+	<item>
+		<id>2</id>
+		<name>会员用户</name>
+		<key>member</key>
+		<config></config>
+		<style><![CDATA[<font style="color:#0033CC;">{$name}</font>]]></style>
+	</item>
+	<item>
+		<id>5</id>
+		<name>VIP用户</name>
+		<key>vip</key>
+		<config></config>
+		<style><![CDATA[<font style="color:#990099;"><b>{$name}</b></font>]]></style>
+	</item>
+</xcml>

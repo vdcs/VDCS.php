@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>struct,lang</node>
+	</configure>
+	<struct>
+		<table.name>dbd_comment</table.name>
+		<table.px>c_</table.px>
+		<field.id>c_id</field.id>
+		
+		<fields.add>channel,module,rootid,dataid,uurc,uuid,types,replyid,c_realname,c_email,c_topic,c_icon,c_remark,c_poll_rank,c_poll_type,sp_ip,sp_agent,c_status,c_tim</fields.add>
+		<!--c_trans,c_trans_tim,c_trans_name,c_trans_message-->
+		
+		<list.field>*</list.field>
+		<list.query><![CDATA[channel='{$channel}' and rootid={$rootid} and c_status=1]]></list.query>
+		<list.query.data><![CDATA[channel='{$channel}' and rootid={$rootid} and dataid={$dataid} and c_status=1]]></list.query.data>
+		<list.order>c_id desc</list.order>
+	</struct>
+	<lang>
+		<error.data><![CDATA[提交的评论数据出现异常！]]></error.data>
+		<error.norule.realname><![CDATA[评论作者 为空或不符合规则！]]></error.norule.realname>
+		<error.norule.email><![CDATA[电子邮件 为空或不符合规则！]]></error.norule.email>
+		<error.norule.topic><![CDATA[评论主题 为空或不符合规则！]]></error.norule.topic>
+		<error.norule.content><![CDATA[评论内容 为空或不符合规则！]]></error.norule.content>
+		
+		<handle.ok.post><![CDATA[您已成功发布了一条评论！]]></handle.ok.post>
+		<handle.ok.post.audit><![CDATA[您已成功发布了一条评论！ 请等待系统的审核。]]></handle.ok.post.audit>
+	</lang>
+</xcml>

@@ -1,0 +1,5 @@
+<?
+class NoticeAction extends UcNoticeAction
+{
+	
+}

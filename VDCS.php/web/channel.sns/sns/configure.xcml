@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>var,config,url.script,url.rewrite</node>
+	</configure>
+	<var>
+		<name>{@name}</name>
+		<names>{@names}</names>
+		<act>{@act}</act>
+		<act.view>{@act.view}</act.view>
+		<unit>{@unit}</unit>
+	</var>
+	<config>
+		<model>configure,search</model>
+	</config>
+	<url.script>
+		<index><![CDATA[<app:url.root>{@channel}/]]></index>
+		
+		<create><![CDATA[<app:url.root>{@channel}/create<app:ext.script>]]></create>
+		<my><![CDATA[<app:url.root>{@channel}/my<app:ext.script>]]></my>
+		<help><![CDATA[<app:url.root>{@channel}/help<app:ext.script>]]></help>
+		
+		<mu><![CDATA[<app:url.root>{@channel}/mu<app:ext.script>?muid={$muid}]]></mu>
+		<mu.blog><![CDATA[<app:url.root>{@channel}/mu<app:ext.script>?muid={$muid}&p=blog]]></mu.blog>
+		<mu.blog.view><![CDATA[<app:url.root>{@channel}/mu<app:ext.script>?muid={$muid}&p=blog&m=view&id={$id}]]></mu.blog.view>
+		<mu.blog.sort><![CDATA[<app:url.root>{@channel}/mu<app:ext.script>?muid={$muid}&p=blog&sortid={$sortid}]]></mu.blog.sort>
+		<mu.profile><![CDATA[<app:url.root>{@channel}/mu<app:ext.script>?muid={$muid}&p=profile]]></mu.profile>
+		<mu.rss><![CDATA[<app:url.root>{@channel}/mu<app:ext.script>?muid={$muid}&p=rss]]></mu.rss>
+		
+		<xmls><![CDATA[<app:url.root>{@channel}/xmls<app:ext.script>]]></xmls>
+	</url.script>
+	<url.rewrite>
+		<index><![CDATA[<app:url.root>{@channel}/]]></index>
+		
+		<create><![CDATA[<app:url.root>{@channel}/create<app:ext.rewrite>]]></create>
+		<my><![CDATA[<app:url.root>{@channel}/my<app:ext.rewrite>]]></my>
+		<help><![CDATA[<app:url.root>{@channel}/help<app:ext.rewrite>]]></help>
+		
+		<mu><![CDATA[<app:url.root>{@channel}/u/{$muid}/]]></mu>
+		<mu.blog><![CDATA[<app:url.root>{@channel}/u/{$muid}/blog<app:ext.rewrite>]]></mu.blog>
+		<mu.blog.view><![CDATA[<app:url.root>{@channel}/u/{$muid}/blog_view_{$id}<app:ext.rewrite>]]></mu.blog.view>
+		<mu.blog.sort><![CDATA[<app:url.root>{@channel}/u/{$muid}/blog_sort_{$sortid}<app:ext.rewrite>]]></mu.blog.sort>
+		<mu.profile><![CDATA[<app:url.root>{@channel}/u/{$muid}/profile<app:ext.rewrite>]]></mu.profile>
+		<mu.rss><![CDATA[<app:url.root>{@channel}/u/{$muid}/rss<app:ext.xmls>]]></mu.rss>
+		
+		<xmls><![CDATA[<app:url.root>{@channel}/xmls<app:ext.xmls>]]></xmls>
+	</url.rewrite>
+</xcml>

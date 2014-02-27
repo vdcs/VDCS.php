@@ -1,0 +1,24 @@
+<label:include file="frame/headers">
+
+
+<div class="cent">
+<dtml-loop:class.root!v>
+	<div class="box">
+		<h2><t>[v:name]</t><r><a href="[v:url]"><langs:chn.more></a></r></h2>
+		<div class="con">
+<div class="StructList"><ul>
+<label:block("{@channel}","res=new;classid=[v:classid];row=10;cache=;t=ci[v:classid]")>
+<label:include file="e.item.pro">
+</label:end>
+</ul></div>
+		</div>
+	</div>
+	<div class="space"></div>
+</dtml-loop>
+</div>
+<div class="sider">
+<label:include file="frame/sider">
+</div>
+
+
+<label:include file="frame/footers">

@@ -1,0 +1,10 @@
+﻿<div class="Cobs Side-Search">
+	<div class="CobBar"><p><langs:search.quick.title></p></div>
+	<div class="CobContent"><div class="CobInner">
+<form name="frm_search_order" action="<linkurl:{@channel}.order.action>" method="get">
+<div class="sea-keyword"><cite>订单号</cite><input type="text" class="keyword" name="orderno" value="" size="10" maxlength="50" /></div>
+<div class="sea-button"><input type="submit" class="sea-btn" value="<langs:search.quick.submit>" style="margin-right:10px;" /> <a class="act act-search" href="<linkurl:{@channel}.order>"><langs:search.advance></a></div>
+</form>
+	</div></div>
+	<div class="CobFooter"><p></p></div>
+</div>

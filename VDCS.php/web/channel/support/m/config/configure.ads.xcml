@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>action</frame>
+		
+		<table.name>dbs_ads</table.name>
+		<table.name.note>dbs_ads_note</table.name.note>
+		<table.prefix>a_</table.prefix>
+		<table.field.id>a_id</table.field.id>
+		<table.field.defineid>adsid</table.field.defineid>
+		<table.fields.value>id=a_id</table.fields.value>
+		<table.fields.add>adsid,a_type,a_name,a_link,a_text,a_status,a_islock,a_tim,a_total_view,a_total_day,a_total_week,a_total_month</table.fields.add>
+		<table.fields.edit>a_name,a_type,a_link,a_text,a_link,a_status,a_islock,a_tim,a_total_view</table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.order>a_id desc</list.table.order>
+		<list.table.orders>a_id asc</list.table.orders>
+		<list.handle.select.option>hide,show,lock,unlock,delete</list.handle.select.option>
+		<list.handle.sql.hide>update dbs_ads set a_hidden=0 where a_id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.show>update dbs_ads set a_hidden=1 where a_id in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.lock>update dbs_ads set a_islock=1 where a_id in ({$ids})</list.handle.sql.lock>
+		<list.handle.sql.unlock>update dbs_ads set a_islock=0 where a_id in ({$ids})</list.handle.sql.unlock>
+		<list.handle.sql.delete>delete from dbs_ads where a_id in ({$ids})$$$delete from dbs_ads_note where adsid in (select adsid from dbs_ads where a_id in ({$ids}))</list.handle.sql.delete>
+	</config>
+	
+	<lang>
+		<title><![CDATA[广告管理]]></title>
+		<title.name><![CDATA[广告列表]]></title.name>
+		<title.list><![CDATA[广告列表]]></title.list>
+		<title.list.><![CDATA[广告列表]]></title.list.>
+		<title.add><![CDATA[添加广告]]></title.add>
+		<title.edit><![CDATA[编辑广告]]></title.edit>
+		<title.update><![CDATA[广告更新]]></title.update>
+		
+		<error.exist><![CDATA[您要添加的广告已经存在！]]></error.exist>
+		<error.not.exist><![CDATA[您要编辑的广告不存在！]]></error.not.exist>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 个广告！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 个广告！]]></handle.ok.edit>
+ 		<handle.ok.delete><![CDATA[成功删除了 {$count} 个广告！]]></handle.ok.delete>
+ 		<handle.ok.hide><![CDATA[成功隐藏了 {$count} 个广告！]]></handle.ok.hide>
+ 		<handle.ok.show><![CDATA[成功显示了 {$count} 个广告！]]></handle.ok.show>
+ 		<handle.ok.lock><![CDATA[成功锁定了 {$count} 个广告！]]></handle.ok.lock>
+ 		<handle.ok.unlock><![CDATA[成功解锁了 {$count} 个广告！]]></handle.ok.unlock>
+		<handle.ok.update><![CDATA[成功更新了所有广告点击统计！]]></handle.ok.update>
+	</lang>
+	
+	<template>
+		<list><![CDATA[
+<control:ui.value("listbox.heads")>
+<control:ui.value("list.bar.tr")>
+<control:ui.value("list.bar.id")>
+<td class="bar-topic">广告名称</td>
+<td class="bar-data">点击</td>
+<td class="bar-status"><exec:langs("title.status")></td>
+<td class="bar-handle w100"><exec:langs("title.handle")></td>
+<control:ui.value("list.bar.sd")>
+</tr>
+<loop:list>
+<control:ui.value("list.row.tr")>
+<control:ui.value("list.row.id")>
+<td class="row-topic"><a href="[item:a_link]" target="_blank">[item:a_name]</a></td>
+<td class="row-data"><font class="light">[item:a_total_view]</font> 次</td>
+<td class="row-status"><control:dict("data.hide","[item:<var:table.prefix>status]")> <control:dict("data.lock","[item:<var:table.prefix>islock]")></td>
+<td class="row-handle"><a href="<var:url.edit>"><exec:langs("action.edit")></a> <a href="<exec:url("action=build&id=[item:id]")>">生成代码</a></td>
+<control:ui.value("list.row.sd")>
+</tr>
+</loop>
+<control:ui.value("listbox.ends")>
+]]></list>
+		<menu.action><![CDATA[
+@@@title=广告管理;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("action=add")>">添加广告</a></li>
+<li><a href="<exec:url("action=update")>">统计更新</a></li>
+</ul>
+</div>
+]]></menu.action>
+	</template>
+</xcml>

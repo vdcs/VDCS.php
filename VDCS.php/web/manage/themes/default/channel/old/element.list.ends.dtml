@@ -1,0 +1,6 @@
+</table>
+</div></div>
+<div class="BlockBody BlockDof"><div class="BlockInner"><paging:string><control:ui.form("select.buttons","{$$var:select.option}")></div></div>
+<div class="BlockFooter"><p></p></div>
+<control:ui.form("end")>
+</div>

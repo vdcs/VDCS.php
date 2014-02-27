@@ -1,0 +1,38 @@
+<label:include file="/inc/header.html5">
+<head>
+<label:include file="/inc/header.meta5">
+<title><app:web.name> - 安全提示</title>
+<label:include file="/inc/header.style5">
+<label:include script="<url:manage.themes>login/ban.css" type="css">
+<label:include file="/inc/header.script">
+<label:include script="<web:script.public>.js">
+</head>
+<body>
+
+<div class="box_ban">
+	<div class="icon"></div>
+	<h2><t>系统提示</t></h2>
+	<h4><p>未授权的IP(<i><var:ip></i>)接入！</p></h4>
+	<h6>&copy; <a href="<url:root>"><app:web.name></a> 版权所有</h6>
+</div>
+
+<script type="text/javascript">
+<!--
+$(function(){
+	if(top.location!=self.location) top.location=self.location;
+	
+	var jbox=$('.box_ban');
+	jbox.css('float','left');
+	var _resize=function(){
+		var _top=($(window).height()-jbox.height())/2,_left=($(window).width()-jbox.width())/2;
+		jbox.css({top:_top,left:_left});
+	};
+	_resize();
+	$(window).resize(_resize);
+});
+//-->
+</script>
+
+</body>
+</html>
+<!-- Processed in <web:stat.exectime> s, <web:stat.query> queries. Gzip <web:stat.gzip>, Memory usage <web:stat.memory>. -->

@@ -1,0 +1,23 @@
+
+
+/*#######################*/
+.contacts li{height:65px;border-top:1px dashed #ddd;padding-top:10px;margin:8px 0;position:relative;}
+.contacts li:first-child{border-top:0;}
+.contacts li.sn1 {border-top:none;}
+.contacts li .avatar{width:50px;float:left;}
+.contacts li .info {width:400px;margin-left:80px;}
+.contacts li .info h2 {font-size:16px;color:#73514F;margin-bottom:10px;}
+.contacts li .info h2 t{display:inline-block;width:150px;}
+.contacts li .info p{color:#999;font-size:13px;height:22px;}
+.contacts li opt{width:180px;text-align:left;position:absolute;top:30px;right:20px;}
+.contacts li opt .btn{margin-right:10px;}
+.contacts li .follow_action{padding-left:10px;overflow:hidden;width:565px;}
+.contacts li .follow_action .follow_action_teams{float:left;line-height:25px;}
+.contacts li .follow_action .follow_action_teams a.teams{color:#B1B1B1;}
+.contacts li .follow_action .follow_action_teams span.team {font-size:13px;color:#B1B1B1;padding-right:15px;background:url(../../images/t/hots_arrow.png) no-repeat right -10px;}
+.contacts li .follow_action .follow_action_teams span.team:hover{cursor:pointer;}
+.follow_action .follow_action_teams div.editGroups{width:100px;position:absolute;border:1px solid #ccc;background:#eee;}
+.follow_action .follow_action_teams div.allGroups p{padding-left:5px;}
+.follow_action .follow_action_teams div.allGroups p:hover{cursor:pointer;background:#F8F6F6;}
+.follow_action .follow_action_teams div.allGroups p input:hover{cursor:pointer;}
+

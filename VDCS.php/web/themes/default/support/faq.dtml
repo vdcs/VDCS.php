@@ -1,0 +1,16 @@
+﻿<label:include file="frame/headers">
+
+
+<div class="cont">
+<div class="pages">
+<h2><t><app:web.name> - <web:var.title></t></h2>
+<label:include file="/inc/faq/faq.head">
+<loop:faq>
+<label:include file="/inc/faq/faq.item">
+</loop>
+<label:include file="/inc/faq/faq.foot">
+</div>
+</div>
+
+
+<label:include file="frame/footers">

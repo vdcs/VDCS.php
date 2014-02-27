@@ -1,0 +1,6 @@
+<?
+class ChannelSupportIndex extends ChannelSupportFaq
+{
+	
+}
+?>

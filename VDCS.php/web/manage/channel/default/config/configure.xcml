@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[管理]]></title.name>
+	</lang>
+	
+	<template>
+	</template>
+</xcml>

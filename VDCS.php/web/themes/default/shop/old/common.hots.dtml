@@ -1,0 +1,10 @@
+<div class="box">
+	<h2><t><langs:chn.tit.hot></t></h2>
+	<div class="cont">
+<div class="StructHots"><ul>
+<label:block("{@channel}","res=hot;row=8;cache=;t=ci")>
+<li class="sn[item:sn]"><cite>[item:total.buy]</cite><a href="[item:linkurl]">[item:topic!html!40]</a></li>
+</label:end>
+</ul></div>
+	</div></div>
+</div>

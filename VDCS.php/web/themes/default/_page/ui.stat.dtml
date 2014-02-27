@@ -1,0 +1,375 @@
+<label:include file="frame/headers">
+
+
+<label:include script="comm/ui.stat.css" type="css">
+<label:include script="comm/process.css" type="css">
+<label:include script="jquery/circularstat.js">
+
+<div class="frame">
+<div class="side">
+
+
+</div>
+<div class="cont">
+
+	<div class="box">
+		<h2><t>Statistical Elements</t></h2>
+		<div class="con">
+
+<h4 class="sub"><span>Summary Stats</span></h4>
+<ul class="ui-stat-container">
+	<li>
+		<a href="javascript:;" class="ui-stat summary">
+			<span class="icon">
+				<i class="icon-stats"></i>
+			</span>
+			<span class="digit">
+				<span class="text">Current Balance</span>
+				$6,788
+			</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat summary">
+			<span class="icon">
+				<i class="icon-fire"></i>
+			</span>
+			<span class="digit">
+				<span class="text">Calories Burned</span>
+				120,45 kcal
+			</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat summary">
+			<span class="icon">
+				<i class="icon-database"></i>
+			</span>
+			<span class="digit">
+				<span class="text">Database Backups</span>
+				88
+			</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat summary">
+			<span class="icon">
+				<i class="icon-hdd"></i>
+			</span>
+			<span class="digit">
+				<span class="text">Available Disk</span>
+				120 TB
+			</span>
+		</a>
+	</li>
+</ul>
+
+<h4 class="sub"><span>Summary Stats - Circle</span></h4>
+<ul class="ui-stat-container">
+	<li>
+		<a href="javascript:;" class="ui-stat summary">
+			<span class="icon icon-circle">
+				<i class="icon-stats"></i>
+			</span>
+			<span class="digit">
+				<span class="text">Current Balance</span>
+				$6,788
+			</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat summary">
+			<span class="icon icon-circle bg-red">
+				<i class="icon-fire"></i>
+			</span>
+			<span class="digit">
+				<span class="text">Calories Burned</span>
+				120,45 kcal
+			</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat summary">
+			<span class="icon icon-circle bg-orange">
+				<i class="icon-database"></i>
+			</span>
+			<span class="digit">
+				<span class="text">Database Backups</span>
+				88
+			</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat summary">
+			<span class="icon icon-circle bg-blue">
+				<i class="icon-hdd"></i>
+			</span>
+			<span class="digit">
+				<span class="text">Available Disk</span>
+				120 TB
+			</span>
+		</a>
+	</li>
+</ul>
+
+<h4 class="sub"><span>Summary Stats - Square</span></h4>
+<ul class="ui-stat-container">
+	<li>
+		<a href="javascript:;" class="ui-stat summary">
+			<span class="icon icon-square bg-green">
+				<i class="icon-stats"></i>
+			</span>
+			<span class="digit">
+				<span class="text">Current Balance</span>
+				$6,788
+			</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat summary">
+			<span class="icon icon-square bg-red">
+				<i class="icon-fire"></i>
+			</span>
+			<span class="digit">
+				<span class="text">Calories Burned</span>
+				120,45 kcal
+			</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat summary">
+			<span class="icon icon-square bg-orange">
+				<i class="icon-database"></i>
+			</span>
+			<span class="digit">
+				<span class="text">Database Backups</span>
+				88
+			</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat summary">
+			<span class="icon icon-square bg-blue">
+				<i class="icon-hdd"></i>
+			</span>
+			<span class="digit">
+				<span class="text">Available Disk</span>
+				120 TB
+			</span>
+		</a>
+	</li>
+</ul>
+
+<h4 class="sub"><span>Circular Stats</span></h4>
+<ul class="ui-stat-container">
+	<li>
+		<a href="javascript:;" class="ui-stat circular">
+			<span rel="tooltip" title="111/220 Files Uploaded" 
+				data-provide="circular" 
+				data-fill-color="#08c" 
+				data-value="169" 
+				data-max-value="220" 
+				data-radius="64" 
+				data-thickness="21" 
+				data-percent="false"
+			></span>
+			<span class="text">Files Uploaded</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat circular">
+			<span rel="tooltip" title="11.55% Survival Rate" 
+				data-provide="circular" 
+				data-decimals="2" 
+				data-fill-color="#769f5d" 
+				data-value="11.55" 
+				data-radius="56" 
+				data-thickness="15"
+			></span>
+			<span class="text">Survival Rate</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat circular">
+			<span rel="tooltip" title="76.88% Chance of Approval" 
+				data-provide="circular" 
+				data-decimals="2" 
+				data-fill-color="#e95d3c" 
+				data-value="76.88" 
+				data-radius="48" 
+				data-thickness="11"
+			></span>
+			<span class="text">Chance of Approval</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat circular">
+			<span rel="tooltip" title="34.2% Server Load" 
+				data-provide="circular" 
+				data-decimals="1" 
+				data-fill-color="#ffa200" 
+				data-value="34.2" 
+				data-radius="40" 
+				data-thickness="7"
+			></span>
+			<span class="text">Server Load</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat circular">
+			<span rel="tooltip" title="78% Disk Space Usage" 
+				data-provide="circular" 
+				data-fill-color="#666" 
+				data-value="78" 
+				data-radius="32" 
+				data-thickness="4"
+			></span>
+			<span class="text">Disk Space Usage</span>
+		</a>
+	</li>
+</ul>
+
+<h4 class="sub"><span>Circular Stats - Inline</span></h4>
+<ul class="ui-stat-container">
+	<li>
+		<a href="javascript:;" class="ui-stat circular inline">
+			<span rel="tooltip" title="34.2% Server Load" 
+				data-provide="circular" 
+				data-decimals="1" 
+				data-fill-color="#ffa200" 
+				data-value="34.2" 
+				data-radius="40" 
+				data-thickness="7"
+			></span>
+			<span class="text">Server Load</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat circular inline">
+			<span rel="tooltip" title="76.88% Chance of Approval" 
+				data-provide="circular" 
+				data-decimals="2" 
+				data-fill-color="#e95d3c" 
+				data-value="76.88" 
+				data-radius="48" 
+				data-thickness="11"
+			></span>
+			<span class="text">Chance of Approval</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat circular inline">
+			<span rel="tooltip" title="11.55% Survival Rate" 
+				data-provide="circular" 
+				data-decimals="2" 
+				data-fill-color="#769f5d" 
+				data-value="11.55" 
+				data-radius="56" 
+				data-thickness="15"
+			></span>
+			<span class="text">Survival Rate</span>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat circular inline">
+			<span rel="tooltip" title="111/220 Files Uploaded" 
+				data-provide="circular" 
+				data-fill-color="#08c" 
+				data-value="169" 
+				data-max-value="220" 
+				data-radius="64" 
+				data-thickness="21" 
+				data-percent="false"
+			></span>
+			<span class="text">Files Uploaded</span>
+		</a>
+	</li>
+</ul>
+
+<h4 class="sub"><span>Circular Stats - API</span></h4>
+<div style=" text-align: center;">
+	<div class="btn-toolbar">
+		<span id="cs-val-btn" class="btn">Change Value</span>
+		<span id="cs-rad-btn" class="btn">Change Radius</span>
+		<span id="cs-th-btn" class="btn">Change Thickness</span>
+		<span id="cs-dec-btn" class="btn">Change Decimals</span>
+		<span id="cs-col-btn" class="btn">Change Fill Color</span>
+	</div>
+	<sh></sh>
+	<ul class="ui-stat-container">
+		<li>
+			<a href="javascript:;" class="ui-stat circular inline">
+				<span id="cs-api-sample" data-provide="circular" data-value="25"></span>
+			</a>
+		</li>
+	</ul>
+</div>
+
+<h4 class="sub"><span>Progress Stats</span></h4>
+<ul class="ui-stat-container">
+	<li>
+		<a href="javascript:;" class="ui-stat progress-stat">
+			<span class="text"><i class="icon-feather"></i> Designs Completed <span>130/200</span></span>
+			<div class="progress progress-mini progress-info progress-striped active">
+				<div class="bar" style="width: 65%;"></div>
+			</div>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat progress-stat">
+			<span class="text"><i class="icos-cat"></i> Cats Tammed <span>77%</span></span>
+			<div class="progress progress-mini progress-info progress-striped active">
+				<div class="bar" style="width: 77%;"></div>
+			</div>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat progress-stat">
+			<span class="text"><i class="icon-download"></i> Download Progress <span>136/400 Mb</span></span>
+			<div class="progress progress-mini progress-success progress-striped active">
+				<div class="bar" style="width: 34%;"></div>
+			</div>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="ui-stat progress-stat">
+			<span class="text"><i class="icon-wrench"></i> Defects Repaired <span>54%</span></span>
+			<div class="progress progress-mini progress-warning progress-striped active">
+				<div class="bar" style="width: 54%;"></div>
+			</div>
+		</a>
+	</li>
+</ul>
+
+
+		</div>
+	</div>
+
+</div>
+</div>
+<script type="text/javascript">
+;(function( $, window, document, undefined ) {
+	$(document).ready(function() {
+		var cs = $('#cs-api-sample');
+		$( '#cs-val-btn' ).on( 'click', function() {
+			cs.circularStat( 'option', 'value', (Math.random() * 75 + 25 ));
+		});
+		$( '#cs-rad-btn' ).on( 'click', function() {
+			cs.circularStat( 'option', 'radius', (Math.random() * 68 + 32 ));
+		});
+		$( '#cs-dec-btn' ).on( 'click', function() {
+			cs.circularStat( 'option', 'decimals', Math.floor(Math.random() * 4 ));
+		});
+		$( '#cs-th-btn' ).on( 'click', function() {
+			cs.circularStat( 'option', 'thickness', (cs.circularStat( 'option', 'radius') * 0.2 ) + Math.random() * (cs.circularStat( 'option', 'radius') * 0.2 ) );
+		});
+		$( '#cs-col-btn' ).on( 'click', function() {
+			cs.circularStat( 'option', 'fillColor', '#'+(Math.random()*0xFFFFFF<<0).toString(16) );
+		});
+	});
+	
+}) (jQuery, window, document);
+</script>
+
+
+<label:include file="frame/footers">

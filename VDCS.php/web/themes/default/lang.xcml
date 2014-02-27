@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>common,index,list,view</node>
+	</configure>
+	<common>
+		<test><![CDATA[common test value]]></test>
+	</common>
+	<index>
+		<test><![CDATA[index test value]]></test>
+	</index>
+	<list>
+		<test><![CDATA[list test value]]></test>
+	</list>
+	<view>
+		<test><![CDATA[view test value]]></test>
+	</view>
+</xcml>

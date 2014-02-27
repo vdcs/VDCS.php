@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>channel,rootid,classid,name,levelid,fatherid,popedom,issp,sp_popedom,sp_integral,sp_emoney,id,level,ids,linkurl,space,total</field>
+	</configure>
+</xcml>

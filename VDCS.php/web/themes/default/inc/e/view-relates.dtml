@@ -1,0 +1,3 @@
+	<div class="partof clr">
+		<l><label:include file="/inc/view/relate.context"></l>
+	</div>

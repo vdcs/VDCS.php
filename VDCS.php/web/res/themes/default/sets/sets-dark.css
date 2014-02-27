@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/*
+body{background-color:#333;}
+*/
+
+
+#menu{}
+#main{background-color:#FFF;padding-bottom:15px;}
+
+.framer{background-color:transparent;}
+#main .conts{margin-right:15px;}
+
+
+/*
+#navbar,
+.sets_nav{color:#CCC;}
+#navbar a,
+.sets_nav a{color:#AAA;}
+#navbar a:hover,
+.sets_nav a:hover{color:#FFF;}
+*/
+
+/*
+.sets_nav{background-color:#F7F7F7;}
+*/

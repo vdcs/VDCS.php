@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="struct">
+	<configure>
+		<node>item</node>
+	</configure>
+	<item>
+		<__key><![CDATA[config.base]]></__key>
+		<__name><![CDATA[基本配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.var><![CDATA[名称设定			###type~bar]]></bar.var>
+		<pre.name><![CDATA[频道简称			###property.min~1]]></pre.name>
+		<pre.names><![CDATA[单位名称			###property.min~1]]></pre.names>
+		<pre.unit><![CDATA[单位量词			###property.min~1]]></pre.unit>
+		<pre.act><![CDATA[单位动作			###property.min~1]]></pre.act>
+		<bar.var.data><![CDATA[图片名称设定		###type~bar]]></bar.var.data>
+		<pre.name.data><![CDATA[图片简称		###property.min~1]]></pre.name.data>
+		<pre.names.data><![CDATA[图片名称		###property.min~1]]></pre.names.data>
+		<pre.unit.data><![CDATA[图片单位量词		###property.min~1]]></pre.unit.data>
+		<pre.act.data><![CDATA[图片单位动作		###property.min~1]]></pre.act.data>
+		<bar.title><![CDATA[标题设定			###type~bar]]></bar.title>
+		<var.title><![CDATA[首页			###property.min~1]]></var.title>
+		<var.title.list><![CDATA[列表页			###property.min~1]]></var.title.list>
+		<var.title.view><![CDATA[浏览页			###property.min~1]]></var.title.view>
+		<var.title.view.data><![CDATA[浏览单页		###property.min~1]]></var.title.view.data>
+		<var.title.search><![CDATA[搜索页		###property.min~1]]></var.title.search>
+		<var.title.class><![CDATA[分类页		###property.min~1]]></var.title.class>
+	</item>
+	<item>
+		<__key><![CDATA[config.config]]></__key>
+		<__name><![CDATA[高级配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.url><![CDATA[SEO设定			###type~bar]]></bar.url>
+		<config.url><![CDATA[URL模式			###type~radio		^att~<control:att("file","seo.setting.mode")>]]></config.url>
+		<bar.config><![CDATA[前台发布设定		###type~bar]]></bar.config>
+		<config.put><![CDATA[是否可发布			###type~radio		^property.type~int	^att~<control:att("file","put")>]]></config.put>
+		<config.put.status><![CDATA[发布审核		###type~radio		^property.type~int	^att~<control:att("dict","data.audit")>]]></config.put.status>
+		<config.put.premium><![CDATA[发布奖励		###type~radio		^property.type~int	^att~<control:att("file","put.premium")>]]></config.put.premium>
+		<config.put.audit><![CDATA[审核可操作		###type~checkbox	^property.type~string	^att~<control:att("file","put.audit")>]]></config.put.audit>
+		<bar.put.premium><![CDATA[发布奖励设定		###type~bar]]></bar.put.premium>
+		<config.put.premium.emoney><![CDATA[奖励货币	###property.type~int	^property.min~		^explain~<app:unit.emoney>$$$]]></config.put.premium.emoney>
+		<config.put.premium.points><![CDATA[奖励积分	###property.type~int	^property.min~		^explain~<app:unit.points>$$$]]></config.put.premium.points>
+	</item>
+	<item>
+		<__key><![CDATA[config.url]]></__key>
+		<__name><![CDATA[地址配置]]></__name>
+		<__file><![CDATA[configure]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.url.script><![CDATA[动态URL地址配置	###type~bar]]></bar.url.script>
+		<url.script.index><![CDATA[首页URL		###property.min~1	^style~size=60]]></url.script.index>
+		<url.script.list><![CDATA[列表页URL		###property.min~1	^style~size=60]]></url.script.list>
+		<url.script.list.page><![CDATA[列表分页URL	###property.min~1	^style~size=60]]></url.script.list.page>
+		<url.script.view><![CDATA[浏览页URL		###property.min~1	^style~size=60]]></url.script.view>
+		<url.script.view.data><![CDATA[图片浏览页URL	###property.min~1	^style~size=60]]></url.script.view.data>
+		<bar.url.rewrite><![CDATA[静态URL地址配置(ISAPI Rewrite)		###type~bar]]></bar.url.rewrite>
+		<url.rewrite.index><![CDATA[首页URL		###property.min~1	^style~size=60]]></url.rewrite.index>
+		<url.rewrite.list><![CDATA[列表页URL		###property.min~1	^style~size=60]]></url.rewrite.list>
+		<url.rewrite.list.page><![CDATA[列表分页URL	###property.min~1	^style~size=60]]></url.rewrite.list.page>
+		<url.rewrite.view><![CDATA[浏览页URL		###property.min~1	^style~size=60]]></url.rewrite.view>
+		<url.rewrite.view.data><![CDATA[图片浏览页URL	###property.min~1	^style~size=60]]></url.rewrite.view.data>
+	</item>
+</xcml>
+<!--
+		<bar.num><![CDATA[数值设定			###type~bar]]></bar.num>
+		<num.pic.width><![CDATA[小图片宽度		###property.min~1	^explain~像素$$$]]></num.pic.width>
+		<num.pic.height><![CDATA[小图片高度		###property.min~1	^explain~像素$$$]]></num.pic.height>
+-->

@@ -1,0 +1,3 @@
+<label:include file="/header.blank">
+<div id="test-box" class="al"></div>
+<!--<center class="main">-->

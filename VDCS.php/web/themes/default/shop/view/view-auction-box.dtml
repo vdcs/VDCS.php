@@ -1,0 +1,26 @@
+
+<div id="dialogTips" title="提示信息" class="hide">
+<div class="ac" style="margin:20px 0;"><span name="message" class="big h"></span></div>
+</div>
+<div id="dialogAgentSet" title="代理竞价设置" class="hide">
+	<table cellspacing="0" cellpadding="4" class="list lists">
+	<tr class="row">
+	<td width="30%">最高竞拍价：</td>
+	<td width="70%"><input id="agent_price_max" class="price" type="text" value="0.00" style="width:80px;" /><span class="money"><em><app:unit.money></em></span></td>
+	</tr>
+	<tr class="row">
+	<td>竞价幅度：</td>
+	<td><input id="agent_price_degree" class="price" type="text" value="0.00" style="width:80px;" /><span class="money"><em><app:unit.money></em></span></td>
+	</tr>
+	<tr class="row">
+	<td></td>
+	<td>竞价幅度为0元则使用当前竞价幅度</td>
+	</tr>
+	<tr class="row blank">
+	<td></td>
+	<td><span id="agent_message" class="light">&nbsp;</span></td>
+	</tr>
+	</table>
+	<div class="space"></div>
+	<div class="TipsClew"><p>提示：代理竞价设置后将不可更改！</p></div>
+</div>

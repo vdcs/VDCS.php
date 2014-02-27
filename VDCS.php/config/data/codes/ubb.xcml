@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,type,regex,html</field>
+	</configure>
+	<!--
+	<item>
+		<key>url</key>
+		<type>1</type>
+		<regex><![CDATA[\[url\](.[url]*)\[\/url\]]]></regex>
+		<html><![CDATA[$1]]></html>
+	</item>
+	<item>
+		<key>url.name</key>
+		<type>2</type>
+		<regex><![CDATA[\[url=(.[url]*)\](.+?)\[\/url\]]]></regex>
+		<html><![CDATA[$2 $1]]></html>
+	</item>
+	-->
+	
+	<!-- ############################## -->
+	<!-- ############ fly ############# -->
+	<item>
+		<key>fly</key>
+		<type>1</type>
+		<regex><![CDATA[\[fly\](.+?)\[\/fly\]]]></regex>
+		<html><![CDATA[<p><marquee width="100%" behavior="alternate" scrollamount="3">$1</marquee></p>]]></html>
+	</item>
+	<item>
+		<key>move</key>
+		<type>1</type>
+		<regex><![CDATA[\[move\](.+?)\[\/move\]]]></regex>
+		<html><![CDATA[<p><marquee scrollamount="3">$1</marquee></p>]]></html>
+	</item>
+	
+	<!-- ########### quote ############ -->
+	<item>
+		<key>quote.head</key>
+		<type>1</type>
+		<regex><![CDATA[(\[quote\])]]></regex>
+		<html><![CDATA[<div class="codes_quote"><div class="inner"><h3><em>Quote:</em></h3><h4>]]></html>
+	</item>
+	<item>
+		<key>quote.head.infos</key>
+		<type>2</type>
+		<regex><![CDATA[\[quote=(.+?),(.+?)\]]]></regex>
+		<html><![CDATA[<div class="codes_quote"><div class="inner"><h3><em>Quote:</em> <t>以下是引用 <u>$1</u> 于 <i class="time">$2</i> 的发言</h3><h4>]]></html>
+	</item>
+	<item>
+		<key>quote.head.info</key>
+		<type>1</type>
+		<regex><![CDATA[\[quote=(.[^\[]*)\]]]></regex>
+		<html><![CDATA[<div class="codes_quote"><div class="inner"><h3><em>Quote:</em> <t>以下是引用 <u>$1</u> 的发言</h3><h4>]]></html>
+	</item>
+	<item>
+		<key>quote.end</key>
+		<type>1</type>
+		<regex><![CDATA[(\[\/quote\])]]></regex>
+		<html><![CDATA[</h4></div></div>]]></html>
+	</item>
+	
+	<!-- ############ code ############ -->
+	<item>
+		<key>code.head</key>
+		<type>1</type>
+		<regex><![CDATA[(\[code\])]]></regex>
+		<html><![CDATA[<div class="codes_code"><div class="inner"><h3><em>Code:</em></h3><h4>]]></html>
+	</item>
+	<item>
+		<key>code.head.type</key>
+		<type>1</type>
+		<regex><![CDATA[\[code=(.+?)\]]]></regex>
+		<html><![CDATA[<div class="codes_code"><div class="inner"><h3><em>Code:</em><t>$1</t></h3><h4>]]></html>
+	</item>
+	<item>
+		<key>quote.end</key>
+		<type>1</type>
+		<regex><![CDATA[(\[\/code\])]]></regex>
+		<html><![CDATA[</h4></div></div>]]></html>
+	</item>
+	
+	
+	<!-- ############################## -->
+	<item>
+		<key>url</key>
+		<type>1</type>
+		<regex><![CDATA[\[url\](.[url]*)\[\/url\]]]></regex>
+		<html><![CDATA[<a class="lnk lnk-url" href="$1" target="_blank">$1</a>]]></html>
+	</item>
+	<item>
+		<key>url.name</key>
+		<type>2</type>
+		<regex><![CDATA[\[url=(.[url]*)\](.+?)\[\/url\]]]></regex>
+		<html><![CDATA[<a class="lnk lnk-url" href="$1" target="_blank">$2</a>]]></html>
+	</item>
+	<item>
+		<key>email</key>
+		<type>1</type>
+		<regex><![CDATA[\[email\](\S+\@.*)\[\/email\]]]></regex>
+		<html><![CDATA[<a class="lnk lnk-email" href="mailto:$1">$1</a>]]></html>
+	</item>
+	
+	
+	<!-- ############################## -->
+	<!-- ############################## -->
+	<item>
+		<key>center</key>
+		<type>1</type>
+		<regex><![CDATA[\[center\](.+?)\[\/center\]]]></regex>
+		<html><![CDATA[<center>$1</center>]]></html>
+	</item>
+	<item>
+		<key>align</key>
+		<type>1</type>
+		<regex><![CDATA[\[align=(left|center|right)\](.+?)\[\/align\]]]></regex>
+		<html><![CDATA[<span style="text-align:$1;">$2</span>]]></html>
+	</item>
+	<item>
+		<key>align.begin</key>
+		<type>1</type>
+		<regex><![CDATA[\[align=(left|center|right)\]]]></regex>
+		<html><![CDATA[<span style="text-align:$1;">]]></html>
+	</item>
+	<item>
+		<key>align.end</key>
+		<type>1</type>
+		<regex><![CDATA[\[\/align\]]]></regex>
+		<html><![CDATA[</span>]]></html>
+	</item>
+	
+	<item>
+		<key>dp</key>
+		<type>1</type>
+		<regex><![CDATA[\[(\/?(div|p))=(justify|left|center|right)\]]]></regex>
+		<html><![CDATA[<$1 align="$3">]]></html>
+	</item>
+	<item>
+		<key>p</key>
+		<type>1</type>
+		<regex><![CDATA[\[p\](.+?)\[\/p\]]]></regex>
+		<html><![CDATA[<p>$1</p>]]></html>
+	</item>
+	<item>
+		<key>div.class</key>
+		<type>1</type>
+		<regex><![CDATA[\[div.([a-z][0-9][-_])\](.+?)\[\/div\]]]></regex>
+		<html><![CDATA[<div class="$1">$2</div>]]></html>
+	</item>
+	<item>
+		<key>div</key>
+		<type>1</type>
+		<regex><![CDATA[\[div\](.+?)\[\/div\]]]></regex>
+		<html><![CDATA[<p>$1</p>]]></html>
+	</item>
+	<item>
+		<key>strong</key>
+		<type>1</type>
+		<regex><![CDATA[\[strong\](.+?)\[\/strong\]]]></regex>
+		<html><![CDATA[<strong>$1</strong>]]></html>
+	</item>
+	<item>
+		<key>b</key>
+		<type>1</type>
+		<regex><![CDATA[\[b\](.+?)\[\/b\]]]></regex>
+		<html><![CDATA[<b>$1</b>]]></html>
+	</item>
+	<item>
+		<key>i</key>
+		<type>1</type>
+		<regex><![CDATA[\[i\](.+?)\[\/i\]]]></regex>
+		<html><![CDATA[<i>$1</i>]]></html>
+	</item>
+	<item>
+		<key>u</key>
+		<type>1</type>
+		<regex><![CDATA[\[u\](.+?)\[\/u\]]]></regex>
+		<html><![CDATA[<u>$1</u>]]></html>
+	</item>
+	<item>
+		<key>strike</key>
+		<type>1</type>
+		<regex><![CDATA[\[strike\](.+?)\[\/strike\]]]></regex>
+		<html><![CDATA[<strike>$1</strike>]]></html>
+	</item>
+	<item>
+		<key>s</key>
+		<type>1</type>
+		<regex><![CDATA[\[s\](.+?)\[\/s\]]]></regex>
+		<html><![CDATA[<del>$1</del>]]></html>
+	</item>
+	
+	
+	<!-- ############################## -->
+	<item>
+		<key>color</key>
+		<type>1</type>
+		<regex><![CDATA[\[color=(.[key]*)\](.+?)\[\/color\]]]></regex>
+		<html><![CDATA[<span color="$1">$2</span>]]></html>
+	</item>
+	<item>
+		<key>face</key>
+		<type>1</type>
+		<regex><![CDATA[\[face=(.[key]*)\](.+?)\[\/face\]]]></regex>
+		<html><![CDATA[<span face="$1">$2</span>]]></html>
+	</item>
+	<item>
+		<key>font</key>
+		<type>1</type>
+		<regex><![CDATA[\[font=(.+?)\](.+?)\[\/font\]]]></regex>
+		<html><![CDATA[<span style="font-family:$1;">$2</span>]]></html>
+	</item>
+	<item>
+		<key>font.begin</key>
+		<type>1</type>
+		<regex><![CDATA[\[font=(.+?)\]]]></regex>
+		<html><![CDATA[<span style="font-family:$1;">]]></html>
+	</item>
+	<item>
+		<key>size</key>
+		<type>1</type>
+		<regex><![CDATA[\[size=([1-7])\](.+?)\[\/size\]]]></regex>
+		<html><![CDATA[<span size="$1">$2</font>]]></html>
+	</item>
+	<item>
+		<key>sizes</key>
+		<type>1</type>
+		<regex><![CDATA[\[size=(.+?)\](.+?)\[\/size\]]]></regex>
+		<html><![CDATA[<span style="font-size:$1;">$2</span>]]></html>
+	</item>
+	<item>
+		<key>size.begin</key>
+		<type>1</type>
+		<regex><![CDATA[\[size=(.+?)\]]]></regex>
+		<html><![CDATA[<span style="font-size:$1;">]]></html>
+	</item>
+	<item>
+		<key>font.one</key>
+		<type>1</type>
+		<regex><![CDATA[\[(\/)?(color|face|font|size)\]]]></regex>
+		<html><![CDATA[<$1$2>
+]]></html>
+	</item>
+	
+	
+	<!-- ############################## -->
+	<!-- ############################## -->
+	<item>
+		<key>table.begins</key>
+		<type>1</type>
+		<regex><![CDATA[\[table=([0-9]*)(,(.+?))?\]]]></regex>
+		<html><![CDATA[<table style="width:$1px; background-color:$3;">
+]]></html>
+	</item>
+	<item>
+		<key>table.begins2</key>
+		<type>1</type>
+		<regex><![CDATA[\[table=(.+?)(,(.+?))?\]]]></regex>
+		<html><![CDATA[<table style="width:$1; background-color:$3;">
+]]></html>
+	</item>
+	<item>
+		<key>table.tds</key>
+		<type>1</type>
+		<regex><![CDATA[\[td=([0-9]*),([0-9]*)(,([0-9]*))?\](.+?)\[\/td\]]]></regex>
+		<html><![CDATA[<td cols="$1" rows="$2" style="width:$4px;">$5</td>
+]]></html>
+	</item>
+	<item>
+		<key>table.tds2</key>
+		<type>1</type>
+		<regex><![CDATA[\[td=([0-9]*),([0-9]*)(,(.+?))?\](.+?)\[\/td\]]]></regex>
+		<html><![CDATA[<td cols="$1" rows="$2" style="width:$4;">$5</td>
+]]></html>
+	</item>
+	<item>
+		<key>table.one</key>
+		<type>1</type>
+		<regex><![CDATA[\[(\/)?(table|tr|td)\]]]></regex>
+		<html><![CDATA[<$1$2>
+]]></html>
+	</item>
+	<!-- ############################## -->
+	<!-- ############################## -->
+	
+	
+	<!-- ############################## -->
+	<!-- ############################## -->
+	<item>
+		<key>img.upload</key>
+		<type>1</type>
+		<regex><![CDATA[\[img\](upload\/|\/upload\/)(.[file]*)\[\/img\]]]></regex>
+		<html><![CDATA[<p class="img"><img src="<app:url.upload>$2" data-type="upload" data-src="<app:url.upload>$2" /></p>]]></html>
+	</item>
+	<item>
+		<key>img</key>
+		<type>1</type>
+		<regex><![CDATA[\[img\](.[url]*)\[\/img\]]]></regex>
+		<html><![CDATA[<p class="img"><img src="$1" data-type="url" data-src="$1" /></p>]]></html>
+	</item>
+	<item>
+		<key>upload</key>
+		<type>2</type>
+		<regex><![CDATA[\[upload=(gif|jpg|bmp|png)\](.[url]*)\[\/upload\]]]></regex>
+		<html><![CDATA[<p class="img"><img src="$2" data-type="pic" data-src="$2" /></p>]]></html>
+	</item>
+	
+	
+	<!-- ############################## -->
+	<item>
+		<key>download.keyid</key>
+		<type>2</type>
+		<regex><![CDATA[\[download=(.[key]*)\]id\=([0-9]*)\[\/download\]]]></regex>
+		<html><![CDATA[<a class="lnk" style="background-image:url('<app:url.images>common/filetype/$1.gif');" 
+		href="<app:url.common>upload/download.html?id=$2">点击下载</a>]]></html>
+	</item>
+	<item>
+		<key>download.id</key>
+		<type>2</type>
+		<regex><![CDATA[\[download\]id\=([0-9]*)\[\/download\]]]></regex>
+		<html><![CDATA[<a class="lnk lnk-dl" href="<app:url.common>upload/download.html?id=$1">点击下载</a>]]></html>
+	</item>
+	<item>
+		<key>download.upload</key>
+		<type>2</type>
+		<regex><![CDATA[\[download\](upload\/|\/upload\/)(.[file]*)\[\/download\]]]></regex>
+		<html><![CDATA[<a class="lnk lnk-dl" href="$2">点击下载</a>]]></html>
+	</item>
+	<item>
+		<key>download</key>
+		<type>2</type>
+		<regex><![CDATA[\[download\](.[url]*)\[\/download\]]]></regex>
+		<html><![CDATA[<a class="lnk lnk-dl" href="$1">点击下载</a>]]></html>
+	</item>
+	
+	
+	<!-- ############################## -->
+	<item>
+		<key>flash.upload</key>
+		<type>1</type>
+		<regex><![CDATA[\[flash=*([0-9]*),*([0-9]*)\](upload\/|\/upload\/)(.[file]*)\[\/flash]]]></regex>
+		<html><![CDATA[<a class="lnk lnk-swf" href="<app:url.upload>$4" target="_blank">浏览此Flash</a>]]></html>
+	</item>
+	<item>
+		<key>flash</key>
+		<type>1</type>
+		<regex><![CDATA[\[flash=*([0-9]*),*([0-9]*)\](.[url]*)\[\/flash]]]></regex>
+		<html><![CDATA[<a class="lnk lnk-swf" href="$3" target="_blank">浏览此Flash</a>]]></html>
+	</item>
+	<item>
+		<key>flash.upload</key>
+		<type>1</type>
+		<regex><![CDATA[\[flash=*([0-9]*),*([0-9]*)\](upload\/|\/upload\/)(.[file]*)\[\/flash]]]></regex>
+		<html><![CDATA[<p><a class="lnk lnk-swf" href="<app:url.upload>$4" target="_blank">全屏欣赏</a></p>
+<p><OBJECT width="$1" height="$2" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codeBase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0">
+<PARAM NAME="movie" VALUE="<app:url.upload>$4">
+<PARAM NAME="quality" VALUE="high">
+<embed src="<app:url.upload>$4" width="$1" height="$2" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash"><app:url.upload>$3</embed>
+</OBJECT></p>]]></html>
+	</item>
+	<item>
+		<key>flash</key>
+		<type>1</type>
+		<regex><![CDATA[\[flash=*([0-9]*),*([0-9]*)\](.[url]*)\[\/flash]]]></regex>
+		<html><![CDATA[<p><a class="lnk lnk-swf" href="$3" target="_blank">全屏欣赏</a></p>
+<p><OBJECT width="$1" height="$2" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codeBase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0">
+<PARAM NAME="movie" VALUE="$3">
+<PARAM NAME="quality" VALUE="high">
+<embed src="$3" width="$1" height="$2" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash">$3</embed>
+</OBJECT></p>]]></html>
+	</item>
+	<item>
+		<key>qt</key>
+		<type>1</type>
+		<regex><![CDATA[\[qt=*([0-9]*),*([0-9]*)\](.[url]*)\[\/qt]]]></regex>
+		<html><![CDATA[<embed src="$3" width="$1" height="$2" autoplay="true" loop="false" controller="true" playeveryframe="false" cache="false" scale="TOFIT" bgcolor="#ededed" kioskmode="false" targetcache="false" pluginspage="http://www.apple.com/quicktime"></embed>]]></html>
+	</item>
+	<item>
+		<key>mp</key>
+		<type>1</type>
+		<regex><![CDATA[\[mp=*([0-9]*),*([0-9]*)\](.[url]*)\[\/mp]]]></regex>
+		<html><![CDATA[<p><object id="MediaPlayer" width="$1" height="$2" align="middle" classid="CLSID:22d6f312-b0f6-11d0-94ab-0080c74c7e95" class="OBJECT">
+<param name="ShowStatusBar" value="-1">
+<param name="Filename" value="$3">
+<embed filename="mp" src="$3" width="$1" height="$2" type="application/x-oleobject" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701"></embed>
+</object></p>]]></html>
+	</item>
+	<item>
+		<key>rm</key>
+		<type>1</type>
+		<regex><![CDATA[\[rm=*([0-9]*),*([0-9]*)\](.[url]*)\[\/rm]]]></regex>
+		<html><![CDATA[<p><OBJECT id="RAOCX" width="$1" height="$2" classid="clsid:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA" class="OBJECT">
+<PARAM NAME="SRC" VALUE="$3">
+<PARAM NAME="CONSOLE" VALUE="Clip1">
+<PARAM NAME="CONTROLS" VALUE="imagewindow">
+<PARAM NAME="AUTOSTART" VALUE="true">
+</OBJECT><br>
+<OBJECT id="video2" width="$1" height="32" classid="CLSID:CFCDAA03-8BE4-11CF-B84B-0020AFBBCCFA">
+<PARAM NAME="SRC" VALUE="$3">
+<PARAM NAME="AUTOSTART" VALUE="-1">
+<PARAM NAME="CONTROLS" VALUE="controlpanel">
+<PARAM NAME="CONSOLE" VALUE="Clip1">
+</OBJECT></p>]]></html>
+	</item>
+	
+	
+	<!-- ########## edit ########## -->
+	<item>
+		<key>edit</key>
+		<type>2</type>
+		<regex><![CDATA[\[edit\](.+?),(.*)\[\/edit\]]]></regex>
+		<html><![CDATA[<div class="codes_edit"><p>本贴已被 <u>$1</u> 于 <i class="time">$2</i> 编辑过</p></div>]]></html>
+	</item>
+	<item>
+		<key>edit.oneself</key>
+		<type>1</type>
+		<regex><![CDATA[\[edit\](.+?)\[\/edit\]]]></regex>
+		<html><![CDATA[<div class="codes_edit"><p>本贴已被 <u class="author">作者</u> 于 <i class="time">$1</i> 编辑过</p></div>]]></html>
+	</item>
+	
+	
+	<!-- ############################## -->
+	<item>
+		<key>br</key>
+		<type>0</type>
+		<regex><![CDATA[\[br\]]]></regex>
+		<html><![CDATA[<br/>
+]]></html>
+	</item>
+</xcml>

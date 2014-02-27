@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+		<sp.code>code=sp_code;remark={@table.px}remark</sp.code>
+		<script.begin><![CDATA[]]></script.begin>
+		<script.end><![CDATA[
+<script type="text/javascript">
+ui.fbm.relates({"upload":"base,content"});
+function doFormInit(){
+	var o=$o("form__prepage_num");
+	o.value=$f.getValue("frm_post.form_{@table.px}prepage_num");
+	o.bindEvent("keyup",function(){
+		$o("form_{@table.px}prepage_num").value=$o("form__prepage_num").value;
+	});
+}
+$d.load(doFormInit);
+</script>
+]]></script.end>
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<caption><![CDATA[详细信息]]></caption>
+		<explain><![CDATA[default=$$$base=基本信息;content={@names}内容;popedom=浏览权限;status={@names}状态]]></explain>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=none</att>
+	</input>
+	<input>
+		<type>text.{@table.px}topic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=1]]></property>
+		<style><![CDATA[size=60 maxlength=200 class="itxt"]]></style>
+		<caption><![CDATA[{@names}标题]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>select.classid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style><![CDATA[ class="itxt"]]></style>
+		<caption><![CDATA[{@names}分类]]></caption>
+		<att><![CDATA[0=请选择{@names}分类..;<control:att("class","channel={@channel}")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>select.specialid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style><![CDATA[ class="itxt"]]></style>
+		<caption><![CDATA[{@names}专题]]></caption>
+		<att><![CDATA[0=请选择{@names}专题..;<control:att("special","channel={@channel}")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@table.px}linkurl</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[链接地址]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<br>链接地址不为空表示该{@names}为外部链接{@names}，将直接链接至该地址]]></explain>
+	</input>
+	<input>
+		<type>text.{@table.px}source</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=60 maxlength=50 class="itxt"</style>
+		<caption><![CDATA[{@names}来源]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@table.px}author</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=60 maxlength=50 class="itxt"</style>
+		<caption><![CDATA[{@names}作者]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>{@@editor.txt}.{@table.px}summary</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min={@@summary.min}]]></property>
+		<style>cols=60 rows=6 class="itxt"</style>
+		<caption><![CDATA[{@names}简介]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.sp_keyword</type>
+		<property><![CDATA[item=;class=sp;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[关 键 字]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@table.px}pic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200</style>
+		<caption><![CDATA[{@names}图片]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<control:form.element("upload.linkurl","","channel={@channel};filetype={@up.filetype};filename={@up.filename};fileinput={@table.px}pic;inputtype=pic;title=上传图片")>]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=content;display=none</att>
+	</input>
+	<input>
+		<type>hidden.sp_code</type>
+		<property><![CDATA[item=;action=;type=int;max=10;min=]]></property>
+		<value>{@@sp.code}</value>
+	</input>
+	<input>
+		<type>{@@editor}.{@table.px}remark</type>
+		<property><![CDATA[item=;action=;type=string;max={@@remark.max};min={@@remark.min}]]></property>
+		<style>cols=60 rows=15</style>
+		<caption><![CDATA[详细内容$$$<br><br><br><br><control:form.element("upload.linkurl","","channel={@channel};filetype=;filename=;fileinput=i.{@table.px}remark;inputtype=ubb;valuemode=append;title=上传至内容")>]]></caption>
+		<att>height=400</att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	<input>
+		<type>multibar.head</type>
+		<att>id=upload;display=none</att>
+	</input>
+	<input>
+		<type>upload</type>
+		<property><![CDATA[item=;action=;type=;max=;min=]]></property>
+		<caption><![CDATA[文件上传]]></caption>
+		<att><![CDATA[channel={@channel};filetype={@up.filetype};filename={@up.filename};fileinput={@table.px}pic;inputtype=pic]]></att>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=popedom;display=none</att>
+	</input>
+	<input>
+		<type>checkbox.sp_popedom</type>
+		<property><![CDATA[item=;class=sp;action=;type=string;max=200;min=]]></property>
+		<style></style>
+		<caption><![CDATA[浏览权限]]></caption>
+		<att><![CDATA[<control:att("file","sort=user.group")>]]></att>
+		<value></value>
+		<explain>不选表示对所有人开放</explain>
+	</input>
+	<input>
+		<type>text.sp_emoney</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=10;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[{@act}货币]]></caption>
+		<att></att>
+		<value>0.0</value>
+		<explain><![CDATA[<app:unit.emoney>$$${@act}所要扣除的货币]]></explain>
+	</input>
+	<input>
+		<type>text.sp_points</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=10;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[{@act}积分]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.points>$$${@act}所要扣除的积分]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=status;display=none</att>
+	</input>
+	<input>
+		<type>radio.{@table.px}iscomment</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否评论]]></caption>
+		<att><![CDATA[<control:att("dict","data.comment")>]]></att>
+		<value>1</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@table.px}prepage</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否分页]]></caption>
+		<att><![CDATA[<control:att("file","prepage")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[每页 <input class="num w50" type="text" name="_prepage_num" id="form__prepage_num" value="10000" size="6" maxlength="10" /> 字节，手动分页标志为“<font class=t2>[paging]</font>”]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@table.px}prepage_num</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style>id="form_{@table.px}prepage_num"</style>
+		<caption><![CDATA[自动分页数]]></caption>
+		<att><![CDATA[]]></att>
+		<value>{${@table.px}prepage_num}</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+</xcml>

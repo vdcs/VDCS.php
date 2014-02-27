@@ -1,0 +1,71 @@
+<label:include file="/headers">
+
+
+<p><a class="btn" el="submit">实例1</a></p>
+	<div class="box">
+	<h2><t>实例1:</t></h2>
+	<div class="con">
+	<p>姓名:<input type="text" name="name" /></p>
+	<p>年龄:<input type="text" name="age" /></p>
+	<p>通过ajax请求获取到的数据: <span class="content"></span></p>
+	</div>
+</div>
+<div class="space"></div>
+<p><a class="btn" el="submit2">实例2</a></p>
+<div class="box">
+	<h2><t>将显示实例2的数据,请求的地址是/common/demo.x?action=advance</t></h2>
+	<div class="con demo2">
+
+	</div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+	
+	var _submit=function(){//调用ajax
+		//$ajax(url:'url地址',value:'xml',function(xml){回调函数},error:true);如果需要发送数据send:数据对象
+		var name=$('input[name=name]').val();
+		var age=$('input[name=age]').val();
+		var _url='/common/demo.x?action=list&name='+name+'&age='+age;//将name和age一起通过url发送
+		$ajax({url:_url,value:'xml',ready:parseAnsyc,error:true});//function(xml){parseAnsyc(xml);}
+	};
+	var parseAnsyc=function(xml){
+		//xml即生成的xml文件的内容
+		var map=$util.toMapByXML(xml);//将xml转为map对象
+		var treeVar=map.getItemTree('var');//获取tree对象
+		var message=treeVar.v('infos');//获取tree对象某一个字段的值,如infos字段
+		$('.content').text(message);
+	};
+	var _submit2=function(){
+		var _url='/common/demo.x?action=advance';//将name和age一起通过url发送
+		$ajax({url:_url,value:'xml',ready:parseAnsyc2,error:true});
+	};
+	
+	var parseAnsyc2=function(xml){
+		//xml即生成的xml文件的内容
+		var map=$util.toMapByXML(xml);//将xml转为map对象
+		
+		
+		var treeVar=map.getItemTree('var');//获取tree对象
+		var hello=treeVar.v('hello');//获取tree对象某一个字段的值,如hello字段
+		$('.demo2').append('<p>'+hello+'</p>');
+		var say=treeVar.v('say');//获取tree对象某一个字段的值,如say字段
+		$('.demo2').append('<p>'+say+'</p>');
+		
+		
+		var tableItem=map.getItemTable('people');//获取table对象,如节点名字叫item，则将people改为item
+		tableItem.begin();
+		for(var i=1;i<=tableItem.row();i++){//循环
+			var treeItem=tableItem.getItemTree();
+			var name=treeItem.v('name');
+			var age=treeItem.v('age');
+			$('.demo2').append('<p>姓名:'+name+'  年龄'+age+'</p>');
+			tableItem.move();//指针下移
+		}
+	};
+	
+	$('[el=submit]').click(_submit);
+	$('[el=submit2]').click(_submit2);
+});
+</script>
+<label:include file="/footers">

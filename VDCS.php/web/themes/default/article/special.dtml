@@ -1,0 +1,31 @@
+<label:include file="/article/frame/headers">
+
+
+<div class="cont">
+<dtml-loop:special.root!v>
+	<div class="box">
+		<h2><t>[v:name]</t><r><a href="[v:url]"><langs:chn.more></a></r></h2>
+		<div class="con">
+<div class="StructLists StructListSpecial"><ul>
+<li>
+<div class="topics"><span class="topic"><a href="[v:linkurl]">[v:name!html]</a></span><span class="after"><a class="newwin" href="[v:linkurl]" target="_blank" alt="新窗口打" /></a></span></div>
+<div class="infos"><span class="summary">[v:explain!explain!200]</span></div>
+<div class="infos"><span class="totals"><span class="total">[v:total]</span> <langs:chn.units></span>
+<span class="item"><a href="[v:linkurl]"><langs:chn.mores></a></span></div>
+</li>
+</ul></div>
+		</div></div>
+		<div class="cont">
+<div class="StructList"><ul>
+<label:block("{@channel}","query=specialid=[v:specialid];res=new;row=6")>
+<li><span class="total-view right">[item:total.view]</span><span class="topic"><a href="[item:linkurl]">[item:topic!html!60]</a></span></li>
+</label:end>
+</ul></div>
+		</div>
+	</div>
+	<div class="space"></div>
+</dtml-loop>
+</div>
+
+
+<label:include file="/article/frame/footers">

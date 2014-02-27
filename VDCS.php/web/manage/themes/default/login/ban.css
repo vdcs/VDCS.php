@@ -1,0 +1,19 @@
+@charset "utf-8";
+@import url("../images/common.defined.css");
+
+
+body{
+	background: #fcfefe url("bg_ban.jpg") no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.debugi{display:none;}
+
+.box_ban{clear:both;text-align:center;padding:100px 0 0 0;margin:0 auto;}
+.box_ban{color:#363636;font-size:16px;position:relative;}
+.box_ban a{color:#363636;}
+.box_ban h2{}
+.box_ban h4{color:#73cadb;font-size:1.5em;margin:15px 0;}
+.box_ban h6{}

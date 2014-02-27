@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,name,bank,bankno,payee,explain</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<value>icbc</value>
+		<name>工行</name>
+		<bank>中国工商银行上海支行</bank>
+		<bankno>8888 8888 8888 8888</bankno>
+		<payee>周润发</payee>
+		<explain></explain>
+	</item>
+	<item>
+		<value>cmb</value>
+		<name>招行</name>
+		<bank>招商银行上海支行</bank>
+		<bankno>8888 8888 8888 8888</bankno>
+		<payee>周润发</payee>
+		<explain></explain>
+	</item>
+	<item>
+		<value>ccb</value>
+		<name>建行</name>
+		<bank>中国建设银行上海支行</bank>
+		<bankno>8888 8888 8888 8888</bankno>
+		<payee>周润发</payee>
+		<explain></explain>
+	</item>
+	<item>
+		<value>abc</value>
+		<name>农行</name>
+		<bank>中国农业银行上海支行</bank>
+		<bankno>8888 8888 8888 8888</bankno>
+		<payee>周润发</payee>
+		<explain></explain>
+	</item>
+	<item>
+		<value>boc</value>
+		<name>中国银行</name>
+		<bank>中国银行上海支行</bank>
+		<bankno>8888 8888 8888 8888</bankno>
+		<payee>周润发</payee>
+		<explain></explain>
+	</item>
+	<item>
+		<value>shb</value>
+		<name>上海银行</name>
+		<bank>上海银行人民路支行</bank>
+		<bankno>8888 8888 8888 8888</bankno>
+		<payee>上海XX网络科技有限公司</payee>
+		<explain></explain>
+	</item>
+	<item>
+		<value>alipay</value>
+		<name>支付宝</name>
+		<bank>alipay@domain.com</bank>
+		<bankno></bankno>
+		<payee>上海XX网络科技有限公司</payee>
+		<explain></explain>
+	</item>
+	<item>
+		<value>99bill</value>
+		<name>快钱</name>
+		<bank>payment@domain.com</bank>
+		<bankno></bankno>
+		<payee>上海XX网络科技有限公司</payee>
+		<explain></explain>
+	</item>
+	<item>
+		<value>paypal</value>
+		<name>Paypal</name>
+		<bank>payment@domain.com</bank>
+		<bankno></bankno>
+		<payee>上海XX网络科技有限公司</payee>
+		<explain></explain>
+	</item>
+</xcml>

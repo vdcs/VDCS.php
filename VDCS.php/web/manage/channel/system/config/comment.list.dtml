@@ -1,0 +1,28 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+
+
+<label:include file="inc/listc.struct.begini">
+<th class="item"><exec:langs("title.channel")></th>
+<th class="info">内容</th>
+<th class="item">IP</th>
+<th class="status w80"><exec:langs("title.status")></th>
+<th class="handle"><exec:langs("title.handle")></th>
+<label:include file="inc/listc.struct.endi">
+<label:include file="inc/listc.tpl.begini">
+<td>[item:channel]<span class="gray s">([item:rootid])</span></td>
+<td><a href="#view">[item:topic]</a></td>
+<td><span title="[item:sp_agent]">[item:sp_ip]</span></td>
+<td class="status"><span data-dict="data.reply" data-value="[item:trans]"></span> <control:dict("data.audit","{$$list:<v:table.px>status}")> <control:dict("data.goods","{$$list:<v:table.px>isgood}")>
+	<label:include file="inc/row.item.timed"></td>
+<td class="handle"><a href="#view"><exec:langs("action.view")></a></td>
+<label:include file="inc/listc.tpl.endi">
+
+
+
+
+<label:include file="inc/listc.script">
+
+
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

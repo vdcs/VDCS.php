@@ -1,0 +1,32 @@
+<div class="box">
+	<h2><t><chn:var("passport","title.login")></t></h2>
+	<div class="con">
+<div class="align-center">
+<!--{if isBool({$user.isLogin()})}-->
+<div class="BoxLoginInfo">
+<p><font class="user"><ua:name></font>, <langs:user.hello></p>
+<p>您有 <font class="emoney"><ua:emoney></font> <app:unit.emoney>和 <font class="points"><ua:points></font> <app:unit.points></p>
+<p><a href="<linkurl:account.message>"><langs:user.myinbox><font class="gray"><ua:mail_new></font> 新）</a></p>
+<p><a href="<url:account>"><chn:var("account","title")></a>　 <a href="<linkurl:passport.logout>" onclick="javascript:return $p.isClickReturn('<langs:user.logout.prompt>',1);"><chn:var("passport","title.logout")></a></p>
+<!--
+<p><a href="<linkurl:passport.pass5.bind>"><img class="icon" src="<url:images>pass5_account.gif" title="Pass5 Network 帐号绑定"></a></p>
+-->
+</div>
+<!--{else}-->
+<div class="BoxLoginForm">
+<form name="frm_login" action="<linkurl:passport.login>" method="post" onsubmit="javascript:$f.doOnceSubmit(this);">
+<input type="hidden" name="_chk" value="yes" />
+<input type="hidden" name="goback" value="yes" />
+<p class="input"><span><langs:user.form.username></span><input type="text" class="login-username" name="username" value="" size="15" maxlength="20" /></p>
+<p class="input"><span><langs:user.form.password></span><input type="password" class="login-password" name="password" value="" size="15" maxlength="20" /></p>
+<p id="UserLogin-form-button"><input type="checkbox" class="normal" id="login_remember_info" name="remember_info" value="yes"><label for="login_remember_info" title="<langs:user.form.remember.title>"><langs:user.form.remember></label> &nbsp; <input type="button" class="btn login-button" name="_sbt" value="<langs:user.form.login>" onclick="jacascript:appUser.login.doCheckForm();"></p>
+<p><a href="<linkurl:passport.register>"><chn:var("passport","title.register")></a> &nbsp; <a href="<linkurl:passport.login>"><langs:user.login></a> &nbsp; <a class="help" href="<linkurl:passport.lostpassword>"><chn:var("passport","title.lostpassword")></a></p>
+<!--
+<p><a href="<linkurl:passport.pass5.login>"><img class="icon" src="<url:images>pass5_login.gif" title="使用 Pass5 Network 帐户登录网站"></a>  <a href="<linkurl:passport.pass5.bind>"><img class="icon" src="<url:images>pass5_bind.gif" title="现在就与 Pass5 Network 帐号绑定"></a></p>
+-->
+</form>
+</div>
+<!--{/if}-->
+</div>
+	</div>
+</div>

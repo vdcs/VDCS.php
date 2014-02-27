@@ -1,0 +1,9 @@
+<label:include file="frame/header">
+<label:include file="frame/main.begin">
+
+
+<label:include file="message.e">
+
+
+<label:include file="frame/main.end">
+<label:include file="frame/footer">

@@ -1,0 +1,20 @@
+﻿
+
+<div id="wrap"><div id="wrapper">
+<div id="main"><div id="mainer"><!-- main begin -->
+
+
+
+{@channel}.{@portal}.{@module}
+
+
+</div></div><!-- main end -->
+<div id="side"><div id="sider"><!-- side begin -->
+
+
+
+
+</div></div><!-- side end -->
+</div></div>
+
+

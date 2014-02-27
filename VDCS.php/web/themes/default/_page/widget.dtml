@@ -1,0 +1,74 @@
+<label:include file="frame/headers">
+
+
+<label:include script="comm/ua.css" type="css">
+<label:include script="/images/themes/widget/comment/comment.css" type="css">
+
+<div class="framer">
+<div class="cent">
+
+
+<div class="uax_card">
+	<dl>
+	<dt><a><img src="/avatar/10000_s.gif" /></a></dt>
+	<dd><h3><a href="">my name is alusa</a></h3><h4><em></em>上海 黄浦</h4><h5><a>关注</a> 100 | <a>粉丝</a> 100 | <a>微博</a> 100</h5></dd>
+	</dl>
+	<h2>简介：<em>知名数码博客数字尾巴官方围脖知名数码博客数字尾巴官方围脖</em></h2>
+	<h1><a class="btn c"><span>+关注</span></a></h1>
+</div>
+
+<div class="space"></div>
+<div class="comment_list">
+<dl>
+<dt><a class="avatarm"><img src="/avatar/10000_s.gif" /></a></dt>
+<dd>
+	<h3><t><a>I'm Alusa!</a></t><i>[上海黄浦]</i></h3>
+	<h4>一些玩家表示使用过一些第三方的“助手类”软件(无论是否需要越狱)替代 iTunes 使用,表示使用过一些第三</h4>
+	<h5><t>今天15:37</t><cite><a>支持</a><a>回复</a><a>分享</a></cite></h5>
+</dd>
+</dl>
+<dl>
+<dt><a class="avatarm"><img src="/avatar/10000_s.gif" /></a></dt>
+<dd>
+	<h3><t><a>I'm Alusa!</a></t><i>[上海黄浦]</i></h3>
+	<h4>一些玩家表示使用过一些第三方的“助手类”软件(无论是否需要越狱)替代 iTunes 使用,表示使用过一些第三</h4>
+	<h5><t>今天15:37</t><cite><a>支持</a><a>回复</a><a>分享</a></cite></h5>
+</dd>
+</dl>
+</div>
+
+<div class="space"></div>
+<div class="talki"><div class="inner">
+	<form>
+	<input type="hidden" name="pic" value="" />
+	<h2><t></t></h2>
+	<div class="txtbox">
+		<p><textarea name="message" maxlength="250" placeholder="请输入评论内容"></textarea></p>
+	</div>
+	<h5>
+		<input type="hidden" name="pic" value="" />
+		<div class="toolbar">
+			<a class="em" act="em"><span></span></a>
+			<a class="at" act="at"><span></span></a>
+			<a class="img" act="image"><span></span></a>
+		</div>
+		<r>
+			<span class="prop">
+				<input type="hidden" name="sync_weibo" value="" />
+				<input type="hidden" name="sync_qq" value="" />
+				<a class="sync sync_weibo pop"><span>微博</span></a>
+				<a class="sync sync_qq"><span>QQ</span></a>
+			</span>
+			<span class="counts">你还可以输入<i>200</i>字</span>
+			<a class="btn c send" data-title="Ctrl + Enter 快速提交"><span>发布</span></a>
+		</r>
+	</h5>
+	</form>
+</div></div>
+
+
+</div>
+</div>
+
+
+<label:include file="frame/footers">

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre>
+		<channel>{@channel}</channel>
+		<table.name>db_{@channel}</table.name>
+		<table.px>a_</table.px>
+		<name>文章</name>
+		<names>文章</names>
+		<act>阅读</act>
+		<unit>篇</unit>
+	</pre>
+	<var>
+		<title>文章</title>
+		<title.index>null</title.index>
+		<title.list>文章列表</title.list>
+		<title.view>浏览文章</title.view>
+		<title.search>文章搜索</title.search>
+		<title.pic>图片文章</title.pic>
+		<title.class>文章分类</title.class>
+		<title.special>文章专题</title.special>
+	</var>
+	<num>
+		<pic.width>0</pic.width>
+		<pic.height>0</pic.height>
+	</num>
+	<config>
+		<url>default</url>
+		<put>0</put>
+		<put.status>0</put.status>
+		<put.premium>1</put.premium>
+		<put.audit></put.audit>
+		<put.premium.emoney>0</put.premium.emoney>
+		<put.premium.points>5</put.premium.points>
+	</config>
+</xcml>

@@ -1,0 +1,7 @@
+
+<!--[if lte IE 6]>
+<div class="framer">
+<label:include script="res/ban.ie6.js">
+</div>
+<div class="space"></div>
+<![endif]-->

@@ -1,0 +1,9 @@
+
+	<div class="tipn hide">
+		<opt><a title="关闭" class="iclose"><span>关闭</span></a></opt>
+		<p el="_comment" class="msg_talks"><a class="tip_border" href="/receivecomment"><em><ua:new_comment></em></a></p>
+		<p el="_at" class="msg_at"><a class="tip_border" href="/atnew"><em><ua:new_at></em></a></p>
+		<p el="_fans" class="msg_funs"><a class="tip_border" href="/account/friends/fans"><em><ua:new_fans></em></a></p>
+		<p el="_inbox" class="msg_inbox"><a class="tip_border" href="<url:my.inbox>"><em><ua:new_inbox></em></a></p>
+		<p el="_notice" class="msg_notice"><a class="tip_border" href="<url:my.notice>"><em><ua:new_notice></em></a></p>
+	</div>

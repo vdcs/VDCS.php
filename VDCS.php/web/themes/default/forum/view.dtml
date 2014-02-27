@@ -1,0 +1,149 @@
+<label:include file="frame/headers">
+<div class="cont">
+
+<div class="box"><h2><cite>帖子详情</cite></h2>
+	<div class="con">
+		<p class="ac"><view:d_topic></p>
+		<!-- <div class="ac"><a class="btn btn-danger s" el="regard">赞</a></div> -->
+		<div>
+			<view:d_remark>
+		</div>
+	</div>
+</div>
+<div class="space"></div>
+<div class="box"><h2><cite>发布评论</cite></h2>
+	<div class="con">
+		<div id="comment_box">
+			<p>评论内容<textarea name="remark"></textarea></p>
+			<input type="hidden" name="classid" value="<view:classid>" />
+			<input type="hidden" name="rootid" value="<view:d_id>" />
+			<input type="hidden" name="type" value="1" />
+			<div class="space"></div>
+			<a el="submit" class="btn btn-block btn-primary submit b">评论</a>
+		</div>
+	</div>
+</div>
+<div class="space"></div>
+<div class="box"><h2><cite>评论帖子</cite></h2>
+	<div class="con" id="list_comment">
+		
+	</div>
+	<div class="space"></div>
+	<div id="paging"></div>
+	<xmp id="list_comment_tpl">
+		<p dataid="[item:d_id]">[item:sn]. [item:d_remark] <a class="replay btn s">回复</a></p>
+	</xmp>
+</div>
+
+
+</div>
+<xmp id="reply_box">
+<div class="jbox">
+	<p>回复<textarea name="remark"></textarea></p>
+	<input type="hidden" name="classid" value="<view:classid>" />
+	<input type="hidden" name="rootid" value="<view:d_id>" />
+	<input type="hidden" name="type" value="2" />
+	<input type="hidden" name="replyid" value="" />
+	<a el="submit" class="btn btn-primary">确认回复</a>
+</div></xmp>
+<label:include script="VDCS.ui.page.js">
+<label:include script="comm/ui.paging.css" type="css">
+<script type="text/javascript">
+$(function(){
+	//获取post数据
+	var _getContent=function(jbox){
+		var data={};
+		jbox.find('input,textarea').each(function(){
+			var field=$(this).attr('name');
+			var value=$(this).val();
+			if(field) data[field]=value;
+		});
+		return data;
+	};
+	
+	//发送数据
+	var _sendData=function(data,action,callback){
+		if(!action) action='comment';
+		var _url='/{@channel}/post.x?action='+action;
+		$ajax({url:_url,value:'xml',send:data,ready:function(xml){
+			var map=$util.toMapByXML(xml);
+			var treeVar=map.getItemTree('var');
+			var message=treeVar.v('message');
+			if(treeVar.v('status')=='succeed'){
+				if(!message) message='操作成功';
+				ui.popups('succeed',message);
+				if(callback) callback();
+			}else{
+				if(!message) message='操作失败';
+				ui.popups('error',message);
+			}
+		},error:false});
+	};
+	
+	//comment
+	var _getComment=function(){
+		var list=ui.list;//对象，传入存放内容的对象和模板对象
+		var opt={cont:$('#list_comment'),tpl:$('#list_comment_tpl')};
+		opt.serveVar={channel:'{@channel}',p:'query',action:'comment',params:'rootid=<view:d_id>'};
+		opt.paging=$('#paging');//放置分页按钮的对象
+		opt.sn=1;
+		opt.bind=function(jitem){
+			jitem.find('.replay').click(function(){
+				_showReplyBox(jitem);
+			});
+		};
+		opt.binds=function(jcont,treeVar){
+			
+		};
+		opt.node_table='item';
+		list.init(opt);
+		list.parse();
+	};
+	
+	_getComment();
+	
+	
+	var _clearCommentBox=function(){
+		$('#comment_box').find('textarea[name=remark]').val('');
+		_getComment();
+	};
+	
+	var _initCommentBox=function(){
+		$('#comment_box').find('[el=submit]').click(function(){
+			var data={};
+			data=_getContent($('#comment_box'));
+			_sendData(data,'comment',_clearCommentBox);
+		});
+	};
+	_initCommentBox();
+	
+	//reply
+	var replybox;
+	
+	var _showReplyBox=function(jitem){
+		var replyid=jitem.attr('dataid');
+		replybox.find('[name=replyid]').val(replyid);
+		jitem.after(replybox);
+	};
+	
+	var _clearReplyBox=function(){
+		replybox.find('input[name=replyid],textarea[name=remark]').val('');
+		replybox.detach();
+		_getComment();
+	};
+	
+	var _initReplybox=function(){
+		replybox=$($('#reply_box').html());
+		_clearReplyBox();
+		replybox.find('[el=submit]').click(function(){
+			var data={};
+			data=_getContent(replybox);
+			_sendData(data,'comment',_clearReplyBox);
+		});
+	}
+	_initReplybox();
+	
+	
+});
+</script>
+<label:include file="frame/footers">

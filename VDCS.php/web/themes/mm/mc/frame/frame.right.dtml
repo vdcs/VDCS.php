@@ -1,0 +1,9 @@
+		</div>
+	</div></div></div>
+	<div class="clear"></div>
+</div>
+<script type="text/javascript">
+var ___HeightMainMenu=($b.opera) ? $("MainMenu").scrollHeight : $("MainMenu").clientHeight;
+var ___HeightMainContent=($b.opera) ? $("MainContent").scrollHeight : $("MainContent").clientHeight;
+if(___HeightMainMenu>___HeightMainContent) put("<style type=\"text/css\">div.FramerFloor { background-color:transparent; }</style>");
+</script>

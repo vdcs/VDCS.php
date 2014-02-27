@@ -1,0 +1,23 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @btnx v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######## xButton ######## */
+.xbtn,.xbtni,.xbtnc,.xbtnb{height:22px;line-height:24px;text-decoration:none;border:1px solid #E1E1E1;background-color:#F8F8F8;padding:0 15px;}
+.xbtn,.xbtni,.xbtnc,.xbtnb{-webkit-border-radius:3px;-o-border-radius:3px;border-radius:3px;overflow:hidden;}
+.xbtn:hover,xbtni:hover,xbtnc:hover,xbtnb:hover{text-decoration:none;}
+.xbtn,.xbtni{border-color:#E1E1E1;background-color:#F8F8F8;}
+.xbtn:hover{border-color:#C4C4C4;background-color:#F3F3F3;}
+.xbtn:hover{background-color:#C4C4C4;}
+.xbtni:hover{border-color:#FF6900;background-color:#FF9500;}
+.xbtni:active{background-color:#FF6900;}
+.xbtnc{border-color:#DAAA00;background-color:#FFCA0E;}
+.xbtnc:hover{border-color:#FF6900;background-color:#FF9500;}
+.xbtnc:active{background-color:#FF6900;}
+.xbtnb{border-color:#DAAA00;background-color:#FFCA0E;}
+.xbtnb:hover{border-color:#FF6900;background-color:#FF9500;}
+.xbtnb:active{background-color:#FF6900;}

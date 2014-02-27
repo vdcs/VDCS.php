@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="lang">
+	<configure>
+		<node>common,system,frame,lang,setting</node>
+	</configure>
+	<common>
+		<safeip></safeip>
+		<safeip0>127.0.0.1</safeip0>
+	</common>
+	<system>
+		<clone.func></clone.func>
+	</system>
+	<frame>
+		<nav.mode></nav.mode>
+		<nav.before>default</nav.before>
+		<nav.after>system</nav.after>
+		<nav.ignores>common,passport</nav.ignores>
+		<menu.ignores>model.collect,model.configure</menu.ignores>
+	</frame>
+	<lang>
+		<nav.default><![CDATA[管理中心]]></nav.default>
+		<nav.system><![CDATA[系统管理]]></nav.system>
+		<nav.complex.content><![CDATA[内容管理]]></nav.complex.content>
+	</lang>
+	<setting>
+		<list.listnum>12</list.listnum>
+		<prepage.num>10000</prepage.num>
+		<form.at.default>default</form.at.default>
+		<form.at.simple>simple</form.at.simple>
+		<form.at.defaulted>default</form.at.defaulted>
+		<form.at.defined>defined</form.at.defined>
+		<form.sp.code>2</form.sp.code>
+		<form.sp.code.safe>1</form.sp.code.safe>
+		<form.sp.editor>editor</form.sp.editor>
+		<form.editor.mode>html</form.editor.mode>
+		<form.editor.code>2</form.editor.code>
+		<form.editor>editor_html</form.editor>
+		<form.editor.safe>editor_ubb</form.editor.safe>
+		<form.editor.txt>textbox</form.editor.txt>
+		<form.editor.explain>editor_html</form.editor.explain>
+		<form.classid.min>0</form.classid.min>
+		<form.summary.min>0</form.summary.min>
+		<form.remark.min>1</form.remark.min>
+		<form.remark.max>500000</form.remark.max>
+		<form.remarkd.min></form.remarkd.min>
+	</setting>
+</xcml>

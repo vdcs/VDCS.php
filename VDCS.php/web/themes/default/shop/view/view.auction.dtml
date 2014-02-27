@@ -1,0 +1,34 @@
+<label:include file="header">
+<label:include file="view-inc">
+<label:include file="view-auction-inc">
+
+<div class="framer">
+	<div class="side">
+<label:include file="common.menus">
+	</div>
+	<div class="cont">
+<label:include file="common.navbar">
+
+<label:include file="view-prop-head">
+<label:include file="view-prop-pic">
+<label:include file="view-prop-info-auction">
+<label:include file="view-prop-foot">
+
+<label:include file="view-remark">
+
+
+<div class="space"></div>
+<div class="box">
+	<h2><t>拍卖记录</t></h2>
+	<div class="cont">
+<label:include file="view-auction-bid">
+	</div></div>
+</div>
+
+<label:include file="view-notes">
+
+<label:include file="view-auction-box">
+
+	</div></div>
+</div>
+<label:include file="footer">

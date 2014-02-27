@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>var,banip,badword</node>
+	</configure>
+	<var>
+		<audit.post>1</audit.post>
+	</var>
+	<banip>
+		<common></common>
+		<post></post>
+		<passport></passport>
+	</banip>
+	<badword>
+		<base>办证,冰毒,出售假币,出售枪支,催情粉,达赖,代开发票,代考,窃听,赌球,群发器,法轮,胡锦,激情,监听,作弊器,法轮,反共,国民党,共匪,台独,卖淫,性爱,三级片,鸡巴,鸡吧,操你,干你,日你,傻B,他妈的,A片,强奸,做爱</base>
+		<common></common>
+		<post></post>
+	</badword>
+</xcml>

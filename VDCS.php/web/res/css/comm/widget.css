@@ -1,0 +1,150 @@
+@charset "utf-8";
+/*
+Version:	VDCS comm @nav.tabs v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-07-00
+*/
+
+
+.tab-nav{clear:both;list-style: none;border-bottom: 1px solid #ddd;}
+.tab-nav:before,
+.tab-nav:after{clear:both;display:table;content:"";line-height: 0;}
+.tab-nav > li {
+	float: left;
+	margin-bottom: -1px;
+	margin-right:2px;
+	border: 1px solid transparent;
+	-webkit-border-radius: 6px 6px 0 0;
+	-moz-border-radius: 6px 6px 0 0;
+	border-radius: 6px 6px 0 0;
+	overflow:hidden;
+}
+.tab-nav > li:hover {
+	border-color: #eeeeee #eeeeee #dddddd;
+	background-color:#f7f7f7;
+}
+.tab-nav > li > a{
+	display:block;
+	text-decoration:none;
+	line-height: 18px;
+	padding: 8px 12px;
+}
+.tab-nav > .active,
+.tab-nav > .active:hover {
+	color: #555555;
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	border-bottom-color: transparent;
+	cursor: default;
+}
+.pill-pane,
+.tab-pane{display:none;}
+.pill-pane.active,
+.tab-pane.active{display:block;}
+
+
+.toolbar
+{
+	border:1px solid #ccc;
+	background: #fafafa repeat-x left bottom;
+	background-image: -ms-linear-gradient(top, #ffffff, #f2f2f2);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
+	background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
+	background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
+	background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
+	background-image: linear-gradient(top, #ffffff, #f2f2f2);
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#f2f2f2', GradientType=0);
+}
+.toolbar:before,
+.toolbar:after{display:table;content:"";}
+.toolbar:after{clear: both;}
+.box .toolbar,
+box .toolbar{border-left:0;border-right:0;}
+
+.toolbar + *{border-top: 0 !important;}
+.toolbar.collapse:not(.in){padding: 0 !important;overflow: hidden;}
+
+/* Widget Button Toolbar
+================================================== */
+.toolbar.btn-toolbar{position: relative;margin: 0;}
+.toolbar.btn-toolbar .btn
+{
+	border-top: 0;
+	border-bottom: 0;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+}
+.toolbar.btn-toolbar .btn-group + .btn-group{margin-left: 0;}
+.toolbar.btn-toolbar .btn:first-child{border-left: 0;}
+
+/* Widget Form Toolbar
+================================================== */
+.toolbar.form-toolbar form{padding: 8px;}
+
+
+.toolbar .btn .caret{margin-top: 10px;}
+
+.toolbar > .btn, 
+.toolbar > .btn-group, 
+.toolbar > .btn-group > .btn
+{
+	display: inline-block;
+	*display: inline;
+ /* IE7 inline-block hack */
+	*zoom: 1;
+}
+.toolbar > .btn-group{float:left;margin:0;}
+
+
+
+/* Widget Header Elements
+================================================== */
+
+.toolbar .ui-slider
+{
+    width: 150px;
+    display: inline-block;
+    *display: inline;
+ /* IE7 inline-block hack */
+    *zoom: 1;
+    margin: 15px 15px 0 0;
+    vertical-align: top;
+}
+
+.toolbar .progress
+{
+    width: 150px;
+    height: 13px;
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+ /* IE7 inline-block hack */
+    *zoom: 1;
+    margin: 12px 12px 0 0;
+}
+
+.toolbar .progress .bar
+{
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: normal;
+}
+
+.toolbar .ibutton-container
+{
+    margin: 9px 9px 0 0;
+    display: inline-block;
+    *display: inline;
+ /* IE7 inline-block hack */
+    *zoom: 1;
+    vertical-align: top;
+}
+
+.toolbar .label, 
+.toolbar .badge
+{
+    top: 10px;
+    right: 8px;
+    position: relative;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre>
+		<channel>{@channel}</channel>
+		<table.namex>dbc_</table.namex>
+		<name>公共</name>
+		<names>页面</names>
+	</pre>
+	<var>
+		<title>公共服务</title>
+		<title.index>首页</title.index>
+		
+		<title.sitemap>网站地图</title.sitemap>
+		<title.online>在线服务</title.online>
+		<title.setting>喜好设置</title.setting>
+		
+		<title.search>全站搜索</title.search>
+		
+		<title.comment>网友评论</title.comment>
+		<title.payment>在线支付</title.payment>
+		
+		<title.upload>文件上传</title.upload>
+		<title.upload.dl>文件下载</title.upload.dl>
+		
+		<title.fav>收藏内容</title.fav>
+		<title.commend>推荐内容</title.commend>
+		<title.report>报错反馈</title.report>
+		<title.suggest>投诉与建议</title.suggest>
+		<title.subscribe>邮件订阅</title.subscribe>
+	</var>
+	<num>
+	</num>
+	<config>
+		<url>default</url>
+	</config>
+</xcml>

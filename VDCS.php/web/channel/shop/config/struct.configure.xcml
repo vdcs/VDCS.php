@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="struct">
+	<configure>
+		<node>item</node>
+	</configure>
+	<item>
+		<__key><![CDATA[config.base]]></__key>
+		<__name><![CDATA[基本配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.var><![CDATA[名称设定			###type~bar]]></bar.var>
+		<pre.name><![CDATA[频道简称			###property.min~1]]></pre.name>
+		<pre.names><![CDATA[单位名称			###property.min~1]]></pre.names>
+		<pre.unit><![CDATA[单位量词			###property.min~1]]></pre.unit>
+		<pre.act><![CDATA[单位动作			###property.min~1]]></pre.act>
+		<bar.var.data><![CDATA[附件名称设定		###type~bar]]></bar.var.data>
+		<pre.name.data><![CDATA[附件简称		###property.min~1]]></pre.name.data>
+		<pre.names.data><![CDATA[附件名称		###property.min~1]]></pre.names.data>
+		<pre.unit.data><![CDATA[附件单位量词		###property.min~1]]></pre.unit.data>
+		<pre.act.data><![CDATA[附件单位动作		###property.min~1]]></pre.act.data>
+		<bar.var.order><![CDATA[附件名称设定		###type~bar]]></bar.var.order>
+		<pre.name.order><![CDATA[订单简称		###property.min~1]]></pre.name.order>
+		<pre.names.order><![CDATA[订单名称		###property.min~1]]></pre.names.order>
+		<pre.unit.order><![CDATA[订单单位量词		###property.min~1]]></pre.unit.order>
+		<pre.act.order><![CDATA[订单单位动作		###property.min~1]]></pre.act.order>
+		<bar.title><![CDATA[标题设定			###type~bar]]></bar.title>
+		<var.title><![CDATA[首页			###property.min~1]]></var.title>
+		<var.title.list><![CDATA[列表页			###property.min~1]]></var.title.list>
+		<var.title.view><![CDATA[浏览页			###property.min~1]]></var.title.view>
+		<var.title.view.data><![CDATA[浏览单页		###property.min~1]]></var.title.view.data>
+		<var.title.search><![CDATA[搜索页		###property.min~1]]></var.title.search>
+		<var.title.class><![CDATA[分类页		###property.min~1]]></var.title.class>
+	</item>
+	<item>
+		<__key><![CDATA[config.config]]></__key>
+		<__name><![CDATA[高级配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.url><![CDATA[SEO设定			###type~bar]]></bar.url>
+		<config.url><![CDATA[URL模式			###type~radio		^att~<control:att("file","seo.setting.mode")>]]></config.url>
+	</item>
+	<item>
+		<__key><![CDATA[config.url]]></__key>
+		<__name><![CDATA[地址配置]]></__name>
+		<__file><![CDATA[configure]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.url.script><![CDATA[动态URL地址配置	###type~bar]]></bar.url.script>
+		<url.script.index><![CDATA[首页URL		###property.min~1	^style~size=60]]></url.script.index>
+		<url.script.list><![CDATA[列表页URL		###property.min~1	^style~size=60]]></url.script.list>
+		<url.script.list.page><![CDATA[列表分页URL	###property.min~1	^style~size=60]]></url.script.list.page>
+		<url.script.view><![CDATA[浏览页URL		###property.min~1	^style~size=60]]></url.script.view>
+		<url.script.view.data><![CDATA[附件浏览页URL	###property.min~1	^style~size=60]]></url.script.view.data>
+		<url.script.cart><![CDATA[购物车URL		###property.min~1	^style~size=60]]></url.script.cart>
+		<url.script.order><![CDATA[定单页URL		###property.min~1	^style~size=60]]></url.script.order>
+		<bar.url.rewrite><![CDATA[静态URL地址配置(ISAPI Rewrite)		###type~bar]]></bar.url.rewrite>
+		<url.rewrite.index><![CDATA[首页URL		###property.min~1	^style~size=60]]></url.rewrite.index>
+		<url.rewrite.list><![CDATA[列表页URL		###property.min~1	^style~size=60]]></url.rewrite.list>
+		<url.rewrite.list.page><![CDATA[列表分页URL	###property.min~1	^style~size=60]]></url.rewrite.list.page>
+		<url.rewrite.view><![CDATA[浏览页URL		###property.min~1	^style~size=60]]></url.rewrite.view>
+		<url.rewrite.view.data><![CDATA[附件浏览页URL	###property.min~1	^style~size=60]]></url.rewrite.view.data>
+		<url.rewrite.cart><![CDATA[购物车URL		###property.min~1	^style~size=60]]></url.rewrite.cart>
+		<url.rewrite.order><![CDATA[定单页URL		###property.min~1	^style~size=60]]></url.rewrite.order>
+	</item>
+</xcml>
+<!--
+		<bar.num><![CDATA[数值设定			###type~bar]]></bar.num>
+		<num.pic.width><![CDATA[小图片宽度		###property.min~1	^explain~像素$$$]]></num.pic.width>
+		<num.pic.height><![CDATA[小图片高度		###property.min~1	^explain~像素$$$]]></num.pic.height>
+-->

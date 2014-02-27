@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>text.key</type>
+		<property><![CDATA[item=;class=;action=;type=string;max=20;min=1;classi=item]]></property>
+		<style></style>
+		<caption><![CDATA[节点名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[唯一，英文及数字,长度20位!]]></explain>
+	</input>
+	<input>
+		<type>text.topic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=1]]></property>
+		<style>size=60 length=200 class="itxt"</style>
+		<caption><![CDATA[节点标题]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>{@@editor}.content</type>
+		<property><![CDATA[item=;action=;type=string;max={@@remark.max};min={@@remark.min}]]></property>
+		<style></style>
+		<caption><![CDATA[详细内容$$$<br><br><br><br>]]></caption>
+		<att>toolbar=;height=300</att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.topic_en</type>
+		<property><![CDATA[item=;action=en;type=string;max=200;min=]]></property>
+		<style>size=60 length=200 class="itxt"</style>
+		<caption><![CDATA[英文标题]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>{@@editor}.content_en</type>
+		<property><![CDATA[item=;action=en;type=string;max={@@remark.max};min=]]></property>
+		<style></style>
+		<caption><![CDATA[英文内容$$$<br><br><br><br>]]></caption>
+		<att>toolbar=;height=300</att>
+		<value></value>
+		<explain></explain>
+	</input>
+</xcml>

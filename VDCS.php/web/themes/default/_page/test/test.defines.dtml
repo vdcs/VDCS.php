@@ -1,0 +1,149 @@
+﻿
+<label:include script="<web:url.themes>images/grid/grid.css" type="css">
+<script src="<url:script>ckeditor4/ckeditor.js"></script>
+<div class="tags_def_box">
+<div id="def_area"><div class="inners">
+	<div class="innerx"></div>
+	<div class="def_plus"><div class="inner"><a class="add"><span class="self_addicon">增加一个格子</span></a></div></div>
+	<xmp el="tpl_block">
+	<div class="blocks block{sn}" el="block{n}" n="{n}" sn="{sn}"><div class="inner">
+		<div class="setbox"><div class="self_btns">
+			<a class="txt"><span>添加文字</span></a>
+			<a class="image"><span>添加图片</span></a>
+			<a class="video"><span>添加视频</span></a>
+			<a class="close"><span>关闭</span></a>
+		</div></div>
+	</div></div>
+	</xmp>
+	<xmp el="tpl_block_test">
+	<div class="blocks block{sn}" el="block{n}" sn="{sn}"><div class="inner">test {n}-{sn}</div></div>
+	</xmp>
+	<xmp el="tpl_block_sets">
+		<div class="sets">
+			<a class="remove"><span>删除</span></a>
+		</div>
+	</xmp>
+	<xmp el="tpl_block_inner__set">
+		<a class="block_set" el="block_set" sn="{n}-{sn}"><span>添加内容{n}-{sn}</span></a>
+	</xmp>
+	<xmp el="tpl_block_inner_txt">
+		<div class="def_header"><b class="page_index"><span>{page_index}</span></b><div class="topic"><span>{topic}</span></div></div>
+		<div class="content"><div class="ins"><div class="mb">{content}</div></div></div>
+	</xmp>
+	<xmp el="tpl_block_actions_txt">
+		<div class="actions">
+			<a class="edit"><span>编辑</span></a>
+		</div>
+	</xmp>
+	<xmp el="tpl_block_actions_image">
+		<div class="actions">
+			<a class="edit"><span>编辑</span></a>
+		</div>
+	</xmp>
+	<xmp el="tpl_block_actions_video">
+		<div class="actions">
+			<a class="edit"><span>编辑</span></a>
+		</div>
+	</xmp>
+</div></div>
+<div id="def_box_set" class="hide" data-title="格子 - 设置内容" sessionid="<dcs:session.id>"><div class="inners">
+	<div class="set__select"><div class="inner self_btns">
+		<a class="txt"><span>添加文字</span></a>
+		<a class="image"><span>添加图片</span></a>
+		<a class="video"><span>添加视频</span></a>
+		<a class="close"><span>关闭</span></a>
+	</div></div>
+	<div class="set_txt"><div class="inner">
+		<div class="def_header">
+			<b></b>
+			<div class="topics">
+				<div class="txt topic"><h2><input class="self_bords self_addtit" type="text" name="topic" prompts="empty" promptvalue="标题（可不填）" value="" maxlength="8" /></h2></div>
+				<div class="colors"><span class="colorbox"></span><ul>
+					<li class="cff0000"><span _color="ff0000"></span></li>
+					<li class="cffcc00"><span></span></li>
+					<li class="cff0000"><span></span></li>
+					<li class="cffcc00"><span></span></li>
+					<li class="cff0000"><span></span></li>
+					<li class="cffcc00"><span></span></li>
+					<li class="cff0000"><span></span></li>
+					<li class="cffcc00"><span></span></li>
+					<li class="cffcc00"><span></span></li>
+					</ul></div>
+			</div>
+		</div>
+		<div class="txtbox message self_bords"><div class="ins"><div class="mb">
+			<div class="toolbar self_bgr" _target="content" _format="code" sessionid="<dcs:session.id>">
+				<a el="color"><span>字体颜色</span></a>
+				<a cmd="bold" _init=""><span>字体加粗</span></a>
+				<a el="link"><span>添加链接</span></a>
+			</div>
+			<div class="content_box"><textarea name="content" id="defbox_set_content"></textarea></div>
+		</div></div></div>
+	</div></div>
+	
+
+	<div class="set_image"><div class="inner">
+		<div class="def_header">
+			<div class="topics">
+				<b class="page_index"></b>
+				<div class="txt topic"><h2><input class="self_bords self_addtit" type="text" name="topic" prompts="empty" promptvalue="标题（可不填）" value="" maxlength="8" /></h2></div>
+				<div class="colors"><span class="colorbox"></span></div>
+			</div>
+			<div>
+				<span class="img_urls">URL</span>
+				<div class="txt img_link"><h2><input class="self_bords self_addtit" type="text" name="img_link" prompts="empty" promptvalue="超链接（可不填）" value="" maxlength="100" /></h2></div>
+			</div>
+		</div>		
+		<div class="img_box"></div>
+		<div class="self_bgr">
+			<a class="upload_img"><span>上传图片</span></a>
+			<!--
+			<a class=""><span>添加标题</span></a>
+			<a class="add_url"><span>添加链接</span></a>
+			-->
+		</div>
+	</div></div>
+	
+	
+	
+	<div class="set_video"><div class="inner">
+		<div class="def_header">
+			<b class="page_index"></b>
+			<div class="topics">
+				<div class="txt topic"><h2><input class="self_bords self_addtit" type="text" name="topic" prompts="empty" promptvalue="标题，最多8个字符" value="" maxlength="8" /></h2></div>
+				<div class="colors"><span class="colorbox"></span></div>
+			</div>
+		</div>
+		<div class="video_box"></div>
+		<div class="toolbar" _target="content" _format="code" sessionid="<dcs:session.id>">
+			<div class="self_bgr"><a class="upload_video" el="video"><span>上传视频</span></a></div>
+		</div>
+	</div></div>
+	<div class="url_box hide">
+		<!--
+		<div class="hide video_url_box"><b>视频播放地址</b><p><input type="text" name="url" value="" minlength="3" maxlength="200" /></p></div>
+		<p class="ac hide">目前支持大部分视频网站播放地址直接粘贴</p>
+		<p class="tips ac" el="_tips"><span></span></p>
+		-->
+		<div class="iinput video_url_box"><b>地址</b><p><input type="text" name="video" value="" minlength="3" maxlength="200" /></p></div>
+		<p class="ac">目前支持大部分视频网站播放地址直接粘贴</p>
+		<p class="tips ac" el="_tips"><span></span></p>
+		<div class="action"><a class="sbtnb" el="_submit"><span>插入</span></a><i></i><a class="sbtn" el="_cancel"><span>取消</span></a></div>
+	</div>
+	
+	<div class="set__action"><div class="inner">
+		<a class="save"></a>|<a class="cancel"></a>
+	</div></div>
+</div></div>
+</div>
+
+<label:include script="<web:url.themes>app.t.defines.js">
+<script type="text/javascript">
+$d.load(function(){
+	appt.define.dataSet('tags',$req.q('dataid'),'temp');	
+	appt.define.initer();
+	appt.define.loader();
+	appt.define.dataRead();
+	//CKEDITOR.replace('content1',{toolbar:'basic',height:80,width:220});
+});
+</script>

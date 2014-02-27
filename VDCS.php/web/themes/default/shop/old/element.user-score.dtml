@@ -1,0 +1,5 @@
+<div class="align-left">
+<!--{if isBool({$user.isLogin()})}-->
+<p>您目前的会员级别：<span id="u-item-levelname" class="u-level">普通会员</span>，<span id="u-item-score" class="score">0</span> 积分；可享受<span class="u">参加会员打折</span>商品<span id="u-item-discountname" class="u-discount">100</span>，<span id="u-item-multiple" class="u-multiple">1</span>倍积分</p>
+<!--{/if}-->
+</div>

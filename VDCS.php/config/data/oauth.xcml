@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>passv,qq,weibo</node>
+	</configure>
+	<qq>
+		<name>QQ开放平台</name>
+		<id>APP_ID</id>
+		<key>APP_KEY</key>
+		<redirect>yes</redirect>
+		<status></status>
+		<callback></callback>
+	</qq>
+	<weibo>
+		<name>Weibo开放平台</name>
+		<id>APP_ID</id>
+		<key>APP_KEY</key>
+		<redirect>yes</redirect>
+		<status></status>
+		<callback></callback>
+	</weibo>
+</xcml>

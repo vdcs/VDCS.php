@@ -1,0 +1,11 @@
+<div>
+<form>
+<p>支付金额<input type="text" name="money" value="<view:paymoney>" /></p>
+<p>备注<textarea name="summary" ></textarea></p>
+<p>结清<input type="checkbox" name="isend" value="1" />是</p>
+<input type="hidden" name="id" value="<view:id>" />
+<input type="hidden" name="uuid" value="<view:uuid>" />
+<input type="hidden" name="rootid" value="<view:rootid>" />
+<input type="hidden" name="module" value="<view:module>" />
+</form>
+</div>

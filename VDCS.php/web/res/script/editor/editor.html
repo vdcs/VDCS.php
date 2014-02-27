@@ -1,0 +1,21 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="public" />
+<title>VDCS Editor</title>
+<link rel="stylesheet" rev="stylesheet" type="text/css" href="../../css/style.public.css" />
+<link rel="stylesheet" rev="stylesheet" type="text/css" href="images/style.css" />
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="../VDCS-full.js"></script>
+<script type="text/javascript">
+var _BASE_PATH_SCRIPT=$c.getDir("editor");
+var PathEditor=document.location.pathname.substring(0,document.location.pathname.lastIndexOf("/")+1);
+var PathROOT=PathEditor.substring(0,PathEditor.length-_BASE_PATH_SCRIPT.length);
+//put(PathROOT+" - "+PathEditor+"<br>");
+$c.setPath(PathROOT,PathROOT);
+</script>
+
+<body>
+VDCS Editor
+</body>
+</html>

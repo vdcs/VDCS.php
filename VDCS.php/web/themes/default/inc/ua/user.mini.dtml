@@ -1,0 +1,7 @@
+<!--{if isBool({$ua.isLogin()})}-->
+<li><a class="ua" href="javascript:;"><span><span id="user-name" class="b"><ua:names></span> <langs:user.hello><span id="user_message_prompt" class="hide"><cite><em field="total" class="total">0</em></cite></span></span></a></li>
+<!--{else}-->
+<li><a class="ua" href="javascript:;"><span><ua:names> <langs:user.hello></span></a></li>
+<li><a href="<linkurl:passport.login>" title="<chn:var("passport","title.login")>"><span>登录</span></a></li>
+<li><a href="<linkurl:passport.register>" title="<chn:var("passport","title.register")>"><span>注册</span></a></li>
+<!--{/if}-->

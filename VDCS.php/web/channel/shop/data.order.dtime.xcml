@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>name,value,explain</field>
+	</configure>
+	<item>
+		<name>任意</name>
+		<value>1</value>
+		<explain><![CDATA[工作日、双休日与假日均可送货]]></explain>
+	</item>
+	<item>
+		<name>节假日</name>
+		<value>2</value>
+		<explain><![CDATA[只双休日、假日送货（工作日不用送）]]></explain>
+	</item>
+	<item>
+		<name>工作日</name>
+		<value>3</value>
+		<explain><![CDATA[只工作日送货（双休日、假日不用送）（注：写字楼／商用地址客户请选择）]]></explain>
+	</item>
+	<item>
+		<name>特殊</name>
+		<value>5</value>
+		<explain><![CDATA[学校地址／地址白天没人，请尽量安排其它时间送货（注：特别安排可能超出预计天数）]]></explain>
+	</item>
+</xcml>

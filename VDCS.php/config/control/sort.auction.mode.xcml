@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,key,name,level</field>
+	</configure>
+	<item>
+		<value>on</value>
+		<name><![CDATA[拍卖]]></name>
+		<level>0</level>
+	</item>
+	<item>
+		<value></value>
+		<name><![CDATA[不拍卖]]></name>
+		<level>0</level>
+	</item>
+</xcml>

@@ -1,0 +1,65 @@
+<div>
+<style>
+tr{height:35px;}
+td .size{width:60px;}
+td .sizet{width:100px;}
+td .sizes{width:200px;}
+td.position{text-align:right;padding-right:8px;}
+</style>
+<form>
+<table width="361" border="1">
+  <tr>
+    <td class="position">类型:</td>
+   <td><control:form.element("radio.type","__value","file","common.channel/account/data.linkman.type")></td>
+  </tr>
+  <tr>
+    <td class="position">姓名:</td>
+    <td><input type="text" name="names" value="<data:names>" class="size" /></td>
+  </tr>
+  <tr>
+    <td class="position">性别：</td>
+    <td><control:form.element("radio.gender","__value","file","sort=u.gender")></td>
+  </tr>
+  <tr>
+    <td class="position">手机：</td>
+    <td>
+      <input type="text" name="mobile" value="<data:mobile>" class="sizet" />
+    </td>
+  </tr>
+  <tr>
+    <td class="position">电话：</td>
+    <td>
+      <input type="text" name="phone" value="<data:phone>" class="sizet" />
+    </td>
+  </tr>
+  <tr>
+    <td class="position">Email：</td>
+    <td>
+      <input type="text" name="email" value="<data:email>" class="sizes" />
+    </td>
+  </tr>
+  <tr class="hide">
+    <td class="position">单位：</td>
+    <td>
+      <input type="text" name="company" value="<data:company>" />
+    </td>
+  </tr>
+  <tr>
+    <td class="position">地址：</td>
+    <td>
+      <input type="text" name="address" value="<data:address>" />
+    </td>
+  </tr>
+  <tr>
+    <td class="position">证件类型：</td>
+    <td><control:form.element("radio.idtype","__value","file","sort=u.idtype")></td>
+  </tr>
+  <tr>
+    <td  class="position">证件号码：</td>
+    <td>
+      <input type="text" name="idcard" value="<data:idcard>" />
+    </td>
+  </tr>
+</table>
+</form>
+</div>

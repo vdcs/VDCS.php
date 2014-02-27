@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="lang">
+	<configure>
+		<node>var,noentry,noportal</node>
+	</configure>
+	<var>
+	</var>
+	<noentry>
+		<title>系统提示</title>
+		<message><![CDATA[入口文件({$file})未找到.]]></message>
+	</noentry>
+	<noportal>
+		<title>系统提示</title>
+		<message><![CDATA[频道({$portal})入口类({$portal.class})不存在.]]></message>
+	</noportal>
+</xcml>

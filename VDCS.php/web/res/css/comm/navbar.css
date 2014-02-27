@@ -1,0 +1,38 @@
+@charset "utf-8";
+/*
+Version:	VDCS comm @navbar v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-09-00
+*/
+
+/* ######################### */
+.navbarh{height:37px;}
+#navbar{margin-bottom:10px;}
+#navbar > .inners{clear:both;position:relative;overflow:hidden;}
+#navbar h2{height:30px;line-height:30px;font-size:28px;font-weight:bold;}
+#navbar h3,
+#navbar h4{height:20px;line-height:20px;}
+#navbar h3{}
+#navbar h3 a{display:inline-block;text-decoration:none;}
+#navbar h3 a:hover{text-decoration:none;}
+#navbar h3 a t{display:inline-block;font-weight:bold;}
+#navbar h3 a em{display:inline-block;}
+#navbar h3 a em:before{
+	display:inline-block;
+	content:">";	/*\e080*/
+	font-family:"SimHei", "Courier", "Verdana", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+	-webkit-font-smoothing: antialiased;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	margin:0 5px;
+	-khtml-opacity:0.5;-moz-opacity:0.5;opacity:0.5;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#navbar h3 a:first-child em{display:none;}
+#navbar h3 a:first-child em{float:left;display:inline-block;width:20px;background:url("../../common/icon/home.gif") 1px 3px no-repeat;margin:0;text-indent:-999px;overflow:hidden;}
+#navbar h3 .now,
+#navbar h3 .sub{display:none;}
+#navbar h4{clear:both;width:200px;position:absolute;top:0;right:0;}

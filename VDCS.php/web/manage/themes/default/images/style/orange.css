@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+
+a{color:#993300;}
+
+
+#frame_header .menus .nav a{color:#E69900;background-color:#E64C00;}
+#frame_header .menus .nav a:hover{color:#FFF;background-color:#000;}
+#frame_header .menus .nav li.pop a{color:#993300;background-color:#FFB03A;}
+#frame_header .menus .nav li.pop a:hover{color:#FFF;}
+
+#frame_footer{background-color:#FFB03A;}
+
+#frame_body > .inners{background-color:#FFB03A;}
+#frame_body .menus,
+#frame_body .mains{border-color:#FF9B06;}
+
+

@@ -1,0 +1,50 @@
+
+	<input>
+		<type>multibar.head</type>
+		<caption><![CDATA[{@xnames}状态]]></caption>
+		<att>id=status;display=none</att>
+	</input>
+	<input>
+		<type>hidden.{@tpx}tim_up</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=]]></property>
+		<style>size=20 maxlength=20 class="time"</style>
+		<caption><![CDATA[更新时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain><![CDATA[格式：<dcs:time.now>]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=infod;display=none</att>
+	</input>
+<label:include file="part.corp.ent">
+<label:include file="part.corp.intro">
+<label:include file="part.info.areas">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=content;display=none</att>
+	</input>
+<label:include file="part.corp.content.modify">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=infoo;display=none</att>
+	</input>
+	
+	<input>
+		<type>multibar.foot</type>
+	</input>

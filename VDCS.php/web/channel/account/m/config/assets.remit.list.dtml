@@ -1,0 +1,27 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+
+
+<label:include file="inc/listc.struct.begin">
+<th class="ua"><exec:langs("title.unames")></th>
+<th>汇款银行</th>
+<th class="money">汇款金额</th>
+<th class="status w80"><exec:langs("title.status")></th>
+<th class="handle"><exec:langs("title.handle")></th>
+<label:include file="inc/listc.struct.end">
+<label:include file="inc/listc.tpl.begin">
+<td><a href="<exec:url("channel=account&p=account&m=null&mi=null&action=view&id=[item:uuid]")>">[item:unames]</a></td>
+<td><span title="[item:bank]" data-dict="file:sort=common.channel/{@channel}/data.remit.bank" data-value="[item:type]"></span></td>
+<td class="money">[item:money]</td>
+<td class="status">
+	<span data-dict="file:sort=common.channel/{@channel}/data.assets.status" data-value="[item:status]"></span>
+	<label:include file="inc/row.item.timed">
+</td>
+<td class="handle"><a href="#view"><exec:langs("action.view")></a></td>
+<label:include file="inc/listc.tpl.end">
+
+<label:include file="inc/listc.script">
+
+
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

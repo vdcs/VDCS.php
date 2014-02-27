@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,name</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<value>1</value>
+		<name><![CDATA[身份证]]></name>
+	</item>
+	<item>
+		<value>6</value>
+		<name><![CDATA[港澳台身份证]]></name>
+	</item>
+	<item>
+		<value>2</value>
+		<name><![CDATA[学生证]]></name>
+	</item>
+	<item>
+		<value>3</value>
+		<name><![CDATA[军官证]]></name>
+	</item>
+	<item>
+		<value>4</value>
+		<name><![CDATA[护照]]></name>
+	</item>
+</xcml>

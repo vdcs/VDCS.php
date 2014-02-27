@@ -1,0 +1,12 @@
+
+<div class="bars">
+<h2><web:var.title.p></h2>
+<p>我的收藏夹，私密！</p>
+</div>
+
+<div class="links">
+<ul>
+<li el="module"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=module")>"><span><chn:var("{@channel}","title.{@portal}.module")></span></a></li>
+<li el="module"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=module")>"><span><chn:var("{@channel}","title.{@portal}.module")></span></a></li>
+</ul>
+</div>

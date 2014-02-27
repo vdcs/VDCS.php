@@ -1,0 +1,32 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+
+
+<label:include file="inc/listc.struct.begin">
+<th class="info">{@ua:names}名称</th>
+<th class="emoney"><exec:langs("title.coin")></th>
+<th class="status w110"><exec:langs("title.status")></th>
+<th class="handle"><exec:langs("title.handle")></th>
+<label:include file="inc/listc.struct.end">
+<label:include file="inc/listc.tpl.begin">
+<td class="name">
+<r>[item:icon.moderator][item:icon.grade][item:icon.group]</r>
+<a href="#edit" data-placement="right" data-align="left" title="名称: [item:name]&#10;邮箱: [item:email]&#10;手机: [item:mobile]&#10;证件: [item:idcard]&#10;姓名: [item:realname]&#10;昵称: [item:names]&#10;<app:var.rank>: [item:rank]&#10;QQ: [item:im1]&#10;创建：[item:tim!time]&#10;更新：[item:tim_up!time]">[item:_names]</a></td>
+<td class="emoney"><span data-placement="right" data-align="left" title="<app:var.credit>: [item:credit]&#10;<app:var.money>: [item:money]&#10;<app:var.emoney>: [item:emoney]&#10;<app:var.points>: [item:points]&#10;<app:var.exp>: [item:exp]">[item:emoney]</span></td>
+<td class="status"><span data-dict="data.audit" data-value="[item:status]"></span>
+	<span data-dict="data.auth" data-value="[item:isauth]"></span>
+	<p class="s"><span title="[item:_time]">[item:_time!date]</span> <span data-dict="data.lock" data-value="[item:islock]"></span></p></td>
+<td class="handle">
+<span class="btn-group">
+	<a href="#edit" class="btn ic"><i class="icol-pencil"></i></a>
+	<a href="#view" class="btn ic"><i class="icol-find"></i></a>
+	<a href="#recharge" class="btn ic"><i class="icol-money-yen"></i></a>
+</span>
+</td>
+<label:include file="inc/listc.tpl.end">
+
+<label:include file="ua.list-script">
+
+
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

@@ -1,0 +1,6 @@
+<?
+class PortalSupportNews extends PortalSupportAnnounce
+{
+	
+}
+?>

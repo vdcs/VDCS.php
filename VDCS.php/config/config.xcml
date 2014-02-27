@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>data</node>
+	</configure>
+	<data>
+		<time.today>2007-04-25</time.today>
+		<user.total>0</user.total>
+		<user.new.id>0</user.new.id>
+		<user.new.name>haha</user.new.name>
+	</data>
+</xcml>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<edit.table.query>uuid={$uuid}</edit.table.query>
+		
+		<list.table.query>uuid={$uuid}</list.table.query>
+		<list.handle.sql.delete>delete from {@table.name} where {@table.px}id in ({$ids}) and uuid={$uuid}</list.handle.sql.delete>
+		<list.handle.select.option>delete</list.handle.select.option>
+		<list.handle.put>delete</list.handle.put>
+		
+		<table.fields.add.value>uuid={$uuid};username={$username};sp_poll_agree=0;sp_poll_oppose=0;sp_user_define=;c_istop=0;c_isgood=0;c_total_view=0;c_status={$status};c_tim={$time_now};orderid=0;c_total_week=0;c_total_month=0;c_total_comment=0;c_total_data=0</table.fields.add.value>
+		<table.fields.edit.ignore>uuid,username,sp_poll_agree,sp_poll_oppose,sp_user_define,c_istop,c_isgood,c_total_view,c_status,c_tim,orderid,c_total_week,c_total_month,c_total_comment,c_total_data</table.fields.edit.ignore>
+		<table.fields.shortcut></table.fields.shortcut>
+		
+		<relate.data.sql>select top 1 * from {@table.name} where uuid={$uuid} and {@table.px}id={$rootid}</relate.data.sql>
+	</config>
+	
+	<lang>
+		<title.list>我的{@names}</title.list>
+		<title.add>发布{@names}</title.add>
+		<title.edit>编辑{@names}</title.edit>
+		
+		<handle.ok.add><![CDATA[成功发布了 1 {@unit}{@names}！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 {@unit}{@names}！]]></handle.ok.edit>
+	</lang>
+	<template>
+		<list><![CDATA[
+<control:ui.form("head")>
+<table cellspacing="0" cellpadding="4" class="list lists table-break">
+<tr class="bar align-center">
+<td width="20" class="re-option"><control:ui.form("select.data")></td>
+<!--<td width="50">ID</td>-->
+<td width="*" class="re-topic">{@names}<exec:langs("title.topic")></td>
+<td width="40">{@names.data}</td>
+<td width="70">发布<exec:langs("title.time")></td>
+<td width="40"><exec:langs("title.status")></td>
+<td width="60"><exec:langs("title.handle")></td>
+</tr>
+<loop:item>
+<tr class="row align-center" onMouseOver="javascript:this.className='row align-center pop';" onMouseOut="javascript:this.className='row align-center';">
+<td class="row-selectid re-option"><control:ui.form("select.id","[item:selectid]")></td>
+<!--<td class="row-id"><a href="<var:url.edit>">[item:id]</a></td>-->
+<td class="row-topic"><a href="<var:url.edit>" id="list-item[item:id]-topic" _status="[item:<var:table.px>status]">[item:topic]</a></td>
+<td class="row-item"><a href="<exec:url("module=data&rootid=[item:id]")>"><span class="b total">[item:total.data]</span> {@unit.data}</a></td>
+<td class="row-item">[item:times]</td>
+<td class="row-status"><control:dict("data.audit","[item:<var:table.px>status]")></td>
+<td class="row-item"><a id="list-item[item:id]-edit" href="<var:url.edit>"><exec:langs("action.edit")></a> <a id="list-item[item:id]-view" href="">浏览</a></td>
+</tr>
+<script type="text/javascript">app.put.addList("[item:id]");</script>
+</loop>
+<tbody id="list-items-nodata" style="display:none;">
+<tr class="row align-center"><td colspan="6">
+<div style="padding:10px;">您还没有发布{@names} <a href="<exec:url("action=add")>">现在发布</a></div>
+</td></tr>
+</tbody>
+<tr class="btn align-center"><td colspan="6">
+<div class="handle">
+<control:ui.form("select.buttons","<var:select.option>")>
+</div>
+<div class="data-paging"><paging:string></div>
+</td></tr>
+</table>
+<control:ui.form("end")>
+</div>]]></list>
+	</template>
+</xcml>

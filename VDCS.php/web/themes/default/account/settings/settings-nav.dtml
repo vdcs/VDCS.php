@@ -1,0 +1,12 @@
+
+<div class="bars">
+<h2><web:var.title.p></h2>
+<p>您可以在这里设置诸如昵称、签名和头像等的个人信息。</p>
+</div>
+
+<div class="links">
+<ul>
+<li el="info"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=info")>"><span><chn:var("{@channel}","title.{@portal}.info")></span></a></li>
+<li el="avatar"><a href="<chn:linkurl("{@channel}","pam","p={@portal}&m=avatar")>"><span><chn:var("{@channel}","title.{@portal}.avatar")></span></a></li>
+</ul>
+</div>

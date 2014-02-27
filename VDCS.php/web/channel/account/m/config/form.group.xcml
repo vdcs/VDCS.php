@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>text.id</type>
+		<property><![CDATA[item=;action=;type=string;max=255;min=1]]></property>
+		<style>size=15 maxlength=20</style>
+		<caption><![CDATA[用户组ID]]></caption>
+		<att></att>
+		<value><![CDATA[]]></value>
+		<explain><![CDATA[2-8的数字，不能重复，不可随意修改]]></explain>
+	</input>
+	<input>
+		<type>text.name</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=1]]></property>
+		<style>size=20 maxlength=20</style>
+		<caption><![CDATA[用户组名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[最大长度20位]]></explain>
+	</input>
+	<input>
+		<type>text.key</type>
+		<property><![CDATA[item=;action=;type=string;max=10;min=1]]></property>
+		<style>size=20 maxlength=10</style>
+		<caption><![CDATA[用户组代码]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[最大长度10位，如：huser]]></explain>
+	</input>
+	<input>
+		<type>put.icon</type>
+		<property><![CDATA[item=;class=;action=;type=string;max=20;min=]]></property>
+		<style>size=20 maxlength=20</style>
+		<caption><![CDATA[用户组图标]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<app:url.images>user/group/icon_<font class="light">(用户组代码)</font>.gif]]></explain>
+	</input>
+	<input>
+		<type>text.style</type>
+		<property><![CDATA[item=;class=sp;action=;type=string;max=100;min=1]]></property>
+		<style>size=80 maxlength=100</style>
+		<caption><![CDATA[用户组样式]]></caption>
+		<att></att>
+		<value><![CDATA[<font color="#000000">{&#36;name}</font>]]></value>
+		<explain><![CDATA[<br>须包含“{&#36;name}”]]></explain>
+	</input>
+</xcml>

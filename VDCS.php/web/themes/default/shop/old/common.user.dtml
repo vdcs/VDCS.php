@@ -1,0 +1,22 @@
+<div class="Cobs Side-User">
+	<div class="CobBar"><p><channel:var("title.user")></p></div>
+	<div class="CobContent"><div class="CobInner">
+<div class="partUser">
+<label:include file="/user.side.part">
+</div>
+<div class="partInfo">
+<p>您的购物车中有 <span class="total" id="side-cart-total">0</span> <channel:var("unit")><channel:var("names")></p>
+<p>总计金额 <span class="price"><span id="side-cart-prices">0.00</span><em><app:unit.price></em></span></p>
+</div>
+<div class="partMenu">
+<ul>
+<li id="side-user-menu-cart" class="cart"><a href="<linkurl:{@channel}.cart>"><span><channel:var("title.cart")></span></a></li>
+<li id="side-user-menu-pay" class="pay"><a href="<linkurl:{@channel}.pay>"><span><channel:var("title.pay")></span></a></li>
+<li id="side-user-menu-order" class="order"><a href="<linkurl:{@channel}.order>"><span><channel:var("title.order")></span></a></li>
+</ul>
+</div>
+	</div></div>
+	<div class="CobFooter"><p></p></div>
+</div>
+<div class="space"></div>
+<script type="text/javascript">appc.cart.bind("#side-cart-total","#side-cart-amounts","#side-cart-prices");</script>

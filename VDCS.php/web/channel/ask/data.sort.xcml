@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>id,name,value</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<id>1</id>
+		<name>问题</name>
+		<value>qa</value>
+	</item>
+</xcml>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title><app:web.name> - 支付网关</title>
+<script type="text/javascript">
+var tradeno='<var:tradeno>';
+var sp_url='<var:sp_url>';
+var url_jump='<var:url.jump>';
+var refresh_second=parseInt('<var:refresh.second>');if(refresh_second<1) refresh_second=3;
+
+var urlJump=function(){
+	location.href=sp_url;
+};
+
+window.onload=function(){
+	if(opener && opener.payment_callback){
+		opener.payment_callback(tradeno);
+		//alert(sp_url);
+		if(url_jump) urlJump();
+	}
+};
+window.setTimeout(function(){urlJump()},refresh_second*1000);
+</script>
+</head>
+<body>
+<h3><app:web.name> - 支付网关 </h3>
+<p>等待<a href="<var:sp_url>">跳转</a>..</p>
+<meta http-equiv="refresh" content="<var:refresh.second>; url=<var:sp_url>" />
+</body>
+</html>

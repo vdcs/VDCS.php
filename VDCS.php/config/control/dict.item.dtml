@@ -1,0 +1,7 @@
+	<item>
+		<sort>{$sort}</sort>
+		<value>{$value}</value>
+		<name><![CDATA[{$name}]]></name>
+		<title><![CDATA[{$title}]]></title>
+		<level>{$level}</level>
+	</item>

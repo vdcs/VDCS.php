@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+#main .conts{clear:both;display:block;margin-bottom:15px;position:relative;}
+#main .conts:before,
+#main .conts:after{clear:both;display:table;content:"";}
+#main .conts:last-child{margin-bottom:0;}
+
+#main .cont{clear:both;position:relative;}
+#main .cont:before,
+#main .cont:after{clear:both;display:table;content:"";}
+#main .cent{margin-right:215px;}
+#main .sider{float:right;width:200px;position:absolute;top:0;right:0;}
+#main .cent:before,
+#main .cent:after
+#main .sider:before,
+#main .sider:after{clear:both;display:table;content:"";}

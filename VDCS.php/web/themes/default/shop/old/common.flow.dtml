@@ -1,0 +1,38 @@
+<div id="Flows"></div>
+<div class="space"></div>
+<label:include script="res/VDCS.pp.js">
+<script type="text/javascript">
+function initFlow(){
+	var steps=$pp.Steps;
+	steps.init("{$channel}",{w:$("div .MainBody").width()});
+	steps.addItem("1.查看购物车");
+	steps.addItem("2.确认订单信息");
+	steps.addItem("3.订单结算");
+	steps.addItem("4.完成订购");
+	steps.doParse("Flows");
+	steps.active(1);
+	
+	switch("<var:_flow>"||$b.getURL("page")){
+		case "flow":
+		case "cart_flow":
+			steps.active(2);
+			break;
+		case "pay":
+			steps.active(3);
+			break;
+		case "order":
+		case "pay.order":
+			steps.active(4);
+			break;
+		default:
+			if($req.getQuery("module")=="flow"){
+				steps.active(2);
+			}
+			else{
+				steps.active(1);
+			}
+			break;
+	}
+}
+initFlow();
+</script>

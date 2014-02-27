@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>sms</node>
+	</configure>
+	<sms>
+		<module>nbark</module>
+		<id>user</id>
+		<key>password</key>
+		<uid></uid>
+		<sign></sign>
+		<status></status>
+	</sms>
+</xcml>

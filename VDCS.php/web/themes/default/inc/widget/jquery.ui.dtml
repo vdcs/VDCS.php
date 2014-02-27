@@ -1,0 +1,6 @@
+
+<label:include script="jquery/ui/ui.extend.js">
+<label:include script="<url:images>script/jquery/ui/ui.css" type="css">
+<script type="text/javascript">
+//$(function(){$p.append("css","<url:images>script/jquery/ui/ui.css")});
+</script>

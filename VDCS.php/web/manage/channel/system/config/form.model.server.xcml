@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>put.serverid</type>
+		<property><![CDATA[item=;action=edit;type=int;max=;min=]]></property>
+		<style></style>
+		<caption><![CDATA[服务器ID]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[不能修改]]></explain>
+	</input>
+	<input>
+		<type>input.serverid</type>
+		<property><![CDATA[item=;action=add;type=int;max=255;min=1]]></property>
+		<style>size=15 maxlength=15</style>
+		<caption><![CDATA[服务器ID]]></caption>
+		<att></att>
+		<value>{$serverid}</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.name</type>
+		<property><![CDATA[item=;action=;type=string;max=100;min=1]]></property>
+		<style>size=60 maxlength=200</style>
+		<caption><![CDATA[服务器名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.url</type>
+		<property><![CDATA[item=;action=;type=string;max=100;min=1]]></property>
+		<style>size=60 maxlength=250</style>
+		<caption><![CDATA[服务器地址]]></caption>
+		<att></att>
+		<value>http://</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>textbox.summary</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>cols=50 rows=4</style>
+		<caption><![CDATA[服务器说明]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>hidden.data</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=50 maxlength=200</style>
+		<caption><![CDATA[服务器数据类型]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+</xcml>

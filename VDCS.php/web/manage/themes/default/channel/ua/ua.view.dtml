@@ -1,0 +1,168 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+
+
+<div class="box">
+	<h2>
+		<t><app:var.ua>信息</t>
+		<r><a class="btn ic" href="<exec:url("action=edit&id=<view:uid>")>"><i class="icol-pencil"></i></a></r>
+	</h2>
+	<div class="bod">
+		<table class="table tables table-striped table-hover table-detail">
+		<tbody>
+			<tr><th><app:var.ua>ID</th><td><view:uid></td><th>创建时间</th><td><span title="更新时间：<view:tim_up!time>"><view:tim!date></td></tr>
+			<tr><th>名称</th><td><view:name></td><th>编号</th><td><view:no></td></tr>
+			<tr><th>邮箱</th><td><view:email></td><th>手机</th><td><view:mobile></td></tr>
+			<tr><th>真实姓名</th><td><view:realname></td><th>简称</th><td><view:names></td></tr>
+			<tr><th>证件</th><td colspan="3"><view:idcard></td></tr>
+			<tr><th>QQ</th><td><view:im1></td><th></th><td></td></tr>
+			<tr><th>单位名称</th><td colspan="3"><view:company></td></tr>
+			<tr><th>网址</th><td colspan="3"><a href="<view:url>" target="_blank"><view:url></a></td></tr>
+			<tr><th>地址</th><td><view:address></td><th>邮编</th><td><view:postcode></td></tr>
+			<tr><th>电话</th><td><view:phone></td><th>传真</th><td><view:fax></td></tr>
+			<tr><th>简介</th><td colspan="3"><view:summary></td></tr>
+		</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="space"></div>
+<div class="box">
+	<h2><t>联系人记录</t></h2>
+	<div class="bod">
+		<table class="table tables table-striped table-hover table-list">
+			<thead>
+				<tr>
+					<th class="id" style="width:80px;">ID</th>
+					<th>姓名</th>
+					<th>类型</th>
+					<th>邮箱地址</th>
+					<th>联系电话</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody id="list_linkman"></tbody>
+			<xmp id="list_linkman_tpl">
+				<tr dataid="[item:id]">
+					<td>[item:id]</td>
+					<td>[item:names]</td>
+					<td>[item:type.name]</td>
+					<td>[item:email]</td>
+					<td>[item:mobile]</td>
+					<td><a href="#edit" el="edit">编辑</a> || <a href="#del" el="del">删除</a></td>
+				</tr>
+			</xmp>
+		</table>
+	</div>
+	<div class="con">
+		<div class="pagings"></div>
+		<r><a class="btn btn-info" el="add">添加联系人</a></r>
+	</div>
+</div>
+
+<div class="space"></div>
+<div class="box">
+	<h2><t>资金流动</t></h2>
+	<div class="bod">
+		<table class="table tables table-striped table-hover table-list">
+			<thead>
+				<tr><th class="id" style="width:80px;">ID</th><th>金额</th><th>状态</th><th>余额</th><th>时间</th></tr>
+			</thead>
+			<tbody id="list_transaction"></tbody>
+			<xmp id="list_transaction_tpl">
+				<tr dataid="[item:id]">
+					<td>[item:id]</td><td>[item:money]</td><td>[item:type.name]</td><td>[item:balance]</td><td>[item:tim.name]</td>
+				</tr>
+			</xmp>
+		</table>
+	</div>
+	<div class="con"><div class="pagings"></div></div>
+</div>
+
+
+<script type="text/javascript">
+$(function(){
+	var list_transaction=new VDCS.list();
+	var transaction_opt={cont:$('#list_transaction'),tpl:$('#list_transaction_tpl')};
+	transaction_opt.serveVar={channel:'{@channel}',p:'assets',m:'transaction',action:'searchi',params:'listnum=5&uuid='+$p.q('id')};
+	transaction_opt.bind=function(jitem){
+	};
+	transaction_opt.binds=function(jcont){
+	};
+	transaction_opt.paging=$('.paging');
+	transaction_opt.node_table='item';
+	list_transaction.init(transaction_opt);
+	list_transaction.parse();
+
+
+	var list_linkman=new VDCS.list();//对象，传入存放内容的对象和模板对象
+
+	var opt={cont:$('#list_linkman'),tpl:$('#list_linkman_tpl')};
+	opt.serveVar={channel:'{@channel}',p:'linkman',m:'ua',action:'searchi',params:'listnum=5&uid='+$p.q('id')};
+	opt.bind=function(jitem){
+	};
+	opt.binds=function(jcont){
+		jcont.find('[el=del]').click(function(){
+			var opt={};
+			var jthis=$(this);
+			//opt.id=jcont.attr('dataid');
+			opt.id=jthis.parents('tr').attr('dataid');
+			opt.message='您确认要删除联系人吗？';
+			opt.callback=function(){
+				var _url='linkman/ua.x?action=del&id='+opt.id+'&uuid='+$p.q('id');
+				$ajax({url:_url,value:'xml',ready:function(xml){
+					//alert(xml);
+					var map=$util.toMapByXML(xml);
+					var treeVar=map.getItemTree('var');
+					var _status=treeVar.v('status');
+					if(_status=='succeed'){
+						list_linkman.refresh();
+						ui.popups('succeed','删除联系人成功！');
+					}else{
+						ui.popups('error','删除联系人失败！');
+					}
+				},error:true});	
+			};
+			ui.confirm(opt);
+		});
+		jcont.find('[el=edit]').click(function(){
+			var jthis=$(this);
+			var id=jthis.parents('tr').attr('dataid');
+			//alert(id);
+			ui.pages.recordClick(jthis,{
+				serveE:{p:'linkman',m:'ua',action:'edit',params:'id='+id},
+				serveX:{p:'linkman',m:'ua',action:'edit',params:'id='+id},
+				//succeed:_succeed,
+				succeed:function(){
+					ui.popups('succeed','编辑成功！',1);
+					list_linkman.refresh();
+							},
+				title:'编辑联系人',
+			'':''});
+		});
+	};
+	opt.paging=$('.pagings');
+	opt.node_table='item';
+	list_linkman.init(opt);
+	list_linkman.parse();
+	/**$('[el=add]').click(function(){
+		var id=$p.q('id');
+		location.href='?id='+id;
+	});**/
+		ui.pages.channel='{@channel}';
+		var optt={
+			serveE:{p:'linkman',m:'ua',action:'add',params:''},
+			serveX:{p:'linkman',m:'ua',action:'add',params:'&uuid='+$p.q('id')},
+			title:'添加联系人',
+			succeed:function(){
+				ui.popups('succeed','添加成功！',1);
+				list_linkman.refresh();
+			},
+		};
+		ui.pages.record($('[el=add]'),optt);
+});
+</script>
+
+
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

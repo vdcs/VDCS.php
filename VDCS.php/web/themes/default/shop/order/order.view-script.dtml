@@ -1,0 +1,41 @@
+
+<script type="text/javascript">
+$(function(){
+	var _init=function(){
+		var jitem=$('tfoot');
+		var status='<view:status>';
+		if(status==0) jitem.find('[el=pay],[el=cancel]').show();
+		if(status==4) jitem.find('[el=confirm]').show();
+		if(status==5) jitem.find('[el=rate]').show();
+		
+		jitem.find('[el=cancel]').click(function(){
+			var orderid='<view:id>';
+			_change(orderid,9,'您确定要取消订单吗？');
+		});
+		jitem.find('[el=confirm]').click(function(){
+			var orderid='<view:id>';
+			_change(orderid,5,'您确定要确认收货吗？');
+		});
+	};
+	
+	var _change=function(orderid,status,message){
+		var opt={};
+		opt.message=message;
+		opt.callback=function(){
+			var _url='/shop/order.x?action=change&orderid='+orderid+'&status='+status;
+			$ajax({url:_url,value:'xml',ready:function(xml){
+				var map=$util.toMapByXML(xml);
+				var treeVar=map.getItemTree('var');
+				ui.popups('succeed','操作成功！');
+				setTimeout(function(){
+					location.reload();
+				},1000);
+			},error:true});	
+				
+		};
+		ui.confirm(opt);
+	};
+	
+	_init();
+});
+</script>

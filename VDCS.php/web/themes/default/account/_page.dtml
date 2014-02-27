@@ -1,0 +1,24 @@
+<label:include file="frame/headers">
+
+
+<div class="cont">
+
+</div>
+
+<label:include file="frame/spacer">
+
+<div class="cont">
+
+</div>
+
+<dtml:_message>
+<script type="text/javascript">
+$(function(){
+	
+	
+	
+});
+</script>
+
+
+<label:include file="frame/footers">

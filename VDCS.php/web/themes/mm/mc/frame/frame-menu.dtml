@@ -1,0 +1,25 @@
+
+<!--
+	<div class="partBar"><span>我的菜单</span></div>
+-->
+	<div class="partItems">
+<ul>
+<li menus="my"><a href="<linkurl:{@channel}.c>"><span><chn:var("{@channel}","title.c")></span></a></li>
+<li menus="my"><a href="<linkurl:{@channel}.my>"><span><chn:var("{@channel}","title.my")></span></a></li>
+</ul>
+	</div>
+	<div class="space"></div>
+	<!--
+	<div class="partBar"><span>帐户维护</span></div>
+	<div class="partItems">
+<ul>
+<li menus="modify.info"><a href="<chn:linkurl("{@channel}","modify","m=info")>"><span>修改资料</span></a></li>
+<li menus="modify.password"><a href="<chn:linkurl("{@channel}","modify","m=password")>"><span>修改密码</span></a></li>
+</ul>
+	</div>
+	-->
+	<div class="partItems">
+<ul>
+<li><a href="<url:{@uarc}.logout>" onclick="javascript:return w.confirm('您确定要安全退出吗？')?true:false;"><span>安全退出</span></a></li>
+</ul>
+	</div>

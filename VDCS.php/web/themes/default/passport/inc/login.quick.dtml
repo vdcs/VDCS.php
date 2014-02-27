@@ -1,0 +1,52 @@
+﻿
+<style type="text/css">
+.box_quick{clear:both;width:565px;position:relative;}
+.box_quick .xform{width:300px;padding:0;}
+.box_quick .forms dl h2{width:60px;}
+.box_quick .forms dl h3{margin-left:70px;}
+.box_quick .cent{margin-right:215px;}
+.box_quick .cent{}
+.box_quick .cent{}
+.box_quick .sider{width:180px;border-left:1px solid #E0E0E0;padding-left:19px;position:absolute;top:0;right:0;}
+.box_quick .sider{line-height:220%;}
+.box_quick .sider sh{height:5px;}
+</style>
+<div class="box_quick">
+	<div class="cent">
+<div class="xform">
+<div class="forms">
+<form name="frm_login" action="" method="post" >
+<dl>
+<dt el="id">
+	<h2>帐号</h2>
+	<h3><p><input type="text" class="tipi" name="name" value="" placeholder="邮箱/手机号" minlength="5" maxlength="50" tabindex="1" /><em class="it name"></em><em class="ih" title="可以输入您帐号相关的邮箱/手机号"></em></p></h3>
+</dt>
+<dt el="password">
+	<h2>密码</h2>
+	<h3><p><input type="password" class="tipi" name="password" value="" placeholder="登录密码" minlength="2" maxlength="20" tabindex="2" /><em class="it password"></em><em class="ih"></em></p></h3>
+</dt>
+<dd class="tips"><h3><p class="itip"><em></em><span>提示信息</span></p></h3></dd>
+<dd>
+	<h3>
+	<label><input type="checkbox" name="remember_info" value="yes" checked data-bind="check" data-style="m" />自动登录</label>
+	&nbsp; &nbsp;
+	<a href="<chn:linkurl("passport","pam","p=forgot&m=password")>"><chn:var("{@channel}","title.forgot.password")></a>
+	</h3>
+</dd>
+<dd>
+	<h3>
+	<a class="btn m" href="<url:login>" el="submit"><span>登录</span></a>
+	</h3>
+</dd>
+</dl>
+</form>
+</div>
+</div>
+	</div>
+	<div class="sider">
+		<p>还没有帐号？</p>
+		<p><a class="btn c" href="<url:register>"><span>轻松注册</span></a></p>
+		<sh></sh>
+<label:include file="inc/oauth.links.s">
+	</div>
+</div>

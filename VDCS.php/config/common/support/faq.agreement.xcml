@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,topic,content</field>
+	</configure>
+	<item>
+		<key>agreement</key>
+		<topic><![CDATA[服务协议]]></topic>
+		<content><![CDATA[
+服务协议的信息</br>
+]]></content>
+	</item>
+</xcml>

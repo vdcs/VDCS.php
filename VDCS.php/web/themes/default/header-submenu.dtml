@@ -1,0 +1,10 @@
+﻿
+	<div class="submenu"><div class="inner">
+<ul>
+<themes:menu("nav")>
+<li><a href="[menu:url]" [menu:atts]><span>[menu:name]</span></a></li>
+<@part:user>
+<label:include file="/user.mini">
+</themes>
+</ul>
+	</div></div>

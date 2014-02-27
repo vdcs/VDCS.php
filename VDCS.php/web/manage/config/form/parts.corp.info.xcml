@@ -1,0 +1,125 @@
+
+	
+<label:include file="part.m.pivotal.corp">
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=nums;display=none</att>
+	</input>
+<label:include file="partc.ua.nums">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=status;display=none</att>
+	</input>
+<label:include file="partc.ua.auth">
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[状态信息]]></caption>
+	</input>
+	<input>
+		<type>radio.{@tpx}istop</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<caption><![CDATA[是否固顶]]></caption>
+		<att><![CDATA[<control:att("dict","data.tops")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}isgood</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<caption><![CDATA[是否推荐]]></caption>
+		<att><![CDATA[<control:att("dict","data.goods")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}isauth</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<caption><![CDATA[是否认证]]></caption>
+		<att><![CDATA[<control:att("dict","data.auth")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}islock</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<caption><![CDATA[是否锁定]]></caption>
+		<att><![CDATA[<control:att("dict","data.lock")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}timed</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<caption><![CDATA[计时状态]]></caption>
+		<att><![CDATA[<control:att("dict","data.timed")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}status</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<caption><![CDATA[当前状态]]></caption>
+		<att><![CDATA[<control:att("dict","data.audit")>]]></att>
+		<value>1</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}tim</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=1]]></property>
+		<caption><![CDATA[创建时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain><![CDATA[格式：<dcs:time.now>]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}tim_up</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=]]></property>
+		<caption><![CDATA[更新时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain><![CDATA[格式：<dcs:time.now>]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=infod;display=none</att>
+	</input>
+<label:include file="partc.corp.ent">
+<label:include file="partc.corp.intro">
+<label:include file="partc.corp.logo">
+<label:include file="partc.area">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=content;display=none</att>
+	</input>
+<label:include file="partc.corp.content">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=infoo;display=none</att>
+	</input>
+	
+	<input>
+		<type>multibar.foot</type>
+	</input>

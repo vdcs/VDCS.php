@@ -1,0 +1,6 @@
+<?
+class ChannelPassportIndex extends ChannelPassportLogin
+{
+	
+}
+?>

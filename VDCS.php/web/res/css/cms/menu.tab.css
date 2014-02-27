@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @menu.tab v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+.MenuTab{clear:both;height:30px;overflow:hidden;}
+.MenuTab .partFrame{}
+.MenuTab .partBody{}
+.MenuTab ul{list-style:none;margin:0;padding:0;}
+.MenuTab li{display:inline;margin:0;padding:0;}
+.MenuTab li span{font-size:14px;font-weight:bold;}
+.MenuTab a{float:left;display:inline;height:30px;color:#FFFFFF;text-decoration:none;background-repeat:no-repeat;background-position:0 -35px;margin:0 5px 0 0;padding:0 0 0 5px;}
+.MenuTab a span{display:block;line-height:30px;background-repeat:no-repeat;background-position:100% -35px;padding:0 13px 0 8px;}
+.MenuTab a span{float:none;}
+.MenuTab a:hover{color:#FFFFFF;text-decoration:none;background-position:0 -105px;}
+.MenuTab a:hover span{background-position:100% -105px;}
+.MenuTab a:active{color:#FFFFFF;text-decoration:none;}
+.MenuTab li.jut a{background-position:0 -105px;}
+.MenuTab li.jut a span{background-position:100% -105px;}
+.MenuTab li.jut a:hover{background-position:0 -70px;}
+.MenuTab li.jut a:hover span{background-position:100% -70px;}
+.MenuTab li.pop a{background-position:0 -70px;}
+.MenuTab li.pop a span{background-position:100% -70px;}
+.MenuTab li.pop a:hover{background-position:0 -105px;}
+.MenuTab li.pop a:hover span{background-position:100% -105px;}
+.MenuTab li.space{width:6px;background:#EDEDED;overflow:hidden;}
+.MenuTab li.space a{background-repeat:no-repeat;background-position:0 0;margin:0;padding:0 6px 0 0;}
+.MenuTab li.space a span{padding:0;}

@@ -1,0 +1,65 @@
+<div class="ContentBody">
+<div class="TipsClew"><p>您好 欢迎登录控制台，这里是您的帐号资料，如有变更请及时更新。</p></div>
+	<div class="space"></div>
+	<div class="Block">
+		<div class="BlockBar"><p>基本资料</p></div>
+		<div class="BlockContent"><div class="BlockInner">
+<table class="list lists table-break">
+<tr>
+<td width="18%">名称</td>
+<td width="52%"><span class="big b"><info:name></span></td>
+<td width="30%"><span class="gray"><info:area_country> <info:area_province> <info:area_city></span></td>
+</tr>
+<tr>
+<td>邮箱</td>
+<td><span class="u"><info:email></span></td>
+<td><span class="gray">登录使用</span></td>
+</tr>
+<tr class="blank vat">
+<td>简介</td>
+<td colspan="2" class="content"><info:summary!explain></td>
+</tr>
+</table>
+		</div></div>
+		<div class="BlockFooter"><p></p></div>
+	</div>
+	<div class="space"></div>
+	<div class="Block">
+		<div class="BlockBar"><p>详细资料</p></div>
+		<div class="BlockContent"><div class="BlockInner">
+<table class="list lists table-break">
+<tr class="blank">
+<td width="18%"></td>
+<td width="72%"></td>
+<td width="10%"></td>
+</tr>
+<tr>
+<td>联系地址</td>
+<td colspan="2"><info:address></td>
+</tr>
+<tr>
+<td>邮政编码</td>
+<td colspan="2"><info:postcode></td>
+</tr>
+<tr>
+<td>联系电话</td>
+<td colspan="2"><info:phone></td>
+</tr>
+<tr class="blank">
+<td>联系传真</td>
+<td colspan="2"><info:fax></td>
+</tr>
+</table>
+		</div></div>
+		<div class="BlockFooter"><p></p></div>
+	</div>
+</div>
+<div class="ContentSide">
+	<div class="Block">
+		<div class="BlockBar"><p>关联信息</p></div>
+		<div class="BlockContent"><div class="BlockInner">
+
+		</div></div>
+		<div class="BlockFooter"><p></p></div>
+	</div>
+</div>

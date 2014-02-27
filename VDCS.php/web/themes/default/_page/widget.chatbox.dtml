@@ -1,0 +1,201 @@
+<label:include file="frame/headers">
+
+
+<style type="text/css">
+.thumbnails{margin-left:-20px;list-style:none;*zoom:1;}.thumbnails:before,.thumbnails:after{display:table;content:"";line-height:0;}
+.thumbnails:after{clear:both;}
+.row-fluid .thumbnails{margin-left:0;}
+.thumbnails>li{float:left;margin-bottom:18px;margin-left:20px;}
+.thumbnail{display:block;padding:4px;line-height:18px;border:1px solid #ddd;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.055);-moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.055);box-shadow:0 1px 3px rgba(0, 0, 0, 0.055);-webkit-transition:all 0.2s ease-in-out;-moz-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;}
+a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105, 214, 0.25);-moz-box-shadow:0 1px 4px rgba(0, 105, 214, 0.25);box-shadow:0 1px 4px rgba(0, 105, 214, 0.25);}
+.thumbnail>img{display:block;max-width:100%;margin-left:auto;margin-right:auto;}
+.thumbnail .caption{padding:9px;color:#555555;}
+
+.thumbnails{margin-left:0;} .thumbnails>li{float:none;margin-left:0;}
+.thumbnails{margin-left:-30px;} .thumbnails>li{margin-left:30px;} .row-fluid .thumbnails{margin-left:0;}
+
+
+
+.chat-box{text-align:left;}
+.chat-box > ul
+{
+    background: #fbfcfe;
+    padding-top: 15px;
+}
+
+.chat-box > ul > li
+{
+    padding: 0 15px;
+}
+
+.chat-box > ul > li
+{
+    margin-bottom: 15px;
+    border-bottom: 0;
+}
+
+.chat-box > ul > li .thumbnail
+{
+    width: 64px;
+    background-color: #fff;
+}
+
+.chat-box > ul > li .thumbnail, 
+.chat-box > ul > li.me .thumbnail
+{
+    float: left;
+}
+
+.chat-box > ul > li.others .thumbnail
+{
+    float: right;
+}
+
+.chat-box > ul > li .message
+{
+    border: 1px solid #c4cad3;
+    padding: 12px 16px;
+    position: relative;
+    background-color: #fff;
+    z-index: 1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.chat-box > ul > li .message .name
+{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #08c;
+}
+
+.chat-box > ul > li .message .time
+{
+    font-size: 11px;
+    display: block;
+    color: #888;
+}
+
+.chat-box > ul > li .message:before
+{
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 14px;
+    background: url(http://demo.7x7.cn/mooncake-admin/images/layout/point-arrows.png) no-repeat left top;
+    top: 13px;
+}
+
+.chat-box > ul > li.me .message
+{
+    margin-left: 94px;
+}
+
+.chat-box > ul > li.others .message
+{
+    margin-right: 94px;
+    text-align: right;
+}
+
+.chat-box > ul > li.me .message:before
+{
+    left: -7px;
+}
+
+.chat-box > ul > li.others .message:before
+{
+    right: -7px;
+    background-position: left bottom;
+}
+
+.chat-box .message-form
+{
+    padding: 10px 15px;
+    border-top: 1px solid #ccc;
+    background: #fafafa repeat-x left bottom;
+    background-image: -ms-linear-gradient(top, #ffffff, #f2f2f2);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
+    background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
+    background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
+    background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
+    background-image: linear-gradient(top, #ffffff, #f2f2f2);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#f2f2f2', GradientType=0);
+}
+
+.chat-box .message-form input[type="text"]
+{
+    margin: 0;
+}
+
+</style>
+<div class="framer">
+
+<div style="width:600px;">
+<div class="chat-box">
+	<ul class="thumbnails">
+	<li class="me">
+	<div class="thumbnail">
+	<img src="http://demo.7x7.cn/mooncake-admin/simple/assets/images/pp.jpg">
+	</div>
+	<div class="message">
+	<span class="name">Shana-chan</span>
+	Hello everyone! Mind sharing your time with me today?
+	<span class="time">15 minutes ago</span>
+	</div>
+	</li>
+	<li class="others">
+	<div class="thumbnail">
+	<img src="http://demo.7x7.cn/mooncake-admin/simple/sample/p2.jpg">
+	</div>
+	<div class="message">
+	<span class="name">Jane Well</span>
+	Hello dear, do you have something in your mind to discuss with us?
+	<span class="time">14 minutes ago</span>
+	</div>
+	</li>
+	<li class="me">
+	<div class="thumbnail">
+	<img src="http://demo.7x7.cn/mooncake-admin/simple/assets/images/pp.jpg">
+	</div>
+	<div class="message">
+	<span class="name">Shana-chan</span>
+	Cras convallis, odio in ultricies condimentum, dui metus pretium orci, ac sagittis orci eros a leo. Cras lorem est, suscipit quis lacinia sit amet, tempor a tortor. Fusce in vehicula purus. Quisque ut suscipit elit. Fusce ac metus in enim euismod tincidunt. Nunc blandit neque vitae sem egestas id egestas neque bibendum. Etiam eget risus ut dolor convallis consectetur.
+	<span class="time">10 minutes ago</span>
+	</div>
+	</li>
+	<li class="others">
+	<div class="thumbnail">
+	<img src="http://demo.7x7.cn/mooncake-admin/simple/sample/p1.jpg">
+	</div>
+	<div class="message">
+	<span class="name">Jonathan Doe</span>
+	Wow, that's a long sentence. I don't quite understand what you mean, but it's good overall :)
+	<span class="time">Just now</span>
+	</div>
+	</li>
+	</ul>
+	<div class="message-form">
+		<div class="row-fluid">
+			<div class="span10">
+			<input type="text" class="span12" placeholder="Type a message...">
+			</div>
+			<div class="span2">
+			<button type="button" class="btn btn-block btn-primary">Send</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+</div>
+<script type="text/javascript">
+$(function(){
+	
+	
+});
+</script>
+
+
+<label:include file="frame/footers">

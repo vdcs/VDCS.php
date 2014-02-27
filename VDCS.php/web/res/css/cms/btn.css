@@ -1,0 +1,42 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @btn v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######## Button ######### */
+a.button,a.button:link,a.button:visited,a.btn,a.btn:link,a.btn:visited{display:inline-block;color:#00156E;text-decoration:none!important;border:1px solid #DDDDDD;background-color:#FAFDFE;background-position:0 1px;background-repeat:no-repeat;padding:3px 2px 1px 3px;margin:0;}
+a.button:hover,a.button:active,a.btn:hover,a.btn:active{background-color:#FFFFCC;text-decoration:none!important;}
+
+a.btns{display:inline-block; height:18px;line-height:18px;color:#000000;text-decoration:none;text-align:center;background-position:0% -20px;background-repeat:no-repeat;padding:0 5px;}
+a.btns span{display:block; line-height:18px; background-color:#FFFFFF;background-position:100% -20px;padding-left:10px;padding-right:10px;background-repeat:no-repeat;}
+a.btns:hover{color:#D20000;text-decoration:none;background-position:0% -100px;}
+a.btns:hover span{background-position:100% -100px;}
+
+button,button.btn,button.push,input.btn,input.btns,input.push{height:22px;line-height:22px;border:1px solid #0095C9;background-color:#CFE8F5;background-repeat:repeat-x;padding:0 3px;cursor:pointer;}
+button.push,input.push{color:#00156E;font-weight:bold;}
+
+input.push,input.reset,input.goback,button.push,button.reset,button.goback,
+.button .btn,.sea-btn,
+.btn50,.btn80,.btn100,.btn120,.btn200,.btn300{display:inline-block;width:50px;height:26px!important;line-height:26px!important;_line-height:28px!important; background-position:0 0;background-repeat:no-repeat;background-color:transparent!important; border:0!important; padding:0!important; overflow:hidden;}
+.sea-btn{width:50px;}
+input.push,button.push,.button .push,.button .btn,
+.btn80{width:80px; background-position:0 -26px;}
+input.reset,input.goback,button.reset,button.goback,.button .reset,.button .goback{width:80px; background-position:-240px -26px;}
+.btn100,.btn120{width:120px; background-position:0 -52px;}
+.btn200,.btn300{width:200px; background-position:0 -104px;}
+
+button,input.btn,input.push{background-image:url("../../common/block/bg_btn.gif");}
+
+input.push,input.reset,input.goback,button.push,button.reset,button.goback,
+.button .btn,.sea-btn,
+.btn50,.btn80,.btn100,.btn120,.btn200,.btn300{background-image:url("../../common/struct/btns.png")!important;}
+
+.btn-big{display:inline-block;height:50px;line-height:50px;color:#922037;font-size:16px;font-weight:bold;text-decoration:none!important;text-align:center;background-image:url("../../common/struct/btn_big.png");background-repeat:no-repeat;background-position:right -250px;overflow:hidden;}
+.btn-big span{display:block;background-image:url("../../common/struct/btn_big.png");background-repeat:no-repeat;background-position:0 -50px;margin-right:10px;padding:0 25px 0 35px;}
+.btn-big:hover{background-position:right -350px;}
+.btn-big:hover span{background-position:0 -150px;}
+.btn-big1{color:#4C7AA1;background-position:right -200px;}
+.btn-big1 span{background-position:0 0;}

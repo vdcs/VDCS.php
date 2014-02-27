@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config xmlns:info="node">
+		<frame>search,class</frame>
+		<search.fields>{@table.px}name=6;{@table.px}email=6;{@table.px}mobile=6;{@table.px}names=6;{@table.px}location=6;{@table.px}company=6;{@table.px}url=6;{@table.px}address=6;{@table.px}postcode=6;{@table.px}phone=6;{@table.px}fax=6;{@table.px}linkman=6;comid=3</search.fields>
+		<search.times>{@table.px}tim</search.times>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>{@table.name}</table.name>
+		<table.px>{@table.px}</table.px>
+		<table.field.id>comid</table.field.id>
+		<table.fields.value>id=comid;time={@table.px}tim</table.fields.value>
+		<table.fields.add>comid,uaid,orderid,types,classid,indid,
+			{@table.px}no,{@table.px}name,{@table.px}email,{@table.px}mobile,
+			{@table.px}groupid,{@table.px}teamid,{@table.px}grade,{@table.px}rank,
+			{@table.px}area,{@table.px}sort1,{@table.px}sort2,{@table.px}sort3,{@table.px}sort4,{@table.px}sort5,
+			{@table.px}names,{@table.px}location,{@table.px}marks,
+			{@table.px}prop1,{@table.px}prop2,{@table.px}prop3,{@table.px}prop4,{@table.px}prop5,
+			{@table.px}credit,{@table.px}money,{@table.px}emoney,{@table.px}points,{@table.px}exp,
+			{@table.px}int1,{@table.px}int2,{@table.px}int3,{@table.px}num1,{@table.px}num2,{@table.px}num3,{@table.px}num4,{@table.px}num5,{@table.px}date1,{@table.px}date2,{@table.px}date3,
+			
+			{@table.px}shortname,{@table.px}goodname,{@table.px}ename,
+			{@table.px}linkman,{@table.px}linkinfo,{@table.px}im,{@table.px}im1,{@table.px}im2,{@table.px}im3,{@table.px}im4,{@table.px}im5,
+			{@table.px}avatar,{@table.px}logo,{@table.px}photo,
+			{@table.px}company,{@table.px}url,{@table.px}address,{@table.px}postcode,{@table.px}phone,{@table.px}fax,
+			{@table.px}add_street,{@table.px}add_suburb,{@table.px}add_city,{@table.px}add_province,{@table.px}phone2,{@table.px}phone3,{@table.px}phone_home,{@table.px}phone_office,{@table.px}phone_internal,{@table.px}fax2,
+			{@table.px}foundday,{@table.px}foundin,{@table.px}foundplace,{@table.px}incorporator,{@table.px}regtype,{@table.px}regcapital,{@table.px}regcapitals,{@table.px}productions,{@table.px}empamounts,{@table.px}turnovers,{@table.px}operate_value,
+			{@table.px}summary,{@table.px}intro,{@table.px}cause,
+			{@table.px}area_country,{@table.px}area_province,{@table.px}area_city,
+			
+			sp_code,sp_keyword,sp_attr,sp_mode,sp_edition,sp_poll_agree,sp_poll_oppose,
+			{@table.px}config,{@table.px}certs,{@table.px}auths,
+			{@table.px}auth_email,{@table.px}auth_mobile,{@table.px}auth_cert,{@table.px}auth_real,
+			{@table.px}total_view,{@table.px}total_day,{@table.px}total_week,{@table.px}total_month,
+			{@table.px}total_comment,{@table.px}total_fav,{@table.px}total_regard,
+			{@table.px}total_data,{@table.px}total_info,
+			{@table.px}total1,{@table.px}total2,{@table.px}total3,{@table.px}total4,{@table.px}total5,
+			{@table.px}isgood,{@table.px}istop,
+			{@table.px}isauth,{@table.px}islock,{@table.px}timed,{@table.px}status,{@table.px}tim,{@table.px}tim_up,{@table.px}tim1,{@table.px}tim2,{@table.px}tim3</table.fields.add>
+		<table.fields.edit>uaid,orderid,types,classid,indid,
+			{@table.px}no,{@table.px}name,{@table.px}email,{@table.px}mobile,
+			{@table.px}groupid,{@table.px}teamid,{@table.px}grade,{@table.px}rank,
+			{@table.px}area,{@table.px}sort1,{@table.px}sort2,{@table.px}sort3,{@table.px}sort4,{@table.px}sort5,
+			{@table.px}names,{@table.px}location,{@table.px}marks,
+			{@table.px}prop1,{@table.px}prop2,{@table.px}prop3,{@table.px}prop4,{@table.px}prop5,
+			{@table.px}credit,{@table.px}money,{@table.px}emoney,{@table.px}points,{@table.px}exp,
+			{@table.px}int1,{@table.px}int2,{@table.px}int3,{@table.px}num1,{@table.px}num2,{@table.px}num3,{@table.px}num4,{@table.px}num5,{@table.px}date1,{@table.px}date2,{@table.px}date3,
+			
+			{@table.px}shortname,{@table.px}goodname,{@table.px}ename,
+			{@table.px}linkman,{@table.px}linkinfo,{@table.px}im,{@table.px}im1,{@table.px}im2,{@table.px}im3,{@table.px}im4,{@table.px}im5,
+			{@table.px}avatar,{@table.px}logo,{@table.px}photo,
+			{@table.px}company,{@table.px}url,{@table.px}address,{@table.px}postcode,{@table.px}phone,{@table.px}fax,
+			{@table.px}add_street,{@table.px}add_suburb,{@table.px}add_city,{@table.px}add_province,{@table.px}phone2,{@table.px}phone3,{@table.px}phone_home,{@table.px}phone_office,{@table.px}phone_internal,{@table.px}fax2,
+			{@table.px}foundday,{@table.px}foundin,{@table.px}foundplace,{@table.px}incorporator,{@table.px}regtype,{@table.px}regcapital,{@table.px}regcapitals,{@table.px}productions,{@table.px}empamounts,{@table.px}turnovers,{@table.px}operate_value,
+			{@table.px}summary,{@table.px}intro,{@table.px}cause,
+			{@table.px}area_country,{@table.px}area_province,{@table.px}area_city,
+			
+			sp_code,sp_keyword,sp_attr,sp_mode,sp_edition,sp_poll_agree,sp_poll_oppose,
+			{@table.px}config,{@table.px}certs,{@table.px}auths,
+			{@table.px}auth_email,{@table.px}auth_mobile,{@table.px}auth_cert,{@table.px}auth_real,
+			{@table.px}total_view,{@table.px}total_day,{@table.px}total_week,{@table.px}total_month,
+			{@table.px}total_comment,{@table.px}total_fav,{@table.px}total_regard,
+			{@table.px}total_data,{@table.px}total_info,
+			{@table.px}total1,{@table.px}total2,{@table.px}total3,{@table.px}total4,{@table.px}total5,
+			{@table.px}isgood,{@table.px}istop,
+			{@table.px}isauth,{@table.px}islock,{@table.px}timed,{@table.px}status,{@table.px}tim,{@table.px}tim_up,{@table.px}tim1,{@table.px}tim2,{@table.px}tim3</table.fields.edit>
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.field.append>icon.group,icon.grade</list.field.append>
+		<list.table.query.authcert>{@table.px}auth_cert>0</list.table.query.authcert>
+		<list.table.query.audit>{@table.px}status=1</list.table.query.audit>
+		<list.table.query.inaudit>{@table.px}status=2</list.table.query.inaudit>
+		<list.table.query.unaudit>{@table.px}status=0</list.table.query.unaudit>
+		<list.table.query.show>{@table.px}status=1</list.table.query.show>
+		<list.table.query.hide>{@table.px}status=0</list.table.query.hide>
+		<list.table.query.gooda>{@table.px}isgood>0</list.table.query.gooda>
+		<list.table.query.good>{@table.px}isgood=1</list.table.query.good>
+		<list.table.query.goodz>{@table.px}isgood=2</list.table.query.goodz>
+		<list.table.query.goods>{@table.px}isgood=3</list.table.query.goods>
+		<list.table.query.ungood>{@table.px}isgood=0</list.table.query.ungood>
+		<list.table.query.topa>{@table.px}istop>0</list.table.query.topa>
+		<list.table.query.top>{@table.px}istop=1</list.table.query.top>
+		<list.table.query.topz>{@table.px}istop=2</list.table.query.topz>
+		<list.table.query.tops>{@table.px}istop=3</list.table.query.tops>
+		<list.table.query.untop>{@table.px}istop=0</list.table.query.untop>
+		<list.table.query.auth>{@table.px}isauth=1</list.table.query.auth>
+		<list.table.query.inauth>{@table.px}isauth=2</list.table.query.inauth>
+		<list.table.query.unauth>{@table.px}isauth=0</list.table.query.unauth>
+		<list.table.query.lock>{@table.px}islock=1</list.table.query.lock>
+		<list.table.query.unlock>{@table.px}islock=0</list.table.query.unlock>
+		<list.table.order>comid desc</list.table.order>
+		<list.table.order.money>{@table.px}money desc,comid desc</list.table.order.money>
+		<list.table.order.emoney>{@table.px}emoney desc,comid desc</list.table.order.emoney>
+		<list.table.order.points>{@table.px}points desc,comid desc</list.table.order.points>
+		
+		<list.handle.select.option>audit,inaudit,unaudit,show,hide,good,goodz,goods,ungood,top,topz,tops,untop,auth,inauth,unauth,lock,unlock,delete</list.handle.select.option>
+		<list.handle.sql.audit>update {@table.name} set {@table.px}status=1 where comid in ({$ids})</list.handle.sql.audit>
+		<list.handle.sql.inaudit>update {@table.name} set {@table.px}status=2 where comid in ({$ids})</list.handle.sql.inaudit>
+		<list.handle.sql.unaudit>update {@table.name} set {@table.px}status=0 where comid in ({$ids})</list.handle.sql.unaudit>
+		<list.handle.sql.show>update {@table.name} set {@table.px}status=1 where comid in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.hide>update {@table.name} set {@table.px}status=0 where comid in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.good>update {@table.name} set {@table.px}isgood=1 where comid in ({$ids})</list.handle.sql.good>
+		<list.handle.sql.goodz>update {@table.name} set {@table.px}isgood=2 where comid in ({$ids})</list.handle.sql.goodz>
+		<list.handle.sql.goods>update {@table.name} set {@table.px}isgood=3 where comid in ({$ids})</list.handle.sql.goods>
+		<list.handle.sql.ungood>update {@table.name} set {@table.px}isgood=0 where comid in ({$ids})</list.handle.sql.ungood>
+		<list.handle.sql.top>update {@table.name} set {@table.px}istop=1 where comid in ({$ids})</list.handle.sql.top>
+		<list.handle.sql.topz>update {@table.name} set {@table.px}istop=2 where comid in ({$ids})</list.handle.sql.topz>
+		<list.handle.sql.tops>update {@table.name} set {@table.px}istop=3 where comid in ({$ids})</list.handle.sql.tops>
+		<list.handle.sql.untop>update {@table.name} set {@table.px}istop=0 where comid in ({$ids})</list.handle.sql.untop>
+		<list.handle.sql.auth>update {@table.name} set {@table.px}isauth=1 where comid in ({$ids})</list.handle.sql.auth>
+		<list.handle.sql.inauth>update {@table.name} set {@table.px}isauth=2 where comid in ({$ids})</list.handle.sql.inauth>
+		<list.handle.sql.unauth>update {@table.name} set {@table.px}isauth=0 where comid in ({$ids})</list.handle.sql.unauth>
+		<list.handle.sql.lock>update {@table.name} set {@table.px}islock=1 where comid in ({$ids})</list.handle.sql.lock>
+		<list.handle.sql.unlock>update {@table.name} set {@table.px}islock=0 where comid in ({$ids})</list.handle.sql.unlock>
+		<list.handle.sql.delete>delete from {@table.namex}info where comid in ({$ids})$$$
+			delete from dbu_pivotal where uurc='{@channel}' and uuid in ({$ids})$$$
+			delete from {@table.name} where comid in ({$ids})</list.handle.sql.delete>
+		
+		<info:table.name>{@table.namex}info</info:table.name>
+		<info:table.fields.add>comid,{@table.px}defined,
+			{@table.px}value1,{@table.px}value2,{@table.px}value3,{@table.px}value4,{@table.px}value5,{@table.px}value6,{@table.px}value7,{@table.px}value8,{@table.px}value9,{@table.px}value10,
+			{@table.px}remark</info:table.fields.add>
+		<info:table.fields.edit>{@table.px}defined,
+			{@table.px}value1,{@table.px}value2,{@table.px}value3,{@table.px}value4,{@table.px}value5,{@table.px}value6,{@table.px}value7,{@table.px}value8,{@table.px}value9,{@table.px}value10,
+			{@table.px}remark</info:table.fields.edit>
+		<info:list.table.fields></info:list.table.fields>
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[{@names}]]></title.name>
+		<title.list><![CDATA[{@names}列表]]></title.list>
+		<title.list.><![CDATA[{@names}列表]]></title.list.>
+		<title.list.authcert><![CDATA[已认证{@names}]]></title.list.authcert>
+		<title.list.audit><![CDATA[已审核{@names}]]></title.list.audit>
+		<title.list.inaudit><![CDATA[待审核{@names}]]></title.list.inaudit>
+		<title.list.unaudit><![CDATA[未审核{@names}]]></title.list.unaudit>
+		<title.list.show><![CDATA[显示{@names}]]></title.list.show>
+		<title.list.hide><![CDATA[隐藏{@names}]]></title.list.hide>
+		<title.list.gooda><![CDATA[已推荐{@names}]]></title.list.gooda>
+		<title.list.good><![CDATA[推荐{@names}]]></title.list.good>
+		<title.list.goodz><![CDATA[区推荐{@names}]]></title.list.goodz>
+		<title.list.goods><![CDATA[总推荐{@names}]]></title.list.goods>
+		<title.list.ungood><![CDATA[未推荐{@names}]]></title.list.ungood>
+		<title.list.topa><![CDATA[已固顶{@names}]]></title.list.topa>
+		<title.list.top><![CDATA[固顶{@names}]]></title.list.top>
+		<title.list.topz><![CDATA[区固顶{@names}]]></title.list.topz>
+		<title.list.tops><![CDATA[总固顶{@names}]]></title.list.tops>
+		<title.list.untop><![CDATA[未固顶{@names}]]></title.list.untop>
+		<title.list.auth><![CDATA[已认征{@names}]]></title.list.auth>
+		<title.list.inauth><![CDATA[待认征{@names}]]></title.list.inauth>
+		<title.list.unauth><![CDATA[未认征{@names}]]></title.list.unauth>
+		<title.list.lock><![CDATA[已锁定{@names}]]></title.list.lock>
+		<title.list.unlock><![CDATA[未锁定{@names}]]></title.list.unlock>
+		<title.add><![CDATA[添加新{@names}]]></title.add>
+		<title.edit><![CDATA[编辑{@names}资料]]></title.edit>
+		<title.edit_info><![CDATA[编辑{@names}详细信息]]></title.edit_info>
+		
+		<title.frame.group><![CDATA[{@names}组]]></title.frame.group>
+		<title.frame.search><![CDATA[{@names}搜索]]></title.frame.search>
+		<search.fields.att>comid=ID</search.fields.att>
+		
+		
+		<error.not.exist><![CDATA[您要操作的 {@names} 不存在！]]></error.not.exist>
+		
+		<error.exist.id><![CDATA[相关 {@names}ID 已存在！]]></error.exist.id>
+		<error.exist.no><![CDATA[相关 {@names}编号 已存在！]]></error.exist.no>
+		<error.norule.no><![CDATA[{@names}编号 不符合规则！]]></error.norule.no>
+		<error.exist.name><![CDATA[相关 {@names}名称 已存在！]]></error.exist.name>
+		<error.norule.name><![CDATA[{@names}名称 不符合规则！]]></error.norule.name>
+		<error.exist.email><![CDATA[相关 电子邮箱 已存在！]]></error.exist.email>
+		<error.norule.email><![CDATA[电子邮箱 不符合规则！]]></error.norule.email>
+		<error.exist.mobile><![CDATA[相关 手机号码 已存在！]]></error.exist.mobile>
+		<error.norule.mobile><![CDATA[手机号码 不符合规则！]]></error.norule.mobile>
+		<error.exist.idcard><![CDATA[相关 证件号码 已存在！]]></error.exist.idcard>
+		<error.norule.idcard><![CDATA[证件号码 不符合规则！]]></error.norule.idcard>
+		
+		<error.norule.names><![CDATA[简称 不符合规则！]]></error.norule.names>
+		<error.norule.shortname><![CDATA[短名称 不符合规则！]]></error.norule.shortname>
+		
+		
+		<handle.ok.add><![CDATA[成功添加了 1 {@unit}{@names}！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 {@unit}{@names}的资料！]]></handle.ok.edit>
+		<handle.ok.edit.info><![CDATA[成功编辑了 1 {@unit}{@names}的详细信息！]]></handle.ok.edit.info>
+		<handle.ok.audit><![CDATA[成功审核了 {$total} {@unit}{@names}！]]></handle.ok.audit>
+		<handle.ok.inaudit><![CDATA[成功待审核了 {$total} {@unit}{@names}！]]></handle.ok.inaudit>
+		<handle.ok.unaudit><![CDATA[成功取消审核了 {$total} {@unit}{@names}！]]></handle.ok.unaudit>
+		<handle.ok.show><![CDATA[成功显示了 {$total} {@unit}{@names}！]]></handle.ok.show>
+		<handle.ok.hide><![CDATA[成功隐藏了 {$total} {@unit}{@names}！]]></handle.ok.hide>
+		<handle.ok.good><![CDATA[成功推荐了 {$total} {@unit}{@names}！]]></handle.ok.good>
+		<handle.ok.goodz><![CDATA[成功区推荐了 {$total} {@unit}{@names}！]]></handle.ok.goodz>
+		<handle.ok.goods><![CDATA[成功总推荐了 {$total} {@unit}{@names}！]]></handle.ok.goods>
+		<handle.ok.ungood><![CDATA[成功取消推荐了 {$total} {@unit}{@names}！]]></handle.ok.ungood>
+		<handle.ok.top><![CDATA[成功固顶了 {$total} {@unit}{@names}！]]></handle.ok.top>
+		<handle.ok.topz><![CDATA[成功区固顶了 {$total} {@unit}{@names}！]]></handle.ok.topz>
+		<handle.ok.tops><![CDATA[成功总固顶了 {$total} {@unit}{@names}！]]></handle.ok.tops>
+		<handle.ok.untop><![CDATA[成功取消固顶了 {$total} {@unit}{@names}！]]></handle.ok.untop>
+		<handle.ok.auth><![CDATA[成功认征了 {$total} {@unit}{@names}！]]></handle.ok.auth>
+		<handle.ok.inauth><![CDATA[成功待认征了 {$total} {@unit}{@names}！]]></handle.ok.inauth>
+		<handle.ok.unauth><![CDATA[成功取消认征了 {$total} {@unit}{@names}！]]></handle.ok.unauth>
+		<handle.ok.lock><![CDATA[成功锁定了 {$total} {@unit}{@names}！]]></handle.ok.lock>
+		<handle.ok.unlock><![CDATA[成功解锁了 {$total} {@unit}{@names}！]]></handle.ok.unlock>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} {@unit}{@names}！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+	</template>
+</xcml>

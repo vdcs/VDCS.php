@@ -1,0 +1,18 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @search.result v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+.SearchResultItem{clear:both;text-align:left;margin:5px 0;overflow:hidden;}
+.SearchResultItem h4,
+.SearchResultItem h5{font-weight:normal!important;padding:0;margin:3px 0;}
+.SearchResultItem h4{}
+.SearchResultItem h4 a{color:#2200C1;font-size:16px;text-decoration:underline;}
+.SearchResultItem h4 a:hover{color:#CC0033;}
+.SearchResultItem h5{font-size:12px;}
+.SearchResultItem h5 cite{color:#0E774A;}
+.SearchResultItem h5 em{color:#BDB76B;margin-left:8px;}
+.SearchResultItem p{line-height:150%;}

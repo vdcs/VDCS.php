@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<label:include file="/inc/header.metas">
+<title><app:web.name> <channel:var("title")> <view:topic> 浏览多幅图片</title>
+<label:include file="/inc/header.script.core">
+<label:include script="<url:images>player/pixmultor.js">
+<style tyle="text/css">
+body{margin:0;padding:0;}
+</style>
+</head>
+<body>
+<div id="pixmultor"></div>
+<script type="text/javascript">
+var opixm=new VDCS.Player.Pixmultor();
+opixm.set("name","<view:topic!js>");
+opixm.set("appname","<channel:var("title")>");
+opixm.add(["<view:pic!js>","<view:pic!js>",""]);
+<loop:data>
+opixm.add(["[item:pic!js]","[item:url!js]","[item:explain!js]"]);
+</loop>
+opixm.doShow("pixmultor");
+
+if(typeof dcs==undefined){var dcs={};dcs.player={};}
+dcs.player.doCloseWindow=function(){if(w.confirm('您是否关闭当前窗口')){w.close();}}
+</script>
+</body>
+</html>

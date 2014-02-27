@@ -1,0 +1,21 @@
+
+<div class="pics">
+	<pic><a class="jqzoom"><img src="<view:pic>" bigimg="<view:pic>" bigzoom=".e_view .infos" /></a></pic>
+	<dl>
+	<dt><a href="#previous"></a></dt>
+	<dd>
+		<ul>
+		<li sn="0" class="pop"><a href="javascript:;" data-pic="<view:pic>"><img src="<view:pic>" alt="默认" /></a></li>
+<loop:data.pic>
+		<li sn="[item:sn]"><a href="javascript:;" data-pic="[item:pic]"><img src="[item:pic]" alt="[item:topic]" /></a></li>
+</loop>
+		</ul>
+	</dd>
+	<dt><a href="#next"></a></dt>
+	</dl>
+	<!--
+	<div class="btns">
+<a class="btn" href="<chn:linkurl("{@channel}","view.data","sort=pics&id=<view:id>")>" target="_blank"><span>点击查看清晰大图</span></a>
+	</div>
+	-->
+</div>

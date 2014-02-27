@@ -1,0 +1,6 @@
+<?
+class ChannelPhotoView extends ChannelContentView
+{
+	
+}
+?>

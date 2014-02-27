@@ -1,0 +1,60 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+<div class="box"><h2><t>咨询详情</t></h2>
+<div class="con">
+	<table class="table tables table-striped table-hover table-list">
+	<tr><th style="width:10%;"><app:var.ua></th><td><view:uuid></td><th style="width:10%;">时间</th><td><view:tim!date></td></tr>
+	<tr><th>问题内容</th><td colspan="3"><view:summary></td></tr>
+	<!--<tr><th>问题类型</th><td><span title="<view:types>" data-dict="file:sort=common.channel/{@channel}/data.ask.type" data-value="<view:types>"></span></td><th>状态</th><td><span title="<view:trans>" data-dict="file:sort=common.channel/{@channel}/data.ask.status" data-value="<view:trans>"></span></td></tr>-->
+	<tr><th>状态</th><td><span title="<view:trans>" data-dict="data.reply" data-value="<view:trans>" el="reply_status"></span></td><th></th><td></td></tr>
+	
+	</table>	
+</div>
+</div>
+<div class="space"></div>
+<div class="box"><h2><t>回复</t></h2>
+<div class="con">
+<table class="table tables table-striped table-hover table-list">
+<tr><th>回复人</th><td><input type="text" name="trans_name" value="<view:trans_name>" /></td></tr>
+<tr><th>回复内容</th><td><textarea name="trans_message"><view:trans_message></textarea></td></tr>
+<tr><th>回复时间</th><td><input type="text" name="trans_date" value="<view:trans_tim!time>" /></td></tr>
+<input type="hidden" name="id" value="<view:id>" />
+<tr><th></th><th class="ac"><a class="btn btn-primary b" el="submit">确认保存</a></th></tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	appi.dicts.initer($('body'));
+	
+	var _init=function(){
+		var isreply='<view:trans>';
+		$('[el=submit]').click(_submitReply);
+	}
+	
+	var _submitReply=function(){
+		var _send={};
+		_send['id']=$('[name=id]').val();
+		_send['trans_name']=$('[name=trans_name]').val();
+		_send['trans_message']=$('[name=trans_message]').val();
+		_send['trans_date']=$('[name=trans_date]').val();
+		var _url=ui.serve.getURL({channel:'{@channel}',p:'comment',action:'reply'});
+		$ajax({url:_url,value:'xml',send:_send,ready:function(xml){
+			var maps=$util.toMapByXML(xml);
+			var treeVar=maps.getItemTree('var');
+			if(treeVar.v('status')=='succeed'){
+				ui.popups('succeed','回复成功！');
+				$('[el=reply_status]').text('已回复');
+			}else{
+				var message=treeVar.v('message');
+				if(!message) message='提交错误，请重新提交';
+				ui.popups('info',message);
+			}
+		}});
+	};
+	
+	_init();
+});
+</script>
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

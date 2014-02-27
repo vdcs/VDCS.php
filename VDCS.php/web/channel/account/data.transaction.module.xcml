@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,name,explain</field>
+		<field.att.value>module</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<value>remit</value>
+		<name>汇款</name>
+		<explain></explain>
+	</item>
+	<item>
+		<value>refund</value>
+		<name>提现</name>
+		<explain></explain>
+	</item>
+	<item>
+		<value>recharge</value>
+		<name>充值</name>
+		<explain></explain>
+	</item>
+	<item>
+		<value>bill</value>
+		<name>支付账单</name>
+		<explain></explain>
+	</item>
+	<item>
+		<value>shop_order</value>
+		<name>系统充值</name>
+		<explain></explain>
+	</item>
+	<!--
+	<item>
+		<value>consume</value>
+		<name>消费</name>
+		<explain></explain>
+	</item>
+	-->
+</xcml>

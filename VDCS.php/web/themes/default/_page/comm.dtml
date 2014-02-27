@@ -1,0 +1,45 @@
+<label:include file="frame/headers">
+<div class="framer">
+<div class="side">
+</div>
+<div class="cont">
+	<div class="box">
+		<h2><t>Application Comm Page <a href="/p.php?p=comm">Index</a></t></h2>
+		<div class="con">重新载入： &nbsp; 
+			<a href="/p.php?p=comm&reload=cache.config" onclick="javascript:return $p.isClickReturn('重新载入配置(Config)缓存',1);">配置缓存</a> &nbsp; 
+			<a href="/p.php?p=comm&reload=cache.data" onclick="javascript:return $p.isClickReturn('重新载入数据(Data)缓存',1);">数据缓存</a> &nbsp; 
+			<a href="/p.php?p=comm&reload=cache.themes" onclick="javascript:return $p.isClickReturn('重新载入模板(Themes)缓存',1);">模板缓存</a> &nbsp; 
+			<a href="/p.php?p=comm&clear=session" onclick="javascript:return $p.isClickReturn('清空 Session 数据',1);">清空Session</a> &nbsp; 
+			<a href="/p.php?p=comm&clear=cookies" onclick="javascript:return $p.isClickReturn('清空 Cookies 数据',1);">清空Cookies</a> &nbsp; 
+		</div>
+	</div>
+	<div class="space"></div>
+	<div class="box">
+		<h2><t>Content[App.string]</t><r><a href="#div_content_app">x</a></r></h2>
+		<div class="con" id="div_content_app" style="display:none;"><dtml:app.string></div>
+	</div>
+	<div class="space"></div>
+	<div class="box">
+		<h2><t>Content[Session.string]</t><r><a href="#div_content_session">x</a></r></h2>
+		<div class="con" id="div_content_session"><dtml:session.string></div>
+	</div>
+	<div class="space"></div>
+	<div class="box">
+		<h2><t>Content[Cookies.string]</t><r><a href="#content_cookies">x</a></r></h2>
+		<div class="con" id="div_content_cookies"><dtml:cookies.string></div>
+	</div>
+	<div class="space"></div>
+	<div class="box">
+		<h2><t>Content[Cookies.string]</t><r><a href="#div_content_test">x</a></r></h2>
+		<div class="con" id="div_content_test" style="display:none;">
+			<div><dtml:test.data></div>
+			<div><dtml:test.data2></div>
+			<div><dtml:test.data3></div>
+			<div><dtml:test.data4></div>
+			<div><dtml:test.data5></div>
+			<dtml:_message>
+		</div>
+	</div>
+</div>
+</div>
+<label:include file="frame/footers">

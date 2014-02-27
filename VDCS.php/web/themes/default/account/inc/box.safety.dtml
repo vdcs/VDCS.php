@@ -1,0 +1,71 @@
+
+<label:include script="<url:images>themes/default/account/box.safety.css" type="css">
+<div class="box">
+	<div class="bod">
+<div class="box_safety"><div class="inner">
+<ul>
+<li class="email">
+	<h3><em></em></h3>
+	<h4>
+		<cite>电子邮箱：<t data-auth="1"><ua:email></t></cite>
+		<p>忘记密码时，您的绑定邮箱可以帮你找回密码。</p>
+	</h4>
+	<h5>
+		<a href="<chn:linkurl("{@channel}","pam","p=security&m=email")>" 
+			data-title-no="设置" data-title-noauth="验证" data-title-auth="修改"><span>修改</span></a>
+	</h5>
+</li>
+<li class="mobile">
+	<h3><em></em></h3>
+	<h4>
+		<cite>手机号码：<t data-auth="<ua:auth_mobile>" data-title-no="尚未设定手机"><ua:mobile!safe></t></cite>
+		<p>手机安全绑定。</p>
+	</h4>
+	<h5>
+		<a href="<chn:linkurl("{@channel}","pam","p=security&m=mobile")>" 
+			data-title-no="设置" data-title-noauth="验证" data-title-auth="修改"><span>修改</span></a>
+	</h5>
+</li>
+<li class="idcard">
+	<h3><em></em></h3>
+	<h4>
+		<cite>证件信息：<t data-auth="<ua:auth_idcard>" data-title-no="尚未设置证件信息"><ua:idcard!safe></t></cite>
+		<p>为了您的账号安全，证件信息设置以后不能更改。</p>
+	</h4>
+	<h5>
+		<a href="<chn:linkurl("{@channel}","pam","p=security&m=idcard")>" 
+			data-title-no="设置" data-title-noauth="验证" data-title-auth="修改"><span>修改</span></a>
+	</h5>
+</li>
+</ul>
+</div></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+safety_parser=function(jli){
+	var jt=jli.find('h4 cite t'),jlink=jli.find('h5 a:first');
+	var _status='',_title='';
+	if(!jt.text()){
+		_status='no';
+	}
+	else{
+		if(toi(jt.attrd('auth'))==1){
+			_status='auth';
+		}else{
+			_status='noauth';
+		}
+	}
+	jli.removeClass('no noauth auth').addClass(_status);
+	_title=jt.attrd('title-'+_status);
+	if(_title) jt.html(_title);
+	_title=jlink.attrd('title-'+_status);
+	if(_title) jlink.find('span').html(_title);
+};
+$(function(){
+	var jbox=$('.box_safety');
+	safety_parser(jbox.find('li.email'));
+	safety_parser(jbox.find('li.mobile'));
+	safety_parser(jbox.find('li.idcard'));
+});
+</script>

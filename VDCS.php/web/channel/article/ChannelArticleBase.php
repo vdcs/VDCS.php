@@ -1,0 +1,3 @@
+<?
+class ChannelArticleBase extends ChannelArticleBasic{}
+?>

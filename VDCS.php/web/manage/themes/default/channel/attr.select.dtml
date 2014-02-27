@@ -1,0 +1,19 @@
+<label:include file="frame/header">
+
+<label:include file="frame.sideleft">
+<div class="Block Block-Menu-Define">
+	<div class="BlockBar"><p><exec:langs("title.attr.select")></p></div>
+	<div class="BlockContent"><div class="BlockInner">
+<div class="ac" style="padding:20px 50px;">
+<loop:attrtype>
+<div style="margin:10px 0;"><a class="big b btn" style="width:200px;height:30px;line-height:30px;" href="<exec:url("attrtype=[item:type]!act")>">[item:name]</a></div>
+</loop>
+</div>
+	</div></div>
+	<div class="BlockFooter"><p></p></div>
+</div>
+<label:include file="frame.sidespace">
+<label:include file="element.menus">
+<label:include file="frame.sideright">
+
+<label:include file="frame/footer">

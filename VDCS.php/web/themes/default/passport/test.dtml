@@ -1,0 +1,26 @@
+﻿<label:include file="frame/headers">
+
+
+<div class="framer">
+
+
+<a id="login_quick">快速登录</a>
+
+<script type="text/javascript">
+$(function(){
+	//#
+
+	$('#login_quick').click(function(){
+		ua.loginQuick({},$(this));
+		return false
+	});
+
+
+});
+</script>
+
+
+</div>
+
+
+<label:include file="frame/footers">

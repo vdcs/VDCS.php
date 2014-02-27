@@ -1,0 +1,39 @@
+
+<style type="text/css">
+#shortcut{width:150px;text-align:right;}
+#shortcut{position:fixed;left:20px;top:30px;}
+#shortcut a{font-size:1.3em;}
+</style>
+<div id="shortcut">
+<ul>
+<li><a href="<url:root>comm">Comm</a></li>
+<li><a href="<url:root>comm?page=debugx">Debug X</a></li>
+<!--
+<li><a href="<url:root>comm?page=div.old">Div Old</a></li>
+-->
+<li><a href="<url:root>comm?page=page">Page</a></li>
+<li><a href="<url:root>comm?page=box">Box</a></li>
+<li><a href="<url:root>comm?page=sidebar">Sidebar</a></li>
+<li><a href="<url:root>comm?page=ui">UI Base</a></li>
+<li><a href="<url:root>comm?page=ui.table">UI Table</a></li>
+<li><a href="<url:root>comm?page=ui.icon">UI Icon</a></li>
+<li><a href="<url:root>comm?page=ui.form">UI Form</a></li>
+<li><a href="<url:root>comm?page=ui.stat">UI Stat</a></li>
+<li><a href="<url:root>comm?page=ui.effect">UI Effect</a></li>
+<li><a href="<url:root>comm?page=ui.bounce">UI Bounce</a></li>
+<li><a href="<url:root>comm?page=ui.progress">UI Progress</a></li>
+<li><a href="<url:root>comm?page=widget">Widget</a></li>
+<li><a href="<url:root>comm?page=widget.chatbox">Widget ChatBox</a></li>
+<li><a href="<url:root>comm?page=widget.charts">Widget Charts</a></li>
+<li><a href="<url:root>comm?page=jquery.ui">Jquery UI</a></li>
+<li>&nbsp;</li>
+<li><a href="<url:root>">Index</a></li>
+</ul>
+</div>
+<script type="text/javascript">
+$(function(){
+	//var jshortcut=$('#shortcut');
+	//jshortcut.css('left',($(window).width()-$('#confine').width())/2-20-jshortcut.width());
+	ui.float($('#shortcut'),{top:20,lefto:10});
+});
+</script>

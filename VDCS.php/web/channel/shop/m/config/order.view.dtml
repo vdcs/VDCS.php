@@ -1,0 +1,117 @@
+<label:include file="frame/header">
+<label:include file="frame/main.begin">
+
+
+<div class="box">
+	<h2><t>订单信息</t></h2>
+	<div class="con">
+		<table class="table tables table-bordered table-striped table-hover table-list">
+		<tr><th style="width:50%;">订单号</th><td><view:orderno></td></tr>
+		<tr><th>总价格</th><td el="total_price"><view:money> <a href="#modify" class="btn s" el="modifyMoney" style="display:none;"><span>修改金额</span></a></td></tr>
+		<tr><th>邮费</th><td><view:shipping_price></td></tr>
+		<tr><th>订单状态</th><td><view:status.name></td></tr>
+		<tr><th>订单生成时间</th><td><view:time></td></tr>
+		<tr><th>付款时间</th><td><view:pay_time></td></tr>
+		<tr><th>选择状态</th><td class="order_status"><p data-ui-form="radio" style="display: none;">
+				</p></td></tr>
+		<tr><th colspan="2" style="text-align:center;"><a class="btn btn-primary" el="edit">修改状态</a></th></tr>
+		</table>
+	</div>
+</div>
+<div class="space"></div>
+
+<div class="box">
+	<h2><t>订单详情</t></h2>
+	<div class="con">
+		<table class="table tables table-bordered table-striped table-hover table-list">
+		<thead>
+			<tr>
+				<th>产品标题</th>
+				<th>数量</th>
+				<th>金额</th>
+			</tr>
+		</thead>
+		<tbody>
+		<loop:list>
+			<tr dataid="[item:id]">
+				<td>[item:topic]</td>
+				<td>[item:amount]</td>
+				<td>[item:money]</td>
+			</tr>
+		</loop>
+		</tbody>
+		</table>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+	
+	var __initModify=function(jbtn){
+		ui.pages.channel='{@channel}';
+		orderid='<view:id>';
+		var opt={
+			serveE:{p:'order',action:'modifyprice',params:'orderid='+orderid+''},//cp=account&p=linkman&x=e
+			serveX:{p:'order',action:'modifyprice',params:''},
+			title:'修改价格',
+			succeed:function(){
+				modifySucced();	
+			},
+		};
+		function modifySucced(){
+			ui.popups('succeed','价格修改成功！',1);
+			setTimeout(function(){
+				window.location.reload(); 
+			},1000);
+		}
+		ui.pages.record(jbtn,opt);
+	}
+	
+	var _init=function(){
+		var status='<view:status>';
+		var _ahtml=[];
+		if(status==0 || status==2) _ahtml.push('<label><input type="radio" name="status" value="3" />确认付款</label> ');
+		if(status==3) _ahtml.push('<label><input type="radio" name="status" value="4" />已发货</label> ');
+		if(status==0) _ahtml.push('<label><input type="radio" name="status" value="8" />取消订单</label> ');
+		if(status==0 || status==2 || status==9) _ahtml.push('<label><input type="radio" name="status" value="8" />无效订单</label> ');
+		var _html=_ahtml.join('');
+		$('.order_status').find('p').append(_html);
+		ui.form.init($('.order_status'));
+		
+		var mbtn=$('[el=modifyMoney]');
+		if(status==0) mbtn.show();
+		__initModify(mbtn)
+	};
+	_init();
+	
+	var _editStatus=function(){
+		//var status=$('.order_status').find('input[name=status]:checked').val();
+		var status=$('.order_status').find('input[name=status]:checked').val();
+		if(!status){
+			ui.popups('info','请先选择状态！');
+			return;
+		}else{
+			var orderid='<view:id>';
+			var _url='order.x?action=process&orderid='+orderid+'&status='+status;
+			$ajax({url:_url,value:'xml',ready:_parseAsync,error:true});
+		}
+	};
+	var _parseAsync=function(xml){
+		var map=$util.toMapByXML(xml);
+		var treeVar=map.getItemTree('var');
+		if(treeVar.v('status')=='succeed'){
+			ui.popups('succeed','修改成功！');
+			setTimeout(function(){
+				location.reload();
+			},1000);
+		}else{
+			ui.popups('info','修改失败！');
+		}
+	};
+	$('[el=edit]').click(_editStatus);
+	
+});
+</script>
+
+<label:include file="frame/main.end">
+<label:include file="frame/footer">

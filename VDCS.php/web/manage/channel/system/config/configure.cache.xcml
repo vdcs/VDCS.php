@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links</frame>
+	</config>
+	
+	<lang>
+		<title><![CDATA[缓存管理]]></title>
+		<title.list><![CDATA[缓存列表]]></title.list>
+		
+		<error.filename><![CDATA[文件名称有错误存在!]]></error.filename>
+		
+		<handle.ok.resume><![CDATA[成功恢复了一个备份的数据库文件！]]></handle.ok.resume>
+		
+	</lang>
+	
+	<template>
+		<menu.links><![CDATA[
+@@@title=缓存管理;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("action=clear")>">清除所有缓存</a></li>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

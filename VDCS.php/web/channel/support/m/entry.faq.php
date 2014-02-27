@@ -1,0 +1,5 @@
+<?
+class PagePortal extends PortalFaq
+{
+	
+}

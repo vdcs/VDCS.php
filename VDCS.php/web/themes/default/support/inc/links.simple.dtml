@@ -1,0 +1,7 @@
+	<div class="StructLinks">
+<div class="StructLinksBody">
+<label:links("fir_txt")>
+<a class="txt" href="[item:url]" target="_blank"><span>[item:name]<span></a>
+</label:end>
+</div>
+	</div>

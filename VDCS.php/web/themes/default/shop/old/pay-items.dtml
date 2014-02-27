@@ -1,0 +1,50 @@
+
+<div class="box">
+	<!--<div class="BlockHeader"><p></p></div>-->
+	<h2><t>商品清单</t></h2>
+	<div class="cont">
+<div class="page-line"></div>
+<table class="frm table-break products">
+<thead>
+<tr class="sub ac">
+<td class="bar-item" style="width:130px;"></td>
+<td class="bar-info"><channel:var("names")>信息</td>
+<td class="bar-price" style="width:80px;">单价(<app:unit.coin>)</td>
+<td class="bar-amount" style="width:80px;">数量</td>
+</tr>
+</thead>
+<!--<dcs:browse.paths>-->
+<form id="frm_cart" action="?action=modify" method="post" onsubmit="javascript:$f.doSubmitOnce(this);">
+<input type="hidden" name="_chk" value="yes" />
+<tbody id="cart-items">
+<loop:carts>
+<input type="hidden" name="snid[]" value="[item:sn]-[item:id]" />
+<tr class="row ac">
+<td class="row-item"><a href="[item:linkurl]" target="_blank"><img class="spic" src="[item:_spic]" /></a></td>
+<td class="row-info">
+<p><a class="p-name" href="[item:linkurl]" target="_blank">[item:_topic!html!50]</a>
+	<span class="p-serial">编号 <em>[item:_serial]</em></span></p>
+<p><a class="btn-cart-fav" href="javascript:;">加入收藏夹</a>
+</p>
+</td>
+<td class="row-price"><span class="price big"><i>￥</i>[item:price!price]</span>
+	<p></p></td>
+<td class="row-amount"><span class="amount">[item:amount] <em>[item:unit]</em></span></td>
+</tr>
+</loop>
+</tbody>
+</form>
+</table>
+	</div></div>
+	<div class="cont">
+<div class="rlt" style="height:30px;">
+<div class="m">
+&nbsp;
+</div>
+<div class="page-line"></div>
+<div class="r ar">
+<p>小计：<span class="price b large" id="cart-prices-total"><i>￥</i><var:prices!price></span></p>
+</div>
+</div>
+	</div></div>
+</div>

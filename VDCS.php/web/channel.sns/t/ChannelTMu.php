@@ -1,0 +1,6 @@
+<?
+class ChannelTMu extends ChannelTMuIndex
+{
+	
+}
+?>

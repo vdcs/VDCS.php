@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="struct">
+	<configure>
+		<node>item</node>
+	</configure>
+	<item>
+		<__key><![CDATA[payment1]]></__key>
+		<__name><![CDATA[ChinaBank支付配置]]></__name>
+		<__file><![CDATA[common.config/data/payment]]></__file>
+		<__cache><![CDATA[sys.data.payment]]></__cache>
+		<bar.payment.1><![CDATA[ChinaBank支付网关配置	###type~bar]]></bar.payment.1>
+		<payment.1.isuse><![CDATA[是否开启		###type~radio		^property.min~		^property.type~int		^att~1:开启|0:关闭]]></payment.1.isuse>
+		<payment.1.name><![CDATA[支付网关名称		###property.min~	^style~size=30		^explain~支付网关名称]]></payment.1.name>
+		<payment.1.mid><![CDATA[商户编号		###property.min~	^style~size=30		^explain~支付商户编号]]></payment.1.mid>
+		<payment.1.key><![CDATA[商户私钥		###property.min~	^style~size=30		^explain~支付商户私钥或签名]]></payment.1.key>
+		<payment.1.currency><![CDATA[支付币种		###property.min~	^style~size=10		^explain~支付网关币种]]></payment.1.currency>
+		<payment.1.interface><![CDATA[支付入口		###property.min~	^style~size=50		^explain~支付网关入口、表单提交地址]]></payment.1.interface>
+		<payment.1.url><![CDATA[返回地址		###property.min~	^style~size=50		^explain~支付返回地址]]></payment.1.url>
+		<payment.1.explain><![CDATA[网关说明		###property.min~	^style~size=50		^explain~用以显示在支付选择页面]]></payment.1.explain>
+	</item>
+	<item>
+		<__key><![CDATA[payment2]]></__key>
+		<__name><![CDATA[支付宝配置]]></__name>
+		<__file><![CDATA[common.config/data/payment]]></__file>
+		<__cache><![CDATA[sys.data.payment]]></__cache>
+		<bar.payment.2><![CDATA[Alipay支付网关配置	###type~bar]]></bar.payment.2>
+		<payment.2.isuse><![CDATA[是否开启		###type~radio		^property.min~		^property.type~int		^att~1:开启|0:关闭]]></payment.2.isuse>
+		<payment.2.name><![CDATA[支付网关名称		###property.min~	^style~size=30		^explain~支付网关名称]]></payment.2.name>
+		<payment.2.mid><![CDATA[商户编号		###property.min~	^style~size=30		^explain~支付商户编号]]></payment.2.mid>
+		<payment.2.key><![CDATA[商户私钥		###property.min~	^style~size=30		^explain~支付商户私钥或签名]]></payment.2.key>
+		<payment.2.currency><![CDATA[支付币种		###property.min~	^style~size=10		^explain~支付网关币种]]></payment.2.currency>
+		<payment.2.interface><![CDATA[支付入口		###property.min~	^style~size=50		^explain~支付网关入口、表单提交地址]]></payment.2.interface>
+		<payment.2.url><![CDATA[返回地址		###property.min~	^style~size=50		^explain~支付返回地址]]></payment.2.url>
+		<payment.2.explain><![CDATA[网关说明		###property.min~	^style~size=50		^explain~用以显示在支付选择页面]]></payment.2.explain>
+	</item>
+	<item>
+		<__key><![CDATA[payment3]]></__key>
+		<__name><![CDATA[快钱支付配置]]></__name>
+		<__file><![CDATA[common.config/data/payment]]></__file>
+		<__cache><![CDATA[sys.data.payment]]></__cache>
+		<bar.payment.3><![CDATA[快钱支付网关配置	###type~bar]]></bar.payment.3>
+		<payment.3.isuse><![CDATA[是否开启		###type~radio		^property.min~		^property.type~int		^att~1:开启|0:关闭]]></payment.3.isuse>
+		<payment.3.name><![CDATA[支付网关名称		###property.min~	^style~size=30		^explain~支付网关名称]]></payment.3.name>
+		<payment.3.mid><![CDATA[商户编号		###property.min~	^style~size=30		^explain~支付商户编号]]></payment.3.mid>
+		<payment.3.key><![CDATA[商户私钥		###property.min~	^style~size=30		^explain~支付商户私钥或签名]]></payment.3.key>
+		<payment.3.currency><![CDATA[支付币种		###property.min~	^style~size=10		^explain~支付网关币种]]></payment.3.currency>
+		<payment.3.interface><![CDATA[支付入口		###property.min~	^style~size=50		^explain~支付网关入口、表单提交地址]]></payment.3.interface>
+		<payment.3.url><![CDATA[返回地址		###property.min~	^style~size=50		^explain~支付返回地址]]></payment.3.url>
+		<payment.3.explain><![CDATA[网关说明		###property.min~	^style~size=50		^explain~用以显示在支付选择页面]]></payment.3.explain>
+	</item>
+</xcml>
+<!--
+	<item>
+		<__key><![CDATA[payment1]]></__key>
+		<__name><![CDATA[iPaying支付配置]]></__name>
+		<__file><![CDATA[common.config/data/payment]]></__file>
+		<__cache><![CDATA[sys.data.payment]]></__cache>
+		<bar.payment.1><![CDATA[iPaying支付网关配置	###type~bar]]></bar.payment.1>
+		<payment.1.isuse><![CDATA[是否开启		###type~radio		^property.min~		^property.type~int		^att~1:开启|0:关闭]]></payment.1.isuse>
+		<payment.1.name><![CDATA[支付网关名称		###property.min~	^style~size=30		^explain~支付网关名称]]></payment.1.name>
+		<payment.1.mid><![CDATA[商户编号		###property.min~	^style~size=30		^explain~支付商户编号]]></payment.1.mid>
+		<payment.1.key><![CDATA[商户私钥		###property.min~	^style~size=30		^explain~支付商户私钥或签名]]></payment.1.key>
+		<payment.1.currency><![CDATA[支付币种		###property.min~	^style~size=10		^explain~支付网关币种]]></payment.1.currency>
+		<payment.1.interface><![CDATA[支付入口		###property.min~	^style~size=50		^explain~支付网关入口、表单提交地址]]></payment.1.interface>
+		<payment.1.url><![CDATA[返回地址		###property.min~	^style~size=50		^explain~支付返回地址]]></payment.1.url>
+		<payment.1.explain><![CDATA[网关说明		###property.min~	^style~size=50		^explain~用以显示在支付选择页面]]></payment.1.explain>
+	</item>
+		<bar.payment.5><![CDATA[云网支付网关配置	###type~bar]]></bar.payment.5>
+		<payment.5.isuse><![CDATA[是否开启		###type~radio		^property.min~		^property.type~int		^att~1:开启|0:关闭]]></payment.5.isuse>
+		<payment.5.name><![CDATA[支付网关名称		###property.min~	^style~size=30		^explain~支付网关名称]]></payment.5.name>
+		<payment.5.mid><![CDATA[商户编号		###property.min~	^style~size=30		^explain~支付商户编号]]></payment.5.mid>
+		<payment.5.key><![CDATA[商户私钥		###property.min~	^style~size=30		^explain~支付商户私钥或签名]]></payment.5.key>
+		<payment.5.currency><![CDATA[支付币种		###property.min~	^style~size=10		^explain~支付网关币种]]></payment.5.currency>
+		<payment.5.interface><![CDATA[支付入口		###property.min~	^style~size=50		^explain~支付网关入口、表单提交地址]]></payment.5.interface>
+		<payment.5.url><![CDATA[返回地址		###property.min~	^style~size=50		^explain~支付返回地址]]></payment.5.url>
+		<payment.5.explain><![CDATA[网关说明		###property.min~	^style~size=50		^explain~用以显示在支付选择页面]]></payment.5.explain>
+-->

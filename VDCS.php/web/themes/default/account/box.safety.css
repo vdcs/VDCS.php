@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+.box_safety{}
+.box_safety > .inner{clear:both;margin:35px;}
+.box_safety > .inner:before,
+.box_safety > .inner:after{clear:both;display:table;content:"";}
+.box_safety ul{clear:both;}
+.box_safety ul li{clear:both;border-bottom:1px dashed #ccc;overflow:hidden;margin-bottom:25px;padding-bottom:25px;}
+.box_safety ul li h3 em{width:90px;height:80px;background:url("/images/ua/tips/tips_safe.png") no-repeat;position:relative;float:left;text-align:right;}
+.box_safety ul li:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0;}
+.box_safety ul li.email h3 em{background-position: -95px 0;}
+.box_safety ul li.mobile h3 em{background-position: -190px 0;}
+.box_safety ul li.idcard h3 em{background-position:-285px 0;}
+
+.box_safety ul li.email.no h3 em{background-position: -95px 0;}
+.box_safety ul li.email.noauth h3 em{background-position: -95px -80px;}
+.box_safety ul li.email.auth h3 em{background-position: -95px -160px;}
+
+.box_safety ul li.mobile.no h3 em{background-position: -190px 0;}
+.box_safety ul li.mobile.noauth h3 em{background-position: -190px -80px;}
+.box_safety ul li.mobile.auth h3 em{background-position: -190px -160px;}
+
+.box_safety ul li.idcard.no h3 em{background-position: -285px 0;}
+.box_safety ul li.idcard.noauth h3 em{background-position: -285px -80px;}
+.box_safety ul li.idcard.auth h3 em{background-position: -285px -160px;}
+
+.box_safety ul li.no h4 t{color:#949494;}
+.box_safety ul li.noauth h4 t{}
+.box_safety ul li.auth h4 t{color:#288C14;}
+
+.box_safety ul li h3{float:left;}
+.box_safety ul li h4{float:left;font-size:14px;margin-top:25px;}
+.box_safety ul li h4 cite{display:block;color:#000;}
+.box_safety ul li h4 p{color:#949494;font-size:12px;margin-left:70px;margin-top:10px;}
+.box_safety ul li h5{float:right;margin-top:20px;}
+.box_safety ul li h5 a{}
+.box_safety ul li h5 a:hover{}
+
+/*
+text-decoration:none;
+*/

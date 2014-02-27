@@ -1,0 +1,22 @@
+<label:include file="/inc/header.html5">
+<head>
+<label:include file="/inc/header.meta5">
+<title><app:web.name> - 管理中心</title>
+<label:include file="/inc/header.style5">
+<label:include script="<web:url.themes>images/style.css" type="css">
+<label:include script="<url:manage.themes>app.css" type="css">
+<label:include file="/inc/header.script">
+<label:include file="/inc/header.scriptx">
+<label:include script="<web:script.public>.js">
+<label:include script="<url:manage.themes>pages.js">
+<label:include script="<url:manage.themes>pages.list.js">
+<label:include script="<url:manage.themes>pages.form.js">
+<label:include script="<url:manage.themes>manage.js"><label:include script="<url:manage.themes>app.js">
+<script type="text/javascript">
+if(typeof ma !== 'undefined'){ma.id=toi('<ma:id>');ma.name='<ma:name>';}
+if(typeof pages !== 'undefined') extendo(pages,{channel:'{@channel}',cp:'{@channel}',p:'{@portal}',m:'{@module}',x:'{@extend}',portal:'{@portal}',module:'{@module}',extend:'{@extend}',action:'<ctl:action>',mode:'<ctl:mode>',taxis:'<ctl:taxis>'});
+if(typeof ui.serve !== 'undefined') extendo(ui.serve,{filter:'router',baseurl:'<url:manage>index.php/',url:'<url:manage>index.php/{$channel}/{$p}/{$m}/{$mi}.{$x}?action={$action}'});
+manage.init();
+</script>
+</head>
+<body>

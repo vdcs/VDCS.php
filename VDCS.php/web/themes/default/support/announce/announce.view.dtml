@@ -1,0 +1,26 @@
+<label:include file="frame/headers">
+
+<div class="cont">
+	<div class="box">
+		<div class="con">
+			<div class="e_view" data-channel="{@channel}" data-id="{@id}">
+				<h2><t><view:topic></t></h2>
+				<h3>
+					<t class="tim"><i><view:tim!time></i></t> <s></s>
+				</h3>
+				<div class="content remarks">
+					<table cellpadding="0" cellspacing="0" class="tab-content table-break">
+						<tr>
+							<td class="word-break">
+								<div class="remark word-break" id="div-view-remark-content"><view:remark></div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<label:include file="frame/footers">

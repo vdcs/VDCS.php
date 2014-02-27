@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links</frame>
+	</config>
+	
+	<lang>
+		<title><![CDATA[模版管理]]></title>
+		<title.list><![CDATA[公告列表]]></title.list>
+		<title.edit><![CDATA[模版编辑]]></title.edit>
+		
+		<error.open><![CDATA[文件打开失败或者文件内容为空!]]></error.open>
+		<error.path><![CDATA[越权访问或者文件路径出现错误!]]></error.path>
+		<error.edit.ext><![CDATA[非模版文件禁止编辑!]]></error.edit.ext>
+		
+		<handle.ok.edit><![CDATA[成功编辑了一个模版文件！]]></handle.ok.edit>
+	</lang>
+	
+	<template>
+		<menu.links><![CDATA[
+@@@title=模版管理;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<!--
+<li><a href="?action=list">根目录</a></li>
+<li><font class="mark">[默认模版相关链接]</font></li>
+<li><a href="?action=list&path={$path.channel}">频道模版编辑</a></li>
+<li><a href="?action=list&path={$path.blog}">博客模版编辑</a></li>
+<li><a href="?action=list&path={$path.spaces}">门户模版编辑</a></li>
+<li><a href="?action=list&path={$path.css}">CSS样式表编辑</a></li>
+-->
+<li><a href="<exec:url("portal=configure&mode=themes.var")>">模板变量配置</a></li>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

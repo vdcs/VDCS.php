@@ -1,0 +1,4 @@
+<label:include file="/inc/ua/side">
+<label:include file="/inc/e/class.side">
+<div class="space"></div>
+<label:include file="/inc/e/search.mini">

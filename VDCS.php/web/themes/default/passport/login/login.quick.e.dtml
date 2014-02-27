@@ -1,0 +1,5 @@
+﻿<div>
+<label:include file="inc/login.quick">
+</div>
+<!--script-->
+<label:include file="inc/login.script">

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>var,config,url.script,url.rewrite</node>
+	</configure>
+	<var xmlns:class="node" xmlns:topic="node" xmlns:data="node" xmlns:event="node" xmlns:user="node">
+		<name>{@name}</name>
+		<names>{@names}</names>
+		
+		<class:name>{@class:name}</class:name>
+		<class:names>{@class:names}</class:names>
+		<class:act>{@class:act}</class:act>
+		<class:unit>{@class:unit}</class:unit>
+		
+		<topic:name>{@topic:name}</topic:name>
+		<topic:names>{@topic:names}</topic:names>
+		<topic:act>{@topic:act}</topic:act>
+		<topic:unit>{@topic:unit}</topic:unit>
+		
+		<data:name>{@data:name}</data:name>
+		<data:names>{@data:names}</data:names>
+		<data:act>{@data:act}</data:act>
+		<data:unit>{@data:unit}</data:unit>
+		
+		<vote:name>{@vote:name}</vote:name>
+		<vote:names>{@vote:names}</vote:names>
+		<vote:act>{@vote:act}</vote:act>
+		<vote:unit>{@vote:unit}</vote:unit>
+		
+		<event:name>{@event:name}</event:name>
+		<event:names>{@event:names}</event:names>
+		<event:act>{@event:act}</event:act>
+		<event:unit>{@event:unit}</event:unit>
+		
+		<ua:name>{@ua:name}</ua:name>
+		<ua:names>{@ua:names}</ua:names>
+		<ua:act>{@ua:act}</ua:act>
+		<ua:unit>{@ua:unit}</ua:unit>
+	</var>
+	<config>
+		<model>configure</model>
+	</config>
+	<url.script>
+		<list><![CDATA[{@rootc.script}&p=list&classid={$classid}]]></list>
+		<list.page><![CDATA[{@rootc.script}&p=list&classid={$classid}&page={$page}]]></list.page>
+		<listt><![CDATA[{@rootc.script}&p=list&classid={$classid}&tipid={$tipid}]]></listt>
+		<listt.page><![CDATA[{@rootc.script}&p=list&classid={$classid}&tipid={$tipid}&page={$page}]]></listt.page>
+		<view><![CDATA[{@rootc.script}&p=view&id={$id}]]></view>
+		<view.page><![CDATA[{@rootc.script}&p=view&id={$id}&page={$page}]]></view.page>
+	</url.script>
+	<url.rewrite>
+		<lists.pic><![CDATA[{@rootc.rewrite}list_pic<app:rewrite.ext>]]></lists.pic>
+		<list><![CDATA[{@rootc.rewrite}list_{$classid}<app:rewrite.ext>]]></list>
+		<list.page><![CDATA[{@rootc.rewrite}list_{$classid}_{$page}<app:rewrite.ext>]]></list.page>
+		<listt><![CDATA[{@rootc.rewrite}list_{$classid}-{$tipid}<app:rewrite.ext>]]></listt>
+		<listt.page><![CDATA[{@rootc.rewrite}list_{$classid}-{$tipid}_{$page}<app:rewrite.ext>]]></listt.page>
+		<view><![CDATA[{@rootc.rewrite}view_{$id}<app:rewrite.ext>]]></view>
+		<view.page><![CDATA[{@rootc.rewrite}view_{$id}_{$page}<app:rewrite.ext>]]></view.page>
+	</url.rewrite>
+</xcml>

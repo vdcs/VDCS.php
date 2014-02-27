@@ -1,0 +1,64 @@
+<label:include file="/headers">
+<div class="box">
+<h2><t>订单列表</t></h2>
+<div class="con">
+<table class="table tables table-striped table-hover table-list">
+<thead><tr><th>订单号</th><th>订单金额</th><th>付款方式</th><th>订单状态</th><th>下单时间</th><th>操作</th></tr></thead>
+<tbody id="list">
+
+</tbody>
+</table>
+</div>
+</div>
+
+<xmp id="list_tpl">
+<tr dataid="[item:id]" _status="[item:status]"><td>[item:no]</td><td>[item:money!price]</td><td>[item:payment.name]</td><td>[item:status.name]</td><td>[item:tim!date]</td><td><a class="btn s" href="/{@channel}/order/track?orderid=[item:id]" target="_blank">订单详情</a> <a el="pay" class="btn s hide" style="display: none;" href="/{@channel}/checkout?orderid=[item:id]">去付款</a> <a class="btn s hide" style="display: none;" el="cancel">取消订单</a> <a class="btn s hide" style="display: none;" el="confirm">确认收货</a> <a class="btn s hide" style="display: none;" el="rate">去评价</a></td></tr>
+</xmp>
+<label:include script="VDCS.ui.page.js">
+<script type="text/javascript">
+$(function(){
+	var list=ui.list;//对象，传入存放内容的对象和模板对象
+	var opt={cont:$('#list'),tpl:$('#list_tpl')};
+	opt.serveVar={channel:'{@channel}',p:'order',action:'list'};
+	//opt.paging=$('#paging');//放置分页按钮的对象
+	opt.bind=function(jitem){
+		var status=jitem.attr('_status');
+		if(status==0) jitem.find('[el=pay],[el=cancel]').show();
+		if(status==4) jitem.find('[el=confirm]').show();
+		if(status==5) jitem.find('[el=rate]').show();
+		
+		jitem.find('[el=cancel]').click(function(){
+			var orderid=jitem.attr('dataid');
+			_change(orderid,9,'您确定要取消订单吗？');
+		});
+		jitem.find('[el=confirm]').click(function(){
+			var orderid=jitem.attr('dataid');
+			_change(orderid,5,'您确定要确认收货吗？');
+		});
+	};
+	opt.binds=function(jcont,treeVar){
+		
+	};
+	opt.node_table='item';
+	list.init(opt);
+	list.parse();
+	
+	var _change=function(orderid,status,message){
+		var opt={};
+		opt.message=message;
+		opt.callback=function(){
+			//var _url='/p.php?cp=product&p=checkout&m=&x=x&action=cancel&orderid='+orderid+'';
+			var _url='/{@channel}/order.x?action=change&orderid='+orderid+'&status='+status;
+			$ajax({url:_url,value:'xml',ready:function(xml){
+				var map=$util.toMapByXML(xml);
+				var treeVar=map.getItemTree('var');
+				ui.popups('succeed','操作成功！');
+				list.refresh();
+			},error:true});	
+				
+		};
+		ui.confirm(opt);
+	};
+});
+</script>
+<label:include file="/footers">

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre xmlns:data="node" xmlns:question="node" xmlns:answer="node" xmlns:ua="node">
+		<channel>{@channel}</channel>
+		<table.namex>db_{@channel}_</table.namex>
+		<table.name>db_{@channel}_question</table.name>
+		<table.px>q_</table.px>
+		<name>问答</name>
+		<names>问题</names>
+		<act>浏览</act>
+		<act.view>浏览</act.view>
+		<act.answer>回答</act.answer>
+		<unit>条</unit>
+		
+		<question:table.name>db_{@channel}_question</question:table.name>
+		<question:table.px>q_</question:table.px>
+		<question:name>问题</question:name>
+		<question:names>问题</question:names>
+		<question:act>浏览</question:act>
+		<question:unit>条</question:unit>
+		
+		<answer:table.name>db_{@channel}_answer</answer:table.name>
+		<answer:table.px>a_</answer:table.px>
+		<answer:name>回答</answer:name>
+		<answer:names>回答</answer:names>
+		<answer:act>查看</answer:act>
+		<answer:unit>条</answer:unit>
+		
+		<ua:table.name>db_{@channel}_user</ua:table.name>
+		<ua:table.px></ua:table.px>
+		<ua:name>用户</ua:name>
+		<ua:names>用户</ua:names>
+		<ua:act>查看</ua:act>
+		<ua:unit>个</ua:unit>
+	</pre>
+	<var>
+		<title>问答</title>
+		<title.index>null</title.index>
+		<title.list>问答列表</title.list>
+		<title.view>浏览问答</title.view>
+		<title.view.data>浏览问答</title.view.data>
+		<title.search>问答搜索</title.search>
+		<title.pic>图片问答</title.pic>
+		<title.class>问答分类</title.class>
+		<title.special>问答专题</title.special>
+		
+		<title.question>我要提问</title.question>
+		<title.answer>我要回答</title.answer>
+		<title.put>我要提问</title.put>
+		
+		<title.user>用户中心</title.user>
+		<title.my>我的问答</title.my>
+		<title.my.question>我的问题</title.my.question>
+		<title.my.answer>我的回答</title.my.answer>
+		<title.my.choose>选择答案</title.my.choose>
+		
+		<title.faq>帮助中心</title.faq>
+	</var>
+	<num>
+		<pic.width>0</pic.width>
+		<pic.height>0</pic.height>
+	</num>
+	<config>
+		<url>default</url>
+		<put>0</put>
+		<put.status>1</put.status>
+		<put.premium>1</put.premium>
+		<put.audit></put.audit>
+		<put.premium.emoney>0</put.premium.emoney>
+		<put.premium.points>5</put.premium.points>
+		<put.reward>0</put.reward>
+		
+		<puta.status>1</puta.status>
+		<puta.premium>1</puta.premium>
+		<puta.audit></puta.audit>
+		<puta.premium.emoney>0</puta.premium.emoney>
+		<puta.premium.points>2</puta.premium.points>
+	</config>
+</xcml>

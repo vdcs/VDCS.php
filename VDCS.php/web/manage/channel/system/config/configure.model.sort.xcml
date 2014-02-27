@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links</frame>
+		
+		<table.name>dbs_sort</table.name>
+		<table.px></table.px>
+		<table.field.id>id</table.field.id>
+		<table.field.defineid>sortid</table.field.defineid>
+		<table.fields.value></table.fields.value>
+		<table.fields.add>channel,sortid,classid,orderid,levelid,rootid,fatherid,name,type,value,logo,summary,status</table.fields.add>
+		<table.fields.edit>orderid,name,type,value,logo,summary,status</table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.order>rootid asc,orderid asc,id asc</list.table.order>
+		<list.handle.sql.delete>delete from dbs_sort where id in ({$ids})</list.handle.sql.delete>
+	</config>
+	
+	<lang>
+		<title><![CDATA[类别管理]]></title>
+		<title.name><![CDATA[类别]]></title.name>
+		<title.list><![CDATA[类别信息]]></title.list>
+		<title.add><![CDATA[添加新类别]]></title.add>
+		<title.edit><![CDATA[编辑类别]]></title.edit>
+		<title.del><![CDATA[删除类别]]></title.del>
+		<title.move><![CDATA[链接移动]]></title.move>
+		<title.unite><![CDATA[数据合并]]></title.unite>
+		
+		<error.no.channel><![CDATA[未知或错误的频道参数！]]></error.no.channel>
+		<error.no.classid><![CDATA[未知或错误的类别参数！]]></error.no.classid>
+		
+		<error.not.exist><![CDATA[您要操作的类别不存在！]]></error.not.exist>
+		<error.not.fatherid><![CDATA[所属类别不存在！]]></error.not.fatherid>
+		<error.exist.id><![CDATA[类别ID已存在！]]></error.exist.id>
+		<error.exist.child><![CDATA[类别还有子类别存在！]]></error.exist.child>
+		<error.exist.data><![CDATA[类别有还有数据存在！]]></error.exist.data>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 个类别！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 个类别！]]></handle.ok.edit>
+		<handle.ok.del><![CDATA[成功删除了 1 个类别！]]></handle.ok.del>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} 个类别！]]></handle.ok.delete>
+		<handle.ok.move><![CDATA[成功移动了 1 个链接！]]></handle.ok.move>
+		<handle.ok.order><![CDATA[成功更新了类别排序！]]></handle.ok.order>
+		<handle.ok.unite><![CDATA[成功执行了 数据合并 操作！]]></handle.ok.unite>
+	</lang>
+	
+	<template>
+		<menu.links><![CDATA[
+@@@title=类别管理;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<var:menu.links>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

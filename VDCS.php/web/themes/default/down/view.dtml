@@ -1,0 +1,89 @@
+<label:include file="frame/headers">
+
+
+<label:include script="<web:url.themed>images/app.view.js">
+<script type="text/javascript">view.init("{@channel}","{@id}");</script>
+
+<div class="cont">
+	<div class="box">
+		<div class="con">
+<div class="StructView re-content">
+<div class="partTopic" id="div-view-topic"><span><view:topic></span></div>
+<div class="partInfo" id="div-view-info">
+			<div class="Halfs">
+				<div class="Half1" style="width:58%;">
+<ul class="clears atts">
+<li><cite><lang:att.level>:</cite><em class="istar i<view:level>"></em></li>
+<li><cite><lang:att.size>:</cite><view:prop2!filesize></li>
+<li><cite><lang:att.genre>:</cite><view:sort></li>
+<li><cite><lang:att.total>:</cite><font class="total" title="View: <view:total_view>"><view:total_get></font> <langs:chn.views></li>
+<li><cite><lang:att.time>:</cite><span title="<view:tim>"><view:tim!date></span></li>
+<li><cite><lang:att.comment>:</cite><span id="View-Comment-Total"><view:total_comment></span> <langs:comment.unit></li>
+<li><cite><langs:chn.sp.popedom>:</cite><span id="view-popedom">&nbsp;</span><script>user.group.bindPopedom("view-popedom","<view:sp_popedom!js>");</script></li>
+<li><cite><langs:chn.sp.billing>:</cite><span class="points"><view:sp_points></span> <app:unit.points>, <span class="emoney"><view:sp_emoney></span> <app:unit.emoney></li>
+<li class="sline"><cite><lang:att.os>:</cite><view:prop1></li>
+<li class="sline"><cite><lang:att.homepage>:</cite><a href="<view:linkurl>" target="_blank"><view:linkurl></a></li>
+
+</ul>
+<div class="partRelate relateContext">
+<label:include file="/inc/relate.context">
+</div>
+				</div>
+				<div class="Half2 align-center" style="width:40%;"><img src="<view:pic>"></div>
+				<div class="centers">
+					<li class="sline"><cite><lang:view.class>:</cite><view:class.nav></li>
+				</div>
+			</div>
+</div>
+<div class="partPartof smb">
+			<div class="floor align-center">
+<label:include file="/inc/sync.digg">
+			</div>
+</div>
+</div>
+		</div>
+	</div>
+	
+	<div class="space"></div>
+	<div class="box">
+		<h2><t><lang:view.remark></t></h2>
+		<div class="con">
+<div class="StructView re-content">
+<div class="partRemark remarks" id="div-view-remark"><table cellpadding="0" cellspacing="0" class="tab-content table-break"><tr><td class="word-break"><div class="word-break scroll-y" id="div-view-remark-content"><view:remark></div></td></tr></table></div>
+<script type="text/javascript">//view.doContentResize("div-view-remark-content");</script>
+</div>
+		</div>
+	</div>
+	
+	<div class="space"></div>
+	<div class="box">
+		<h2><t><lang:view.datas></t></h2>
+		<div class="con">
+			<div class="Halfs">
+				<div class="_Half1" style="width:48%;">
+<div class="StructDataDown"><ul>
+<loop:data>
+<li>[<span class="name"><a href="[item:url]"><span>[item:topic]</span></a></span> <span class="total">[item:total_view]</span>]</li>
+</loop>
+<ul></div>
+				</div>
+				<div class="_Half2" style="width:50%;">
+<label:include file="common.view.edge">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="space"></div>
+	<div class="box">
+		<h2><t><lang:view.notes></t></h2>
+		<div class="con">
+<label:include file="common.notes">
+		</div>
+	</div>
+	
+<label:include file="/inc/view/comment">
+</div>
+
+
+<label:include file="frame/footers">

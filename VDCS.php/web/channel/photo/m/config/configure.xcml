@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>search,class</frame>
+		<search.fields>{@table.px}topic=6;{@table.px}source=6;{@table.px}author=6;{@table.px}summary=6;sp_keyword=6;username=6</search.fields>
+		<search.times>{@table.px}tim</search.times>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>{@table.name}</table.name>
+		<table.px>{@table.px}</table.px>
+		<table.field.id>{@table.px}id</table.field.id>
+		<table.field.total.data>{@table.px}total_data</table.field.total.data>
+		<table.field.pic>{@table.px}pic</table.field.pic>
+		<table.fields.value>id={@table.px}id;topic={@table.px}topic;total.data={@table.px}total_data;time={@table.px}tim</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.query.audit>{@table.px}status=1</list.table.query.audit>
+		<list.table.query.inaudit>{@table.px}status=2</list.table.query.inaudit>
+		<list.table.query.unaudit>{@table.px}status=0</list.table.query.unaudit>
+		<list.table.query.show>{@table.px}status=1</list.table.query.show>
+		<list.table.query.hide>{@table.px}status=0</list.table.query.hide>
+		<list.table.query.gooda>{@table.px}isgood>0</list.table.query.gooda>
+		<list.table.query.good>{@table.px}isgood=1</list.table.query.good>
+		<list.table.query.ungood>{@table.px}isgood=0</list.table.query.ungood>
+		<list.table.query.topa>{@table.px}istop>0</list.table.query.topa>
+		<list.table.query.top>{@table.px}istop=1</list.table.query.top>
+		<list.table.query.topz>{@table.px}istop=2</list.table.query.topz>
+		<list.table.query.tops>{@table.px}istop=3</list.table.query.tops>
+		<list.table.query.untop>{@table.px}istop=0</list.table.query.untop>
+		<list.table.order>{@table.px}id desc</list.table.order>
+		<list.table.order.tim>{@table.px}tim desc</list.table.order.tim>
+		<list.handle.select.option>audit,inaudit,unaudit,show,hide,good,ungood,top,topz,tops,untop,delete</list.handle.select.option>
+		<list.handle.sql.audit>update {@table.name} set {@table.px}status=1 where {@table.px}id in ({$ids})</list.handle.sql.audit>
+		<list.handle.sql.inaudit>update {@table.name} set {@table.px}status=2 where {@table.px}id in ({$ids})</list.handle.sql.inaudit>
+		<list.handle.sql.unaudit>update {@table.name} set {@table.px}status=0 where {@table.px}id in ({$ids})</list.handle.sql.unaudit>
+		<list.handle.sql.show>update {@table.name} set {@table.px}status=1 where {@table.px}id in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.hide>update {@table.name} set {@table.px}status=0 where {@table.px}id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.good>update {@table.name} set {@table.px}isgood=1 where {@table.px}id in ({$ids})</list.handle.sql.good>
+		<list.handle.sql.ungood>update {@table.name} set {@table.px}isgood=0 where {@table.px}id in ({$ids})</list.handle.sql.ungood>
+		<list.handle.sql.top>update {@table.name} set {@table.px}istop=1 where {@table.px}id in ({$ids})</list.handle.sql.top>
+		<list.handle.sql.tops>update {@table.name} set {@table.px}istop=1 where {@table.px}id in ({$ids})</list.handle.sql.tops>
+		<list.handle.sql.topz>update {@table.name} set {@table.px}istop=1 where {@table.px}id in ({$ids})</list.handle.sql.topz>
+		<list.handle.sql.untop>update {@table.name} set {@table.px}istop=0 where {@table.px}id in ({$ids})</list.handle.sql.untop>
+		<list.handle.sql.delete>delete from {@data:table.name} where rootid in ({$ids})$$$
+			delete from {@table.name} where {@table.px}id in ({$ids})</list.handle.sql.delete>
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[{@names}]]></title.name>
+		<title><![CDATA[{@names}管理]]></title>
+		<title.list><![CDATA[{@names}列表]]></title.list>
+		<title.list.><![CDATA[{@names}列表]]></title.list.>
+		<title.list.audit><![CDATA[已审核{@names}]]></title.list.audit>
+		<title.list.inaudit><![CDATA[待审核{@names}]]></title.list.inaudit>
+		<title.list.unaudit><![CDATA[未审核{@names}]]></title.list.unaudit>
+		<title.list.show><![CDATA[显示{@names}]]></title.list.show>
+		<title.list.hide><![CDATA[隐藏{@names}]]></title.list.hide>
+		<title.list.gooda><![CDATA[已推荐{@names}]]></title.list.gooda>
+		<title.list.good><![CDATA[推荐{@names}]]></title.list.good>
+		<title.list.ungood><![CDATA[未推荐{@names}]]></title.list.ungood>
+		<title.list.topa><![CDATA[已固顶{@names}]]></title.list.topa>
+		<title.list.top><![CDATA[固顶{@names}]]></title.list.top>
+		<title.list.topz><![CDATA[区固顶{@names}]]></title.list.topz>
+		<title.list.tops><![CDATA[总固顶{@names}]]></title.list.tops>
+		<title.list.untop><![CDATA[未固顶{@names}]]></title.list.untop>
+		<title.add><![CDATA[添加新{@names}]]></title.add>
+		<title.edit><![CDATA[编辑{@names}]]></title.edit>
+		
+		<title.frame.class><![CDATA[{@names}分类]]></title.frame.class>
+		<title.frame.search><![CDATA[{@names}搜索]]></title.frame.search>
+		<search.fields.att></search.fields.att>
+		
+		<error.not.exist><![CDATA[您要操作的 {@names} 不存在！]]></error.not.exist>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 {@unit}{@names}！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 {@unit}{@names}！]]></handle.ok.edit>
+		<handle.ok.audit><![CDATA[成功待审核了 {$total} {@unit}{@names}！]]></handle.ok.audit>
+		<handle.ok.inaudit><![CDATA[成功待审核了 {$total} {@unit}{@names}！]]></handle.ok.inaudit>
+		<handle.ok.unaudit><![CDATA[成功未审核了 {$total} {@unit}{@names}！]]></handle.ok.unaudit>
+		<handle.ok.show><![CDATA[成功显示了 {$total} {@unit}{@names}！]]></handle.ok.show>
+		<handle.ok.hide><![CDATA[成功隐藏了 {$total} {@unit}{@names}！]]></handle.ok.hide>
+		<handle.ok.good><![CDATA[成功推荐了 {$total} {@unit}{@names}！]]></handle.ok.good>
+		<handle.ok.ungood><![CDATA[成功取消推荐了 {$total} {@unit}{@names}！]]></handle.ok.ungood>
+		<handle.ok.top><![CDATA[成功固顶了 {$total} {@unit}{@names}！]]></handle.ok.top>
+		<handle.ok.topz><![CDATA[成功区固顶了 {$total} {@unit}{@names}！]]></handle.ok.topz>
+		<handle.ok.tops><![CDATA[成功总固顶了 {$total} {@unit}{@names}！]]></handle.ok.tops>
+		<handle.ok.untop><![CDATA[成功取消固顶了 {$total} {@unit}{@names}！]]></handle.ok.untop>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} {@unit}{@names}！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+	</template>
+</xcml>

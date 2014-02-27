@@ -1,0 +1,23 @@
+
+<!--{if toInt({$view:iscomment})=1}-->
+<div class="space"></div>
+<div class="box">
+	<h2><t>评论</t></h2>
+	<div class="con">
+
+<label:include file="/common/comment/part.common">
+<div id="Comments">
+<div id="CommentBody" class="Comments">评论加载中..</div>
+</div>
+<script type="text/javascript">
+$d.load(function(){
+	comment.init({channel:"{@channel}",rootid:"{@id}"});
+	$w.timeout(function(){
+		comment.viewer();
+	},0);
+});
+</script>
+
+	</div></div>
+</div>
+<!--{/if}-->

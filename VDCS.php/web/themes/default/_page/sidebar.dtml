@@ -1,0 +1,42 @@
+<label:include file="frame/headers">
+
+<label:include script="cms/sidemenu.css" type="css">
+
+<div class="framer" style="height:1000px;">
+<div class="cont">向下滚动滑轮查看效果！</div>
+<div class="side_menu" id="side_menu">
+	<ul>
+		<div class="side_menu_header"></div>
+		<themes:menu("main")>
+		<li menu="[menu:id]" [menu:atts]><a href="[menu:url]" [menu:att]><span class="[menu:id]"></span><span>[menu:name]</span></a></li>
+		</themes>
+		<div class="side_menu_footer"></div>
+	</ul>
+</div>
+<script type="text/javascript">
+$(function(){
+		$(window).scroll(function(){
+		if($(window).scrollTop()>150)		//scrollTop,滚动条的垂直偏移
+			{$("#side_menu").slideDown(400)}
+		else
+			{$("#side_menu").slideUp(400)};
+		});
+		//选中高亮
+		$('#header .side_menu').find('li a').each(function(){
+			var ja=$(this);
+			if(ja.attr('href')=='/'){
+				if(!d.location.toString().split('/')[3])ja.addClass('menucover');
+			}
+			else if(ins(d.location.toString(),ja.attr('href'))>0){
+				ja.addClass('menucover');
+			}
+		});
+})
+</script>
+
+
+
+</div>
+
+
+<label:include file="frame/footers">

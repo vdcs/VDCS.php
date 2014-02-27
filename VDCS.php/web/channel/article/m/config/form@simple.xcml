@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+		<sp.code>code=sp_code;remark={@tpx}remark</sp.code>
+		<script.begin><![CDATA[]]></script.begin>
+		<script.end><![CDATA[
+<script type="text/javascript">
+ui.fbm.relates({"upload":"base,content"});
+</script>
+]]></script.end>
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<explain><![CDATA[default=$$$base={@xnames}信息;property={@xnames}属性;status={@xnames}状态]]></explain>
+	</input>
+	<!--content={@xnames}内容;sp={@xnames}特性;-->
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=none</att>
+	</input>
+	<input>
+		<type>text.{@tpx}topic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=1]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[{@xnames}标题]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}key</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=0]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[{@xnames}KEY]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.srvid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=0]]></property>
+		<style>size=30 maxlength=20 class="item"</style>
+		<caption><![CDATA[SRVID]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>select.classid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min={@@classid.min}]]></property>
+		<style><![CDATA[ class="itxt"]]></style>
+		<caption><![CDATA[{@xnames}分类]]></caption>
+		<att><![CDATA[0=请选择{@xnames}分类..;<control:att("class","channel={@channel}")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.specialid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style><![CDATA[ class="itxt""]]></style>
+		<caption><![CDATA[{@xnames}专题]]></caption>
+		<att><![CDATA[0=请选择{@xnames}专题..;<control:att("special","channel={@channel}")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	
+	<input>
+		<type>hidden.sp_code</type>
+		<property><![CDATA[item=;action=;type=int;max=10;min=]]></property>
+		<value>{@@sp.code}</value>
+	</input>
+	<input>
+		<type>{@@editor}.{@tpx}remark</type>
+		<property><![CDATA[item=;action=;type=string;max={@@remark.max};min={@@remark.min}]]></property>
+		<style>cols=60 rows=15</style>
+		<caption><![CDATA[详细内容$$$<br><br><br><br><control:form.element("upload.linkurl","","channel={@channel};filetype=;filename=;fileinput=i.{@tpx}remark;inputtype=ubb;valuemode=append;title=上传至内容")>]]></caption>
+		<att>height=300</att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}pic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[{@xnames}图片]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<control:form.element("upload.linkurl","","channel={@channel};filetype={@up.filetype};filename={@up.filename};fileinput={@tpx}pic;inputtype=pic;title=上传图片")>]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	<input>
+		<type>multibar.head</type>
+		<att>id=upload;display=none</att>
+	</input>
+	<input>
+		<type>upload</type>
+		<property><![CDATA[item=;action=;type=;max=;min=]]></property>
+		<caption><![CDATA[文件上传]]></caption>
+		<att><![CDATA[channel={@channel};filetype={@up.filetype};filename={@up.filename};fileinput={@tpx}pic;inputtype=pic]]></att>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=property;display=none</att>
+	</input>
+	<input>
+		<type>text.{@tpx}linkurl</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[链接地址]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<br>链接地址不为空表示该{@xnames}为外部链接{@xnames}，将直接链接至该地址]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}source</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=60 maxlength=50 class="itxt"</style>
+		<caption><![CDATA[{@xnames}来源]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}author</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=60 maxlength=50 class="itxt"</style>
+		<caption><![CDATA[{@xnames}作者]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>{@@editor.txt}.{@tpx}summary</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min={@@summary.min}]]></property>
+		<style>cols=60 rows=5 class="itxt"</style>
+		<caption><![CDATA[{@xnames}简介]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.sp_keyword</type>
+		<property><![CDATA[item=;class=sp;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[关 键 字]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=attr;display=none</att>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prop1</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prop2</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prop3</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prop4</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prop5</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+	</input>
+	<input>
+		<type>hidden.{@tpx}attrtype</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<value>{$attrtype}</value>
+	</input>
+{@xcml:attr}
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=sp;display=none</att>
+	</input>
+	<input>
+		<type>hidden.sp_mode</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=]]></property>
+	</input>
+	<input>
+		<type>hidden.sp_edition</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+	</input>
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[{@xact}权限]]></caption>
+	</input>
+	<input>
+		<type>checkbox.sp_popedom</type>
+		<property><![CDATA[item=;class=sp;action=;type=string;max=200;min=]]></property>
+		<style></style>
+		<caption><![CDATA[{@xact}权限]]></caption>
+		<att><![CDATA[<control:att("file","sort=user.group")>]]></att>
+		<value></value>
+		<explain>不选表示对所有人开放</explain>
+	</input>
+	<input>
+		<type>text.sp_emoney</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=10;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[{@xact}货币]]></caption>
+		<att></att>
+		<value>0.0</value>
+		<explain><![CDATA[<app:unit.emoney>$$${@xact}所要扣除的货币]]></explain>
+	</input>
+	<input>
+		<type>text.sp_points</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=10;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[{@xact}积分]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.points>$$${@xact}所要扣除的积分]]></explain>
+	</input>
+	<input>
+		<type>hidden.sp_poll_agree</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<value>0</value>
+	</input>
+	<input>
+		<type>hidden.sp_poll_oppose</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<value>0</value>
+	</input>
+	<input>
+		<type>hidden.sp_defined</type>
+		<property><![CDATA[item=;action=;type=string;max=1000;min=]]></property>
+		<value></value>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=status;display=none</att>
+	</input>
+	<input>
+		<type>text.{@tpx}total_view</type>
+		<property><![CDATA[item=;action=;type=int;max=20;min=]]></property>
+		<style>size=20 maxlength=20 class="total"</style>
+		<caption><![CDATA[{@xact}次数]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[次$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}total_day</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=]]></property>
+		<style>size=15 maxlength=15 class="total"</style>
+		<caption><![CDATA[日{@xact}量]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[次$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}total_week</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=]]></property>
+		<style>size=15 maxlength=15 class="total"</style>
+		<caption><![CDATA[周{@xact}量]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[次$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}total_month</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=]]></property>
+		<style>size=15 maxlength=15 class="total"</style>
+		<caption><![CDATA[月{@xact}量]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[次$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}total_comment</type>
+		<property><![CDATA[item=;action=;type=int;max=;min=]]></property>
+		<value>0</value>
+	</input>
+	<input>
+		<type>hidden.{@tpx}total_fav</type>
+		<property><![CDATA[item=;action=;type=int;max=;min=]]></property>
+		<value>0</value>
+	</input>
+	<input>
+		<type>hidden.{@tpx}total_regard</type>
+		<property><![CDATA[item=;action=;type=int;max=;min=]]></property>
+		<value>0</value>
+	</input>
+	<input>
+		<type>text.orderid</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=]]></property>
+		<style>size=20 maxlength=20 class="total"</style>
+		<caption><![CDATA[排 序 值]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[$$$排序值越大越靠前，而不受发布时间限制]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prepage</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否分页]]></caption>
+		<att><![CDATA[<control:att("file","prepage")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[每页 <input class="num w50" type="text" name="_prepage_num" id="form__prepage_num" value="10000" size="6" maxlength="10" /> 字节，手动分页标志为“<font class=t2>[paging]</font>”]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prepage_num</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style>id="form_{@tpx}prepage_num"</style>
+		<caption><![CDATA[自动分页数]]></caption>
+		<att><![CDATA[]]></att>
+		<value>{${@tpx}prepage_num}</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[状态设定]]></caption>
+	</input>
+	<input>
+		<type>radio.{@tpx}isgood</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否推荐]]></caption>
+		<att><![CDATA[<control:att("dict","data.goods")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}istop</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否固顶]]></caption>
+		<att><![CDATA[<control:att("dict","data.tops")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}status</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[当前状态]]></caption>
+		<att><![CDATA[<control:att("dict","data.audit")>]]></att>
+		<value>1</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}tim</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=1]]></property>
+		<style>size=30 maxlength=20 class="time"</style>
+		<caption><![CDATA[发布时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.username</type>
+		<property><![CDATA[item=;class=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="username"</style>
+		<caption><![CDATA[发布用户]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+</xcml>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>var,config,url.script,url.rewrite</node>
+	</configure>
+	<var xmlns:data="node" xmlns:sort="node">
+		<name>{@name}</name>
+		<names>{@names}</names>
+		<act>{@act}</act>
+		<act.view>{@act.view}</act.view>
+		<unit>{@unit}</unit>
+		
+		<data:name>{@data:name}</data:name>
+		<data:names>{@data:names}</data:names>
+		<data:act>{@data:act}</data:act>
+		<data:unit>{@data:unit}</data:unit>
+		
+		<sort:name>{@sort:name}</sort:name>
+		<sort:names>{@sort:names}</sort:names>
+		<sort:act>{@sort:act}</sort:act>
+		<sort:unit>{@sort:unit}</sort:unit>
+	</var>
+	<config>
+		<model>configure,search,class</model>
+	</config>
+	<url.script>
+		<list><![CDATA[{@rootc.script}&p=list&classid={$classid}]]></list>
+		<list.page><![CDATA[{@rootc.script}&p=list&classid={$classid}&page={$page}]]></list.page>
+		<view><![CDATA[{@rootc.script}&p=view&id={$id}]]></view>
+		<view.page><![CDATA[{@rootc.script}&p=view&id={$id}&page={$page}]]></view.page>
+		
+		<mu><![CDATA[{@root}club/mu<app:ext.script>?muid={$muid}&p=blog]]></mu>
+		<mu.view><![CDATA[{@root}club/mu<app:ext.script>?muid={$muid}&p=blog&m=view&id={$id}]]></mu.view>
+	</url.script>
+	<url.rewrite>
+		<list><![CDATA[{@rootc.rewrite}list_{$classid}<app:rewrite.ext>]]></list>
+		<list.page><![CDATA[{@rootc.rewrite}list_{$classid}_{$page}<app:rewrite.ext>]]></list.page>
+		<view><![CDATA[{@rootc.rewrite}view_{$id}<app:rewrite.ext>]]></view>
+		<view.page><![CDATA[{@rootc.rewrite}view_{$id}_{$page}<app:rewrite.ext>]]></view.page>
+		
+		<mu><![CDATA[{@root}club/u/{$muid}/blog<app:rewrite.ext>]]></mu>
+		<mu.view><![CDATA[{@root}club/u/{$muid}/blog_view_{$id}<app:rewrite.ext>]]></mu.view>
+	</url.rewrite>
+</xcml>

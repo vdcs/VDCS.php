@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="control">
+	<configure>
+		<node>popedom</node>
+	</configure>
+	<popedom>
+		<module.model><![CDATA[configure,class,special]]></module.model>
+		<module.__handle>newline</module.__handle>
+		<module.action><![CDATA[list,add,edit]]></module.action>
+		<module.__action>newline</module.__action>
+		<module.handle><![CDATA[default]]></module.handle>
+	</popedom>
+</xcml>

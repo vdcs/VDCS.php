@@ -1,0 +1,6 @@
+<?
+class ChannelAskSearch extends ChannelAskList
+{
+	
+}
+?>

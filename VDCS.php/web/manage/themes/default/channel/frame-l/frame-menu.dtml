@@ -1,0 +1,18 @@
+
+<div class="box">
+	<h2><t><exec:lang("_","title.info")></t></h2>
+	<div class="con">
+<table class="list lists">
+<tr><td><div class="rlt">
+	<span class=""><a href="<exec:url("portal=&mode=&taxis=&mod=&action=view")>" class="b big"><var:name></a></span>
+	<span class="r" style="margin-top:3px;"><span class="gray">正常</span></span>
+</div></td></tr>
+<tr><td><var:realname></td></tr>
+<tr><td><a href="<exec:url("portal=products&mode=&taxis=&mod=&action=")>">产品列表</a> <a href="<exec:url("portal=products&mode=&taxis=&mod=&action=add")>">添加</a></td></tr>
+<tr><td><a href="<exec:url("portal=bill&mode=&taxis=&mod=product&action=")>">帐单列表</a> <a href="<exec:url("portal=billdata&mode=&taxis=&mod=product&action=")>">明细</a></td></tr>
+<tr><td><a href="<exec:url("portal=bill&mode=&taxis=&mod=imprest&action=")>">预 付 款</a> <a href="<exec:url("portal=bill&mode=&taxis=&mod=imprest&action=add")>">添加</a></td></tr>
+<tr><td><a href="<exec:url("portal=memo&mode=&taxis=&mod=&action=&id=")>">备注信息</a> <a href="<exec:url("portal=memo&mode=&taxis=&mod=&action=add")>">添加</a></td></tr>
+<tr class="blank"><td><a href="<exec:url("portal=&mode=&taxis=&mod=&action=view")>">详细资料</a> <a href="<exec:url("portal=&mode=&taxis=&mod=&action=edit")>">编辑</a></td></tr>
+</table>
+	</div>
+</div>

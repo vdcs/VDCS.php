@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,value</field>
+	</configure>
+	<item>
+		<key>form.clew.sign</key>
+		<value><![CDATA[<input class="ClewSign" disabled />]]></value>
+	</item>
+	<item>
+		<key>form.put</key>
+		<value><![CDATA[<font class="put">{$text}</font>]]></value>
+	</item>
+	<item>
+		<key>form.header.title</key>
+		<value><![CDATA[
+<!-- multibar.body -->
+<form name="{$form.name}" action="{$form.action}" method="post" {$form.script}>
+<input type="hidden" name="_chk" value="yes" />
+<input type="hidden" name="_upid" value="{$upid}" />
+<input type="hidden" name="_multibar" value="{$multibar}" />
+<table class="frm">
+<tr class="bar title"><td colspan="2">{$title}</td></tr>
+]]></value>
+	</item>
+	<item>
+		<key>form.header</key>
+		<value><![CDATA[
+<!-- multibar.body -->
+<form name="{$form.name}" action="{$form.action}" method="post" {$form.script}>
+<input type="hidden" name="_chk" value="yes" />
+<input type="hidden" name="_upid" value="{$upid}" />
+<input type="hidden" name="_multibar" value="{$multibar}" />
+<table class="frm tabs">
+]]></value>
+	</item>
+	<item>
+		<key>form.footer</key>
+		<value><![CDATA[
+<!--</table>
+<table class="frm">-->
+<tbody id="fbm-body-footer">
+<tr class="button"><td>{$option.select.all}</td><td><input type="submit" class="btn push" name="_sbt" value="提交{$submit.title}" {$submit.script} /> <input type="reset" class="btn reset" name="_rst" value="重新填写" /> <input type="button" class="btn goback" value="返回上一页" onclick="javascript:history.back();" /></td></tr>
+</tbody>
+</table>
+</form>
+]]></value>
+	</item>
+	<item>
+		<key>form.header.table</key>
+		<value><![CDATA[<table class="frm">]]></value>
+	</item>
+	<item>
+		<key>form.footer.table</key>
+		<value><![CDATA[</table>]]></value>
+	</item>
+	
+	<item>
+		<key>form.bar</key>
+		<value><![CDATA[
+<tr class="{$class} title" id="{$id.item}"><td colspan="2">{$caption}</td></tr>]]></value>
+	</item>
+	<item>
+		<key>form.item</key>
+		<value><![CDATA[
+<tr class="{$class}" id="{$id.item}" {$style} onMouseOver="javascript:this.className='{$class} pop';" onMouseOut="javascript:this.className='{$class}';">
+<td class="caption">{$option.select}{$caption}:<br/>{$caption.explain}</td>
+<td class="input">{$input} {$note} {$clew.sign} {$explain}</td>
+</tr>]]></value>
+	</item>
+	<item>
+		<key>form.item.put</key>
+		<value><![CDATA[
+<tr class="{$class}" id="{$id.item}" {$style} onMouseOver="javascript:this.className='{$class} pop';" onMouseOut="javascript:this.className='{$class}';">
+<td class="caption">{$option.select}{$caption}:<br/>{$caption.explain}</td>
+<td class="input put">{$input} {$note} {$clew.sign} {$explain}</td>
+</tr>]]></value>
+	</item>
+	<item><!--hode-->
+		<key>form.item.hidden</key>
+		<value><![CDATA[
+<tr class="hide" id="{$id.item}">{$input}<td class="caption"></td><td class="input"></td></tr>]]></value>
+	</item>
+	<item>
+		<key>form.item.hide</key>
+		<value><![CDATA[
+<tr class="hide" id="{$id.item}">{$input}<td class="caption"></td><td class="input"></td></tr>]]></value>
+	</item>
+	<item>
+		<key>form.item.item</key>
+		<value><![CDATA[
+<tr class="{$class}" id="{$id.item}" {$style} onMouseOver="javascript:this.className='{$class} pop';" onMouseOut="javascript:this.className='{$class}';">
+<td class="caption">{$option.select}{$caption}:<br/>{$caption.explain}</td>
+<td class="input">{$explain}</td>
+</tr>]]></value>
+	</item>
+	<item>
+		<key>form.item.blank</key>
+		<value><![CDATA[
+<tr class="{$class}" id="{$id.item}" {$style} onMouseOver="javascript:this.className='{$class} pop';" onMouseOut="javascript:this.className='{$class}';">
+<td class="caption">{$caption.explain}</td>
+<td class="input">{$explain}</td>
+</tr>]]></value>
+	</item>
+	<item>
+		<key>form.item.textbox</key>
+		<value><![CDATA[
+<tr class="{$class}" id="{$id.item}" {$style} onMouseOver="javascript:this.className='{$class} pop';" onMouseOut="javascript:this.className='{$class}';">
+<td class="caption caption-explain" valign="top">{$option.select}{$caption}:<br/>{$note} {$clew.sign}<br/>{$caption.explain}</td>
+<td class="input">
+<table class="blk">
+<tr>
+<td>{$input}</td>
+<td width="3"></td>
+<td valign="bottom"><img class="icon hand" src="<app:url.images>common/handle/resize_minus.gif" onclick="javascript:$post.doTextareaResize('{$form.name}.{$name}','-',3);" /><br/><img class="icon hand" src="<app:url.images>common/handle/resize_plus.gif" onclick="javascript:$post.doTextareaResize('{$form.name}.{$name}','+',3);" /></td>
+</tr>
+</table>
+<div class="explain">{$explain}</div></td>
+</tr>]]></value>
+	</item>
+	<item>
+		<key>form.item.editor</key>
+		<value><![CDATA[
+<tr class="{$class}" id="{$id.item}" {$style}>
+<td class="caption caption-explain" valign="top">{$option.select}{$caption}:<br/>{$note} {$clew.sign}<br/>{$caption.explain}</td>
+<td class="input">{$input}<div class="explain">{$explain}</div></td>
+</tr>]]></value>
+	</item>
+	<item>
+		<key>form.item.upload</key>
+		<value><![CDATA[
+<tr class="{$class}" id="{$id.item}" {$style}>
+<td class="caption">{$caption}:</td>
+<td class="input">{$input} {$explain}</td>
+</tr>]]></value>
+	</item>
+	
+	
+	<item>
+		<key>form.item.code.caption</key>
+		<value><![CDATA[[编码模式]]]></value>
+	</item>
+	<item>
+		<key>form.item.code.explain</key>
+		<value><![CDATA[<input type="button" class="btn switchcode" value="点击切换编码模式" onclick="$f.setValue('{$form.name}._chk',''); $f.setValue('{$form.name}._sp_code',$f.getValue('{$form.name}.{$form.field.sp.code}')); $f.doSubmit('{$form.name}')" /> <input type="hidden" name="_sp_code" value="" />]]></value>
+	</item>
+	
+	
+	<item>
+		<key>form.multibar.bar</key>
+		<value><![CDATA[<div id="fbm-bar"><table class="multibar">
+<tr class="{$class}"><td colspan="2"><div class="{$class}-items" id="fbm-bars"></div></td></tr>
+</table></div>
+<div id="fbm-loaddata" class="multibar-loaddata"><span>数据加载中...</span></div>
+<div id="fbm-template-bar" class="hide"><a id="fbm-bar-{key}" _key="{key}" href="javascript:;" onclick="javascript:ui.fbm.click('{key}');"><span>{title}</span></a></div>
+<div id="fbm-define" class="hide">{$explain}</div>
+<script type="text/javascript">$(function(){fbm.init()});</script>]]></value>
+	</item>
+	<item>
+		<key>form.multibar.head</key>
+		<value><![CDATA[<tbody id="fbm-body-{$id}" class="display_{$display}">]]></value>
+	</item>
+	<item>
+		<key>form.multibar.foot</key>
+		<value><![CDATA[</tbody>]]></value>
+	</item>
+	
+	
+	<item>
+		<key>form.title</key>
+		<value><![CDATA[[Default Title]]]></value>
+	</item>
+	<item>
+		<key>form.title.upload</key>
+		<value><![CDATA[[上传至内容]]]></value>
+	</item>
+	<item>
+		<key>form.option.select.all</key>
+		<value><![CDATA[<input type="checkbox" class="normal" name="__option_select_all" value="yes" onclick="javascript:dcs.formx.doOptionSelectAll(this.form,'{$option.select.prefix}');" />全选]]></value>
+	</item>
+	<item>
+		<key>form.submit.title</key>
+		<value><![CDATA[]]></value>
+	</item>
+	<item>
+		<key>form.submit.title.add</key>
+		<value><![CDATA[添加]]></value>
+	</item>
+	<item>
+		<key>form.submit.title.edit</key>
+		<value><![CDATA[编辑]]></value>
+	</item>
+	<item>
+		<key>form.submit.title.default</key>
+		<value><![CDATA[操作]]></value>
+	</item>
+	<item>
+		<key>form.error.item</key>
+		<value><![CDATA[{$caption} 不能为空或不符合规则！]]></value>
+	</item>
+	<item>
+		<key>form.class.bar</key>
+		<value><![CDATA[bar]]></value>
+	</item>
+	<item>
+		<key>form.class.multibar</key>
+		<value><![CDATA[multibar]]></value>
+	</item>
+	<item>
+		<key>form.class.row</key>
+		<value><![CDATA[row]]></value>
+	</item>
+	<item>
+		<key>form.class.rows</key>
+		<value><![CDATA[rows]]></value>
+	</item>
+	<item>
+		<key>form.class.rowsp</key>
+		<value><![CDATA[rowsp]]></value>
+	</item>
+	<item>
+		<key>form.class.rowput</key>
+		<value><![CDATA[row h]]></value>
+	</item>
+	<item>
+		<key>form.postfix</key>
+		<value><![CDATA[[.xcml]]]></value>
+	</item>
+	
+	
+	<item>
+		<key>form.element.hidden</key>
+		<value><![CDATA[<input type="hidden" name="{$name}" value="{$value}" />]]></value>
+	</item>
+	<item>
+		<key>form.element.text</key>
+		<value><![CDATA[<input type="text" class="txt" name="{$name}" value="{$value}" {$style} />]]></value>
+	</item>
+	<item>
+		<key>form.element.password</key>
+		<value><![CDATA[<input type="password" class="txt" name="{$name}" value="{$value}" {$style} />]]></value>
+	</item>
+	<item>
+		<key>form.element.radio</key>
+		<value><![CDATA[<input type="radio" name="{$name}" value="{$value}" {$checked} {$style} />{$title}]]></value>
+	</item>
+	<item>
+		<key>form.element.checkbox</key>
+		<value><![CDATA[<input type="checkbox" name="{$name}" value="{$value}" {$checked} {$style} />{$title}]]></value>
+	</item>
+	<item>
+		<key>form.element.txtarea</key>
+		<value><![CDATA[<textarea class="txtarea" name="{$name}" {$style}>{$value}</textarea>]]></value>
+	</item>
+	<item>
+		<key>form.element.editor</key>
+		<value><![CDATA[<script type="text/javascript">dcs.UBBeditor.replaceTextarea("{$name}",{toolbar:"{$toolbar}",height:{$height}});</script>]]></value>
+	</item>
+	<item>
+		<key>form.element.editor.ubb</key>
+		<value><![CDATA[<script type="text/javascript">dcs.UBBeditor.replaceTextarea("{$name}",{toolbar:"{$toolbar}",height:{$height}});</script>]]></value>
+	</item>
+	<item>
+		<key>form.element.editor.html</key>
+		<value><![CDATA[<script type="text/javascript" src="<app:url.script>HTMLeditor/HTMLeditor.js"></script>
+<script type="text/javascript">dcs.HTMLeditor.replaceTextarea("{$name}",{toolbar:"{$toolbar}",height:{$height}});</script>]]></value>
+	</item>
+	<item>
+		<key>form.element.upload</key>
+		<value><![CDATA[<iframe name="frame_upload" frameborder="0" width="100%" height="30" scrolling="no" src="{$up.url}channel={$up.channel}&sorts={$up.sorts}&filetype={$up.filetype}&filename={$up.filename}&fileinput={$up.fileinput}&filesize={$up.filesize}&thumbname={$up.thumbname}&thumbinput={$up.thumbinput}&formname={$up.formname}&valuemode={$up.valuemode}&inputtype={$up.inputtype}"></iframe>]]></value>
+	</item>
+	<item>
+		<key>form.element.upload.linkurl</key>
+		<value><![CDATA[<a href="{$up.url}channel={$up.channel}&sorts={$up.sorts}&filetype={$up.filetype}&filename={$up.filename}&fileinput={$up.fileinput}&filesize={$up.filesize}&thumbname={$up.thumbname}&thumbinput={$up.thumbinput}&formname={$up.formname}&valuemode={$up.valuemode}&inputtype={$up.inputtype}" target="frame_upload">{$up.title}</a>]]></value>
+	</item>
+</xcml>

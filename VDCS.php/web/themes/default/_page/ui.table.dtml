@@ -1,0 +1,353 @@
+<label:include file="frame/headers">
+
+
+<div class="framer">
+	<div class="main">
+
+
+<table class="table tables table-hover table-list">
+<thead>
+<tr>
+<th class="id">UID</th>
+<th class="info">电子邮件</th>
+<th class="emoney">货币</th>
+<th class="status w160">状态</th>
+<th class="handle w30">操作</th>
+<th class="selectbox re-option"><label><input _initer_="true" style="display: none;" _init="yes" name="selectall" value="" type="checkbox"><em class="icheck"></em></label></th>
+</tr>
+</thead>
+<tbody><tr class="row h" data-id="10001">
+<td class="id"><a target="_blank" href="/common/url?channel=account&amp;id=10001" class="id">10001</a></td>
+<td class="name">test@test.com</td>
+<td class="emoney">0.00</td>
+<td class="status"> 
+	<p class="s"><span title="2013-05-28 11:31:55">2013-05-28</span> </p></td>
+<td class="handle"><a href="?action=edit&amp;id=10001">编辑</a></td>
+<td class="selectid"><label><input style="display: none;" _init="yes" name="selectid" value="10001" type="checkbox"><em class="icheck"></em></label></td>
+</tr><tr class="row h" data-id="10002">
+<td class="id"><a target="_blank" href="/common/url?channel=account&amp;id=10002" class="id">10002</a></td>
+<td class="name">ranom@haha.com</td>
+<td class="emoney">0.00</td>
+<td class="status"> 
+	<p class="s"><span title="2013-05-28 20:05:53">2013-05-28</span> </p></td>
+<td class="handle"><a href="?action=edit&amp;id=10002">编辑</a></td>
+<td class="selectid"><label><input style="display: none;" _init="yes" name="selectid" value="10002" type="checkbox"><em class="icheck"></em></label></td>
+</tr><tr class="row h" data-id="10003">
+<td class="id"><a target="_blank" href="/common/url?channel=account&amp;id=10003" class="id">10003</a></td>
+<td class="name">ddd@dd.com</td>
+<td class="emoney">0.00</td>
+<td class="status"> 
+	<p class="s"><span title="2013-06-20 19:17:33">2013-06-20</span> </p></td>
+<td class="handle"><a href="?action=edit&amp;id=10003">编辑</a></td>
+<td class="selectid"><label><input style="display: none;" _init="yes" name="selectid" value="10003" type="checkbox"><em class="icheck"></em></label></td>
+</tr><tr class="row h" data-id="10004">
+<td class="id"><a target="_blank" href="/common/url?channel=account&amp;id=10004" class="id">10004</a></td>
+<td class="name">dd@dd.com</td>
+<td class="emoney">0.00</td>
+<td class="status"> 
+	<p class="s"><span title="2013-06-20 19:17:46">2013-06-20</span> </p></td>
+<td class="handle"><a href="?action=edit&amp;id=10004">编辑</a></td>
+<td class="selectid"><label><input style="display: none;" _init="yes" name="selectid" value="10004" type="checkbox"><em class="icheck"></em></label></td>
+</tr></tbody>
+</table>
+
+<div class="space"></div><div class="space"></div>
+
+<table class="table tables table-bordered table-striped table-hover table-list">
+<thead>
+<tr>
+<th class="id">UID</th>
+<th class="info">电子邮件</th>
+<th class="emoney">货币</th>
+<th class="status w160">状态</th>
+<th class="handle w30">操作</th>
+<th class="selectbox re-option"><label><input _initer_="true" style="display: none;" _init="yes" name="selectall" value="" type="checkbox"><em class="icheck"></em></label></th>
+</tr>
+</thead>
+<tbody><tr class="row h" data-id="10001">
+<td class="id"><a target="_blank" href="/common/url?channel=account&amp;id=10001" class="id">10001</a></td>
+<td class="name">test@test.com</td>
+<td class="emoney">0.00</td>
+<td class="status"> 
+	<p class="s"><span title="2013-05-28 11:31:55">2013-05-28</span> </p></td>
+<td class="handle"><a href="?action=edit&amp;id=10001">编辑</a></td>
+<td class="selectid"><label><input style="display: none;" _init="yes" name="selectid" value="10001" type="checkbox"><em class="icheck"></em></label></td>
+</tr><tr class="row h" data-id="10002">
+<td class="id"><a target="_blank" href="/common/url?channel=account&amp;id=10002" class="id">10002</a></td>
+<td class="name">ranom@haha.com</td>
+<td class="emoney">0.00</td>
+<td class="status"> 
+	<p class="s"><span title="2013-05-28 20:05:53">2013-05-28</span> </p></td>
+<td class="handle"><a href="?action=edit&amp;id=10002">编辑</a></td>
+<td class="selectid"><label><input style="display: none;" _init="yes" name="selectid" value="10002" type="checkbox"><em class="icheck"></em></label></td>
+</tr><tr class="row h" data-id="10003">
+<td class="id"><a target="_blank" href="/common/url?channel=account&amp;id=10003" class="id">10003</a></td>
+<td class="name">ddd@dd.com</td>
+<td class="emoney">0.00</td>
+<td class="status"> 
+	<p class="s"><span title="2013-06-20 19:17:33">2013-06-20</span> </p></td>
+<td class="handle"><a href="?action=edit&amp;id=10003">编辑</a></td>
+<td class="selectid"><label><input style="display: none;" _init="yes" name="selectid" value="10003" type="checkbox"><em class="icheck"></em></label></td>
+</tr><tr class="row h" data-id="10004">
+<td class="id"><a target="_blank" href="/common/url?channel=account&amp;id=10004" class="id">10004</a></td>
+<td class="name">dd@dd.com</td>
+<td class="emoney">0.00</td>
+<td class="status"> 
+	<p class="s"><span title="2013-06-20 19:17:46">2013-06-20</span> </p></td>
+<td class="handle"><a href="?action=edit&amp;id=10004">编辑</a></td>
+<td class="selectid"><label><input style="display: none;" _init="yes" name="selectid" value="10004" type="checkbox"><em class="icheck"></em></label></td>
+</tr></tbody>
+</table>
+
+
+<sh></sh><sh></sh>
+
+
+<div class="box">
+	<h2><t>Checkable Table with Toolbar</t></h2>
+	<div class="toolbar btn-toolbar">
+		<div class="btn-group">
+			<span class="btn"><i class="icol-bin-closed"></i> Delete</span>
+			<span class="btn"><i class="icol-cancel"></i> Spam</span>
+		</div>
+		<div class="btn-group">
+			<span class="btn dropdown-toggle" data-toggle="dropdown"><i class="icol-accept"></i> Mark <span class="caret"></span></span>
+			<ul class="dropdown-menu">
+				<li><a href="javascript:;">Mark as Read</a></li>
+				<li><a href="javascript:;">Mark as Unread</a></li>
+				<li><a href="javascript:;">Flag for Follow-up</a></li>
+				<li><a href="javascript:;">Clear Flag</a></li>
+			</ul>
+		</div>
+		<div class="btn-group">
+			<span class="btn dropdown-toggle" data-toggle="dropdown"><i class="icol-arrow-out"></i> Move <span class="caret"></span></span>
+			<ul class="dropdown-menu">
+				<li><a href="#">[New Folder]</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="bod">
+		<table class="table tables table-striped table-checkable">
+		<thead>
+			<tr>
+				<th class="checkbox-column">
+					<div class="uniform-checker"><span class=""><input type="checkbox" class="uniform" style="opacity: 0;"></span></div>
+				</th>
+				<th>Rendering engine</th>
+				<th>CSS grade</th>
+				<th>Rendering engine</th>
+				<th>Browser</th>
+				<th>Platform(s)</th>
+				<th>Engine version</th>
+				<th>CSS grade</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="">
+				<td class="checkbox-column">
+					<div class="uniform-checker"><span class=""><input type="checkbox" class="uniform" style="opacity: 0;"></span></div>
+				</td>
+				<td>Trident</td>
+				<td>Internet Explorer 5.0</td>
+				<td>Trident</td>
+				<td>Internet Explorer 5.0</td>
+				<td>Win 98+</td>
+				<td><span class="badge badge-warning">X</span></td>
+				<td>
+					<span class="btn-group">
+						<a href="javascript:;" class="btn s"><i class="icon-search"></i></a>
+						<a href="javascript:;" class="btn s"><i class="icon-pencil"></i></a>
+						<a href="javascript:;" class="btn s"><i class="icon-trash"></i></a>
+					</span>
+				</td>
+			</tr>
+			<tr class="">
+				<td class="checkbox-column">
+					<div class="uniform-checker"><span class=""><input type="checkbox" class="uniform" style="opacity: 0;"></span></div>
+				</td>
+				<td>Trident</td>
+				<td>Internet Explorer 5.5</td>
+				<td>Trident</td>
+				<td>Internet Explorer 5.5</td>
+				<td>Win 98+</td>
+				<td><span class="badge badge-success">C</span></td>
+				<td>
+					<span class="btn-group">
+						<a href="javascript:;" class="btn s"><i class="icon-search"></i></a>
+						<a href="javascript:;" class="btn s"><i class="icon-pencil"></i></a>
+						<a href="javascript:;" class="btn s"><i class="icon-trash"></i></a>
+					</span>
+				</td>
+			</tr>
+			<tr class="">
+				<td class="checkbox-column">
+					<div class="uniform-checker"><span class=""><input type="checkbox" class="uniform" style="opacity: 0;"></span></div>
+				</td>
+				<td>Trident</td>
+				<td>Internet Explorer 6</td>
+				<td>Trident</td>
+				<td>Internet Explorer 6</td>
+				<td>Win 98+</td>
+				<td><span class="badge badge-info">A</span></td>
+				<td>
+					<span class="btn-group">
+						<a href="javascript:;" class="btn s"><i class="icol-magnifier"></i></a>
+						<a href="javascript:;" class="btn s"><i class="icol-pencil"></i></a>
+						<a href="javascript:;" class="btn s"><i class="icol-bin-closed"></i></a>
+					</span>
+				</td>
+			</tr>
+			<tr class="">
+				<td class="checkbox-column">
+					<div class="uniform-checker"><span class=""><input type="checkbox" class="uniform" style="opacity: 0;"></span></div>
+				</td>
+				<td>Trident</td>
+				<td>Internet Explorer 7</td>
+				<td>Trident</td>
+				<td>Internet Explorer 7</td>
+				<td>Win XP SP2+</td>
+				<td><span class="badge badge-important">A</span></td>
+				<td>
+					<span class="btn-group">
+						<a href="javascript:;" class="btn s"><i class="icon-search"></i></a>
+						<a href="javascript:;" class="btn s"><i class="icon-pencil"></i></a>
+						<a href="javascript:;" class="btn s"><i class="icon-trash"></i></a>
+					</span>
+				</td>
+			</tr>
+			<tr class="">
+				<td class="checkbox-column">
+					<div class="uniform-checker"><span class=""><input type="checkbox" class="uniform" style="opacity: 0;"></span></div>
+				</td>
+				<td>Trident</td>
+				<td>Internet Explorer 7</td>
+				<td>Trident</td>
+				<td>Internet Explorer 7</td>
+				<td>Win XP SP2+</td>
+				<td><span class="badge">A</span></td>
+				<td>
+					<span class="btn-group">
+						<a href="javascript:;" class="btn s"><i class="icos-magnifying-glass"></i></a>
+						<a href="javascript:;" class="btn s"><i class="icos-pencil"></i></a>
+						<a href="javascript:;" class="btn s"><i class="icos-trashcan"></i></a>
+					</span>
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+		</tfoot>
+		</table>
+	</div>
+	<div class="bos">
+<div class="paging"><div class="pagination">
+<ul>
+<li class="disabled"><a href="javascript:;" page="0">«</a></li>
+<li class="active"><a href="javascript:;" page="1">1</a></li>
+<li><a href="javascript:;" page="2">2</a></li>
+<li><a href="javascript:;" page="3">3</a></li>
+<li><a href="javascript:;" page="4">4</a></li>
+<li><a href="javascript:;" page="5">5</a></li>
+<li><a href="javascript:;" page="6">6</a></li>
+<li><a href="javascript:;" page="7">7</a></li>
+<li><a href="javascript:;" page="8">8</a></li>
+<li class="disabled"><a href="javascript:;" page="2">»</a></li>
+</ul>
+</div></div>
+	</div>
+</div>
+
+
+<sh></sh><sh></sh>
+
+
+<div class="box" style="width:500px;">
+	<h2><t>Detail View With Top Toolbar</t></h2>
+	<div class="con">
+		<table class="table tables table-striped table-view">
+		<thead>
+			<tr>
+				<td colspan="2">
+					<div class="ar">
+					<div class="btn-group">
+						<a class="btn" rel="tooltip" data-original-title="日期" href="#data"><i class="icol-data"></i></a>
+						<a class="btn" rel="tooltip" data-original-title="搜索" href="#search"><i class="icol-find"></i></a>
+						<a class="btn" rel="tooltip" data-original-title="编辑" href="#edit"><i class="icol-pencil"></i></a>
+						<a class="btn" rel="tooltip" data-original-title="删除" href="#del"><i class="icol-cross"></i></a>
+						<a class="btn" rel="tooltip" data-original-title="返回" href="#goback"><i class="icol-arrow-left"></i></a>
+					</div>
+					</div>
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Name</th>
+				<td>Republic of Korea</td>
+			</tr>
+			<tr>
+				<th>Capital</th>
+				<td>Seoul</td>
+			</tr>
+			<tr>
+				<th>Official language(s)</th>
+				<td>Korean</td>
+			</tr>
+			<tr>
+				<th>Official scripts</th>
+				<td>Hangul</td>
+			</tr>
+			<tr>
+				<th>President</th>
+				<td>Lee Myung-bak</td>
+			</tr>
+			<tr>
+				<th>Prime Minister</th>
+				<td>Kim Hwang-sik</td>
+			</tr>
+			<tr>
+				<th>Speaker</th>
+				<td>Kang Chang-hee</td>
+			</tr>
+			<tr>
+				<th>National Foundation Day</th>
+				<td>October 3, 2333 BC</td>
+			</tr>
+			<tr>
+				<th>Area</th>
+				<td>100,210 km2</td>
+			</tr>
+			<tr>
+				<th>Population (2012)</th>
+				<td>50,004,441</td>
+			</tr>
+			<tr>
+				<th>Time Zone</th>
+				<td>Korea Standard Time (UTC+9)</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="2">
+					<div class="ar">
+					<div class="btn-group">
+						<a class="btn" rel="tooltip" data-original-title="日期" href="#data"><i class="icol-data"></i></a>
+						<a class="btn" rel="tooltip" data-original-title="搜索" href="#search"><i class="icol-find"></i></a>
+						<a class="btn" rel="tooltip" data-original-title="编辑" href="#edit"><i class="icol-pencil"></i></a>
+						<a class="btn" rel="tooltip" data-original-title="删除" href="#del"><i class="icol-cross"></i></a>
+						<a class="btn" rel="tooltip" data-original-title="返回" href="#goback"><i class="icol-arrow-left"></i></a>
+					</div>
+					</div>
+				</td>
+			</tr>
+		</tfoot>
+		</table>
+	</div>
+</div>
+
+
+
+	</div>
+</div>
+
+
+<label:include file="frame/footers">

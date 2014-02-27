@@ -1,0 +1,1310 @@
+
+mbar.head
+!==================!
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=none</att>
+	</input>
+!##################!
+
+mbar.foot
+!==================!
+	<input>
+		<type>multibar.foot</type>
+	</input>
+!##################!
+
+part.defined!
+!==================!
+	<input>
+		<type>hidden.{@tpx}defined</type>
+		<property><![CDATA[item=;action=;type=string;max=10000;min=]]></property>
+		<style>cols=60 rows=4 class="itxt"</style>
+		<caption><![CDATA[自定义]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+!##################!
+
+part.key!
+!==================!
+	<input>
+		<type>hidden.{@tpx}key</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=0]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[{@xnames}KEY]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.config!
+!==================!
+	<input>
+		<type>hidden.{@tpx}config</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>size=50 maxlength=250 class="itxt"</style>
+		<caption><![CDATA[配置值]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+!##################!
+
+part.configure!
+!==================!
+	<input>
+		<type>hidden.{@tpx}configure</type>
+		<property><![CDATA[item=;action=;type=string;max=10000;min=]]></property>
+		<style>cols=60 rows=4 class="itxt"</style>
+		<caption><![CDATA[配置]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+!##################!
+
+part.certs!
+!==================!
+	<input>
+		<type>hidden.{@tpx}certs</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>size=50 maxlength=250 class="itxt"</style>
+		<caption><![CDATA[配置信息]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+!##################!
+
+part.auths!
+!==================!
+	<input>
+		<type>hidden.{@tpx}auths</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[认证信息]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+!##################!
+
+part.props!
+!==================!
+	<input>
+		<type>hidden.{@tpx}prop1</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prop2</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prop3</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prop4</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prop5</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+	</input>
+	<input>
+		<type>hidden.sp_attr</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<value>{@attrtype}</value>
+	</input>
+!##################!
+
+part.orderid
+!==================!
+	<input>
+		<type>text.orderid</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=;classi=num]]></property>
+		<style>size=15 maxlength=15 class="total"</style>
+		<caption><![CDATA[排 序 值]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[$$$排序值越大越靠前]]></explain>
+	</input>
+!##################!
+
+part.orderid!
+!==================!
+	<input>
+		<type>hidden.orderid</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=]]></property>
+		<style>size=15 maxlength=15 class="total"</style>
+		<caption><![CDATA[排 序 值]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[$$$排序值越大越靠前]]></explain>
+	</input>
+!##################!
+
+part.classid
+!==================!
+	<input>
+		<type>select.classid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min={@@classid.min}]]></property>
+		<caption><![CDATA[{@xnames}分类]]></caption>
+		<att><![CDATA[0=请选择{@xnames}分类..;<control:att("class","channel={@channel}")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.specialid
+!==================!
+	<input>
+		<type>hidden.specialid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<caption><![CDATA[{@xnames}专题]]></caption>
+		<att><![CDATA[0=请选择{@xnames}专题..;<control:att("special","channel={@channel}")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.specialid!
+!==================!
+	<input>
+		<type>hidden.specialid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<caption><![CDATA[{@xnames}专题]]></caption>
+		<att><![CDATA[0=请选择{@xnames}专题..;]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.srvid
+!==================!
+	<input>
+		<type>hidden.srvid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=0]]></property>
+		<style>size=30 maxlength=20 class="item"</style>
+		<caption><![CDATA[SRVID]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.srvid!
+!==================!
+	<input>
+		<type>hidden.srvid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=0]]></property>
+		<style>size=30 maxlength=20 class="item"</style>
+		<caption><![CDATA[SRVID]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.statuss
+!==================!
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[状态信息]]></caption>
+	</input>
+	<input>
+		<type>radio.{@tpx}ishot</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否热门]]></caption>
+		<att><![CDATA[<control:att("dict","data.hot")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}istop</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否固顶]]></caption>
+		<att><![CDATA[<control:att("dict","data.tops")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}isgood</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否推荐]]></caption>
+		<att><![CDATA[<control:att("dict","data.good")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}status</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[当前状态]]></caption>
+		<att><![CDATA[<control:att("dict","data.hide")>]]></att>
+		<value>1</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}tim</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=1;classi=time]]></property>
+		<style>size=20 maxlength=20 class="time"</style>
+		<caption><![CDATA[发布时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain></explain>
+	</input>
+!##################!
+
+part.statuss!o
+!==================!
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[状态信息]]></caption>
+	</input>
+	<input>
+		<type>radio.{@tpx}ishot</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否热门]]></caption>
+		<att><![CDATA[<control:att("dict","data.hot")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}istop</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否固顶]]></caption>
+		<att><![CDATA[<control:att("dict","data.tops")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}isgood</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否推荐]]></caption>
+		<att><![CDATA[<control:att("dict","data.good")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}status</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[当前状态]]></caption>
+		<att><![CDATA[<control:att("dict","data.ons")>]]></att>
+		<value>1</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}tim</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=1;classi=time]]></property>
+		<style>size=20 maxlength=20 class="time"</style>
+		<caption><![CDATA[发布时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain></explain>
+	</input>
+!##################!
+
+part.statuss!a
+!==================!
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[状态信息]]></caption>
+	</input>
+	<input>
+		<type>radio.{@tpx}ishot</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否热门]]></caption>
+		<att><![CDATA[<control:att("dict","data.hot")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}istop</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否固顶]]></caption>
+		<att><![CDATA[<control:att("dict","data.tops")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}isgood</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否推荐]]></caption>
+		<att><![CDATA[<control:att("dict","data.good")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}status</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[当前状态]]></caption>
+		<att><![CDATA[<control:att("dict","data.audit")>]]></att>
+		<value>1</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}tim</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=1;classi=time]]></property>
+		<style>size=20 maxlength=20 class="time"</style>
+		<caption><![CDATA[发布时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain></explain>
+	</input>
+!##################!
+
+part.username
+!==================!
+	<input>
+		<type>text.username</type>
+		<property><![CDATA[item=;class=;action=;type=string;max=50;min=;classi=user]]></property>
+		<style>size=30 maxlength=50 class="username"</style>
+		<caption><![CDATA[发布<app:var.user>]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.username!
+!==================!
+	<input>
+		<type>hidden.username</type>
+		<property><![CDATA[item=;class=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="username"</style>
+		<caption><![CDATA[发布<app:var.user>]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.unit
+!==================!
+	<input>
+		<type>text.{@tpx}unit</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=]]></property>
+		<style>size=15 maxlength=20 class="unit"</style>
+		<caption><![CDATA[{@xnames}单位]]></caption>
+		<att></att>
+		<value>件</value>
+		<explain><![CDATA[{@xnames}的计量单位，如：<script>$pf.chooseValue('{@tpx}unit','件,个,只,台,箱,套,公斤,克','、');</script>]]></explain>
+	</input>
+!##################!
+
+part.size!s
+!==================!
+	<input>
+		<type>text.{@tpx}size</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=0]]></property>
+		<style>size=20 maxlength=20 class="num"</style>
+		<caption><![CDATA[{@xnames}大小]]></caption>
+		<att></att>
+		<value>MB</value>
+		<explain><![CDATA[例: 2.5MB]]></explain>
+	</input>
+!##################!
+
+part.prepage
+!==================!
+	<input>
+		<type>hidden.{@tpx}prepage</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否分页]]></caption>
+		<att><![CDATA[<control:att("file","prepage")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[$$$每页 <input class="num w50" type="text" name="_prepage_num" id="form__prepage_num" value="10000" size="6" maxlength="10" /> 字节，手动分页标志为“<font class=t2>[paging]</font>”]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prepage_num</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style>id="form_{@tpx}prepage_num"</style>
+		<caption><![CDATA[自动分页数]]></caption>
+		<att><![CDATA[]]></att>
+		<value>{${@tpx}prepage_num}</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.prepage!
+!==================!
+	<input>
+		<type>hidden.{@tpx}prepage</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否分页]]></caption>
+		<att><![CDATA[<control:att("file","prepage")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[每页 <input class="num w50" type="text" name="_prepage_num" id="form__prepage_num" value="10000" size="6" maxlength="10" /> 字节，手动分页标志为“<font class=t2>[paging]</font>”]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}prepage_num</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style>id="form_{@tpx}prepage_num"</style>
+		<caption><![CDATA[自动分页数]]></caption>
+		<att><![CDATA[]]></att>
+		<value>{${@tpx}prepage_num}</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.sp.attrs
+!==================!
+	<input>
+		<type>hidden.sp_attr</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<value>{@attrtype}</value>
+	</input>
+{@xcml:attr}
+!##################!
+
+part.sp.code!
+!==================!
+	<input>
+		<type>hidden.sp_code</type>
+		<property><![CDATA[item=;action=;type=int;max=10;min=]]></property>
+		<value>{@@sp.code}</value>
+	</input>
+!##################!
+
+part.sp.keyword
+!==================!
+	<input>
+		<type>text.sp_keyword</type>
+		<property><![CDATA[item=;class=sp;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[关 键 字]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.sp.serverid
+!==================!
+	<input>
+		<type>select.sp_serverid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style><![CDATA[ class="itxt"]]></style>
+		<caption><![CDATA[服 务 器]]></caption>
+		<att><![CDATA[0=请选择服务器..;<control:att("server","channel={@channel}")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.sp.serverid!
+!==================!
+	<input>
+		<type>hidden.sp_serverid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style><![CDATA[ class="itxt"]]></style>
+		<caption><![CDATA[服 务 器]]></caption>
+		<att><![CDATA[0=请选择服务器..;]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.tota.data!
+!==================!
+	<input>
+		<type>hidden.{@tpx}total_data</type>
+		<property><![CDATA[item=;action=;type=int;max=20;min=]]></property>
+		<style>size=20 maxlength=20 class="total"</style>
+		<caption><![CDATA[{@data:names}数量]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[{@data:unit}$$$]]></explain>
+	</input>
+!##################!
+
+part.total.extend
+!==================!
+	<input>
+		<type>hidden.{@tpx}total_day</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=]]></property>
+		<style>size=15 maxlength=15 class="total"</style>
+		<caption><![CDATA[日{@xact}量]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[次$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}total_week</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=]]></property>
+		<style>size=15 maxlength=15 class="total"</style>
+		<caption><![CDATA[周{@xact}量]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[次$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}total_month</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=]]></property>
+		<style>size=15 maxlength=15 class="total"</style>
+		<caption><![CDATA[月{@xact}量]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[次$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}total_comment</type>
+		<property><![CDATA[item=;action=;type=int;max=;min=]]></property>
+		<value>0</value>
+	</input>
+	<input>
+		<type>hidden.{@tpx}total_fav</type>
+		<property><![CDATA[item=;action=;type=int;max=;min=]]></property>
+		<value>0</value>
+	</input>
+	<input>
+		<type>hidden.{@tpx}total_regard</type>
+		<property><![CDATA[item=;action=;type=int;max=;min=]]></property>
+		<value>0</value>
+	</input>
+
+!##################!
+
+part.total.views
+!==================!
+	<input>
+		<type>text.{@tpx}total_view</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=;classi=total]]></property>
+		<style>size=15 maxlength=15 class="total"</style>
+		<caption><![CDATA[{@act.view}次数]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[次$$$]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}total_get</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=;classi=total]]></property>
+		<style>size=15 maxlength=15 class="total"</style>
+		<caption><![CDATA[{@act.get}次数]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[次$$$]]></explain>
+	</input>
+!##################!
+
+part.url
+!==================!
+	<input>
+		<type>text.{@tpx}url</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=1]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[{@xnames}资源]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<control:form.element("upload.linkurl","","channel={@channel};filetype={@up.filetype.{@tpx}url};filename={@up.filename.{@tpx}url};fileinput={@tpx}url;filesize={@tpx}size;inputtype=affix;title=上传")>$$$]]></explain>
+	</input>
+!##################!
+
+part.url!ps
+!==================!
+	<input>
+		<type>text.{@tpx}url</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=1]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[大 图 片]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<control:form.element("upload.linkurl","","channel={@channel};filetype=;filename={@up.filename};fileinput={@tpx}url;inputtype=affix;title=上传")>$$$]]></explain>
+	</input>
+!##################!
+
+part.weight
+!==================!
+	<input>
+		<type>text.{@tpx}weight</type>
+		<property><![CDATA[item=;action=;type=num;max=20;min=]]></property>
+		<style>size=15 maxlength=20 class="num"</style>
+		<caption><![CDATA[{@xnames}重量]]></caption>
+		<att></att>
+		<value>0.0</value>
+		<explain><![CDATA[<app:unit.weight>$$$]]></explain>
+	</input>
+!##################!
+
+part.linkurl
+!==================!
+	<input>
+		<type>text.{@tpx}linkurl</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[链接地址]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<br>链接地址不为空表示该{@xnames}为外部链接{@xnames}，将直接链接至该地址]]></explain>
+	</input>
+!##################!
+
+part.linkurl!
+!==================!
+	<input>
+		<type>hidden.{@tpx}linkurl</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[链接地址]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<br>链接地址不为空表示该{@xnames}为外部链接{@xnames}，将直接链接至该地址]]></explain>
+	</input>
+!##################!
+
+part.level!star
+!==================!
+	<input>
+		<type>radio.{@tpx}level</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=0]]></property>
+		<style></style>
+		<caption><![CDATA[{@xnames}星级]]></caption>
+		<att><![CDATA[<control:att("dict","data.star")>]]></att>
+		<value>__no1</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.name
+!==================!
+	<input>
+		<type>text.{@tpx}name</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=0]]></property>
+		<style>size=60 maxlength=250 class="itxt"</style>
+		<caption><![CDATA[{@xnames}名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.name!
+!==================!
+	<input>
+		<type>hidden.{@tpx}name</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=0]]></property>
+		<style>size=60 maxlength=250 class="itxt"</style>
+		<caption><![CDATA[{@xnames}名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.name!s
+!==================!
+	<input>
+		<type>hidden.{@tpx}name</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=0]]></property>
+		<style>size=60 maxlength=250 class="itxt"</style>
+		<caption><![CDATA[{@xnames}简称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.pic
+!==================!
+	<input>
+		<type>text.{@tpx}pic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[{@xnames}图片]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<control:form.element("upload.linkurl","","channel={@channel};filetype={@up.filetype};filename={@up.filename};fileinput={@tpx}pic;title=上传")>$$$]]></explain>
+	</input>
+!##################!
+
+part.pic!
+!==================!
+	<input>
+		<type>hidden.{@tpx}pic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[{@xnames}图片]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+!##################!
+
+part.pic!b
+!==================!
+	<input>
+		<type>text.{@tpx}pic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[大 图 片]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<control:form.element("upload.linkurl","","channel={@channel};filetype=pic;filename={@up.filename};fileinput={@tpx}pic;inputtype=pic;title=大图片")>$$$]]></explain>
+	</input>
+!##################!
+
+part.pic!s
+!==================!
+	<input>
+		<type>text.{@tpx}pic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[小 图 片]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<control:form.element("upload.linkurl","","channel={@channel};filetype=pic;filename={@up.filename};fileinput={@tpx}pic;inputtype=;title=上传")>$$$]]></explain>
+	</input>
+!##################!
+
+part.pic!ss
+!==================!
+	<input>
+		<type>text.{@tpx}spic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[小 图 片]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<control:form.element("upload.linkurl","","channel={@channel};filetype={@up.thumbtype};filename={@up.thumbname};fileinput={@tpx}spic;inputtype=pic;title=上传")>$$$]]></explain>
+	</input>
+!##################!
+
+part.pt.sa
+!==================!
+	<input>
+		<type>text.{@tpx}source</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="itxt"</style>
+		<caption><![CDATA[{@xnames}来源]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}author</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="itxt"</style>
+		<caption><![CDATA[{@xnames}作者]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.pt.sa!
+!==================!
+	<input>
+		<type>hidden.{@tpx}source</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="itxt"</style>
+		<caption><![CDATA[{@xnames}来源]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}author</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="itxt"</style>
+		<caption><![CDATA[{@xnames}作者]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.topic
+!==================!
+	<input>
+		<type>text.{@tpx}topic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=1]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[{@xnames}标题]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.topic!n
+!==================!
+	<input>
+		<type>text.{@tpx}topic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=1]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[{@xnames}名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.subtopic
+!==================!
+	<input>
+		<type>text.{@tpx}subtopic</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=0]]></property>
+		<style>size=60 maxlength=250 class="itxt"</style>
+		<caption><![CDATA[{@xnames}子标题]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.subtopic!
+!==================!
+	<input>
+		<type>hidden.{@tpx}subtopic</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=0]]></property>
+		<style>size=60 maxlength=250 class="itxt"</style>
+		<caption><![CDATA[{@xnames}子标题]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+part.summary
+!==================!
+	<input>
+		<type>{@@editor.txt}.{@tpx}summary</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min={@@summary.min}]]></property>
+		<style>cols=60 rows=5 class="itxt"</style>
+		<caption><![CDATA[{@xnames}简介]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+!##################!
+
+part.summarys
+!==================!
+<label:include file="part.summary">
+<label:include file="part.sp.keyword">
+<label:include file="part.pic">
+!##################!
+
+part.summarys!s
+!==================!
+<label:include file="part.summary">
+<label:include file="part.sp.keyword">
+<!--<label:include file="part.pic!ss">-->
+<label:include file="part.pic!b">
+!##################!
+
+part.remark
+!==================!
+	<input>
+		<type>{@@editor}.{@tpx}remark</type>
+		<property><![CDATA[item=;action=;type=string;max={@@remark.max};min={@@remark.min}]]></property>
+		<style>cols=60 rows=15</style>
+		<caption><![CDATA[详细内容$$$<br><br><br><br><control:form.element("upload.linkurl","","channel={@channel};filetype=;filename=;fileinput=i.{@tpx}remark;valuemode=insert;inputtype=html;title=上传至内容")>]]></caption>
+		<att>height=300</att>
+		<value></value>
+		<explain></explain>
+	</input>
+!##################!
+
+part.remark!d
+!==================!
+	<input>
+		<type>{@@editor}.{@tpx}remark</type>
+		<property><![CDATA[item=;action=;type=string;max={@@remark.max};min={@@remarkd.min}]]></property>
+		<style>cols=60 rows=15</style>
+		<caption><![CDATA[详细内容$$$<br><br><br><br><control:form.element("upload.linkurl","","channel={@channel};filetype=;filename=;fileinput=i.{@tpx}remark;valuemode=insert;inputtype=html;title=上传至内容")>]]></caption>
+		<att>height=300</att>
+		<value></value>
+		<explain></explain>
+	</input>
+!##################!
+
+partd.topic
+!==================!
+	<input>
+		<type>text.{@tpx}topic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=0]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[{@xnames}标题]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[此项留空系统将按顺序默认命名]]></explain>
+	</input>
+!##################!
+
+partd.topic!n
+!==================!
+	<input>
+		<type>text.{@tpx}topic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=0]]></property>
+		<style>size=60 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[{@xnames}名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[<a class="help" href="javascript:;" title="此项留空系统将按顺序默认命名，例：{@xnames}1">默认值</a>]]></explain>
+	</input>
+!##################!
+
+partc.sp.trans
+!==================!	
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[处理状态]]></caption>
+	</input>
+	<input>
+		<type>radio.sp_trans</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[处理状态]]></caption>
+		<att><![CDATA[<control:att("dict","data.trans")>]]></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>time.event_tim</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=0]]></property>
+		<style>size=20 maxlength=20 class="time"</style>
+		<caption><![CDATA[处理时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.event_tim_up</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=0]]></property>
+		<style>size=20 maxlength=20 class="time"</style>
+		<caption><![CDATA[最后处理]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>textbox.event_summary</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>cols=60 rows=3 class="itxt"</style>
+		<caption><![CDATA[处理信息]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>textbox.event_explain</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>cols=60 rows=3 class="itxt"</style>
+		<caption><![CDATA[处理备注]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	
+!##################!
+
+partc.auction
+!==================!
+	<input>
+		<type>radio.sp_auction</type>
+		<property><![CDATA[item=;action=;type=string;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否拍卖]]></caption>
+		<att><![CDATA[<control:att("file","sort=auction.mode")>]]></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.auction_price_start</type>
+		<property><![CDATA[item=;class=;action=;type=num;max=255;min=0.00]]></property>
+		<style>size=15 maxlength=15 class="price"</style>
+		<caption><![CDATA[起拍价]]></caption>
+		<att></att>
+		<value>0.00</value>
+		<explain><![CDATA[<app:unit.price>$$$]]></explain>
+	</input>
+	<input>
+		<type>text.auction_price_degree</type>
+		<property><![CDATA[item=;class=;action=;type=num;max=255;min=0.00]]></property>
+		<style>size=15 maxlength=15 class="price"</style>
+		<caption><![CDATA[加价幅度]]></caption>
+		<att></att>
+		<value>0.00</value>
+		<explain><![CDATA[<app:unit.price>$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.auction_price_min</type>
+		<property><![CDATA[item=;class=;action=;type=num;max=255;min=0.00]]></property>
+		<style>size=15 maxlength=15 class="price"</style>
+		<caption><![CDATA[最低价]]></caption>
+		<att></att>
+		<value>0.00</value>
+		<explain><![CDATA[<app:unit.price>$$$]]></explain>
+	</input>
+	<input>
+		<type>hidden.auction_price_max</type>
+		<property><![CDATA[item=;class=;action=;type=num;max=255;min=0.00]]></property>
+		<style>size=15 maxlength=15 class="price"</style>
+		<caption><![CDATA[最高价]]></caption>
+		<att></att>
+		<value>0.00</value>
+		<explain><![CDATA[<app:unit.price>$$$]]></explain>
+	</input>
+	<input>
+		<type>text.auction_price_bid</type>
+		<property><![CDATA[item=;class=;action=;type=num;max=255;min=0.00]]></property>
+		<style>size=15 maxlength=15 class="price"</style>
+		<caption><![CDATA[当前出价]]></caption>
+		<att></att>
+		<value>0.00</value>
+		<explain><![CDATA[<app:unit.price>$$$]]></explain>
+	</input>
+	<input>
+		<type>text.auction_price_strike</type>
+		<property><![CDATA[item=;class=;action=;type=num;max=255;min=0.00]]></property>
+		<style>size=15 maxlength=15 class="price"</style>
+		<caption><![CDATA[成交价]]></caption>
+		<att></att>
+		<value>0.00</value>
+		<explain><![CDATA[<app:unit.price>$$$]]></explain>
+	</input>
+
+	<input>
+		<type>text.auction_tim_begin</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=]]></property>
+		<style>size=30 maxlength=20 class="time"</style>
+		<caption><![CDATA[起始时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.today> 00:00:00]]></value>
+		<explain><![CDATA[<script>$pf.chooseTime('auction_tim_begin');</script>]]></explain>
+	</input>
+	<input>
+		<type>text.auction_tim_end</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=]]></property>
+		<style>size=30 maxlength=20 class="time"</style>
+		<caption><![CDATA[结束时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.today> 00:00:00]]></value>
+		<explain><![CDATA[<script>$pf.chooseTime('auction_tim_end');</script>]]></explain>
+	</input>
+	<input>
+		<type>hidden.auction_tim_finish</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=]]></property>
+		<style>size=30 maxlength=20 class="time"</style>
+		<caption><![CDATA[终止时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.today> 00:00:00]]></value>
+		<explain><![CDATA[<script>$pf.chooseTime('auction_tim_finish');</script>]]></explain>
+	</input>
+
+	<input>
+		<type>text.auction_total_bid</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=]]></property>
+		<style>size=15 maxlength=15 class="total"</style>
+		<caption><![CDATA[竞拍人次]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[次$$$]]></explain>
+	</input>
+	
+	<input>
+		<type>radio.auction_state</type>
+		<property><![CDATA[item=;class=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[竞拍状态]]></caption>
+		<att><![CDATA[0=未竞拍;2=竞拍中;1=已结束]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>hidden.auction_status</type>
+		<property><![CDATA[item=;class=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[当前状态]]></caption>
+		<att><![CDATA[<control:att("dict","data.ons")>]]></att>
+		<value>1</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>hidden.auction_tim</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=1]]></property>
+		<style>size=30 maxlength=20 class="time"</style>
+		<caption><![CDATA[发布时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain></explain>
+	</input>
+	
+!##################!
+
+partc.area
+!==================!
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[地区信息]]></caption>
+	</input>
+	<input>
+		<type>text.{@tpx}area_country</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=;classi=item]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[所在国家]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[###<script>$pf.chooseValue('{@tpx}area_country','中国');</script>]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}area_province</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=;classi=item]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[所在省份]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}area_city</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=;classi=item]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[所在地区]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+partc.info.com
+!==================!
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[单位信息]]></caption>
+	</input>
+	<input>
+		<type>text.{@tpx}company</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>size=50 maxlength=250 class="itxt"</style>
+		<caption><![CDATA[单位名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}url</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=50 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[网站地址]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}address</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=50 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[联系地址]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}postcode</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=]]></property>
+		<style>size=20 maxlength=20 class="item"</style>
+		<caption><![CDATA[邮政编码]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}phone</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[联系电话]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}fax</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[联系传真]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!
+
+partc.info.corp
+!==================!
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[联系信息]]></caption>
+	</input>
+	<input>
+		<type>hidden.{@tpx}company</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>size=50 maxlength=250 class="itxt"</style>
+		<caption><![CDATA[单位名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}url</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=50 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[网站地址]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}address</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=]]></property>
+		<style>size=50 maxlength=200 class="itxt"</style>
+		<caption><![CDATA[联系地址]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}postcode</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=]]></property>
+		<style>size=20 maxlength=20 class="item"</style>
+		<caption><![CDATA[邮政编码]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}phone</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[联系电话]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}fax</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[联系传真]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+!##################!

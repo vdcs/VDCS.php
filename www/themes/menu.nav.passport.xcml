@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>part,id,name,url,att,atts,explain,status</field>
+	</configure>
+	<item>
+		<part>item</part>
+		<id>index</id>
+		<name><![CDATA[<langs:var.index>]]></name>
+		<url><![CDATA[<url:root>]]></url>
+		<att></att>
+		<atts></atts>
+		<explain></explain>
+		<status>1</status>
+	</item>
+	<item>
+		<part>item</part>
+		<id>support</id>
+		<name><![CDATA[<chn:var("support","title")>]]></name>
+		<url><![CDATA[<linkurl:support.index>]]></url>
+		<att></att>
+		<atts></atts>
+		<explain></explain>
+		<status>1</status>
+	</item>
+	<item>
+		<part>item</part>
+		<id>favorite</id>
+		<name><![CDATA[<langs:var.favorite>]]></name>
+		<url><![CDATA[javascript:;]]></url>
+		<att><![CDATA[ onclick="javascript:$p.addFavorite('<app:web.name>','<app:web.urls>');"]]></att>
+		<atts></atts>
+		<explain></explain>
+		<status>1</status>
+	</item>
+</xcml>

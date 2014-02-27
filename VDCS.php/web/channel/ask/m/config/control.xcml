@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="control">
+	<configure>
+		<node>popedom</node>
+	</configure>
+	<popedom>
+		<module.model><![CDATA[configure,class]]></module.model>
+		<module.__model>newline</module.__model>
+		<module.question-action><![CDATA[list,edit]]></module.question-action>
+		<module.__question-action>newline</module.__question-action>
+		<module.question-handle><![CDATA[default]]></module.question-handle>
+		<module.__question-handle>newline</module.__question-handle>
+		<module.answer-action><![CDATA[list,edit]]></module.answer-action>
+		<module.__answer>newline</module.__answer>
+		<module.answer-handle><![CDATA[default]]></module.answer-handle>
+	</popedom>
+</xcml>

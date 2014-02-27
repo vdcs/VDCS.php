@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,value</field>
+	</configure>
+	<item>
+		<key>form.clew.sign</key>
+		<value><![CDATA[<input class="ClewSign" disabled />]]></value>
+	</item>
+	<item>
+		<key>form.put</key>
+		<value><![CDATA[<font class="put">{$text}</font>]]></value>
+	</item>
+	<item>
+		<key>form.header.title</key>
+		<value><![CDATA[
+<!-- multibar.body -->
+<div class="forms">
+<form name="{$form.name}" action="{$form.action}" method="post" {$form.script}>
+<input type="hidden" name="_chk" value="yes" />
+<input type="hidden" name="_upid" value="{$upid}" />
+<input type="hidden" name="_multibar" value="{$multibar}" />
+<dl>
+]]></value>
+	</item>
+	<item>
+		<key>form.header</key>
+		<value><![CDATA[
+<!-- multibar.body -->
+<div class="forms">
+<form name="{$form.name}" action="{$form.action}" method="post" {$form.script}>
+<input type="hidden" name="_chk" value="yes" />
+<input type="hidden" name="_upid" value="{$upid}" />
+<input type="hidden" name="_multibar" value="{$multibar}" />
+<dl>
+]]></value>
+	</item>
+	<item>
+		<key>form.footer</key>
+		<value><![CDATA[
+<dd class="tips"><h3><p class="itip"><em></em><span>提示信息</span></p></h3></dd>
+<dd el="action">
+	<h3>
+	<a class="btn m" href="javascript:;" el="submit" data-title="{$submit.title}"><span>{$submit.title}</span></a>
+	<a class="btn" href="javascript:;" el="reset"><span>重置</span></a>
+	<a class="btn" href="javascript:;" el="back" onclick="javascript:$p.goback();"><span>返回</span></a>
+	</h3>
+</dd>
+</dl>
+</form>
+</div>
+<script type="text/javascript">
+$(function(){
+	pages.initForms();
+});
+</script>
+]]></value>
+	</item>
+	<item>
+		<key>form.header.table</key>
+		<value><![CDATA[<div class="forms">
+<dl>]]></value>
+	</item>
+	<item>
+		<key>form.footer.table</key>
+		<value><![CDATA[</dl>
+</div>]]></value>
+	</item>
+	
+	<item>
+		<key>form.bar</key>
+		<value><![CDATA[
+<dt class="bar {$class}">
+	<h2><cite>{$caption}</cite></h2>
+</dt>]]></value>
+	</item>
+	<item>
+		<key>form.item</key>
+		<value><![CDATA[
+<dt class="{$class}" el="{$name}">
+	<h2>{$caption}<p>{$caption.explain}</p></h2>
+	<h3><p class="{$classi} {$classiu}"><input type="text" name="{$name}" value="{$value}" placeholder="{$placeholder}" names="{$names}" minlength="{$prop.min}" maxlength="{$prop.max}" /><i>{$note}</i><em class="ih {$tip.type}" title="{$tip.explain}"></em></p><cite>{$extend.explain}</cite></h3>
+</dt>]]></value>
+	</item>
+	<item>
+		<key>form.item.password</key>
+		<value><![CDATA[
+<dt class="{$class}" el="{$name}">
+	<h2>{$caption}<p>{$caption.explain}</p></h2>
+	<h3><p class="{$classi} {$classiu}"><input type="password" name="{$name}" value="{$value}" placeholder="{$placeholder}" names="{$names}" minlength="{$prop.min}" maxlength="{$prop.max}" /><i>{$note}</i><em class="ih {$tip.type}" title="{$tip.explain}"></em></p><cite>{$extend.explain}</cite></h3>
+</dt>]]></value>
+	</item>
+	<item>
+		<key>form.item.textarea</key>
+		<value><![CDATA[
+<dt class="{$class}" el="{$name}">
+	<h2>{$caption}<p>{$caption.explain}</p></h2>
+	<h3><p><textarea name="{$name}" placeholder="{$placeholder}" names="{$names}" minlength="{$prop.min}" maxlength="{$prop.max}">{$value}</textarea><em class="ih {$tip.type}" title="{$tip.explain}"></em></p></h3>
+</dt>]]></value>
+	</item>
+	<item>
+		<key>form.item.textbox</key>
+		<value><![CDATA[
+<dt class="{$class}" el="{$name}">
+	<h2>{$caption}<p>{$caption.explain}</p></h2>
+	<h3><p><textarea name="{$name}" placeholder="{$placeholder}" names="{$names}" minlength="{$prop.min}" maxlength="{$prop.max}">{$value}</textarea><em class="ih {$tip.type}" title="{$tip.explain}"></em></p></h3>
+</dt>]]></value>
+	</item>
+	<item>
+		<key>form.item.select</key>
+		<value><![CDATA[
+<dt class="{$class}" el="{$name}">
+	<h2>{$caption}<p>{$caption.explain}</p></h2>
+	<h3><p>{$input}<em class="ih {$tip.type}" title="{$tip.explain}"></em></p></h3>
+</dt>]]></value>
+	</item>
+	<item>
+		<key>form.item.radio</key>
+		<value><![CDATA[
+<dt class="{$class}" el="{$name}">
+	<h2>{$caption}<p>{$caption.explain}</p></h2>
+	<h3><p data-ui-form="{$ui.type}">{$input}</p></h3>
+</dt>]]></value>
+	</item>
+	<item>
+		<key>form.item.checkbox</key>
+		<value><![CDATA[
+<dt class="{$class}" el="{$name}">
+	<h2>{$caption}<p>{$caption.explain}</p></h2>
+	<h3><p data-ui-form="{$ui.type}">{$input}</p></h3>
+</dt>]]></value>
+	</item>
+	<item>
+		<key>form.item.put</key>
+		<value><![CDATA[
+<dt class="{$class}" el="{$name}">
+	<h2>{$caption}<p>{$caption.explain}</p></h2>
+	<h3><p class="put">{$value}</p></h3>
+</dt>]]></value>
+	</item>
+	<item><!--hode-->
+		<key>form.item.hidden</key>
+		<value><![CDATA[
+{$input}]]></value>
+	</item>
+	<item>
+		<key>form.item.hide</key>
+		<value><![CDATA[
+{$input}]]></value>
+	</item>
+	<item>
+		<key>form.item.item</key>
+		<value><![CDATA[
+<dt class="txt item {$class}">
+	<h2>{$caption}<p>{$caption.explain}</p></h2>
+	<h4>{$explain}</h4>
+</dt>]]></value>
+	</item>
+	<item>
+		<key>form.item.blank</key>
+		<value><![CDATA[
+<dt class="txt blank {$class}">
+	<h2>{$caption}<p>{$caption.explain}</p></h2>
+	<h4>{$explain}</h4>
+</dt>]]></value>
+	</item>
+	<item>
+		<key>form.item.editor</key>
+		<value><![CDATA[
+<dt class="{$class}" el="{$name}">
+	<h2>{$caption}<p>{$caption.explain}</p></h2>
+	<h3><p class="{$classi}">{$input}<em class="ih {$tip.type}" title="{$tip.explain}"></em></p></h3>
+</dt>]]></value>
+	</item>
+	<item>
+		<key>form.item.upload</key>
+		<value><![CDATA[
+<dt class="{$class}" el="{$name}">
+	<h2>{$caption}<p>{$caption.explain}</p></h2>
+	<h3><p class="{$classi}">{$input}<em class="ih {$tip.type}" title="{$tip.explain}"></em></p></h3>
+</dt>]]></value>
+	</item>
+	
+	
+	<item>
+		<key>form.item.code.caption</key>
+		<value><![CDATA[[编码模式]]]></value>
+	</item>
+	<item>
+		<key>form.item.code.explain</key>
+		<value><![CDATA[<input type="button" class="btn switchcode" value="点击切换编码模式" onclick="$f.setValue('{$form.name}._chk',''); $f.setValue('{$form.name}._sp_code',$f.getValue('{$form.name}.{$form.field.sp.code}')); $f.doSubmit('{$form.name}')" /> <input type="hidden" name="_sp_code" value="" />]]></value>
+	</item>
+	
+	
+	<item>
+		<key>form.multibar.bar</key>
+		<value><![CDATA[<div id="fbm-wrap" data-define="{$explain}" data-target="#fbm-tab"></div>]]></value>
+	</item>
+	<item>
+		<key>form.multibar.head</key>
+		<value><![CDATA[
+<div id="fbm-body-{$id}" data-fbm="{$id}" class="tab-pane {$display.active}" _style="display:{$display}">]]></value>
+	</item>
+	<item>
+		<key>form.multibar.foot</key>
+		<value><![CDATA[
+</div>]]></value>
+	</item>
+	
+	
+	<item>
+		<key>form.title</key>
+		<value><![CDATA[[Default Title]]]></value>
+	</item>
+	<item>
+		<key>form.title.upload</key>
+		<value><![CDATA[[上传至内容]]]></value>
+	</item>
+	<item>
+		<key>form.option.select.all</key>
+		<value><![CDATA[<input type="checkbox" class="normal" name="__option_select_all" value="yes" data-prefix="{$option.select.prefix}" />全选]]></value>
+	</item>
+	<item>
+		<key>form.submit.title</key>
+		<value><![CDATA[]]></value>
+	</item>
+	<item>
+		<key>form.submit.title.add</key>
+		<value><![CDATA[添加]]></value>
+	</item>
+	<item>
+		<key>form.submit.title.edit</key>
+		<value><![CDATA[编辑]]></value>
+	</item>
+	<item>
+		<key>form.submit.title.default</key>
+		<value><![CDATA[操作]]></value>
+	</item>
+	<item>
+		<key>form.error.item</key>
+		<value><![CDATA[{$caption} 不能为空或不符合规则！]]></value>
+	</item>
+	<item>
+		<key>form.class.bar</key>
+		<value><![CDATA[bar]]></value>
+	</item>
+	<item>
+		<key>form.class.multibar</key>
+		<value><![CDATA[multibar]]></value>
+	</item>
+	<item>
+		<key>form.class.row</key>
+		<value><![CDATA[row]]></value>
+	</item>
+	<item>
+		<key>form.class.rows</key>
+		<value><![CDATA[rows]]></value>
+	</item>
+	<item>
+		<key>form.class.rowsp</key>
+		<value><![CDATA[rowsp]]></value>
+	</item>
+	<item>
+		<key>form.class.rowput</key>
+		<value><![CDATA[row h]]></value>
+	</item>
+	
+	<item>
+		<key>form.classi</key>
+		<value><![CDATA[num=num;total=num;price=num;money=num;emoney=num;points=num;exp=;item=item;user=item;id=item;no=item;name=item;password=item;value=item;values=items;date=item;time=item;items=items;phone=item;mobile=item;email=items;homepage=items;url=items;sign=items;address=items;postcode=item]]></value>
+	</item>
+	
+	<item>
+		<key>form.postfix</key>
+		<value><![CDATA[[.xcml]]]></value>
+	</item>
+	
+	<item>
+		<key>form.tip.require</key>
+		<value><![CDATA[{$caption} 不能为空]]></value>
+	</item>
+	
+	<item>
+		<key>form.element.hidden</key>
+		<value><![CDATA[<input type="hidden" name="{$name}" value="{$value}" />]]></value>
+	</item>
+	<item>
+		<key>form.element.text</key>
+		<value><![CDATA[<input type="text" class="txt" name="{$name}" value="{$value}" {$style} />]]></value>
+	</item>
+	<item>
+		<key>form.element.password</key>
+		<value><![CDATA[<input type="password" class="txt" name="{$name}" value="{$value}" {$style} />]]></value>
+	</item>
+	<item>
+		<key>form.element.radio</key>
+		<value><![CDATA[<input type="radio" name="{$name}" value="{$value}" {$checked} {$style} />{$title}]]></value>
+	</item>
+	<item>
+		<key>form.element.checkbox</key>
+		<value><![CDATA[<input type="checkbox" name="{$name}" value="{$value}" {$checked} {$style} />{$title}]]></value>
+	</item>
+	<item>
+		<key>form.element.txtarea</key>
+		<value><![CDATA[<textarea class="txtarea" name="{$name}" {$style}>{$value}</textarea>]]></value>
+	</item>
+	<item>
+		<key>form.element.editor</key>
+		<value><![CDATA[<script type="text/javascript">dcs.UBBeditor.replaceTextarea("{$name}",{toolbar:"{$toolbar}",height:{$height}});</script>]]></value>
+	</item>
+	<item>
+		<key>form.element.editor.ubb</key>
+		<value><![CDATA[<script type="text/javascript">dcs.UBBeditor.replaceTextarea("{$name}",{toolbar:"{$toolbar}",height:{$height}});</script>]]></value>
+	</item>
+	<item>
+		<key>form.element.editor.html</key>
+		<value><![CDATA[<script type="text/javascript" src="<app:url.script>HTMLeditor/HTMLeditor.js"></script>
+<script type="text/javascript">dcs.HTMLeditor.replaceTextarea("{$name}",{toolbar:"{$toolbar}",height:{$height}});</script>]]></value>
+	</item>
+	<item>
+		<key>form.element.upload</key>
+		<value><![CDATA[<div id="upload_frame"></div>]]></value>
+	</item>
+	<!--
+	<iframe name="frame_upload" frameborder="0" width="100%" height="30" scrolling="no" src="{$up.url}channel={$up.channel}&sorts={$up.sorts}&filetype={$up.filetype}&filename={$up.filename}&fileinput={$up.fileinput}&filesize={$up.filesize}&thumbname={$up.thumbname}&thumbinput={$up.thumbinput}&formname={$up.formname}&valuemode={$up.valuemode}&inputtype={$up.inputtype}"></iframe>
+	-->
+	<item>
+		<key>form.element.upload.linkurl</key>
+		<value><![CDATA[<a href="#uploadx" data-vars="channel={$up.channel}&sorts={$up.sorts}&filetype={$up.filetype}&filename={$up.filename}&fileinput={$up.fileinput}&filesize={$up.filesize}&thumbname={$up.thumbname}&thumbinput={$up.thumbinput}&formname={$up.formname}&valuemode={$up.valuemode}&inputtype={$up.inputtype}">{$up.title}</a>]]></value>
+	</item>
+</xcml>

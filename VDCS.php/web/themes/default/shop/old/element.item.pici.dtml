@@ -1,0 +1,7 @@
+<li>
+<div class="pic isbest[item:isgood] isnew[item:isnew] issale[item:issale]"><span class="effect"></span><a href="[item:linkurl]"><img src="[item:pic.url]" /></a></div>
+<p><span class="price b large"><span class="big">￥</span> [item:price]</span></p>
+<p><span class="t gray">￥[item:price.market]</span></p>
+<p class="topic"><a href="[item:linkurl]">[item:topic!html!38]</a></p>
+<p class="info prc"><a class="cart" href="javascript:;" onclick="javascript:appc.cart.add([item:id]);">订购</a> 销量:<em>[item:total.buy]</em></p>
+</li>

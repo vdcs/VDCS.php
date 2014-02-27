@@ -1,0 +1,65 @@
+<label:include file="/headers">
+<div class="box">
+<h2><t>订单概览</t></h2>
+<div class="con">
+<table class="table tables table-striped table-hover table-list">
+<tbody>
+<tr><th>订单号</th><td><view:no></td><th>总额</th><td><view:money></td></tr>
+<tr><th>联系人</th><td><view:linkman></td><th>联系电话</th><td><view:mobile></td></tr>
+<tr><th>邮编</th><td><view:postcode></td><th>地址</th><td><view:address></td></tr>
+<tr><th>买家留言</th><td colspan="3"><view:message></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="space"></div>
+<div class="box hide">
+<h2><t>订单详情</t></h2>
+<div class="con">
+<table class="table tables table-striped table-hover table-list">
+<thead><tr><th>产品标题</th><th>金额</th><th>操作</th></tr></thead>
+<tbody>
+<loop:list>
+<tr><td>[item:topic]</td><td>[item:money]</td><td><a href="/{@channel}/product/view?p_id=[item:resid]">查看产品</a></td></tr>
+</loop>
+</tbody>
+</table>
+</div>
+</div>
+<div class="space"></div>
+<div class="box">
+<h2><t>付款方式</t></h2>
+<div class="con">
+	<p><input type="radio" name="payment" value="balance" checked="checked" />账户余额付款</p>
+<loop:payment>
+	<p><input type="radio" name="payment" value="[item:value]" />[item:name]([item:explain])</p>
+</loop>
+<p>账户余额:<ua:money!price>  <a class="btn btn-primary b" el="pay">确认付款</a></p>
+</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	var orderid=$p.q('orderid');
+	var _pay=function(){
+		var payment=$('input[name=payment]:checked').val();
+		var _url='/{@channel}/checkout.x?action=pay&orderid='+orderid+'&payment='+payment;
+		$ajax({url:_url,value:'xml',ready:parseAsync,error:true});
+	};
+	
+	var parseAsync=function(xml){
+		var map=$util.toMapByXML(xml);
+		var treeVar=map.getItemTree('var');
+		if(treeVar.v('status')=='succeed'){
+			ui.popups('succeed','支付成功！');
+			setTimeout(function(){
+				location.href='/{@channel}/order/track?orderid='+orderid;
+			},1000);
+		}else{
+			ui.popups('info',treeVar.v('status'));
+		}
+	};
+	
+	$('[el=pay]').click(_pay);
+});
+</script>
+<label:include file="/footers">

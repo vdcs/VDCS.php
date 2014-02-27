@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links</frame>
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.order>t_id desc</list.table.order>
+		<list.handle.select.option>show,hide,delete</list.handle.select.option>
+		<list.handle.sql.show>update db_table set t_status=1 where t_id in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.hide>update db_table set t_status=0 where t_id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.delete>delete from db_table where t_id in ({$ids})</list.handle.sql.delete>
+
+		<table.name>db_table</table.name>
+		<table.px>t_</table.px>
+		<table.field.id>t_id</table.field.id>
+		<table.fields.add>field1,field2</table.fields.add>
+		<table.fields.edit>field1,field2</table.fields.edit>
+	</config>
+
+	<lang>
+		<part.name><![CDATA[数据表]]></part.name>
+		<default.name><![CDATA[默认]]></default.name>
+
+		<title><![CDATA[创建新的数据分表]]></title>
+		<title.list><![CDATA[数据分表列表]]></title.list>
+		<title.list.><![CDATA[数据分表列表]]></title.list.>
+		<title.add><![CDATA[创建新的数据分表]]></title.add>
+		<title.del><![CDATA[删除数据分表]]></title.del>
+		<title.update><![CDATA[设置默认数据分表]]></title.update>
+
+		<error.value><![CDATA[您要添加的数据表名称不符合规则！]]></error.value>
+		<error.repeat.exist><![CDATA[该数据表名已经存在！]]></error.repeat.exist>
+		<error.default><![CDATA[默认的数据表名不能删除！]]></error.default>
+		<error.count><![CDATA[您要删除的数据表还有数据！]]></error.count>
+		<error.sole><![CDATA[您要设置的数据表是目前默认的数据分表！]]></error.sole>
+		<error.not.key><![CDATA[请选择一个您要操作的数据分表！]]></error.not.key>
+
+		<handle.ok.add><![CDATA[成功添加了 1 个新数据表！]]></handle.ok.add>
+		<handle.ok.del><![CDATA[成功删除了 1 个数据表！]]></handle.ok.del>
+		<handle.ok.update><![CDATA[成功设置了新的默认数据分表！]]></handle.ok.update>
+	</lang>
+
+	<template>
+		<list><![CDATA[
+<control:ui.value("listbox.head")>
+<control:ui.value("list.bar.tr")>
+<td class="bar-id">ID</td>
+<td class="bar-name">数据表名</td>
+<td class="bar w100"><exec:langs("title.topic")></td>
+<td class="bar-count w80">现有记录</td>
+<td class="bar-count w80">默认数据库</td>
+<td class="bar-handle w80"><exec:langs("title.handle")></td>
+</tr>
+<loop:items>
+<control:ui.value("list.row.tr")>
+<td class="row-id">[item:id]</td>
+<td class="row-name">[item:table]</td>
+<td class="row">[item:name]</td>
+<td class="row-count">[item:count] <app:unit.piece></td>
+<td class="row-count"><control:dict("data.bool","[item:default]")></td>
+<td class="row-handle"><a href="<exec:url("action=update&id=[item:id]")>" title="设为默认数据分表">默认</a> <a href="<exec:url("action=del&id=[item:id]")>"><exec:langs("action.del")></a></td>
+</tr>
+</loop>
+<control:ui.value("listbox.end")>
+]]></list>
+		<menu.links><![CDATA[
+@@@title=数据分表管理;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("action=add")>">新建数据分表</a></li>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

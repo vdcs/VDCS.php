@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,index,field.value,field.name,field.title,field.level,level.base,space.base,space.level</field>
+	</configure>
+	<item>
+		<key>file</key>
+		<index>file:{$sort}</index>
+		<field.value>value</field.value>
+		<field.name>name</field.name>
+		<field.title>title</field.title>
+		<field.level></field.level>
+		<level.base>1</level.base>
+		<space.base></space.base>
+		<space.level></space.level>
+	</item>
+	<item>
+		<key>class</key>
+		<index>select classid,name as classname,levelid as classlevel from dbs_class where channel='{$channel}' and status=1 order by rootid,orderid asc</index>
+		<field.value>classid</field.value>
+		<field.title>classname</field.title>
+		<field.level>classlevel</field.level>
+		<level.base>2</level.base>
+		<space.base><![CDATA[　]]></space.base>
+		<space.level><![CDATA[　]]></space.level>
+	</item>
+	<item>
+		<key>class_father</key>
+		<index>select id,name as classname,levelid as classlevel from dbs_class where channel='{$channel}' and status=1 order by rootid,orderid asc</index>
+		<field.value>id</field.value>
+		<field.title>classname</field.title>
+		<field.level>classlevel</field.level>
+		<level.base>2</level.base>
+		<space.base><![CDATA[　]]></space.base>
+		<space.level><![CDATA[　]]></space.level>
+	</item>
+	<item>
+		<key>sort</key>
+		<index>select sortid,name as sortname,levelid as sortlevel from dbs_sort where channel='{$channel}' and classid={$classid} and status=1 order by rootid,orderid asc</index>
+		<field.value>sortid</field.value>
+		<field.title>sortname</field.title>
+		<field.level>sortlevel</field.level>
+		<level.base>2</level.base>
+		<space.base><![CDATA[　]]></space.base>
+		<space.level><![CDATA[　]]></space.level>
+	</item>
+	<item>
+		<key>special</key>
+		<index>select specialid,name from dbs_special where ( channel='{$channel}' or type=1) and status=1 order by orderid desc,id asc</index>
+		<field.value>specialid</field.value>
+		<field.title>name</field.title>
+		<field.level></field.level>
+		<level.base>1</level.base>
+		<space.base><![CDATA[　]]></space.base>
+		<space.level><![CDATA[　]]></space.level>
+	</item>
+	<item>
+		<key>server</key>
+		<index>select id,name from dbs_server where channel='{$channel}' order by id desc</index>
+		<field.value>id</field.value>
+		<field.title>name</field.title>
+		<field.level></field.level>
+		<level.base>1</level.base>
+		<space.base><![CDATA[　]]></space.base>
+		<space.level>--</space.level>
+	</item>
+	
+	<item>
+		<key>class.forum</key>
+		<index>select classid,name as classname,levelid as classlevel from db_forum_class where status=1 order by rootid,orderid asc</index>
+		<field.value>classid</field.value>
+		<field.title>classname</field.title>
+		<field.level>classlevel</field.level>
+		<level.base>2</level.base>
+		<space.base><![CDATA[　]]></space.base>
+		<space.level><![CDATA[　]]></space.level>
+	</item>
+	
+	<item>
+		<key>sort.blog</key>
+		<index>select sortid as id,name,levelid as level from db_blog_sort where keyid={$blogid} and status=1 order by rootid,orderid,sortid</index>
+		<field.value>id</field.value>
+		<field.title>name</field.title>
+		<field.level>level</field.level>
+		<level.base>2</level.base>
+		<space.base><![CDATA[　]]></space.base>
+		<space.level><![CDATA[　]]></space.level>
+	</item>
+	
+	
+	<item>
+		<key>e.department</key>
+		<index>select deptid,name from dbe_department where corpid={$corpid} and status=1 order by rootid,orderid asc,deptid asc</index>
+		<field.value>deptid</field.value>
+		<field.title>name</field.title>
+		<field.level></field.level>
+		<level.base>1</level.base>
+		<space.base><![CDATA[]]></space.base>
+		<space.level><![CDATA[　]]></space.level>
+	</item>
+	<item>
+		<key>e.position</key>
+		<index>select posid,name from dbe_position where corpid={$corpid} and status=1 order by orderid asc,id asc</index>
+		<field.value>posid</field.value>
+		<field.title>name</field.title>
+		<field.level></field.level>
+		<level.base>1</level.base>
+		<space.base><![CDATA[　]]></space.base>
+		<space.level><![CDATA[　]]></space.level>
+	</item>
+	<item>
+		<key>e.am</key>
+		<index>select staffid,names from dba_staff where staffid in(select staffid from dbe_employee where corpid={$corpid} and status=1 and type=1 order by deptid,orderid asc,empid asc) and status=1</index>
+		<field.value>staffid</field.value>
+		<field.title>names</field.title>
+		<field.level></field.level>
+		<level.base>1</level.base>
+		<space.base><![CDATA[]]></space.base>
+		<space.level><![CDATA[　]]></space.level>
+	</item>
+	<item>
+		<key>e.role</key>
+		<index>select id,name from dbe_role where status=1</index>
+		<field.value>id</field.value>
+		<field.title>name</field.title>
+		<field.level></field.level>
+		<level.base>1</level.base>
+		<space.base><![CDATA[]]></space.base>
+		<space.level><![CDATA[　]]></space.level>
+	</item>
+</xcml>

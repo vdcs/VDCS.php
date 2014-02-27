@@ -1,0 +1,44 @@
+
+<div id="bidlist-body">
+<table class="list lists">
+<tr class="bar">
+<td width="60"></td>
+<td width="*">竞拍<app:var.user></td>
+<td width="120" class="ar">出价</td>
+<td width="60"></td>
+<td width="70">状态</td>
+<td width="150">时间</td>
+</tr>
+<tbody id="bidlist-items">
+<tr class="row al"><td></td><td colspan="5"><div style="padding:20px 0;"><img class="icon" src="<url:images>common/load/16x16.gif" /> 数据加载中，请稍候...</div></td></tr>
+</tbody>
+<tbody id="bidlist-nodata" class="hide">
+<tr class="row al"><td></td><td colspan="5"><div style="padding:20px 0;">暂无数据</div></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="hide">
+<table>
+<tbody id="bidlist-loading">
+<tr class="row al"><td></td><td colspan="5"><div style="padding:30px;"><img class="icon" src="<url:images>common/load/16x16.gif" /> 数据加载中，请稍候...</div></td></tr>
+</tbody>
+</table>
+<table>
+<tbody id="bidlist-item-templet">
+<tr class="row">
+<td class="ar"><span class="s">第 [item:_sn] 拍</span>&nbsp;</td>
+<td>[item:username]</td>
+<td class="ar"><span class="price">[item:price]<em><app:unit.price></em></span></td>
+<td class="">[item:isauto.name]</td>
+<td class="">[item:state.name]</td>
+<td class="">[item:_time]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<script type="text/javascript">
+$(d).ready(function(){
+	auction.bid.parse();
+});
+</script>

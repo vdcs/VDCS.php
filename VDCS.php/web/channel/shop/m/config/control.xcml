@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="control">
+	<configure>
+		<node>popedom</node>
+	</configure>
+	<popedom>
+		<module.model><![CDATA[configure,class]]></module.model>
+		<module.__model>newline</module.__model>
+		<module.product-action><![CDATA[list,add,edit]]></module.product-action>
+		<module.__product-action>newline</module.__product-action>
+		<module.product-handle><![CDATA[default]]></module.product-handle>
+		<module.__product-handle>newline</module.__product-handle>
+		<module.data-action><![CDATA[list,add,edit]]></module.data-action>
+		<module.__data-action>newline</module.__data-action>
+		<module.data-handle><![CDATA[default]]></module.data-handle>
+		<module.__data-handle>newline</module.__data-handle>
+		<module.order-action><![CDATA[list,view,dispose]]></module.order-action>
+		<module.__order-action>newline</module.__order-action>
+		<module.order-handle><![CDATA[default]]></module.order-handle>
+	</popedom>
+</xcml>

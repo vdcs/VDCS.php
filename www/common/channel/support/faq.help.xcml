@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,topic,content</field>
+	</configure>
+	<item>
+		<key>user-register</key>
+		<topic><![CDATA[我必须要注册吗？]]></topic>
+		<content><![CDATA[这取决于您访问网站不同频道及功能的需要来定。<br>
+在通常情况下，您并不需要注册并登录即可浏览绝大部分网页和内容。<br>
+请 <a href="<app:url.user.register>" target="_blank">点击这里</a> 免费注册成为我们的会员！<br>
+不过，我们还是建议您成为注册用户，这样可以得到很多贴心的服务及网站功能。]]></content>
+	</item>
+	<item>
+		<key>user-register2</key>
+		<topic><![CDATA[怎样才能注册? ]]></topic>
+		<content><![CDATA[要注册一个新帐号，你需要访问注册并且按照要求填写注册表单。您必须提供一个用户名和一个有效的电子信箱地址，同时系统还将要求您指定登录密码。]]></content>
+	</item>
+	<item>
+		<key>user-login</key>
+		<topic><![CDATA[我已经注册了用户名和密码, 怎么登录? ?]]></topic>
+		<content><![CDATA[注册成功后，你将拥有一个用户名和密码，你可以访问登录页面并输入您的用户名和密码登录到网站中。]]></content>
+	</item>
+	<item>
+		<key>user-logout</key>
+		<topic><![CDATA[我已经登录, 为什么还会自动注销? ]]></topic>
+		<content><![CDATA[当你登录的时候，如果没有选中 "自动登录" 复选框，您会在系统定义的离线时间间隔内自动注销，通常是20分钟，关闭浏览器也会自动注销您的本次登录。如果您想以后访问网站时自动为登录状态，请在登录的时候选中 "自动登录" 复选框。]]></content>
+	</item>
+	<item>
+		<key>user-forget-password</key>
+		<topic><![CDATA[如果我遗忘了密码，我该怎么办？]]></topic>
+		<content><![CDATA[我们提供了发送取回密码链接到 Email 的服务，点击登录页面中的 <a href="<app:url.user.lostpassword>" target="_blank">找回密码</a> 功能，可以为您把取回密码的方法发送到注册时填写的 Email 信箱中。如果您的 Email 已失效或无法收到信件，请与论坛管理员联系。]]></content>
+	</item>
+	<item>
+		<key>user-mail</key>
+		<topic><![CDATA[什么是“短消息”？]]></topic>
+		<content><![CDATA[“短消息”是网站的注册用户间交流的工具，信息只有发件和收件人可以看到，收到信息后系统会出现铃声和相应提示，您可以通过短消息功能与网站上的其他用户保持私人联系。<br>
+收件箱 或 控制面板 中提供了短消息的收发服务。]]></content>
+	</item>
+</xcml>

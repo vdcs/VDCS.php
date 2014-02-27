@@ -1,0 +1,115 @@
+﻿
+<script type="text/javascript">
+app._xbind={
+	initer:function(opt,selector){
+		opt=ox({frm:'',
+			names			: '绑定',
+			message_formcheck	: '请填写必要的绑定信息！',
+			message_parser		: '绑定中..',
+			message_succeed		: '绑定成功！',
+			submit_ing		: '绑定中..',
+			submit_succeed		: '绑定成功！',
+			servURL			: app.serve('a/apps/sso','appid={$appid}&action=bind')},opt);
+		var backurl=$req.q('backurl')||$req.q('url');
+		if(backurl) opt.backurl=backurl;
+		this._initer(opt,selector);if(!this.isinit)return;
+		this.submitInit();
+	},
+'':''};
+
+$(function(){
+	var jida=[],idavar=[];
+	var _action=function(jo,action){
+		var appid=jo.attr('appid'),appvar=idavar[appid];
+		if(!appid || !appvar){
+			ui.popup('error','Require Appid!');
+			return;
+		}
+		//dbg.t(appid+","+action);
+		if(action=='bind'){
+			var jbox=jida[appid].find('[el="form_bind"]')
+			var jboxi=jbox.ibox({title:'帐号绑定 - '+idavar[appid]['name'],submit_name:'绑定',onsubmit:function(){return false;}});
+			var _callback=function(status,treeVar){
+				//alert('haha');
+				jboxi.ibox('close');
+				ui.popups({status:'succeed',message:'绑定成功 '+appvar['name']+'！',cover:false});
+				_check(appid);
+			};
+			//app._xbind.debugxml=true;
+			app._xbind.appid=appid;
+			app._xbind.jbody=jboxi;
+			app.xbind=extend(app.xform,app._xbind);
+			app.xbind.servVar('appid',appid);
+			app.xbind.initer({goback:false,callback:_callback},{jsubmit:jboxi.jsubmit});
+		}
+		if(action=='unbind'){
+			ui.confirm('您确定要与 '+appvar['name']+' 解除绑定嘛？',function(){_unbind(appid)});
+		}
+		return false
+	};
+	var _unbind=function(appid){
+		var appvar=idavar[appid];
+		if(ui.lock.is('unbind'))return;ui.lock.en('unbind');
+		ui.popups({status:'load',message:'正在与 '+appvar['name']+' 解除绑定中..',timer:false});
+		var _url=app.serve('a/apps/sso','appid={$appid}&action=unbind');
+		_url=rd(_url,'appid',appid);
+		$ajax({url:_url,value:'xml',ready:function(o){_unbindAsync(o)},error:true});
+	};
+	var _unbindAsync=function(xml){
+		var maps=$util.toMapByXML(xml);
+		var treeVar=maps.getItemTree('var');
+		var appid=treeVar.v('appid');
+		var appvar=idavar[appid];
+		ui.lock.en('unbind');ui.popup.hide();
+		if($form.statusSucceed(treeVar)){
+			ui.popups({status:'succeed',message:'成功与 '+appvar['name']+' 解除绑定！',close:function(){$p.refresh()}});
+		}
+	}
+	var appidlast=0;
+	var _check=function(appid){
+		appidlast=appid;
+		jida[appid]=$('[app-id="'+appid+'"]');
+		jida[appid].show();
+		jida[appid].find('[el=load]').show();
+		jida[appid].find('[el=nobind]').hide();
+		jida[appid].find('[el=binded]').hide();
+		//jresults.html('query in..');
+		var _url=app.serve('a/apps/sso','action=status&appid='+appid),_send=null;
+		//dbg.t('url',_url);
+		$ajax({url:_url,send:_send,value:'xml',ready:function(o){_result(o)},error:true});
+	};
+	var _result=function(xml){
+		this.maps=$util.toMapByXML(xml);
+		this.treeVar=this.maps.getItemTree('var');
+		var appid=this.treeVar.v('appid');
+		var _status=this.treeVar.v('status');
+		//dbg.t(_status);
+		if(!appid){
+			appid=appidlast;
+			jida[appid].find('[el=load] img').attr('src','/images/common/icon/alert_orange.gif').attr('title','服务异常');
+			return;
+		}
+		if(inp('succeed,already',_status)>0){
+			var that=this;
+			var je=jida[appid].find('[el=binded]');
+			je.show();
+			je.finde('login').attr('href','/account/apps/sso.x?action=login&appid='+appid+'&redirect=yes');
+			je.finde('unbind').attr('appid',appid).click(function(){return _action($(this),'unbind')});
+		}
+		else{
+			var je=jida[appid].find('[el=nobind]');
+			je.show();
+			je.find('[el=bind]').attr('appid',appid).click(function(){return _action($(this),'bind')});
+			je.find('[el=create]').attr('appid',appid).click(function(){return _action($(this),'create')});
+		}
+		jida[appid].find('[el=load]').hide();
+	};
+	_check('app');
+	$('[app-id]').each(function(){
+		var jthis=$(this),appid=jthis.attr('app-id');
+		idavar[appid]=[];
+		idavar[appid]['appid']=appid;
+		idavar[appid]['name']=jthis.attr('app-name');
+	});
+});
+</script>

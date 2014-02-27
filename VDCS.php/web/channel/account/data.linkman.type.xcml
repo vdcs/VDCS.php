@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>type,name,explain</field>
+		<field.att.value>type</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<type>1</type>
+		<name>商务</name>
+		<explain></explain>
+	</item>
+	<item>
+		<type>2</type>
+		<name>技术</name>
+		<explain></explain>
+	</item>
+	<item>
+		<type>5</type>
+		<name>财务</name>
+		<explain></explain>
+	</item>
+	<item>
+		<type>8</type>
+		<name>管理</name>
+		<explain></explain>
+	</item>
+</xcml>

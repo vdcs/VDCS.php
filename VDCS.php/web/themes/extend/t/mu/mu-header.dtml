@@ -1,0 +1,11 @@
+﻿<label:include file="frame/header">
+<label:include file="frame/frame.left">
+
+<label:include script="~~t.mu.js">
+<script type="text/javascript">
+$(function(){
+	//appt.mu.followShow();
+});
+</script>
+<label:include file="mu-cardu">
+<sh></sh>

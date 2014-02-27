@@ -1,0 +1,6 @@
+</div>
+</div></div></div></div>
+	</div></div>
+	<div class="MainContent" id="MainContent"><div class="MainContentFrame"><div class="MainContentInner">
+<div class="TitleBar"><span class="title" id="titlebar-title"><web:var.title></span><span id="titlebar-sub" style="display:none;"> <span class="subtitle" id="titlebar-sub-title"></span></span></div>
+<script type="text/javascript">appc.titlebar.setSubTitle("<web:var.subtitle>");</script>

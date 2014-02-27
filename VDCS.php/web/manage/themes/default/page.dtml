@@ -1,0 +1,5 @@
+<label:include file="/header.blank">
+
+<dtml:_message>
+
+<label:include file="/footer.blank">

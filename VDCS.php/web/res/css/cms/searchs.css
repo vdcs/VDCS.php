@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @searchs v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######################### */
+.Searchs { height:34px; background:url("../../common/struct/searchs.gif") 0 -40px no-repeat; padding-left:8px; }
+.Searchs .searchText { float:left; width:200px;height:34px; background:url("../../common/struct/searchs.gif") 0 0 repeat-x; text-align:center; }
+.Searchs .searchText input { width:196px; border:0; margin-top:6px;_margin-top:5px; padding-left:0; padding-right:0; }
+.Searchs .searchSort { float:left; width:72px;height:34px; background:url("../../common/struct/searchs.gif") 0 -120px no-repeat; }
+.Searchs .searchSort cite { display:inline-block; line-height:34px; color:#E38217; text-align:center; margin-right:3px; cursor:pointer; }
+.Searchs .searchSort cite a { display:block; text-decoration:none; }
+.Searchs .searchSort { position:relative; }
+.Searchs .searchSort .select { display:none; z-index:999; }
+.Searchs .searchSort .select-show,
+.Searchs .searchSort:hover .select { display:block; position:absolute;top:30px;left:0; }
+.Searchs .searchSort .select { width:71px; border:1px solid #989898;border-top:0;background-color:#FFF; padding:3px 0; }
+.Searchs .searchSort .select li { padding:3px 0; }
+.Searchs .searchButton { float:left; width:60px;height:34px; }
+.Searchs .searchButton input { width:100%;height:34px; border:0; background:url("../../common/struct/searchs.gif") 0 -80px no-repeat; margin:0;_margin-top:-1px; padding:0; cursor:pointer; }
+.Searchs .searchButtonO { float:left; width:40px;height:34px; }
+.Searchs .searchButtonO input { width:100%;height:34px; border:0; background:url("../../common/struct/searchs.gif") -60px -80px no-repeat; margin:0;_margin-top:-1px; padding:0; cursor:pointer; }

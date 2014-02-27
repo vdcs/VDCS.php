@@ -1,0 +1,8 @@
+<div class="bar">
+<div class="left"></div>
+<div class="right">
+<span class="item time"><a><span><lang:list.bar.update></span></a></span>
+<span class="item size"><a><span><lang:list.bar.level></span></a></span>
+<span class="item total"><a><span><lang:list.bar.total></span></a></span>
+</div>
+</div>

@@ -1,0 +1,44 @@
+<label:include file="frame/headers">
+
+
+<div class="framer">
+<div style="padding:20px;">
+<div id="charts-loading" style="padding:100px 0;"><img class="iocn" src="<url:images>common/load/loading.gif" /> <span id="charts-loading-text">正在请求数据中，请稍候..</span></div>
+<div id="charts-title" class="b" style="display:none; font-size:20px;"></div>
+<div id="charts-flash" style="display:none;"></div>
+<div id="charts-option" style="display:none;">
+<div class="space"></div>
+<input type="button" class="btn" value="线性曲线图" onclick="javascript:oCharts.doDisplay({'style':'line'});" />
+&nbsp; &nbsp;
+<input type="button" class="btn" value="横向柱状图" onclick="javascript:oCharts.doDisplay({'style':'bar'});" />
+&nbsp; &nbsp;
+<input type="button" class="btn" value="纵向柱状图" onclick="javascript:oCharts.doDisplay({'style':'column'});" />
+&nbsp; &nbsp;
+<input type="button" class="btn" value="立体柱状图" onclick="javascript:oCharts.doDisplay({'style':'column.3d'});" />
+&nbsp; &nbsp;
+<input type="button" class="btn" value="区域截面图" onclick="javascript:oCharts.doDisplay({'style':'area'});" />
+&nbsp; &nbsp;
+<input type="button" class="btn" value="饼状图" onclick="javascript:oCharts.doDisplay({'style':'pie'});" />
+<!---->
+</div>
+</div>
+<div class="space"></div>
+<div class="hide"><textarea id="txtarea" cols="60" rows="10"></textarea></div>
+<div class="space"></div>
+<div class="al">
+XML数据源：<span id="xml-url"></span>
+</div>
+</div>
+<label:include script="<url:images>player/player.js">
+<label:include script="<url:images>player/charts/charts.js">
+<script type="text/javascript">
+var oCharts=new Player.Charts("oCharts");
+oCharts.setURL("demo");
+oCharts.ps._xml="txtarea";
+oCharts.setStyle("line");
+oCharts.doLoad();
+$("#xml-url").html(oCharts.ps["url"]);
+</script>
+
+
+<label:include file="frame/footers">

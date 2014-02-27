@@ -1,0 +1,85 @@
+﻿<label:include file="headers">
+
+
+<script src="<url:script>ckeditor4/ckeditor.js"></script>
+<div class="box boxs" style="padding:50px;">
+
+
+<input name="name" style="width:100px;" value="哈哈哈哈" maxlen="10" maxwidth="90" />
+
+<div class="content_box" style="width:200px;height:100px;"><textarea name="content" id="content">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈一二三</textarea></div>
+
+
+<script type="text/javascript">
+
+app.limitInput=function(jo){
+	//dbg.o(jo[0])
+	limitInputLen(jo);
+	var contentid="content";
+	var maxheight=100;
+	appt.editor.contentID(contentid);
+	appt.editor.loaderPut('content',{height:maxheight});
+	var editor=appt.editor.contentO();
+	limitCKEDITOR(editor,maxheight);
+};
+
+limitCKEDITOR=function(editor,maxheight){
+	var value;
+	editor.on('instanceReady',function(ev){
+		this.document.on("keyup",function(){
+			var ebody=editor.document.getBody();
+			var height=ebody.$.offsetHeight;
+			if(height>maxheight){
+				//alert(value);
+				ebody.setHtml(value);
+			}
+			else{
+				value=ebody.getHtml();
+				value=editor.getData();
+			}
+		});
+	});
+};
+
+limitInputLen=function(jo){
+	var maxlen=jo.attr('maxlen');
+	if(!maxlen) return;
+	jo.keyup(function(){
+		var jthis=$(this),val=jthis.val();
+		var len=val.replace(/[^\u0000-\u00ff]/g,'aa').length;
+		if(len>=maxlen) jthis.val($code.cut(val,maxlen));
+	});
+};
+limitInputWidth=function(jo){
+	//dbg.o(jo[0])
+	var txtWidth=0;
+	if(jo[0].createTextRange){
+		var selection=jo[0].createTextRange();
+		txtWidth=selection.boundingWidth;
+	}
+	else{
+		//el.selectionStart, el.selectionEnd
+		//dbg.o(getSelection(jo[0]));
+		txtWidth=jo[0].boundingWidth;
+	}
+	alert(txtWidth);
+};
+
+
+
+$(function(){
+	var jname=$('input[name=name]');
+	//dbg.o(jname[0]);
+	app.limitInput(jname);
+	
+	//which.value.replace(/[^\u0000-\u00ff]/g,"aa").length
+	
+});
+
+
+</script>
+
+</div>
+
+
+<label:include file="footers">

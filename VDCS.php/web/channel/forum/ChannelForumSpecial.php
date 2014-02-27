@@ -1,0 +1,6 @@
+<?
+class ChannelForumSpecial extends ChannelForumList
+{
+	
+}
+?>

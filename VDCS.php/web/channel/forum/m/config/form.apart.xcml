@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>text.table</type>
+		<property><![CDATA[item=;action=;type=string;max=15;min=1]]></property>
+		<style>size=15 maxlength=15</style>
+		<caption><![CDATA[新建数据表]]></caption>
+		<att></att>
+		<value><![CDATA[{$table}]]></value>
+		<explain><![CDATA[新建的表名为类似“{$table}”这样的形式]]></explain>
+	</input>
+	<input>
+		<type>text.name</type>
+		<property><![CDATA[item=;action=;type=string;max=15;min=1]]></property>
+		<style>size=15 maxlength=15</style>
+		<caption><![CDATA[数据表名称]]></caption>
+		<att></att>
+		<value><![CDATA[{$name}]]></value>
+		<explain><![CDATA[新建名称为类似“{$name}”]]></explain>
+	</input>
+	<input>
+		<type>hidden.status</type>
+		<property><![CDATA[item=;action=;type=string;max=15;min=]]></property>
+		<style></style>
+		<caption><![CDATA[]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>radio.default</type>
+		<property><![CDATA[item=;action=;type=string;max=15;min=]]></property>
+		<style></style>
+		<caption><![CDATA[新建数据表]]></caption>
+		<att><![CDATA[<control:att("dict","data.bool")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[是否设置为默认数据表]]></explain>
+	</input>
+</xcml>

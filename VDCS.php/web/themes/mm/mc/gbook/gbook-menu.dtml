@@ -1,0 +1,19 @@
+
+	<div class="partItems">
+<ul>
+<li menus="gbook"><a href="<chn:linkurl("{@channel}","p","p=gbook")>"><span>留言列表</span></a></li>
+</ul>
+<!--
+	</div>
+	<div class="space"></div>
+	<div class="partBar"><span>留言管理</span></div>
+	<div class="partItems">
+-->
+<ul>
+<li class="space"></li>
+<li menus="gbook.transbox"><a href="<chn:linkurl("{@channel}","p","p=gbook&mode=new")>"><span>未读留言</span></a></li>
+<li menus="gbook.transbox"><a href="<chn:linkurl("{@channel}","p","p=gbook&mode=read")>"><span>已读留言</span></a></li>
+<li class="space"></li>
+<li menus="gbook.transbox"><a href="<chn:linkurl("{@channel}","p","p=gbook&mode=trashbox")>"><span>回收站</span></a></li>
+</ul>
+	</div>

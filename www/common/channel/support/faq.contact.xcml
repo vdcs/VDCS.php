@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,topic,content</field>
+	</configure>
+	<item>
+		<key>contact</key>
+		<topic><![CDATA[联系电话及传真]]></topic>
+		<content><![CDATA[
+电话: <app:com.phone><br>
+传真: <app:com.fax><br>
+邮箱: <app:com.email><br>
+]]></content>
+	</item>
+	<item>
+		<key>address</key>
+		<topic><![CDATA[来信来函地址]]></topic>
+		<content><![CDATA[地址: <app:com.address>   邮编: <app:com.postcode>]]></content>
+	</item>
+</xcml>

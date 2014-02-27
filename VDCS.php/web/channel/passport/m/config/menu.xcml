@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>name,url,config</field>
+		<title><![CDATA[]]></title>
+		<relate></relate>
+	</configure>
+	<item>
+		<name><![CDATA[{$names}管理]]></name>
+		<url><![CDATA[params=portal=faq&action=]]></url>
+		<config><![CDATA[icon=list;act=faq.action.list]]></config>
+	</item>
+	<item>
+		<name><![CDATA[频道配置]]></name>
+		<url><![CDATA[channel=system;p=model;m=configure;params=subchannel={$channel}]]></url>
+		<config><![CDATA[icon=configure;act=model.configure]]></config>
+	</item>
+	<!--
+	<item>
+		<name><![CDATA[sub.功能管理]]></name>
+		<config><![CDATA[icon=kernel;act=]]></config>
+	</item>
+	-->
+</xcml>

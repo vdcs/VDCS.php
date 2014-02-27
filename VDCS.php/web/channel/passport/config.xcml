@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre>
+		<channel>{@channel}</channel>
+		<name>通行证</name>
+		<names>页面</names>
+	</pre>
+	<var>
+		<title>Passport</title>
+		<title.index>null</title.index>
+		
+		<title.login>登录</title.login>
+		<title.logout>退出</title.logout>
+		<title.register>注册</title.register>
+		<title.activation>激活帐户</title.activation>
+		<title.invite>注册邀请</title.invite>
+		<title.agreement>服务协议</title.agreement>
+		
+		<title.forgot>null</title.forgot>
+		<title.forgot.password>忘记密码</title.forgot.password>
+		
+		<title.reset>null</title.reset>
+		<title.reset.password>重置密码</title.reset.password>
+		
+		<title.lostpass>找回密码</title.lostpass>
+		<title.resetpass>重置密码</title.resetpass>
+		<title.lostpassword>找回密码</title.lostpassword>
+		<title.resetpassword>重置密码</title.resetpassword>
+		
+		<title.oauth>开放平台</title.oauth>
+		<title.oauth.passv>Passv</title.oauth.passv>
+		<title.oauth.weibo>微博</title.oauth.weibo>
+		<title.oauth.qq>QQ</title.oauth.qq>
+	</var>
+	<num>
+		<islogin>1</islogin>
+		<isregister>1</isregister>
+		<register.mode></register.mode>
+		<email.only>1</email.only>
+		<issendmail>0</issendmail>
+		<isactivation>0</isactivation>
+		<name.type>2</name.type>
+		<name.min>4</name.min>
+		<name.max>50</name.max>
+		<password.min>4</password.min>
+		<password.max>20</password.max>
+		<email.min>5</email.min>
+		<email.max>100</email.max>
+		<names.min>2</names.min>
+		<names.max>50</names.max>
+		<realname.min>4</realname.min>
+		<realname.max>20</realname.max>
+		<pass5.is>1</pass5.is>
+	</num>
+	<config>
+		<url>default</url>
+		<name.hold>guest,游客</name.hold>
+		<name.holds>admin</name.holds>
+	</config>
+</xcml>

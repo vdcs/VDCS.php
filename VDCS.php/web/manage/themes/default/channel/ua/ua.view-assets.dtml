@@ -1,0 +1,54 @@
+
+<div class="box">
+	<h2><t>资金流动</t></h2>
+	<div class="bod">
+		<table class="table tables table-striped table-hover table-list">
+			<thead>
+				<tr><th class="id" style="width:80px;">ID</th><th>金额</th><th>流动类型</th><th>余额</th><th>时间</th></tr>
+			</thead>
+			<tbody id="list_transaction"></tbody>
+			<xmp id="list_transaction_tpl">
+				<tr dataid="[item:id]">
+					<td>[item:id]</td><td>[item:money]</td><td>[item:module.name]</td><td>[item:balance]</td><td>[item:tim.name]</td>
+				</tr>
+			</xmp>
+		</table>
+	</div>
+	<div class="con"><div class="pagings_transaction"></div><r><a class="btn btn-info" el="remit">添加汇款</a></r></div>
+</div>
+
+
+<script type="text/javascript">
+$(function(){
+	var parseTransaction=function(){
+		var list_transaction=new VDCS.list();
+		var transaction_opt={cont:$('#list_transaction'),tpl:$('#list_transaction_tpl')};
+		transaction_opt.serveVar={channel:'{@channel}',p:'assets',m:'transaction',action:'searchi',params:'listnum=5&uuid='+$p.q('id')};
+		transaction_opt.bind=function(jitem){
+		};
+		transaction_opt.binds=function(jcont){
+		};
+		transaction_opt.paging=$('.pagings_transaction');
+		transaction_opt.node_table='item';
+		list_transaction.init(transaction_opt);
+		list_transaction.parse();
+		ui.pages.channel='{@channel}';
+		var optremit={
+			serveE:{p:'assets',m:'remit',action:'apply',params:'uuid='+$p.q('id')},
+			serveX:{p:'assets',m:'remit',action:'apply',params:'uuid='+$p.q('id')},				
+			title:'汇款',
+			succeed:function(){
+				ui.popups('succeed','汇款成功');
+				setTimeout(function(){
+					list_transaction.refresh();
+					//tpl.refresh();
+				},1000);
+			},
+		};
+		ui.pages.record($('[el=remit]'),optremit);
+	};
+	parseTransaction();
+
+
+});
+</script>

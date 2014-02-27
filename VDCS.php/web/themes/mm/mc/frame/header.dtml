@@ -1,0 +1,41 @@
+<label:include file="/header.blank">
+<label:include script="<web:url.theme>{@channel}/appc.js">
+<script type="text/javascript">
+$w.wid=980;
+appc.urlXmlsBase="<linkurl:{@channel}.xmls>";
+$d.load(function(){appc.initPage()});
+</script>
+<center>
+<div id="Confine"></div>
+<div id="Header">
+	<div id="HeaderFrame"><div id="HeaderFrameBody">
+		<div id="HeaderLogo"><div class="HeaderLogoFrame" id="HeaderLogoFrame"><a href="<url:root>" title="<app:web.name>"><img id="logo_header" border="0" src="<url:images>logo_header-{@channel}.gif" alt="<app:web.name>" /></a></div></div>
+		<div id="HeaderSubMenu"><div class="partFrame"><div class="partBody" id="HeaderSubMenuBody">
+<ul>
+<!--{if isBool({${@uao}.isLogin()})}-->
+<li>
+<a class="uaname"><span><em id="id-name" class="b"><{@uao}:name></em></span></a>
+</li>
+<!--{else}-->
+<li><a class="uaname"><span><{@uao}:name></span></a></li>
+<!--{/if}-->
+<li><a href="<url:{@uarc}.logout>" onclick="javascript:return w.confirm('您确定要安全退出吗？')?true:false;">安全退出</a></li>
+<li><a href="<url:root>">首页</a></li>
+</ul>
+		</div></div></div>
+		<div class="clear"></div>
+	</div></div>
+	<div id="HeaderMenu"><div id="HeaderMenuFrame"><div id="HeaderMenuBody">
+		<div class="MenuTab"><div class="partFrame"><div class="partBody">
+<ul>
+<themes:menu("mm.{@channel}")>
+<li id="Header-Menu-[menu:id]"><a href="[menu:url]" [menu:atts]><span>[menu:name]</span></a></li>
+<@part:space>
+<li class="space"><a><span></span></a></li>
+</themes>
+</ul>
+		</div></div></div>
+	</div></div></div>
+</div>
+<div id="test-box" class="al"></div>
+<div class="FramerFloor"><div class="SpaceMain"></div></div>

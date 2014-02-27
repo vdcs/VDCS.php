@@ -1,0 +1,20 @@
+<label:include file="frame/headers">
+
+<div class="main">
+	<div class="box">
+		<h2><t><channel:nav("")></t></h2>
+		<div class="con">
+			<div class="e_list">
+				<ul>
+					<label:list>
+					<li><t><a href="[item:linkurl]">[item:topic!html!50]</a></t><r><span class="time">[item:tim!date]</span></r></li>
+					</label:end>
+				</ul>
+			</div>
+		</div>
+		<label:include file="/inc/e/paging.box">
+	</div>
+</div>
+
+
+<label:include file="frame/footers">

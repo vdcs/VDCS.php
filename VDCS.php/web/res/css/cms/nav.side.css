@@ -1,0 +1,23 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @nav.side v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######################### */
+.SideNav{min-height:350px;_height:350px;padding:0;}
+.SideNav ul{}
+.SideNav li{height:39px;font-size:14px;background-image:none;padding:0;margin:0 0 5px 0;}
+.SideNav li a{display:block;height:39px;line-height:39px;background:url("../../common/struct/sidenav.png") 0 -0px no-repeat;text-decoration:none;overflow:hidden;}
+.SideNav li.pop a,
+.SideNav li a.pop,
+.SideNav li a:hover{color:#000;background-position:0 -40px;}
+.SideNav li a span{display:block;text-indent:65px;}
+
+/*
+.SideNav li.pop a,
+.SideNav li a.pop,
+.SideNav li a:hover{color:#FFF;background-position:0 -80px;}
+*/

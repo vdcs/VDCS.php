@@ -1,0 +1,9 @@
+
+<div class="xform" 
+	_channel="{@channel}" _p="{@portal}" _m="{@module}" _x="{@extend}" _action="<ctl:action>" _mode="<ctl:mode>"
+	_title="<var:title>" _names="<var:names>" _name="<var:name>">
+<dtml:_message>
+<dtml:_pages.message>
+<dtml:_pages.debug>
+<dtml:_pages.form>
+</div>

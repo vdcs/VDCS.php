@@ -1,0 +1,17 @@
+﻿<div class="box">
+	<h2><t><channel:var("title.class")></t></h2>
+	<div class="con">
+<div class="class_main"><ul>
+<li class="hide"><dt>
+<label:class("{@channel}","res=level;level=2;m=multi")>
+<dd><a href="[item:linkurl]"><span>[item:name]</span></a><i>[item:total]</i></dd>
+<@part:level1>
+</dt></li>
+<li>
+<cite><a href="[item:linkurl]"><span>[item:name]</span></a></cite>
+<dt>
+</label:end>
+</li>
+</ul></div>
+	</div>
+</div>

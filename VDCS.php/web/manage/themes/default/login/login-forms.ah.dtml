@@ -1,0 +1,25 @@
+
+<div class="forms ah i">
+<form name="frm_login" action="<dcs:browse.paths>" method="post">
+<dl>
+<dt el="name">
+	<h2></h2>
+	<h3><p><input class="tipi" type="text" name="name" value="<data:name!form.input>" placeholder="帐号" minlength="2" maxlength="20" tabindex="1" /><em class="it id"></em><em class="ih require" title="请输入您的帐号"></em></p></h3>
+</dt>
+<dt el="password">
+	<h2></h2>
+	<h3><p><input class="tipi" type="password" name="password" value="<data:password!form.input>" placeholder="登录密码" minlength="4" maxlength="20" tabindex="2" /><em class="it password"></em><em class="ih require" title="请输入您的登录密码"></em></p></h3>
+</dt>
+<dt el="secure_code" class="hided">
+	<h2></h2>
+	<h3><p><input type="text" class="tipi" name="secure_code" value="" placeholder="安全密码" minlength="" maxlength="10" /><em class="it vcode"></em><em class="ih" title="请输入安全密码"></em></p></h3>
+</dt>
+<dd class="tips"><h3><p class="itip"><em></em><span>提示信息</span></p></h3></dd>
+<dd>
+	<h3>
+	<a class="btn m ah" el="submit" href="<dcs:browse.paths>"><span>管 理 登 录</span></a>
+	</h3>
+</dd>
+</form>
+</dl>
+</div>

@@ -1,0 +1,402 @@
+
+part.m.content
+!==================!
+	<input>
+		<type>multibar.head</type>
+		<att>id=content;display=none</att>
+	</input>
+<label:include file="part.sp.code!">
+<label:include file="part.remark">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+!##################!
+
+part.m.content!d
+!==================!
+	<input>
+		<type>multibar.head</type>
+		<att>id=content;display=none</att>
+	</input>
+<label:include file="part.sp.code!">
+<label:include file="part.remark!d">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+!##################!
+
+part.m.props
+!==================!
+	<input>
+		<type>multibar.head</type>
+		<att>id=attr;display=none</att>
+	</input>
+<label:include file="part.props!">
+<label:include file="part.sp.attrs">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+!##################!
+
+part.m.sp
+!==================!
+	<input>
+		<type>multibar.head</type>
+		<att>id=sp;display=none</att>
+	</input>
+	<input>
+		<type>hidden.sp_mode</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=]]></property>
+	</input>
+	<input>
+		<type>hidden.sp_edition</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+	</input>
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[{@xact}权限]]></caption>
+	</input>
+	<input>
+		<type>checkbox.sp_popedom</type>
+		<property><![CDATA[item=;class=sp;action=;type=string;max=200;min=]]></property>
+		<caption><![CDATA[{@xact}权限]]></caption>
+		<att><![CDATA[<control:att("file","sort=user.group")>]]></att>
+		<value></value>
+		<explain>不选表示对所有人开放</explain>
+	</input>
+	<input>
+		<type>text.sp_emoney</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=10;min=;classi=emoney]]></property>
+		<caption><![CDATA[{@xact}<app:var.emoney>]]></caption>
+		<att></att>
+		<value>0.0</value>
+		<explain><![CDATA[<app:unit.emoney>$$${@xact}所要扣除的<app:var.emoney>]]></explain>
+	</input>
+	<input>
+		<type>text.sp_points</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=10;min=;classi=points]]></property>
+		<caption><![CDATA[{@xact}<app:var.points>]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.points>$$${@xact}所要扣除的<app:var.points>]]></explain>
+	</input>
+	<input>
+		<type>hidden.sp_poll_agree</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<value>0</value>
+	</input>
+	<input>
+		<type>hidden.sp_poll_oppose</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<value>0</value>
+	</input>
+	<input>
+		<type>hidden.sp_defined</type>
+		<property><![CDATA[item=;action=;type=string;max=1000;min=]]></property>
+		<value></value>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+!##################!
+
+part.m.upload
+!==================!
+	<input>
+		<type>multibar.head</type>
+		<att>id=upload;display=none</att>
+	</input>
+	<input>
+		<type>upload</type>
+		<property><![CDATA[item=;action=;type=;max=;min=]]></property>
+		<caption><![CDATA[文件上传]]></caption>
+		<att><![CDATA[channel={@channel};filetype={@up.filetype};filename={@up.filename};fileinput={@tpx}pic]]></att>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+!##################!
+
+part.m.pivotal
+!==================!
+	<input>
+		<type>multibar.head</type>
+		<att>id=pivotal;display=none</att>
+	</input>
+	
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[安全信息]]></caption>
+	</input>
+	<input>
+		<type>text.pivotal_password</type>
+		<property><![CDATA[item=;class=s;action=;type=string;max=50;min=0;classi=password]]></property>
+		<caption><![CDATA[登录密码]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[建议长度为4-20位]]></explain>
+	</input>
+	<input>
+		<type>text.pivotal_safe_question</type>
+		<property><![CDATA[item=;class=;action=;type=string;max=50;min=;classi=item]]></property>
+		<caption><![CDATA[安全问题]]></caption>
+		<att><![CDATA[]]></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.pivotal_safe_answer</type>
+		<property><![CDATA[item=;class=;action=;type=string;max=50;min=0;classi=item]]></property>
+		<caption><![CDATA[安全答案]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.pivotal_password_safe</type>
+		<property><![CDATA[item=;class=;action=;type=string;max=50;min=;classi=item]]></property>
+		<caption><![CDATA[安全码]]></caption>
+		<att><![CDATA[]]></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[计时信息]]></caption>
+	</input>
+	<input>
+		<type>radio.pivotal_timed</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<caption><![CDATA[是否计时]]></caption>
+		<att>0=普通;1=计时;9=计时且永不过期</att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>radio.pivotal_timed_status</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<caption><![CDATA[计时状态]]></caption>
+		<att><![CDATA[<control:att("dict","data.timed")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.pivotal_timed_expire</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=0;classi=date]]></property>
+		<caption><![CDATA[过期时间]]></caption>
+		<att></att>
+		<value>0000-00-00</value>
+		<explain><![CDATA[<script>$pf.chooseTime('pivotal_timed_expire');</script> 格式:<dcs:time.now>]]></explain>
+	</input>
+	
+	<input>
+		<type>hidden.pivotal_configure</type>
+		<property><![CDATA[item=;action=;type=string;max=10000;min=]]></property>
+		<caption><![CDATA[{@xnames}配置]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[其它信息]]></caption>
+	</input>
+	<input>
+		<type>textbox.pivotal_explain</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<caption><![CDATA[{@xnames}备注]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	
+	<input>
+		<type>multibar.foot</type>
+	</input>
+!##################!
+
+part.m.pivotal.user
+!==================!
+	<input>
+		<type>multibar.head</type>
+		<att>id=pivotal;display=none</att>
+	</input>
+	
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[安全信息]]></caption>
+	</input>
+	<input>
+		<type>text.pivotal_password</type>
+		<property><![CDATA[item=;class=s;action=;type=string;max=50;min=0]]></property>
+		<caption><![CDATA[登录密码]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[建议长度为4-20位]]></explain>
+	</input>
+	<input>
+		<type>select.pivotal_safe_question</type>
+		<property><![CDATA[item=;class=;action=;type=string;max=50;min=]]></property>
+		<caption><![CDATA[安全问题]]></caption>
+		<att><![CDATA[<control:att("file","sort=question")>]]></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.pivotal_safe_answer</type>
+		<property><![CDATA[item=;class=;action=;type=string;max=50;min=0]]></property>
+		<caption><![CDATA[安全答案]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[计时信息]]></caption>
+	</input>
+	<input>
+		<type>radio.pivotal_timed</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<caption><![CDATA[是否计时]]></caption>
+		<att>0=普通;1=计时;9=计时且永不过期</att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>radio.pivotal_timed_status</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<caption><![CDATA[计时状态]]></caption>
+		<att><![CDATA[<control:att("dict","data.timed")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.pivotal_timed_expire</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=0]]></property>
+		<caption><![CDATA[过期时间]]></caption>
+		<att></att>
+		<value>0000-00-00</value>
+		<explain><![CDATA[<script>$pf.chooseTime('pivotal_timed_expire');</script> 格式:<dcs:time.now>]]></explain>
+	</input>
+	
+	<input>
+		<type>hidden.pivotal_configure</type>
+		<property><![CDATA[item=;action=;type=string;max=10000;min=]]></property>
+		<caption><![CDATA[{@xnames}配置]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[其它信息]]></caption>
+	</input>
+	<input>
+		<type>textbox.pivotal_explain</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<caption><![CDATA[{@xnames}备注]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	
+	<input>
+		<type>multibar.foot</type>
+	</input>
+!##################!
+
+part.m.pivotal.corp
+!==================!
+	<input>
+		<type>multibar.head</type>
+		<att>id=pivotal;display=none</att>
+	</input>
+	
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[安全信息]]></caption>
+	</input>
+	<input>
+		<type>text.pivotal_password</type>
+		<property><![CDATA[item=;class=s;action=;type=string;max=50;min=0]]></property>
+		<caption><![CDATA[登录密码]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[建议长度为4-20位]]></explain>
+	</input>
+	<input>
+		<type>text.pivotal_safe_question</type>
+		<property><![CDATA[item=;class=;action=;type=string;max=50;min=]]></property>
+		<caption><![CDATA[安全问题]]></caption>
+		<att><![CDATA[]]></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.pivotal_safe_answer</type>
+		<property><![CDATA[item=;class=;action=;type=string;max=50;min=0]]></property>
+		<caption><![CDATA[安全答案]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[计时信息]]></caption>
+	</input>
+	<input>
+		<type>radio.pivotal_timed</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<caption><![CDATA[是否计时]]></caption>
+		<att>0=普通;1=计时;9=计时且永不过期</att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>radio.pivotal_timed_status</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<caption><![CDATA[计时状态]]></caption>
+		<att><![CDATA[<control:att("dict","data.timed")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.pivotal_timed_expire</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=0]]></property>
+		<caption><![CDATA[过期时间]]></caption>
+		<att></att>
+		<value>0000-00-00</value>
+		<explain><![CDATA[<script>$pf.chooseTime('pivotal_timed_expire');</script> 格式:<dcs:time.now>]]></explain>
+	</input>
+	
+	<input>
+		<type>hidden.pivotal_configure</type>
+		<property><![CDATA[item=;action=;type=string;max=10000;min=]]></property>
+		<caption><![CDATA[{@xnames}配置]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[其它信息]]></caption>
+	</input>
+	<input>
+		<type>textbox.pivotal_explain</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<caption><![CDATA[{@xnames}备注]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+	
+	<input>
+		<type>multibar.foot</type>
+	</input>
+!##################!

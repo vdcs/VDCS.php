@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="struct">
+	<configure>
+		<node>item</node>
+	</configure>
+	<item>
+		<__key><![CDATA[var.frame]]></__key>
+		<__name><![CDATA[模板结构变量]]></__name>
+		<__file><![CDATA[themes/var]]></__file>
+		<__cache><![CDATA[]]></__cache>
+		<frame.beian><![CDATA[网站备案号		###property.min~1	^style~size=30		^explain~网站在<a href="http://www.miibeian.gov.cn/" target="_blank">Miibeian.gov.cn</a>上申请的备案号]]></frame.beian>
+		<frame.copyright><![CDATA[版权信息		###type~textbox		^property.min~1		^style~cols=50 rows=3 class="itxt"]]></frame.copyright>
+		<frame.stat><![CDATA[统计代码			###type~textbox		^property.min~		^style~cols=50 rows=5 class="itxt"]]></frame.stat>
+		<frame.header.nav><![CDATA[头部公共导航		###type~textbox		^property.min~		^style~cols=50 rows=5 class="itxt"]]></frame.header.nav>
+	</item>
+	<item>
+		<__key><![CDATA[var.ad]]></__key>
+		<__name><![CDATA[模板广告变量]]></__name>
+		<__file><![CDATA[themes/var]]></__file>
+		<__cache><![CDATA[]]></__cache>
+		<ad.banner.head><![CDATA[头部Banner代码		###type~textbox		^property.min~		^style~cols=50 rows=5 class="itxt"]]></ad.banner.head>
+		<ad.fullbanner.head><![CDATA[头部全屏Banner代码	###type~textbox		^property.min~		^style~cols=50 rows=5 class="itxt"]]></ad.fullbanner.head>
+		<ad.banner.foot><![CDATA[底部Banner代码		###type~textbox		^property.min~		^style~cols=50 rows=5 class="itxt"]]></ad.banner.foot>
+		<ad.fullbanner.foot><![CDATA[底部全屏Banner代码	###type~textbox		^property.min~		^style~cols=50 rows=5 class="itxt"]]></ad.fullbanner.foot>
+		<ad.footer><![CDATA[底部自定义代码		###type~textbox		^property.min~		^style~cols=50 rows=5 class="itxt"]]></ad.footer>
+	</item>
+</xcml>

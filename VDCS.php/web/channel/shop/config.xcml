@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre xmlns:product="node" xmlns:data="node" xmlns:order="node" xmlns:orderi="node" xmlns:brand="node">
+		<channel>{@channel}</channel>
+		<table.namex>db_{@channel}_</table.namex>
+		<table.name>db_{@channel}_product</table.name>
+		<table.px>p_</table.px>
+		<name>商城</name>
+		<names>商品</names>
+		<act>购买</act>
+		<act.view>浏览</act.view>
+		<act.order>订购</act.order>
+		<act.buy>购买</act.buy>
+		<unit>件</unit>
+		
+		<product:table.name>db_{@channel}_product</product:table.name>
+		<product:table.px>p_</product:table.px>
+		<product:name>商品</product:name>
+		<product:names>商品</product:names>
+		<product:unit>件</product:unit>
+		<product:act>购买</product:act>
+		<product:act.view>浏览</product:act.view>
+		<product:act.get>购买</product:act.get>
+		<product:act.order>订购</product:act.order>
+		<product:act.buy>购买</product:act.buy>
+		
+		<data:type>s</data:type>
+		<data:table.name>dbd_data</data:table.name>
+		<data:table.px></data:table.px>
+		<data:name>附件</data:name>
+		<data:names>附件</data:names>
+		<data:names.pic>图片</data:names.pic>
+		<data:unit>个</data:unit>
+		<data:act>查看</data:act>
+		<data:act.view>查看</data:act.view>
+		<data:act.get>下载</data:act.get>
+		
+		<order:table.name>db_{@channel}_order</order:table.name>
+		<order:table.px></order:table.px>
+		<order:name>订单</order:name>
+		<order:names>订单</order:names>
+		<order:unit>个</order:unit>
+		<order:act>浏览</order:act>
+		<orderi:table.name>db_{@channel}_orderi</orderi:table.name>
+		<orderi:table.px>i_</orderi:table.px>
+		<orderi:name>订单项</orderi:name>
+		<orderi:names>订单项</orderi:names>
+		<orderi:unit>条</orderi:unit>
+		<orderi:act>查看</orderi:act>
+		
+		<brand:table.name>db_{@channel}_brand</brand:table.name>
+		<brand:table.px>b_</brand:table.px>
+		<brand:name>品牌</brand:name>
+		<brand:names>品牌</brand:names>
+		<brand:unit>个</brand:unit>
+		<brand:act>浏览</brand:act>
+	</pre>
+	<var>
+		<title>商城</title>
+		<title.index>null</title.index>
+		<title.list>商品列表</title.list>
+		<title.view>浏览商品</title.view>
+		<title.view.data>浏览附件</title.view.data>
+		<title.search>商品搜索</title.search>
+		<title.pic>图片商品</title.pic>
+		<title.class>商品分类</title.class>
+		<title.special>商品专题</title.special>
+		
+		<title.brand>商品品牌</title.brand>
+		<title.compare>商品比较</title.compare>
+		
+		<title.cart>我的购物车</title.cart>
+		<title.pay>结算中心</title.pay>
+		<title.payment>支付中心</title.payment>
+		<title.order>订单查询</title.order>
+		<title.order.track>订单详情</title.order.track>
+		
+		<title.user>用户中心</title.user>
+		<title.faq>帮助中心</title.faq>
+	</var>
+	<num>
+		<pic.width>0</pic.width>
+		<pic.height>0</pic.height>
+	</num>
+	<config>
+		<url>default</url>
+		
+		<attr>self</attr>
+		<attr.type>demo</attr.type>
+		
+		<auction></auction>
+	</config>
+</xcml>

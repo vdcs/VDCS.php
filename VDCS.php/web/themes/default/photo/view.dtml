@@ -1,0 +1,36 @@
+<label:include file="frame/headers">
+
+
+<label:include script="<web:url.themed>images/app.view.js">
+<script type="text/javascript">view.init("{@channel}","{@id}");</script>
+
+<div class="cont">
+	<div class="box">
+		<div class="con">
+<label:include file="/inc/e/view-init">
+<div class="e_view" data-channel="{@channel}" data-id="{@id}">
+<label:include file="/inc/e/view-topic">
+<label:include file="/inc/e/view-bari-simple">
+<label:include file="/inc/e/view-photo">
+<label:include file="/inc/e/view-relates">
+</div>
+		</div>
+	</div>
+	
+	<div class="space"></div>
+	<div class="box">
+		<h2><t><lang:view.remark></t></h2>
+		<div class="con">
+<div class="StructView re-content">
+<div class="partRemark remarks" id="div-view-remark"><table cellpadding="0" cellspacing="0" class="tab-content table-break"><tr><td class="word-break"><div class="word-break scroll-y" id="div-view-remark-content"><view:remark></div></td></tr></table></div>
+<script type="text/javascript">//view.doContentResize("div-view-remark-content");</script>
+
+</div>
+		</div>
+	</div>
+	
+<label:include file="/inc/view/comment.box">
+</div>
+
+
+<label:include file="frame/footers">

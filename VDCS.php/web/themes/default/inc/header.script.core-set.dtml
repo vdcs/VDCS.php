@@ -1,0 +1,1 @@
+<script type="text/javascript">$c.setv('<dcs:time.now>','<app:var.script.d>','<app:url.mode>','{#x}');$c.setPath('<app:dir.root>','<url:root>','<web:url.theme>');$c.setUnit('<app:unit.emoney>','<app:unit.points>','<app:unit.exp>');$c.setr('{@channel}','{@portal}','{@module}','{@modulei}');$c.setUA('<ua:_rc>','<ua:id>','<ua:name>');</script>

@@ -1,0 +1,53 @@
+<label:include file="frame/headers">
+
+<label:include script="comm/avatar.css" type="css">
+<label:include script="comm/uax.css" type="css">
+
+<!-- ######################################## -->
+<!-- ######################################## -->
+<!-- ######################################## -->
+<div class="framer">
+	<div class="side">
+
+<div class="all">
+	
+<div class="uax_info"><dl>
+	<dt><a href="javascript:;"><span class="avatarm"><img src="<url:images>ua/avatar.gif" /></span></a></dt>
+	<dd>
+		<p class="name"><a href="#profile" title="Ranoms">Ranoms</a></p>
+		<p class="no">10001</p>
+		<p><a href="#level"><span class="uax_level uax_level0"></span></a></p>
+	</dd>
+</dl></div>
+<div class="uax_atten"><dl>
+	<dd class="first"><a href="<url:mime>"><em>135</em><span>广播</span></a></dd>
+	<dd><a href="<url:favor>"><em>8</em><span>收藏</span></a></dd>
+	<dd><a href="<url:follow>"><em>76</em><span>关注</span></a></dd>
+	<dd class="last"><a href="<url:fans>"><em>24</em><span>粉丝</span></a></dd>
+</dl></div>
+
+<div class="space"></div>
+
+<div class="uax_info"><dl>
+	<dt><a href="javascript:;"><span class="avatarm mask"><img id="img-ua-avatar1" class="icon" src="<url:images>ua/avatar.gif" /><s></s></span></a></dt>
+	<dd>
+		<p class="name" title="Guest">Guest</p>
+		<p class="no">10001</p>
+	</dd>
+</dl></div>
+
+</div>
+
+	</div>
+	<div class="MainCenter">
+
+
+	</div>
+	<div class="SideRight">
+
+	</div>
+</div>
+<div class="framer"><div class="space"></div></div>
+
+
+<label:include file="frame/footers">

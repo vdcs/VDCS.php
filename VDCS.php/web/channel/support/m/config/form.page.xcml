@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+		<!--
+		<sp.code>code=sp_code;remark=c_remark</sp.code>
+		-->
+	</configure>
+	<input>
+		<type>text.key</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=1;classi=value]]></property>
+		<style>size=30 maxlength=20</style>
+		<caption><![CDATA[Key索引]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.sort</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=;classi=value]]></property>
+		<style>size=30 maxlength=20</style>
+		<caption><![CDATA[Sort索引]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.type</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=;classi=value]]></property>
+		<style>size=30 maxlength=20</style>
+		<caption><![CDATA[类型]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.topic</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=1]]></property>
+		<style>size=60 maxlength=200</style>
+		<caption><![CDATA[标题信息]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>textbox.summary</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>cols=60 rows=4 class="itxt"</style>
+		<caption><![CDATA[简介信息]]></caption>
+		<att></att>
+		<value><![CDATA[]]></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.prop1</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>size=60 maxlength=250</style>
+		<caption><![CDATA[变量字段1]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.prop2</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>size=60 maxlength=250</style>
+		<caption><![CDATA[变量字段2]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.prop3</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>size=60 maxlength=250</style>
+		<caption><![CDATA[变量字段3]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.prop4</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>size=60 maxlength=250</style>
+		<caption><![CDATA[变量字段4]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.prop5</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>size=60 maxlength=250</style>
+		<caption><![CDATA[变量字段5]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.sp_code</type>
+		<property><![CDATA[item=;action=;type=int;max=10;min=]]></property>
+		<style></style>
+		<caption><![CDATA[]]></caption>
+		<att></att>
+		<value>2</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>editor_html.remark</type>
+		<property><![CDATA[item=;action=;type=string;max=200000;min=1]]></property>
+		<style></style>
+		<caption><![CDATA[详细内容$$$<br><br><br><br>]]></caption>
+		<att>height=300</att>
+		<value></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>hidden.info</type>
+		<property><![CDATA[item=;action=;type=string;max=250;min=]]></property>
+		<style>cols=60 rows=4 class="itxt"</style>
+		<caption><![CDATA[控制信息]]></caption>
+		<att></att>
+		<value><![CDATA[]]></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.orderid</type>
+		<property><![CDATA[item=;action=;type=int;max=15;min=]]></property>
+		<style>size=20 maxlength=20 class="total"</style>
+		<caption><![CDATA[排 序 值]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[$$$排序值越大越靠前]]></explain>
+	</input>
+	<input>
+		<type>text.tim_up</type>
+		<property><![CDATA[item=;action=;type=time;max=20;min=1;classi=time]]></property>
+		<style>size=20 maxlength=20 class="time"</style>
+		<caption><![CDATA[更新时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.tim</type>
+		<property><![CDATA[item=;action=add;type=time;max=20;min=1;classi=time]]></property>
+		<style>size=20 maxlength=20 class="time"</style>
+		<caption><![CDATA[添加时间]]></caption>
+		<att></att>
+		<value><![CDATA[<dcs:time.now>]]></value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.status</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[当前状态]]></caption>
+		<att><![CDATA[<control:att("dict","data.hide")>]]></att>
+		<value>1</value>
+		<explain></explain>
+	</input>
+</xcml>

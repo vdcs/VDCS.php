@@ -1,0 +1,38 @@
+<label:include file="header.frame">
+<script type="text/javascript">
+mframe._data["menu.item.id"]="";
+$d.load(function(){mframe.doNavInit()});
+</script>
+<div class="BodyFrameNav">
+<div class="FrameNav-Main" id="FrameNav-Main">
+<div class="FrameNav-MainFrame">
+	<div class="FrameNav-Main-Body">
+		<div class="partCom"><a class="name" href="<url:root>" target="_blank"><app:web.name></a><span class="title">管理后台</span></div>
+		<div class="partNav">
+			<ul>
+			<li class="welcome">Hi <span class="username"><manager:name></span>!</li>
+			<li class="main"><a href="<url:manage.main>" target="FrameMain">管理首页</a></li>
+			<li class="refresh"><a href="javascript:;" onclick="javascript:mframe.doReload('main');">刷新页面</a></li>
+			<!--<li class="help"><a href="<url:manage.help>" target="_blank">帮助中心</a></li>-->
+			<li class="logout"><a href="<url:manage.logout>" onclick="javascript:return mframe.isLogoutReturn();" target="_top">安全退出</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="FrameNav-Main-Menu">
+		<div class="partNow" id="FrameNav-Now-RelateMenu"><div class="partNowFrame"><div class="partNowBody">今天是 <span id="FrameNow-Date">0000-00-00</span> <span id="FrameNow-Week">星期</span></div></div></div>
+		<div class="partNav">
+		<div class="partNavFrame">
+		<div class="partNavBody">
+<ul id="FrameNav-Menu-Items">
+<loop:nav>
+<li id="FrameNav-Menu-Item-[item:channel]"><a href="<url:manage.frame.menu>&channel=[item:channel]" onclick="javascript:return mframe.doNavMenuClick(this);" target="FrameMenu"><span>[item:name]</span></a></li>
+</loop>
+</ul>
+		</div>
+		</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<label:include file="footer.frame">

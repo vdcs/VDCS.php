@@ -1,0 +1,69 @@
+﻿
+<script type="text/javascript">
+app._xregister={
+	initer:function(opt,selector){
+		opt=ox({frm:'frm_post',
+			names			: '注册',
+			message_formcheck	: '请填写必要的注册信息！',
+			message_parser		: '注册中..',
+			message_succeed		: '注册成功！',
+			submit_ing		: '注册中..',
+			submit_succeed		: '注册成功！',
+			ua:''},opt);
+		if(!opt.serveURL) opt.serveURL=app.serve('p/register','ua='+opt.ua);
+		var backurl=$req.q('backurl')||$req.q('url');
+		if(backurl) opt.backurl=backurl;
+		this._initer(opt,selector);if(!this.isinit)return;
+		this.submitInit();
+	},
+	
+	setValue:function(vs){
+		vs=oapd({},vs);
+		var field,fields=('id,key,no,name,email,mobile,password').split(',');
+		for(var n in fields){
+			field=fields[n];
+			if(vs[field]) this.jform.find('[name="'+field+'"]').val(vs[field]).focus();
+		}
+	},
+'':''};
+app.xregister=extend(app.xform,app._xregister);
+
+
+extendo(app.xregister,{
+	isEmail:function(str){
+		if(str.indexOf(" ")>0||str.indexOf("	")>0)return false;
+		var rule = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+		return rule.test(str);
+	},
+	autoAccount:function(dcode){
+		if(typeof(dcode)=='undefined') dcode=true;
+		var that=this;
+		var jforms=$('.forms');
+		if(dcode){
+			jforms.finde('dcode_send').click(function(){app.dcode.click($(this))});
+		}
+		jforms.finde('account').find('input[name="account"]').blur(function(){
+			var account=$(this).val(),email='',mobile='';
+			if(!account) return;
+			if(that.isEmail(account)){
+				email=account;
+				if(dcode){
+					var je=jforms.finde('mobile_dcode'),jei=je.find('input:first');
+					jei.attr('minlength',0);
+					je.removeClass('hided').hide();
+				}
+			}
+			else{
+				mobile=account;
+				if(dcode){
+					var je=jforms.finde('mobile_dcode'),jei=je.find('input:first');
+					jei.attr('minlength',jei.attrd('min'));
+					je.removeClass('hided').show();
+				}
+			}
+			jforms.find('input[name="email"]').val(email);
+			jforms.find('input[name="mobile"]').val(mobile);
+		});
+	},
+'':''});
+</script>

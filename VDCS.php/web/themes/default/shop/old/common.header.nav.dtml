@@ -1,0 +1,14 @@
+<div class="hide" id="Header-BoxBody-Refill">
+<div class="nav">
+<a class="button button-index" href="<linkurl:{@channel}.index>"><span><channel:var("title")></span></a>
+<a class="button" href="<linkurl:{@channel}.lists>"><span><channel:var("title.list")></span></a>
+<a class="button" href="<linkurl:{@channel}.search>"><span><channel:var("title.search")></span></a>
+<a class="button" href="<linkurl:{@channel}.cart>"><span><channel:var("title.cart")></span></a>
+<a class="button" href="<linkurl:{@channel}.order>"><span><channel:var("title.order")></span></a>
+&nbsp;&nbsp;
+<langs:chn.class>:
+<label:class("{@channel}","res=level;level=1;row=4;t=h")>
+<a class="button button-class" href="[item:linkurl]"><span>[item:name]</span></a>
+</label:end>
+</div>
+</div>

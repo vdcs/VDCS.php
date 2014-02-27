@@ -1,0 +1,29 @@
+@charset "utf-8";
+/*
+Version:	VDCS comm @oauth v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+.icon_passv,.icon_qq,.icon_weibo{display:inline-block;width:16px;height:16px;background:url("../../common/struct/oauth.png") 0 0 no-repeat;text-indent:-999px;overflow:hidden;}
+.icon_passv{background-position:-22px -2px;}
+.icon_qq{background-position:-42px -2px;}
+.icon_weibo{background-position:-62px -2px;}
+.oauth_passv,.oauth_passv_s,
+.oauth_qq,.oauth_qq_s,.oauth_weibo,.oauth_weibo_s{display:inline-block;width:60px;height:24px;background:url("../../common/struct/oauth.png") 0 0 no-repeat;overflow:hidden;}
+.oauth_passv{background-position:-80px -64px;width:120px;}
+.oauth_passv_s{background-position:0 -64px;}
+.oauth_qq{background-position:-80px -88px;width:120px;}
+.oauth_qq_s{background-position:0 -88px;}
+.oauth_weibo{background-position:-80px -112px;width:120px;}
+.oauth_weibo_s{background-position:0 -112px;}
+.oauth_passv span,.oauth_passv_s span,.oauth_qq span,.oauth_qq_s span,.oauth_weibo span,.oauth_weibo_s span{display:none;text-indent:-9999px;}
+
+
+.sync,.sync_weibo,.sync_qq{display:inline-block;width:20px;height:20px;background:url("../../common/struct/oauth_sync.png") 0 0 no-repeat;overflow:hidden;}
+.sync span,.sync_weibo span,.sync_qq span{display:none;}
+.sync_weibo{background-position:-20px -20px;}
+.sync_weibo.pop{background-position:-0px -20px;}
+.sync_qq{background-position:-20px -40px;}
+.sync_qq.pop{background-position:-0px -40px;}

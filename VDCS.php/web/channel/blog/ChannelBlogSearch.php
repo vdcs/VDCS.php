@@ -1,0 +1,6 @@
+<?
+class ChannelBlogSearch extends ChannelBlogList
+{
+	
+}
+?>

@@ -1,0 +1,4 @@
+<!--[if lt IE 9]><label:include script="res/html5.shiv.js"><![endif]-->
+<label:include script="jquery/<vart("var.jquery.v")>.min.js"><label:include script="jquery/extend.min.js">
+<label:include script="<vart("var.lineu{#xx}")>VDCS.js"><label:include script="VDCS.ui.js">
+<label:include file="/inc/header.script.core-set">

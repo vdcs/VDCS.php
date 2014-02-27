@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>radio.u_groupid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=1]]></property>
+		<style></style>
+		<caption><![CDATA[接收用户组]]></caption>
+		<att><![CDATA[999=所有人;<control:att("file","common.channel.user/group")>]]></att>
+		<value>999</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.m_topic</type>
+		<property><![CDATA[item=;class=s;action=;type=string;max=50;min=1]]></property>
+		<style>size=60 maxlength=60</style>
+		<caption><![CDATA[短信标题]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[建议长度为4-50位]]></explain>
+	</input>
+	<input>
+		<type>editor.m_remark</type>
+		<property><![CDATA[item=;action=;type=string;max=100000;min=10]]></property>
+		<style></style>
+		<caption><![CDATA[短信内容]]></caption>
+		<att></att>
+		<value></value>
+		<explain></explain>
+	</input>
+</xcml>

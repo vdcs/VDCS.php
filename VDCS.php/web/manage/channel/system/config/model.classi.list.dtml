@@ -1,0 +1,53 @@
+<label:include file="header.channel">
+
+<label:include file="frame.sideleft">
+<div class="Block">
+	<div class="BlockBar"><p>分类列表</p></div>
+	<div class="BlockBody"><div class="BlockInner">
+<table class="tab tabs">
+<form name="frm_list" action="" method="post">
+<input type="hidden" name="_chk" value="yes" />
+<tr class="sub align-center">
+<td class="bar-id">ClassID</td>
+<td class="bar-info">分类信息</td>
+<td class="bar-item">排序</td>
+<td class="bar-item"></td>
+<td class="bar-handle w100">相关操作</td>
+</tr>
+<loop:list>
+<tr class="row ac">
+<td class="row-id">[item:classid]</td>
+<td class="row-info"><span class="space-option[item:levelid]"><a href="<v:url.edit>">[item:name]</a></span></td>
+<td class="row-item re-input"><input class="align-center" type="input" name="orderid[item:classid]" value="[item:orderid]" style="width:40px;" /></td>
+<td class="row-item"><!--{if (toInt({$list:levelid})>1)}--><a href="<v:url.sort>">子分类</a><!--{/if}--></td>
+<td class="row-handle">
+<!--{if (toInt({$list:levelid})<2)}--><a href="<v:url.add>">添加</a><!--{/if}-->&nbsp;
+<a href="<v:url.edit>">编辑</a>
+<a href="<v:url.del>" onclick="javascript:return $p.isClickReturn('删除此分类',2);">删除</a>
+</td>
+</tr>
+</loop>
+</form>
+</table>
+	</div></div>
+	<div class="BlockContent"><div class="BlockInner">
+<div class="ac">
+操作: <input class="push" type="button" onclick="javascript:doOrderUpdate();" value="更新排序" />
+</div>
+<script type="text/javascript">
+doOrderUpdate=function(){
+	var f=d.forms["frm_list"];
+	if(f){
+		f.action="<exec:url("action=order")>";
+		f.submit();
+	}
+}
+</script>
+	</div></div>
+	<div class="BlockFooter"><p></p></div>
+</div>
+<label:include file="frame.sidespace">
+<label:include file="element.menus">
+<label:include file="frame.sideright">
+
+<label:include file="footer.channel">

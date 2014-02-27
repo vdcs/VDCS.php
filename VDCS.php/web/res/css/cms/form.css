@@ -1,0 +1,51 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @form v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-04-00
+*/
+
+
+/* ########## Data ######### */
+.DatasList{clear:both;}
+.DatasListBar{clear:both;background-repeat:no-repeat;background-position:bottom left;text-align:left;margin:0 auto;padding:0;}
+.DatasListBar .itemTitle{font-size:14px;font-weight:bold;padding:10px 0 5px 0;}
+.DatasListBar .itemContent{color:#888888;padding:0 0 5px 0;}
+.DatasListItem{clear:both;border-bottom:1px dashed #EDEDED;text-align:left;margin:0 auto;padding:3px 0 3px 0;overflow:hidden;}
+.DatasListItem .itemCaption{float:left;display:inline;width:110px;text-align:right;padding:10px 0 5px 0;}
+.DatasListItem .itemCaption .explain{font-weight:normal;padding-right:0;}
+.DatasListItem .itemText{float:left;display:inline;width:120px;padding:10px 15px 5px 15px;}
+.DatasListItem .itemTexts{margin-left:125px;padding:10px 10px 5px 0;}
+.DatasListItem .itemExplain{color:#666666;margin-left:260px;padding:10px 10px 5px 15px;}
+.DataListItem .itemContent{padding:7px;}
+
+
+/* ########## Post ######### */
+.PostForm{clear:both;position:relative;overflow:hidden;text-align:left;}
+.PostFormBar{clear:both;position:relative;margin:0;padding:0;}
+.PostFormBar .itemTitle{font-size:14px;font-weight:bold;padding:10px 0 5px 0;}
+.PostFormBar .itemContent{color:#888888;padding:0 0 5px 0;}
+.PostFormItem{clear:both;position:relative;overflow:hidden;border-bottom:1px dashed #EDEDED;margin:0;padding:8px 0 8px 0;overflow:hidden;}
+.PostFormItem .itemCaption{float:left;width:120px;text-align:right;padding-top:4px;_padding-top:6px;_position:absolute;_top:8px;_left:0;}
+.PostFormItem .itemCaption .explain{font-size:12px;font-weight:normal;padding-right:0;}
+.PostFormItem .itemInput{margin-left:130px;}
+.PostFormItem .itemInput .explain{font-size:12px;color:#888888;padding-top:3px;}
+.PostFormItem .itemText{padding-top:5px;_padding-top:7px;}
+.PostFormItem .itemButton{margin-left:130px;}
+.PostFormItem .itemButton input,
+.PostFormItem .itemButton button{margin-right:10px;}
+.PostFormItem .itemExplain{margin-left:150px;}
+.PostFormItem .itemContent{padding:8px;}
+.PostFormItem .itemHelp{position:absolute;top:0;right:0;width:160px;color:#888888;padding:12px 5px 8px 5px;_padding-top:14px;}
+.PostFormItemSP{background-color:#F1F8E9;}
+.PostFormItemFloor{border-bottom:0;}
+.PostFormItemButton{border-bottom:0;background-color:#F2FAFC;}
+.PostForm .l,.PostForm .left{position:absolute;top:0;left:0;z-index:10046;}
+.PostForm .r,.PostForm .right{position:absolute;top:0;right:0;z-index:10047;}
+
+.PostForm .fullwidth{width:98.5%!important;_width:98%!important;}
+.PostForm .all{_width:95%!important;}
+
+.PostForm table.tab-editor{border:0;width:100%;_width:99%;}
+.PostForm iframe.ifrm_editor{}
+.PostForm iframe.ifrm_upload{_width:98%!important;}

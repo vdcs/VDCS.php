@@ -1,0 +1,20 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+<label:include file="inc/listc.struct.begin">
+<th>订单号</th>
+<th>订单金额</th>
+<th>下单时间</th>
+<th class="status w80"><exec:langs("title.status")></th>
+<th class="handle"><exec:langs("title.handle")></th>
+<label:include file="inc/listc.struct.end">
+<label:include file="inc/listc.tpl.begin">
+<td><a href="#view">[item:orderno]</a></td>
+<td>[item:money]</td>
+<td class="time">[item:tim!date]</td>
+<td><span data-dict="file:sort=common.channel/{@channel}/data.order.status" data-value="[item:status]"></span></td>
+<td class="handle"><a href="#view"><exec:langs("action.view")></a></td>
+<label:include file="inc/listc.tpl.end">
+<label:include file="inc/listc.script">
+
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

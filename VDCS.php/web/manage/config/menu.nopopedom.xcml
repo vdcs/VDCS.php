@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>name,url,config</field>
+		<title></title>
+		<relate></relate>
+		<url_init>{$url.main}</url_init>
+	</configure>
+	<item>
+		<name><![CDATA[系统提示]]></name>
+		<config><![CDATA[ico=page;act=]]></config>
+	</item>
+	<item>
+		<name><![CDATA[没有权限]]></name>
+		<url><![CDATA[javascript:;]]></url>
+		<config><![CDATA[ico=page;act=]]></config>
+	</item>
+</xcml>

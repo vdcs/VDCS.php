@@ -1,0 +1,15 @@
+<label:include file="inc/searchbar">
+<div class="box"><h2><t>所属{@names}</t></h2>
+<div class="con">
+<p><b><root:c_topic></b></p>
+<p>共 <root:c_total_data> 张{@data:names}</p>
+<div class="links">
+<ul>
+<li><a href="<exec:url("action=list")>">{@data:names}列表</a></li>
+<li><a href="<exec:url("action=add")>">添加{@data:names}</a></li>
+<li><a href="<exec:url("channel={@channel}&p=null&action=edit&id=<root:c_id>")>">编辑{@names}</a></li>
+<li><a href="<exec:url("channel={@channel}&p=null&action=list")>">返回列表</a></li>
+</ul>
+</div>
+</div>
+</div>

@@ -1,0 +1,30 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @paging v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######### Paging ######## */
+.pagings{}
+.paging{font:normal 11px "verdana"!important;margin:0;padding:0;}
+.paging *{vertical-align:middle;}
+.paging a{display:inline-block;height:18px;line-height:18px;font-family:"verdana";text-align:center;text-decoration:none;border:1px solid #CCC;margin:0 3px 0 0;padding:0 5px;}
+.paging a:hover{color:#005681;text-decoration:none;border-color:#86B9D6;background-color:#F5FBFF;}
+.paging a.total,
+.paging a.pages{font-weight:bold;background-color:#F7F7F7;cursor:default;}
+.paging a.total{margin-right:0;}
+.paging a.pages{margin-left:-1px;}
+.paging a.pagenow{font-weight:bold;color:#8AA030;background-color:#FFFFD9;cursor:default;}
+.paging a.page{}
+.paging a.around{cursor:pointer;}
+.paging a.input{border:1px solid #CCC;margin-right:1px;padding:0;}
+.paging a.input input{height:15px;line-height:15px;color:#659b28;font:normal 11px "verdana";text-align:center;border:0;background-color:transparent;margin:2px 1px 0 0;_margin-top:1px;padding:0 0 0 1px;}
+.paging a.go{font-weight:bold;border:1px solid #86B9D6;background-color:#DDEEFF;margin-right:0;}
+.paging a.go:hover{background-color:#C4E1FF;}
+.paging a.button{border:1px solid #86B9D6;background-color:#DDEEFF;}
+.paging a.button:hover{background-color:#C8E3FF;}
+
+.data-paging{height:22px;}
+.nodata{color:#808080;padding:10px;}

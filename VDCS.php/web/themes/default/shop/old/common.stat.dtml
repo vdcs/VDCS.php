@@ -1,0 +1,11 @@
+		<div class="Cobs Side-Stat">
+			<div class="CobBar"><p><langs:chn.stat></p></div>
+			<div class="CobList"><div class="CobInner">
+<ul>
+<li><cite><langs:chn.stat.totals></cite><span class="total"><channel:stat("total.shop.product")></span><langs:chn.units></li>
+<li><cite><langs:chn.stat.todays></cite><span class="light"><channel:stat("new")></span></span><langs:chn.units></li>
+<li><cite><langs:chn.stat.views></cite><span class="total"><channel:stat("total.view")></span><langs:chn.views></li>
+</ul>
+			</div></div>
+			<div class="CobFooter"><p></p></div>
+		</div>

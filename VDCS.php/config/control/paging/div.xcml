@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>lang,tpl</node>
+	</configure>
+	<lang>
+		<unit><![CDATA[]]></unit>
+		<names><![CDATA[]]></names>
+	</lang>
+	<tpl>
+		<frame><![CDATA[
+<div class="pagings">
+<input type="hidden" name="paging_url" value="{$urls}">
+<div class="paging" total="{$total}" listnum="{$listnum}" page="{$page}">
+<a class="total">{$total}{$unit}{$names}</a><a class="pages">{$page}/{$pagetotal}</a>
+{$items}
+<a class="input"><input type="text" name="paging_num" value="{$page}" size="3"></a><a class="go" href="javascript:;" onclick="javascript:dcs.paging.go();">GO</a>
+</div>
+</div>]]></frame>
+		<first><![CDATA[<a class="around" href="{$urls}">|&lsaquo;</a>]]></first>
+		<firsts><![CDATA[]]></firsts>
+		<prev><![CDATA[<a class="around" href="{$urls}">&lsaquo;&lsaquo;</a>]]></prev>
+		<prevs><![CDATA[]]></prevs>
+		<item><![CDATA[<a class="page" href="{$urls}">{$page}</a>]]></item>
+		<items><![CDATA[<a class="pagenow">{$page}</a>]]></items>
+		<next><![CDATA[<a class="around" href="{$urls}">&rsaquo;&rsaquo;</a>]]></next>
+		<nexts><![CDATA[]]></nexts>
+		<last><![CDATA[<a class="around" href="{$urls}">&rsaquo;|</a>]]></last>
+		<lasts><![CDATA[]]></lasts>
+	</tpl>
+</xcml>

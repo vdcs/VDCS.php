@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>search,class</frame>
+		<search.fields>module=6;payment=6;summary=6;type=6;id=6;username=6</search.fields>
+		<search.times>tim</search.times>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>dbu_transaction</table.name>
+		<table.px></table.px>
+		<table.field.id>id</table.field.id>
+		<table.field.pic>pic</table.field.pic>
+		<table.fields.value>id=id;topic=name;time=tim</table.fields.value>
+		<table.fields.edit>tim_up,status</table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.query.audit>{@table.px}status=1</list.table.query.audit>
+		<list.table.query.inaudit>status=2</list.table.query.inaudit>
+		<list.table.query.unaudit>{@table.px}status=0</list.table.query.unaudit>
+		<list.table.query.show>status=1</list.table.query.show>
+		<list.table.query.hide>status=0</list.table.query.hide>
+		<list.table.query.gooda>isgood>0</list.table.query.gooda>
+		<list.table.query.good>isgood=1</list.table.query.good>
+		<list.table.query.goodz>isgood=2</list.table.query.goodz>
+		<list.table.query.goods>isgood=3</list.table.query.goods>
+		<list.table.query.ungood>isgood=0</list.table.query.ungood>
+		<list.table.query.topa>istop>0</list.table.query.topa>
+		<list.table.query.top>istop=1</list.table.query.top>
+		<list.table.query.topz>istop=2</list.table.query.topz>
+		<list.table.query.tops>istop=3</list.table.query.tops>
+		<list.table.query.untop>istop=0</list.table.query.untop>
+		<list.table.order>id desc</list.table.order>
+		<list.table.order.tim>tim desc</list.table.order.tim>
+		<list.handle.select.option>show,hide,delete</list.handle.select.option>
+		<list.handle.sql.show>update dbu_transaction set status=1 where id in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.hide>update dbu_transaction set status=0 where id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.delete>delete from dbu_transaction where id in ({$ids})</list.handle.sql.delete>
+		
+		<view.sql>select top 1 * from dbu_transaction where id={$id}</view.sql>
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[提现记录]]></title.name>
+		<title.transaction><![CDATA[提现记录列表]]></title.transaction>
+		<title.list><![CDATA[资金流动]]></title.list>
+		<title.view><![CDATA[转账信息]]></title.view>
+		<title.list.><![CDATA[{@names}列表]]></title.list.>
+		<title.list.audit><![CDATA[已审核{@names}]]></title.list.audit>
+		<title.list.inaudit><![CDATA[待审核{@names}]]></title.list.inaudit>
+		<title.list.unaudit><![CDATA[未审核{@names}]]></title.list.unaudit>
+		<title.add><![CDATA[添加提现记录]]></title.add>
+		<title.edit><![CDATA[审核转账申请]]></title.edit>
+		
+		<title.frame.class><![CDATA[{@names}分类]]></title.frame.class>
+		<title.frame.search><![CDATA[{@names}搜索]]></title.frame.search>
+		<search.fields.att></search.fields.att>
+		
+		<error.not.exist><![CDATA[您要操作的 {@names} 不存在！]]></error.not.exist>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 条提现记录！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功审核了 1 条转账申请！]]></handle.ok.edit>
+		<handle.ok.audit><![CDATA[成功待审核了 {$total} {@unit}{@names}！]]></handle.ok.audit>
+		<handle.ok.inaudit><![CDATA[成功待审核了 {$total} {@unit}{@names}！]]></handle.ok.inaudit>
+		<handle.ok.unaudit><![CDATA[成功未审核了 {$total} {@unit}{@names}！]]></handle.ok.unaudit>
+	</lang>
+	
+	<template>
+	</template>
+</xcml>

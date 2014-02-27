@@ -1,0 +1,115 @@
+<label:include file="frame/headers">
+
+
+<label:include script="comm/icons.css" type="css">
+<label:include script="comm/icons-font.css" type="css">
+<div class="framer">
+	<div class="main">
+
+
+
+
+
+<style type="text/css">
+ul, menu, dir {
+display: block;
+list-style-type: disc;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;
+}
+ul.icons-list, ul.icons-list li {
+list-style-type: none;
+margin: 0;
+}
+ul.icons-list li {
+float: left;
+display: block;
+width: 33.3333%;
+margin-bottom: 15px;
+}
+ul.icons-list li > span [class^="icon-"] {
+font-size: 32px;
+line-height: 1;
+}
+
+code, pre {
+padding: 0 3px 2px;
+font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+font-size: 10px;
+color: #333333;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+code {
+padding: 2px 4px;
+color: #d14;
+background-color: #f7f7f9;
+border: 1px solid #e1e1e8;
+}
+code, pre {
+font-size: 11px;
+}
+ul.icons-list li code {
+color: #555;
+}
+</style>
+<script type="text/javascript">
+$(function(){
+	/*
+	$('.nav-tabs').find('li').each(function(){
+		var jli=$(this);
+		jli.find('a').click(function(){
+			var ja=$(this);
+			if(ja.parent().hasClass('active')) return false;
+			ja.parent().parent().find('li').each(function(){
+				if($(this).hasClass('active')){
+					$($(this).find('a').attr('href')).removeClass('active');
+					$(this).removeClass('active');
+				}
+			});
+			$(ja.attr('href')).addClass('active');
+			ja.parent().addClass('active');
+			return false;
+		});
+		if(jli.hasClass('active')){
+			//jli.find('a').click();
+			$(jli.find('a').attr('href')).addClass('active');
+		}
+		else{
+			$(jli.find('a').attr('href')).removeClass('active');
+		}
+	});
+	*/
+});
+</script>
+
+<div class="box">
+	<h2><t>Welcome</t></h2>
+	<div class="bod">
+<ul class="tab-nav">
+<li class=""><a href="#webfont" data-toggle="tab"><i class="icol-font"></i> Web Font Icons</a></li>
+<li class="active"><a href="#led-icon" data-toggle="tab"><i class="icol-color-swatch-1"></i> Color Icons (16 x 16)</a></li>
+<li class=""><a href="#iconsweets" data-toggle="tab"><i class="icol-ui-saccordion"></i> IconSweets Icons (16 x 16)</a></li>
+</ul>
+	</div>
+	<div class="con">
+
+<label:include file="ui.icon-webfont">
+<label:include file="ui.icon-icol">
+<label:include file="ui.icon-icos">
+
+	</div>
+</div>
+
+	</div>
+</div>
+
+	</div>
+</div>
+
+
+<label:include file="frame/footers">

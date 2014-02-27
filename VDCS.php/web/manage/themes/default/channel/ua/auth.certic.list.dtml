@@ -1,0 +1,31 @@
+<label:include file="header.channel">
+
+<label:include file="frame.sideleft">
+<label:include file="element.list.heads">
+<label:include file="element.list.bar.tr">
+<label:include file="element.list.bar.id">
+<td class="bar-info">{@ua:names}名称</td>
+<td class="bar-item w80">图片</td>
+<td class="bar-status w80"><exec:langs("title.status")></td>
+<!--<td class="bar-handle"><exec:langs("title.handle")></td>-->
+<label:include file="element.list.bar.sd">
+</tr>
+<loop:list>
+<label:include file="element.list.row.tr">
+<label:include file="element.list.row.id">
+<td class="row-name"><a href="<v:url.edit>">[item:value1]</a>
+	<span class="s" title="名称: [item:{@ua:table.px}name]&#10;单位: [item:{@ua:table.px}company]&#10;证件: [item:{@ua:table.px}idcard]&#10;邮箱: [item:{@ua:table.px}email]">[item:{@ua:table.px}name]</span>
+	<p class="s">[item:value2]</p></td>
+<td class="row-item"><a href="[item:res_value]" target="_blank"><img src="[item:res_value]" style="max-width:70px;max-height:50px;_height:50px;" /></a></td>
+<td class="row-status"><control:dict("data.auth","{$$list:trans}")>
+	<p class="s"><control:ui.value("list.rowi.timed")></p></td>
+<!--<td class="row-handle"><a href="<v:url.edit>"><exec:langs("action.edit")></a></td>-->
+<label:include file="element.list.row.sd">
+</tr>
+</loop>
+<label:include file="element.list.ends">
+<label:include file="frame.sidespace">
+<label:include file="element.menus">
+<label:include file="frame.sideright">
+
+<label:include file="footer.channel">

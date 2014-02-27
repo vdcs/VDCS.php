@@ -1,0 +1,8 @@
+<label:include file="element.list.tr.bar">
+<td class="bar-id">ID</td>
+<td class="bar-topic"><exec:langs("title.topic")></td>
+<td class="bar-time"><exec:langs("title.time")></td>
+<td class="bar-status w80"><exec:langs("title.status")></td>
+<td class="bar-handle"><exec:langs("title.handle")></td>
+<td class="bar-seletbox re-option"><control:ui.form("select.data")></td>
+</tr>

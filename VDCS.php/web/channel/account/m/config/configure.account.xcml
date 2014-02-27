@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang</node>
+	</configure>
+	<config xmlns:info="node">
+		<search.mode></search.mode>
+		<search.fields>email=6;uid=3;linkman=6;name=6;names=6;mobile=6;nickname=6;realname=6;company=6;address=6</search.fields>
+		<search.relations><![CDATA[
+			realname=db_account_info$$$
+			nickname=db_account_info$$$
+			company=db_account_info$$$
+			address=db_account_info$$$
+			linkman=names@sql:select uuid from dbu_linkman where {query}
+		]]></search.relations>
+		<search.times>tim</search.times>
+		<search.term.type>and,or,exact</search.term.type>
+		<modify.log.fields>email,mobile,groupid,money,emoney,points,exp</modify.log.fields>
+
+		<table.name>db_account</table.name>
+		<table.px></table.px>
+		<table.field.id>uid</table.field.id>
+		<table.field.name>name</table.field.name>
+		<table.field.email>email</table.field.email>
+		<table.fields.value>id=uid;time=tim</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		
+		<list.table.fields>*</list.table.fields>
+		<list.table.query></list.table.query>
+		<list.field.append>icon.group,icon.grade</list.field.append>
+		<list.table.query.unauth.email>auth_email=0</list.table.query.unauth.email>
+		<list.table.query.auth.email>auth_email=1</list.table.query.auth.email>
+		<list.table.query.unauth.mobile>auth_mobile=0</list.table.query.unauth.mobile>
+		<list.table.query.auth.mobile>auth_mobile=1</list.table.query.auth.mobile>
+		<list.table.query.unauth.idcard>auth_idcard=0</list.table.query.unauth.idcard>
+		<list.table.query.auth.idcard>auth_idcard=1</list.table.query.auth.idcard>
+		<list.table.query.unauth>isauth=0</list.table.query.unauth>
+		<list.table.query.auth>isauth=1</list.table.query.auth>
+		<list.table.query.unlock>islock=0</list.table.query.unlock>
+		<list.table.query.lock>islock=1</list.table.query.lock>
+		<list.table.query.show>status=1</list.table.query.show>
+		<list.table.query.hide>status=0</list.table.query.hide>
+		<list.table.order>uid desc</list.table.order>
+		<list.table.order.tim>tim desc,uid desc</list.table.order.tim>
+		<list.table.order.id>uid desc</list.table.order.id>
+		<list.table.order.money>sp_money desc,uid desc</list.table.order.money>
+		<list.table.order.emoney>sp_emoney desc,uid desc</list.table.order.emoney>
+		<list.table.order.points>points desc,uid desc</list.table.order.points>
+		
+		<list.handle.select.option>auth,unauth,lock,unlock,unauth.email=邮件未认证,auth.email=邮件认证,unauth.mobile=手机未认证,auth.mobile=手机认证,unauth.idcard=身份证未认证,auth.idcard=身份证认证,show,hide,delete</list.handle.select.option>
+		<list.handle.sql.unauth.email>update db_account set auth_email=0 where uid in ({$ids})</list.handle.sql.unauth.email>
+		<list.handle.sql.auth.email>update db_account set auth_email=1 where uid in ({$ids})</list.handle.sql.auth.email>
+		<list.handle.sql.unauth.mobile>update db_account set auth_mobile=0 where uid in ({$ids})</list.handle.sql.unauth.mobile>
+		<list.handle.sql.auth.mobile>update db_account set auth_mobile=1 where uid in ({$ids})</list.handle.sql.auth.mobile>
+		<list.handle.sql.unauth.idcard>update db_account set auth_idcard=0 where uid in ({$ids})</list.handle.sql.unauth.idcard>
+		<list.handle.sql.auth.idcard>update db_account set auth_idcard=1 where uid in ({$ids})</list.handle.sql.auth.idcard>
+		<list.handle.sql.lock>update db_account set islock=1 where uid in ({$ids})</list.handle.sql.lock>
+		<list.handle.sql.unlock>update db_account set islock=0 where uid in ({$ids})</list.handle.sql.unlock>
+		<list.handle.sql.delete>delete from dbu_pivotal where uurc='account' and uuid in ({$ids})$$$
+			delete from db_account_info where uid in ({$ids})$$$
+			delete from db_account where uid in ({$ids})</list.handle.sql.delete>
+		<!--
+		update dba_prep set isuse=0,tim_use=0 where uid in ({$ids})$$$
+			update dba_prep_hold set isuse=0,tim_use=0 where uid in ({$ids})$$$
+			
+		-->
+		
+		<info:table.name>db_account_info</info:table.name>
+		<info:table.fields.add></info:table.fields.add>
+		<info:table.fields.edit></info:table.fields.edit>
+		<info:list.table.fields>realname,aliasname,call,
+			nickname,befrom,homepage,
+			im,im1,im2,im3,im4,im5,
+			avatar,face,photo,
+			company,url,address,postcode,phone,fax,
+			area_country,area_province,area_city</info:list.table.fields>
+	</config>
+	
+	<lang>
+		<names><![CDATA[{@ua:names}]]></names>
+		<name><![CDATA[{@ua:name}]]></name>
+		<unit><![CDATA[{@ua:unit}]]></unit>
+		<title.name><![CDATA[{@ua:names}]]></title.name>
+		<title.list><![CDATA[{@ua:names}列表]]></title.list>
+		<title.list.><![CDATA[{@ua:names}列表]]></title.list.>
+		<title.list.auth><![CDATA[已审核{@ua:names}]]></title.list.auth>
+		<title.list.unauth><![CDATA[待审核{@ua:names}]]></title.list.unauth>
+		<title.list.unlock><![CDATA[未锁定{@ua:names}]]></title.list.unlock>
+		<title.list.lock><![CDATA[已锁定{@ua:names}]]></title.list.lock>
+		<title.list.auth.email><![CDATA[邮件认证{@ua:names}]]></title.list.auth.email>
+		<title.list.auth.mobile><![CDATA[手机认证{@ua:names}]]></title.list.auth.mobile>
+		<title.list.auth.idcard><![CDATA[身份证认证{@ua:names}]]></title.list.auth.idcard>
+		<title.add><![CDATA[添加新{@ua:names}]]></title.add>
+		<title.edit><![CDATA[编辑{@ua:names}资料]]></title.edit>
+		
+
+		<error.not.exist><![CDATA[您要操作的{@ua:names}不存在！]]></error.not.exist>
+
+		<error.no.ukey><![CDATA[请致少填写一项 {@ua:names} 主要信息！]]></error.no.ukey>
+		<error.exist.id><![CDATA[相关 UID 已存在！]]></error.exist.id>
+		<error.norule.id><![CDATA[UID 不符合规则！]]></error.norule.id>
+		<error.exist.no><![CDATA[相关 {@ua:names}编号 已存在！]]></error.exist.no>
+		<error.norule.no><![CDATA[{@ua:names}编号 不符合规则！]]></error.norule.no>
+		<error.exist.name><![CDATA[相关 {@ua:names}名称 已存在！]]></error.exist.name>
+		<error.norule.name><![CDATA[{@ua:names}名称 不符合规则！]]></error.norule.name>
+		<error.exist.email><![CDATA[相关 电子邮箱 已存在！]]></error.exist.email>
+		<error.norule.email><![CDATA[电子邮箱 不符合规则！]]></error.norule.email>
+		<error.exist.mobile><![CDATA[相关 手机号码 已存在！]]></error.exist.mobile>
+		<error.norule.mobile><![CDATA[手机号码 不符合规则！]]></error.norule.mobile>
+		<error.exist.idcard><![CDATA[相关 证件号码 已存在！]]></error.exist.idcard>
+		<error.norule.idcard><![CDATA[证件号码 不符合规则！]]></error.norule.idcard>
+		
+		<error.norule.password><![CDATA[登录密码 不符合规则！]]></error.norule.password>
+		<error.norule.password_login><![CDATA[登录密码 不符合规则！]]></error.norule.password_login>
+		<error.norule.password_payment><![CDATA[支付密码 不符合规则！]]></error.norule.password_payment>
+		<error.norule.password_security><![CDATA[安全密码 不符合规则！]]></error.norule.password_security>
+		<error.norule.secure_answer><![CDATA[机密答案 不符合规则！]]></error.norule.secure_answer>
+		
+		
+		<handle.ok.add><![CDATA[成功添加了 1 {@ua:unit}新{@ua:names}！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 {@ua:unit}{@ua:names}的资料！]]></handle.ok.edit>
+		<handle.ok.edit.info><![CDATA[成功编辑了 1 {@ua:unit}{@ua:names}的详细信息！]]></handle.ok.edit.info>
+
+		<handle.ok.audit><![CDATA[成功审核了 {$total} {@ua:unit}{@ua:names}！]]></handle.ok.audit>
+		<handle.ok.inaudit><![CDATA[成功待审核了 {$total} {@ua:unit}{@ua:names}！]]></handle.ok.inaudit>
+		<handle.ok.unaudit><![CDATA[成功取消审核了 {$total} {@ua:unit}{@ua:names}！]]></handle.ok.unaudit>
+		<handle.ok.auth><![CDATA[成功认征了 {$total} {@ua:unit}{@ua:names}！]]></handle.ok.auth>
+		<handle.ok.inauth><![CDATA[成功待认征了 {$total} {@ua:unit}{@ua:names}！]]></handle.ok.inauth>
+		<handle.ok.unauth><![CDATA[成功取消认征了 {$total} {@ua:unit}{@ua:names}！]]></handle.ok.unauth>
+		<handle.ok.unauth.email><![CDATA[成功取消邮件认证了 {$total} {@ua:unit}{@ua:names}！]]></handle.ok.unauth.email>
+		<handle.ok.auth.email><![CDATA[成功邮件认证了 {$total} {@ua:unit}{@ua:names}！]]></handle.ok.auth.email>
+		<handle.ok.unauth.mobile><![CDATA[成功取消手机认证了 {$total} {@ua:unit}{@ua:names}！]]></handle.ok.unauth.mobile>
+		<handle.ok.auth.mobile><![CDATA[成功手机认证了 {$total} {@ua:unit}{@ua:names}！]]></handle.ok.auth.mobile>
+		<handle.ok.unauth.idcard><![CDATA[成功取消身份证认证了 {$total} {@ua:unit}{@ua:names}！]]></handle.ok.unauth.idcard>
+		<handle.ok.auth.idcard><![CDATA[成功身份证认证了 {$total} {@ua:unit}{@ua:names}！]]></handle.ok.auth.idcard>
+		<handle.ok.lock><![CDATA[成功锁定了 {$total} {@ua:unit}{@ua:names}！]]></handle.ok.lock>
+		<handle.ok.unlock><![CDATA[成功解锁了 {$total} {@ua:unit}{@ua:names}！]]></handle.ok.unlock>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} {@ua:unit}{@ua:names}！]]></handle.ok.delete>
+	</lang>
+</xcml>

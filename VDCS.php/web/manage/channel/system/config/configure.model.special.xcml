@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links</frame>
+		
+		<table.name>dbs_special</table.name>
+		<table.px></table.px>
+		<table.field.id>id</table.field.id>
+		<table.field.defineid>specialid</table.field.defineid>
+		<table.fields.value>id={@table.px}id;time={@table.px}tim</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.order>orderid desc,id asc</list.table.order>
+		<list.field.append>name</list.field.append>
+		<list.handle.select.option>hide,unhide,delete</list.handle.select.option>
+		<list.handle.sql.hide>update dbs_special set status=0 where id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.unhide>update dbs_special set status=1 where id in ({$ids})</list.handle.sql.unhide>
+		<list.handle.sql.delete>delete from dbs_special where id in ({$ids})</list.handle.sql.delete>
+	</config>
+	
+	<lang>
+		<title><![CDATA[专题管理]]></title>
+		<title.name><![CDATA[专题]]></title.name>
+		<title.list><![CDATA[专题列表]]></title.list>
+		<title.list.><![CDATA[专题列表]]></title.list.>
+		<title.add><![CDATA[添加专题]]></title.add>
+		<title.edit><![CDATA[编辑专题]]></title.edit>
+		<title.del><![CDATA[删除专题]]></title.del>
+		
+		<error.no.channel><![CDATA[未知或错误的频道参数！]]></error.no.channel>
+		
+		<error.not.exist><![CDATA[您要编辑的专题不存在！]]></error.not.exist>
+		<error.exist.data><![CDATA[您要删除的专题有频道数据存在！]]></error.exist.data>
+		<error.exist.add><![CDATA[相关 专题ID 已存在！]]></error.exist.add>
+		
+		<error.norule.id><![CDATA[专题ID 不符合规则！]]></error.norule.id>
+		<error.norule.name><![CDATA[专题名称 不符合规则！]]></error.norule.name>
+		<error.norule.remark><![CDATA[专题内容 不符合规则！]]></error.norule.remark>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 个专题！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 个专题！]]></handle.ok.edit>
+		<handle.ok.del><![CDATA[成功删除了 1 个专题！]]></handle.ok.del>
+		<handle.ok.delete><![CDATA[成功删除了 {$total} 个专题！]]></handle.ok.delete>
+		<handle.ok.order><![CDATA[成功更新了专题排序！]]></handle.ok.order>
+	</lang>
+	
+	<template>
+		<list><![CDATA[
+<control:ui.value("listbox.heads")>
+<control:ui.value("list.bar.tr")>
+<control:ui.value("list.bar.id")>
+<td width="500">{$langs.title.special}</td>
+<td width="40">{$langs.title.status}</td>
+<td class="bar-time"><exec:langs("title.time")></td>
+<td class="bar-status"><exec:langs("title.status")></td>
+<td class="bar-handle"><exec:langs("title.handle")></td>
+<control:ui.value("list.bar.sd")>
+</tr>
+<loop:list>
+<control:ui.value("list.row.tr")>
+<control:ui.value("list.row.id")>
+<td align="left"><a href="{$var.url.edit}">{$s_name}</a></td>
+<td><a href="{$var.url.edit}">{$langs.handle.edit}</a> {$=func.dict(data.hide,{${$var.px}hide})$}</td>
+<td class="row-handle"><a href="<var:url.edit>"><exec:langs("action.edit")></a></td>
+<control:ui.value("list.row.sd")>
+</tr>
+</loop>
+<control:ui.value("listbox.ends")>
+]]></list>
+		<menu.links><![CDATA[
+@@@title=专题管理;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<var:menu.links>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

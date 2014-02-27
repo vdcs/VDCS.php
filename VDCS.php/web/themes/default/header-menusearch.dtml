@@ -1,0 +1,8 @@
+
+		<div class="search">
+				<form name="menuSearch" action="<linkurl:common.search.act>" method="get">
+				<input type="hidden" name="channel" value="{@channel}" />
+				<div class="searchText"><input type="text" name="keyword" prompts="empty" promptvalue="请输入关键字.." value="" /></div>
+				<div class="searchButton"><input type="submit" value="" title="搜索" /></div>
+				</form>
+		</div>

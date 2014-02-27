@@ -1,0 +1,39 @@
+
+<label:include script="<web:url.themed>photo/slide.js">
+<script type="text/javascript">slide.urlTheme="<web:url.themed>";</script>
+
+<style type="text/css">
+div.PicSlide { text-align:center; }
+div.PicSlide .row-img { }
+div.PicSlide .row-info { padding:5px 0; }
+div.PicSlide .row-body { padding-top:8px; }
+div.PicSlide .row-body0 { padding-bottom:8px; }
+div.PicSlide .img { border:1px solid #CCCCCC; padding:3px; }
+div.PicSlide .topic { font-size:14px; font-weight:bold; text-align:center; }
+div.PicSlide .explain { width:80%; color:#808080; }
+div.PicSlide .thumb { margin:4px; }
+div.PicSlide .thumb img { border:1px solid #CCCCCC; padding:2px; }
+div.PicSlide .thumbs img { border:3px solid #A3BFE8; padding:2px; }
+</style>
+<div class="PicSlide">
+<div id="PicBody0" class="row-body0"></div>
+<div id="PicMain" class="row-img word-break"><img class="img hand" border="0" id="img_PicMain" src="<url:images>space.gif" /></div>
+<div id="FlashMain" class="row-img word-break" style="display:none;"></div>
+<div id="PicInfo" class="row-info"><div class="topic" id="pic_topics"><span id="pic_topic"></span> (<span id="pic_now">0</span>/<span id="pic_total">0</span>)</div><span class="explain" id="pic_explain"></span></div>
+<div id="PicBody" class="row-body"></div>
+<div class="row-body"><input type="checkbox" class="normal" name="pic_play_isauto" value="yes" checked onclick="javascript:slide.doPicisAuto();">自动播放: 每隔 <input type="text" class="align-center" name="pic_play_space" value="-1" size="3" onchange="javascript:slide.doPicAutoSpace();"> 秒自动显示下一幅</div>
+</div>
+
+<script type="text/javascript">
+<loop:data>
+slide.aryViewPic[[item:sn]]=new Array("[item:sort]",
+			"[item:topic]",
+			"[item:pic]",
+			"[item:url]",
+			"[item:explain]",
+			"[item:total_view]");
+</loop>
+$d.load(function(){
+	slide.doPicLoad(2,5);
+});
+</script>

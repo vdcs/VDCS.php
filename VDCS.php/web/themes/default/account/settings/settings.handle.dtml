@@ -1,0 +1,16 @@
+<label:include file="frame/headers">
+<div class="cont">
+
+
+<label:include file="/common/handle.message.part">
+<script type="text/javascript">
+HMSG.lang({
+	'ok.password'		:'您成功修改了您的登录密码！',
+	'ok.info'		:'您成功修改了您的基本资料！',
+	'ok.avatar'		:'您成功修改了您的个人形像！',
+'':''});
+</script>
+
+
+</div>
+<label:include file="frame/footers">

@@ -1,0 +1,8 @@
+<a name="_faq_[item:key]" class="hide">&nbsp;</a>
+<div class="box">
+	<h2><t>[item:topic]</t></h2>
+	<div class="con">
+<div class="h">[item:content]</div>
+	</div>
+</div>
+<div class="space"></div>

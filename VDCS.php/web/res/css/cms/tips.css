@@ -1,0 +1,32 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @tips v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ########## Clew ######### */
+.ClewSign,.ClewTrue,.ClewFalse,.ClewYes,.ClewNo,.ClewOptional,.ClewIgnorer{display:inline-block;width:18px;height:16px;border:0;vertical-align:middle;padding:0;}
+
+.ClewSign{background:url("../../common/tips/icon_clew_sign.gif") no-repeat 2px 2px;}
+.ClewTrue{background:url("../../common/tips/icon_clew_true.gif") no-repeat 2px 2px;}
+.ClewFalse{background:url("../../common/tips/icon_clew_false.gif") no-repeat 2px 2px;}
+.ClewYes{background:url("../../common/tips/icon_clew_yes.gif") no-repeat 2px 2px;}
+.ClewNo{background:url("../../common/tips/icon_clew_no.gif") no-repeat 2px 2px;}
+.ClewOptional{background:url("../../common/tips/icon_clew_optional.gif") no-repeat 2px 2px;}
+.ClewIgnorer{background:url("../../common/tips/icon_clew_ignorer.gif") no-repeat 2px 2px;}
+
+/* ########## Tips ######### */
+.TipsStar{width:20px;background-color:#FFFFFF;background-repeat:no-repeat;background-position:7px 5px;}
+.TipsClew{text-align:left;border:1px solid #D8DDE5;background-color:#FFFFFF;background-repeat:no-repeat;background-position:8px 8px;padding:8px 8px 6px 32px;}
+.TipsClew p{color:#1989D7;font-weight:bold;}
+.TipsAlert{text-align:left;border:1px solid #ECDC8F;background-color:#FFFFDD;background-repeat:no-repeat;background-position:8px 8px;padding:8px 8px 6px 32px;}
+.TipsAlert p{color:#777777;font-weight:normal;}
+.TipsTxt{text-align:left;border:0;background-color:transparent;background-repeat:no-repeat;background-position:8px 8px;padding:8px 8px 6px 32px;}
+.TipsTxt p{color:#006699;font-weight:normal;}
+
+.TipsStar{background-image:url("../../common/tips/icon_star.gif");}
+.TipsClew{background-image:url("../../common/tips/icon_clew.gif");}
+.TipsAlert{background-image:url("../../common/tips/icon_alert.gif");}
+.TipsTxt{background-image:url("../../common/tips/icon_txt.gif");}

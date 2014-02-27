@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="control">
+	<configure>
+		<node>popedom</node>
+	</configure>
+	<popedom>
+		<module.em.staff-action><![CDATA[viewi]]></module.em.staff-action>
+		<module.__em.staff-action>newline</module.__em.staff-action>
+
+		<module.audit-action><![CDATA[viewi]]></module.audit-action>
+		<module.__audit-action>newline</module.__audit-action>
+
+		<title><![CDATA[
+			em.staff@names=员工;
+			audit@names=审核;
+		]]></title>
+	</popedom>
+</xcml>

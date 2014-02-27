@@ -1,0 +1,39 @@
+
+<div class="cont">
+	<div class="box">
+		<h2>发帖</h2>
+		<div class="con">
+			<form name="post">
+				<p>标题<input type="text" name="topic" /></p>
+				<input type="hidden" name="classid" value="<class:id>" />
+				<p>内容<textarea name="remark"></textarea></p>
+				<div class="space"></div>
+				
+				<div class="tips hide submit"><h3><p class="itip"><em></em><span>提示信息</span></p></h3></div>
+				<a el="submit" class="btn btn-block btn-primary submit b">发帖</a>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	$f.bindi();
+	var opt={
+		frm			: 'post',
+		names			: '发帖信息',
+		message_formcheck	: '请填写必要的信息！',
+		message_parser		: '数据保存..',
+		message_succeed		: '保存成功！转接中..',
+		serv_method		: 'post',
+		goback			: false,
+		servURL			:  '/{@channel}/post.x?action=send',
+		callback:		function(){
+						ui.popups('succeed','提交成功');
+						setTimeout(function(){
+							location.reload();
+						},1000);
+					}
+		};
+	app.xform.initer(opt);
+});
+</script>

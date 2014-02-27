@@ -1,0 +1,108 @@
+<label:include file="frame/header">
+<label:include file="frame/frame.left">
+<label:include file="gbook-menu">
+<label:include file="frame/frame.space">
+<div class="ContentMain">
+
+<style type="text/css">
+table.list tr th{font-weight:normal;color:#666;background-color:transparent;border-bottom:1px solid #E3E6EB;}
+.read0,.read0 td{font-weight:bold;}
+</style>
+
+<table class="list lists">
+<tr>
+<th class="w60"></th>
+<th class="w100">姓名</th>
+<th class="w100">电话</th>
+<th>邮件</th>
+<th class="w80">QQ</th>
+<th class="w80">日期</th>
+<th class="w100 ar"></th>
+</tr>
+<loop:list>
+<tr class="read[item:isread]">
+<td><span class="s">[item:id]</span></td>
+<td class="h"><a class="big" href="?mode=<ctl:mode>&action=view&id=[item:id]">[item:realname]</a></td>
+<td>[item:mobile]<p>[item:phone]</p></td>
+<td>[item:email]</td>
+<td>[item:im1]</td>
+<td><span class="time">[item:tim!date]</span></td>
+<td class="ar">
+<p mode="handle-normal" class="hide"><a href="?mode=<ctl:mode>&action=view&id=[item:id]">查看</a> &nbsp; <a href="javascript:;" onclick="javascript:return appc.itemAction('del','[item:id]');">删除</a></p>
+<p mode="handle-trash" class="hide"><a href="javascript:;" onclick="javascript:return appc.itemAction('restore','[item:id]')">恢复</a> &nbsp; <a href="javascript:;" onclick="javascript:return appc.itemAction('delete','[item:id]');">永久删除</a></p>
+</td>
+</tr>
+</loop>
+<tr class="blank dof"><td colspan="2"><paging:string></td></tr>
+</table>
+
+<script type="text/javascript">
+$d.load(function(){
+	var _mode="<ctl:mode>";
+	$("[mode='handle-"+(_mode=="trashbox"?"trash":"normal")+"']").show();
+});
+
+appc.itemAction=function(action,id){
+	var isprompt=false;isrefresh=false;prompt_type=1;message_prompt="",message_succeed="";
+	switch(action){
+		case "del":
+			isprompt=true;
+			isrefresh=true;
+			prompt_type=1;
+			message_prompt="删除本条留言";
+			message_succeed="删除留言成功！";
+			break;
+		case "delete":
+			isprompt=true;
+			isrefresh=true;
+			prompt_type=2;
+			message_prompt="永久删除本条留言";
+			message_succeed="永久删除留言成功！";
+			break;
+		case "restore":
+			isprompt=true;
+			isrefresh=true;
+			prompt_type=1;
+			message_prompt="恢复本条留言";
+			message_succeed="恢复留言成功！";
+			break;
+		default:
+			$xtip.popups("info","未知的操作请求！",true);
+			return false;
+			break;
+	}
+	var isClick=isprompt?$p.isClickReturn(message_prompt,prompt_type):true;
+	if(!isClick) return false;
+	var __othis=this;
+	var _url=$url.link("?m=xmls","action="+action+"&id="+id);
+	//dbg.t(_url);
+	$ajax({url:_url,value:"map",ready:function(maps){
+		var treeVar=maps.getItemTree("var");
+		switch(treeVar.v("status")){
+			case "succeed":
+				$xtip.popups("succeed",message_succeed,true,1);
+				if(isrefresh){
+					$w.timeout(function(){
+						$p.doRefresh();
+					},1);
+				}
+				break;
+			case "nodata":
+				$xtip.popups("info","无效的数据请求！",true);
+				break;
+			default:
+				$xtip.popups("error","服务数据异常！",true);
+				break;
+		}
+	},error:true});
+	return false;
+}
+</script>
+
+	<div class="space"></div>
+	<!--
+	<div class="TipsClew"><p>提示信息</p></div>
+	-->
+</div>
+<label:include file="frame/frame.right">
+<label:include file="frame/footer">

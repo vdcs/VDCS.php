@@ -1,0 +1,4 @@
+﻿<label:include file="/header.blank">
+<div id="Confine"></div>
+<label:include file="/headbar">
+<label:include file="/inc/ban.ie6">

@@ -1,0 +1,98 @@
+@charset "utf-8";
+/*
+Version:	VDCS comm @box v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-09-00
+*/
+
+
+box,boxs,boxi,boxl,boxr{background-color:#FFF;-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;overflow:hidden;}
+box con,boxs con,boxl con,boxr con{padding:10px 15px;margin-bottom:5px;}
+/*
+box,boxs,boxm,boxl,boxr{
+	-webkit-box-shadow:1px 1px 1px rgba(181,181,181,1.0), -1px -1px 2px rgba(219,219,219,1.0);
+	   -moz-box-shadow:1px 1px 1px rgba(181,181,181,1.0), -1px -1px 2px rgba(219,219,219,1.0);
+		box-shadow:1px 1px 1px rgba(181,181,181,1.0), -1px -1px 2px rgba(219,219,219,1.0);
+}
+*/
+
+/*
+box tabs{height:45px;line-height:40px;color:#666;background:url("/images/common/struct/boxs.png") 0 0 repeat-x;padding:0 20px;}
+box tabs tab{}
+box tabs bar{height:40px;line-height:40px;border-bottom:1px solid #cacaca;background:url("/images/common/struct/boxs.png") 0 0 repeat-x;position:relative;}
+box tabs tab{float:left;margin-left:-15px;}
+box tabs tab a{float:left;display:inline-block;height:40px;text-align:center;color:#919191;font-size:12px;font-weight:normal;padding:0 7px 0 5px;position:relative;}
+box tabs tab a:hover{color:#d4344e;text-decoration:none;}
+box tabs tab a span{float:left;display:inline-block;padding:0 10px;}
+box tabs tab a i{display:inline-block;width:2px;height:40px;background:url("/images/common/struct/boxs.png") -2px -40px no-repeat;position:absolute;top:0;right:0;}
+box tabs tab a.pop{color:#d53251;font-weight:bold;}
+box tabs tab a.heart span,
+box tabs tab a.plus span{width:30px;height:30px;background:url("/images/common/struct/boxs.png") 5px 0 no-repeat;font-size:0;text-indent:-1000px;padding:0;margin-top:5px;overflow:hidden;}
+box tabs tab a.heart span{background-position:0 0;}
+box tabs tab a.plus span{background-position:0 -30px;}
+box tabs tab a.plus:hover span,
+box tabs tab li.pop a.plus span{background-position:0 -60px;}
+box tabs opt{height:40px;line-height:40px;position:absolute;top:0;right:10px;}
+box tabs opt .search_bar{display:inline-block;margin-top:8px;margin-right:15px;}
+*/
+
+
+box{border:1px solid #E7E7E7;}
+box{-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;overflow:hidden;}
+
+
+box > h2{height:32px;line-height:32px;font-size:1em;padding:0 15px;}
+/*
+box > h2{background:url("/images/common/struct/bars.gif") 0 -1px repeat-x;}
+box > h2{border:1px solid #E7E7E7;border-top:0;border-bottom:0;}
+*/
+box > h2{
+	color: #555;
+	border-color: #ccc;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1);
+	background: #f2f2f2 repeat-x left bottom;
+	background-image: -ms-linear-gradient(top, #fcfcfc, #f2f2f2);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fcfcfc), to(#f2f2f2));
+	background-image: -webkit-linear-gradient(top, #fcfcfc, #f2f2f2);
+	background-image: -o-linear-gradient(top, #fcfcfc, #f2f2f2);
+	background-image: -moz-linear-gradient(top, #fcfcfc, #f2f2f2);
+	background-image: linear-gradient(top, #fcfcfc, #f2f2f2);
+}
+box > h2:before,
+box > h2:after{clear:both;display:table;content:"";}
+box > h2 a{text-decoration:none;}
+box > h2 t{display:inline-block;font-size:1.2em;font-weight:bold;}
+box > h2 t2{display:inline-block;font-size:12px;margin-left:10px;}
+
+box h2.open i{background-position:0 -27px;}
+box h2.close i{background-position:0 0;}
+box h2 r{}
+
+
+box h5{height:20px;line-height:20px;padding:0 0;margin-bottom:10px;}
+
+
+box > .bod{}
+box > .bod > .con,
+box > .con{padding:10px 15px;}
+
+
+box .tab-nav{margin-top:10px;}
+box .tab-nav li:first-child{margin-left:15px;}
+box .bos{}
+
+
+box.bulk{border-color:#dfdfdf;background-color:#f7f7f7;}
+box.bulk > h2{}
+box.bulk > .con{}
+box.i{}
+box.i > h2{}
+box.i > .con{}
+box.m{}
+box.m > h2{}
+box.m > .con{}
+
+
+.xform box .tab-nav li:first-child{margin-left:52px;}

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<explain><![CDATA[default=user$$$user=基本信息;infon=网络资料;infos=详细资料]]></explain>
+	</input>
+	<!--attr={@xnames}属性;-->
+	
+<label:include file="parts.user.info">
+	
+</xcml>

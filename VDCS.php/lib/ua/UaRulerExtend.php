@@ -1,0 +1,7 @@
+<?
+class UaRulerExtend
+{
+	const CMODULE='@';
+	
+}
+?>

@@ -1,0 +1,22 @@
+﻿
+<div class="icardu" data-follow="<base:follow>" uid="<uad:id>">
+<div class="uax_info"><dl>
+	<dt><a href="javascript:;"><span class="avatarb"><img src="/avatar/<uad:_id>_m.gif" title="<uad:names>" /></span></a></dt>
+	<dd>
+		<p class="name"><a href="<url:ap><uad:_id>" title="<uad:names>"><uad:names></a></p>
+		<p class="no"><uad:_id></p>
+		<p class="sign"><uad:sign!summary></p>
+		<p><a href="<url:ap><uad:_id>"><span class="uax_level uax_level0"></span></a></p>
+		<p>
+			[<a href="<url:ap><uad:_id>/profile">更多资料</a>]</p>
+		<p>
+			<a class="btn" data-follow="<base:follow>" data-class-pop="c" data-titled="取消关注"><span>关注</span></a>
+		</p>
+	</dd>
+</dl></div>
+</div>
+<script type="text/javascript">
+$(function(){
+	appt.mu.follower();
+});
+</script>

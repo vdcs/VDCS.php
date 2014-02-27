@@ -1,0 +1,29 @@
+
+<label:include script="<url:images>themes/default/account/box.profile.css" type="css">
+<div class="box">
+	<h2><t>基本信息</t><r><a href="<chn:linkurl("{@channel}","pam","p=settings&m=info")>">修改资料</a></r></h2>
+	<div class="bod">
+<div class="box_profile"><div class="inner">
+	<div class="assets">
+		<h4><t>账户余额</t></h4>
+		<h5><t><i class="money"><ua:money></i><app:unit.money></t><cite><a class="btn b c" href="<chn:linkurl("{@channel}","pam","p=assets&m=recharge")>"><span>立即充值</span></a></cite></h5>
+	</div>
+	<div class="infos">
+		<dl>
+			<dt>
+				<ul>
+					<li class="names"><cite>称呼：</cite><t><ua:names></t></li>
+					<li class="email"><cite>电子邮件：</cite><t><ua:email></t></li>
+					<li class="mobile"><cite>手机号码：</cite><t><ua:mobile!safe></t></li>
+					<li class="uid"><cite>UID：</cite><t><ua:id></t></li>
+				</ul>
+			</dt>
+			<dd>
+				<pic class="avatar b"><img src="<chn:linkurl("account","avatar","res=m&id=<ua:id>")>" /></pic>
+				<p><a href="<chn:linkurl("{@channel}","pam","p=settings&m=avatar")>"><span>上传头像</span></a></p>
+			</dd>
+		</dl>
+	</div>
+</div></div>
+	</div>
+</div>

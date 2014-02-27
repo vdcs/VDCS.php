@@ -1,0 +1,28 @@
+@charset "utf-8";
+@import url("../images/common.defined.css");
+
+
+body{
+	background: #fcfefe url("bg.jpg") no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.debugi{display:none;}
+
+.LoginBox{clear:both;padding:50px 0 0 120px;}	/*margin:100px 0 0 180px;*/
+.LoginBox{color:#888;position:relative;}
+.LoginBox > .icon{display:inline-block;width:120px;height:120px;background:url("icon_welcome.png") no-repeat;}
+.LoginBox > .icon{position:absolute;top:0;left:0;}
+.LoginBox > h3{height:25px;line-height:25px;color:#0066CC;font-size:14px;font-weight:bold;}
+.LoginBox > h4{padding:2px 0;}
+.LoginBox .xform{width:250px;}
+
+.LoginBox .copyright{padding:2px 0;}
+.LoginBox .copyright a,
+.LoginBox .copyright a:visited{color:#444;text-decoration:none;}
+.LoginBox .copyright a:hover,
+.LoginBox .copyright a:active{color:#FF3D0D;text-decoration:underline;}
+.LoginBox .spaces{height:20px;}
+.LoginBox .line{width:300px;height:1px;border-top:1px solid #CFCFCF;margin:6px 0;overflow:hidden;}

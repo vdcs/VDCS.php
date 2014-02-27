@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>var,config,url.script,url.rewrite</node>
+	</configure>
+	<var xmlns:product="node" xmlns:data="node" xmlns:order="node" xmlns:orderi="node" xmlns:brand="node">
+		<name>{@name}</name>
+		<names>{@names}</names>
+		<act>{@act}</act>
+		<act.view>{@act.view}</act.view>
+		<act.order>{@act.order}</act.order>
+		<act.buy>{@act.buy}</act.buy>
+		<unit>{@unit}</unit>
+		
+		<product:name>{@product:name}</product:name>
+		<product:names>{@product:names}</product:names>
+		<product:unit>{@product:unit}</product:unit>
+		<product:act>{@product:act}</product:act>
+		<product:act.view>{@product:act.view}</product:act.view>
+		<product:act.get>{@product:act.get}</product:act.get>
+		<product:act.order>{@product:act.order}</product:act.order>
+		<product:act.buy>{@product:act.buy}</product:act.buy>
+		
+		<data:name>{@data:name}</data:name>
+		<data:names>{@data:names}</data:names>
+		<data:unit>{@data:unit}</data:unit>
+		<data:act>{@data:act}</data:act>
+		<data:act.view>{@data:act.view}</data:act.view>
+		<data:act.get>{@data:act.get}</data:act.get>
+		
+		<order:name>{@data:name}</order:name>
+		<order:names>{@data:names}</order:names>
+		<order:unit>{@data:unit}</order:unit>
+		<order:act>{@data:act}</order:act>
+		
+		<orderi:name>{@data:name}</orderi:name>
+		<orderi:names>{@data:names}</orderi:names>
+		<orderi:unit>{@data:unit}</orderi:unit>
+		<orderi:act>{@data:act}</orderi:act>
+		
+		<brand:name>{@data:name}</brand:name>
+		<brand:names>{@data:names}</brand:names>
+		<brand:unit>{@data:unit}</brand:unit>
+		<brand:act>{@data:act}</brand:act>
+	</var>
+	<config>
+		<model>configure,search,class</model>
+	</config>
+	<url.script>
+		<list><![CDATA[{@rootc.script}&p=list&classid={$classid}]]></list>
+		<list.page><![CDATA[{@rootc.script}&p=list&classid={$classid}&page={$page}]]></list.page>
+		<view><![CDATA[{@rootc.script}&p=view&id={$id}]]></view>
+		<view.page><![CDATA[{@rootc.script}&p=view&id={$id}&page={$page}]]></view.page>
+		
+		<brand><![CDATA[{@rootc.script}&p=brand]]></brand>
+		<brand.list><![CDATA[{@rootc.script}&p=list&brandid={$brandid}]]></brand.list>
+		<brand.view><![CDATA[{@rootc.script}&p=brand&id={$id}]]></brand.view>
+		
+		<faq><![CDATA[{@rootc.script}&p=faq&page={$page}]]></faq>
+		<faq.key><![CDATA[{@rootc.script}&p=faq&page={$page}&key={$key}]]></faq.key>
+	</url.script>
+	<url.rewrite>
+		<list><![CDATA[{@rootc.rewrite}list_{$classid}<app:rewrite.ext>]]></list>
+		<list.page><![CDATA[{@rootc.rewrite}list_{$classid}_{$page}<app:rewrite.ext>]]></list.page>
+		<view><![CDATA[{@rootc.rewrite}view_{$id}<app:rewrite.ext>]]></view>
+		<view.page><![CDATA[{@rootc.rewrite}view_{$id}_{$page}<app:rewrite.ext>]]></view.page>
+		
+		<brand><![CDATA[{@rootc.rewrite}brand<app:rewrite.ext>]]></brand>
+		<brand.list><![CDATA[{@rootc.rewrite}list_brand_{$brandid}<app:rewrite.ext>]]></brand.list>
+		<brand.view><![CDATA[{@rootc.rewrite}brand_{$id}<app:rewrite.ext>]]></brand.view>
+		
+		<faq><![CDATA[{@rootc.rewrite}{$page}<app:rewrite.ext>]]></faq>
+		<faq.key><![CDATA[{@rootc.rewrite}{$page}-{$key}<app:rewrite.ext>]]></faq.key>
+	</url.rewrite>
+</xcml>

@@ -1,0 +1,10 @@
+<div class="box">
+	<h2><t>页面源</t></h2>
+	<div class="con">
+<div class="links">
+<ul>
+<li><a href="<exec:url("action=add")>"><span>添加页面源</span></a></li>
+</ul>
+</div>
+	</div>
+</div>

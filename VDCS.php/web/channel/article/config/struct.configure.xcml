@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="struct">
+	<configure>
+		<node>item</node>
+	</configure>
+	<item>
+		<__key><![CDATA[config.base]]></__key>
+		<__name><![CDATA[基本配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.var><![CDATA[名称设定			###type~bar]]></bar.var>
+		<pre.name><![CDATA[频道简称			###property.min~1]]></pre.name>
+		<pre.names><![CDATA[单位名称			###property.min~1]]></pre.names>
+		<pre.act><![CDATA[单位动作			###property.min~1]]></pre.act>
+		<pre.unit><![CDATA[单位量词			###property.min~1]]></pre.unit>
+		<bar.title><![CDATA[标题设定			###type~bar]]></bar.title>
+		<var.title><![CDATA[首页			###property.min~1]]></var.title>
+		<var.title.list><![CDATA[列表页			###property.min~1]]></var.title.list>
+		<var.title.view><![CDATA[浏览页			###property.min~1]]></var.title.view>
+		<var.title.pic><![CDATA[图片页			###property.min~1]]></var.title.pic>
+		<var.title.class><![CDATA[分类页		###property.min~1]]></var.title.class>
+		<var.title.special><![CDATA[专题页		###property.min~1]]></var.title.special>
+		<var.title.search><![CDATA[搜索页		###property.min~1]]></var.title.search>
+	</item>
+	<item>
+		<__key><![CDATA[config.adv]]></__key>
+		<__name><![CDATA[高级配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.url><![CDATA[SEO设定			###type~bar]]></bar.url>
+		<config.url><![CDATA[URL模式			###type~radio		^att~<control:att("file","url.mode")>]]></config.url>
+		<bar.num><![CDATA[数值设定			###type~bar]]></bar.num>
+		<num.pic.width><![CDATA[小图片宽度		###property.min~0	^explain~像素$$$0为默认值 <app:var.pic.width>px]]></num.pic.width>
+		<num.pic.height><![CDATA[小图片高度		###property.min~0	^explain~像素$$$0为默认值 <app:var.pic.height>px]]></num.pic.height>
+	</item>
+	<item>
+		<__key><![CDATA[config.put]]></__key>
+		<__name><![CDATA[发布配置]]></__name>
+		<__file><![CDATA[config]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.config><![CDATA[前台发布设定		###type~bar]]></bar.config>
+		<config.put><![CDATA[是否可发布			###type~radio		^property.type~int	^att~<control:att("file","put")>]]></config.put>
+		<config.put.status><![CDATA[发布审核		###type~radio		^property.type~int	^att~<control:att("dict","data.audit")>]]></config.put.status>
+		<config.put.premium><![CDATA[发布奖励		###type~radio		^property.type~int	^att~<control:att("file","put.premium")>]]></config.put.premium>
+		<config.put.audit><![CDATA[审核可操作		###type~checkbox	^property.type~string	^att~<control:att("file","put.audit")>]]></config.put.audit>
+		<bar.put.premium><![CDATA[发布奖励设定		###type~bar]]></bar.put.premium>
+		<config.put.premium.emoney><![CDATA[奖励货币	###property.type~int	^property.min~		^explain~<app:unit.emoney>$$$]]></config.put.premium.emoney>
+		<config.put.premium.points><![CDATA[奖励积分	###property.type~int	^property.min~		^explain~<app:unit.points>$$$]]></config.put.premium.points>
+	</item>
+	<item>
+		<__key><![CDATA[config.url]]></__key>
+		<__name><![CDATA[地址配置]]></__name>
+		<__file><![CDATA[configure]]></__file>
+		<__cache><![CDATA[configure]]></__cache>
+		<bar.url.script><![CDATA[动态URL地址配置	###type~bar]]></bar.url.script>
+		<url.script.index><![CDATA[首页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.index>
+		<url.script.lists><![CDATA[列表URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.lists>
+		<url.script.lists.pic><![CDATA[图片列表URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.lists.pic>
+		<url.script.list><![CDATA[列表页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.list>
+		<url.script.list.page><![CDATA[列表分页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.list.page>
+		<url.script.specials><![CDATA[专题URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.specials>
+		<url.script.special><![CDATA[专题页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.special>
+		<url.script.special.page><![CDATA[专题分页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.special.page>
+		<url.script.view><![CDATA[浏览页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.view>
+		<url.script.view.page><![CDATA[浏览分页URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.view.page>
+		<url.script.search><![CDATA[搜索页URL		###property.min~1	^style~size=60 class="itxt"]]></url.script.search>
+		<url.script.search.action><![CDATA[搜索请求URL	###property.min~1	^style~size=60 class="itxt"]]></url.script.search.action>
+		<bar.url.rewrite><![CDATA[静态URL地址配置(ISAPI Rewrite)		###type~bar]]></bar.url.rewrite>
+		<url.rewrite.index><![CDATA[首页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.index>
+		<url.rewrite.lists><![CDATA[列表URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.lists>
+		<url.rewrite.lists.pic><![CDATA[图片列表URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.lists.pic>
+		<url.rewrite.list><![CDATA[列表页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.list>
+		<url.rewrite.list.page><![CDATA[列表分页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.list.page>
+		<url.rewrite.specials><![CDATA[专题URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.specials>
+		<url.rewrite.special><![CDATA[专题页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.special>
+		<url.rewrite.special.page><![CDATA[专题分页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.special.page>
+		<url.rewrite.view><![CDATA[浏览页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.view>
+		<url.rewrite.view.page><![CDATA[浏览分页URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.view.page>
+		<url.rewrite.search><![CDATA[搜索页URL		###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.search>
+		<url.rewrite.search.action><![CDATA[搜索请求URL	###property.min~1	^style~size=60 class="itxt"]]></url.rewrite.search.action>
+	</item>
+</xcml>

@@ -1,0 +1,24 @@
+
+<div id="BannerW1" class="BannerW"><div class="partBody">
+<cite><a href=""><img src="<url:images>space.gif"></a></cite>
+<ul>
+<label:block("shop","res=sales;classid=;row=5;cache=;t=i")>
+<li class="i[item:sn]"><a href="[item:linkurl]" img="[item:pic.url]">[item:topic]</a></li>
+</label:end>
+</ul>
+</div></div>
+<script type="text/javascript">$(d).ready(function(){app.BannerW("BannerW1");});</script>
+
+
+<div id="BannerW2" class="BannerW BannerWSN"><div class="partBody">
+<cite><a href=""><img src="<url:images>space.gif"></a></cite>
+<ul>
+<label:block("shop","res=new;classid=;row=5;cache=;t=i")>
+<li class="i[item:sn]"><a href="[item:linkurl]" img="[item:pic.url]" title="[item:topic]">[item:sn]</a></li>
+</label:end>
+</ul>
+</div></div>
+<script type="text/javascript">$(d).ready(function(){app.BannerW("BannerW2");});</script>
+
+
+<div class="space"></div>

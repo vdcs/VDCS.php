@@ -1,0 +1,12 @@
+
+<div class="hide" id="mtip">
+<div class="mtip">
+	<cite class="succeed"><em></em></cite>
+	<h3>提示标题</h3>
+	<h4>提示内容</h4>
+	<h5>
+		<a class="btn" el="root" href="<url:root>"><span>首页</span></a>
+		<a class="btn" el="back" href="javascript:;"><span>返回</span></a>
+	</h5>
+</div>
+</div>

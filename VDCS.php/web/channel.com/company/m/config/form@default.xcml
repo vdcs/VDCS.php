@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<explain><![CDATA[default=corp$$$corp=基本信息;pivotal=关键信息;nums=分值信息;infod=描述资料;content=介绍资料;status={@xnames}状态]]></explain>
+	</input>
+	<!--attr={@xnames}属性;-->
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=corp;display=block</att>
+	</input>
+	<input>
+		<type>text.comid</type>
+		<property><![CDATA[item=;action=add;type=int;max=255;min=1]]></property>
+		<style>size=20 maxlength=20</style>
+		<caption><![CDATA[{@xnames}ＩＤ]]></caption>
+		<att></att>
+		<value><![CDATA[{$id}]]></value>
+		<explain><![CDATA[唯一]]></explain>
+	</input>
+	<input>
+		<type>put.comid</type>
+		<property><![CDATA[item=;action=edit;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[{@xnames}ＩＤ]]></caption>
+		<att></att>
+		<value><![CDATA[]]></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	
+	<input>
+		<type>select.classid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min={@@classid.min}]]></property>
+		<style><![CDATA[ class="itxt"]]></style>
+		<caption><![CDATA[{@xnames}分类]]></caption>
+		<att><![CDATA[0=请选择{@xnames}分类..;<control:att("class","channel={@channel}")>]]></att>
+		<value>0</value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	
+	<input>
+		<type>text.{@tpx}no</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=]]></property>
+		<style>size=20 maxlength=50 class="item"</style>
+		<caption><![CDATA[{@xnames}编号]]></caption>
+		<att></att>
+		<value><![CDATA[{$no}]]></value>
+		<explain><![CDATA[唯一]]></explain>
+	</input>
+	
+	<input>
+		<type>text.{@tpx}name</type>
+		<property><![CDATA[item=;action=;type=string;max=200;min=2]]></property>
+		<style>size=40 maxlength=200 class="ivar"</style>
+		<caption><![CDATA[{@xnames}名称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[唯一]]></explain>
+	</input>
+	
+	<input>
+		<type>text.{@tpx}email</type>
+		<property><![CDATA[item=;action=;type=string;max=100;min=0]]></property>
+		<style>size=40 maxlength=100 class="ivar"</style>
+		<caption><![CDATA[电子邮箱]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}mobile</type>
+		<property><![CDATA[item=;action=;type=string;max=20;min=0]]></property>
+		<style>size=20 maxlength=11 class="item"</style>
+		<caption><![CDATA[手机号码]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	
+	<input>
+		<type>text.{@tpx}names</type>
+		<property><![CDATA[item=;action=;type=;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[{@xnames}简称]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}location</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[位置地点]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}marks</type>
+		<property><![CDATA[item=;action=;type=string;max=50;min=]]></property>
+		<style>size=30 maxlength=50 class="item"</style>
+		<caption><![CDATA[地理标注]]></caption>
+		<att></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	
+<label:include file="part.corp.namex">
+<label:include file="part.corp.contact">
+	
+	<input>
+		<type>bar</type>
+		<caption><![CDATA[所属信息]]></caption>
+	</input>
+	<input>
+		<type>radio.{@tpx}groupid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[组别]]></caption>
+		<att><![CDATA[<control:att("file","common.channel/{@channel}/group")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}teamid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[团队]]></caption>
+		<att><![CDATA[0=无;<control:att("file","common.channel/{@channel}/team")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>radio.{@tpx}grade</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[<app:var.grade>]]></caption>
+		<att><![CDATA[<control:att("file","common.channel/{@channel}/data.grade")>]]></att>
+		<value>0</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>text.{@tpx}rank</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[<app:var.rank>]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.rank>$$$]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+<label:include file="parts.corp.info">
+	
+</xcml>

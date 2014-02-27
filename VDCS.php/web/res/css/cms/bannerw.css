@@ -1,0 +1,29 @@
+@charset "utf-8";
+/*
+Version:	VDCS CMS @bannerw v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-05-00
+*/
+
+
+/* ######################### */
+.BannerW{clear:both;width:100%;height:250px;position:relative;overflow:hidden;}
+.BannerW .BannerWi,
+.BannerW .partBody{width:100%;height:100%;}
+.BannerW cite{display:block;width:100%;height:220px;}
+.BannerW cite img{width:100%;height:100%;}
+.BannerW ul{clear:both;height:30px;line-height:30px;overflow:hidden;}
+.BannerW ul li{float:left;display:inline-block;}
+.BannerW ul li a{display:block;width:147px;text-align:center;background-color:#FFF;border-right:1px solid #DDD;}
+.BannerW ul li.first a{}
+.BannerW ul li.last a{width:150px;border-right:0;}
+.BannerW ul li a{color:#888;font-weight:bold;font-size:16px;text-decoration:none;}
+.BannerW ul li a.pop,
+.BannerW ul li a:hover{color:#FFF;background-color:#E93C3B;}
+
+.BannerWSN{}
+.BannerWSN cite{height:100%;}
+.BannerWSN ul{height:25px;line-height:25px;position:absolute;top:215px;left:570px;}
+.BannerWSN ul li.first a,
+.BannerWSN ul li.last a,
+.BannerWSN ul li a{width:28px;}

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>struct,label.topic</node>
+	</configure>
+	<struct>
+		<topic:table.name><![CDATA[{@topic:table.name}]]></topic:table.name>
+		<topic:table.px><![CDATA[{@topic:table.px}]]></topic:table.px>
+		<topic:table.field.id><![CDATA[{@topic:table.px}id]]></topic:table.field.id>
+		<data:table.name><![CDATA[{@data:table.name}]]></data:table.name>
+		<data:table.px><![CDATA[{@data:table.px}]]></data:table.px>
+		<data:table.field.id><![CDATA[{@data:table.px}id]]></data:table.field.id>
+		<ua:table.name><![CDATA[{@ua:table.name}]]></ua:table.name>
+		<ua:table.px><![CDATA[{@ua:table.px}]]></ua:table.px>
+		<ua:table.field.id><![CDATA[uuid]]></ua:table.field.id>
+		<list.table><![CDATA[]]></list.table>
+		<list.fields><![CDATA[*]]></list.fields>
+		<list.query><![CDATA[classid>0 and classid<>999999999 and {@topic:table.px}istop=0]]></list.query>
+		<list.order><![CDATA[{@topic:table.px}id desc]]></list.order>
+		<list.orders><![CDATA[]]></list.orders>
+		<view.fields><![CDATA[*]]></view.fields>
+		<view.query><![CDATA[rootid={$id}]]></view.query>
+		<view.order><![CDATA[{@data:table.px}id asc]]></view.order>
+		<view.orders><![CDATA[]]></view.orders>
+		<view.sql><![CDATA[select top 1 * from {@topic:table.name} where classid>0 and classid<>999999999 and {@topic:table.px}id={$id}]]></view.sql>
+		<view.px><![CDATA[{@topic:table.px}]]></view.px>
+		<view.update><![CDATA[update {@topic:table.name} set {@topic:table.px}total_view={@topic:table.px}total_view+1 where {@topic:table.px}id={$id}]]></view.update>
+		
+	 	<ua.relate><![CDATA[uuid={$uuid}]]></ua.relate>
+	</struct>
+	<label.topic>
+		<table.name><![CDATA[{@topic:table.name}]]></table.name>
+		<table.field><![CDATA[id={@topic:table.px}id;orderid=orderid;classid=classid;tipid=tipid;uid=uuid;
+			topic={@topic:table.px}topic;summary={@topic:table.px}subhead;icon={@topic:table.px}icon;style={@topic:table.px}style;defined={@topic:table.px}defined;keywords={@topic:table.px}keywords;
+			istop={@topic:table.px}istop;isgood={@topic:table.px}isgood;islock={@topic:table.px}islock;status={@topic:table.px}status;
+			tim={@topic:table.px}tim;last.tim={@topic:table.px}last_tim;last.uid={@topic:table.px}last_uid;
+			total.view{@topic:table.px}total_view;total.reply={@topic:table.px}total_reply]]></table.field>
+		<table.fields><![CDATA[*]]></table.fields>
+		<block><![CDATA[select top {$num} {$table.fields} from {$table.name} where classid>0 and classid<>999999999 {$query.append} {$order}]]></block>
+		<block.order><![CDATA[new=order by {@topic:table.px}id desc;
+			order=order by {@topic:table.px}orderid desc;
+			hot=order by {@topic:table.px}total_view desc,{@topic:table.px}id desc;
+			hotview=order by {@topic:table.px}total_view desc,{@topic:table.px}id desc;
+			hotreply=order by {@topic:table.px}total_reply desc,{@topic:table.px}id desc;
+			good=and {@topic:table.px}isgood>0 order by {@topic:table.px}id desc;
+			top=and {@topic:table.px}istop>0 order by {@topic:table.px}istop desc,{@topic:table.px}id desc]]></block.order>
+		<block.url>view</block.url>
+		<list.query><![CDATA[classid>0 and classid<>999999999 {$query_append}]]></list.query>
+		<list.order><![CDATA[new={@topic:table.px}id desc]]></list.order>
+		<list.orders><![CDATA[new={@topic:table.px}id asc]]></list.orders>
+		<list.url>view</list.url>
+	</label.topic>
+</xcml>

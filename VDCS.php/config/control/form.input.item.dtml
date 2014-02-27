@@ -1,0 +1,9 @@
+	<input>
+		<type><![CDATA[{$type}]]></type>
+		<property><![CDATA[{$property}]]></property>
+		<style><![CDATA[{$style}]]></style>
+		<caption><![CDATA[{$caption}]]></caption>
+		<att><![CDATA[{$att}]]></att>
+		<value><![CDATA[{$value}]]></value>
+		<explain><![CDATA[{$explain}]]></explain>
+	</input>

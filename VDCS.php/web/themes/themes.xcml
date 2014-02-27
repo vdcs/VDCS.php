@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>theme,name,explain,manufacturer,url</field>
+	</configure>
+	<item>
+		<theme>default</theme>
+		<name><![CDATA[默认风格]]></name>
+		<explain><![CDATA[系统自带的默认风格]]></explain>
+		<manufacturer><![CDATA[上海乔客网络科技有限公司]]></manufacturer>
+		<url><![CDATA[http://www.joekoe.cn/]]></url>
+	</item>
+</xcml>

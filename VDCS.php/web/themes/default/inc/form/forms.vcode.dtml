@@ -1,0 +1,6 @@
+
+<dt el="vcode">
+	<h2>验证码</h2>
+	<h3><p><input type="text" class="tipi" id="vcode_input" value="" placeholder="点击显示验证码" minlength="2" maxlength="16" /><em class="it vcode"></em><em class="ih"></em></p></h3>
+	<h4 id="vcode_support"></h4>
+</dt>

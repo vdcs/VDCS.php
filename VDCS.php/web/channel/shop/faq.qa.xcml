@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,topic,content</field>
+	</configure>
+	<item>
+		<key>cart</key>
+		<topic><![CDATA[购物车]]></topic>
+		<content><![CDATA[]]></content>
+	</item>
+	<item>
+		<key>user</key>
+		<topic><![CDATA[会员中心]]></topic>
+		<content><![CDATA[]]></content>
+	</item>
+	<item>
+		<key>feedback</key>
+		<topic><![CDATA[客户留言]]></topic>
+		<content><![CDATA[]]></content>
+	</item>
+	<item>
+		<key>catalog</key>
+		<topic><![CDATA[产品目录]]></topic>
+		<content><![CDATA[]]></content>
+	</item>
+</xcml>

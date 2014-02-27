@@ -1,0 +1,25 @@
+<label:include file="frame/header">
+<label:include file="frame/cont.beginx">
+
+
+<label:include file="inc/listc.struct.begin">
+<th class="item"><exec:langs("title.channel")></th>
+<th class="user"><exec:langs("title.user")></th>
+<th class="info"><exec:langs("title.title")></th>
+<th class="status w80"><exec:langs("title.status")></th>
+<th class="handle"><exec:langs("title.handle")></th>
+<label:include file="inc/listc.struct.end">
+<label:include file="inc/listc.tpl.begin">
+<td class="channel"><a href="[item:<v:table.px>url!js]" target="_blank">[item:channel.name]</a></td>
+<td class="user"><span class="user" title="ID: [item:uid]&#10;用户名: [item:uname]&#10;真实姓名: [item:<v:table.px>realname]&#10;电子邮箱: [item:<v:table.px>email]">[item:user]</span></td>
+<td class="info"><a href="<v:url.trans>">[item:<v:table.px>topic!html]</a>
+	<p class="s"><a class="s" href="[item:<v:table.px>url!html]" target="_blank">[item:<v:table.px>title!html]</a> @[item:channel.name]</p></td>
+<td class="status"><control:dict("data.audit","{$$list:<v:table.px>status}")> <control:dict("data.trans","{$$list:se_trans}")>
+	<label:include file="inc/row.item.timed"></td>
+<td class="handle"><a href="#view"><exec:langs("action.view")></a></td>
+<label:include file="inc/listc.tpl.end">
+<label:include file="inc/listc.script">
+
+
+<label:include file="frame/cont.endx">
+<label:include file="frame/footer">

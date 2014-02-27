@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>list,view,att</node>
+	</configure>
+	<list>
+		<bar.update><![CDATA[更新时间]]></bar.update>
+		<bar.size><![CDATA[大小]]></bar.size>
+		<bar.level><![CDATA[星级]]></bar.level>
+		<bar.total><![CDATA[<channel:var("act")>]]></bar.total>
+	</list>
+	<view>
+		<remark><![CDATA[<channel:var("names")>介绍]]></remark>
+		<datas><![CDATA[<channel:var("act")>地址]]></datas>
+		<notes><![CDATA[注意事项]]></notes>
+		<class><![CDATA[<channel:var("names")>分类]]></class>
+	</view>
+	<att>
+		<level><![CDATA[星级评定]]></level>
+		<size><![CDATA[文件大小]]></size>
+		<genre><![CDATA[授权类型]]></genre>
+		<os><![CDATA[操作平台]]></os>
+		<total><![CDATA[下载次数]]></total>
+		<homepage><![CDATA[相关链接]]></homepage>
+		<username><![CDATA[发 布 人]]></username>
+		<time><![CDATA[发布时间]]></time>
+		<comment><![CDATA[相关评论]]></comment>
+	</att>
+</xcml>

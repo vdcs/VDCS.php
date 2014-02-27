@@ -1,0 +1,151 @@
+
+<style type="text/css">
+.title-txt { font-weight:bold; font-size:14px; }
+</style>
+<div class="box">
+	<h2><t>配送信息</t></h2>
+	<div class="cont">
+<div class="lines mx10"></div>
+<table class="tabs frm-full">
+<tr class="align-left" valign="top">
+<td width="100"><span class="title-txt">配送地址</span></td>
+<td width="*">
+	<table class="tabs">
+	<tr class="row">
+	<td width="22%" class="ar"><span class="b0">收货人：</span></td>
+	<td width="5%"></td>
+	<td width="73%"><dat:addr.linkman></td>
+	</tr>
+	<tr class="row">
+	<td class="ar"><span class="b0">省份/直辖市：</span></td>
+	<td></td>
+	<td><dat:addr.areas></td>
+	</tr>
+	<tr class="row">
+	<td class="ar"><span class="b0">收货地址：</span></td>
+	<td></td>
+	<td><dat:addr.address></td>
+	</tr>
+	<tr class="row">
+	<td class="ar"><span class="b0">邮编编码：</span></td>
+	<td></td>
+	<td><dat:addr.postcode></td>
+	</tr>
+	<tr class="row">
+	<td class="ar"><span class="b0">手机/固定电话：</span></td>
+	<td></td>
+	<td><dat:addr.phone></td>
+	</tr>
+	<tr class="row blank">
+	<td class="ar"><span class="b0">E-mail：</span></td>
+	<td></td>
+	<td><dat:addr.email></td>
+	</tr>
+	</table>
+</td>
+<td width="100" class="td-edit"><a href="<chn:linkurl("{@channel}","cart.flow","flow=addr")>">修改</a></td>
+</tr>
+</table>
+<div class="lines mx10"></div>
+<table class="tabs frm-full">
+<tr class="align-left" valign="top">
+<td width="100"><span class="title-txt">送货方式</span></td>
+<td width="*">
+	<table border="0" cellspacing="0" cellpadding="2">
+	<loop:shipping>
+	<!--{if ({$dat:_shipping}=={$shipping:name})}-->
+	<tr><td style="padding:5px 0px 5px 0px;">
+	<input type="radio" class="normal" name="_shipping" value="[item:name]" checked />
+	<u><b>[item:name]</b></u> <!--{if toInt({$shipping:price})>0}-->加 <span class="price">[item:price!price]</span> <app:unit.coin><!--{else}--><span class="mark">免费</span><!--{/if}-->
+	</td></tr>
+	<tr><td>[item:explain]</td></tr>
+	<!--{/if}-->
+	</loop>
+	</table>
+</td>
+<td width="100" class="td-edit"><a href="<chn:linkurl("{@channel}","cart.flow","flow=unite")>">修改</a></td>
+</tr>
+</table>
+<div class="lines mx10"></div>
+<table class="tabs frm-full">
+<tr class="align-left" valign="top">
+<td width="100"><span class="title-txt">支付方式</span></td>
+<td width="*">
+	<table border=0 cellspacing=0 cellpadding=2>
+	<loop:payment>
+	<!--{if ({$dat:_payment}=={$payment:value})}-->
+	<tr><td style="padding:5px 0px 5px 0px;">
+	<input type="radio" class="normal" name="o_payment" value="[item:value]" checked />
+	<u><b>[item:name]</b></u>
+	</td></tr>
+	<tr><td>[item:explain]</td></tr>
+	<!--{/if}-->
+	</loop>
+	</table>
+</td>
+<td width="100" class="td-edit"><a href="<chn:linkurl("{@channel}","cart.flow","flow=unite")>">修改</a></td>
+</tr>
+</table>
+<div class="lines mx10"></div>
+<table class="tabs frm-full">
+<tr class="align-left" valign="top">
+<td width="100"><span class="title-txt">送货时间选择</span></td>
+<td width="*">
+	<table border=0 cellspacing=0 cellpadding=2>
+	<loop:dtime>
+	<!--{if ({$dat:_dtime}=={$dtime:value})}-->
+	<tr><td style="padding:5px 0px 5px 0px;">
+	<input type="radio" class="normal" name="_dtime" value="[item:value]" checked />
+	[item:explain]
+	</td></tr>
+	<!--{/if}-->
+	</loop>
+	</table>
+</td>
+<td width="100" class="td-edit"><a href="<chn:linkurl("{@channel}","cart.flow","flow=unite")>">修改</a></td>
+</tr>
+</table>
+<div class="lines mx10"></div>
+<dtml:_message>
+<form name="frm_pay" action="" method="post">
+<input type="hidden" name="_chk" value="yes" />
+<table class="tabs frm-full">
+<tr class="align-left" valign="top">
+<td width="100"><span class="title-txt">开具发票</span></td>
+<td width="*">
+	<table cellspacing="4" cellpadding="4" class="frm-full">
+	<tr class="row">
+	<td width="30%"><span class="b">是否需要发票：</span></td>
+	<td width="70%"><control:form.element("radio.o_invoice_is","__value","file","common.channel/{@channel}/data.invoice.is")></td>
+	</tr>
+	<tbody id="tbody-invoice">
+	<tr class="row">
+	<td><span class="b">发票抬头：</span></td>
+	<td><input type="text" class=txt name="o_invoice_title" value="<data:o_invoice_title!form.input>" size="40" maxlength="200" style="width:96%;"></td>
+	</tr>
+	<tr class="row blank">
+	<td><span class="b">发票内容：</span></td>
+	<td><control:form.element("select._invoice_type","__value","file","common.channel/{@channel}/data.invoice.type")></td>
+	</tr>
+	</tbody>
+	</table>
+</td>
+<td width="100" class="td-edit"></td>
+</tr>
+</table>
+<div class="lines mx10"></div>
+<table class="tabs frm-full">
+<tr class="align-left" valign="top">
+<td width="100"><span class="title-txt">客户留言</span></td>
+<td width="*">
+	<div class="ar" style="margin-left:3px;">
+	<textarea class="txtarea" name="o_message" cols="40" rows="5" style="width:98%;"><data:o_message!form.textarea></textarea>
+	<p class="align-right"></p>
+	</div>
+</td>
+<td width="100" class="td-edit">&nbsp;<span class="gray">(限100个字)</span></td>
+</tr>
+</table>
+</form>
+	</div></div>
+</div>

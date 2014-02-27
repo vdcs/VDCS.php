@@ -1,0 +1,4 @@
+	<div class="partof actions">
+		<div class="left"><label:include file="/inc/view/relate.tags"></div>
+		<r><label:include file="/inc/view/relate.act"></r>
+	</div>

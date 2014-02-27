@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links</frame>
+		
+		<table.name>dbs_server</table.name>
+		<table.px>s_</table.px>
+		<table.field.id>id</table.field.id>
+		<table.field.defineid>serverid</table.field.defineid>
+		<table.fields.value>id=id</table.fields.value>
+		<table.fields.add></table.fields.add>
+		<table.fields.edit></table.fields.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.order>orderid desc,id asc</list.table.order>
+		<list.field.append></list.field.append>
+		<list.handle.select.option>delete</list.handle.select.option>
+		<list.handle.sql.hide>update dbs_server set status=0 where id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.unhide>update dbs_server set status=1 where id in ({$ids})</list.handle.sql.unhide>
+		<list.handle.sql.delete>delete from dbs_server where id in ({$ids})</list.handle.sql.delete>
+		<list.table.query.unauth>isauth=0</list.table.query.unauth>
+		<list.table.query.auth>isauth=1</list.table.query.auth>
+	</config>
+	
+	<lang>
+		<title><![CDATA[服务器管理]]></title>
+		<title.name><![CDATA[服务器]]></title.name>
+		<title.list><![CDATA[服务器列表]]></title.list>
+		<title.list.><![CDATA[服务器列表]]></title.list.>
+		<title.add><![CDATA[添加服务器]]></title.add>
+		<title.edit><![CDATA[编辑服务器]]></title.edit>
+		<title.del><![CDATA[删除服务器]]></title.del>
+		
+		<error.not.exist><![CDATA[您要编辑的服务器不存在！]]></error.not.exist>
+		<error.exist.data><![CDATA[您要删除的服务器有频道数据存在！]]></error.exist.data>
+		<error.exist.add><![CDATA[相关 服务器ID 已存在！]]></error.exist.add>
+		
+		<error.norule.id><![CDATA[服务器ID 不符合规则！]]></error.norule.id>
+		<error.norule.topic><![CDATA[服务器名称 不符合规则！]]></error.norule.topic>
+		<error.norule.remark><![CDATA[服务器内容 不符合规则！]]></error.norule.remark>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 个服务器！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 个服务器！]]></handle.ok.edit>
+		<handle.ok.hide><![CDATA[成功隐藏了 {$count} 个服务器！]]></handle.ok.hide>
+		<handle.ok.unhide><![CDATA[成功显示了 {$count} 个服务器！]]></handle.ok.unhide>
+		<handle.ok.del><![CDATA[成功删除了 1 个服务器！]]></handle.ok.del>
+		<handle.ok.delete><![CDATA[成功删除了 {$count} 个服务器！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+		<list><![CDATA[
+<control:ui.value("listbox.heads")>
+<control:ui.value("list.bar.tr")>
+<control:ui.value("list.bar.id")>
+<td width="500">{$langs.title.special}</td>
+<td width="40">{$langs.title.status}</td>
+<td class="bar-time"><exec:langs("title.time")></td>
+<td class="bar-status"><exec:langs("title.status")></td>
+<td class="bar-handle"><exec:langs("title.handle")></td>
+<control:ui.value("list.bar.sd")>
+</tr>
+<loop:list>
+<control:ui.value("list.row.tr")>
+<control:ui.value("list.row.id")>
+<td align="left"><a href="{$var.url.edit}">{$s_topic}</a></td>
+<td><a href="{$var.url.edit}">{$langs.handle.edit}</a> {$=func.dict(data.hide,{${$var.px}hide})$}</td>
+<td class="row-handle"><a href="<var:url.edit>"><exec:langs("action.edit")></a></td>
+<control:ui.value("list.row.sd")>
+</tr>
+</loop>
+<control:ui.value("listbox.ends")>
+]]></list>
+		<menu.links><![CDATA[
+@@@title=服务器管理;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<var:menu.content.links>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

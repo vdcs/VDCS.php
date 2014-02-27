@@ -1,0 +1,11 @@
+
+	<dl class="attrs">
+		<dd>
+			<ul class="attr">
+<loop:attrs>
+			<li>[item:name]：</li>
+			<li>[item:value]</li>
+</loop>
+			</ul>
+		</dd>
+	</dl>

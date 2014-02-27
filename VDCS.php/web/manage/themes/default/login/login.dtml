@@ -1,0 +1,78 @@
+<label:include file="/inc/header.html5">
+<head>
+<label:include file="/inc/header.meta5">
+<title><app:web.name> - 管理登录</title>
+<label:include file="/inc/header.style5">
+<label:include script="<url:manage.themes>login/login.css" type="css">
+<label:include file="/inc/header.script">
+<label:include script="<web:script.public>.js">
+</head>
+<body>
+
+<div class="LoginBox">
+	<div class="icon"></div>
+	<h3>欢迎登录</h3>
+	<h4>请输入您的帐号和登录密码认证</h4>
+	<div class="line"></div>
+	<div class="space"></div>
+<div class="xform">
+<label:include file="login-forms.ah">
+</div>
+	<div class="space"></div>
+	<div class="line"></div>
+	<div class="copyright">&copy; <a href="<url:root>"><app:web.name></a> 版权所有</div>
+</div>
+
+<script type="text/javascript">
+<!--
+/* ip: <var:ip> */
+var isSecureCode="<data:issecurecode>";
+
+app._xlogin={
+	initer:function(ps,selector){
+		ps=ox({frm:'frm_login',
+			names			: '登录',
+			message_formcheck	: '请填写必要的登录信息！',
+			message_parser		: '登录中..',
+			message_succeed		: '登录成功！',
+			submit_ing		: '登录中..',
+			submit_succeed		: '登录成功！',
+			servURL			: '<url:manage.login.x>'},ps);
+		var backurl=$req.q('backurl')||$req.q('url');
+		if(backurl) ps.backurl=backurl;
+		this._initer(ps,selector);if(!this.isinit)return;
+		this.submitInit();
+	},
+'':''};
+app.xlogin=extendo(app.xform,app._xlogin);
+
+$(function(){
+	if(top.location!=self.location) top.location=self.location;
+	//app.xlogin.debugxml=true;
+	app.xlogin.initer({backurl:"<url:manage.welcome>"});
+	
+	var jbox=$('.LoginBox');
+	//jbox.hide();
+	jbox.addClass('animated fast fadeInLeftMiddle');
+	//jbox.addClass('animated fast flipInX');
+	jbox.css('float','left');
+	var _resize=function(){
+		var _top=($(window).height()-jbox.height())/2-80,_left=($(window).width()-jbox.width())/2-100;
+		jbox.css({top:_top,left:_left});
+		//jbox.show();
+		/*
+		jbox.addClass('animated flipInX').delay(1000).queue(function(){ 
+        	    jbox.removeClass('animated flipInX');
+        			jbox.clearQueue();
+        	});
+		*/
+	};
+	_resize();
+	$(window).resize(_resize);
+});
+//-->
+</script>
+
+</body>
+</html>
+<!-- Processed in <web:stat.exectime> s, <web:stat.query> queries. Gzip <web:stat.gzip>, Memory usage <web:stat.memory>. -->

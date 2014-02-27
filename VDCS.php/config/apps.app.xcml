@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,server</node>
+	</configure>
+	<config>
+		<appid>app</appid>
+		<key>secret_app</key>
+	</config>
+	<server>
+		<name>Server</name>
+		<url>http://php.vdcs.cc/</url>
+		<api_x>xml</api_x>
+		<api_host>http://php.vdcs.cc/api/</api_host>
+		<api_url>entry/{api}.xml</api_url>
+		<api_urls></api_urls>
+		<api_key>secret_app</api_key>
+		<ua>ua</ua>
+		<redirect>0</redirect>
+		<status>1</status>
+	</server>
+</xcml>

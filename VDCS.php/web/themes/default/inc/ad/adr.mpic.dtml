@@ -1,0 +1,13 @@
+<label:include script="<url:script>player/pics.js">
+<div id="adr-mpic" class="ac" style="width:480px;height:300px;"></div>
+<script type="text/javascript">
+$d.load(function(){
+	var pics=new VDCS.Player.Pics();
+	pics.setStyle("hot");
+	pics.setSize(480,300);
+<label:block("support.adr","res=new;query=ckey='news-mpic';row=5;cache=300;t=ci")>
+	pics.add(["[item:title!js]","[item:url]","[item:res!upload]"]);
+</label:end>
+	pics.doShow("adr-mpic");
+});
+</script>

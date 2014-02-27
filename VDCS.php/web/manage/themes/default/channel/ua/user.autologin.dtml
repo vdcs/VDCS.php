@@ -1,0 +1,28 @@
+<label:include file="header.channel">
+
+<label:include file="frame.sideleft">
+
+<div class="Block">
+	<div class="BlockBar"><p>自动登录</p></div>
+	<div class="BlockBody"><div class="BlockInner">
+<table class="tab tabs">
+<tr class="row align-center"><td style="padding:40px 10px;">
+<form name="frm_post" action="<exec:url("action")>" method="post" >
+<input type="hidden" name="_chk" value="yes" />
+	<p>{@ua:names}名称：<input type="input" name="name" value="<data:name>" size=20 maxlength=50 class="item" /> <input class="ClewSign" disabled /></p>
+	<div class="space"></div>
+	<p><span class="light"><data:_message></span></p>
+	<div class="space"></div>
+	<p><input type="submit" class="btn push" name="_sbt" value="提交登录"  onclick="return $pf.isSubmit()" /></p>
+</form>
+</td></tr>
+</table>
+	</div></div>
+	<div class="BlockFooter"><p></p></div>
+</div>
+
+<label:include file="frame.sidespace">
+<label:include file="element.menus">
+<label:include file="frame.sideright">
+
+<label:include file="footer.channel">

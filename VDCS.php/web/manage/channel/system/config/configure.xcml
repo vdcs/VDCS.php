@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>search</frame>
+		<search.fields>t_topic=6;sp_keyword=6;username=6</search.fields>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>db_table</table.name>
+		<table.px>t_</table.px>
+		<table.id>t_id</table.id>
+		<table.field.add>field1,field2</table.field.add>
+		<table.field.edit>field1,field2</table.field.edit>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.order>t_id desc</list.table.order>
+		<list.handle.select.option>hide,show,delete</list.handle.select.option>
+		<list.handle.sql.show>update db_table set t_status=1 where t_id in ({$ids})</list.handle.sql.show>
+		<list.handle.sql.hide>update db_table set t_status=0 where t_id in ({$ids})</list.handle.sql.hide>
+		<list.handle.sql.delete>delete from db_table where t_id in ({$ids})</list.handle.sql.delete>
+	</config>
+	
+	<lang>
+		<title.name><![CDATA[系统管理]]></title.name>
+		<title.list><![CDATA[系统管理列表]]></title.list>
+		<title.add><![CDATA[添加新管理]]></title.add>
+		<title.edit><![CDATA[编辑管理]]></title.edit>
+		
+		<title.frame.search><![CDATA[{@names}搜索]]></title.frame.search>
+		<search.fields.att>t_topic:标题;sp_keyword:关键字;username:发布人</search.fields.att>
+		
+		<error.not.exist><![CDATA[您要操作的 项目 不存在！]]></error.not.exist>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 个项目！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 个项目！]]></handle.ok.edit>
+		<handle.ok.lock><![CDATA[成功锁定了 {$count} 个项目！]]></handle.ok.lock>
+		<handle.ok.unlock><![CDATA[成功解锁了 {$count} 个项目！]]></handle.ok.unlock>
+		<handle.ok.show><![CDATA[成功显示了 {$count} 个项目！]]></handle.ok.show>
+		<handle.ok.hide><![CDATA[成功隐藏了 {$count} 个项目！]]></handle.ok.hide>
+		<handle.ok.delete><![CDATA[成功删除了 {$count} 个项目！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+		<list><![CDATA[
+<control:ui.value("listbox.heads")>
+<control:ui.value("list.bar.tr")>
+<control:ui.value("list.bar.id")>
+<td class="bar-topic"><exec:langs("title.topic")></td>
+<td class="bar-time"><exec:langs("title.time")></td>
+<td class="bar-status"><exec:langs("title.status")></td>
+<td class="bar-handle"><exec:langs("title.handle")></td>
+<control:ui.value("list.bar.sd")>
+</tr>
+<loop:list>
+<control:ui.value("list.row.tr")>
+<control:ui.value("list.row.id")>
+<td class="row-topic"><a href="<var:url.edit>">[item:topic]</a></td>
+<td class="row-time">[item:times]</td>
+<td class="row-status"><control:dict("data.hide","[item:<var:table.px>status]")> <control:dict("data.good","[item:<var:table.px>isgood]")></td>
+<td class="row-handle"><a href="<var:url.edit>"><exec:langs("action.edit")></a></td>
+<control:ui.value("list.row.sd")>
+</tr>
+</loop>
+<control:ui.value("listbox.ends")>
+]]></list>
+		<menu.links><![CDATA[
+@@@title=示例标题;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("action=clearall")>" onclick="javascript:return $p.isClickReturn('清除所有留言',2);">清除留言</a></li>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

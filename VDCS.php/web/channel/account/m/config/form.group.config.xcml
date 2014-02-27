@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<caption><![CDATA[详细信息]]></caption>
+		<explain><![CDATA[default=$$$base=基本信息;popedom=修改权限;finance=金融;online=在线;message=短信息;upload=上传]]></explain>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=none</att>
+	</input>
+	<input>
+		<type>text.config.0</type>
+		<property><![CDATA[item=;action=;type=int;max=10;min=0]]></property>
+		<style>size=20 maxlength=10</style>
+		<caption><![CDATA[用户组基数]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[用户组基数值]]></explain>
+	</input>
+	<input>
+		<type>radio.config.51</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[发送邮件]]></caption>
+		<att>1=是;0=否</att>
+		<value>0</value>
+		<explain><![CDATA[用户是否可前台发送邮件]]></explain>
+	</input>
+	
+	<input>
+		<type>radio.config.52</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[留言审核]]></caption>
+		<att>1=是;0=否</att>
+		<value>0</value>
+		<explain><![CDATA[用户留言前台是否直接审核]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=popedom;display=none</att>
+	</input>
+	<input>
+		<type>radio.config.6</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[修改姓名]]></caption>
+		<att>1=是;0=否</att>
+		<value>0</value>
+		<explain><![CDATA[用户是否可修改姓名]]></explain>
+	</input>
+	<input>
+		<type>radio.config.7</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[修改姓别]]></caption>
+		<att>1=是;0=否</att>
+		<value>0</value>
+		<explain><![CDATA[用户是否可修改姓别]]></explain>
+	</input>
+	<input>
+		<type>radio.config.8</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[修改邮件]]></caption>
+		<att>1=是;0=否</att>
+		<value>0</value>
+		<explain><![CDATA[用户是否可修改邮件]]></explain>
+	</input>
+	<input>
+		<type>radio.config.11</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[修改头衔]]></caption>
+		<att>1=是;0=否</att>
+		<value>0</value>
+		<explain><![CDATA[用户是否可修改头衔]]></explain>
+	</input>
+	<input>
+		<type>hidden.config.12</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[定义头衔货币]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.emoney>$$$自定义一次头衔消耗货币数]]></explain>
+	</input>
+	<input>
+		<type>hidden.config.13</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[定义头衔积分]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.points>$$$自定义一次头衔消耗积分数]]></explain>
+	</input>
+	<input>
+		<type>hidden.config.14</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[定义头衔经验]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.exp>$$$自定义一次头衔消耗经验数]]></explain>
+	</input>
+	<input>
+		<type>hidden.config.15</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[定义头衔体力]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.strength>$$$自定义一次头衔消耗体力数]]></explain>
+	</input>
+	<input>
+		<type>hidden.config.16</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[定义头衔注册天数]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.day>$$$自定义头衔最少注册天数]]></explain>
+	</input>
+	<input>
+		<type>hidden.config.17</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[定义头衔在线时间]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.minute>$$$自定义头衔最少在线时间]]></explain>
+	</input>
+	<input>
+		<type>hidden.config.18</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[定义头衔发贴]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.posts>$$$自定义头衔最少论坛发贴数]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=finance;display=none</att>
+	</input>
+	<input>
+		<type>radio.config.61</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[充值卡购买]]></caption>
+		<att>0=关闭;1=人民币购买;2=金币购买</att>
+		<value>0</value>
+		<explain><![CDATA[在线支付购买充值卡]]></explain>
+	</input>
+	<input>
+		<type>radio.config.21</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[货币转帐]]></caption>
+		<att>1=是;0=否</att>
+		<value>1</value>
+		<explain><![CDATA[是否开放货币转帐功能]]></explain>
+	</input>
+	<input>
+		<type>text.config.22</type>
+		<property><![CDATA[item=;class=s;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[转帐手续费]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[%$$$不足 1 <app:unit.emoney> 按 1 <app:unit.emoney> 计算]]></explain>
+	</input>
+	<input>
+		<type>hidden.config.23</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[现金转帐]]></caption>
+		<att>1=是;0=否</att>
+		<value>1</value>
+		<explain><![CDATA[是否开放货币转帐功能]]></explain>
+	</input>
+	<input>
+		<type>hidden.config.24</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[转帐手续费]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[%$$$不足 1 <app:unit.money> 按 1 <app:unit.money> 计算]]></explain>
+	</input>
+	<input>
+		<type>text.config.25</type>
+		<property><![CDATA[item=;class=;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[积分换货币]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.points> 换 1 <app:unit.emoney>$$$积分换货币比例 0表示关闭,下同.]]></explain>
+	</input>
+	<input>
+		<type>text.config.26</type>
+		<property><![CDATA[item=;class=;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[经验换货币]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.exp> 换 1 <app:unit.emoney>$$$经验换货币比例]]></explain>
+	</input>
+	<input>
+		<type>text.config.27</type>
+		<property><![CDATA[item=;class=;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[体力换货币]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.strength> 换 1 <app:unit.emoney>$$$体力换货币比例]]></explain>
+	</input>
+	
+	<input>
+		<type>text.config.28</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[货币换积分]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.points>  1 <app:unit.emoney>可换值$$$货币换积分比例 0表示关闭,下同.]]></explain>
+	</input>
+	<input>
+		<type>text.config.29</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[货币换经验]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.exp>  1 <app:unit.emoney>可换值$$$货币换经验比例]]></explain>
+	</input>
+	<input>
+		<type>text.config.30</type>
+		<property><![CDATA[item=;class=sp;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[货币换体力]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.strength>  1 <app:unit.emoney>可换值$$$货币换体力比例]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=online;display=none</att>
+	</input>
+	<input>
+		<type>radio.config.31</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[是否计时]]></caption>
+		<att>1=是;0=否</att>
+		<value>0</value>
+		<explain><![CDATA[是否自动记录用户在线时间]]></explain>
+	</input>
+	<input>
+		<type>text.config.32</type>
+		<property><![CDATA[item=;class=sp;action=;type=num;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[增加货币]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.emoney>$$$每在线 1 <app:unit.minute> 增加 1 <app:unit.emoney>]]></explain>
+	</input>
+	<input>
+		<type>text.config.33</type>
+		<property><![CDATA[item=;class=sp;action=;type=num;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[增加积分]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.points>$$$每在线 1 <app:unit.minute> 增加 1 <app:unit.points>积分]]></explain>
+	</input>
+	<input>
+		<type>text.config.34</type>
+		<property><![CDATA[item=;class=sp;action=;type=num;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[增加经验]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.exp>$$$每在线 1 <app:unit.minute> 增加 1 <app:unit.exp>经验]]></explain>
+	</input>
+	<input>
+		<type>text.config.35</type>
+		<property><![CDATA[item=;class=sp;action=;type=num;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[增加体力]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.strength>$$$每在线 1 <app:unit.minute> 增加 1 <app:unit.strength>体力值]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=message;display=none</att>
+	</input>
+	<input>
+		<type>text.config.36</type>
+		<property><![CDATA[item=;class=;action=;type=int;max=255;min=1]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[短信容量]]></caption>
+		<att></att>
+		<value>1000</value>
+		<explain><![CDATA[<app:unit.piece>$$$该用户组可以拥有的最大短信数量]]></explain>
+	</input>
+	<input>
+		<type>text.config.37</type>
+		<property><![CDATA[item=;class=;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[发送扣货币]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.emoney>$$$发一条短信所要扣的货币数]]></explain>
+	</input>
+	<input>
+		<type>text.config.38</type>
+		<property><![CDATA[item=;class=;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[发送扣积分]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.points>$$$发一条短信所要扣的积分数]]></explain>
+	</input>
+	<input>
+		<type>text.config.39</type>
+		<property><![CDATA[item=;class=;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[发送扣经验]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.exp>$$$发一条短信所要扣的经验数]]></explain>
+	</input>
+	<input>
+		<type>text.config.40</type>
+		<property><![CDATA[item=;class=;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[发送扣体力]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[<app:unit.strength>$$$发一条短信所要扣的体力数]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=upload;display=none</att>
+	</input>
+	<input>
+		<type>text.config.56</type>
+		<property><![CDATA[item=;class=;action=;type=int;max=255;min=-2]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[上传数量]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[个$$$每日上传数量,-1:禁止上传,0:无限制]]></explain>
+	</input>
+	<input>
+		<type>text.config.57</type>
+		<property><![CDATA[item=;class=;action=;type=int;max=255;min=0]]></property>
+		<style>size=15 maxlength=15 class="num"</style>
+		<caption><![CDATA[上传大小]]></caption>
+		<att></att>
+		<value>0</value>
+		<explain><![CDATA[KB$$$上传文件大小,0:使用系统默认配置.]]></explain>
+	</input>
+	<input>
+		<type>multibar.foot</type>
+	</input>
+</xcml>

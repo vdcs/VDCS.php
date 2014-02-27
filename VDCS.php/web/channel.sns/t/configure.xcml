@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>var,config,url.script,url.rewrite</node>
+	</configure>
+	<var xmlns:mlog="node" xmlns:tags="node">
+		<name>{@name}</name>
+		<names>{@names}</names>
+		<unit>{@unit}</unit>
+		<act>{@act}</act>
+		<act.view>{@act.view}</act.view>
+		
+		<mlog:name>{@mlog:name}</mlog:name>
+		<mlog:names>{@mlog:names}</mlog:names>
+		<mlog:unit>{@mlog:unit}</mlog:unit>
+		<mlog:act>{@mlog:act}</mlog:act>
+		<mlog:act.view>{@mlog:act.view}</mlog:act.view>
+		<mlog:act.reley>{@mlog:act.reley}</mlog:act.reley>
+		
+		<tags:name>{@tags:name}</tags:name>
+		<tags:names>{@tags:names}</tags:names>
+		<tags:unit>{@tags:unit}</tags:unit>
+		<tags:act>{@tags:act}</tags:act>
+	</var>
+	<config>
+		<model>configure,search</model>
+	</config>
+	<url.script>
+		<mu><![CDATA[<app:url.root>{@channel}/mu<app:ext.script>?muid={$muid}]]></mu>
+		<mu.blog><![CDATA[<app:url.root>{@channel}/mu<app:ext.script>?muid={$muid}&p=blog]]></mu.blog>
+		<mu.blog.view><![CDATA[<app:url.root>{@channel}/mu<app:ext.script>?muid={$muid}&p=blog&m=view&id={$id}]]></mu.blog.view>
+		<mu.blog.sort><![CDATA[<app:url.root>{@channel}/mu<app:ext.script>?muid={$muid}&p=blog&sortid={$sortid}]]></mu.blog.sort>
+		<mu.profile><![CDATA[<app:url.root>{@channel}/mu<app:ext.script>?muid={$muid}&p=profile]]></mu.profile>
+	</url.script>
+	<url.rewrite>
+		<mu><![CDATA[<app:url.root>{@channel}/u/{$muid}/]]></mu>
+		<mu.blog><![CDATA[<app:url.root>{@channel}/u/{$muid}/blog<app:ext.rewrite>]]></mu.blog>
+		<mu.blog.view><![CDATA[<app:url.root>{@channel}/u/{$muid}/blog_view_{$id}<app:ext.rewrite>]]></mu.blog.view>
+		<mu.blog.sort><![CDATA[<app:url.root>{@channel}/u/{$muid}/blog_sort_{$sortid}<app:ext.rewrite>]]></mu.blog.sort>
+		<mu.profile><![CDATA[<app:url.root>{@channel}/u/{$muid}/profile<app:ext.rewrite>]]></mu.profile>
+	</url.rewrite>
+</xcml>

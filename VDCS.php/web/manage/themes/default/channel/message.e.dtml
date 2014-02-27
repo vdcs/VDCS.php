@@ -1,0 +1,17 @@
+
+<div style="padding:50px;">
+
+<div class="mtip" id="mtip">
+	<cite class="<dtml:tip.status>"><em></em></cite>
+	<h3><dtml:tip.title></h3>
+	<h4><dtml:tip.message></h4>
+	<h5>
+<!--
+<a class="btn" el="root" href="<url:root>"><span>首页</span></a>
+<a class="btn c" el="back" href="<url:root>"><span>返回</span></a>
+-->
+<a class="btn m" el="goback" href="<dtml:tip.backurl>"><span>返回上一页</span></a>
+	</h5>
+</div>
+
+</div>

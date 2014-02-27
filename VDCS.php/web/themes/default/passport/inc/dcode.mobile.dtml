@@ -1,0 +1,11 @@
+﻿
+<dt el="mobile" class="hided">
+	<h2>帐号</h2>
+	<h3><p><input type="text" class="tipi" name="mobile" value="" placeholder="手机号" data-min="11" minlength="0" maxlength="11" tabindex="2"
+		_exist="抱歉！手机号已存在。" _right="恭喜！手机号可用。" /><em class="it mobile"></em><em class="ih require" title="可以输入您的手机号作为帐号首选登录方式"></em></p></h3>
+</dt>
+<dt el="mobile_dcode" class="hided">
+	<h2>动态码</h2>
+	<h3><p class="itemi compact"><input type="text" class="tipi" name="mobile_dcode" value="" placeholder="动态码" data-min="4" minlength="0" maxlength="10" /><em class="it dcode"></em><em class="ih"></em></p>
+		<cite><a class="btn" href="javascript:;" el="dcode_send" data-second="60" data-hint="短信动态码已发送，请注意查收！">发送</a></cite></h3>
+</dt>

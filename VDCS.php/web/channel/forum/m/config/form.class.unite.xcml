@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+	</configure>
+	<input>
+		<type>select.sourceid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=1]]></property>
+		<style></style>
+		<caption><![CDATA[从原分类]]></caption>
+		<att><![CDATA[0=请选择分类..;<control:att("class","channel={@channel}")>]]></att>
+		<value>{$sourceid}</value>
+		<explain></explain>
+	</input>
+	<input>
+		<type>select.classid</type>
+		<property><![CDATA[item=;action=;type=int;max=255;min=1]]></property>
+		<style></style>
+		<caption><![CDATA[转换到分类]]></caption>
+		<att><![CDATA[0=请选择分类..;<control:att("class","channel={@channel}")>]]></att>
+		<value>{$classid}</value>
+		<explain></explain>
+	</input>
+</xcml>

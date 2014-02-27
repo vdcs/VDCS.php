@@ -1,0 +1,75 @@
+﻿<label:include file="/headers">
+
+
+<div id="table">
+	<ul>
+		<li><a data-table="article">article</a></li>
+		<li><a data-table="news">news</a></li>
+		<li><a data-table="down">down</a></li>
+		<li><a data-table="shop_product">shop_product</a></li>
+		<li><a data-table="shop_order">shop_order</a></li>
+		<li><a data-table="announce">announce</a></li>
+		<li><a data-table="user">user</a></li>
+	</ul>
+</div>
+<div id="process">
+<p><img src="/images/common/load/16x16.gif" /> <t>wait..</t><i></i></p>
+</div>
+
+<script type="text/javascript">
+$(function(){
+	var jprocess=$('#process'),jt=jprocess.find('t'),ji=jprocess.find('i');
+	var _click=function(ja){
+		var table=ja.attrd('table');
+		//alert(table);
+		var _url='/common/updater.x?action=time&table='+table+'&mode=init';
+		$ajax({url:_url,value:'xml',ready:function(o){initAsync(o,_url)},error:true});
+	};
+	var initAsync=function(xml,_url){
+		var maps=$util.toMapByXML(xml);
+		var treeVar=maps.getItemTree('var');
+		var _status=treeVar.v('status');
+		var table=treeVar.v('table');
+		if(_status=='succeed'){
+			//app.popup('succeed',table+': init='+_status);
+			jt.html(table+': 初始化成功！转换中..');
+			ji.html(0);
+			parser(table);
+		}
+		else{
+			dbg.t('url',_url);
+			app.popup('error',table+': init='+_status);
+		}
+	};
+	var parser=function(table){
+		var _url='/common/updater.x?action=time&table='+table+'';
+		$ajax({url:_url,value:'xml',ready:function(o){parserAsync(o,_url)},error:true});
+	};
+	var parserAsync=function(xml,_url){
+		var maps=$util.toMapByXML(xml);
+		var treeVar=maps.getItemTree('var');
+		var _status=treeVar.v('status');
+		var table=treeVar.v('table'),row=treeVar.vi('row');
+		if(_status=='succeed'){
+			if(row<1){
+				jt.html(table+': 转换成功！');
+				ji.html('');
+ 			}
+ 			else{
+ 				ji.html(toi(ji.text())+1);
+ 				parser(table);
+ 			}
+		}
+		else{
+			dbg.t('url',_url);
+			app.popup('error',table+': process='+_status);
+		}
+	};
+
+	$('#table li a').click(function(){_click($(this))});
+
+
+});
+</script>
+
+<label:include file="/footers">

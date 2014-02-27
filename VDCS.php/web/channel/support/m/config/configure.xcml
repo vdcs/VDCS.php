@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links,action</frame>
+	</config>
+	
+	<lang>
+		<title><![CDATA[{@name}]]></title>
+		<title.name><![CDATA[{@name}]]></title.name>
+		<title.list><![CDATA[{@name}列表]]></title.list>
+		<title.list.><![CDATA[{@name}列表]]></title.list.>
+		<title.add><![CDATA[添加{@name}]]></title.add>
+		<title.edit><![CDATA[编辑{@name}]]></title.edit>
+		<title.delete><![CDATA[删除{@name}]]></title.delete>
+		
+		<error.not.exist><![CDATA[您要操作的 {@names} 不存在！]]></error.not.exist>
+		
+		<error.exist.name><![CDATA[相关 {@names}名称 已存在！]]></error.exist.name>
+		<error.norule.name><![CDATA[{@names}名称 不符合规则！]]></error.norule.name>
+		
+		<handle.ok.add><![CDATA[成功添加了 1 {@unit}{@name}！]]></handle.ok.add>
+		<handle.ok.edit><![CDATA[成功编辑了 1 {@unit}{@name}！]]></handle.ok.edit>
+ 		<handle.ok.delete><![CDATA[成功删除了 1 {@unit}{@name}！]]></handle.ok.delete>
+	</lang>
+	
+	<template>
+		<menu.links><![CDATA[
+@@@title=选择{@name};style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<var:menu.links>
+</ul>
+</div>
+]]></menu.links>
+		<menu.action><![CDATA[
+@@@title={@name}操作;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<var:menu.action>
+</ul>
+</div>
+]]></menu.action>
+	</template>
+</xcml>

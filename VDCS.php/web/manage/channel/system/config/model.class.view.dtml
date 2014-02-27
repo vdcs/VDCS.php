@@ -1,0 +1,94 @@
+<label:include file="frame/header">
+<label:include file="frame/main.begin">
+
+<div class="box">
+<h2><t>分类信息</t></h2>
+<div class="con">
+<table class="table tables table-striped table-hover table-list">
+<tr><th>操作</th><td colspan="3" id="act_box">
+<p data-ui-form="radio" style="display: none;"><label><input type="radio" name="type" value="del" checked="checked" />删除分类</label></p>
+</td></tr><!-- <label><input type="radio" name="type" value="move" />移动分类</label> -->
+<tr><th style="width:20%;">分类ID</th><td style="width:30%;"><view:classid></td><th style="width:20%;">分类名称</th><td><view:name></td></tr>
+<tr><th>所属分类</th><td><view:father.name></td><th>分类Logo</th><td><view:logo></td></tr>
+<tr><th>分类简介</th><td colspan="3"><view:summary></td></tr>
+<tr class="hide" el="move_class"><th>移到新分类</th><td colspan="3"><select>
+<option value="0">[做为主分类]</option>
+<loop:target_class>
+<option value="[item:classid]">[item:name]</option>
+</loop>
+</select></td></tr>
+<tr><th colspan="4" style="text-align:center;"><a class="btn btn-primary" el="submit">确认操作</a></th></tr>
+</table>
+</div></div>
+<div class="space"></div>
+<div class="box">
+<h2><t>子分类信息</t></h2>
+<div class="con">
+<table class="table tables table-striped table-hover table-list">
+<thead><tr><th>分类ID</th><th>分类名称</th><th>分类Logo</th><th>分类简介</th></tr></thead>
+<tbody id="list">
+
+</tbody>
+</table>
+</div>
+</div>
+<xmp id="list_tpl">
+<tr><td>[item:classid]</td><td>[item:name]</td><td>[item:logo]</td><td>[item:summary]</td></tr>
+</xmp>
+<label:include script="VDCS.ui.page.js">
+<script type="text/javascript">
+$(function(){
+	ui.form.init($('#act_box'));
+	var id=$p.q('id');
+	var list=ui.list;//对象，传入存放内容的对象和模板对象
+	var opt={cont:$('#list'),tpl:$('#list_tpl')};
+	var classid='<view:classid>';
+	opt.serveVar={channel:'{@channel}',p:'model',m:'class',action:'getinfo',params:'classid='+classid};
+	opt.paging=$('#paging');//放置分页按钮的对象
+	opt.bind=function(jitem){
+		
+	};
+	opt.binds=function(jcont,treeVar){
+		
+	};
+	opt.node_table='item';
+	list.init(opt);
+	list.parse();
+	
+	//确认操作
+	$('[el=submit]').click(function(){
+		var type=$('[name=type]:checked').val();
+		if(!type){
+			ui.popups('info','请选择操作类型');
+			return;
+		}
+		//var type='del';
+		var fatherid=$('[el=move_class] option:selected').val();
+		var _params='channeli='+$p.q('channeli')+'&id='+id+'&fatherid='+fatherid;
+		var _url=ui.serve.getURL({channel:'{@channel}',p:'model',m:'class',action:type,params:_params});
+		$ajax({url:_url,value:'xml',ready:function(xml){
+			var map=$util.toMapByXML(xml);
+			var treeVar=map.getItemTree('var');
+			if(treeVar.v('status')=='succeed'){
+				ui.popups('succeed','操作成功！');
+				location.href='class?action=list&subchannel='+$p.q('channeli');
+			}else{
+				ui.popups('error',treeVar.v('message'));
+			}
+		},error:true});
+	});
+	
+	
+	$('#act_box').find('a[type=button]').click(function(){
+		var type=$('[name=type]:checked').val();
+		if(type=='move'){
+			$('[el=move_class]').show();
+		}else{
+			$('[el=move_class]').hide();
+		}
+	});
+	
+});
+</script>
+<label:include file="frame/main.end">
+<label:include file="frame/footer">

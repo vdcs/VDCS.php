@@ -1,0 +1,11 @@
+<div class="Cobs">
+	<div class="CobBar"><p><channel:var("title.special")></p></div>
+	<div class="CobList"><div class="CobInner">
+<div class="StructList StructListSNBig" style="height:230px;"><ul>
+<label:special("{@channel}","res=")>
+<li class="oe[item:oe]"><span class="sn sn-[item:sn]">&nbsp;</span><span class="m"><span class="topic"><a href="[item:linkurl]">[item:name!html]</a></span><span class="explain">[item:explain!text!35]</span></span></li>
+</label:end>
+</ul></div>
+	</div></div>
+	<div class="CobFooter"><p></p></div>
+</div>

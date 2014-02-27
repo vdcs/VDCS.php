@@ -1,0 +1,24 @@
+<label:include file="oauth-header">
+
+
+<div class="box">
+	<h2><t><var:title></t></h2>
+	<div class="con">
+<div class="mtip" id="mtip">
+	<cite class="load"><em></em></cite>
+	<h3><var:auth.name> 连接中..</h3>
+	<h4>
+		<p>系统正在连接 <var:auth.name>，请稍候..</p>
+		<p><span class="gray"><var:refresh.second> 秒后自动返回..</span></p>
+		<meta http-equiv="refresh" content="<var:refresh.second>; url=<var:url.login.oauth>" />
+	</h4>
+	<h5>
+<!--<a class="btn" el="root" href="<url:root>"><span>首页</span></a>-->
+<a class="btn m" el="go" href="<var:url.login.oauth>"><span>直接跳转</span></a>
+	</h5>
+</div>
+	</div>
+</div>
+
+
+<label:include file="oauth-footer">

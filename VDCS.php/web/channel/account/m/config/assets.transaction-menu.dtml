@@ -1,0 +1,17 @@
+<label:include file="inc/search.begin">
+<label:include file="inc/search.date">
+<label:include file="inc/search.end">
+<div class="box">
+<h2><cite>财务筛选</cite></h2>
+<div class="con">
+	<div>
+		<ul>
+			<li><a href="<exec:url("channel={@channel}&p=assets&m=transaction&mi=null&action=list")>">全部</a></li>
+			<loop:module>
+				<li><a href="<exec:url("channel={@channel}&p=assets&m=transaction&mi=null&action=list")>&module=[item:value]">[item:name]</a></li>
+			</loop>
+			<li><a href="<exec:url("channel={@channel}&p=assets&m=transaction&mi=null&action=list")>&module=other">消费</a></li>
+		</ul>
+	</div>
+</div>
+</div>

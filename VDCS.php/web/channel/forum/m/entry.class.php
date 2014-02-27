@@ -1,0 +1,6 @@
+<?
+class PagePortal extends PortalForumClass
+{
+	
+}
+?>

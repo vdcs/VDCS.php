@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+		<sp.code>code=sp_code;remark={@tpx}remark</sp.code>
+		<script.begin><![CDATA[]]></script.begin>
+		<script.end><![CDATA[
+			$(function(){
+				
+			})
+		]]></script.end>
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<explain><![CDATA[default=$$$base=基本信息]]></explain>
+	</input>
+	<!--attr={@xnames}属性;-->
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=none</att>
+	</input>
+	<input>
+			<type>text.{@tpx}no</type>
+			<property><![CDATA[item=;action=add;type=string;max=20;min=1;classi=name]]></property>
+			<style>size=60 maxlength=20</style>
+			<caption><![CDATA[{@xnames}编号]]></caption>
+			<att></att>
+			<value>{$no}</value>
+			<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+			<type>put.{@tpx}no</type>
+			<property><![CDATA[item=;action=edit;type=string;max=20;min=1;classi=name]]></property>
+			<style>size=60 maxlength=20</style>
+			<caption><![CDATA[{@xnames}编号]]></caption>
+			<att></att>
+			<value>{$no}</value>
+			<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+			<type>text.{@tpx}money</type>
+			<property><![CDATA[item=;action=;type=money;max=15;min=1;classi=money]]></property>
+			<style>size=60 maxlength=15 class="itxt"</style>
+			<caption><![CDATA[{@xnames}金额]]></caption>
+			<att></att>
+			<value>0.00</value>
+			<explain><![CDATA[元$$$]]></explain>
+	</input>
+	
+	<input>
+			<type>text.{@tpx}code</type>
+			<property><![CDATA[item=;action=;type=string;max=50;min=1;classi=]]></property>
+			<style>size=60 maxlength=50</style>
+			<caption><![CDATA[优惠码]]></caption>
+			<att></att>
+			<value>{$code}</value>
+			<explain><![CDATA[]]></explain>
+	</input>
+	
+	<input>
+			<type>radio.{@tpx}type</type>
+			<property><![CDATA[item=;action=;type=int;max=3;min=]]></property>
+			<style>size=60 maxlength=3 class="itxt"</style>
+			<caption><![CDATA[{@xnames}类型]]></caption>
+			<att>1=优惠券;2=代金券</att>
+			<value>1</value>
+			<explain><![CDATA[选择优惠券之后，需要指定产品ID;选择代金券之后，需要指定最低消费金额]]></explain>
+	</input>
+	
+	<input>
+			<type>hidden.{@tpx}module</type>
+			<property><![CDATA[item=;action=;type=string;max=10;min=;classi=num]]></property>
+			<style>size=60 maxlength=10</style>
+			<caption><![CDATA[使用对象]]></caption>
+			<att></att>
+			<value>product</value>
+			<explain><![CDATA[针对优惠券]]></explain>
+	</input>
+	
+	<input>
+			<type>text.{@tpx}moduleid</type>
+			<property><![CDATA[item=;action=;type=int;max=10;min=;classi=num]]></property>
+			<style>size=60 maxlength=10</style>
+			<caption><![CDATA[指定产品ID]]></caption>
+			<att></att>
+			<value>0</value>
+			<explain><![CDATA[针对优惠券]]></explain>
+	</input>
+	
+	<input>
+			<type>text.{@tpx}price_lowest</type>
+			<property><![CDATA[item=;action=;type=money;max=10;min=;classi=money]]></property>
+			<style>size=60 maxlength=10</style>
+			<caption><![CDATA[最低消费金额]]></caption>
+			<att></att>
+			<value>0.00</value>
+			<explain><![CDATA[针对代金券]]></explain>
+	</input>
+	
+	<input>
+			<type>text.{@tpx}limit</type>
+			<property><![CDATA[item=;action=;type=int;max=10;min=;classi=num]]></property>
+			<style>size=60 maxlength=10</style>
+			<caption><![CDATA[可以使用次数]]></caption>
+			<att></att>
+			<value>0</value>
+			<explain><![CDATA[默认不限使用次数]]></explain>
+	</input>
+	
+	<input>
+			<type>date.{@tpx}date</type>
+			<property><![CDATA[item=;action=;type=date;max=20;min=1;classi=time]]></property>
+			<style>size=20 maxlength=20 class="time"</style>
+			<caption><![CDATA[开始时间]]></caption>
+			<att></att>
+			<value><![CDATA[<dcs:time.today>]]></value>
+			<explain></explain>
+	</input>
+	
+	<input>
+			<type>date.{@tpx}date_expire</type>
+			<property><![CDATA[item=;action=;type=date;max=20;min=1;classi=time]]></property>
+			<style>size=20 maxlength=20 class="time"</style>
+			<caption><![CDATA[到期时间]]></caption>
+			<att></att>
+			<value><![CDATA[<dcs:time.today>]]></value>
+			<explain></explain>
+	</input>
+	
+	<input>
+			<type>radio.{@tpx}status</type>
+			<property><![CDATA[item=;action=;type=int;max=3;min=]]></property>
+			<style>size=60 maxlength=3 class="itxt"</style>
+			<caption><![CDATA[{@xnames}状态]]></caption>
+			<att>1=可使用;0=不可使用</att>
+			<value>1</value>
+			<explain><![CDATA[]]></explain>
+	</input>
+	
+	
+	<input>
+		<type>multibar.foot</type>
+	</input>
+
+</xcml>

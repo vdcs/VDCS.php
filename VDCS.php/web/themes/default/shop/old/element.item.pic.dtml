@@ -1,0 +1,7 @@
+<li>
+<div class="hs hs[item:sn]"><span></span></div>
+<div class="pics"><span class="pic isbest[item:isgood] isnew[item:isnew] issale[item:issale]"><span class="effect"></span><a href="[item:linkurl]"><img src="[item:pic.url]" /></a></span></div>
+<p class="topic"><a href="[item:linkurl]">[item:topic!html!38]</a></p>
+<p class="prc"><span class="price">[item:price]</span> <a class="cart r" href="javascript:;" onclick="javascript:shop.cart.add([item:id]);">订购</a></p>
+<!--<p>原价: <span class="price">￥[item:price.old]<em><app:unit.coin></em></span></p>-->
+</li>

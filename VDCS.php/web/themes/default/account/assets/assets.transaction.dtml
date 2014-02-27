@@ -1,0 +1,44 @@
+<label:include file="frame/headers">
+
+
+<div class="cont">
+	<div class="box">
+		<h2><t>资金流动</t></h2>
+		<div class="bod">
+			<table class="table tables table-striped table-hover table-list">
+				<thead>
+					<tr><th>序号</th><th>金额</th><th>状态</th><th>余额</th><th>时间</th></tr>
+				</thead>
+				<tbody id="transaction_list"></tbody>			
+			</table>
+			<xmp id="transaction_list_tpl">
+				<tr dataid="[item:id]">
+					<td>[item:id]</td><td>[item:money]</td>
+					<td>[item:payment]</td><td>[item:balance]</td><td>[item:tim.name]</td>
+				</tr>
+			</xmp>
+		</div>
+	</div>
+</div>
+<div class="space"></div>
+<div class="paging"></div>
+<script type="text/javascript">
+$(function(){
+	var record_list=ui.list;//对象，传入存放内容的对象和模板对象
+	var opt={cont:$('#transaction_list'),tpl:$('#transaction_list_tpl')};
+	opt.serveVar={channel:'{@channel}',p:'assets',m:'transaction',action:'transaction'};
+	
+	opt.bind=function(jitem){
+	};
+	opt.binds=function(jcont){
+		
+	};
+	opt.paging=$(".paging");
+	opt.node_table='item';
+	record_list.init(opt);
+	record_list.parse();
+});
+</script>
+
+
+<label:include file="frame/footers">

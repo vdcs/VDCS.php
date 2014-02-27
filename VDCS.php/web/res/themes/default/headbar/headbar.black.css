@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+#headbar{background:#333 url("bg_black.png") repeat-x 0 0;_background-image:url("bg_black.gif");}
+#headbar{
+	-webkit-box-shadow: 0px 1px 3px 0px #000;
+	   -moz-box-shadow: 0px 1px 3px 0px #000;
+		box-shadow: 0px 1px 3px 0px #000;
+}
+#headbar a{color:#AAA;}
+#headbar a:hover,
+#headbar li.pop > a,
+#headbar li:hover > a{color:#FFF;}
+
+#headbar .logo a{background-image:url("/images/logo_headbar.light.png");_background-image:url("/images/logo_headbar.light.gif");}
+
+#headbar .nav li.pop,
+#headbar .nav li:hover,
+#headbar .menu li.pop,
+#headbar .menu li:hover{background-color:transparent;background-image:url("bg_black.png");_background-image:url("bg_black.gif");}
+
+
+/* white all
+#headbar a:hover,
+#headbar li.pop > a,
+#headbar li:hover > a{color:#333;}
+#headbar .nav li.pop,
+#headbar .nav li:hover,
+#headbar .menu li.pop,
+#headbar .menu li:hover{background-color:#FFF;background-image:none;_background-image:none;}
+*/
+
+/* white nav
+*/
+#headbar .nav a:hover,
+#headbar .nav li.pop > a,
+#headbar .nav li:hover > a{color:#333;}
+#headbar .nav li.pop,
+#headbar .nav li:hover{background-color:#FFF;background-image:none;_background-image:none;}

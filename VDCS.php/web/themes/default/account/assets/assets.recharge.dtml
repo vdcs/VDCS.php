@@ -1,0 +1,70 @@
+<label:include file="frame/headers">
+
+
+<div class="cent">
+	<div class="box">
+		<h2><t>账户充值中心</t></h2>
+		<div class="con">
+
+<div class="xform">
+
+<div class="forms">
+<form name="frm_action" action="<chn:linkurl("common","pam","p=payment&m=gateway")>" method="get" target="_blank">
+<dl>
+<dt el="balance">
+	<h2>帐户余额</h2>
+	<h3><p class="put"><span class="money big"><ua:money!money><em><app:unit.money></em></span></p></h3>
+</dt>
+<dt el="sp">
+	<h2>充值方式</h2>
+	<h3><p>
+		<img src="<url:images>support/alipay.gif" />
+	</p></h3>
+</dt>
+<dt el="money">
+	<h2>充值金额</h2>
+	<h3><p class="num unit"><input type="text" name="money" value="" placeholder="0.00" minlength="1" maxlength="20" tabindex="1" /><i><app:unit.money></i></p></h3>
+</dt>
+<dd>
+	<h3>
+	<a class="btn m" href="#submit"><span>充值</span></a>
+	</h3>
+</dd>
+</dl>
+<input type="hidden" name="sp" value="alipay" />
+<input type="hidden" name="module" value="account" />
+<input type="hidden" name="type" value="recharge" />
+<input type="hidden" name="value" value="<ua:id>" />
+<input type="hidden" name="name" value="充值" />
+<input type="hidden" name="desc" value="" />
+<input type="hidden" name="linkurl" value="" />
+</form>
+</div>
+
+</div>
+
+		</div>
+	</div>
+</div>
+<div class="sider">
+	<div class="box"><h2><t>操作</t></h2>
+		<div class="con">
+			<div class="itip alerts alert"><em></em><span>小提示</span><p>无法充值，请转账后并提交申请！</p></div>
+			<div class="space"></div>
+			<a class="btn m" href="<chn:linkurl("{@channel}","pam","p=assets&m=remit&action=recharge")>" el="recharge">转账申请</a>
+		</div>
+	</div>
+</div>
+
+<xmp id="box_payment" data-title="温馨提示">
+	<div class="ac" style="padding:20px 50px;">
+	<p class="itip load"><em></em><span>正在检测您的支付结果，请稍候..</span></p>
+	<p style="margin:10px 0;">支付成功后将自动跳转，若未跳转请点击</p>
+	<p><a class="btn c" href="#complete">已经完成支付</a> &nbsp; <a class="btn m" href="#help">支付遇到问题</a></p>
+	</div>
+</xmp>
+
+<label:include file="{#portalx}-script">
+
+
+<label:include file="frame/footers">

@@ -1,0 +1,5 @@
+
+		<li class="nt at"><a href="<url:at>" title="提到我的" data-placement="bottom"><u>@</u><em></em></a></li>
+		<li class="nt follower"><a href="<url:follower>" title="听众" data-placement="bottom"><u>@</u><em></em></a></li>
+		<li class="nt inbox"><a href="<url:inbox>" title="私信" data-placement="bottom"><u>@</u><em></em></a></li>
+		<li class="nt notice"><a href="<url:notice>" title="通知" data-placement="bottom"><u>@</u><em></em></a></li>

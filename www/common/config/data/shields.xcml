@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>var,banip,badword</node>
+	</configure>
+	<var>
+		<audit.post>1</audit.post>
+	</var>
+	<banip>
+		<common></common>
+		<post></post>
+		<passport></passport>
+	</banip>
+	<badword>
+		<common></common>
+		<post></post>
+	</badword>
+</xcml>

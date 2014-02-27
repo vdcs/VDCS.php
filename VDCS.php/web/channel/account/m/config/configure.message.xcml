@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>config,lang,template</node>
+	</configure>
+	<config>
+		<frame>links,search</frame>
+		<search.fields>sendname=6;inceptname=6;topic=6;remark=6</search.fields>
+		<search.term.type>and,or,exact</search.term.type>
+		
+		<table.name>{@table.namex}message</table.name>
+		<table.px></table.px>
+		<table.field.id>id</table.field.id>
+		<table.fields.value>id=id;time=tim</table.fields.value>
+		<table.fields.add></table.fields.add>
+		
+		<list.table.field>*</list.table.field>
+		<list.table.query></list.table.query>
+		<list.table.order>id desc</list.table.order>
+		<list.field.append>username,username,topic,remark,tim,type,_status</list.field.append>
+		<list.handle.select.option>delete</list.handle.select.option>
+		<list.handle.sql.delete>delete from {@table.namex}message where id in ({$ids})</list.handle.sql.delete>
+		
+		<view.field>*</view.field>
+		<view.query>id={$id}</view.query>
+	</config>
+	
+	<lang>
+		<title><![CDATA[短信管理]]></title>
+		<title.name><![CDATA[短信列表]]></title.name>
+		<title.list><![CDATA[短信列表]]></title.list>
+		<title.list.><![CDATA[短信列表]]></title.list.>
+		<title.view><![CDATA[短信浏览]]></title.view>
+		<title.clear><![CDATA[短信清理]]></title.clear>
+		
+		<title.put><![CDATA[批量发送短信]]></title.put>
+		
+		<title.frame.search><![CDATA[短信搜索]]></title.frame.search>
+		<search.fields.att><![CDATA[sendname=发送人;inceptname=接收人;topic=短信标题;remark=短信内容]]></search.fields.att>
+		
+		<handle.ok.put><![CDATA[成功给所有选择组的用户发送了短信！]]></handle.ok.put>
+		<handle.ok.hidden><![CDATA[成功操作了 {$count} 个记录！]]></handle.ok.hidden>
+		<handle.ok.delete><![CDATA[成功删除了 {$count} 个记录！]]></handle.ok.delete>
+		<handle.ok.clear><![CDATA[成功清理了 {$count} 个记录！]]></handle.ok.clear>
+	</lang>
+	
+	<template>
+		<list><![CDATA[
+<control:ui.value("listbox.heads")>
+<control:ui.value("list.bar.tr")>
+<!--<control:ui.value("list.bar.id")>-->
+<td class="bar-status w30"><exec:langs("title.status")></td>
+<td class="bar-user">发送<exec:langs("title.user")></td>
+<td class="bar-topic"><exec:langs("title.topic")></td>
+<td class="bar-user">接收<exec:langs("title.user")></td>
+<td class="bar-time"><exec:langs("title.time")></td>
+<control:ui.value("list.bar.sd")>
+</tr>
+<loop:list>
+<control:ui.value("list.row.tr")>
+<!--<control:ui.value("list.row.id")>-->
+<td class="row-status"><img class="icon" src="<app:url.manage.images>user/message/icon_status_[item:status.type].gif"></td>
+<td class="row-user"><a href="<app:url.account>user.asp?username=[item:sendname!urlencode]" target="_blank">[item:sendname]</a></td>
+<td class="row-topic"><a href="<var:url.view>">[item:<var:table.px>topic!html!50]</a></td>
+<td class="row-user"><a href="<app:url.account>user.asp?username=[item:inceptname!urlencode]" target="_blank">[item:inceptname]</a></td>
+<td class="row-time">[item:times]</td>
+<control:ui.value("list.row.sd")>
+</tr>
+</loop>
+<control:ui.value("listbox.ends")>
+]]></list>
+		<view><![CDATA[
+<control:ui.value("listbox.head")>
+<tr class="row"><td class="caption">短信标题</td><td class="input"><dat:<var:table.px>topic></td></tr>
+<tr class="row"><td>短信状态</td><td><img class="icon" src="<app:url.manage.images>user/message/icon_status_<dat:status.type>.gif" /></td></tr>
+<tr class="row"><td>发 件 人</td><td><a href="<app:url.account>user.asp?username=<dat:sendname!urlencode>" target="_blank"><dat:sendname></td></tr>
+<tr class="row"><td>收 件 人</td><td><a href="<app:url.account>user.asp?username=<dat:inceptname!urlencode>" target="_blank"><dat:inceptname></td></tr>
+<tr class="row"><td>发送时间</td><td><dat:<var:table.px>tim></td></tr>
+<tr class="row"><td class="caption">短信内容</td><td>
+	<table class="tabs tab-content table-break">
+	<tr><td class="remark word-break"><div class="remark word-break" id="div-view-remark"><dat:<var:table.px>remark></div></td></tr>
+	</table>
+</td></tr>
+<tr class="button"><td></td><td><input type="button" class="btn reset" value="返回上一页" onclick="javascript:$p.goback();" /></td></tr>
+<control:ui.value("listbox.end")>
+]]></view>
+		<menu.links><![CDATA[
+@@@title=短信管理;style=s;classa=@@@
+<div class="MenuLinks">
+<ul>
+<li><a href="<exec:url("action=batchsend")>">批量发送</a></li>
+<li><a href="<exec:url("action=clear")>">短信清理</a></li>
+</ul>
+</div>
+]]></menu.links>
+	</template>
+</xcml>

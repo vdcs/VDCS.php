@@ -1,0 +1,17 @@
+
+<script type="text/javascript">
+$(function(){
+	//$('#vcode_input').vals('0000');
+	var _callback=function(){
+		app.xforms.formHide();
+		var names=app.xforms.opt.names;
+		var msga=[];
+		msga.push('您已成功 '+names+'！');
+		ui.mtip({wrap:$('.xform'),status:'succeed',title:names,message:msga});
+	};
+	//app.xforms.debugxml=true;
+	app.xforms.initer({encrypt:true,encrypt_field:'password_login',
+		serveURL:app.serve('{@channel}/settings/security','action={@module}'),serv_method:'get',
+		goback:false,callback:_callback});
+});
+</script>

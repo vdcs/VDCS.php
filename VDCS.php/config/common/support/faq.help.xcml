@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>key,topic,content</field>
+	</configure>
+	<item>
+		<key>user-register</key>
+		<topic><![CDATA[我必须要注册吗？]]></topic>
+		<content><![CDATA[这取决于您访问网站不同频道及功能的需要来定。<br>
+在通常情况下，您并不需要注册并登录即可浏览绝大部分网页和内容。<br>
+请 <a href="{$=app.url.passport$}register.asp" target="_blank">点击这里</a> 免费注册成为我们的会员！<br>
+不过，我们还是建议您成为注册用户，这样可以得到很多贴心的服务及网站功能。]]></content>
+	</item>
+	<item>
+		<key>user-forget-password</key>
+		<topic><![CDATA[如果我遗忘了密码，我该怎么办？]]></topic>
+		<content><![CDATA[我们提供了发送取回密码链接到 Email 的服务，点击登录页面中的 <a href="{$=app.url.passport$}misc.asp?module=forget.password" target="_blank">取回密码</a> 功能，可以为您把取回密码的方法发送到注册时填写的 Email 信箱中。如果您的 Email 已失效或无法收到信件，请与论坛管理员联系。]]></content>
+	</item>
+	<item>
+		<key>user-mail</key>
+		<topic><![CDATA[什么是“短消息”？]]></topic>
+		<content><![CDATA[“短消息”是网站的注册用户间交流的工具，信息只有发件和收件人可以看到，收到信息后系统会出现铃声和相应提示，您可以通过短消息功能与网站上的其他用户保持私人联系。<br>
+收件箱 或 控制面板 中提供了短消息的收发服务。]]></content>
+	</item>
+</xcml>

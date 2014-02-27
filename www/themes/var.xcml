@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>var,common,frame,ad</node>
+	</configure>
+	<var>
+		<beian>沪ICP备88888888号</beian>
+		<script.d><app:var.script.d></script.d>
+		<copyright><![CDATA[<app:web.copyright>]]></copyright>
+	</var>
+	<common>
+	</common>
+	<frame>
+		<copyright><![CDATA[&copy; <app:year> <app:com.name> 保留所有权利。]]></copyright>
+		<stat><![CDATA[<!--统计代码1-->]]></stat>
+		<header.nav><![CDATA[]]></header.nav>
+		<header.code><![CDATA[<!--header.code-->]]></header.code>
+		<footer.code><![CDATA[<!--footer.code-->]]></footer.code>
+	</frame>
+	<ad>
+		<banner.head><![CDATA[<!--ad.banner.head-->]]></banner.head>
+		<fullbanner.head><![CDATA[<!--ad.fullbanner.head-->]]></fullbanner.head>
+		<banner.foot><![CDATA[<!--ad.banner.foot-->]]></banner.foot>
+		<fullbanner.foot><![CDATA[<!--ad.fullbanner.foot-->]]></fullbanner.foot>
+		<footer><![CDATA[<!--ad.foot-->]]></footer>
+	</ad>
+</xcml>

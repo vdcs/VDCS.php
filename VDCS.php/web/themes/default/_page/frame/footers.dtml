@@ -1,0 +1,14 @@
+﻿
+</div></div>
+
+<div class="space"></div>
+<sh></sh>
+
+<div>
+<a title="Processed in <web:stat.exectime> s, <web:stat.query> queries.&#10;Gzip <web:stat.gzip>, Memory usage <web:stat.memory>."
+ href="<app:web.urls>" target="_blank"><app:web.name></a> <xcml:themes("frame.copyright")> <a href="<url:manage>" target="_blank">M</a>
+</div>
+</center>
+<div class="hide"><xcml:themes("frame.stat")></div>
+<div id="linktop"><a href="javascript:;"><span>Top</span></a></div>
+<label:include file="/footer.blank">

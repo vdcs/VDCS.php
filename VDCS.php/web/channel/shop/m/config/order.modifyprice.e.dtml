@@ -1,0 +1,5 @@
+<div>
+<p>新价格<input type="text" name="money" value="" /></p>
+<p>修改原因<textarea name="summary" ></textarea></p>
+<input type="hidden" name="id" value="<data:id>" />
+</div>

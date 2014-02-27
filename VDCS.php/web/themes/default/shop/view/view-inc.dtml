@@ -1,0 +1,8 @@
+
+<style type="text/css">@import url("<web:url.themes>{@channel}/images/style.view.css");</style>
+<label:include script="<web:url.themed>images/app.slide.js">
+<label:include script="<web:url.themed>images/app.view.js">
+<label:include script="<web:url.theme>images/app.view.js">
+<script type="text/javascript">view.init("{@channel}","<view:id>");</script>
+<label:include script="<web:url.themed>shop/appc.view.js">
+<label:include file="element.jqzoom">

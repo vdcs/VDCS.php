@@ -1,0 +1,21 @@
+<!--{if isBool({$user.isLogin()})}-->
+您好 <font class="user"><%=user.username%></font><%if MODEL_PASS5 then%><%if user.pass5id>0 then%> <img class="icon" src="/images/pass5_icon.gif" title="您已绑定 Pass5 Network 帐户"><%end if%><%end if%>
+您目前有 <font class="emoney"><%=user.getDataNum("emoney")%></font> <%=cfg.getUnit("emoney")%> 和 <font class="points"><%=user.getDataInt("points")%></font> <%=cfg.getUnit("points")%>
+<a href="<url:account>">用户中心</a>
+<a href="<linkurl:account.message>">我的短信箱（<font class="gray"><%=user.getDataInt("mail_new")%></font>新）</a>
+<a class="gray" href="<linkurl:passport.logout>" onclick="javascript:return dcs.pages.isClickReturn('退出本次登录',1);">退出登录</a>
+<!--{else}-->
+<form name="frm_login" action="<linkurl:passport.login>" method="post" onsubmit="javascript:dcs.form.doOnceSubmit(this);">
+<input type="hidden" name="_chk" value="yes">
+<input type="hidden" name="goback" value="yes">
+用户名：<input type="text" class="username" name="username" value="" size="10" maxlegth="20">
+密码：<input type="password" class="password" name="password" value="" size="10" maxlegth="20">
+<input type="checkbox" class="normal" id="login_remember_info" name="remember_info" value="yes"><label for="login_remember_info" title="如选择“永久登录”登录，以后将自动登录本站！">永久登录</label>
+<button type="submit" class="btn" name="_smt" accesskey="L" onclick="jacascript:return user.isLoginCheck();">登录(<ins>L</ins>)</button>
+<a href="<linkurl:passport.register>">注册新用户</a>
+<a class="help" href="<linkurl:passport.lostpassword>">忘记密码</a>
+<%if MODEL_PASS5 then%>
+<a href="<linkurl:passport.pass5.login>"><img class="icon" src="/url.images/pass5_login.gif" title="使用 Pass5 Network 帐户登录网站"></a>
+<%end if%>
+</form>
+<!--{/if}-->

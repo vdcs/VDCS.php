@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>item</node>
+		<field>channel,table,sql.query,fields,values,sql.update,message</field>
+	</configure>
+	<item>
+		<channel><![CDATA[shop]]></channel>
+		<table><![CDATA[db_shop_order]]></table>
+		<sql.query><![CDATA[select top 1 * from db_shop_order where o_ordernum='{$data.ordernum}']]></sql.query>
+		<fields><![CDATA[ordernum=o_ordernum;ispay=o_ispay;uid=;username=username;id=o_id;topic=;price=o_price;carry=o_carry;carry_price=o_carry_price;address=o_address;postcode=o_postcode;phone=o_phone;email=o_email;explain=]]></fields>
+		<values><![CDATA[ispay=1]]></values>
+		<sql.update><![CDATA[update db_shop_order set o_ispay=1,o_pay_tim='{$time.now}' where o_id={$data.id}]]></sql.update>
+		<message><![CDATA[我们将按您的运送方式向您发货或与您联系。<br>
+<input type="button" class="btn" value="点击继续选购商品" onClick="javascript:window.location.href='{$=app.url.root$}shop/';">
+]]></message>
+	</item>
+	<item>
+		<channel><![CDATA[user.emoney]]></channel>
+		<table><![CDATA[db_sys_note_emoney]]></table>
+		<sql.query><![CDATA[select top 1 * from db_sys_note_emoney where e_ordernum='{$data.ordernum}']]></sql.query>
+		<fields><![CDATA[ordernum=e_ordernum;ispay=e_ispay;uid=;uname=username;id=e_id;topic=;price=e_price;emoney=sp_emoney;carry=;carry_price=;address=;postcode=;phone=;email=;explain=]]></fields>
+		<values><![CDATA[ispay=1]]></values>
+		<sql.update><![CDATA[update db_sys_note_emoney set e_ispay=1,e_pay_tim='{$time.now}' where e_id={$data.id}$$$update db_user set u_emoney=u_emoney+{$data.emoney} where username='{$data.username}']]></sql.update>
+		<message><![CDATA[您已成功用 <font class="price">{$data.price}</font> {$=app.unit.coin$}购买了 <font class="price">{$data.emoney}</font> {$=app.unit.emoney$}！<br>
+系统同时也自动为用户 <font class="user">{$data.username}</font> 冲值了 <font class="price">{$data.emoney}</font> {$=app.unit.emoney$}。<br>
+<input type="button" class="btn" value="点击返回用户中心" onClick="javascript:window.location.href='{$=app.url.account$}';">
+]]></message>
+	</item>
+	<item>
+		<channel><![CDATA[user.card]]></channel>
+		<table><![CDATA[db_sys_card]]></table>
+		<sql.query><![CDATA[select top 1 * from db_sys_card where c_number='{$data.ordernum}']]></sql.query>
+		<fields><![CDATA[ordernum=c_number;ispay=c_buy;uid=;uname=c_buy_username;id=c_id;topic=;price=c_buy_price;emoney=;carry=;carry_price=;address=;postcode=;phone=;email=;explain=]]></fields>
+		<values><![CDATA[ispay=1]]></values>
+		<sql.update><![CDATA[update db_sys_card set c_buy=1,c_buy_tim='{$time.now}' where c_id={$data.id}$$$update db_user set u_emoney=u_emoney+{$data.emoney} where username='{$data.username}']]></sql.update>
+		<message><![CDATA[您已成功用 <font class="price">{$data.price}</font> {$=app.unit.coin$}购买了一张会员卡！<br>
+系统同时也自动为用户 <font class="user">{$data.username}</font> 冲值了 <font class="price">{$data.emoney}</font> {$=app.unit.emoney$}。及一些其他操作！<br>
+<input type="button" class="btn" value="点击返回用户中心" onClick="javascript:window.location.href='{$=app.url.account$}';">
+]]></message>
+	</item>
+</xcml>

@@ -1,0 +1,94 @@
+
+<div class="box">
+	<h2><t>联系人记录</t></h2>
+	<div class="bod">
+		<table class="table tables table-striped table-hover table-list">
+			<thead>
+				<tr>
+					<th class="id" style="width:80px;">ID</th>
+					<th>姓名</th>
+					<th>类型</th>
+					<th>邮箱地址</th>
+					<th>联系电话</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody id="list_linkman"></tbody>
+			<xmp id="list_linkman_tpl">
+				<tr dataid="[item:id]">
+					<td>[item:id]</td>
+					<td>[item:names]</td>
+					<td>[item:type.name]</td>
+					<td>[item:email]</td>
+					<td>[item:mobile]</td>
+					<td><a href="#edit" el="edit">编辑</a> || <a href="#del" el="del">删除</a></td>
+				</tr>
+			</xmp>
+		</table>
+	</div>
+	<div class="con"><div class="pagings_linkman"></div><r><a class="btn btn-info" el="add">添加联系人</a></r></div>
+</div>
+<script type="text/javascript">
+$(function(){
+	var list_linkman=new VDCS.list();//对象，传入存放内容的对象和模板对象
+	var opt={cont:$('#list_linkman'),tpl:$('#list_linkman_tpl')};
+	opt.serveVar={channel:'{@channel}',p:'linkman',m:'ua',action:'searchi',params:'listnum=5&uid='+$p.q('id')};
+	opt.bind=function(jitem){
+	};
+	opt.binds=function(jcont){
+		jcont.find('[el=del]').click(function(){
+			var opt={};
+			var jthis=$(this);
+			//opt.id=jcont.attr('dataid');
+			opt.id=jthis.parents('tr').attr('dataid');
+			opt.message='您确认要删除联系人吗？';
+			opt.callback=function(){
+				var _url='linkman/ua.x?action=del&id='+opt.id+'&uuid='+$p.q('id');
+				$ajax({url:_url,value:'xml',ready:function(xml){
+					//alert(xml);
+					var map=$util.toMapByXML(xml);
+					var treeVar=map.getItemTree('var');
+					var _status=treeVar.v('status');
+					if(_status=='succeed'){
+						list_linkman.refresh();
+						ui.popups('succeed','删除联系人成功！');
+					}else{
+						ui.popups('error','删除联系人失败！');
+					}
+				},error:true});	
+			};
+			ui.confirm(opt);
+		});
+		jcont.find('[el=edit]').click(function(){
+			var jthis=$(this);
+			var id=jthis.parents('tr').attr('dataid');
+			//alert(id);
+			ui.pages.recordClick(jthis,{
+				serveE:{p:'linkman',m:'ua',action:'edit',params:'id='+id},
+				serveX:{p:'linkman',m:'ua',action:'edit',params:'id='+id},
+				//succeed:_succeed,
+				succeed:function(){
+					ui.popups('succeed','编辑成功！',1);
+					list_linkman.refresh();
+							},
+				title:'编辑联系人',
+			'':''});
+		});
+	};
+	opt.paging=$('.pagings');
+	opt.node_table='item';
+	list_linkman.init(opt);
+	list_linkman.parse();
+	ui.pages.channel='{@channel}';
+	var optt={
+		serveE:{p:'linkman',m:'ua',action:'add',params:''},
+		serveX:{p:'linkman',m:'ua',action:'add',params:'&uuid='+$p.q('id')},
+		title:'添加联系人',
+		succeed:function(){
+			ui.popups('succeed','添加成功！',1);
+			list_linkman.refresh();
+		},
+	};
+	ui.pages.record($('[el=add]'),optt);
+});
+</script>

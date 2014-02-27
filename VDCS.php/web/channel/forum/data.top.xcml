@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>item</node>
+		<field>value,name</field>
+		<field.att.value>value</field.att.value>
+		<field.att.title>name</field.att.title>
+		<field.att.level></field.att.level>
+	</configure>
+	<item>
+		<value>0</value>
+		<name><![CDATA[未固顶]]></name>
+		<title><![CDATA[<font class="gray">未固顶</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<value>1</value>
+		<name><![CDATA[固顶]]></name>
+		<title><![CDATA[<font class="mark">固顶</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<value>2</value>
+		<name><![CDATA[区固顶]]></name>
+		<title><![CDATA[<font class="mark">区固顶</font>]]></title>
+		<level>0</level>
+	</item>
+	<item>
+		<value>3</value>
+		<name><![CDATA[总固顶]]></name>
+		<title><![CDATA[<font class="mark">总固顶</font>]]></title>
+		<level>0</level>
+	</item>
+</xcml>

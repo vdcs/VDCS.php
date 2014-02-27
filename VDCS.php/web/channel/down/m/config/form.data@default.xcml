@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="form">
+	<configure>
+		<node>input</node>
+		<field>type,property,style,caption,att,value,explain</field>
+		<sp.code>code=sp_code;remark={@tpx}remark</sp.code>
+		<script.begin><![CDATA[<script type="text/javascript">
+ui.fbm.relates({"upload":"base,content"});
+</script>]]></script.begin>
+		<script.end><![CDATA[]]></script.end>
+	</configure>
+	<input>
+		<type>multibar.bar</type>
+		<explain><![CDATA[default=$$$base=基本信息;content={@xnames}内容;popedom={@xact}权限;status={@xnames}状态]]></explain>
+	</input>
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=none</att>
+	</input>
+<label:include file="partd.topic">
+<label:include file="part.key!">
+	<input>
+		<type>hidden.{@tpx}sort</type>
+		<property><![CDATA[item=;action=;type=string;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[{@xnames}类别]]></caption>
+		<att><![CDATA[<control:att("file","common.channel/{@channel}/data.sort")>]]></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+	<input>
+		<type>hidden.{@tpx}type</type>
+		<property><![CDATA[item=;action=;type=string;max=255;min=]]></property>
+		<style></style>
+		<caption><![CDATA[{@xnames}类型]]></caption>
+		<att><![CDATA[<control:att("file","common.channel/{@channel}/data.type")>]]></att>
+		<value></value>
+		<explain><![CDATA[]]></explain>
+	</input>
+<label:include file="part.size!s">
+<label:include file="part.summary">
+<label:include file="part.sp.keyword!">
+<label:include file="part.pic!">
+<label:include file="part.sp.serverid">
+<label:include file="part.url">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+	
+<label:include file="part.m.content!d">
+<label:include file="part.m.upload">
+	
+	
+<label:include file="part.m.props">
+<label:include file="part.m.sp">
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=status;display=none</att>
+	</input>
+<label:include file="part.total.views">
+<label:include file="part.total.extend">
+<label:include file="part.orderid">
+<label:include file="part.statuss">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+</xcml>

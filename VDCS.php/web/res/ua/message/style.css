@@ -1,0 +1,58 @@
+
+/* ######################### */
+/* ######## Message ######## */
+/* ######################### */
+div.MessageList {  }
+div.MessageListBar { clear:both; height:23px; border-top:1px solid #C1C8D2; border-bottom:1px solid #C1C8D2; background-color:#F2F7FC; overflow:hidden; }
+div.MessageListBar div.partItem { float:left; height:23px;line-height:23px; color:#988B87; text-align:center; border-right:1px solid #C1C8D2; margin:1px 0 0 0; padding:0 8px; overflow:hidden; }
+div.MessageListBar div.partSelect { width:30px; padding:5px 0 0 0;_padding-top:0; }
+div.MessageListBar div.partStatus { width:30px; background:url("icon_status.gif") 8px 6px no-repeat; padding:0; }
+div.MessageListBar div.partUser { width:100px; text-align:left; padding-top:4px; }
+div.MessageListBar div.partTopic { width:auto; text-align:left; border-right:0; }
+div.MessageListBar div.partTime { float:right; width:80px; text-align:left; border-left:1px solid #D0D0D0; }
+div.MessageListBar div.partSize { float:right; width:40px; text-align:right; border-right:0; }
+div.MessageListItem { clear:both; height:30px; text-align:center; border-bottom:1px solid #E3E6EB; background-color:#FFFFFF; }
+div.MessageListItemMessage { height:50px; line-height:50px; text-align:center; }
+div.MessageListItem div.partItem { float:left; height:30px; line-height:30px; margin:1px 0px 0px 0px; padding:0 8px; }
+div.MessageListItem div.partSelect { width:31px; padding:8px 0 0 0; }
+div.MessageListItem div.partStatus { width:31px; padding:6px 0 0 0; }
+div.MessageListItem div.partUser { width:101px; text-align:left; padding-top:8px; }
+div.MessageListItem div.partTopic { width:auto; text-align:left; }
+div.MessageListItem div.partTime { float:right; width:81px; text-align:left; }
+div.MessageListItem div.partSize { float:right; width:40px; text-align:right; border-right:0px; }
+div.MessageListFoot { clear:both; height:25px; border-bottom:1px solid #AAC1DE; background-color:#F2F7FC; padding:6px 0px 4px 0px; }
+div.MessageListFoot div.partHandle { float:left; padding:0 8px; }
+div.MessageListFoot div.partHandle button { margin-right:8px; }
+div.MessageListFoot div.partPaging { float:right; padding:1px 0 0 0; }
+
+
+div.MessageView {  }
+div.MessageView .partBar { clear:both; text-align:left; border-bottom:1px solid #AAC1DE; background-color:#F2F7FC; padding:10px; position:relative;overflow:hidden; }
+div.MessageView .partBar h3 { padding-bottom:5px; font-size:14px; font-weight:bold; }
+div.MessageView .partBar p { color:#988B87; padding:2px 0; }
+div.MessageView .partBar .partHandle { position:absolute;top:24px;right:8px; }
+div.MessageView .partContent { clear:both; padding:10px 10px 8px 10px; }
+div.MessageView .partContent .content { text-align:left; line-height:180%; }
+div.MessageView .partContent .contents { height:350px; text-align:left; overflow:hidden; overflow-y:auto; }
+div.MessageView .partFoot { height:25px; border-bottom:1px solid #AAC1DE; background-color:#F2F7FC; padding:6px 0 4px 0; }
+div.MessageView .partFoot div.partHandle { float:left; padding:0 8px; }
+div.MessageView .partFoot div.partHandle button { margin-right:8px; }
+
+
+div.MessagePost {  }
+div.MessagePostBar { clear:both; text-align:left; border-bottom:1px solid #AAC1DE; background-color:#F2F7FC; padding:10px 10px 5px 10px; }
+div.MessagePostBar div.partTopic { padding-bottom:5px; }
+div.MessagePostBar div.partTopic span.topic { font-size:14px; font-weight:bold; }
+div.MessagePostBar p { color:#988B87; padding:2px 0; }
+div.MessagePostBar span.user-send {  }
+div.MessagePostBar span.user-incept {  }
+div.MessagePostBar span.time {  }
+div.MessagePostBody { clear:both; padding:0; }
+div.MessagePostBody p { padding:2px 0; }
+div.MessagePostBody div.PostFormItem div.itemCaption { width:90px; }
+div.MessagePostBody div.PostFormItem div.itemInput { margin-left:100px; }
+div.MessagePostBody div.PostFormItem div.itemButton { margin-left:100px; }
+div.MessagePostBody div.PostFormItem div.itemExplain { margin-left:100px; }
+div.MessagePostFoot { clear:both; height:24px; border-bottom:1px solid #AAC1DE; background-color:#F2F7FC; padding:8px 0 6px 0; }
+div.MessagePostFoot div.partHandle { margin-left:100px;_margin-left:103px; text-align:left; padding:0; }
+div.MessagePostFoot div.partHandle button { margin-right:8px; }

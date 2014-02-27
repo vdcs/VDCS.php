@@ -1,0 +1,40 @@
+﻿
+
+<div app-id="app" app-name="应用站点(app.vdcs.cc)" class="hide">
+
+应用站点(app.vdcs.cc)
+
+<span el="load"><img src="<url:images>common/load/16_bar.gif" /></span>
+
+<span el="nobind">
+	<a class="btn m" href="#" el="bind">注册过帐号</a>
+	<a class="btn hide" href="#" el="create">没有帐号</a>
+</span>
+
+<span el="binded">
+	<a class="btn c" href="#" el="login" target="_blank">登录</a>
+	<a class="btn" href="#" el="unbind">解绑</a>
+</span>
+
+<xmp el="form_bind">
+<div class="forms" style="width:280px;">
+<form name="frm_post" action="" method="post" >
+<dl>
+<dt el="id">
+	<h2>帐号</h2>
+	<h3><p><input type="text" class="tipi" name="value" value="" placeholder="app用户名" minlength="5" maxlength="50" tabindex="1" /><em class="it name"></em><em class="ih require" title="请输入您在 app 的注册用户名"></em></p></h3>
+</dt>
+<dt el="password">
+	<h2>密码</h2>
+	<h3><p><input type="password" class="tipi" name="password" value="" placeholder="app密码" minlength="2" maxlength="20" tabindex="2" /><em class="it password"></em><em class="ih"></em></p></h3>
+</dt>
+<dd class="tips"><h3><p class="itip"><em></em><span>提示信息</span></p></h3></dd>
+</dl>
+</form>
+</div>
+</xmp>
+
+</div>
+<div class="space"></div>
+
+<label:include file="/account/inc/sso-script">

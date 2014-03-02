@@ -263,4 +263,32 @@ class UICSS
 		return $re;
 	}
 	
+	public static function filterLess($css)
+	{
+		$less=new UILessc();
+		$re=$less->compile(self::getLessDefined().NEWLINE.$css);
+		$less=null;
+		$re=r($re,' {','{');
+		$re=r($re,'  ',TABS);
+		return $re;
+	}
+	public static function getLessDefined()
+	{
+		$re='';
+		//$basepath=appPaths('vdcs/web/',true,true);		// /Volumes/HDD/wwwroot/VDCS/VDCS.php/VDCS.php/web/
+		$respath=appDirPath('vdcs.web/res');			// /Volumes/HDD/wwwroot/VDCS/VDCS.php/VDCS.php/web/res/
+		$rootpath=appDirPath('root/images');			// /Volumes/HDD/wwwroot/VDCS/VDCS.php/www/images/
+		if(defined('NOVDCS')){
+			$respath=VDCS_WEB_PATH.'res/';
+			$rootpath=_BASE_PATH_ROOT.'images/';
+		}
+		//debugx($respath);
+		//debugx($rootpath);
+		$re=getFile($respath.'css/less/defined.css');
+		$re.=NEWLINE;
+		$re.=getFile($rootpath.'css/less/define.css');
+		//die($re);
+		return $re;
+	}
+
 }

@@ -19,8 +19,8 @@
 				</ul>
 			</dt>
 			<dd>
-				<pic class="avatar b"><img src="<chn:linkurl("account","avatar","res=m&id=<ua:id>")>" /></pic>
-				<p><a href="<chn:linkurl("{@channel}","pam","p=settings&m=avatar")>"><span>上传头像</span></a></p>
+				<pic class="avatar rc b"><img src="<chn:linkurl("account","avatar","res=m&id=<ua:id>")>" /></pic>
+				<p><a class="btn s" href="<chn:linkurl("{@channel}","pam","p=settings&m=avatar")>"><span>上传头像</span></a></p>
 			</dd>
 		</dl>
 	</div>

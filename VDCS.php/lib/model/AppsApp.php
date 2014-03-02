@@ -36,7 +36,7 @@ class AppsApp
 	*/
 	public static function request($opt,$params,$auth=null)
 	{
-		$ret=[];
+		$ret=array();
 		$opt=AppsCommon::opt($opt);
 		$opt['auth']=is_null($auth)?'interface':'';
 		if(!$opt['api']){

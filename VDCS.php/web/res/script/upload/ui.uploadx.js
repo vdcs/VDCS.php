@@ -43,7 +43,7 @@ ui.uploadx={
 			//alert(ja.attrd('vars'));
 			var sets=s2o(ja.attrd('vars'),'&','=');
 			//dbg.o(sets);
-			var opt={upload_channel:sets.channel,upload_sorts:sets.sorts,upload_filetype:sets.filetype,queue_limit:1};
+			var opt={upload_channel:sets.channel,upload_sorts:sets.sorts,upload_filetype:sets.filetype,maxsize:sets.filesize,queue_limit:1};
 			var callback={};
 			callback.complete=function(vars){
 				var treeVar=vars.treeVar;

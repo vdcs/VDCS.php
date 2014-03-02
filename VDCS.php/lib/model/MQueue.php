@@ -9,14 +9,14 @@ class MQueue
 		$qtree=newTree();
 		if(!iso($send)){
 			$qid=toInt($send);
-			$qtree=DB::queryTree('select * from '.self::MQueue.' where id='.DB::q($qid,1));
+			$qtree=DB::queryTree('select * from '.self::TABLE_NAME.' where id='.DB::q($qid,1));
 			if($qtree->getCount()<1) return false;
 		}else{
 			$qtree=$send;
 			$qid=$qtree->getItem('id');
 		}
 		$vars=$qtree->getItem('vars');
-		$arrVars=[];
+		$arrVars=array();
 		$arrVars=VDCSData::deCode($vars,true);
 		return true;
 	}

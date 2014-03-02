@@ -9,7 +9,7 @@ define('ISRUN',version_compare(PHP_VERSION,'5.4')>-1?TRUE:FALSE);
 //==============================================
 if(!defined('VDCS')) require('util/VDCS.c.php');
 define('VDCS_BUILD',				'0.9.1.5');
-define('VDCS_UPDATE',				'2014-01-20');
+define('VDCS_UPDATE',				'2014-03-02');
 //==============================================
 if(!defined('VDCS_PATH')) define('VDCS_PATH',dirname(__FILE__).'/');
 define('_BASE_PATH_VDCS',			VDCS_PATH);
@@ -135,7 +135,7 @@ function obStarts()
 }
 function obStart($calls=null){return ob_start($calls);}function obContent(){return ob_get_contents();}function obFlush(){return ob_end_flush();}function obClean(){return ob_end_clean();}
 function ignoreAbort(){ignore_user_abort();}
-function datei($fmt,$stamp=0){return gmdate($fmt,($stamp?$stamp:time())+DCS::timezone(1));}
+function datei($fmt='Y-m-d H:i:s',$stamp=0){return gmdate($fmt,($stamp?$stamp:time())+DCS::timezone(1));}
 //==============================================
 function dcsHeader($type=null,$charset=null){
 	if(!$type) $type=CONTENT_TYPE_HTML;

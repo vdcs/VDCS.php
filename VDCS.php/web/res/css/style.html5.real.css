@@ -2,7 +2,7 @@
 /*
 Version:	VDCS core @HTML5 v1.0
 Support:	http://go.hpns.cn/vdcs/css
-Uodated:	2014-03-00
+Uodated:	2014-02-00
 */
 
 *{margin:0;padding:0;border:0;outline:0;font-size:1em;}
@@ -79,9 +79,9 @@ sh,.spc,.space,.spacer,.spacing{height:15px;overflow:hidden;} .space,.spaces{cle
 /*-moz-border-radius:5px;-moz-border-radius:30px;-moz-box-shadow:0 1px 2px rgba(0,0,0,0.6);*/
 .rc0t{-webkit-border-top-left-radius:0!important;-webkit-border-top-right-radius:0!important;-moz-border-radius-topleft:0!important;-moz-border-radius-topright:0!important;border-top-left-radius:0!important;border-top-right-radius:0!important;}
 .rc0b{-webkit-border-bottom-left-radius:0!important;-webkit-border-bottom-right-radius:0!important;-moz-border-radius-bottomleft:0!important;-moz-border-radius-bottomright:0!important;border-bottom-left-radius:0!important;border-bottom-right-radius:0!important;}
-.rc,.rc5{.rc(5px);}
-.rct,.rc5t{.rct(5px);}
-.rcb,.rc5b{.rcb(5px)}
+.rc,.rc5{-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;overflow:hidden;}
+.rct,.rc5t{-webkit-border-radius:5px 5px 0 0;-o-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0;overflow:hidden;}
+.rcb,.rc5b{-webkit-border-radius:0 0 5px 5px;-o-border-radius:0 0 5px 5px;border-radius:0 0 5px 5px;overflow:hidden;}
 .rco{border-radius:50%;}
 .rc-word{background-color:#EEE;-webkit-border-radius:30px;-o-border-radius:30px;border-radius:30px;overflow:hidden;}
 .rc-word:hover{background-color:#666;}

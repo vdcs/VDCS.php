@@ -78,6 +78,17 @@ class ChannelXres
 			$explain='';
 			if($isexist){
 				$content=getFile($path);
+				if($ext=='css'){
+					timerBegin();
+					$content=UICSS::filterLess($content);
+					$lesscinfo='/'.'* lessc compile in: '.timerExec().' *'.'/';
+					if(ISLOCAL){
+						$content=$lesscinfo.NEWLINE.$content;
+					}
+					else{
+						$content=$content.NEWLINE.$lesscinfo;
+					}
+				}
 				$explain=NEWLINE.'/'.'* '.$place.': '.$file.' , '.(defined('NOVDCS')?gmdate("D, d M Y H:i:s", time() + 15360000):DCS::now()).' *'.'/';
 			}
 			else{
@@ -115,3 +126,4 @@ class ChannelXres
 	}
 	
 }
+

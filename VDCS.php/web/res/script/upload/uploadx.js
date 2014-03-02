@@ -129,10 +129,9 @@ extendo($uploadx,{
 		callback.opt=callback.opt||{};
 		callback.opt=ox({ide:opt.ide,
 			model:opt.model,model_path:opt.model_path,
-			upload_channel:opt.upload_channel,upload_sorts:opt.upload_sorts,upload_filetype:opt.upload_filetype,upload_limit:opt.upload_limit,queue_limit:opt.queue_limit,
+			upload_channel:opt.upload_channel,upload_sorts:opt.upload_sorts,upload_filetype:opt.upload_filetype,maxsize:opt.maxsize,upload_limit:opt.upload_limit,queue_limit:opt.queue_limit,
 			serveURL:opt.serveURL,
 			SESSIONID:opt.sessionid},callback.opt);
-		//dbg.o(callback.opt);
 		this.init(callback.opt,function(omodel){
 				if(callback.complete) omodel.setCallback('UploadComplete',callback.complete);
 				if(callback.load) callback.load(omodel);

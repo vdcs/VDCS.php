@@ -1,6 +1,8 @@
 <?php
 require('common/include/configure.php');
 
+debugs('NOW: '.datei());
+
 debugs('Query String:');
 debugs($_SERVER['QUERY_STRING']);
 
@@ -16,8 +18,16 @@ debugs($_SERVER['REQUEST_URI']);
 
 debugs('');
 
-phpinfo();
-//if(query('phpinfo')) phpinfo();
+if(query('phpinfo')) phpinfo();
+
+$sleep_value=query('sleep');
+if($sleep_value){
+	$sleep_value=toi($sleep_value);
+	if($sleep_value<1) $sleep_value=5;
+	timerBegin();
+	sleep($sleep_value);
+	debugx('sleep over: '.datei().', with time: '.timerExec());
+}
 
 
 dcsEnd();

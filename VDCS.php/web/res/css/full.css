@@ -1,0 +1,16 @@
+@charset "utf-8";
+@import url("style.html5.css");
+
+@import url("comm/page.css");
+@import url("comm/box.css");
+@import url("comm/widget.css");
+
+@import url("comm/ui.css");
+@import url("comm/ui.table.css");
+@import url("comm/ui.paging.css");
+@import url("comm/ui.icons.css");
+@import url("comm/ui.icons.font.css");
+@import url("comm/ui.iblank.css");
+@import url("comm/ui.extends.css");
+
+@import url("html5/effect.css");

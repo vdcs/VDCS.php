@@ -1,6 +1,8 @@
 <label:include file="frame/headers">
 
 
+<div class="cont">
+</div>
 <div class="cent" style="height:500px;">
 
 <dtml:_message>
@@ -29,15 +31,15 @@
 <div class="sider">
 
 <div class="avatar_show">
-<div class="ar"><b>小头像</b> &nbsp; <span class="avatars" el="small"><img src="<url:images>ua/avatar.gif" /></span>
-	 &nbsp; <span class="avatarm" el="middle"><img src="<url:images>ua/avatar.gif" /></span></div>
-<div class="space"></div>
-<div class="ar"><span class="avatarb" el="big"><img src="<url:images>ua/avatar.gif" /></span></div>
-<div class="ar h"><b>大头像</b></div>
-<div class="space"></div>
-<div class="ar oh" style="max-height:200px;_height:200px;"><span el="origin"><img src="<url:images>ua/avatar.gif" style="max-width:180px;_width:180px;" /></span></div>
-<div class="space"></div>
-<div class="ar h"><a id="btn-avatar-origin" class="btn c" href="javascript:;"><span>编辑原始照片</span></a></div>
+	<div class="ar"><b>小头像</b> &nbsp; <span class="avatar rc s" el="small"><img src="<url:images>ua/avatar.gif" /></span>
+		 &nbsp; <span class="avatar rc m" el="middle"><img src="<url:images>ua/avatar.gif" /></span></div>
+	<div class="space"></div>
+	<div class="ar"><span class="avatar rc b" el="big"><img src="<url:images>ua/avatar.gif" /></span></div>
+	<div class="ar h"><b>大头像</b></div>
+	<div class="space"></div>
+	<div class="ar oh" style="max-height:200px;_height:200px;"><span el="origin"><img src="<url:images>ua/avatar.gif" style="max-width:180px;_width:180px;" /></span></div>
+	<div class="space"></div>
+	<div class="ar h"><a id="btn-avatar-origin" class="btn c" href="javascript:;"><span>编辑原始照片</span></a></div>
 </div>
 
 </div>

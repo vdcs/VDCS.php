@@ -20,6 +20,8 @@ debugs('');
 
 if(query('phpinfo')) phpinfo();
 
+if(query('error')) phpinfoi();
+
 $sleep_value=query('sleep');
 if($sleep_value){
 	$sleep_value=toi($sleep_value);

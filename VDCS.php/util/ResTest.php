@@ -114,6 +114,7 @@ class ResTest
 	{
 		$re=$v;
 		if(is_array($re)) $re=self::pr($re);
+		//elseif(iso($re)) $re=$re->;
 		elseif(isTree($re)) $re=self::toTree($re);
 		elseif(ins($re,'<?xml')) $re=htmlspecialchars($re);
 		return $re;

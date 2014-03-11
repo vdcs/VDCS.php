@@ -1,0 +1,18 @@
+@charset "utf-8";
+/*
+Version:	VDCS comm @ui v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2014-01-00
+*/
+
+
+/* ######### UL LI ######### */
+ul.none li{list-style:none;margin:1px 0;}
+ul.number li{list-style:decimal inside;}
+ul.list li{list-style:square inside;}
+ul.sign li{list-style:disc inside;}
+ul.error li{list-style:decimal inside;}
+ul.h li{padding:2px 0;}
+ul.lin li{white-space:nowrap;overflow:hidden;width:100%;}
+ul.inline li{display:inline;list-style:none;}
+ul.inlines li{float:left;width:8em;white-space:nowrap;overflow:hidden;}

@@ -499,10 +499,12 @@ class VDCSTime
 			case 'w':	$pstr='week';		$plus=$num*7*24*60*60;		break;
 			case 'd':	$pstr='days';		$plus=$num*24*60*60;		break;
 			case 'h':	$pstr='hours';		$plus=$num*60*60;		break;
-			case 'mi':	$pstr='minutes';	$plus=$num*60;			break;
+			case 'mi':
+			case 'i':	$pstr='minutes';	$plus=$num*60;			break;
 			case 's':	$pstr='seconds';	$plus=$num;			break;
 		}
 		//$tnum+=$plus;
+		$num=$num>0?($num+1):($num-1);
 		$pstr=($num>0?'+':'').strval($num).' '.$pstr;
 		$tnum=strtotime($pstr,$tnum);	//+self::toZone('s',$zone);
 		return $fmt?self::toString($tnum,$fmt,$zone):$tnum;

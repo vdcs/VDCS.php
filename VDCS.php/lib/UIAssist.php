@@ -1,7 +1,7 @@
 <?
 defined('UICSS_PATH_CACHEX') || 			define('UICSS_PATH_CACHEX',		_BASE_PATH_ROOT._BASE_DIR_DATA.'cache/themes/');
 
-class UICSS
+class UIAssist
 {
 	const NEWLINE			= "\n";
 	const CHARSET_HEAD		= '@charset "utf-8";';
@@ -11,8 +11,8 @@ class UICSS
 	
 	public static function v($k,$v=null){if($v)self::$_var[$k]=$v;return self::$_var[$k];}
 	
-	public static function getContent($file){return getFileContent(UICSS_PATH_CACHEX.'ui.'.$file.'.css');}
-	public static function setContent($file,$content){doFileWrite(UICSS_PATH_CACHEX.'ui.'.$file.'.css',$content);}
+	public static function getContent($file){return getFileContent(UICSS_PATH_CACHEX.$file.'.css');}
+	public static function setContent($file,$content){doFileWrite(UICSS_PATH_CACHEX.$file.'.css',$content);}
 	
 	public static function toFilePath($file)
 	{
@@ -141,9 +141,8 @@ class UICSS
 		}
 		//##########
 		$content=r($content,self::CHARSET_HEAD,'');
-		$content=self::filterOptimize($content);
 		if($compile) $content=self::filterCompile($content,$contents);
-		$content=self::filterExplain($content);
+		$content=self::cssOptimizer($content);
 		//##########
 		unset($_matches);
 		//$content=r($content,CHARSET_HEAD,CHARSET_HEAD.NEWLINE);
@@ -170,108 +169,43 @@ class UICSS
 		return $file;
 	}
 	
-	
-	public static function filterExplain($content)			//注释
+
+	//public static 
+	public static function cssCompiler($css)
 	{
-		// /^[(\xc2\xa0)|\s]+/ 中文空格
-		$pattern='/(\/\*)'.PATTERN_FLAG_CONTENT.'(\*\/)/ies';
-		$_m=preg_match_all($pattern,$content,$_matches);
-		//print_r($_matches);
-		for($m=0;$m<count($_matches[0]);$m++){
-			if(ins($_matches[2][$m],'>>')<1) $content=r($content,$_matches[0][$m],'');
-		}
-		return $content;
-	}
-	public static function filterOptimize($content)
-	{
-		//{}
-		$pattern='/{([\s\S.][^}]*?)}/ies';
-		//debugs($pattern);
-		$_m=preg_match_all($pattern,$content,$_matches);
-		//print_r($_matches);
-		for($m=0;$m<count($_matches[0]);$m++){
-			$txt=$_matches[1][$m];
-			$afind=["\r\n","\r","\n"];
-			$areplace=['','',''];
-			$txt=str_replace($afind,$areplace,$txt);
-			$value='{'.$txt.'}';
-			$content=r($content,$_matches[0][$m],$value);
-		}
-		
-		$afind=[' ,',', ',",\r\n",",\r",",\n"];
-		$areplace=[',',',',',',',',','];
-		$content=str_replace($afind,$areplace,$content);
-		$afind=[' ;','; '];
-		$areplace=[';',';'];
-		$content=str_replace($afind,$areplace,$content);
-		$afind=[' {','	{',"{\r\n","{\r","{\n"];
-		$areplace=['{','{','{','{','{'];
-		$content=str_replace($afind,$areplace,$content);
-		$afind=[' }',';}',"\r\n}","\r}","\n}"];
-		$areplace=['}','}','}','}','}'];
-		$content=str_replace($afind,$areplace,$content);
-		
-		$afind=[': ',"\t",'        ','    ','  '];
-		$areplace=[':','','','',''];
-		$content=str_replace($afind,$areplace,$content);
-		$afind=["\r\n","\r\n\r\n","\r\r","\n\n"];
-		$areplace=[self::NEWLINE,self::NEWLINE,self::NEWLINE,self::NEWLINE];
-		$content=str_replace($afind,$areplace,$content);
-		return $content;
-	}
-	
-	public static function filterCompile($content,$contents=null)			//编译
-	{
-		!$contents&&$contents=$content;
-		// /*.tbox>>.opac*/
-		//'/\/\*(\s|.)*\*\//U'
-		$pattern='/(\/\*)([^\*]*)(\$|>>)([^\*]*)(\*\/)/ies';
-		//debugs($pattern);
-		$_m=preg_match_all($pattern,$content,$_matches);
-		//print_r($_matches);
-		for($m=0;$m<count($_matches[0]);$m++){
-			$value=$_matches[0][$m];
-			$mode=$_matches[3][$m];
-			$tag=$_matches[2][$m];
-			$tago=$_matches[4][$m];
-			//debugs($tag.' extends '.$tago);
-			$valueo=self::getExtendBase($contents,$tago,$tag);
-			$content=r($content,$value,$value.NEWLINE.$valueo.'/*>>end*/');
-		}
-		return $content;
-	}
-	public static function getExtendBase($content,$tago,$tag=null)
-	{
-		!$tag&&$tag=$tago;
-		$re='';
-		$classname='[\w\d\-\_\.\:\,\s]*';
-		$classp=':[.\w][^,{]*';
-		$pattern='/(([^}\n]'.$classname.')?'.utilRegex::toPatternSafe($tago).'('.$classp.')?('.$classname.')?){([^}]*)}/ies';
-		//debugs($pattern);
-		$_m=preg_match_all($pattern,$content,$_matches);
-		//print_r($_matches);
-		for($m=0;$m<count($_matches[0]);$m++){
-			$cnames=trim($_matches[1][$m]);
-			$txtp=trim($_matches[3][$m]);
-			$cname=$txtp?substr($cnames,0,-strlen($txtp)):$cnames;
-			//debugs($tago.' == '.$cname);
-			if($tago==$cname){
-				$txt=trim($_matches[5][$m]);
-				$re.=$tag.$txtp.'{'.$txt.'}'.NEWLINE;
-			}
-		}
-		return $re;
-	}
-	
-	public static function filterLess($css)
-	{
+		$NO_FILTER = '/'.'*'.'!filter'.'*'.'/';
+		if(ins($css,$NO_FILTER)>0) return r($css,$NO_FILTER,'');
 		$less=new UILessc();
-		$re=$less->compile(self::getLessDefined().NEWLINE.$css);
+
+		$lessfmt=new lessc_formatter_classic();
+		$lessfmt->disableSingle=true;
+		//$lessfmt->breakSelectors=true;
+		//$lessfmt="classic";
+		
+		//$less->setFormatter($lessfmt);
+		$re=$less->compile($css.NEWLINE.self::getLessDefined());
 		$less=null;
-		$re=r($re,' {','{');
-		$re=r($re,'  ',TABS);
+		$re=self::cssOptimizer($re);
 		return $re;
 	}
+	public static function cssOptimizer($re,$pak=true)		//Optimize
+	{
+		$afind=[' {','  ',': ',' :'];
+		$areplace=['{',TABS,':',':'];
+		$re=str_replace($afind,$areplace,$re);
+
+		$afind=["\r\n","\r"];
+		$areplace=["\n","\n"];
+		$re=str_replace($afind,$areplace,$re);
+
+		if($pak){
+			$afind=[";\n\t",";\n}","{\n",TABS];
+			$areplace=[";\t",";}",'{',''];
+			$re=str_replace($afind,$areplace,$re);
+		}
+		return $re;
+	}
+	
 	public static function getLessDefined()
 	{
 		$re='';
@@ -291,4 +225,15 @@ class UICSS
 		return $re;
 	}
 
+
+	public static function jsPacker($s,$head='',$mode='Normal')
+	{
+		//include_once('JavaScriptPacker.php');
+		$packer=new JavaScriptPacker($s, 'Normal', true, false);
+		$prefix='';$postfix='';
+		//$prefix=NEWLINE;$postfix=NEWLINE;
+		if($head) $prefix=getFileContent(_BASE_PATH.'r/head'.(($head!='def')?('.'.$head):'').'.txt');
+		return $prefix.trim($packer->pack()).$postfix;
+	}
+	
 }

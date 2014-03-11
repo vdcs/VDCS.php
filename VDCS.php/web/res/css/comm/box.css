@@ -2,12 +2,11 @@
 /*
 Version:	VDCS comm @box v1.0
 Support:	http://go.hpns.cn/vdcs/css
-Uodated:	2013-11-00
+Uodated:	2014-03-00
 */
 
 
-.box{border:1px solid #E7E7E7;}
-.box{-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;overflow:hidden;}
+.box{border:1px solid #E7E7E7;.rc(5px);}
 
 
 .box > h2{height:32px;line-height:32px;font-size:1em;padding:0 15px;}
@@ -22,12 +21,7 @@ Uodated:	2013-11-00
 	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1);
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1);
 	background: #f2f2f2 repeat-x left bottom;
-	background-image: -ms-linear-gradient(top, #fcfcfc, #f2f2f2);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fcfcfc), to(#f2f2f2));
-	background-image: -webkit-linear-gradient(top, #fcfcfc, #f2f2f2);
-	background-image: -o-linear-gradient(top, #fcfcfc, #f2f2f2);
-	background-image: -moz-linear-gradient(top, #fcfcfc, #f2f2f2);
-	background-image: linear-gradient(top, #fcfcfc, #f2f2f2);
+	.bg_linear(#fcfcfc, #f2f2f2);
 }
 .box > h2 a{text-decoration:none;}
 .box > h2 t{display:inline-block;font-size:1.2em;font-weight:bold;}
@@ -35,9 +29,9 @@ Uodated:	2013-11-00
 
 .box > h2.open i{background-position:0 -27px;}
 .box > h2.close i{background-position:0 0;}
-.box > h2 r{}
+.box > h2 r{float:right;}
 
-.box > h5{height:20px;line-height:20px;padding:0 0;margin-bottom:10px;}
+.box > h5{.heightl(20px);padding:0 0;margin-bottom:10px;}
 
 
 .box > .bod,

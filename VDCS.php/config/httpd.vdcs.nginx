@@ -1,28 +1,31 @@
 #rewrite
 
 
+#define-begin#
+
+
+
+#define-end#
+
+
 #configure-begin#
 rewrite ^/(index|welcome|comm|test)(/(\w+))?(\?(.*))?$					/p.php?router=common/$1/$3&$5 last;
 rewrite ^/(passport/)?(login|register|invite|logout)(/(\w+))?(\.html)?(\?(.*))?$	/p.php?router=passport/pa&ap=$2&am=$4&$7 last;
 rewrite ^/(about|support)/$ 								/p.php?router=support/index&$5 last;
 rewrite ^/(support)/(about|contact|help)(\.html)?$					/p.php?router=support/faq&page=$2&key=$4 last;
 rewrite ^/(about)/(\w+)(-(\w+))?(\.html)?$						/p.php?router=support/faq&page=$2&key=$4 last;
+rewrite ^/(manage)/$									/$1/index.php last;
+
+#common
+rewrite ^/(common/)?(avatar)/((\w+)/)?(\d+)_(\w+)\.(\w+)(\?(.*))?$			/p.php?router=common/avatar&ua=$4&uid=$5&res=$6&ext=$7&$9 last;
+rewrite ^/(images|themes|manage/themes)/(.[^\?]*)\.(\w+)(\?(.*))?$			/px.php?px=res&res=$1&type=$3&file=$2.$3&$5 last;
+rewrite ^/up(thumb|thumbm|file|def)/(.*)(\?(.*))?$					/px.php?px=upter&type=$1&file=$2&$4 last;
+rewrite ^/(common/)?x(\w+)\.(.[^\?]*)(\?(.*))?$						/px.php?px=$2&ext=$3&$5 last;
 
 #api
 rewrite ^/(api)/(\w+)/(.*)\.(.[^\?]*)?(\?(.*))?$					/p.php?router=$1/$2.$4&api=$3&$6 last;
 
-#common
-rewrite ^/(common/)?(avatar)/((\w+)/)?(\d+)_(\w+)\.(\w+)(\?(.*))?$			/p.php?router=common/avatar&ua=$4&uid=$5&res=$6&ext=$7&$9 last;
-rewrite ^/(xres|images)/(.[^\?]*)\.(\w+)(\?(.*))?$					/px.php?px=res&type=$3&file=$2.$3&$5 last;
-rewrite ^/up(thumb|thumbm|file|def)/(.*)(\?(.*))?$					/px.php?px=upter&type=$1&file=$2&$4 last;
-rewrite ^/(common/)?x(\w+)\.(.[^\?]*)(\?(.*))?$						/px.php?px=$2&ext=$3&$5 last;
-
-#manage
-rewrite ^/(manage|m)/$									/$1/index.php last;
-rewrite ^/(manage|m)/themes/(.*).(js|css|png|jpg|gif)(\?(.*))?$				/$1/index.php?router=/res&file=$2.$3&$5 last;
-
 #channel
-#article|news|photo|down|ask|blog|shop|mall|product|content
 rewrite ^/(\w+)/((index)\.html)?(\?(.*))?$						/p.php?router=$1/index&index=$3&$5 last;
 rewrite ^/(\w+)/special_(\d+)(_(\d+))?(\.html)?$					/p.php?router=$1/special&specialid=$2&page=$4&$7 last;
 rewrite ^/(\w+)/(list|class)(_(\d+))?(_(\d+))?(\.html)?(\?(.*))?$			/p.php?router=$1/$2&classid=$4&page=$6&$9 last;

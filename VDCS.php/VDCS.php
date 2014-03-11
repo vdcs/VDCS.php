@@ -319,6 +319,7 @@ class test{
 	function toXMLString($o){self::init();return ResTest::toXML($o);}
 	function toTxtString($o,$t=''){self::init();return ResTest::toTxt($o,$t);}
 	function toAryString($o,$t=''){self::init();return ResTest::toAry($o,$t);}
+	function toObjString($o,$t=''){self::init();return print_r(get_object_vars($o),true);}
 	function toTreeString($o,$t=''){self::init();return ResTest::toTree($o,$t);}
 	function toTableString($o,$t=''){self::init();return ResTest::toTable($o,$t);}
 	function x($s,$br=true){if(!self::$PUT)return;self::init();ResTest::x($s,$br);}function j($s){self::init();ResTest::j($s);}function vc($s){self::init();ResTest::vc($s);}
@@ -327,6 +328,7 @@ function debugSet($b=false,$p=true){define('DEBUG_OUT',$b);test::$PUT=$p;}
 function isDebug(){return !!DEBUG_OUT;}
 function debugx($s,$br=true){test::x($s,$br);}function debugj($s){test::j($s);}function debugvc($s){test::vc($s);}
 function debuga($o,$t=''){debugx(test::toAryString($o,$t));}
+function debugo($o,$t=''){debugx(test::toObjString($o,$t));}
 function debugTree($o,$t=''){debugx(test::toTreeString($o,$t));}
 function debugTable($o,$t=''){debugx(test::toTableString($o,$t));}
 function debugxx($s){if(DCS::isLocal())debugx($s);}
@@ -419,6 +421,14 @@ class VDCS
 require('VDCS.util.php');
 require('VDCS.res.php');
 
+function dcsNO()
+{
+	if(defined('NOVDCS')){
+		DCS::init();
+		return true;
+	}
+	return false;
+}
 $dcs=null;
 function dcsInit($_core=false,$_cache=false)
 {

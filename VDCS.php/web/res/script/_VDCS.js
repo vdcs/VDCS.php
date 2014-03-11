@@ -1077,14 +1077,14 @@ VDCS.utilTree=function(){
 	this.getFieldArray=function(){return this.getValueArray(0)};
 	
 	this.getValues=function(t){
-		if(ise(t)) t=1;
+		if(!isint(t)) t=1;
 		var re='';
 		for(var i=0;i<=this._count;i++){re+=','+this._data[i][1]}
 		if(re.length>0) re=re.substr(1);
 		return re
 	};
 	this.getValueArray=function(t){
-		if(ise(t)) t=1;
+		if(isint(t)) t=1;
 		var rea=new Array();
 		for(var i=0;i<=this._count;i++){rea[i]=this._data[i][t]}
 		return rea

@@ -2,7 +2,7 @@
 /*
 Version:	VDCS comm @input,forms,i* v1.0
 Support:	http://go.hpns.cn/vdcs/css
-Uodated:	2013-12-00
+Uodated:	2014-03-00
 */
 
 
@@ -74,10 +74,7 @@ fieldset[disabled] input[type="checkbox"]{background-color:transparent;}
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"] {
-	float:left;
-	margin-left:-20px;
-}
+.checkbox-inline input[type="checkbox"] {float:left;margin-left:-20px;}
 
 .radio + .radio,
 .checkbox + .checkbox {margin-top:-5px;}
@@ -126,15 +123,9 @@ input{
 	vertical-align:middle;
 	background-color:#FFF;
 	border:1px solid #CCC;
-	-webkit-border-radius:4px;
-	     -o-border-radius:4px;
-		border-radius:4px;
-	-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);
-		box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);
-	-webkit-transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-	   -moz-transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-	     -o-transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-		transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	.rc(4px);
+	.shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+	.trans(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s);
 }
 input[type="file"]{height:26px;line-height:26px;}
 select{width:auto;height:28px;min-height:28px;padding:5px;}
@@ -163,33 +154,16 @@ input[type="tel"]:focus,
 input[type="color"]:focus {
 	outline:0;
 	border-color:rgba(82, 168, 236, 0.8);
-	-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-		box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	.shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6));
 }
 
 input.none,
-input.none:focus{
-	-webkit-border-radius:0;
-	     -o-border-radius:0;
-		border-radius:0;
-	-webkit-box-shadow:none;
-		box-shadow:none;
-}
+input.none:focus{.rc(0);.shadow(none);}
 
 input.error{color:#b94a48;border-color:#953b39;}
-input.error:focus{
-	border-color: #953b39;
-	-webkit-box-shadow: 0 0 6px #d59392;
-	   -moz-box-shadow: 0 0 6px #d59392;
-		box-shadow: 0 0 6px #d59392;
-}
+input.error:focus{border-color: #953b39;.shadow(0 0 6px #d59392);}
 input.succeed{color:#d6e9c6;border-color:#d6e9c6;}
-input.succeed:focus{
-	border-color: #d6e9c6;
-	-webkit-box-shadow: 0 0 6px #dff0d8;
-	   -moz-box-shadow: 0 0 6px #dff0d8;
-		box-shadow: 0 0 6px #dff0d8;
-}
+input.succeed:focus{border-color: #d6e9c6;.shadow(0 0 6px #dff0d8);}
 
 input.btn{height:28px;padding-top:3px;}
 input.btn.m{height:38px;padding-top:5px;}
@@ -198,9 +172,7 @@ input.btn.m{height:38px;padding-top:5px;}
 .forms{text-align:left;margin:0 auto;padding-right:30px;}
 .forms dl{}
 .forms dt,
-.forms dd{clear:both;display:block;margin:10px 0;position:relative;}
-.forms dt:before,
-.forms dt:after{clear:both;display:table;content:"";}
+.forms dd{.clr();display:block;margin:10px 0;position:relative;}
 .forms dt > h2{display:inline-block;width:100px;line-height:28px;text-align:right;overflow:hidden;position:absolute;top:0;left:0;}
 .forms dt > h3,
 .forms dd > h3,
@@ -298,12 +270,9 @@ input.btn.m{height:38px;padding-top:5px;}
 .input-small select{height:22px;line-height:22px;padding:2px;}
 
 
-
-
 form.searchbar{clear:both;width:100%;text-align:center;}
 form.searchbar > input.keyword{width: -moz-calc(100% - 59px);width: -webkit-calc(100% - 59px);width: calc(100% - 59px);border-top-right-radius:0;border-bottom-right-radius:0;}
 form.searchbar > .submit{border-top-left-radius:0;border-bottom-left-radius:0;border-left:none;padding-left:8px;padding-right:8px;}
-
 
 
 input[type="radio"],

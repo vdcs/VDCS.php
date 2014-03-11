@@ -1,0 +1,24 @@
+@charset "utf-8";
+/*
+Version:	VDCS comm @input,forms,i* v1.0
+Support:	http://go.hpns.cn/vdcs/css
+Uodated:	2013-12-00
+*/
+
+
+/* ######### Input ######### */
+input,textarea,select{border:1px solid #BBB;outline:none;}
+input{height:22px;line-height:22px;padding:0 3px;}
+textarea{resize:none;outline:medium none;word-wrap:break-word;padding:3px;overflow:auto;}
+select{}
+input[type=file]{background-color:#FFF;}
+input[type=radio],input[type=checkbox]{border:none;background:none;}
+input[type=email],input[type=password]{ime-mode:disabled}
+input.normal,input.checkbox,input.radio,input.image{height:auto;border:0;background:none;vertical-align:middle;padding:0;}
+input.checkbox,input.radio{border:none;background:none;margin-bottom:2px;}
+input.hidden{height:0;margin:0;padding:0;}
+input.number{text-align:center;ime-mode:disabled;} input.money,input.price,input.num,input.total{text-align:right;ime-mode:disabled;}
+input.time,input.date{font-size:0.8em;color:#000;text-align:center;}
+input.choose{background-image:url("../common/block/icon_choose.gif");background-position:right top;background-repeat:no-repeat;cursor:pointer;}
+input.fill{border-left:0;border-top:0;border-right:0;}
+input.fullw,textarea.fullw{width:96.8%;}

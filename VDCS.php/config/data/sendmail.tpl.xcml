@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xcml version="1.0" model="data">
 	<configure>
-		<node>passport,account</node>
+		<node>common,passport,account</node>
 	</configure>
+	<common>
+		<test.subject><![CDATA[<app:web.name> - 测试邮件]]></test.subject>
+		<test.content><![CDATA[亲爱的 {$realname}：
+
+这是一封测试邮件，请勿回复！
+如有打扰，还请见谅。
+
+谢谢！
+
+
+感谢您的访问，祝您使用愉快！
+此致
+
+<app:web.name>
+<app:web.urls>
+{$time.today}
+
+（本邮件由系统自动发出，请勿回复。）]]></test.content>
+	</common>
 	<passport>
 		<register.audit.subject><![CDATA[<app:web.name> - 注册成功]]></register.audit.subject>
 		<register.audit.content><![CDATA[亲爱的 {$realname}：

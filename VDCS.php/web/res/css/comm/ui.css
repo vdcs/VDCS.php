@@ -8,6 +8,7 @@ Support:	http://go.hpns.cn/vdcs/css
 Uodated:	2014-01-00
 */
 
+
 .bg-green{background-color: #769f5d !important;}
 .bg-red{background-color: #e95d3c !important;}
 .bg-orange{background-color: #ffa200 !important;}
@@ -15,10 +16,8 @@ Uodated:	2014-01-00
 
 
 .caret {
-	display: inline-block;
+	display: inline-block;width: 0;height: 0;
 	content: "";
-	width: 0;
-	height: 0;
 	vertical-align: top;
 	border-top: 4px solid #000000;
 	border-right: 4px solid transparent;
@@ -65,18 +64,11 @@ label .icheck{margin-right:3px;}
 
 
 .ui-box{clear:both;text-align:left;border:1px solid rgba(0, 0, 0, 0.3);background-color:#FFF;overflow:hidden;}
-.ui-box{
-	-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-	   -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-		box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-	-webkit-background-clip: padding-box;
-	   -moz-background-clip: padding-box;
-		background-clip: padding-box;
-}
+.ui-box{.shadow(0 3px 7px rgba(0, 0, 0, 0.3));.bg_clip(padding-box);}
 .ui-box > h3{display:block;height:45px;line-height:45px;border-bottom:1px solid #EEEEEE;font-size:1.5em;font-weight:bold;background-repeat:no-repeat;background-position:0 0;padding:0 15px;position:relative;}
 .ui-box > h3 > .close{position:absolute;top:16px;right:15px;}
 .ui-box > h5{display:block;border-top: 1px solid #ddd;background-color:#F5F5F5;text-align:right;padding:14px 9px;position:relative;}
-.ui-box > h5{-webkit-box-shadow: inset 0 1px 0 #ffffff;-moz-box-shadow: inset 0 1px 0 #ffffff;box-shadow: inset 0 1px 0 #ffffff;}
+.ui-box > h5{.shadow(inset 0 1px 0 #ffffff);}
 .ui-box > h5 > a{margin:0 6px;}
 .ui-box > .conts{clear:both;margin:15px;}
 

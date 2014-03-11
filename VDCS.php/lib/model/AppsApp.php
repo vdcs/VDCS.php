@@ -34,11 +34,11 @@ class AppsApp
 	########################################
 	########################################
 	*/
-	public static function request($opt,$params,$auth=null)
+	public static function request($opt,$params,$paramhttp=null)
 	{
 		$ret=array();
 		$opt=AppsCommon::opt($opt);
-		$opt['auth']=is_null($auth)?'interface':'';
+		$opt['auth']=$opt['auth']?$opt['auth']:'interface';
 		if(!$opt['api']){
 			$ret['status']='noapi';
 			return $ret;
@@ -46,9 +46,11 @@ class AppsApp
 		$url=self::urlBuild($opt,$params);
 		$ret['query_string']=queryString();
 		$ret['api_url']=$url;
-		debugxx('api_url='.$url);
+		//debugxx('api_url='.$url);
 		if(query('debug')=='apps') debugx($url);
-		$ret['results']=VDCSHTTP::request($url);
+		$sendparams=array();
+		$sendparams['timeout']=60;
+		$ret['results']=VDCSHTTP::request($url,$sendparams,$paramhttp);
 		if(len($ret['results'])<1){
 			$ret['status']='noresult';
 			return;
@@ -56,18 +58,26 @@ class AppsApp
 		$ret['status']='succeed';
 		return $ret;
 	}
-	public static function requestParser($opt,$params,$auth=null)
+	public static function parser($opt,$params,$paramhttp=null){return self::requestParser($opt,$params,$paramhttp);}
+	public static function requestParser($opt,$params,$paramhttp=null)
 	{
-		$ret=self::request($opt,$params,$auth);
+		$ret=self::request($opt,$params,$paramhttp);
 		if(query('debug')=='apps') debugvc($ret['results']);
 		if($ret['status']!='succeed'){
 			return $ret;
 		}
+		$ret['results']=trim($ret['results']);
 		$isxml=substr($ret['results'],0,5)=='<'.'?xml'?true:false;
+		$isjson=(substr($ret['results'],0,1)=='{'&&substr($ret['results'],-1)=='}')?true:false;
 		if($isxml){
 			$ret['api.maps']=getXCML2Map($ret['results']);
 			$ret['api.var']=$ret['api.maps']->getItemTree('var');
 			$ret['api.item']=$ret['api.maps']->getItemTable('item');
+		}
+		else if($isjson){
+			$ret['api.maps']=VDCSData::deCode($ret['results'],true);
+			$ret['api.var']=VDCSData::JsonToTree($ret['results']);
+			$ret['api.item']=null;
 		}
 		else{
 			$treeVar=newTree();
@@ -78,7 +88,6 @@ class AppsApp
 		$ret['var.status']=$ret['api.var']->getItem('status');
 		return $ret;
 	}
-	public static function parser($opt,$params,$auth=null){return self::requestParser($opt,$params,$auth);}
 	
 
 	//authorizer

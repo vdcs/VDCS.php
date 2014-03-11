@@ -13,7 +13,7 @@ border-top-color:#CA0000;
 box-shadow: 0 -8px 8px 12px rgba(0,0,0,.1);
 box-shadow: 0px 1px 3px 0px #aaa;
 */
-#headbar{filter:alpha(opacity=95);-khtml-opacity:0.95;-moz-opacity:0.95;opacity:0.95;}
+#headbar{.opacity(0.9);}
 #headbar > .inners{position:relative;}
 #headbar{font-size:14px;}
 #headbar a{color:#4C4C4C;text-decoration:none!important;}
@@ -85,7 +85,7 @@ box-shadow: 0px 1px 3px 0px #aaa;
 #headbar .nav li.ua > a{padding:0 0;}
 #headbar .nav li.ua img{margin-left:6px;margin-top:-2px;}
 #headbar .nav li.ua span{margin-left:12px;}
-#headbar .nav li.ua a.ua{display:block;word-break:keep-all;white-space:nowrap;overflow:hidden;padding-right:3px;}
+#headbar .nav li.ua a.ua{display:block;padding-right:3px;.nowrap();overflow:hidden;}
 #headbar .nav li.ua dd a{background:transparent url("icons-ua.png") no-repeat 8px 9px;padding-left:6px;}
 #headbar .nav li.ua dd.logout a{background-position:8px -31px;}
 #headbar .nav li.ua dd.settings a{background-position:8px -71px;}
@@ -94,7 +94,7 @@ box-shadow: 0px 1px 3px 0px #aaa;
 #headbar .nav li.ua dd a span{margin-left:34px;}
 
 
-#headbar .avatar.s{width:20px;height:20px;border-width:1px;}
+#headbar .avatar.s{width:24px;height:24px;border-width:1px;}
 
 
 #headbar .nav li.cart > a{background:url("icon_cart.png") 3px 10px no-repeat;padding-left:30px;}
@@ -111,7 +111,7 @@ box-shadow: 0px 1px 3px 0px #aaa;
 .cart_box li:after{clear:both;display:table;content:"";}
 
 .cart_box{width:350px;height:auto;color:#333;}
-.cart_box h2{height:30px;line-height:30px;font-size:14px;font-weight:bold;padding:0 10px;}
+.cart_box h2{.heightl(30px);font-size:14px;font-weight:bold;padding:0 10px;}
 .cart_box ul{clear:both;}
 .cart_box ul li{border-bottom:1px solid #EEE;padding:8px 10px;}
 .cart_box ul li:first-child{border-top:1px solid #EEE;}
@@ -119,7 +119,7 @@ box-shadow: 0px 1px 3px 0px #aaa;
 .cart_box ul .info{float:left;width:220px;overflow:hidden;}
 .cart_box ul .info cite{display:block;}
 .cart_box ul .info a{}
-.cart_box ul .info p{word-wrap:break-word;word-break:break-all;}
+.cart_box ul .info p{.wordbreak()}
 .cart_box ul .atts{float:right;width:80px;}
 .cart_box ul .atts .price{font-weight:bold;}
 .cart_box h5{background-color:#F5F5F5;text-align:right;padding:8px 10px;}

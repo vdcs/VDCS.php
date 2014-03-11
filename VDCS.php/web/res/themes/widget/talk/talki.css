@@ -1,12 +1,11 @@
 @charset "utf-8";
 
 .txtbox{padding:0;margin:0 0;}
-.txtbox:hover{-webkit-box-shadow:0 0 6px rgba(123,214,246,0.5);box-shadow:0 0 6px rgba(123,214,246,0.5);}
+.txtbox:hover{.shadow_light(rgba(123,214,246,0.5),6px);}
 .txtbox:hover p{border-color:#7bd6f6;}
-.txtbox p{border:1px solid #CCC;padding:0px;overflow:hidden;}
-.txtbox p{-webkit-border-radius:4px;-o-border-radius:4px;border-radius:4px;overflow:hidden;}
+.txtbox p{border:1px solid #CCC;padding:0;.rc(4px);}
 .txtbox textarea{width:100%;height:20px;min-height:26px;line-height:1.5em;font-size:14px;border:0;background-color:transparent;padding:5px;}
-.txtbox textarea{-webkit-box-shadow:none;box-shadow:none;}
+.txtbox textarea{.shadow_clr();}
 /*
 .txtbox p{background-color:#eee;}
 .txtbox p textarea{background-color:#ddd;}
@@ -15,10 +14,9 @@
 .talki{color:#999;}
 .talki > .inner{}
 .talki h2{height:20px;background:url("bg_bar.png") no-repeat 0 0;margin-bottom:8px;}
+.talki h2 r{float:right;}
 .talki h3{padding:0;margin:8px 0;}
-.talki h5{clear:both;height:30px;line-height:30px;margin-top:8px;position:relative;}
-.talki h5:before,
-.talki h5:after{clear:both;display:table;content:"";}
+.talki h5{clear:both;.heightl(30px);margin-top:8px;position:relative;.clr();}
 .talki .toolbar{float:left;background:none;border:none;}
 .talki .toolbar a{display:inline-block;}
 .talki .toolbar a span{display:inline-block;width:25px;height:25px;background:url("icon_editor.png") -180px 0 no-repeat;}
@@ -28,10 +26,10 @@
 .talki .toolbar a.at:hover span{background-position:-35px -130px;}
 .talki .toolbar a.img span{background-position:0 -26px;}
 .talki .toolbar a.img:hover span{background-position:-35px -26px;}
-.talki .prop{display:inline-block;height:20px;margin-top:5px;position:absolute;top:0;right:180px;}
+.talki .prop{display:inline-block;height:20px;margin-top:5px;.posr(180px);}
 .talki .prop a{float:left;margin-right:5px;}
-.talki .counts{display:inline-block;position:absolute;top:0;right:70px;}
+.talki .counts{display:inline-block;.posr(70px);}
 .talki .counts i{color:#b60c0c;margin:0 3px;}
-.talki .send{display:inline-block;position:absolute;top:0;right:0;}
+.talki .send{display:inline-block;.posr(0);}
 .talki .stats{}
 .talki .stats i{color:#b60c0c;margin:0 3px;}

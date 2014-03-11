@@ -14,10 +14,7 @@ Uodated:	2013-07-00
 	margin-bottom: -1px;
 	margin-right:2px;
 	border: 1px solid transparent;
-	-webkit-border-radius: 6px 6px 0 0;
-	-moz-border-radius: 6px 6px 0 0;
-	border-radius: 6px 6px 0 0;
-	overflow:hidden;
+	.rc(6px 6px 0 0);
 }
 .tab-nav > li:hover {
 	border-color: #eeeeee #eeeeee #dddddd;
@@ -43,8 +40,7 @@ Uodated:	2013-07-00
 .tab-pane.active{display:block;}
 
 
-.toolbar
-{
+.toolbar{
 	border:1px solid #ccc;
 	background: #fafafa repeat-x left bottom;
 	background-image: -ms-linear-gradient(top, #ffffff, #f2f2f2);
@@ -67,13 +63,10 @@ box .toolbar{border-left:0;border-right:0;}
 /* Widget Button Toolbar
 ================================================== */
 .toolbar.btn-toolbar{position: relative;margin: 0;}
-.toolbar.btn-toolbar .btn
-{
+.toolbar.btn-toolbar .btn{
 	border-top: 0;
 	border-bottom: 0;
-	-webkit-border-radius: 0 !important;
-	-moz-border-radius: 0 !important;
-	border-radius: 0 !important;
+	.rc(0);
 }
 .toolbar.btn-toolbar .btn-group + .btn-group{margin-left: 0;}
 .toolbar.btn-toolbar .btn:first-child{border-left: 0;}
@@ -87,11 +80,10 @@ box .toolbar{border-left:0;border-right:0;}
 
 .toolbar > .btn, 
 .toolbar > .btn-group, 
-.toolbar > .btn-group > .btn
-{
+.toolbar > .btn-group > .btn{
 	display: inline-block;
 	*display: inline;
- /* IE7 inline-block hack */
+	/* IE7 inline-block hack */
 	*zoom: 1;
 }
 .toolbar > .btn-group{float:left;margin:0;}
@@ -101,50 +93,45 @@ box .toolbar{border-left:0;border-right:0;}
 /* Widget Header Elements
 ================================================== */
 
-.toolbar .ui-slider
-{
-    width: 150px;
-    display: inline-block;
-    *display: inline;
+.toolbar .ui-slider{
+	width: 150px;
+	display: inline-block;
+	*display: inline;
  /* IE7 inline-block hack */
-    *zoom: 1;
-    margin: 15px 15px 0 0;
-    vertical-align: top;
+	*zoom: 1;
+	margin: 15px 15px 0 0;
+	vertical-align: top;
 }
 
-.toolbar .progress
-{
-    width: 150px;
-    height: 13px;
-    vertical-align: top;
-    display: inline-block;
-    *display: inline;
+.toolbar .progress{
+	width: 150px;
+	height: 13px;
+	vertical-align: top;
+	display: inline-block;
+	*display: inline;
  /* IE7 inline-block hack */
-    *zoom: 1;
-    margin: 12px 12px 0 0;
+	*zoom: 1;
+	margin: 12px 12px 0 0;
 }
 
-.toolbar .progress .bar
-{
-    font-size: 10px;
-    line-height: 10px;
-    font-weight: normal;
+.toolbar .progress .bar{
+	font-size: 10px;
+	line-height: 10px;
+	font-weight: normal;
 }
 
-.toolbar .ibutton-container
-{
-    margin: 9px 9px 0 0;
-    display: inline-block;
-    *display: inline;
+.toolbar .ibutton-container{
+	margin: 9px 9px 0 0;
+	display: inline-block;
+	*display: inline;
  /* IE7 inline-block hack */
-    *zoom: 1;
-    vertical-align: top;
+	*zoom: 1;
+	vertical-align: top;
 }
 
 .toolbar .label, 
-.toolbar .badge
-{
-    top: 10px;
-    right: 8px;
-    position: relative;
+.toolbar .badge{
+	top: 10px;
+	right: 8px;
+	position: relative;
 }

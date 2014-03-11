@@ -14,7 +14,16 @@ class apiEntry extends apiBase
 	public function parseStatus()
 	{
 		$this->addVar('parser',$this->action);
-		$this->setSucceed();
+		$_status=queryx('status');
+		if($_status){
+			$this->addVar('id',queryi('id'));
+			$this->addVar('value',query('value'));
+			$this->addVar('data',query('data'));
+			$this->setStatus($_status);
+		}
+		else{
+			$this->setSucceed();
+		}
 	}
 	
 }

@@ -7,9 +7,7 @@ Uodated:	2013-09-00
 
 
 /* ######################### */
-.class_side{clear:both;}
-.class_side:before,
-.class_side:after{clear:both;display:table;content:"";}
+.class_side{.clr();}
 .class_side cite,
 .class_side dd{height:18px;line-height:18px;}
 .class_side li{clear:both;}
@@ -26,9 +24,7 @@ Uodated:	2013-09-00
 
 
 /* ######################### */
-.e_list{}
-.e_list:before,
-.e_list:after{clear:both;display:table;content:"";}
+.e_list{.clr();}
 .e_list li{line-height:1.8em;}
 .e_list li:before,
 .e_list li:after{clear:both;display:table;content:"";}
@@ -37,9 +33,7 @@ Uodated:	2013-09-00
 .e_list li t{float:left;display:inline-block;}
 .e_list li t i{margin-left:5px;color:#759C40;}
 
-.e_pic{clear:both;text-align:center;}
-.e_pic:before,
-.e_pic:after{clear:both;display:table;content:"";}
+.e_pic{.clr();text-align:center;}
 .e_pic ul{display:inline-block;vertical-align:top;margin:0 auto;}
 .e_pic li{display:inline-block;width:100px;text-align:left;vertical-align:top;margin:5px 10px;overflow:hidden;}
 .e_pic pic{width:100%;height:75px;}
@@ -66,53 +60,55 @@ Uodated:	2013-09-00
 .ieffect.isbest1 .effect{background-position:-300px 0;}
 .ieffect.issale1 .effect{background-position:-450px 0;}
 
-.ioverlay{  display: inline-block;
-position: relative;
-max-width: 100%;
-vertical-align: middle;}
+.ioverlay{
+	display: inline-block;
+	position: relative;
+	max-width: 100%;
+	vertical-align: middle;
+}
 .overlay-area {
-position: absolute;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-background: rgba(0, 0, 0, 0.3);
-opacity: 0;
--webkit-transition: opacity 0.15s linear;
-transition: opacity 0.15s linear;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.3);
+	opacity: 0;
+	-webkit-transition: opacity 0.15s linear;
+	transition: opacity 0.15s linear;
 }
 .ioverlay:hover .overlay-area,
 .overlay-toggle:hover .overlay-area {
-opacity: 1;
+	opacity: 1;
 }
 .overlay-area:before {
-/*
-font-family: FontAwesome;
-font-size: 50px;
-content: "\f002";
-*/
-position: absolute;
-top: 50%;
-left: 50%;
-width: 50px;
-height: 50px;
-margin-top: -25px;
-margin-left: -25px;
-line-height: 1;
-text-align: center;
-color: #ffffff;
+	/*
+	font-family: FontAwesome;
+	font-size: 50px;
+	content: "\f002";
+	*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	margin-top: -25px;
+	margin-left: -25px;
+	line-height: 1;
+	text-align: center;
+	color: #ffffff;
 }
 .overlay-caption {
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-padding: 15px;
-background: rgba(0, 0, 0, 0.5);
-color: #ffffff;
-opacity: 0;
--webkit-transition: opacity 0.15s linear;
-transition: opacity 0.15s linear;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 15px;
+	background: rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+	opacity: 0;
+	-webkit-transition: opacity 0.15s linear;
+	transition: opacity 0.15s linear;
 }
 .ioverlay:hover .overlay-caption,
 .overlay-toggle:hover .overlay-caption {opacity: 1;}
@@ -143,6 +139,14 @@ transition: opacity 0.15s linear;
 .atts.choose > dl > dt{text-align:right;}
 .atts.choose > dl > dd{}
 
+.attrs{clear:both;text-align:left;}
+.attrs ul{}
+.attrs li{height:30px;line-height:30px;font-size:14px;}
+.attrs li cite{display:inline-block;width:80px;}
+.attrs li.prc .price{font-size:24px;font-weight:bold;}
+.attrs li.prc .price s{font-size:14px;font-weight:normal;}
+.attrs li .comment{margin-left:5px;}
+
 .amount_c{width:48px;padding:0 20px;position:relative;}
 .amount_c a{float:left;background-color:#fff;}
 .amount_c a:link,
@@ -152,3 +156,27 @@ transition: opacity 0.15s linear;
 .amount_c input{width:30px;text-align:center;}
 .amount_c .reduce{left:0;}
 .amount_c .plus{right:0;}
+
+
+.tag a{
+	line-height: 20px;
+	display: block;
+	float: left;
+	margin: 0 10px 10px 0;
+	padding: 0 10px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	background-color: #f3f3f3;
+	text-decoration: none;
+}
+.tag a:link,.tag a:visited{
+	color: #333;
+	text-decoration: none;
+}
+.tag a:hover,.tag a:active {
+	color:#fff;
+	background-color: #c00;
+	text-decoration: none;
+}

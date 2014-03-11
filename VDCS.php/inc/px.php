@@ -9,6 +9,6 @@ if(isFile($path)){
 	$classname::parser();
 }
 else{
-	debugx('ClassX no found: '.$classname);
+	put('ClassX no found: '.$classname);
 }
 dcsEnd();

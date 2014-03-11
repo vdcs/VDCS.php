@@ -1,17 +1,18 @@
 @charset "utf-8";
 
 .box_profile{clear:both;}
-.box_profile > .inner{clear:both;margin:35px;.clr();}
+.box_profile > .inner{margin:35px;.clr();}
 /*
 .box_profile .imgs{float:right;background:url("usericon.png") no-repeat 0px 0px;width:20px;height:20px;line-height:35px;margin-top:5px;}
 */
+
 
 .box_profile .assets{float:left;}
 .box_profile .assets h4{clear:both;margin-top:25px;}
 .box_profile .assets h4 t{}
 .box_profile .assets h5{clear:both;margin-top:10px;}
 .box_profile .assets h5 t{float:left;display:inline-block;width:135px;height:35px;line-height:35px;}
-.box_profile .assets h5 t i{font-size:2em;font-weight:bold;margin-right:8px;}
+.box_profile .assets h5 t i{display: inline-block;font-size:2em;font-weight:bold;margin-right:8px;}
 .box_profile .assets h5 cite{float:left;display:inline-block;}
 
 .box_profile .infos{float:right;width:360px;}

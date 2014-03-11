@@ -10,11 +10,7 @@ Uodated:	2014-01-00
 .pages > h2{font-size:1.8em;font-weight:bold;text-align:center;padding:5px 0;margin:10px 0;}
 .pages > h3{font-size:1.4em;font-weight:bold;padding:5px 0;}
 .pages > h2 t,
-.pages > h3 t{
-	-webkit-text-shadow: 2px 2px 0px #FFF,-2px -2px 0px #FFF,3px 3px 1px #ccc;
-	   -moz-text-shadow: 2px 2px 0px #FFF,-2px -2px 0px #FFF,3px 3px 1px #ccc;
-		text-shadow: 2px 2px 0px #FFF,-2px -2px 0px #FFF,3px 3px 1px #ccc;
-}
+.pages > h3 t{.shadow_tit(#CCC,3px);}
 .pages > h2 a,
 .pages > h3 a{}
 .pages > h2 a:hover,

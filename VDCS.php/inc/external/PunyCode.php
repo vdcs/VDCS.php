@@ -25,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-class Punycode
+class PunyCode
 {
         private static $DECODE_TABLE = array(
                 'a' =>  0, 'b' =>  1, 'c' =>  2, 'd' =>  3, 'e' =>  4, 'f' =>  5,

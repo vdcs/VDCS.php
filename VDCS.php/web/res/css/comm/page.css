@@ -39,7 +39,7 @@ footer > inners,#footer > .inners,
 #linktop a:hover{text-decoration:none;}
 */
 #linktop a{display:inline-block;width:58px;height:58px;background:url("/images/common/struct/gotop-arrow.png") 0 0 no-repeat;}
-#linktop a{-webkit-border-radius:50%;-o-border-radius:50%;border-radius:50%;overflow:hidden;}
+#linktop a{.rco();}
 #linktop a span{display:none;}
 #linktop a:hover{background-position:0 -58px;}
 #linktop a:hover{text-decoration:none;}
@@ -47,29 +47,24 @@ footer > inners,#footer > .inners,
 
 /* ######################### */
 #wrap{}
-#wrapper{width:980px;min-height:500px;_height:500px;text-align:left;margin:0 auto;overflow:hidden;}
+#wrapper{width:980px;min-height:500px;_height:500px;text-align:left;margin:0 auto;overflow:hidden;.clr();}
 /*
 #wrapper{-webkit-border-radius:6px;-o-border-radius:6px;border-radius:6px;overflow:hidden;}
 #wrapper{-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.4);box-shadow:0 1px 2px rgba(0,0,0,0.4);}
 #wrapper{background-color:#FFFBD6;}
 */
-#wrapper:after{clear:both;display:table;content:"";}
-#wrapper{_zoom:1}
 
 
 #menu{float:left;width:200px;}
 #main{float:left;width:765px;min-height:400px;_height:400px;margin-left:15px;}
-#main > .cont{clear:both;position:relative;}
-#main > .cont:before,
-#main > .cont:after{clear:both;display:table;content:"";}
+#main > .cont{.clr();position:relative;}
 #main > .cent{margin-right:215px;}
 #main > .side,
-#main > .sider{float:right;width:200px;position:absolute;top:0;right:0;}
+#main > .sider{float:right;width:200px;.posr(0);}
 
 
 .framers,.framesh,
-.framer{clear:both;width:980px;margin:0 auto;}
-.framer:after{content:'';display:table;clear:both;}
+.framer{.clr();width:980px;margin:0 auto;}
 .framer{text-align:left;overflow:hidden;}
 /*
 .framer{background-color:#FFF;}
@@ -90,8 +85,7 @@ footer > inners,#footer > .inners,
 .framer > .halfl{float:left;width:360px;margin-right:15px;}
 .framer > .halfr{float:right;width:360px;margin-left:15px;}
 
-.framem{clear:both;}
-.framem:after{content:'';display:table;clear:both;}
+.framem{.clr();}
 .framem > .cent{float:left;width:355px;}
 .framem > .side{float:left;width:365px;margin-right:15px;}
 .framem > .sider{float:right;width:365px;margin-left:15px;}
@@ -108,14 +102,10 @@ h3.sub,
 h4.sub,
 h5.sub,
 h6.sub{
-	display:block;
-	line-height: 2em;
-	color: #444;
-	font-size: 18px;
-	ine-height: 20px;
+	display:block;line-height: 2em;
+	color: #444;font-size: 18px;ine-height: 20px;
 	text-shadow: -1px -1px #f0f0f0;
-	margin-bottom:10px;
-	position: relative;
+	margin-bottom:10px;position: relative;
 }
 h1.sub span,
 h2.sub span,
@@ -127,10 +117,10 @@ h6.sub span{
 	*display: inline;
 	/* IE7 inline-block hack */
 	*zoom: 1;
-	position: relative;
 	font-size: 90%;
-	padding: 0 15px 0 0;
 	background: #fefefe;
+	padding: 0 15px 0 0;
+	position: relative;
 }
 h1.sub:before,
 h2.sub:before,

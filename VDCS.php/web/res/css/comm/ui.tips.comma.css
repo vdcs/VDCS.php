@@ -6,8 +6,7 @@ Uodated:	2013-07-00
 */
 
 
-.itip{clear:both;text-align:left;padding:3px 0;margin:0;position:relative;}
-.itip:after{content:"";display:table;clear:both;}
+.itip{.clr();text-align:left;padding:3px 0;margin:0;position:relative;}
 .itip em{float:left;display:inline-block;width:16px;height:16px;background:url("/images/common/struct/tips_warn.png") 0 -200px no-repeat;position:absolute;top:3px;left:0;}
 @-moz-document url-prefix(){.itip em{top:4px;}}
 .itip.load em{background:url("/images/common/load/16_leaf.gif") 0 0 no-repeat;}
@@ -20,9 +19,7 @@ Uodated:	2013-07-00
 .itip.infos,
 .itip.alerts,
 .itip.errors,
-.itip.succeeds{border:1px solid #EBEBEB;padding:10px 15px;
-	-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;overflow:hidden;
-}
+.itip.succeeds{border:1px solid #EBEBEB;padding:10px 15px;.rc(5px);}
 .itip.infos em,
 .itip.alerts em,
 .itip.errors em,

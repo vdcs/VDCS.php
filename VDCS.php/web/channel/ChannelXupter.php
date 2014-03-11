@@ -1,5 +1,5 @@
 <?
-if(defined('NOVDCS')){
+if(dcsNO()){
 require_once(VDCS_PATH.VDCS_UTIL.'/utilIO.php');
 require_once(VDCS_PATH.VDCS_UTIL.'/utilMimeType.php');
 require_once(VDCS_PATH.VDCS_UTIL.'/utilCoder.php');

@@ -3,44 +3,44 @@
 
 .ui-stat-container
 {
-    margin: 0;
-    margin-bottom: 20px;
-    list-style: none;
-    text-align: center;
+	margin: 0;
+	margin-bottom: 20px;
+	list-style: none;
+	text-align: center;
 }
 .ui-stat-container li
 {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 5px;
-    position: relative;
-    margin-bottom: 10px;
-    *display: inline;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 5px;
+	position: relative;
+	margin-bottom: 10px;
+	*display: inline;
  /* IE7 inline-block hack */
-    *zoom: 1;
+	*zoom: 1;
 }
 .ui-stat-container li:after, 
 .ui-stat-container li:before
 {
-    content: ' ';
-    position: absolute;
-    display: block;
-    height: 1px;
-    bottom: -2px;
-    left: 3px;
-    right: 3px;
-    background-color: #fff;
-    -webkit-border-radius: 0 0 3px 3px;
-    -moz-border-radius: 0 0 3px 3px;
-    border-radius: 0 0 3px 3px;
-    border: 1px solid #ccc;
-    border-top: 0;
+	content: ' ';
+	position: absolute;
+	display: block;
+	height: 1px;
+	bottom: -2px;
+	left: 3px;
+	right: 3px;
+	background-color: #fff;
+	-webkit-border-radius: 0 0 3px 3px;
+	-moz-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+	border: 1px solid #ccc;
+	border-top: 0;
 }
 .ui-stat-container li:before
 {
-    bottom: -4px;
-    left: 6px;
-    right: 6px;
+	bottom: -4px;
+	left: 6px;
+	right: 6px;
 }
 
 
@@ -65,10 +65,10 @@ box-sizing: border-box;
 
 .ui-stat
 {
-    display: inline-block;
-    *display: inline;
+	display: inline-block;
+	*display: inline;
  /* IE7 inline-block hack */
-    *zoom: 1;
+	*zoom: 1;
 }
 
 /* Progress Stats
@@ -84,30 +84,30 @@ box-sizing: border-box;
 ================================================== */
 .ui-stat.summary .digit
 {
-    font-size: 24px;
-    padding: 4px 0;
-    line-height: 40px;
-    margin-left: 10px;
-    font-weight: bold;
-    line-height: 1;
-    text-align: left;
-    display: inline-block;
-    *display: inline;
+	font-size: 24px;
+	padding: 4px 0;
+	line-height: 40px;
+	margin-left: 10px;
+	font-weight: bold;
+	line-height: 1;
+	text-align: left;
+	display: inline-block;
+	*display: inline;
  /* IE7 inline-block hack */
-    *zoom: 1;
-    text-shadow: 1px 1px #eee;
+	*zoom: 1;
+	text-shadow: 1px 1px #eee;
 }
 
 .ui-stat.summary .text
 {
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 5px;
-    font-weight: normal;
-    font-size: 11px;
-    line-height: 1;
-    text-shadow: none;
-    color: #666;
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: 5px;
+	font-weight: normal;
+	font-size: 11px;
+	line-height: 1;
+	text-shadow: none;
+	color: #666;
 }
 
 .ui-stat.summary .icon{margin:4px 0;}
@@ -118,31 +118,31 @@ box-sizing: border-box;
 
 .ui-stat.circular.inline .text
 {
-    display: inline-block;
-    *display: inline;
+	display: inline-block;
+	*display: inline;
  /* IE7 inline-block hack */
-    *zoom: 1;
-    margin: 10px 6px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+	*zoom: 1;
+	margin: 10px 6px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .ui-stat.circular{text-align: center;}
 
 .ui-stat.circular .text
 {
-    font-size: 11px;
-    line-height: 1;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 12px;
-    vertical-align: middle;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    text-transform: uppercase;
+	font-size: 11px;
+	line-height: 1;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 12px;
+	vertical-align: middle;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+	text-transform: uppercase;
 }
 
 
@@ -150,23 +150,23 @@ box-sizing: border-box;
 .circular-stat, 
 .circular-stat .canvas-container
 {
-    display: inline-block;
-    line-height: 1;
-    font-size: 0;
-    vertical-align: middle;
-    position: relative;
+	display: inline-block;
+	line-height: 1;
+	font-size: 0;
+	vertical-align: middle;
+	position: relative;
 }
 .circular-stat .digit-container
 {
-    z-index: 10;
-    font-size: 12px;
-    font-weight: bold;
-    position: absolute;
-    text-align: center;
-    display: inline-block;
-    *display: inline;
+	z-index: 10;
+	font-size: 12px;
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+	display: inline-block;
+	*display: inline;
  /* IE7 inline-block hack */
-    *zoom: 1;
-    vertical-align: middle;
-    width: 100%;
+	*zoom: 1;
+	vertical-align: middle;
+	width: 100%;
 }

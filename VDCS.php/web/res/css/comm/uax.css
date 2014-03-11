@@ -7,10 +7,7 @@ Uodated:	2014-02-00
 
 
 /* ########## Ua X ######### */
-.uax_info{clear:both;text-align:left;}
-.uax_info dl:before,
-.uax_info dl:after{content:"";display:table;}
-.uax_info dl:after{clear:both}
+.uax_info{.clr();text-align:left;}
 .uax_info dt,
 .uax_info dd{display:block;text-align:center;}
 .uax_info dt{}
@@ -21,9 +18,7 @@ Uodated:	2014-02-00
 .uax_info dd .name a{font-weight:bold;}
 
 .uax_atten{clear:both;text-align:center;}
-.uax_atten dl{display:inline-block;margin:0 auto;}
-.uax_atten dl:before,
-.uax_atten dl:after{content:"";display:table;clear:both;}
+.uax_atten dl{.clr();display:inline-block;margin:0 auto;}
 .uax_atten dd{float:left;display:inline-block;}
 .uax_atten dd a{float:left;display:inline-block;text-align:center;padding:0 10px;}
 .uax_atten dd l{float:left;display:inline-block;height:25px;margin-top:11px;border-right:1px solid #DDD;}
@@ -36,7 +31,7 @@ Uodated:	2014-02-00
 .uax_atten dd a:hover{text-decoration:none;}
 
 
-.uax_card{width:335px;padding-top:10px;border:1px solid #c6c6c6;-moz-border-radius:5px;-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;color:#737373;background-color:#fff;margin:0 auto;}
+.uax_card{width:335px;color:#737373;border:1px solid #c6c6c6;background-color:#fff;.rc(5px);padding-top:10px;margin:0 auto;}
 .uax_card a{color:#0082cb;text-decoration:none;}
 .uax_card a:hover{color:#390;}
 .uax_card dl{margin-bottom:10px;}

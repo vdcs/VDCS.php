@@ -19,7 +19,7 @@ t,l,r,al,ar{display:inline-block}
 
 
 /* ####### HyperLink ####### */
-a{color:#000000;text-decoration:underline;}
+a{color:#000;text-decoration:underline;}
 a:hover{color:#D20000;}
 
 

@@ -9,15 +9,8 @@ Uodated:	2014-02-00
 /* ######### Avatar ######## */
 .avatar{display:inline-block;width:48px;height:48px;background-color:#FFF;overflow:hidden;}
 .avatar img{display:inline-block;width:100%;height:100%;background:none repeat scroll 0 0 #FFF;}
-.avatar.c{
-	border:2px solid #e1e1e1;
-	.rc(50%);
-	-webkit-background-clip:padding-box;-moz-background-clip:padding;background-clip:padding-box;
-}
-.avatar.rc{
-	.rc(8px);
-	-webkit-background-clip:padding-box;-moz-background-clip:padding-box;background-clip:padding-box;
-}
+.avatar.c{border:2px solid #e1e1e1;.rc(50%);.bg_clip(padding-box);}
+.avatar.rc{.rc(8px);.bg_clip(padding-box);}
 .avatar.rc.s{.rc(4px);}
 .avatar.rc.m{.rc(6px);}
 .avatar.rc.b{.rc(8px);}
@@ -29,8 +22,7 @@ Uodated:	2014-02-00
 
 
 .avatar.m.mask{display:inline-block;width:50px;height:50px;position:relative;overflow:hidden;}
-.avatar.m.mask img{display:block;width:44px;height:44px;border-radius:0;margin:2px auto;}
+.avatar.m.mask img{display:block;width:44px;height:44px;.rc(0);margin:2px auto;}
 .avatar.m.mask a{display:block;}
-.avatar.m.mask s{position:absolute;left:0;top:0;width:50px;height:50px;background:url("/images/ua/effect/mask_m.png") 0 0 no-repeat;
-	_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/ua/effect/mask_m.png",sizingMethod="image");}
+.avatar.m.mask s{width:50px;height:50px;background:url("/images/ua/effect/mask_m.png") 0 0 no-repeat;.posl(0);}
 .avatar.m.mask a s{cursor:pointer;}

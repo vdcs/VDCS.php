@@ -1,5 +1,5 @@
 <?
-if(defined('NOVDCS')){
+if(dcsNO()){
 require_once(VDCS_PATH.VDCS_UTIL.'/utilRegex.php');
 require_once(VDCS_PATH.VDCS_LIB.'/UICSS.php');
 require_once(VDCS_PATH.VDCS_LIB.'/UIPacker.php');
@@ -9,18 +9,18 @@ defined('XMERGER_PATH_CACHEX') || 			define('XMERGER_PATH_CACHEX',		_BASE_PATH_R
 
 /*
 /xmerger.app.js?
-	/themes/gameadd/app.t-.js&
-	/themes/gameadd/app.t.base.js&
-	/themes/gameadd/app.t.compt.js&
-	/themes/gameadd/app.t.mlog.js&
-	/themes/gameadd/app.t.tags.js&
-	/themes/gameadd/app.t.ucard.js&
-	/themes/gameadd/app.t.talk.js&
-	/themes/gameadd/app.t.editor.js&
-	/themes/gameadd/app.t.put.js&
+	/themes/demo/app.t-.js&
+	/themes/demo/app.t.base.js&
+	/themes/demo/app.t.compt.js&
+	/themes/demo/app.t.mlog.js&
+	/themes/demo/app.t.tags.js&
+	/themes/demo/app.t.ucard.js&
+	/themes/demo/app.t.talk.js&
+	/themes/demo/app.t.editor.js&
+	/themes/demo/app.t.put.js&
 	/images/script/external/picsview.js&
-/xmerger.app.js?/themes/gameadd/app.t-.js&/themes/gameadd/app.t.base.js&/themes/gameadd/app.t.compt.js&/themes/gameadd/app.t.mlog.js&/themes/gameadd/app.t.tags.js&/themes/gameadd/app.t.ucard.js&/themes/gameadd/app.t.talk.js&/themes/gameadd/app.t.editor.js&/themes/gameadd/app.t.put.js&/images/script/external/picsview.js
-/xmerger.app.pak.js?/themes/gameadd/app.t-.js&/themes/gameadd/app.t.base.js&/themes/gameadd/app.t.compt.js&/themes/gameadd/app.t.mlog.js&/themes/gameadd/app.t.tags.js&/themes/gameadd/app.t.ucard.js&/themes/gameadd/app.t.talk.js&/themes/gameadd/app.t.editor.js&/themes/gameadd/app.t.put.js&/images/script/external/picsview.js
+/xmerger.app.js?/themes/demo/app.t-.js&/themes/demo/app.t.base.js&/themes/demo/app.t.compt.js&/themes/demo/app.t.mlog.js&/themes/demo/app.t.tags.js&/themes/demo/app.t.ucard.js&/themes/demo/app.t.talk.js&/themes/demo/app.t.editor.js&/themes/demo/app.t.put.js&/images/script/external/picsview.js
+/xmerger.app.pak.js?/themes/demo/app.t-.js&/themes/demo/app.t.base.js&/themes/demo/app.t.compt.js&/themes/demo/app.t.mlog.js&/themes/demo/app.t.tags.js&/themes/demo/app.t.ucard.js&/themes/demo/app.t.talk.js&/themes/demo/app.t.editor.js&/themes/demo/app.t.put.js&/images/script/external/picsview.js
 /xmerger.app.pak.js?/themes/test/app.js&/themes/test/base.js&/themes/test/compt.js
 */
 class ChannelXmerger

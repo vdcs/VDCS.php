@@ -25,7 +25,7 @@ class SendMail
 	{
 		$re=false;
 		$module=$treeConfig->getItem('module');
-		if(!$module) return;
+		if(!$module) return -101;
 		$sm=new utilMail();
 		$sm->init($treeConfig->getFilterTree('smtp.')->getArray());
 		$sm->setMode($treeConfig->getItem('module'));
@@ -47,7 +47,7 @@ class SendMail
 	{
 		$re=false;
 		$module=$treeConfig->getItem('module');
-		if(!$module) return;
+		if(!$module) return -101;
 		$sm=new utilMailer();
 		$sm->IsSMTP();					// 使用SMTP方式发送
 		if($module=='smtp') $sm->SMTPAuth = true;

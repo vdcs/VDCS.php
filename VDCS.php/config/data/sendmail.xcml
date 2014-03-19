@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xcml version="1.0" model="data">
 	<configure>
-		<node>config</node>
+		<node>config,config.qq</node>
 	</configure>
 	<config>
+		<service></service>
 		<module>smtp</module>			<!-- mail,smtp,sendmail -->
 		<smtp.secure>ssl</smtp.secure>		<!-- ssl,tls -->
 		<smtp.server>smtp.exmail.qq.com</smtp.server>

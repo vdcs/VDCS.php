@@ -81,16 +81,29 @@ class BaseThemeCacher
 		
 		$re=preg_replace('/<dcs:'.PATTERN_FLAG_VAR.'>/s',CommonTheme::HTMLMarkHeads.'VDCSDTML::getValueDCS(\'$1\')'.CommonTheme::HTMLMarkFoot,$re);
 		
+		//hold
+		$re=r($re,'<label:include script="~~~','<label:include script="~~!');
+		
+		$re=r($re,'<label:include file="/header-">','<label:include file="/inc/framer/header-">');		//nav,end
+		$re=r($re,'<label:include file="/inc/header.html5">','<label:include file="/inc/framer/header.html5">');
+		$re=r($re,'<label:include file="/inc/header.link5">','<label:include file="/inc/framer/header.link5">');
+		$re=r($re,'<label:include file="/inc/header.meta5">','<label:include file="/inc/framer/header.link5">');
+		//$re=r($re,'<label:include file="/inc/header.script.app">','<label:include file="/inc/framer/header.script.app">');
+		//$re=r($re,'<label:include file="/inc/header.script.core','<label:include file="/inc/framer/header.script.app');
+		//$re=r($re,'<label:include file="/inc/header.style5">','<label:include file="/inc/framer/header.style5">');
+		//$re=r($re,'<label:include file="/inc/header.title">','<label:include file="/inc/framer/header.title">');
+		
 		$re=r($re,'<label:include script="!~~@','<label:include script="<url:images>themes/default/{@channel}/{@portal}/');
 		$re=r($re,'<label:include script="!~~','<label:include script="<url:images>themes/default/{@channel}/');
 		$re=r($re,'<label:include script="!~','<label:include script="<url:images>themes/default/');
 		$re=r($re,'<label:include script="#','<label:include script="<web:url.themeb>');
 		$re=r($re,'<label:include script="@','<label:include script="<web:url.themed>');
 		$re=r($re,'<label:include script="~~@','<label:include script="<web:url.themes>{@channel}/{@portal}');
-		$re=r($re,'<label:include script="~~~','<label:include script="<web:url.themes>{@channel}/images/');
+		$re=r($re,'<label:include script="~~!','<label:include script="<web:url.themes>{@channel}/images/');
 		$re=r($re,'<label:include script="~~','<label:include script="<web:url.themes>{@channel}/');
+		$re=r($re,'<label:include script="~!','<label:include script="<web:url.themes>images/');
 		$re=r($re,'<label:include script="~','<label:include script="<web:url.themes>');
-		
+
 		$re=r($re,'<web:meta.type>',$this->_var['content.type']);
 		$re=r($re,'<web:meta.contenttype>',$this->_var['content.type']);
 		$re=r($re,'<web:meta.charset>',$this->_var['content.charset']);
@@ -286,9 +299,9 @@ class BaseThemeCacher
 				break;
 			case 'css':
 				if(ins($script,':')<1 && substr($script,0,1)!='/') $script='<app:url.images>css/'.$script;
-				$re='<link rel="stylesheet" rev="stylesheet" type="text/css" href="'.$script.'?d=<app:var.script.d>"'.$vid.' />';	// charset="'.CHARSET_PAGE.'"
+				$re='<link rel="stylesheet" type="text/css" href="'.$script.'?d=<app:var.script.d>"'.$vid.' />';	// charset="'.CHARSET_PAGE.'"
 				break;
-			default : 	$re='[script='.$script.' type='.$type.']'; break;
+			default : 	$re='<!--Include script='.$script.' type='.$type.'-->'; break;
 		}
 		return $re;
 	}
@@ -336,6 +349,13 @@ class BaseThemeCacher
 				$treeValue->doAppend(VDCSDTML::getConfigTree('vdcs.web/themes/'.$file));
 			}
 			$treeValue->doAppend(VDCSDTML::getConfigTree($path));
+			if($file=='var'){
+				if(!$treeValue->isItem('frame.copyright')) $treeValue->addItem('frame.copyright',$treeValue->getItem('var.copyright'));
+				if(!$treeValue->isItem('frame.powerby')) $treeValue->addItem('frame.powerby',$treeValue->getItem('var.powerby'));
+				if(!$treeValue->isItem('frame.power-by')) $treeValue->addItem('frame.power-by',$treeValue->getItem('var.power-by'));
+				if(!$treeValue->isItem('frame.support.passv')) $treeValue->addItem('frame.support.passv',$treeValue->getItem('var.support.passv'));
+				$treeValue->doAppendTree($treeValue->getFilter('var.'));
+			}
 			//debugTree($treeValue);
 			$this->mapXCML[$mapKey]=$treeValue->getArray();
 		}

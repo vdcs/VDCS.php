@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+
+/* ######### widget ######## */
+#widget{.posa(10px,965px);}
+#widget > .inners{}
+#widget a{display:block;width:25px;height:25px;background-color:#f2f2f2;.rc(3px);margin-bottom:10px;overflow:hidden;}
+#widget a:hover{background-color:#e7e7e7;}
+#widget a span{display:inline-block;.txt_hide();}
+#widget a span{background: url("widget.png") no-repeat;}
+#widget a.refresh span{width: 13px; height: 15px; background-position: -16px 0;margin:5px 0 0 6px;}
+#widget a.newin span{width: 15px; height: 15px; background-position: 0 0;margin:5px 0 0 5px;}
+#widget a.go_back span{width: 13px; height: 13px; background-position: 0 -16px;margin:6px 0 0 7px;}
+#widget a.go_forward span{width: 13px; height: 13px; background-position: -14px -16px;margin:6px 0 0 8px;}
+#widget a.go_back,
+#widget a.go_forward{display:none;}
+/*
+#widget a{background:#ddd;}
+#widget a.newin{background:#eee;}
+#widget a.go_forward{background:#eee;}
+*/

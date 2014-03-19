@@ -1,0 +1,17 @@
+﻿<label:include file="frame/headers">
+
+<div class="framer">
+
+<p>page</p>
+
+
+<script type="text/javascript">
+$(function(){
+	
+});
+</script>
+
+
+</div>
+
+<label:include file="frame/footers">

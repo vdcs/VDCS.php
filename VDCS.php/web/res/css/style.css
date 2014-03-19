@@ -6,7 +6,7 @@ Uodated:	2014-03-00
 */
 
 *{margin:0;padding:0;border:0;outline:0;font-size:1em;}
-body{font:12px/1.4em "Microsoft YaHei","SimHei","Helvetica Neue","Helvetica","Arial","Liberation Sans","FreeSans","Hiragino Sans GB","sans-serif","Verdana";color:#000;}
+body{font-size:12px/1.4em;.font_cn();color:#000;}
 td,th,em,code,samp,cite{text-align:left;font-style:normal;}div{line-height:normal;}i{font-style:normal;}
 table{border-collapse:collapse;border-spacing:0;empty-cells:show;}caption,th{text-align:left;}
 input,select,button,img{vertical-align:middle;}img{border:0;}dl,dt,dd,ul,ol,li{list-style:none;}
@@ -47,7 +47,7 @@ input.choose{background:url("/images/common/block/icon_choose.gif") right top no
 .explain,.explain p,.summary,.summary p,.remark,.remark p,.remarks,.remarks p{line-height:200%;} .remark{font-size:1.2em;}
 .uname,.uaname,.user,.username{color:#000080;} .ugroup{color:#000080;}
 
-.clr{.clr();} sh,.space,.spaces,.spacer,.spacei{clear:both;height:10px;overflow:hidden;} .spaces{height:20px;} .spacei{height:5px;}
+.clr{.clr();} sh,.space,.spaces,.spacer,.spacei{clear:both;height:@spaceh;overflow:hidden;} .spaces{height:@spaceh*2;} .spacei{height:@spaceh/2;}
 .hide,.hide1,.show0,xmp{display:none;}.hided{display:none!important;} .unhide,.show,.show1,.show2,.hide0{display:inline;}
 al{float:left;display:inline-block;} ar,more,.more{float:right;display:inline-block;}.more,.more a,more,more a{.font_more();}
 

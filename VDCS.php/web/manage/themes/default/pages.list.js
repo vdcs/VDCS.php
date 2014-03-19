@@ -51,12 +51,7 @@ extendo(pages,{
 						if(opt.bindItem) opt.bindItem(jrow,id);
 						if(that.bindItem) that.bindItem(jrow,id);
 						
-						jrow.find('.topic a').attr('href',that.actionURL('edit',id));
-						jrow.find('a[el="edit"]').attr('href',that.actionURL('edit',id));
-						/*jrow.find('a[href="#edit"]').attr('href',that.actionURL('edit',id));
-						jrow.find('a[href="#view"]').attr('href',that.actionURL('view',id));
-						jrow.find('a[href="#del"]').attr('href',that.actionURL('del',id));
-						*/
+						jrow.find('.topic a,a[el="edit"]').attr('href','#edit');
 						jrow.find('a[href^="#"]').each(function(){that.actionFilter($(this),id)});
 					});
 					that.binds(jcont,treeVar);
@@ -75,14 +70,45 @@ extendo(pages,{
 			this.listo.refresh();
 		},
 		
-		actionFilter:function(jaction,id){
+
+		actionFilterTab:function(ja){
+			if(!ja.attr('target') && ja.attr('href') && pages.linkClick){
+				if(ja.attr('tab-url') || ja.attr('tab-title') || inp('edit,view',ja.attrd('action'))>0){
+					if(!ja.attr('tab-url')){
+						var url=ja.attr('href');
+						if(url.substring(0,1)!='/' && ins(url,'://')<1) url=window.location.pathname+url;
+						ja.attr('tab-url',url);
+					}
+					if(!ja.attr('tab-title')){
+						var title=ja.parents('tr').attrd('topic')||ja.attrd('title')||ja.text();
+						var actionname=this.tabPrefixName(ja.attrd('action'));
+						ja.attr('tab-title',actionname==title?actionname:(actionname+' '+title));
+					}
+				}
+				if(ja.attr('tab-url') || ja.attr('tab-title')){
+					ja.attr('target','tab');
+				}
+			}
+		},
+		tabPrefixName:function(action){
+			var re='['+action+']';
+			switch(action){
+				case 'edit':		re='编辑';break;
+				case 'view':		re='浏览';break;
+			}
+			return re
+		},
+
+
+		actionFilter:function(ja,id){
 			var that=this;
-			var action=jaction.attr('href').substring(1)
-			jaction.attrd('href',jaction.attr('href'));
-			jaction.attrd('action',action);
-			if(action=='web' || jaction.attr('target')) jaction.attr('target','_blank');
-			jaction.attr('href',that.actionURL(action,id,jaction));
-			jaction.click(function(){
+			var action=ja.attr('href').substring(1)
+			ja.attrd('href',ja.attr('href'));
+			ja.attrd('action',action);
+			if(action=='web' || ja.attr('target')) ja.attr('target','_blank');
+			ja.attr('href',that.actionURL(action,id,ja));
+			this.actionFilterTab(ja);
+			ja.click(function(){
 				var ret=that.actionClick($(this));
 				if(!ret) return false
 			});

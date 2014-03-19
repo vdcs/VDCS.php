@@ -2,30 +2,31 @@
 /*
 Version:	VDCS comm @pages v1.0
 Support:	http://go.hpns.cn/vdcs/css
-Uodated:	2014-01-00
+Uodated:	2014-03-00
 */
 
-/* ######################### */
 .pages{clear:both;text-align:left;}
 .pages > h2{font-size:1.8em;font-weight:bold;text-align:center;padding:5px 0;margin:10px 0;}
-.pages > h3{font-size:1.4em;font-weight:bold;padding:5px 0;}
-.pages > h2 t,
-.pages > h3 t{.shadow_tit(#CCC,3px);}
+.pages > h2 t{.shadow_tit(#CCC,3px);}
 .pages > h2 a,
-.pages > h3 a{}
 .pages > h2 a:hover,
-.pages > h3 a:hover{}
-.pages > h4{font-size:12px;font-weight:bold;}
 .pages .layer{padding:0 0 0 20px;}
-.pages .title{position:relative;height:40px;text-align:center;color:#29458C;font-size:20px;font-weight:bold;padding:3px 0;}
-.pages .subtitle{position:relative;color:#29458C;font-weight:bold;padding:3px 0;}
-.pages .topic{position:relative;color:#29458C;font-size:13px;font-weight:bold;border-bottom:2px solid #CCCCCC;margin-bottom:5px;}
-.pages .topic t{display:inline-block;height:25px;line-height:25px;padding:2px 0px;margin-bottom:-2px;border-bottom:2px solid #B0B0B0;}
-.pages .subtopic{position:relative;color:#235D83;font-weight:bold;padding:3px 0;}
-.pages .content{position:relative;line-height:180%;padding:5px 0;}
-.pages .contents{position:relative;line-height:180%;margin:5px 0;}
+.pages .title,
+.pages .topic,
+.pages h3{color:#29458C;font-size:1.2em;font-weight:bold;border-bottom:2px solid #CCCCCC;margin-bottom:8px;}
+.pages .title t,
+.pages .topic t,
+.pages h3 t{display:inline-block;height:25px;line-height:25px;padding:2px 0;margin-bottom:-2px;border-bottom:2px solid #B0B0B0;}
+.pages h4,
+.pages .subtopic{color:#235D83;font-weight:bold;padding:3px 0;}
+.pages .content{line-height:180%;}
+.pages .content p{margin:8px 0;}
 .pages .indent{padding-left:20px;}
-.pages > .h1{position:relative;color:#235D83;font-weight:bold;padding:3px 0;}
+
+/*
+.pages .title{height:40px;text-align:center;color:#29458C;font-size:20px;font-weight:bold;padding:3px 0;}
+.pages .subtitle{position:relative;color:#29458C;font-weight:bold;padding:3px 0;}
+.pages > .h1{color:#235D83;font-weight:bold;padding:3px 0;}
 .pages > .h1 a{color:#EC5F00;font-weight:bold;text-decoration:underline;}
 .pages > .h1 a:hover{color:#FF0000;}
-
+*/

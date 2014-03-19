@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="config">
+	<configure>
+		<node>pre,var,num,config</node>
+	</configure>
+	<pre xmlns:test="node">
+		<channel>{@channel}</channel>
+		<table.namex>db_</table.namex>
+		<name>页面</name>
+		<names>页面</names>
+		
+		<test:table.name>dbc_test</test:table.name>
+		<test:table.px>a_</test:table.px>
+		<test:name>信息</test:name>
+		<test:names>信息</test:names>
+		<test:act>浏览</test:act>
+		<test:unit>条</test:unit>
+	</pre>
+	<var>
+		<title>null</title>
+		<title.index>null</title.index>
+		
+		<title.download>下载</title.download>
+	</var>
+	<num>
+	</num>
+	<config>
+		<url>default</url>
+	</config>
+</xcml>

@@ -1,4 +1,4 @@
-﻿<label:include file="/header-nav">
+﻿<label:include file="/inc/framer/header-nav">
 
 	<div class="menu"><div class="inner">
 <ul>
@@ -11,4 +11,4 @@
 <!-- menu search -->
 	</div></div>
 
-<label:include file="/header-end">
+<label:include file="/inc/framer/header-end">

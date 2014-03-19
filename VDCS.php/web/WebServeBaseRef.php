@@ -1,7 +1,7 @@
 <?
 trait WebServeBaseRef
 {
-	public $treeVar=null,$tableData=null,$maps=null;
+	public $tableData=null,$maps=null;		//$treeVar=null,
 	protected $isHeader=false;
 	
 	

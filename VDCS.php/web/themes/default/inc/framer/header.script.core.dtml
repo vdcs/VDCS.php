@@ -1,0 +1,4 @@
+<label:include file="/inc/framer/html5.shiv">
+<label:include script="jquery/<vart("var.jquery.v")>.min.js"><label:include script="jquery/extend.min.js">
+<label:include script="<vart("var.lineu{#xx}")>VDCS.js"><label:include script="VDCS.ui.js">
+<label:include file="/inc/framer/header.script.core-set">

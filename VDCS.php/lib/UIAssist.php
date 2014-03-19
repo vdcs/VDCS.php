@@ -1,5 +1,5 @@
 <?
-defined('UICSS_PATH_CACHEX') || 			define('UICSS_PATH_CACHEX',		_BASE_PATH_ROOT._BASE_DIR_DATA.'cache/themes/');
+defined('UIA_PATH_CACHEX') || 			define('UIA_PATH_CACHEX',		_BASE_PATH_ROOT._BASE_DIR_DATA.'cache/themes/');
 
 class UIAssist
 {
@@ -11,8 +11,8 @@ class UIAssist
 	
 	public static function v($k,$v=null){if($v)self::$_var[$k]=$v;return self::$_var[$k];}
 	
-	public static function getContent($file){return getFileContent(UICSS_PATH_CACHEX.$file.'.css');}
-	public static function setContent($file,$content){doFileWrite(UICSS_PATH_CACHEX.$file.'.css',$content);}
+	public static function getContent($file){return getFileContent(UIA_PATH_CACHEX.$file.'.css');}
+	public static function setContent($file,$content){doFileWrite(UIA_PATH_CACHEX.$file.'.css',$content);}
 	
 	public static function toFilePath($file)
 	{
@@ -101,7 +101,7 @@ class UIAssist
 	{
 		$contents='';
 		foreach($filea as $file){
-			$contents.=UICSS::toRealContent($file,$contents,$include,$compile);
+			$contents.=self::toRealContent($file,$contents,$include,$compile);
 		}
 		return $contents;
 	}
@@ -193,11 +193,15 @@ class UIAssist
 		$afind=[' {','  ',': ',' :'];
 		$areplace=['{',TABS,':',':'];
 		$re=str_replace($afind,$areplace,$re);
-
+		
+		$afind=['calc-('];
+		$areplace=['calc(100% - '];
+		$re=str_replace($afind,$areplace,$re);
+		
 		$afind=["\r\n","\r"];
 		$areplace=["\n","\n"];
 		$re=str_replace($afind,$areplace,$re);
-
+		
 		if($pak){
 			$afind=[";\n\t",";\n}","{\n",TABS];
 			$areplace=[";\t",";}",'{',''];
@@ -218,14 +222,14 @@ class UIAssist
 		}
 		//debugx($respath);
 		//debugx($rootpath);
-		$re=getFile($respath.'css/less/defined.css');
-		$re.=NEWLINE;
-		$re.=getFile($rootpath.'css/less/define.css');
+		$re.=getFile($respath.'css/less/defined.css').NEWLINE;
+		$re.=getFile($respath.'css/less/style.css').NEWLINE;
+		$re.=getFile($rootpath.'css/define.less').NEWLINE;
 		//die($re);
 		return $re;
 	}
-
-
+	
+	
 	public static function jsPacker($s,$head='',$mode='Normal')
 	{
 		//include_once('JavaScriptPacker.php');

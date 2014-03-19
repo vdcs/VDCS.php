@@ -1,5 +1,5 @@
 ﻿<label:include file="frame/headers">
-<div class="FramerFloor">
+<div class="framer">
 
 
 {@channel}.{@portal}.{@module}

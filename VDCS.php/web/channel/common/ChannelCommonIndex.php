@@ -19,9 +19,9 @@ class ChannelCommonIndex extends ChannelCommonBase
 
 	public function doThemer()
 	{
-		$this->theme->setWeb('channel','index');
-		$this->theme->setWeb('portal','');
-		$this->theme->setWeb('module','');
+		$this->theme->setDP('channel','index');
+		$this->theme->setDP('portal','');
+		$this->theme->setDP('module','');
 	}
 
 }

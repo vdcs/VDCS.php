@@ -1,2 +1,1 @@
-<label:include script="<web:script.public>.js">
-<label:include script="<url:images>themes/default/app.js"><label:include script="<web:url.themes>app.js"><label:include script="<web:url.themes>{@channel}/appc.js">
+<label:include file="/inc/framer/header.script.app">

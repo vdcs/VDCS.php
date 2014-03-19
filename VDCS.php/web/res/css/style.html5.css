@@ -61,7 +61,7 @@ a:hover{color:#D20000;}
 
 .all{clear:both;width:100%;}.blank{clear:both;text-align:left;}
 .clr,.clear,.clears{clear:both;} .clr:after,.clears:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
-sh,.spc,.space,.spacer,.spacing{height:15px;overflow:hidden;} .space,.spaces{clear:both;} .spaces{height:30px;} .space0{height:10px;} .spacei{height:6px;}
+sh,.spc,.space,.spacer,.spacing{height:@spaceh;overflow:hidden;} .space,.spaces{clear:both;} .spaces{height:@spaceh*2;} .spacei,.space0{height:@spaceh/2;}
 .scrollx{overflow:hidden;overflow-x:auto;} .scrolly{overflow:hidden;overflow-y:auto;}
 
 

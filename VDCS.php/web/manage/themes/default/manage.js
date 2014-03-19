@@ -41,6 +41,46 @@ var manage={
 	
 '':''};
 
+appi.widget={
+	init:function(){var that=this;$(function(){that.initer()})},
+	initer:function(){
+		var that=this;
+		this.jwrap=$('#widget');
+		this.jwrap.show();
+		this.jwrap.on('click','a[class]',function(){
+			return that.click($(this));
+		});
+	},
+	click:function(ja){
+		var re;
+		var _action=ja.attr('class');
+		var _func='on_'+_action;
+		if(this[_func]){
+			re=this[_func](ja,_action);
+			if(!re) re=false;
+		}
+		return re
+	},
+	on_refresh:function(ja){
+		$p.refresh();
+	},
+	on_newin:function(ja){
+		ja.attri(function(){
+			//dbg.o(window.location)
+			ja.attr('href',window.location.pathname+window.location.search);
+			ja.attr('target','_blank');
+		});
+		return true
+	},
+	on_go_back:function(ja){
+		window.history.go(-1);
+	},
+	on_go_forward:function(ja){
+		window.history.go(1);
+	},
+'':''};
+appi.widget.init();
+
 
 appi.chooseUa=function(jbody,callback){
 	var jforms=jbody.parents('form')||$('body');

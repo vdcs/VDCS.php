@@ -1,4 +1,4 @@
-<?php
+<?
 trait PortalAssetsRemitRef
 {
 	
@@ -7,9 +7,9 @@ trait PortalAssetsRemitRef
 		$this->uuid=queryi('uuid');
 		if($this->uuid){
 			$ua=Ua::instance(APP_UA);
-			$this->uTree=newTree();
-			$this->uTree=$ua->queryTree($this->uuid);
-			$this->unames=UaExtendManage::toNames($this->uTree);
+			$ua->loader($this->uuid);
+			$this->uTree=$ua->getDataTree();			//$ua->queryTree($this->uuid);
+			$this->unames=$ua->getData('names');
 		}
 	}
 	public function refThemeCache()

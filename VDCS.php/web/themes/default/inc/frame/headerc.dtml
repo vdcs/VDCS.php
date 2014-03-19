@@ -1,0 +1,5 @@
+<label:include file="/inc/frame/headers">
+
+<div class="side">
+<label:include file="frame/menus">
+</div>

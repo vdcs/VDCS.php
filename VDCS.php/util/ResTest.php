@@ -42,6 +42,9 @@ class ResTest
 	public static function _Ary($o,$t=''){self::a($o,$t);}
 	public static function _Tree($o,$t=''){self::x(test::toTree($o,$t));}
 	public static function _Table($o,$t=''){self::x(test::toTable($o,$t));}
+	public static function _Object($o,$t=''){self::x(test::toObject($o,$t));}
+
+	public static function toObject($o,$t=''){return print_r(get_object_vars($o),true);}
 	
 	
 	public static function logAction($name='action',$value='')

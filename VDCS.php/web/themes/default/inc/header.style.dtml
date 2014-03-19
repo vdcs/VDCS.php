@@ -1,3 +1,0 @@
-<label:include script="style.public.css" type="css"><!--[if IE]><label:include script="<url:images>css/browse.ie.css" type="css"><![endif]-->
-<label:include script="<web:url.themes>images/style.css" type="css">
-<!--{if isVar({$web:channel})}--><label:include script="<web:url.themes><web:channel>/images/style.css" type="css"><!--{/if}-->

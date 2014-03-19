@@ -1,8 +1,19 @@
 <?
 class SendMail
 {
+
+	public static function cfg($key)
+	{
+		static $treeConfig;
+		if(!$treeConfig){
+			$treeConfig=VDCSDTML::getConfigTree('common.config/data/sendmail');
+			$treeConfig=$treeConfig->getFilterTree('config.');
+		}
+		return $treeConfig->getItem($key);
+	}
 	
-	public static function post($email,$subject,$message,&$opt=null)
+	
+	public static function post($email,$subject,$content,&$opt=null)
 	{
 		if(!$opt) $opt=array();
 		$treeConfig=VDCSDTML::getConfigTree('common.config/data/sendmail');
@@ -15,13 +26,13 @@ class SendMail
 		if(!$opt['from.name']) $opt['from.name']=appv('web.shortname');
 		if(!$opt['from.name']) $opt['from.name']=appv('web.name');
 		if(!$opt['to.email']) $opt['to.email']=$email;
-		//return self::postByMail($email,$subject,$message,$opt,$treeConfig);
+		//return self::postByMail($email,$subject,$content,$opt,$treeConfig);
 		if(!$email) return -102;
 		if(!$subject) return -102;
-		if(!$message) return -103;
-		return self::postByMailer($email,$subject,$message,$opt,$treeConfig);
+		if(!$content) return -103;
+		return self::postByMailer($email,$subject,$content,$opt,$treeConfig);
 	}
-	public static function postByMail($email,$subject,$message,&$opt=null,$treeConfig=null)
+	public static function postByMail($email,$subject,$content,&$opt=null,$treeConfig=null)
 	{
 		$re=false;
 		$module=$treeConfig->getItem('module');
@@ -32,7 +43,7 @@ class SendMail
 		$sm->setFrom($opt['from.email'],$opt['from.name']);
 		$sm->addTo($opt['to.email'],$opt['to.name']);
 		$sm->setSubject($subject);
-		$sm->setMessage($message);
+		$sm->setMessage($content);
 		$re=$sm->doSend();
 		if(!$re){
 			$opt['error.type']=$sm->getErrorType();
@@ -43,7 +54,7 @@ class SendMail
 		unset($sm);
 		return $re;
 	}
-	public static function postByMailer($email,$subject,$message,&$opt=null,$treeConfig=null)
+	public static function postByMailer($email,$subject,$content,&$opt=null,$treeConfig=null)
 	{
 		$re=false;
 		$module=$treeConfig->getItem('module');
@@ -69,7 +80,7 @@ class SendMail
 		//$sm->AddAttachment("/var/tmp/file.tar.gz");	// 添加附件
 		if($opt['format']=='html') $sm->IsHTML(true);				// set email format to HTML //是否使用HTML格式
 		$sm->Subject = $subject;
-		$sm->Body = $message;
+		$sm->Body = $content;
 		if($opt['text']) $mail->AltBody = $opt['text']; //附加信息，可以省略 "This is the body in plain text for non-HTML mail clients"
 		$re=$sm->Send();
 		if(!$re){

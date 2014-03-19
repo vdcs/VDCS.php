@@ -3,60 +3,28 @@
 	<configure>
 		<node>pre,var,num,config</node>
 	</configure>
-	<pre xmlns:announce="node">
+	<pre xmlns:test="node">
 		<channel>{@channel}</channel>
-		<table.namex>dbc_</table.namex>
-		<name>网站支持</name>
-		<names>页面</names>
+		<table.namex>db_</table.namex>
+		<name>示例频道</name>
+		<names>示例</names>
 		
-		<announce:table.name>dbc_announce</announce:table.name>
-		<announce:table.px>a_</announce:table.px>
-		<announce:name>公告</announce:name>
-		<announce:names>公告</announce:names>
-		<announce:act>浏览</announce:act>
-		<announce:unit>条</announce:unit>
+		<test:table.name>dbc_test</test:table.name>
+		<test:table.px>a_</test:table.px>
+		<test:name>信息</test:name>
+		<test:names>信息</test:names>
+		<test:act>浏览</test:act>
+		<test:unit>条</test:unit>
 	</pre>
 	<var>
 		<title>支持中心</title>
 		<title.index>null</title.index>
 		
 		<title.about>关于我们</title.about>
-		<title.contact>联系方式</title.contact>
-		<title.payment>购买指南</title.payment>
-		<title.ad>广告服务</title.ad>
-		<title.help>网站帮助</title.help>
-		
-		<title.culture>企业文化</title.culture>
-		<title.values>价值观</title.values>
-		<title.quality>质量保证</title.quality>
-		<title.credit>获得荣誉</title.credit>
-		<title.history>发展历程</title.history>
-		<title.dict>名词解释</title.dict>
-		
-		<title.cases>客户案例</title.cases>
-		<title.vip>VIP客户</title.vip>
-		<title.biz>商务合作</title.biz>
-		
-		<title.terms>使用协议</title.terms>
-		<title.agreement>服务协议</title.agreement>
-		<title.duty>免责申明</title.duty>
-		<title.copyright>版权申明</title.copyright>
-		<title.privacy>隐私保护</title.privacy>
-		
-		<title.announce>网站公告</title.announce>
-		<title.links>友情链接</title.links>
-		<title.online>在线服务</title.online>
-		
-		<title.join>加入我们</title.join>
-		<title.feedback>建议反馈</title.feedback>
-		<title.vote>网站调查</title.vote>
-		<title.gbook>网站留言</title.gbook>
 	</var>
 	<num>
 	</num>
 	<config>
 		<url>default</url>
-		<faq.menu>about,contact,payment,help</faq.menu>
-		<faq.section></faq.section>
 	</config>
 </xcml>

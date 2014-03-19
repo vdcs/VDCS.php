@@ -1,0 +1,2 @@
+<?
+class ChannelPageBase extends ChannelPageBasic{}

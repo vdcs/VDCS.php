@@ -1,0 +1,7 @@
+﻿
+<div id="widget" style="display:none;"><div class="inners">
+<a class="refresh" href="#refresh"><span>刷新</span></a>
+<a class="newin" href="#newin"><span>新窗口</span></a>
+<a class="go_back" href="#go_back"><span>后退</span></a>
+<a class="go_forward" href="#go_forward"><span>前进</span></a>
+</div></div>

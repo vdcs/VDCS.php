@@ -12,25 +12,29 @@
 		<file.sx>.s</file.sx>
 		<merger.lx>x</merger.lx>
 		<merger.sx></merger.sx>
-		<ver><![CDATA[<app:year>]]></ver>
-		<beian>沪ICP备88888888号</beian>
+
 		<script.d><![CDATA[<app:var.script.d>]]></script.d>
 		<jquery.v>1.10.2</jquery.v>
+		
+		<ver><![CDATA[<app:year>]]></ver>
+		<beian>沪ICP备88888888号</beian>
+		<copyright><![CDATA[<app:web.copyright>]]></copyright>
+		<copyright0><![CDATA[&copy; <app:year> <app:com.name> 保留所有权利。]]></copyright0>
+		
+		<powerby><![CDATA[本站基于 <app:web.version> 技术架构]]></powerby>
+		<power-by><![CDATA[<a id="powerby-joekoe" href="http://www.joekoe.cn/" target="_blank" title="乔客网科旗下网站&#10;Power by Joekoe"><span>Joekoe</span></a>]]></power-by>
+		<support.passv><![CDATA[<a id="support-passv" href="http://passv.cn/" target="_blank" title="Passv 支持站点"><span>Passv</span></a>]]></support.passv>
 	</var>
 	<common>
 		<demo></demo>
 	</common>
 	<frame>
-		<copyright><![CDATA[&copy; <app:year> <app:com.name> 保留所有权利。]]></copyright>	<!-- <app:web.copyright> -->
 		<stat><![CDATA[<!--统计代码1-->]]></stat>
 		<header.nav><![CDATA[]]></header.nav>
 		<header.code><![CDATA[<!--header.code-->]]></header.code>
 		<footer.code><![CDATA[
 <div id="gotop"><a id="gotop-link"><span>&nbsp;</span></a></div><script type="text/javascript">$p.linkPlace("gotop");</script>
 ]]></footer.code>
-		<powerby><![CDATA[本站基于 <app:web.version> 技术架构]]></powerby>
-		<power-by><![CDATA[<a id="powerby-joekoe" href="http://www.joekoe.cn/" target="_blank" title="乔客网科旗下网站&#10;Power by Joekoe"><span>Joekoe</span></a>]]></power-by>
-		<support.passv><![CDATA[<a id="support-passv" href="http://passv.cn/" target="_blank" title="Passv 支持站点"><span>Passv</span></a>]]></support.passv>
 	</frame>
 	<ad>
 		<banner.head><![CDATA[<!--ad.banner.head-->]]></banner.head>

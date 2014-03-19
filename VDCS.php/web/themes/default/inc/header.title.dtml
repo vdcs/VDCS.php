@@ -1,1 +1,1 @@
-<title><web:nav.title.seo> <app:web.title> - <app:com.cause> <app:com.explain></title>
+<label:include file="/inc/framer/header.title">

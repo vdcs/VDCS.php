@@ -1,32 +1,37 @@
 <label:include file="header.frame">
 
 
+<div id="timer"><cite>今天是 <span el="today">0000-00-00</span> <span el="week">星期</span></cite></div>
 <div id="header"><div class="inners">
-	<div class="bar">
-		<h2><a class="name" href="<url:root>" target="_blank"><app:web.name></a><span class="title">管理后台</span></h2>
-		<div class="navi">
-			<ul>
-			<li class="welcome">Hi <span class="name"><manager:name></span>!</li>
-			<li class="main"><a href="<url:manage.main>" target="ifrm_main">管理首页</a></li>
-			<li class="refresh"><a href="javascript:;" onclick="javascript:mframe.reload('main');">刷新页面</a></li>
-			<li class="help"><a href="<url:manage.help>" target="_blank">帮助中心</a></li>
-			<li class="logout"><a href="<url:manage.logout>" onclick="javascript:return mframe.logout(this);" target="_top">安全退出</a></li>
-			</ul>
-		</div>
+	<h2><a class="name" href="<url:root>" target="_blank"><app:web.name></a><span class="title">管理后台</span></h2>
+	<div class="nav">
+		<ul>
+		<li class="welcome">Hi <span class="name"><manager:name></span>!</li>
+		<li class="main"><a href="<url:manage.main>" target="ifrm_main">管理首页</a></li>
+		<li class="refresh"><a href="javascript:;" onclick="javascript:mframe.reload('main');">刷新页面</a></li>
+		<li class="help"><a href="<url:manage.help>" target="_blank">帮助中心</a></li>
+		<li class="logout"><a href="<url:manage.logout>" onclick="javascript:return mframe.logout(this);" target="_top">安全退出</a></li>
+		</ul>
 	</div>
 	<div class="menu">
-		<div class="side"><cite el="timenow">今天是 <span el="today">0000-00-00</span> <span el="week">星期</span></cite></div>
-		<div class="nav">
 <ul>
 <loop:nav>
 <li el="[item:channel]"><a href="[item:channel]" data-channel="[item:channel]"><span>[item:name]</span></a></li>
 </loop>
 </ul>
-		</div>
 	</div>
 </div></div>
 
 <div id="body"><div class="inners">
+	<div class="tabs">
+		<ul></ul>
+		<!--
+		<li class="main"><a href="#main"><span>管理中心</span></a><i><em></em></i></li>
+		-->
+		<xmp>
+		<li><a href="#sub"><span>加载中..</span></a><i><em></em></i></li>
+		</xmp>
+	</div>
 	<div class="menus">
 <div id="menus"></div>
 <xmp id="element-menu-frame">
@@ -61,7 +66,7 @@
 </xmp>
 	</div>
 	<div class="strips"><a class="onoff"><span>开关</span></a></div>
-	<div class="mains"><iframe name="ifrm_main" src="about:blank" noresize></iframe></div>
+	<div class="mains"></div>
 </div></div>
 
 <div id="footer"><div class="inners">

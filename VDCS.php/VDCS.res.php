@@ -504,7 +504,7 @@ class VDCSTime
 			case 's':	$pstr='seconds';	$plus=$num;			break;
 		}
 		//$tnum+=$plus;
-		$num=$num>0?($num+1):($num-1);
+		$num=$num>0?($num):($num);
 		$pstr=($num>0?'+':'').strval($num).' '.$pstr;
 		$tnum=strtotime($pstr,$tnum);	//+self::toZone('s',$zone);
 		return $fmt?self::toString($tnum,$fmt,$zone):$tnum;

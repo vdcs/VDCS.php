@@ -1,5 +1,5 @@
 
-<!--[if lte IE 6]>
+<!--[if lte IE 8]>
 <div class="framer">
 <label:include script="res/ban.ie6.js">
 </div>

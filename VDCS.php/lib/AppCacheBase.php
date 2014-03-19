@@ -85,7 +85,12 @@ class AppCacheBase
 		$sInio=utilSettings::loadINI(appPaths('common.config/configure@'.DCS::serverString().EXT_INI));
 		$sInis=utilSettings::loadINI(appPaths('common.config/configure@'.DCS::browseDomain().EXT_INI));
 		$aConfig=self::getIniSection('Config',$sIni,$sInio,$sInis);		//$sIni->getSection('Config');
-		
+		if(self::isDebug()){
+			debugx(appPaths('common.config/configure'.EXT_INI));
+			debugx(appPaths('common.config/configure@'.DCS::serverString().EXT_INI));
+			debugx(appPaths('common.config/configure@'.DCS::browseDomain().EXT_INI));
+		}
+
 		//解析值(app,var)
 		$_v.=NEWLINE.'// app,var';
 		if(isa($aConfig)){

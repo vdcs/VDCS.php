@@ -1,6 +1,6 @@
 <table class="table tables table-hover table-list">
 	<tbody>
-		<tr><th style="width:15%;">ID</th><td style="width:35%;"><a href="" target="_target" eli="uid"></a></td><th style="width:15%;">姓名</th><td eli="names"></td></tr>
+		<tr><th style="width:15%;">ID</th><td style="width:35%;"><a href="" target="tab" tab-title="<app:var.ua>信息" eli="uid"></a></td><th style="width:15%;">姓名</th><td eli="names"></td></tr>
 		<tr><th>邮箱</th><td eli="email"></td><th>手机</th><td eli="mobile"></td></tr>
 		<tr><th>证件号</th><td eli="idcard"></td><th></th><td></td></tr>
 		<tr><th>昵称</th><td eli="nickname"></td><th>来自哪里</th><td eli="idcard"></td></tr>

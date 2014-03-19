@@ -1,6 +1,1 @@
-<label:include script="style.html5.css" type="css">
-<label:include script="<web:url.themes>images/style.css" type="css">
-<!--{if isStr({$web:channel})}--><label:include script="<web:url.themes><web:channel>/images/style.css" type="css"><!--{/if}-->
-<!--{if isStr({$web:portal})}--><label:include script="<web:url.themes><web:channel>/images/<web:portal>.css" type="css"><!--{/if}-->
-<!--{if isStr({$web:module})}--><label:include script="<web:url.themes><web:channel>/images/<web:portal>.<web:module>.css" type="css"><!--{/if}-->
-<!--{if isStr({$web:modulei})}--><label:include script="<web:url.themes><web:channel>/images/<web:portal>.<web:module>.<web:modulei>.css" type="css"><!--{/if}-->
+<label:include file="/inc/framer/header.style5">

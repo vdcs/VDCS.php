@@ -1,7 +1,7 @@
 <?
 class Dcode
 {
-	const TableName				= 'dbd_dcode';
+	const TABLE_NAME				= 'dbd_dcode';
 	
 	
 	public static function create($types,$module,$code,$value,$params=null)
@@ -24,7 +24,7 @@ class Dcode
 		$tData->addItem('sp_agent',DCS::agent());
 		$tData->addItem('status',1);
 		$tData->addItem('tim',DCS::timer());
-		$sql=DB::sqlInsert(self::TableName,'',$tData);
+		$sql=DB::sqlInsert(self::TABLE_NAME,'',$tData);
 		$isexec=DB::exec($sql);
 		if($isexec) $re=1;
 		return $re;
@@ -38,7 +38,7 @@ class Dcode
 		if($module) $sqlQuery=DB::sqla($sqlQuery,'module='.DB::q($module,1));
 		if($code) $sqlQuery=DB::sqla($sqlQuery,'code='.DB::q($code,1));
 		if($value) $sqlQuery=DB::sqla($sqlQuery,'value='.DB::q($value,1));
-		$sql=DB::sqlSelect(self::TableName,'','*',$sqlQuery,$sqlOrder,1);
+		$sql=DB::sqlSelect(self::TABLE_NAME,'','*',$sqlQuery,$sqlOrder,1);
 		return DB::queryTree($sql);
 	}
 	
@@ -54,7 +54,7 @@ class Dcode
 		$tData=newTree();
 		$tData->addItem('status',2);
 		$tData->addItem('tim_use',DCS::timer());
-		$sql=DB::sqlUpdate(self::TableName,'',$tData,$sqlQuery);
+		$sql=DB::sqlUpdate(self::TABLE_NAME,'',$tData,$sqlQuery);
 		$isexec=DB::exec($sql);
 		if($isexec==1) $re=1;
 		return $re;

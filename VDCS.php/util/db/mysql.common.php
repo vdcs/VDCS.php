@@ -234,7 +234,7 @@ trait DBAssist
 	########################################
 	########################################
 	*/
-	public static function connect($imsg=true){return self::$db->doConnect($imsg);}
+	public static function connect($imsg=true){return self::$db->doConnect($imsg);}		//static::$db
 	public static function disconnect(){return self::$db->doDisconnect();}
 	
 	
@@ -242,6 +242,7 @@ trait DBAssist
 	########################################
 	########################################
 	*/
+	public static function isQuery($sql){return self::$db->isQuery($sql);}
 	public static function query($sql){return self::$db->getQuery($sql);}
 	public static function getQuery($sql){return self::$db->getQuery($sql);}
 	

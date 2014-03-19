@@ -1,0 +1,2 @@
+<label:include script="style.css" type="css">
+<label:include script="~!style.m.css" type="css"><!--{if isVar({$web:channel})}--><label:include script="~~!style.css" type="css"><!--{/if}-->

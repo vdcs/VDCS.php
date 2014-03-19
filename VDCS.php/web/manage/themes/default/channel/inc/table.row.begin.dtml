@@ -1,1 +1,1 @@
-<tr class="row" data-id="[item:_id]" data-tim="[item:_tim]">
+<tr class="row" data-id="[item:_id]" data-tim="[item:_tim]" data-topic="[item:_topic!text]">

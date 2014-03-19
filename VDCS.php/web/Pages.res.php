@@ -132,8 +132,12 @@ class WebPortalBase
 {
 	protected $UARC=APP_UA,$UAO='ua',$UAC='ua:';
 	protected $_var=array();
+	protected $treeVar=null;
 	
-	public function __construct(){}
+	public function __construct()
+	{
+		$this->treeVar=new utilTree();
+	}
 	public function __destruct()
 	{
 		//debugx(__METHOD__);

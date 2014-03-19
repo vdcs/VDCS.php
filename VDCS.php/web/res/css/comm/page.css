@@ -2,98 +2,67 @@
 /*
 Version:	VDCS comm @page v1.0
 Support:	http://go.hpns.cn/vdcs/css
-Uodated:	2013-12-00
+Uodated:	2014-03-00
 */
 
 
-body{color:#000;}
+body{color:@color;}
 
-a{color:#336699;text-decoration:none;}
-a:hover{color:#D20000;text-decoration:underline;}
-
-sh,.space,.spacer{height:15px;overflow:hidden;}
+a{color:@acolor;text-decoration:none;}
+a:hover{color:@acolor_hover;text-decoration:underline;}
 
 
 .thin,a.thin{color:#996;}
 a.thin:hover{color:#960;}
 
 
+.xform{clear:both;width:@xform_width;padding:80px 0;margin:0 auto;}
+
+
 /* ######################### */
 headbar > inners,#headbar > .inners,
 header > inners,#header > .inners,
 footer > inners,#footer > .inners,
-#confine{clear:both;width:980px;margin:0 auto;text-align:left;position:relative;}
+#confine{clear:both;width:@width;margin:0 auto;text-align:left;position:relative;}
 
 .logo a,.logo a:hover,
 #headbar a:hover,
 #header .menu a:hover,
 #footer a:hover{text-decoration:none;}
-#header{margin-bottom:15px;}
-#footer{margin-top:20px;}
+#header{margin-bottom:@spaceh;}
+#footer{margin-top:@spaceh;}
+#footer p{.linehp();}
 
-
-/*
-#linktop a{display:inline-block;width:41px;height:74px;background:url("/images/common/struct/gotop-rocket.png") 0 0 no-repeat;}
-#linktop a span{display:none;}
-#linktop a:hover{background-position:0 -74px;}
-#linktop a:hover{text-decoration:none;}
-*/
-#linktop a{display:inline-block;width:58px;height:58px;background:url("/images/common/struct/gotop-arrow.png") 0 0 no-repeat;}
-#linktop a{.rco();}
-#linktop a span{display:none;}
-#linktop a:hover{background-position:0 -58px;}
-#linktop a:hover{text-decoration:none;}
+#linktop{.linktop(@linktop);}
 
 
 /* ######################### */
 #wrap{}
-#wrapper{width:980px;min-height:500px;_height:500px;text-align:left;margin:0 auto;overflow:hidden;.clr();}
-/*
-#wrapper{-webkit-border-radius:6px;-o-border-radius:6px;border-radius:6px;overflow:hidden;}
-#wrapper{-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.4);box-shadow:0 1px 2px rgba(0,0,0,0.4);}
-#wrapper{background-color:#FFFBD6;}
-*/
+#wrapper{width:@width;min-height:@height_min;_height:@height_min;text-align:left;margin:0 auto;overflow:hidden;.clr();}
 
-
-#menu{float:left;width:200px;}
-#main{float:left;width:765px;min-height:400px;_height:400px;margin-left:15px;}
+#menu{float:left;width:@menu_width;}
+#main{float:left;width:@main_width;min-height:@main_height_min;_height:@main_height_min;margin-left:@main_space;}
 #main > .cont{.clr();position:relative;}
-#main > .cent{margin-right:215px;}
+#main > .cent{margin-right:@main_side_width+@main_space;}
 #main > .side,
-#main > .sider{float:right;width:200px;.posr(0);}
+#main > .sider{float:right;width:@main_side_width;.posr(0);}
 
 
+.framesh{height:@spaceh;}
 .framers,.framesh,
-.framer{.clr();width:980px;margin:0 auto;}
+.framer{.clr();width:@width;margin:0 auto;}
 .framer{text-align:left;overflow:hidden;}
-/*
-.framer{background-color:#FFF;}
-.framer{-webkit-border-radius:8px;-o-border-radius:8px;border-radius:8px;overflow:hidden;}
-*/
-.framer > .main{width:980px;}
+.framer > .main{width:@width;}
+
 .framer > .body,
-.framer > .cont{float:left;width:735px;}
-.framer > .cent{float:left;width:490px;}
+.framer > .cont{float:left;width:@framer_cont_width;}
+.framer > .cent{float:left;width:@framer_cent_width;}
 .framer > .menu,
-.framer > .side{float:left;width:230px;margin-right:15px;}
+.framer > .side{float:left;width:@framer_side_width;margin-right:@framer_space;}
 .framer > .sider,
-.framer > .relate{float:right;width:230px;margin-left:15px;}
-.framer > .side.m{width:365px;}
-.framer > .cent.m{width:355px;}
-
-.framer > .halfc{float:left;width:370px;}
-.framer > .halfl{float:left;width:360px;margin-right:15px;}
-.framer > .halfr{float:right;width:360px;margin-left:15px;}
-
-.framem{.clr();}
-.framem > .cent{float:left;width:355px;}
-.framem > .side{float:left;width:365px;margin-right:15px;}
-.framem > .sider{float:right;width:365px;margin-left:15px;}
-
-.framesh{height:20px;}
-
-
-.xform{clear:both;width:400px;padding:80px 0;margin:0 auto;}
+.framer > .relate{float:right;width:@framer_relate_width;margin-left:@framer_space;}
+.framer > .side.m{width:@framer_sidem_width;}
+.framer > .cent.m{width:@framer_centm_width;}
 
 
 h1.sub,

@@ -1,11 +1,15 @@
 <?
 class ResLog
 {
-	
+	//__invoke
+	//__callStatic
+
 	public static function save($filename,$sort,$msg){
 		$datei=datei('Y-m-j');
-		if($filename=='today') $filename=$datei;
-		else $filename=rv($filename,'date',$datei);
+		if($filename=='today') $filename='{date}';
+		$filename=rv($filename,'today',$datei);
+		$filename=rv($filename,'date',$datei);
+		$filename=rv($filename,'datei',r($datei,'-',''));
 		$fp=fopen(appDirPath('data.log/').$filename.EXT_LOG,'a');
 		if($fp){
 			flock($fp,3);

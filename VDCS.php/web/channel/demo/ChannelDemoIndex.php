@@ -3,4 +3,3 @@ class ChannelDemoIndex extends ChannelDemoBase
 {
 	
 }
-?>

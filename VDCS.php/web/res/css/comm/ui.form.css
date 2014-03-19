@@ -63,8 +63,7 @@ fieldset[disabled] input[type="checkbox"]{background-color:transparent;}
 	display:block;
 	min-height:20px;
 	padding-left:20px;
-	margin-top:10px;
-	margin-bottom:10px;
+	margin-top:10px;margin-bottom:10px;
 	vertical-align:middle;
 }
 
@@ -112,29 +111,29 @@ select,
 textarea,
 input{
 	display:inline-block;
-	width:94%;width:-moz-calc(100% - 18px);width:-webkit-calc(100% - 18px);width:calc(100% - 18px);
-	_width:94%;_padding-left:3%;_padding-right:3%;
-	height:26px;min-height:26px;
+	width:100%;
+	height:28px;min-height:28px;line-height:1.428571429;
+	font-size:12px;text-indent:0;vertical-align:middle;
 	padding:0 8px;margin:0;
-	/*min-height:20px;*/
-	line-height:1.428571429;
-	font-size:12px;
-	text-indent:0;
-	vertical-align:middle;
 	background-color:#FFF;
 	border:1px solid #CCC;
+	.sizings();
 	.rc(4px);
 	.shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
 	.trans(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s);
+	_width:94%;_padding-left:3%;_padding-right:3%;
 }
+/*.width_calc_minus(2px);*/
 input[type="file"]{height:26px;line-height:26px;}
 select{width:auto;height:28px;min-height:28px;padding:5px;}
 select > option{font-size:12px;padding:5px;}
-textarea{height:auto;min-height:56px;text-indent:0;padding:8px 8px 8px 8px;}
+textarea{height:auto;min-height:56px;text-indent:0;padding:8px;}
 
-input.tipi{width:88%;width:-moz-calc(100% - 34px);width:-webkit-calc(100% - 34px);width:calc(100% - 34px);padding-left:25px;}
-.unit > input[type="text"]{width:82%;width:-moz-calc(100% - 66px);width:-webkit-calc(100% - 66px);width:calc(100% - 66px);}
+
+input.tipi{padding-left:25px;}/*width:88%;.width_calc_minus(34px);*/
+.unit > input[type="text"]{width:82%;.width_calc_minus(66px);}
 label > input[type="checkbox"]{display:inline-block;margin:5px 5px 5px 0;}
+
 
 select:focus,
 textarea:focus,
@@ -234,7 +233,7 @@ input.btn.m{height:38px;padding-top:5px;}
 .forms.m dt > h3,
 .forms.m dd > h3,
 .forms.m dt > h4,
-.forms.m dd > h4{/*width:72%;width:calc(100% - 110px);*/margin-left:110px;}
+.forms.m dd > h4{margin-left:110px;}/*width:72%;width:calc(100% - 110px);*/
 .forms.m p .it{top:8px;left:3px;}
 .forms.m p .ih{top:10px;}
 .forms.m p.unit i{height:40px;line-height:40px;}
@@ -246,32 +245,32 @@ input.btn.m{height:38px;padding-top:5px;}
 .forms.m p input,
 .input-big select,
 .input-big textarea,
-.input-big input{height:36px;min-height:36px;font-size:1.4em;font-size:14px;-webkit-border-radius:6px;-o-border-radius:6px;border-radius:6px;}
+.input-big input{height:38px;min-height:38px;font-size:1.4em;font-size:14px;.rc(6px);}
 .forms.m p select,
 .input-big select{height:38px;min-height:38px;padding:8px;}
 .forms.m p input.tipi,
-.input-big input.tipi{width:88%;width:-moz-calc(100% - 36px);width:-webkit-calc(100% - 36px);width:calc(100% - 36px);padding-left:28px;}
+.input-big input.tipi{padding-left:28px;}/*width:88%;.width_calc_minus(36px);*/
 
 .forms.ah{}
 .forms.ah{}
-.forms h3 .btn.ah{-moz-calc(100% - 29px);width:-webkit-calc(100% - 29px);width:calc(100% - 29px);}
+.forms h3 .btn.ah{width:100%;}/*.width_calc_minus(29px);*/
 
 .forms label{display:inline-block;line-height:17px;cursor:pointer;}
 .forms label .icheck{float:left;}
 
 .input-large select,
 .input-large textarea,
-.input-large input{height:46px;min-height:46px;font-size:1.6em;font-size:16px;-webkit-border-radius:6px;-o-border-radius:6px;border-radius:6px;}
+.input-large input{height:48px;min-height:48px;font-size:1.6em;font-size:16px;.rc(6px);}
 .input-large select{height:48px;line-height:48px;padding:10px;}
 
 .input-small select,
 .input-small textarea,
-.input-small input{height:20px;min-height:20px;font-size:0.9em;font-size:11px;-webkit-border-radius:3px;-o-border-radius:3px;border-radius:3px;}
+.input-small input{height:22px;min-height:22px;font-size:0.9em;font-size:11px;.rc(3px);}
 .input-small select{height:22px;line-height:22px;padding:2px;}
 
 
 form.searchbar{clear:both;width:100%;text-align:center;}
-form.searchbar > input.keyword{width: -moz-calc(100% - 59px);width: -webkit-calc(100% - 59px);width: calc(100% - 59px);border-top-right-radius:0;border-bottom-right-radius:0;}
+form.searchbar > input.keyword{.width_calc_minus(41px);border-top-right-radius:0;border-bottom-right-radius:0;}
 form.searchbar > .submit{border-top-left-radius:0;border-bottom-left-radius:0;border-left:none;padding-left:8px;padding-right:8px;}
 
 

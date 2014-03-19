@@ -95,7 +95,13 @@ class pdo_mysql extends VDCSDBConstruct
 	########################################
 	########################################
 	*/
-	public function getQuery($sql)
+	public function isQuery($sql,&$erri=null)
+	{
+		if(substr($sql,0,1)!='@') $sql='@'.$sql;
+		$query=$this->getQuery($sql,$erri);
+		return !$erri;
+	}
+	public function getQuery($sql,&$erri=null)
 	{
 		if(!$this->cid) $this->doConnect();
 		$_err=1;if(substr($sql,0,1)=='@'){$_err=0;$sql=substr($sql,1);}
@@ -106,8 +112,8 @@ class pdo_mysql extends VDCSDBConstruct
 			$this->addSQL($sql);
 		}
 		else{
-			$errorInfo=$query->errorInfo();
-			if($_err==1) $this->doErrorEvent('query',$sql,$sql,$errorInfo[2],1);
+			$erri=$query->errorInfo();
+			if($_err==1) $this->doErrorEvent('query',$sql,$sql,$erri[2],1);
 		}
 		//$this->queryo=$query;
 		return $query;

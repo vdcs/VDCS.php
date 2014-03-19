@@ -315,20 +315,20 @@ class DCS
 class test{
 	static $PUT=true;
 	function init(){static $use;if($use)return;include_once(VDCS_UTIL.'/ResTest.php');$use=true;}
-	function toVarString($o){self::init();return ResTest::toVar($o);}
-	function toXMLString($o){self::init();return ResTest::toXML($o);}
-	function toTxtString($o,$t=''){self::init();return ResTest::toTxt($o,$t);}
-	function toAryString($o,$t=''){self::init();return ResTest::toAry($o,$t);}
-	function toObjString($o,$t=''){self::init();return print_r(get_object_vars($o),true);}
-	function toTreeString($o,$t=''){self::init();return ResTest::toTree($o,$t);}
-	function toTableString($o,$t=''){self::init();return ResTest::toTable($o,$t);}
+	function v($o){self::init();return ResTest::toVar($o);}				function toVarString($o){return self::v($o);}
+	function xml($o){self::init();return ResTest::toXML($o);}			function toXMLString($o){return self::xml($o);}
+	function t($o,$t=''){self::init();return ResTest::toTxt($o,$t);}		function toTxtString($o,$t=''){return self::t($o,$t);}
+	function a($o,$t=''){self::init();return ResTest::toAry($o,$t);}		function toAryString($o,$t=''){return self::a($o,$t);}
+	function o($o,$t=''){self::init();return ResTest::toObject($o,$t);}		function toObjString($o,$t=''){return self::o($o,$t);}
+	function tree($o,$t=''){self::init();return ResTest::toTree($o,$t);}		function toTreeString($o,$t=''){return self::tree($o,$t);}
+	function table($o,$t=''){self::init();return ResTest::toTable($o,$t);}		function toTableString($o,$t=''){return self::table($o,$t);}
 	function x($s,$br=true){if(!self::$PUT)return;self::init();ResTest::x($s,$br);}function j($s){self::init();ResTest::j($s);}function vc($s){self::init();ResTest::vc($s);}
 }
 function debugSet($b=false,$p=true){define('DEBUG_OUT',$b);test::$PUT=$p;}
 function isDebug(){return !!DEBUG_OUT;}
 function debugx($s,$br=true){test::x($s,$br);}function debugj($s){test::j($s);}function debugvc($s){test::vc($s);}
 function debuga($o,$t=''){debugx(test::toAryString($o,$t));}
-function debugo($o,$t=''){debugx(test::toObjString($o,$t));}
+function debugo($o,$t=''){debugvc(test::toObjString($o,$t));}
 function debugTree($o,$t=''){debugx(test::toTreeString($o,$t));}
 function debugTable($o,$t=''){debugx(test::toTableString($o,$t));}
 function debugxx($s){if(DCS::isLocal())debugx($s);}

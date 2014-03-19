@@ -1,2 +1,3 @@
 ﻿<div class="clr al"><dtml:_hint.main></div>
+<label:include file="frame/widget">
 <label:include file="/footer">

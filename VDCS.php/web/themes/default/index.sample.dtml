@@ -1,4 +1,4 @@
-﻿<label:include file="/headers">
+﻿<label:include file="frame/headeri">
 
 <div class="framer">
 <div class="side">
@@ -106,4 +106,4 @@
 <label:include file="/inc/common.links">
 </div>
 
-<label:include file="/footers">
+<label:include file="frame/footer">

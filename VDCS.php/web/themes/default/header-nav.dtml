@@ -1,5 +1,1 @@
-<label:include file="/header.i">
-<div id="header"><div class="inners">
-<!-- submenu -->
-	<div class="logo"><a class="root" href="<url:root>"><span><app:web.name></span></a><a class="extend" href="<web:extend.url>"><span><web:extend.name></span></a></div>
-<label:include file="/header-search">
+<label:include file="/inc/framer/header-nav">

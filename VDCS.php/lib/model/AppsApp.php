@@ -47,7 +47,10 @@ class AppsApp
 		$ret['query_string']=queryString();
 		$ret['api_url']=$url;
 		//debugxx('api_url='.$url);
-		if(query('debug')=='apps') debugx($url);
+		if(query('debug')=='apps'){
+			put($url);
+			//dcsLog('AppsApp.requtest','url='.$url);
+		}
 		$sendparams=array();
 		$sendparams['timeout']=60;
 		$ret['results']=VDCSHTTP::request($url,$sendparams,$paramhttp);

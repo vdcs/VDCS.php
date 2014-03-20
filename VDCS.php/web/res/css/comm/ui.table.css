@@ -2,7 +2,7 @@
 /*
 Version:	VDCS comm @table v1.0
 Support:	http://go.hpns.cn/vdcs/css
-Uodated:	2013-11-00
+Uodated:	2014-03-00
 */
 
 
@@ -218,12 +218,16 @@ th.status{text-align:left;}
 */
 th.selectbox{text-align:center;}
 
+table .type,table .sort,table .class,table .icon,table .image,
+table .total,table .data,table .op,
+table .date,table .selectid,table .selectbox,
+table .value,table .item{text-align:center;}
+table .price,table .money,table .emoney,table .units,table .amount,table .size,table .total{text-align:right;}
+table .al{text-align:left!important;}
+table .ar{text-align:right!important;}
+table .ac{text-align:center!important;}
+
 td.id,td.id a,td.no,td.no a{color:#666666;font-family:Verdana;font-size:0.9em;}
-td.type,td.sort,td.class,td.icon,td.image,
-td.total,td.data,td.op,
-td.date,td.selectid,td.selectbox,
-td.value,td.item{text-align:center;}
-td.price,td.money,td.emoney,td.units,td.amount,td.size,td.total{text-align:right;}
 td.price,td.money{color:#E92401;}td.emoney{color:#ff6600;}td.units{color:#0066cc;}
 td.size em,td.price em,td.money em,td.emoney em,td.units em{margin-left:3px;color:#808080;font-size:0.7em;}
 td.time{line-height:1.2;}
@@ -233,3 +237,6 @@ td.time{line-height:1.2;}
 
 th.w20{width:20px;} th.w30{width:30px;} th.w40{width:40px;} th.w50{width:50px;} th.w60{width:60px;} th.w70{width:70px;} th.w80{width:80px;}
 th.w100{width:100px;} th.w110{width:110px;} th.w120{width:120px;} th.w130{width:130px;} th.w150{width:150px;} th.w160{width:160px;} th.w180{width:180px;} th.w200{width:200px;} th.w250{width:250px;} th.w300{width:300px;}
+
+.table-list p.s{display:block;font-size:9.5px;height:12px;line-height:12px!important;padding:0;margin:0;margin-top:5px;overflow:hidden;}
+.table-list p.s{-webkit-transform-origin:left;-webkit-transform:scale(0.83);-webkit-font-size:12px;}

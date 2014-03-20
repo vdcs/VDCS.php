@@ -1,0 +1,54 @@
+
+<!--
+base=基本信息;content={@xnames}内容;sp={@xnames}特性;status={@xnames}状态
+attr={@xnames}属性;
+-->
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=base;display=none</att>
+	</input>
+<label:include file="part.topic">
+<label:include file="part.key!">
+<label:include file="part.srvid!">
+<label:include file="part.classid">
+<label:include file="part.specialid!">
+	
+<label:include file="part.remarks">
+<label:include file="part.pic">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+<label:include file="part.m.upload">
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=property;display=none</att>
+	</input>
+<label:include file="part.linkurl">
+<label:include file="part.pt.sa">
+<label:include file="part.summary">
+<label:include file="part.sp.keyword">
+	<input>
+		<type>multibar.foot</type>
+	</input>
+	
+
+<label:include file="part.m.props">
+<label:include file="part.m.sp">
+	
+	
+	<input>
+		<type>multibar.head</type>
+		<att>id=status;display=none</att>
+	</input>
+<label:include file="part.total.views">
+<label:include file="part.total.extend">
+<label:include file="part.orderid">
+<label:include file="part.prepage">
+<label:include file="part.statuss!a">
+<label:include file="part.username">
+	<input>
+		<type>multibar.foot</type>
+	</input>

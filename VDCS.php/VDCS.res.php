@@ -619,7 +619,7 @@ if(!defined('APP_VERSION_NAME')){
 }
 define('APP_VERSION',				APP_VERSION_NAME.' '.APP_VERSION_NO.' '.APP_VERSION_MARK);
 //define('WEB_VERSION',				'<span class="vver"><a href="'.APP_VERSION_URL.'" target="_blank" title="'.APP_VERSION_BUILD.' by '.APP_VERSION_UPDATE.'">'.APP_VERSION_NAME.' <em>'.APP_VERSION_NO.'</em></a> <em>'.APP_VERSION_MARK.'</em></span>');
-function appWebVersion(){return '<span class="vver"><a href="'.APP_VERSION_URL.'" target="_blank" title="'.APP_VERSION_BUILD.' by '.APP_VERSION_UPDATE.'">'.APP_VERSION_NAME.' <em>'.APP_VERSION_NO.'</em></a> <em>'.APP_VERSION_MARK.'</em></span>';}
+function appWebVersion(){return '<span class="vver"><a href="'.APP_VERSION_URL.'" target="_blank" title="'.APP_VERSION_NAME.' '.APP_VERSION_MARK.' '.APP_VERSION_BUILD.' by '.APP_VERSION_UPDATE.'">'.APP_VERSION_PRO.'</a><i>'.APP_VERSION_NO.'</i><em>'.APP_VERSION_MARK.'</em></span>';}
 
 
 define('SYS_TIMEZONE',				8);

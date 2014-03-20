@@ -110,13 +110,10 @@ input[type="color"]
 select,
 textarea,
 input{
-	display:inline-block;
-	width:100%;
-	height:28px;min-height:28px;line-height:1.428571429;
+	display:inline-block;width:100%;height:28px;min-height:28px;line-height:1.428571429;
 	font-size:12px;text-indent:0;vertical-align:middle;
+	border:1px solid #CCC;background-color:#FFF;
 	padding:0 8px;margin:0;
-	background-color:#FFF;
-	border:1px solid #CCC;
 	.sizings();
 	.rc(4px);
 	.shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
@@ -130,8 +127,6 @@ select > option{font-size:12px;padding:5px;}
 textarea{height:auto;min-height:56px;text-indent:0;padding:8px;}
 
 
-input.tipi{padding-left:25px;}/*width:88%;.width_calc_minus(34px);*/
-.unit > input[type="text"]{width:82%;.width_calc_minus(66px);}
 label > input[type="checkbox"]{display:inline-block;margin:5px 5px 5px 0;}
 
 
@@ -209,13 +204,16 @@ input.btn.m{height:38px;padding-top:5px;}
 .forms p.num input[type="text"]{text-align:right;}
 .forms p i{display:none;}
 .forms p.num.unit{width:200px;}
-.forms p.unit{margin:0;}
+.forms p.unit{margin-left:0;}
 .forms p.unit i{display:inline-block;width:42px;height:30px;line-height:30px;font-style:normal;position:absolute;top:0;right:0;overflow:hidden;}
 .forms p.put{height:30px;line-height:28px;}
 .forms dd{height:auto;margin:5px 0;}
 .forms dd p{height:auto;border:0;background:none;}
 .forms dd a.btn{margin-right:10px;}
 .forms dd.tips{display:none;}
+
+input.tipi{padding-left:25px;}/*width:88%;.width_calc_minus(34px);*/
+.unit > input[type="text"]{width:82%;.width_calc_minus(50px);}/*width:82%;.width_calc_minus(66px);*/
 
 /*
 .forms{background:#FFF;}

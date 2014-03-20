@@ -30,6 +30,8 @@
 		<title.space>空间</title.space>
 		<title.online>在线用户</title.online>
 		
+		<title.ua>{@ua:names}</title.ua>
+		<!--
 		<title.user>用户</title.user>
 		<title.user.info>用户信息</title.user.info>
 		<title.user.list>用户列表</title.user.list>
@@ -37,7 +39,8 @@
 		<title.user.home>个人主页</title.user.home>
 		<title.user.space>个人空间</title.user.space>
 		<title.user.online>与我在线</title.user.online>
-		
+		-->
+
 		<title.settings>设置</title.settings>
 		<title.settings.index>我的信息</title.settings.index>
 		<title.settings.info>基本信息</title.settings.info>
@@ -132,7 +135,7 @@
 		<avatar.up.types>small,big</avatar.up.types>
 		<avatar.up.dir><![CDATA[{$sn1}/{$sn2}{$sn3}/]]></avatar.up.dir>
 		<avatar.up.dirsn><![CDATA[{$uuid}]]></avatar.up.dirsn>
-		<avatar.up.dirbase><![CDATA[user/]]></avatar.up.dirbase>
+		<avatar.up.dirbase><![CDATA[{@ua}/]]></avatar.up.dirbase>
 		<avatar.up.filename><![CDATA[{$uuid}_avatar]]></avatar.up.filename>
 		<avatar.up.filetype><![CDATA[gif,jpg,png,bmp]]></avatar.up.filetype>
 		<avatar.up.maxsize></avatar.up.maxsize>
@@ -144,7 +147,7 @@
 		<idcard.up.mode>cert</idcard.up.mode>
 		<idcard.up.dir><![CDATA[{$sn1}/{$sn2}{$sn3}/]]></idcard.up.dir>
 		<idcard.up.dirsn><![CDATA[{$uuid}]]></idcard.up.dirsn>
-		<idcard.up.dirbase><![CDATA[user/]]></idcard.up.dirbase>
+		<idcard.up.dirbase><![CDATA[{@ua}/]]></idcard.up.dirbase>
 		<idcard.up.filename><![CDATA[{$uuid}_idcard_{$rnds}]]></idcard.up.filename>
 		<idcard.up.filetype><![CDATA[gif,jpg,png,bmp]]></idcard.up.filetype>
 		<idcard.up.cover>status</idcard.up.cover>

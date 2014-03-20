@@ -386,7 +386,7 @@ ui.form={
 		if(!this.type) this.type='checkbox';
 		this.obj=obj;
 		this.opt=opt;
-		if(this.obj.find('input').length>6) return;
+		if(this.obj.find('input').length>8) return;
 		var opn_html=this.getOpnHtml();
 		this.obj.after(opn_html);
 		this.bindAction();

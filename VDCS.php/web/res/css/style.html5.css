@@ -245,5 +245,8 @@ hr.none{opacity:0;}
 
 
 /* ######### Struct ######### */
-sh{height:10px;overflow:hidden;}
 .nexta em{font-family:'SimHei','Courier','Verdana';margin:0 5px;}
+
+
+.vver{}
+.vver i,.vver em{display:none;}

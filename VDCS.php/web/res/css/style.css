@@ -78,3 +78,7 @@ al{float:left;display:inline-block;} ar,more,.more{float:right;display:inline-bl
 	0% {opacity:1;}
 	100% {opacity:0;}
 }
+
+
+.vver{}
+.vver i,.vver em{display:none;}

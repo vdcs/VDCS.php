@@ -36,8 +36,6 @@ a:hover{color:#D20000;text-decoration:underline;}		/*,a:active*/
 
 .table-list td{vertical-align:middle;}
 .table-list td.status{line-height:10px;}
-.table-list p.s{display:inline-block;font-size:9.5px;height:12px;line-height:12px!important;padding:0;margin:0;margin-top:5px;overflow:hidden;}
-.table-list p.s{-webkit-transform-origin:left;-webkit-transform:scale(0.83);-webkit-font-size:12px;}
 
 .table-detail th{min-width:80px;_width:90px;}
 .table-detail td{min-width:200px;_width:200px;}

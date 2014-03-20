@@ -19,6 +19,7 @@
 		<priority>3</priority>
 		<from.email></from.email>
 		<from.name></from.name>
+		<tpl>__autoload__</tpl>
 	</config>
 	<config.qq>
 		<smtp.secure>ssl</smtp.secure>		<!-- ssl,tls -->

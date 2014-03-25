@@ -46,6 +46,15 @@ appi.widget={
 	initer:function(){
 		var that=this;
 		this.jwrap=$('#widget');
+		var page_width=parseInt($('#wrapper').width());
+		var margin_left=parseInt(this.jwrap.css('margin-left'));
+		//margin_left=0;
+		if(page_width>0){
+			this.jwrap.css({'left':page_width+margin_left});
+		}
+		else{
+			this.jwrap.css({'left':'auto','right':'15px'});
+		}
 		this.jwrap.show();
 		this.jwrap.on('click','a[class]',function(){
 			return that.click($(this));

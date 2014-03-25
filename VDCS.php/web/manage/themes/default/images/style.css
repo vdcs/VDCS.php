@@ -13,9 +13,8 @@ a:hover{color:#D20000;text-decoration:underline;}		/*,a:active*/
 /* ######################### */
 /* ########## Page ######### */
 /* ######################### */
-#wrapper{clear:both;width:825px;min-height:500px;_height:500px;position:relative;}
-#wrapper:before,
-#wrapper:after{clear:both;display:table;content:"";}
+#wrap{}
+#wrapper{width:825px;min-height:500px;_height:500px;position:relative;.clr();}
 #main{clear:both;}
 #cent{clear:both;width:635px;}
 #sider{clear:both;width:180px;}
@@ -26,12 +25,13 @@ a:hover{color:#D20000;text-decoration:underline;}		/*,a:active*/
 .wrapr #cent{margin:0;margin-right:190px;}
 .wrapr #sider{right:0;}
 
-#side:before,
-#sider:after{clear:both;display:table;content:"";}
-
 /* width=1100,+120 */
 #wrapper{width:945px;}
 #cent{width:755px;}
+
+/* width=1100,+120 */
+#wrapper{width:1090px;}
+#cent{width:900px;}
 
 
 .table-list td{vertical-align:middle;}
@@ -55,7 +55,7 @@ a:hover{color:#D20000;text-decoration:underline;}		/*,a:active*/
 
 
 /* ######### Footer ######## */
-#footer{clear:both;width:945px;height:30px;margin-top:10px;color:#888;font-size:10px;font-family:"Verdana","Arial";}
+#footer{clear:both;width:1090px;height:30px;margin-top:10px;color:#888;font-size:10px;font-family:"Verdana","Arial";}
 #footer .copyright{float:left;display:inline;}
 #footer .version{float:right;display:inline;}
 #footer .version{-webkit-transform-origin:right;-webkit-transform:scale(0.83);-webkit-font-size:12px;}

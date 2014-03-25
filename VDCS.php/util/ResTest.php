@@ -133,7 +133,11 @@ class ResTest
 		$re.=NEWLINE.'Array';
 		$re.=NEWLINE.'(';
 		foreach($ary as $k => $v){
-			$re.=NEWLINE.'    ['.$k.'] => '.self::toStr($v);
+			$str=self::toStr($v);
+			$str=r($str,'&lt;!--','《!==');
+			$str=r($str,'--&gt;','==》');
+
+			$re.=NEWLINE.'    ['.$k.'] => '.$str;
 		}
 		$re.=NEWLINE.')';
 		$re.=NEWLINE.'</pre>';

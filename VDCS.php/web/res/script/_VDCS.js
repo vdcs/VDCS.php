@@ -670,6 +670,7 @@ $tim=$time=dcs.time={date:new Date(),_Data:new Array(),
 		switch(t){	//Y-m-d H:i:s
 			case 'date':	re='Y-M-D';break;
 			case 'dates':	re='M-D H:I';break;
+			case 'datey':	re='Y-M-D H:I';break;
 			case 'timec':	re='y-M-D H:I';break;
 			case 'times':	re=r(this.toConvert(d,'time'),' ','<br/>');if(s=='s') re='<span class="times">'+re+'</span>';return re;break;
 			case 'time':	re='Y-M-D H:I:s';break;
@@ -955,6 +956,7 @@ $dtml=dcs.DTML={
 			case 'explain':		re=$codes.toHTML(re,2,p2); break;
 			case 'date':		re=$time.toConvert(re,'date'); break;
 			case 'dates':		re=$time.toConvert(re,'dates'); break;
+			case 'datey':		re=$time.toConvert(re,'datey'); break;
 			//case 'url':		re=$codes.toURL(re); break;
 			//case 'explain.js':	re=$codes.toJS(toHTMLValue(re,2,0)); break;
 			//case 'money':		re=$codes.toMoney(re); break;

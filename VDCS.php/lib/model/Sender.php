@@ -29,7 +29,7 @@ class Sender
 		if(!$opt['vars']['time.now']) $opt['vars']['time.now']=DCS::now();
 		if(!$opt['vars']['time.today']) $opt['vars']['time.today']=DCS::today();
 
-		if(SendMail::cfg('service')=='xmq' && $op['service']!=='direct'){
+		if(SendMail::cfg('service')=='xmq' && $opt['service']!=='direct'){
 			//{"test":"yes","tpl":"common.test","email":"m@vipx.cn","vars":{"name":"Ranom","time":"2014-03-04"}}
 			$vars=array();
 			$vars['tpl']=$opt['tpl'];

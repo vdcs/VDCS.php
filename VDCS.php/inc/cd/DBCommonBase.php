@@ -217,7 +217,9 @@ class DBCommonBase
 	
 	
 	public static $db;
-	public static function &dbo(){return static::$db;}
+	public static $isiniter=false;
+	public static function initer(){}
+	public static function &dbo(){if(!static::$isiniter) static::$isiniter=static::initer();return static::$db;}
 	public static function debug(){debugx(self::dbo()->getTotal());}
 	
 	// struct

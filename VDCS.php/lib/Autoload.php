@@ -27,6 +27,15 @@ class Autoload
 			if(is_file($path)) return $path;	//break;
 			$path='';
 		}
+		if(!$path && defined('_BASE_PATH_INCLUDE_ASSIST')){
+			$ary=array('lib/','module/','');
+			for($a=0;$a<count($ary);$a++){
+				$path=_BASE_PATH_INCLUDE_ASSIST.$ary[$a].$file;
+				if($debug) debugx('AutoloadPath ROOT: '.$path);
+				if(is_file($path)) return $path;	//break;
+				$path='';
+			}
+		}
 		//debugx('--');
 		if(!$path && function_exists('_autoload_path')){
 			$path=_autoload_path($file);

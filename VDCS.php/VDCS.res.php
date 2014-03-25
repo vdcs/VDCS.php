@@ -28,6 +28,70 @@ class VDCSConfig
 }
 
 
+class VDCSClass
+{
+
+	public static function call($class,$method,$arga){return call_user_func_array(array($class,$method),$arga);}
+	
+	
+	public static function exec($method,$arga){return call_user_func_array(array(__CLASS__,$method),$arga);}
+	
+	public static function mappingParser($opt)
+	{
+		$arga=func_get_args();array_shift($arga);
+		//debuga($arga);
+		$ret=array();
+		$ret['status']='ready';		//$ret['status']?$ret['status']:
+		//##########
+		$classname=$opt[0];$method=$opt[1];
+		$classmethod='parse_'.$method;
+		$ret['class_name']=$classname;
+		$ret['class_method']=$classmethod;
+		//debugx($classname.'::'.$classmethod);
+		//##########
+		if(class_exists($classname,false) || _autoload_::isReal($classname)){
+			$classmethod_real=$classmethod;
+			if(!method_exists($classname,$classmethod_real)){
+				$classmethod_real='parser';
+				array_unshift($arga,$method);
+				//debuga($arga);
+			}
+			if(method_exists($classname,$classmethod_real)){
+				$ret['class_method']=$classmethod_real;
+				$call_ret=call_user_func_array(array($classname,$classmethod_real),$arga);
+				$reta=array('status'=>'call');
+				if(is_array($call_ret)) $reta=$call_ret;
+				elseif(is_bool($call_ret) || is_string($call_ret) || is_numeric($call_ret)) $reta['status']=$call_ret;
+				elseif(!$call_ret) $reta['status']='succeed';
+				else $ret['call_return']=$call_ret;
+				$ret=array_merge($ret,$reta);
+			}else{
+				$ret['status']='_method';
+				$ret['message']='class method not found: '.$classname.'::'.$classmethod;
+			}
+		}else{
+			$ret['status']='_class';
+			$ret['message']='class not found: '.$classname;
+		}
+		return $ret;
+	}
+
+	public static function test($module,$action)
+	{
+		//debuga(func_get_args());
+		$classname='PX_'.ucfirst($module).ucfirst('test');
+		//##########
+		$arga=func_get_args();
+		array_shift($arga);array_shift($arga);
+		array_unshift($arga,array($classname,$action));
+		//##########
+		$ret=VDCSClass::exec('mappingParser',$arga);
+		return $ret;
+	}
+
+}
+
+
 /*
 ################################################
 ################################################

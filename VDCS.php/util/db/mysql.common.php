@@ -3,6 +3,7 @@ trait DBCommon
 {
 	public static function q($re,$q=0)
 	{
+		//mysql_real_escape_string
 		//$re=addslashes($re);
 		//if(get_magic_quotes_gpc()){
 			$re=str_replace('\\','\\\\',$re);

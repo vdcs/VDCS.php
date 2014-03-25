@@ -132,7 +132,7 @@ class WebPortalBase
 {
 	protected $UARC=APP_UA,$UAO='ua',$UAC='ua:';
 	protected $_var=array();
-	protected $treeVar=null;
+	public $treeVar=null;
 	
 	public function __construct()
 	{

@@ -2,7 +2,7 @@
 
 
 /* ######### widget ######## */
-#widget{.posa(10px,965px);}
+#widget{.posa(10px,0);margin-left:10px;}
 #widget > .inners{}
 #widget a{display:block;width:25px;height:25px;background-color:#f2f2f2;.rc(3px);margin-bottom:10px;overflow:hidden;}
 #widget a:hover{background-color:#e7e7e7;}

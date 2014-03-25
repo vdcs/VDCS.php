@@ -62,6 +62,7 @@ class ChannelApiBasic extends WebPortalBase
 		$patha['paths']=$this->apipaths;
 		$patha['paths_dir']=$this->apipaths.$classdir;
 		DCS::pathal(array_values($patha));
+		if(query('debug')=='path') debuga($patha);
 		//classpath
 		if(!isFile($classpath=$patha['path_dir'].$classfile)
 			&& !isFile($classpath=$patha['paths_dir'].$classfile)) $classpath='';

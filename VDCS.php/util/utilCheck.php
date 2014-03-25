@@ -120,6 +120,7 @@ class utilCheck
 	
 	public static function isEmail($re)
 	{
+		//filter_var($emailAddress, FILTER_VALIDATE_EMAIL)
 		if(!isset($re{0})) return false;
 		$tmpstr=strstr($re,'@');
 		if(!$tmpstr) return false;

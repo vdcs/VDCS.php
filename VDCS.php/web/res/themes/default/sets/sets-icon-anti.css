@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/*
+body{background-color:#333;}
+*/
+
+
+#menu{}
+#main{padding-bottom:15px;}
+/*background-color:@anti_bg;*/
+
+.framer{background-color:transparent;}
+#main .conts{margin-right:15px;}
+
+
+#navbar{color:@anti_color;}
+#navbar h2{color:@anti_title_color;}
+#navbar a{color:@anti_acolor;}
+#navbar a:hover{color:@anti_acolor_hover;}
+
+
+.sets_nav{background-color:#F7F7F7;margin-bottom:15px;}
+/*
+.sets_nav{color:@anti_color;}
+.sets_nav a{color:@anti_acolor;}
+.sets_nav a:hover{color:@anti_acolor_hover;}
+*/
+
+.sets_menu{.rc(5px 0 0 5px);}

@@ -1,13 +1,22 @@
 @charset "utf-8";
 
-#headbar_holder{height:40px;margin-bottom:10px;}
 
-#headbar{width:100%;height:39px;border-top:2px solid #CCC;background:#FCFCFC url("bg.png") repeat-x 0 0;_background-image:url("bg.gif");position:fixed;_position:absolute;left:0;top:0;z-index:9999;}
-#headbar{
-	-webkit-box-shadow: 0 -4px 4px 6px rgba(0,0,0,.1);
-	   -moz-box-shadow: 0 -4px 4px 6px rgba(0,0,0,.1);
-		box-shadow: 0 -4px 4px 6px rgba(0,0,0,.1);
-}
+@headbar_height: 40px;
+@headbar_space: 10px;
+@headbar_bg: #FCFCFC;
+@headbar_bg_hover: #EEE;
+@headbar_sub_height: 36px;
+@headbar_acolor: #4C4C4C;
+@headbar_acolor_hover: #FF8400;
+
+.headbar_li(){}
+.headbar_li_hover(){}
+
+
+#headbar_holder{height:@headbar_height;margin-bottom:@headbar_space;}
+
+#headbar{width:100%;height:@headbar_height;background:@headbar_bg url("bg.png") repeat-x 0 0;_background-image:url("bg.gif");position:fixed;_position:absolute;left:0;top:0;z-index:9999;}
+#headbar{.shadow(0 -4px 4px 6px rgba(0,0,0,.1));}
 /*
 border-top-color:#CA0000;
 box-shadow: 0 -8px 8px 12px rgba(0,0,0,.1);
@@ -16,16 +25,16 @@ box-shadow: 0px 1px 3px 0px #aaa;
 #headbar{.opacity(0.9);}
 #headbar > .inners{position:relative;}
 #headbar{font-size:14px;}
-#headbar a{color:#4C4C4C;text-decoration:none!important;}
+#headbar a{color:@headbar_acolor;text-decoration:none!important;}
 #headbar a:hover,
 #headbar li.pop > a,
-#headbar li:hover > a{color:#FF8400;}
+#headbar li:hover > a{color:@headbar_acolor_hover;}
 
 #headbar dl{display:none;width:120px;text-align:left;background-color:#FFF;margin-top:-0px;left:0;position:absolute;overflow:hidden;}
 #headbar dl.al{left:0;right:auto;}
 #headbar dl.ar{left:auto;right:0;}
 #headbar li:hover > dl{display:block;}
-#headbar dd{display:block;width:100%;height:36px;line-height:36px;white-space:nowrap;text-overflow:ellipsis;border-top:1px solid #DDD;}
+#headbar dd{display:block;width:100%;height:@headbar_sub_height;line-height:@headbar_sub_height;white-space:nowrap;text-overflow:ellipsis;border-top:1px solid #DDD;}
 #headbar dl dd:first-child{border-top:0;}
 #headbar dd:hover{background-color:#F7F7F7;}
 #headbar dd > a{display:block;width:100%;}
@@ -38,16 +47,16 @@ box-shadow: 0px 1px 3px 0px #aaa;
 #headbar dd:hover{background-color:#272727;}
 */
 
-#headbar .logo a{float:left;display:inline-block;margin:0 24px 0 0;width:120px;height:38px;background:url("/images/logo_headbar.png") no-repeat 0 -6px;_background-image:url("/images/logo_headbar.gif");}
+#headbar .logo a{float:left;display:inline-block;margin:0 24px 0 0;width:120px;height:@headbar_height;background:url("/images/logo_headbar.png") no-repeat 0 -6px;_background-image:url("/images/logo_headbar.gif");}
 #headbar .logo a:hover{background-position:0 -56px;}
-#headbar .logo a span{display:block;text-indent:-999px;}
+#headbar .logo a span{display:block;.txt_hide();}
 
 #headbar .nav li,
-#headbar .menu li{float:left;display:inline-block;height:39px;line-height:39px;margin-left:0;position:relative;}
+#headbar .menu li{float:left;display:inline-block;height:@headbar_height;line-height:@headbar_height;margin-left:0;position:relative;.headbar_li();}
 #headbar .nav li.pop,
 #headbar .nav li:hover,
 #headbar .menu li.pop,
-#headbar .menu li:hover{color:#FF8400;background:#EEE url("bg.png") repeat-x 0 -76px;_background-image:url("bg.gif");}
+#headbar .menu li:hover{background:@headbar_bg_hover url("bg.png") repeat-x 0 -76px;_background-image:url("bg.gif");.headbar_li_hover();}
 
 #headbar .menu{float:left;}
 #headbar .menu li a{display:inline-block;padding:0 15px;}

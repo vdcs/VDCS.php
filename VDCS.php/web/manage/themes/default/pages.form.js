@@ -89,6 +89,7 @@ extendo(pages,{
 				jitem.focus();
 			}
 		}});
+		this.xaction=xaction;
 	},
 	
 '':''});

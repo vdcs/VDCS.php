@@ -32,7 +32,6 @@ class ChannelXupter
 			echo 'no file';
 			return;
 		}
-		//dcsNoCache();
 		dcsExpires(30);
 		$basepath=XUPTER_PATH_UPLOAD;
 		switch($type){

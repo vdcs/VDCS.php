@@ -24,11 +24,4 @@ trait WebServeRefRes
 		
 	}
 	
-	public function doPutPic($path=null,$im=null)
-	{
-		if(!$im){
-			utilIO::outputImage($path);
-		}
-	}
-	
 }

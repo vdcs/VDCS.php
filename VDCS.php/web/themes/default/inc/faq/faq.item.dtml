@@ -1,4 +1,3 @@
-<a name="_faq_[item:key]" class="hide">&nbsp;</a>
 <h3><t>[item:topic]</t></h3>
+<a name="_faq_[item:key]" class="hide">&nbsp;</a>
 <div class="content">[item:content]</div>
-<div class="space"></div>

@@ -17,7 +17,7 @@ rewrite ^/(about)/(\w+)(-(\w+))?(\.html)?$						/p.php?router=support/faq&page=$
 rewrite ^/(manage)/$									/$1/index.php last;
 
 #common
-rewrite ^/(common/)?(avatar)/((\w+)/)?(\d+)_(\w+)\.(\w+)(\?(.*))?$			/p.php?router=common/avatar&ua=$4&uid=$5&res=$6&ext=$7&$9 last;
+rewrite ^/(common/)?(avatar)/((\w+)/)?(\d+)_(\w+)\.(\w+)(\?(.*))?$			/px.php?px=avatar&ua=$4&uid=$5&res=$6&ext=$7&$9 last;
 rewrite ^/(images|themes|manage/themes)/(.[^\?]*)\.(\w+)(\?(.*))?$			/px.php?px=res&res=$1&type=$3&file=$2.$3&$5 last;
 rewrite ^/up(thumb|thumbm|file|def)/(.*)(\?(.*))?$					/px.php?px=upter&type=$1&file=$2&$4 last;
 rewrite ^/(common/)?x(\w+)\.(.[^\?]*)(\?(.*))?$						/px.php?px=$2&ext=$3&$5 last;

@@ -3,7 +3,7 @@
 	<div class="logo"><a href="<url:root>"><span><app:web.name></span></a></div>
 	<div class="menu">
 		<ul>
-		<li class="pop"><a href="<url:index>"><span>首页</span></a></li>
+		<li class="pop"><a href="<url:root>"><span>首页</span></a></li>
 		<li><a href="<url:account>"><span>帐户</span></a></li>
 		<!--
 		<li><a href="<url:plaza>"><span>广场</span></a></li>

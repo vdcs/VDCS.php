@@ -3,7 +3,8 @@
 
 
 /* ######### navbar ######## */
-#navbar{clear:both;}
+#navbar{clear:both;margin-top:5px;}
+#navbar h2{}
 #navbar h3{margin-top:10px;}
 #navbar h3 a{}
 #navbar h3 a:hover{}
@@ -14,7 +15,7 @@
 /* ########## wrap ######### */
 #menu{width:50px;}
 #main{width:930px;margin-left:0;}
-#main{-webkit-border-radius:0 5px 5px 5px;-o-border-radius:0 5px 5px 5px;border-radius:0 5px 5px 5px;overflow:hidden;}
+#main{background-color:#FFF;.rc(0 5px 5px 5px);}
 
 #main .conts{margin-left:80px;}
 
@@ -22,13 +23,15 @@
 
 
 /* ########## stes ######### */
-.sets_nav{clear:both;padding:10px 20px 20px 20px;}
+.sets_nav{clear:both;padding:10px 20px;margin-bottom:5px;}
 .sets_nav .bars{}
 .sets_nav .bars h2{font-size:30px;}
-.sets_nav .bars p{font-size:14px;color:#969696;line-height:1.5em;}
+.sets_nav .bars p{font-size:14px;color:@color_gray;line-height:1.5em;}
 .sets_nav .links{}
 .sets_nav .links ul{clear:both;height:25px;margin-left:60px;margin-top:20px;}
 .sets_nav .links ul li{float:left;font-size:14px}
-.sets_nav .links ul li a{display:inline-block;width:84px;border-bottom:3px solid #ababab;text-decoration:none}
+.sets_nav .links ul li a{display:inline-block;width:84px;height:23px;border-bottom:3px solid @lcolor_e;text-decoration:none}
 .sets_nav .links ul li.pop a,
-.sets_nav .links ul li a:hover{border-bottom-color:#29abe2;text-decoration:none}
+.sets_nav .links ul li a:hover{border-bottom-color:@lcolor_light;text-decoration:none}
+
+.sets_menu{.rc(5px);}

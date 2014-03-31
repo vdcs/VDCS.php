@@ -7,10 +7,12 @@ class utilIO
 		if(!$filesize) $filesize=strlen($contents);
 		ob_end_clean();
 		ob_start();
+		//dcsLog('io.output','expires='.$expires);
 		if($expires){
-			dcsExpires($expires,true);
+			dcsExpires($expires);		//,true
 		}
 		else{
+			//dcsLog('io.output','noCache');
 			dcsNoCache();
 		}
 		//debugx($filesize.','.$expires.', Content-Type: '.self::toContentType($ext).($charset?'; charset='.$charset:''));

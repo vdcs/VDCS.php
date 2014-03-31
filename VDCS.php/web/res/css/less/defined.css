@@ -3,6 +3,27 @@
 @height_min: 500px;
 @width: 980px;
 
+@color: #000;
+@color_gray: #969696;
+@color_t: #29458C;		/* h3,.topic */
+@color_t2: #235D83;		/* h4.subtopic */
+@acolor: #252525;
+@acolor_hover: #D20000;
+
+/* line color */
+@lcolor: #CCC;
+@lcolor_t: #B0B0B0;		/* t */
+@lcolor_e: #ABABAB;		/* 着重 */
+@lcolor_light: #29abe2;
+
+
+@anti_bg: #FFF;
+@anti_color: #CCC;
+@anti_acolor: #AAA;
+@anti_acolor_hover: #FFF;
+@anti_title_color: #CCC;
+
+
 @menu_width: 200px;
 @main_width: 765px;
 @main_height_min: 400px;
@@ -16,11 +37,6 @@
 @framer_relate_width: 230px;
 @framer_sidem_width: 360px;
 @framer_centm_width: 360px;
-
-
-@color: #000;
-@acolor: #252525;
-@acolor_hover: #D20000;
 
 
 @xform_width: 400px;

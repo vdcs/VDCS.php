@@ -1,3 +1,4 @@
+/* update: 2014-03-29 */
 
 .clr(){
 	:before,
@@ -47,7 +48,7 @@
 }
 .shadow_clr(@value:none){.shadow(@value);}
 .shadow_light(@color:#999;@size:6px){.shadow(0 0 @size @color);}
-.shadow_box(@color:#999;@size:20px){.shadow(0 0 @size 2px @color);}
+.shadow_box(@color:#313131;@size:8px){.shadow(0 4px @size @color);}
 
 .shadowt(@value:none){
 	-webkit-text-shadow:@value;
@@ -92,6 +93,14 @@
 	-webkit-background-clip:@value;
 	   -moz-background-clip:@value;
 		background-clip:@value;
+}
+.bg_blur(@size:4px){
+	filter: url(blur.svg#blur);		/* FireFox, Chrome, Opera */
+	-webkit-filter: blur(@size);		/* Chrome, Opera */
+	   -moz-filter: blur(@size);
+	    -ms-filter: blur(@size);
+		filter: blur(@size);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);	/* IE6~IE9 */
 }
 
 
@@ -153,15 +162,6 @@
 .collapse.in{height:auto;}
 */
 
-
-
-
-.btn_tag(@size:30px;@bg:#EEE;@bgh:#666){
-	height:@size;line-height:@size;
-	.rc(@size);
-	background-color:@bg;
-	:hover{background-color:@bgh;};
-}
 
 .width_calc(@expr){
 	width: -webkit-calc(@expr);

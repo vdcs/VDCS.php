@@ -1,0 +1,12 @@
+
+
+
+
+.btn_tag(@size:10px;@bg:#EEE;@bgh:#666){
+	/*height:@size;line-height:@size;*/
+	padding: 3px @size;
+	.rc(@size);
+	text-decoration: none;
+	background-color:@bg;
+	:hover{background-color:@bgh;};
+}

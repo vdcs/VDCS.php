@@ -1,15 +1,20 @@
 <?
-class ChannelCommonAvatar extends WebPortalBase
+if(dcsNO()){
+require_once(VDCS_PATH.VDCS_UTIL.'/utilIO.php');
+require_once(VDCS_PATH.VDCS_UTIL.'/utilMimeType.php');
+}
+
+class ChannelXavatar
 {
-	//use WebServeRefRes;
-	/*
-	public function doAuth()
+	
+	public static function parser()
 	{
-		$this->doAuther();
-	}
-	*/
-	public function doParse()
-	{
+		$isdebug=false;
+		if(query('debug')) $isdebug=true;
+		//$isdebug=true;
+		//debugx($_SERVER['REQUEST_URI']);
+		//debugx($_SERVER['SCRIPT_NAME'].$_SERVER['PATH_INFO'].'?'.$_SERVER['QUERY_STRING']);
+		
 		//id=10001&res=x48
 		$uid=queryi('uid');
 		$res=query('res');
@@ -30,18 +35,19 @@ class ChannelCommonAvatar extends WebPortalBase
 		}
 		//$filename=$uid.'_avatar_'.$resType;
 		$filename=$uid.'_avatar_{type}';
-		$dirbase=$this->toVarDirParser('{$sn1}/{$sn2}{$sn3}/',$uid);
-		$filepaths=appFilePath('upload/'.APP_UA.'/'.$dirbase.$filename.'.jpg');
+		$dirbase=self::toVarDirParser('{$sn1}/{$sn2}{$sn3}/',$uid);
+		$filepaths=appPaths('upload/'.APP_UA.'/'.$dirbase.$filename.'.jpg');
+		//debugx($filepaths);
 		$filepath=rv($filepaths,'type',$resType);
 		//debugx($filepath);
 		if(!isFile($filepath) && $resType){
 			$filepath=rv($filepaths,'type','big');
 		}
-		if(!isFile($filepath)) $filepath=appFilePath('vdcs.web/res/ua/avatar.gif');
-		//debugx($filepath);
+		if(!isFile($filepath)) $filepath=appPaths('vdcs/web/res/ua/avatar.gif');
+		debugx($filepath);
 		//debugx(DCS::browseURL(true));
-		//dcsExpires(30);
-		//utilIO::outputImage($filepath);
+		dcsExpires(30);
+		utilIO::outputImage($filepath);
 	}
 	
 	public static function toVarDirParser($sdir,$sn='')
@@ -61,4 +67,3 @@ class ChannelCommonAvatar extends WebPortalBase
 	}
 	
 }
-?>

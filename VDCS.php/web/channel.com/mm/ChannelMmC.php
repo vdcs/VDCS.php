@@ -1,6 +1,0 @@
-<?
-class ChannelMmC extends ChannelMmMy
-{
-	
-}
-?>

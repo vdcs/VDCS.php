@@ -1,12 +1,2 @@
 </div>
-</form>
-</div>
-</div><div class="space"></div>
-<script type="text/javascript">
-$(function(){
-	$('.exact_box').find('input[name=search_type]').change(function(){
-		if($('input[name=search_type]:checked').length<1) $('.fields_box').hide();
-		else $('.fields_box').show();
-	});
-});
-</script>
+<label:include file="inc/search.endi">

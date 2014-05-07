@@ -76,7 +76,7 @@ class ManageChannel
 		//debugx($filename);
 		$filepath=VDCSConfig::toPathsReal($this->basepath,$filename,$channel,0);
 		//debugx($filepath);
-		if(!is_file($filepath) && queryx('debug')=='path') debugx($channel.'.'.$filename.' no found: '.$filepath);
+		if(!is_file($filepath) && DEBUGV=='path') debugx($channel.'.'.$filename.' no found: '.$filepath);
 		//##########
 		$cacheName='manage.channel.'.$channel.($module?'_'.$module:'').'.'.$file;
 		//debugx($cacheName);

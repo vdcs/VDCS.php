@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>对IE6/7说再见 - <app:web.name></title>
+	<label:include script="<url:images>support/ie6/style.css" type="css">
+<body>
+<div class="wrapper">
+	<div class="header">
+		<h1></h1>
+		<div class="logo"></div>
+	</div>
+</div>
+<div class="wrapper">
+	<div class="content">
+		<p style="text-indent: 0">尊敬的<app:web.name>用户：</p>
+		<p>Do not Panic。您目前正在访问的依然是<app:web.name>网站。</p>
+		<p>为了与时俱进，提供最先进的体验，<app:web.name> 新版已经完全取消对微软 Internet Explorer 6.0、Internet Explorer 7.0 浏览器的支持，IE6、7 用户无法正常浏览和使用本站。请升级您的低版本IE浏览器至IE8，或者升级至 Chrome、搜狗极速、360极速、火狐、Safari等其他浏览器。新版在 <a href="http://www.google.cn/chrome">Chrome 浏览器</a>下将获得最佳效果。 » <a href="#">了解详情</a></p>
+		<p>感谢您对<app:web.name>的一贯支持。</p>
+		<div class="browsers">
+			<a href="http://www.google.cn/chrome" class="browsers-1"></a>
+			<a href="http://firefox.com.cn/download" class="browsers-2"></a>
+			<a href="http://windows.microsoft.com/zh-CN/internet-explorer/downloads/ie" class="browsers-3"></a>
+			<a href="http://www.apple.com.cn/safari/download" class="browsers-4"></a>
+		</div>
+	</div>
+</div>
+<div class="wrapper">
+	<div class="footer">
+		<p>@<app:year> <a href="<url:root>"><app:web.name></a> AlL rights reserved.</p>
+	</div>
+</div>
+</body>
+</html>

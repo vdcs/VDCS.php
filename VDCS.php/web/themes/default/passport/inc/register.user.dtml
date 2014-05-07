@@ -1,8 +1,5 @@
 ﻿
-<div class="forms m">	
-<form name="frm_post" action="" method="post" >
-<input type="hidden" name="_chk" value="yes" />
-<dl>
+<label:include file="/inc/form/forms.head">
 <dt el="account">
 	<h2>帐号</h2>
 	<h3><p><input type="text" class="tipi" name="account" value="" placeholder="手机号/电子邮箱" data-min="5" minlength="5" maxlength="50" tabindex="1"
@@ -45,13 +42,11 @@
 </dd>
 <dd>
 	<h3>
-	<a class="btn b m" href="<url:register>" el="submit"><span>注册</span></a>
+	<a class="btn f m" href="<url:register>" el="submit"><span>注册</span></a>
 	
 	</h3>
 </dd>
-</dl>
-</form>
-</div>
+<label:include file="/inc/form/forms.end">
 
 
 <label:include file="inc/register.script">

@@ -1,6 +1,0 @@
-<?
-class CompanyMuLabel extends CommonLabel
-{
-	
-}
-?>

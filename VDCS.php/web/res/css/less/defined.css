@@ -3,12 +3,28 @@
 @height_min: 500px;
 @width: 980px;
 
+@font_size: 12px;
+@font_size2: 14px;
+@font_size_b: 14px;
+@font_size_s: 11px;
+@font_size_t: 14px;
+
+
+@mcolor: #89B5E9;
+@mcolor2: #6392C8;
+@mcolor3: #3e6fa8;
+@mcolor_thin: #C8DFE6;
+@mcolor_dark: #6D6F71;
+
+
 @color: #000;
 @color_gray: #969696;
 @color_t: #29458C;		/* h3,.topic */
 @color_t2: #235D83;		/* h4.subtopic */
+@color_thin: #996;
 @acolor: #252525;
 @acolor_hover: #D20000;
+
 
 /* line color */
 @lcolor: #CCC;
@@ -24,12 +40,108 @@
 @anti_title_color: #CCC;
 
 
+/* ui */
+@ui_el_height: 28px;
+@ui_el_height_b: 38px;
+@ui_el_height_s: 22px;
+
+/* btn color */
+@btn_rc: 4px;
+@btn_height: @ui_el_height;
+@btn_padding_lr: 14px;
+@btn_font_size: @font_size;
+@btn_color: #3498DB;
+@btn_color_hover: #FFF;
+@btn_bg: #FFF;
+@btn_bg_hover: #3498DB;
+@btn_border: 1px;
+@btn_borderc: #3498DB;
+@btn_borderc_hover: #3498DB;
+
+@btn_b_rc: 5px;
+@btn_b_height: @ui_el_height_b;
+@btn_b_font_size: @font_size_b;
+@btn_s_rc: 2px;
+@btn_s_height: @ui_el_height_s;
+@btn_s_font_size: @font_size_s;
+@btn_i_rc: 1px;
+@btn_i_height: 15px;
+@btn_i_font_size: 9px;
+
+@btnm_color: #FFF;
+@btnm_bg: #3498DB;
+@btnm_bg_hover: #2980B9;
+@btnc_color: #FFF;
+@btnc_bg: #E74C3C;
+@btnc_bg_hover: #C0392B;
+@btng_color: #FFF;
+@btng_bg: #5cb85c;
+@btng_bg_hover: #47a447;
+
+@btn-primary_color: #FFF;
+@btn-primary_bg: #0044cc;
+@btn-primary_bg_hover: #002a80;
+@btn-warning_color: #FFF;
+@btn-warning_bg: #f89406;
+@btn-warning_bg_hover: #E87E30;
+@btn-danger_color: #FFF;
+@btn-danger_bg: #bd362f;
+@btn-danger_bg_hover: #802420;
+@btn-success_color: #FFF;
+@btn-success_bg: #51a351;
+@btn-success_bg_hover: #387038;
+@btn-info_color: #FFF;
+@btn-info_bg: #2f96b4;
+@btn-info_bg_hover: #1f6377;
+@btn-inverse_color: #FFF;
+@btn-inverse_bg: #222;
+@btn-inverse_bg_hover: #000;
+
+@btn_ico_top: 0;
+@btn_ico_top_b: 2px;
+@btn_ico_top_s: 0;
+
+
+/* form input */
+@input_rc: 4px;
+@input_height: @ui_el_height;
+@input_padding_lr: 8px;
+@input_font_size: @font_size;
+@input_color_placeholder: #999;
+@input_bg: #FFF;
+@input_bg_disabled: #EEE;
+@input_borderc: #CCC;
+@input_borderc_hover: rgba(82, 168, 236, 0.8);
+@input_shadow: 4px;
+@input_shadowc: rgba(82, 168, 236, 0.6);
+
+@input_m_rc: 6px;
+@input_m_height: @ui_el_height_b;
+@input_m_font_size: @font_size_b;
+@input_s_rc: 3px;
+@input_s_height: @ui_el_height_s;
+@input_s_font_size: @font_size_s;
+
+@input_error_color: #b94a48;
+@input_error_borderc: rgb(250, 159, 124);		/*#953b39*/
+@input_error_borderc_hover: rgb(250, 159, 124);
+@input_error_shadow: rgb(253, 211, 198);		/*#d59392*/
+@input_succeed_color: #d6e9c6;
+@input_succeed_borderc: #d6e9c6;		/*#d6e9c6*/
+@input_succeed_borderc_hover: #d6e9c6;
+@input_succeed_shadow: #dff0d8;			/*#dff0d8*/
+
+@forms_item_space: 10px;
+
+
+/* ****** page ****** */
 @menu_width: 200px;
 @main_width: 765px;
 @main_height_min: 400px;
 @main_side_width: 200px;
 @main_space: 15px;
 
+@framer_width: @width;
 @framer_space: 15px;
 @framer_cont_width: 735px;
 @framer_cent_width: 490px;
@@ -43,5 +155,19 @@
 
 
 
+/* common */
+@processi_color: #5BC648;
 
 @linktop: arrow;
+
+
+/* manage */
+@mm_mcolor: @mcolor;
+@mm_mcolor2: @mcolor2;
+@mm_mcolor3: @mcolor3;
+@mm_mcolor_thin: @mcolor_thin;
+@mm_mcolor_dark: @mcolor_dark;
+@mm_bg: #FFF;
+@mm_color: #000;
+@mm_acolor: #004D8E;
+@mm_acolor_hover: #D20000;

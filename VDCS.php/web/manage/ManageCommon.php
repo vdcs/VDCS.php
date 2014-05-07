@@ -8,13 +8,13 @@ class ManageCommon
 		global $_cfg;
 		
 		$_cfg['sys.path']['vdcs.manage']		= VDCS_MANAGE_PATH;
-		$_cfg['sys.path']['vdcs.mchannela']		= defined('VDCS_CHANNELA_MANAGE_PATH')?VDCS_CHANNELA_MANAGE_PATH:VDCS_CHANNELA_PATH;
-		$_cfg['sys.path']['vdcs.mchannelc']		= defined('VDCS_CHANNEL_MANAGE_PATH')?VDCS_CHANNEL_MANAGE_PATH:VDCS_CHANNEL_PATH;
+		$_cfg['sys.path']['vdcs.mchannela']		= VDCS_CHANNELA_PATH;
+		$_cfg['sys.path']['vdcs.mchannelc']		= VDCS_CHANNEL_PATH;
 		$_cfg['sys.path']['vdcs.mchannel']		= defined('VDCS_MANAGE_CHANNEL_PATH')?VDCS_MANAGE_CHANNEL_PATH:VDCS_MANAGE_PATH.'channel/';
 		$_cfg['sys.path']['vdcs.mconfig']		= defined('VDCS_MANAGE_CONFIG_PATH')?VDCS_MANAGE_CONFIG_PATH:VDCS_MANAGE_PATH.'config/';
 		$_cfg['sys.path']['vdcs.mthemes']		= defined('VDCS_MANAGE_THEMES_PATH')?VDCS_MANAGE_THEMES_PATH:VDCS_MANAGE_PATH.'themes/';
 		
-		$_cfg['sys.path']['manage']			= MANAGE_PATH?MANAGE_PATH:($_cfg['sys.path']['root'].self::MANAGE_NAME.'/');
+		$_cfg['sys.path']['manage']			= MANAGE_PATH?MANAGE_PATH:(appDirPath(MANAGE_DIR));
 		$_cfg['sys.path']['manage.common']		= $_cfg['sys.path']['manage'].'common/';
 		$_cfg['sys.path']['manage.config']		= $_cfg['sys.path']['manage'].'config/';
 		$_cfg['sys.path']['manage.channels']		= $_cfg['sys.path']['manage'].'channel/';
@@ -23,27 +23,28 @@ class ManageCommon
 		$_cfg['sys.path']['manage.channelcs']		= CHANNEL_MANAGE_PATH;
 		$_cfg['sys.path']['manage.channelc']		= $_cfg['sys.path']['manage.channelcs'].'{$channel}/'.CHANNEL_M.'/';
 		$_cfg['sys.path']['manage.channelc.config']	= $_cfg['sys.path']['manage.channelc'].'config/';
-		$_cfg['sys.path']['manage.data']		= $_cfg['sys.path']['manage'].'data/';
-		$_cfg['sys.path']['manage.images']		= $_cfg['sys.path']['manage'].'images/';
+		//$_cfg['sys.path']['manage.data']		= $_cfg['sys.path']['manage'].'data/';
+		//$_cfg['sys.path']['manage.images']		= $_cfg['sys.path']['manage'].'images/';
 		$_cfg['sys.path']['manage.themes']		= $_cfg['sys.path']['manage'].'themes/';
 		
-		$_cfg['app']['url.manage']			= defined('MANAGE_URL')?MANAGE_URL:$_cfg['app']['url.root'].MANAGE_DIR.'/';
-		$_cfg['app']['url.manage.dir']			= MANAGE_DIR;
-		$_cfg['app']['url.manage.channel']		= $_cfg['app']['url.manage'].'channel/';
-		$_cfg['app']['url.manage.data']			= $_cfg['app']['url.manage'].'data/';
-		$_cfg['app']['url.manage.images']		= $_cfg['app']['url.manage'].'images/';
-		$_cfg['app']['url.manage.themes']		= $_cfg['app']['url.manage'].'themes/'.(MANAGE_THEME_APP?MANAGE_THEME_APP.'/':'');
-		$_cfg['app']['url.manage.welcome']		= $_cfg['app']['url.manage'].'index.php/welcome';
-		$_cfg['app']['url.manage.frame']		= $_cfg['app']['url.manage'].'index.php/frame';
-		$_cfg['app']['url.manage.frame.nav']		= $_cfg['app']['url.manage'].'index.php/frame/nav';
-		$_cfg['app']['url.manage.frame.menu']		= $_cfg['app']['url.manage'].'index.php/frame/menu';
-		$_cfg['app']['url.manage.main']			= $_cfg['app']['url.manage'].'index.php/main';
-		$_cfg['app']['url.manage.portal']		= $_cfg['app']['url.manage'].'index.php/';
-		$_cfg['app']['url.manage.portals']		= $_cfg['app']['url.manage'].'index.php/{$channel}';
+		$_cfg['app']['url.manage']			= defined('MANAGE_URL')?MANAGE_URL:MANAGE_URLBASE;
+		$_cfg['app']['url.manage.dir']			= $_cfg['app']['url.root'].self::MANAGE_NAME.'/';
+		//$_cfg['app']['url.manage.channel']		= $_cfg['app']['url.manage'].'channel/';
+		//$_cfg['app']['url.manage.data']			= $_cfg['app']['url.manage'].'data/';
+		//$_cfg['app']['url.manage.images']		= $_cfg['app']['url.manage'].'images/';
+		$_cfg['app']['url.manage.themes']		= $_cfg['app']['url.manage.dir'].'themes/'.(APP_MANAGE_THEME?APP_MANAGE_THEME.'/':'');
+		$_cfg['app']['url.manage.router']		= $_cfg['app']['url.manage'].'/';
+		$_cfg['app']['url.manage.welcome']		= $_cfg['app']['url.manage.router'].'welcome';
+		$_cfg['app']['url.manage.frame']		= $_cfg['app']['url.manage.router'].'frame';
+		$_cfg['app']['url.manage.frame.nav']		= $_cfg['app']['url.manage.router'].'frame/nav';
+		$_cfg['app']['url.manage.frame.menu']		= $_cfg['app']['url.manage.router'].'frame/menu';
+		$_cfg['app']['url.manage.main']			= $_cfg['app']['url.manage.router'].'main';
+		$_cfg['app']['url.manage.portal']		= $_cfg['app']['url.manage.router'].'';
+		$_cfg['app']['url.manage.portals']		= $_cfg['app']['url.manage.router'].'{$channel}';
 		$_cfg['app']['url.manage.route']		= '/{$route}';
-		$_cfg['app']['url.manage.login']		= $_cfg['app']['url.manage'].'index.php/login';
-		$_cfg['app']['url.manage.login.x']		= $_cfg['app']['url.manage'].'index.php/loginx';
-		$_cfg['app']['url.manage.logout']		= $_cfg['app']['url.manage'].'index.php/login?action=logout';
+		$_cfg['app']['url.manage.login']		= $_cfg['app']['url.manage.router'].'login';
+		$_cfg['app']['url.manage.login.x']		= $_cfg['app']['url.manage.router'].'loginx';
+		$_cfg['app']['url.manage.logout']		= $_cfg['app']['url.manage.router'].'login?action=logout';
 		
 		$_cfg['manage']['dir']				= 'manage';
 		$_cfg['manage']['common.dir']			= 'common/';
@@ -55,6 +56,7 @@ class ManageCommon
 		//$_cfg['manage']['channel.entrys']		= 'entry.{$portal}.php';
 		
 		//$_cfg['page']['manage.portal.mode']		= 'redirect';
+		//debuga($_cfg);
 	}
 	
 	public static function getPaths($type='config')
@@ -82,7 +84,7 @@ class ManageCommon
 	
 	public static function cfg($k){global $_cfg; return $_cfg['manage'][$k];}
 	
-	public static function NAME() { global $_cfg; return $_cfg['manage']['dir']; }
+	public static function NAME(){return self::cfg('dir');}
 	public static function getURL($s='')
 	{
 		global $_cfg;
@@ -143,34 +145,36 @@ class ManageCommon
 	}
 	
 	
-	public static function entryFile($channel='',$portal=null,$module=null,$modulei=null,$extend=null)
+	public static function entryFile($channel='',$portal=null,$module=null,$modulei=null,$ind=null,$extend=null)
 	{
 		$file='entry';
 		if($portal) $file.='.'.$portal;
 		if($module) $file.='.'.$module;
 		if($modulei) $file.='.'.$modulei;
+		if($ind) $file.='.'.$ind;
 		if($extend) $file.='.'.$extend;
 		$file.='.php';
 		//debugx($file);
 		return $file;
 	}
-	public static function entryPath($channel='',$portal=null,$module=null,$modulei=null,$extend=null)
+	public static function entryPath($channel='',$portal=null,$module=null,$modulei=null,$ind=null,$extend=null)
 	{
-		$file=self::entryFile($channel,$portal,$module,$modulei,$extend);
-		$path=_autoload_path($file);
+		$file=self::entryFile($channel,$portal,$module,$modulei,$ind,$extend);
+		$path=mautoload_path($file);
 		return $path;
 	}
-	public static function entryURL($channel='',$portal=null,$module=null,$modulei=null,$extend=null,$params=null)
+	public static function entryURL($channel='',$portal=null,$module=null,$modulei=null,$ind=null,$extend=null,$params=null)
 	{
 		global $_cfg;
 		$re=$_cfg['app']['url.manage.portals'];
 		$re=rd($re,'channel',$channel);
 		if($portal) $re.=rd($_cfg['app']['url.manage.route'],'route',$portal);
 		if($module) $re.=rd($_cfg['app']['url.manage.route'],'route',$module);
+		if($modulei) $re.=rd($_cfg['app']['url.manage.route'],'route',$modulei);
+		if($ind) $re.=rd($_cfg['app']['url.manage.route'],'route',$ind);
 		if($extend) $re.='.'.$extend;
 		if($params) $re=self::toURL($re,$params);
 		return $re;
 	}
 	
 }
-?>

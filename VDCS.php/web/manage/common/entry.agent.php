@@ -26,6 +26,15 @@ switch($routes[1]){
 		break;
 	case 'portal':
 	default:
+		//debuga($routes);
+		$page_i='';
+		if(inp('i',$routes[count($routes)-1])>0){
+			$page_i=$routes[count($routes)-1];
+			array_pop($routes);
+		}
+		//debuga($routes);
+		define('PAGE_I',$page_i);
+		
 		define('PAGE_CHN',$routes[1]);
 		//if(!$routes[2]) $routes[2]='index';
 		define('PAGE_P',$routes[2]);

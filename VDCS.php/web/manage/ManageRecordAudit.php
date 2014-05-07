@@ -1,32 +1,18 @@
-<?php
-class ManageRecordAudit{
+<?
+class ManageRecordAudit extends StructData
+{
 	const TableName			= 'dbd_record_audit';
 	const TablePX			= '';
 	const FieldID			= 'id';
-	const TableFields		= 'module,rootid,umrc,umid,sorts,types,value,summary,value1,value2,value3,value4,value5,state,status,tim,explain';//value记录审核的值
 	
-	public static function create($ma,$tData){
-		$_status=0;
+	public static function create($ma,$tData)
+	{
 		$tData->addItem('umrc',$ma->rc);
 		$tData->addItem('umid',$ma->id);
 		$tData->addItem('tim',DCS::timer());
 		$tData->addItem('status',1);
-		$_status=self::add($tData);
-		if($isexec) $_status=1;
-		return $_status;
+		return self::add($tData);
 	}
-	
-	
-	public static function add($tData){
-		$_status=0;
-		$sql=DB::sqlInsert(self::TableName,self::TableFields,$tData);
-		$isexec=DB::exec($sql);
-		$id=DB::insertid();
-		$tData->addItem(self::FieldID,$id);
-		if($isexec) $_status=1;
-		return $_status;
-	}
-	
 	
 	public static function view($sqlTerm=''){
 		$treeRS=newTree();
@@ -36,7 +22,6 @@ class ManageRecordAudit{
 		self::doFilterTree($treeRS);
 		return $treeRS;
 	}
-	
 	public static function doFilterTree(&$treeRS)
 	{
 		if($treeRS->getCount()<0) return;
@@ -52,14 +37,15 @@ class ManageRecordAudit{
 		$treeRS->addItem('staffnames',$ary['names']);//员工名
 	}
 	
+
 	public static function query($sqlTerm='',$order='',$limit=0){
 		$sqlQuery=$sqlTerm;
 		$sql=DB::sqlQuery(self::TableName,null,$sqlQuery,$order,$limit);
 		$tableData=self::doFilterData(DB::queryTable($sql));
 		return $tableData;
 	}
-	
-	public static function doFilterData($tableData){
+	public static function doFilterData($tableData)
+	{
 		$tableData->doAppendFields('name,time,status.name');
 		$tableData->doBegin();
 		while($tableData->isNext()){

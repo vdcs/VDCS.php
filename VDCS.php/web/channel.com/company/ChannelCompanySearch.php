@@ -1,6 +1,0 @@
-<?
-class ChannelCompanySearch extends ChannelCompanyList
-{
-	
-}
-?>

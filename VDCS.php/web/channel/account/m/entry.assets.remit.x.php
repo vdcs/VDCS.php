@@ -40,7 +40,7 @@ class PagePortal extends ManagePortalBaseX
 				'module'=>'remit','rootid'=>$id,
 				'type'=>1,'payment'=>'系统汇款'
 			]);
-			unset($uua);	
+			unset($uua);
 		}
 		//##########
 		//$this->doActionParse();

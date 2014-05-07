@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xcml version="1.0" model="data">
+	<configure>
+		<node>wx</node>
+	</configure>
+	<wx>
+		<id></id>
+		<token>TOKEN_VALUE</token>
+	</wx>
+</xcml>

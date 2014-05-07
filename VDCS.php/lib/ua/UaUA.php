@@ -1,22 +1,21 @@
 <?
 class UaUA
 {
-	
 
 	public static function doLoginCheck(&$that,$cookie=false)
 	{
 		if($that->_cfg['auth.model']=='token'){
-			if($that->_isLogin) return;
-			$that->_isLogin=false;
+			if($that->_islogin) return;
+			$that->_islogin=false;
 			$token=$that->getData('_token');
 			if($that->id && $token){
-				$that->_isLogin=true;
+				$that->_islogin=true;
 				$that->setClientData('id',$that->id);
 				$that->setClientData('token',$token);
 			}
 			return;
 		}
-		$that->_isLogin=false;
+		$that->_islogin=false;
 		$_id=$that->id;		//getDataInt('id');
 		//if($_id<1) $_id=$that->getDataInt($that->FieldID);
 		if(!$_id){
@@ -78,7 +77,7 @@ class UaUA
 						//debuga($that->_data);
 						$that->doLoginUpdate($treeDat,$cookie);
 						//debuga($that->_data);
-						if($that->_isLogin){
+						if($that->_islogin){
 							//$treeDat->doFilter($that->TablePX);
 							//$that->parserData($treeDat);
 							//$that->idi=$that->id;
@@ -89,7 +88,7 @@ class UaUA
 			}
 			unset($treeDat);
 		}
-		if(!$that->_isLogin) $that->doLogout();
+		if(!$that->_islogin) $that->doLogout();
 		//exit;
 	}
 	public static function doLoginUpdate(&$that,$treeDat,$cookie=false)
@@ -99,7 +98,7 @@ class UaUA
 		$that->id=$treeDat->getItemInt('id');
 		//debugx(($that->id.'--'.$treeDat->getItem('name').'--'.$treeDat->getItem('email'));
 		if($that->id>0){	// && ($treeDat->getItem('name') || $treeDat->getItem('email'))
-			$that->_isLogin=true;
+			$that->_islogin=true;
 			//debugx($treeDat->getItem('_password'));
 			if($cookie){
 				$remember=$treeDat->getItem('_remember');
@@ -143,7 +142,7 @@ class UaUA
 		$that->delClientDatas('infos');
 		//$that->delClientData('login.url.referer');
 		$that->initData();
-		$that->_isLogin=false;
+		$that->_islogin=false;
 	}
 
 
@@ -151,10 +150,10 @@ class UaUA
 	########################################
 	########################################
 	*/
-	public static function getURL(&$that,$t='',$urlMode=null)
+	public static function getURL(&$that,$t='',$url_mode=null)
 	{
 		global $cfg;
-		if($urlMode==null) $urlMode=$that->_urlMode;
+		if($url_mode==null) $url_mode=$that->_cfg['url.mode'];
 		if($t!='base') $re=appURL($that->rc.'.'.$t);
 		switch($t){
 			case 'login':
@@ -164,7 +163,7 @@ class UaUA
 				if(!$re) $re=$cfg->getChannelValue('passport','configure','url.'.$that->rc.'.login');
 				if(!$re) $re=$cfg->getChannelValue('passport','configure','url.login.agent');
 				if(!$re) $re=$cfg->getChannelValue('passport','configure','url.login');
-				if($urlMode>0){
+				if($url_mode>0){
 					if(ins($re,'{$url}')>0) $re=rd($re,'url',DCS::browsePath(true));
 					else $that->setClientData('login.url.referer',DCS::browsePath(true));
 				}
@@ -179,10 +178,10 @@ class UaUA
 				break;
 			case 'base':
 			default:
-				if($urlMode>0) $re=$that->getURLReferer(false);
+				if($url_mode>0) $re=$that->getURLReferer(false);
 				if(!$re) $re=appURL($that->rc.'.index');
 				if(!$re) $re=appURL($that->rc.'.m');
-				if(!$re && $urlMode>0) $re=$that->getURLReferer(false);
+				if(!$re && $url_mode>0) $re=$that->getURLReferer(false);
 				if(!$re) $re=appURL('account');
 				break;
 		}

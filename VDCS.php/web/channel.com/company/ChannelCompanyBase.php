@@ -1,3 +1,0 @@
-<?
-class ChannelCompanyBase extends ChannelCompanyBasic{}
-?>

@@ -25,4 +25,19 @@ class ResLog
 		}
 	}
 	
+	public static function action($name='action',$value='')
+	{
+		if(!$name) $name='action';
+		$content='';
+		$content.=NEWLINE.DCS::now();
+		$content.=NEWLINE.'Request URI: '.$_SERVER['REQUEST_URI'];
+		$content.=NEWLINE.'Script Info: '.$_SERVER['SCRIPT_NAME'].' ? '.$_SERVER['QUERY_STRING'];
+		$content.=NEWLINE.'BROWSER URL: '.DCS::browseURL(true);
+		$content.=NEWLINE.'sid: '.session_id().' , '.$_REQUEST['PHPSESSID'];
+		$content.=NEWLINE.'ip: '.DCS::ip().' , '.DCS::agent();
+		$content.=NEWLINE.NEWLINE.'_GET'.NEWLINE.ResTest::pr($_GET,true).NEWLINE.'_POST'.NEWLINE.ResTest::pr($_POST).$GLOBALS["HTTP_RAW_POST_DATA"].NEWLINE;
+		if($value) $content.=NEWLINE.NEWLINE.$value;
+		doFileWrite(appFilePath('data/log/'.$name.'.log'),NEWLINE.$content.NEWLINE,FILE_APPEND);
+	}
+	
 }

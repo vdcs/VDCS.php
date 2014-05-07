@@ -1,0 +1,42 @@
+<label:include file="frame/headers">
+
+
+<div class="cont">
+	<div class="box">
+		<h2><t><langs:chn.new><channel:var("names")></t><r><a href="<linkurl:{@channel}.lists>"><langs:chn.more></a></r></h2>
+		<div class="con">
+<div class="StructList" style="height:233px;"><ul>
+<label:block("{@channel}","res=new;row=8;m=multi;cache=;t=ci")>
+<label:include file="/inc/element.item.pro">
+<@part:item1>
+<li class="item1">
+<span class="topic"><a href="[item:linkurl]">[item:topic!html!42]</a></span>
+<span class="infos"><span class="explain">[item:summary!text!115]</span>
+<span class="total-view"><em>[item:total.view]</em></span> <span class="class">[item:class]</span> <r><a href="[item:linkurl]"><langs:chn.detail></a></r>
+</span></li>
+</label:end>
+</ul></div>
+		</div>
+	</div>
+<label:include file="frame/special">
+	<div class="space"></div>
+<dtml-loop:class.root!v>
+	<div class="box">
+		<h2><t>[v:name]</t><r><a href="[v:url]"><langs:chn.more></a></r></h2>
+		<div class="con">
+<div class="StructList"><ul>
+<label:block("{@channel}","res=new;classid=[v:classid];row=10;cache=;t=ci[v:classid]")>
+<label:include file="/inc/element.item.pro">
+</label:end>
+</ul></div>
+		</div>
+	</div>
+	<div class="space"></div>
+</dtml-loop>
+</div>
+<div class="sider">
+<label:include file="frame/sider">
+</div>
+
+
+<label:include file="frame/footers">

@@ -1,8 +1,5 @@
 ﻿
-<div class="forms m">
-<form name="frm_login" action="" method="post" >
-<input type="hidden" name="_chk" value="yes" />
-<dl>
+<label:include file="/inc/form/forms.head">
 <dt el="id">
 	<h2>帐号</h2>
 	<h3><p><input type="text" class="tipi" name="name" value="" placeholder="邮箱/手机号" minlength="5" maxlength="50" tabindex="1" /><em class="it name"></em><em class="ih require" title="可以输入您帐号相关的邮箱/手机号"></em></p></h3>
@@ -21,7 +18,7 @@
 </dd>
 <dd>
 	<h3>
-	<a class="btn b m" href="<url:login>" el="submit"><span>登录</span></a>
+	<a class="btn f m" href="<url:login>" el="submit"><span>登录</span></a>
 	</h3>
 </dd>
 <dd>
@@ -31,9 +28,7 @@
 </div>
 	</h3>
 </dd>
-</dl>
-</form>
-</div>
+<label:include file="/inc/form/forms.end">
 
 
 <label:include file="inc/login.script">

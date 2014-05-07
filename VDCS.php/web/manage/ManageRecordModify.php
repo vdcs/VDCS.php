@@ -1,5 +1,6 @@
-<?php
-class ManageRecordModify{
+<?
+class ManageRecordModify
+{
 	const TableName			= 'dbd_record_modify';
 	const TablePX			= '';
 	const FieldID			= 'id';
@@ -140,6 +141,5 @@ class ManageRecordModify{
 		if($isexec) $_status=1;
 		return $_status;
 	}
+	
 }
-
-?>

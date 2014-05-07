@@ -140,7 +140,7 @@ class ChannelXupter
 	{
 		$basepath=pathinfo($filepath)['dirname'].'/';
 		$thumbpath=$basepath;
-		$thumbname=utilPic::toMakeThumb($basepath,$filepath,$thumbpath,$thumbname,$thumbwidth,$thumbheight,0,75);
+		$thumbname=utilImage::toMakeThumb($basepath,$filepath,$thumbpath,$thumbname,$thumbwidth,$thumbheight,0,75);
 		//debugx($thumbname);
 		return $basepath.$thumbname;
 	}

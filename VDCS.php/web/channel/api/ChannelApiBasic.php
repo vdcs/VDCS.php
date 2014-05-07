@@ -12,7 +12,8 @@ class ChannelApiBasic extends WebPortalBase
 	{
 		$this->apipaths=appDirPath('vdcs.web/channel/'.APP_CHANNEL.'/');
 		//debugxx('apipaths='.$this->apipaths);
-		$this->apipath=defined('PATH_API')?PATH_API:appDirPath('common/channel/'.APP_CHANNEL.'/');
+		$this->apipath=defined('APP_API_PATH')?APP_API_PATH:appDirPath('common/api/');
+		if(!is_dir($this->apipath)) $this->apipath=appDirPath('common/channel/'.APP_CHANNEL.'/');
 		//debugxx('apipath='.$this->apipath);
 		$this->basepath=$this->apipath;
 		
@@ -40,7 +41,10 @@ class ChannelApiBasic extends WebPortalBase
 	{
 		//$classname='api'.ucfirst($this->apip).ucfirst($this->apim);
 		//$classfile=ucfirst($this->apip).ucfirst($this->apim).EXT_SCRIPT;
-		$classname=$this->API_CLASS_PREFIX.'_'.$this->api.'_'.$this->apip;
+		$classname=$this->API_CLASS_PREFIX.'_'.$this->api;
+		if($this->apip){
+			$classname.='_'.$this->apip;
+		}
 		$classfilename=$this->apip;
 		if($this->apim){
 			$classname.='_'.$this->apim;
@@ -50,8 +54,10 @@ class ChannelApiBasic extends WebPortalBase
 				$classfilename.='.'.$this->apimi;
 			}
 		}
+		if($this->apip) $apidir=$this->api.'/';
+		else $classfilename=$this->api;
+		debugxx('classfilename='.$classfilename);
 		$classfilename.=EXT_SCRIPT;
-		$apidir=$this->api.'/';
 		$classdir=$this->API_DIR.'/';
 		//debugxx('classdir='.$classdir.', apidir='.$apidir);
 		$classfile=$apidir.$classfilename;
@@ -73,7 +79,7 @@ class ChannelApiBasic extends WebPortalBase
 			&& !isFile($baseclasspath=$patha['paths_dir'].$apidir.$baseclassfile)
 			&& !isFile($baseclasspath=$patha['path_dir'].$baseclassfile)
 			&& !isFile($baseclasspath=$patha['paths_dir'].$baseclassfile)) $baseclasspath='';
-		//debugxx('baseclasspaths='.$baseclasspath);
+		debugxx('baseclasspaths='.$baseclasspath);
 	}
 	
 	public function apiParser()

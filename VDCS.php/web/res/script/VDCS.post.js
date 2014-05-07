@@ -1,7 +1,7 @@
 /*
 Version:	VDCS Post Library
-Support:	http://go.hpns.cn/vdcs/js
-Uodated:	2012-07-00
+Support:	http://uri.sx/vdcs.js
+Uodated:	2014-04-00
 */
 
 

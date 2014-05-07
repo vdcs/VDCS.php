@@ -11,7 +11,7 @@ class SendSMSNbark
 		if(!$rets) $rets=array();
 		if(isTree($params)) $params=$params->getArray();
 		$isdebug=$params['debug'];
-		if(!$isdebug && queryx('debug')=='sms') $isdebug=true;
+		if(!$isdebug && DEBUGV=='sms') $isdebug=true;
 		$re=false;
 		$url=$treeConfig->getItem('url');
 		//$routename='ROUTE_'.toUpper($route?$route:'ct');

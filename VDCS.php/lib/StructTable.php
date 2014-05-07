@@ -2,127 +2,47 @@
 class StructTable
 {
 	protected $TableName='',$TablePX='',$FieldID='';
+	protected $_var=array();
 	protected $Fielda=array();
 	
-	public function __construct($table='',$px='',$id='')
+	public function __construct($table='',$id='',$opt=[])
 	{
 		$this->TableName=$table;
-		$this->TablePX=$px;
+		$this->TablePX=$opt['px'];
 		$this->FieldID=$id;
-		$this->__constructExtend();
+		$this->_var['query']='';
+		$this->_var['order']='';
+		$this->_var['limit']='';
 	}
 	public function __destruct(){}
 	
 	
-	protected function __constructExtend(){}
 	public function __toString(){return $this->TableName;}
-
-
-	public function getTable(){return $this->TableName;}
-	public function setTable($name){return $this->TableName=$name;}
-
 	
-	public function count(){
-		$count=(int) DB::result_first("SELECT count(*) FROM ".DB::table($this->TableName));
-		return $count;
-	}
-
-	public function update($val, $data, $unbuffered=false, $low_priority=false){
-		if(isset($val) && !empty($data) && is_array($data)){
-			$this->checkpk();
-			$ret=DB::update($this->TableName, $data, DB::field($this->_pk, $val), $unbuffered, $low_priority);
-			foreach((array)$val as $id){
-				$this->update_cache($id, $data);
-			}
-			return $ret;
-		}
-		return !$unbuffered ? 0 : false;
-	}
-
-	public function delete($val, $unbuffered=false){
-		$ret=false;
-		if(isset($val)){
-			$this->checkpk();
-			$ret=DB::delete($this->TableName, DB::field($this->_pk, $val), null, $unbuffered);
-			$this->clear_cache($val);
-		}
-		return $ret;
-	}
-
-	public function truncate(){
-		DB::query("TRUNCATE ".DB::table($this->TableName));
-	}
-
-	public function insert($data, $return_insert_id=false, $replace=false, $silent=false){
-		return DB::insert($this->TableName, $data, $return_insert_id, $replace, $silent);
-	}
-
-	public function checkpk(){
-		if(!$this->_pk){
-			throw new DbException('Table '.$this->TableName.' has not PRIMARY KEY defined');
-		}
-	}
-
-	public function fetch($id, $force_from_db=false){
-		$data=array();
-		if(!empty($id)){
-			if($force_from_db || ($data=$this->fetch_cache($id)) === false){
-				$data=DB::fetch_first('SELECT * FROM '.DB::table($this->TableName).' WHERE '.DB::field($this->_pk, $id));
-				if(!empty($data)) $this->store_cache($id, $data);
-			}
-		}
-		return $data;
-	}
-
-	public function fetch_all($ids, $force_from_db=false){
-		$data=array();
-		if(!empty($ids)){
-			if($force_from_db || ($data=$this->fetch_cache($ids)) === false || count($ids) != count($data)){
-				if(is_array($data) && !empty($data)){
-					$ids=array_diff($ids, array_keys($data));
-				}
-				if($data === false) $data =array();
-				if(!empty($ids)){
-					$query=DB::query('SELECT * FROM '.DB::table($this->TableName).' WHERE '.DB::field($this->_pk, $ids));
-					while($value=DB::fetch($query)){
-						$data[$value[$this->_pk]]=$value;
-						$this->store_cache($value[$this->_pk], $value);
-					}
-				}
-			}
-		}
-		return $data;
-	}
-
-	public function fetch_all_field(){
-		$data=false;
-		$query=DB::query('SHOW FIELDS FROM '.DB::table($this->TableName), '', 'SILENT');
-		if($query){
-			$data=array();
-			while($value=DB::fetch($query)){
-				$data[$value['Field']]=$value;
-			}
-		}
-		return $data;
-	}
-
-	public function range($start=0, $limit=0, $sort=''){
-		if($sort){
-			$this->checkpk();
-		}
-		return DB::fetch_all('SELECT * FROM '.DB::table($this->TableName).($sort ? ' ORDER BY '.DB::order($this->_pk, $sort) : '').DB::limit($start, $limit), null, $this->_pk ? $this->_pk : '');
-	}
-
-	public function optimize(){
-		DB::query('OPTIMIZE TABLE '.DB::table($this->TableName), 'SILENT');
-	}
-
-	public function attach_before_method($name, $fn){
-		$this->methods[$name][0][]=$fn;
-	}
-
-	public function attach_after_method($name, $fn){
-		$this->methods[$name][1][]=$fn;
-	}
-
+	
+	public function table($value){$this->TableName=$value;return &$this;}
+	public function where($query,$term=''){$this->_var['query']=DB::sqla($this->_var['query'],$query,$term);return &$this;}
+	public function order($value){$this->_var['order']=$value;return &$this;}
+	public function limit($start,$row=null){$this->_var['limit']=DB::sqlLimit($start,$row);return &$this;}
+	
+	
+	public function count(){return DB::exec(DB::sqlSelect($this->TableName,'count','',$this->_var['query']);}
+	public function sql(){return DB::sqlSelect($this->TableName,'','*',$this->_var['query'],$this->_var['order'],$this->_var['limit']);}
+	public function exec(){return DB::exec($this->sql());}
+	public function query(){return DB::query($this->sql());}
+	public function queryi(){return DB::queryInt($this->sql());}public function queryInt(){return DB::queryInt($this->sql());}
+	public function queryn(){return DB::queryNum($this->sql());}public function queryNum(){return DB::queryNum($this->sql());}
+	public function queryTree(){return DB::queryTree(DB::sqlSelect($this->TableName,'','*',$this->_var['query'],$this->_var['order'],1));}
+	public function queryTable(){return DB::queryTable($this->sql());}
+	
+	public function insert($values){return DB::exec(DB::sqlInsert($this->TableName,null,$values);}
+	public function insertx($values){return DB::exec(DB::sqlInsertx($this->TableName,null,$values);}
+	public function update($values){return DB::exec(DB::sqlUpdate($this->TableName,null,$values,$this->_var['query']));}
+	public function updatex($values){return DB::exec(DB::sqlUpdatex($this->TableName,null,$values,$this->_var['query']));}
+	public function delete($values){return DB::exec(DB::sqlDelete($this->TableName,$this->_var['query']));}
+	
+	
+	public function exist(){return DB::isTableExist($this->TableName);}
+	public function clear(){return DB::exec('TRUNCATE '.$this->TableName);}public function truncate(){return $this->clear();}
+	public function optimize(){return DB::exec('OPTIMIZE TABLE '.$this->TableName, 'SILENT');}
 }

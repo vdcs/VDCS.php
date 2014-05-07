@@ -97,19 +97,16 @@ class ChannelCommonDemoX extends ChannelCommonBaseX
 			$i++;	
 		}
 		$fields=$this->resTable->getFields();//获取table对象的所以字段
-		debugs($fields);//uid,email,name,number,number1
+		debugx($fields);//uid,email,name,number,number1
 		debugTable($this->resTable);
 		/*
-		[1]	10000	gm@gameadd.cn		Game+		1	2
+		[1]	10000	gm@vdcs.cn		GM		1	2
 		[2]	10001	1192726720@qq.com	test		2	3
 		[3]	10002	fincos@qq.com		Finco		3	4
-		[4]	10003	marics.1124@gmail.com	maric		4	5
 		[5]	10004	ranom@qq.com		Ranom		5	6
 		[6]	10005	haha@qq.com		haha		6	7
-		[7]	10006	37970626@qq.com		martine		7	8
 		[8]	10007	hehe@test.com		hehe		8	9
 		[9]	10008	sh@test.com		shsh		9	10
-		[10]	10009	3797062611@qq.com	martine		10	11
 		*/
 		
 		

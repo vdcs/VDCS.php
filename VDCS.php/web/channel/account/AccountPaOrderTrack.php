@@ -1,5 +1,5 @@
 <?
-define('APP_CHANNEL_ASSISTS','shop,article');
+define('APP_CHANNEL_ASSISTS','shop');
 class AccountPaOrderTrack extends ChannelPaBase
 {
 	use ShopRefOrderView;
@@ -15,4 +15,3 @@ class AccountPaOrderTrack extends ChannelPaBase
 	}
 	
 }
-?>

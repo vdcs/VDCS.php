@@ -20,7 +20,7 @@ class CommonPaPaymentYeepayReturn extends ChannelPaBase
 			return;
 		}
 		
-		debugx($tradeno);
+		//debugx($tradeno);
 
 		$this->treeVar->addItem('tradeno',$tradeno);
 		//if($isdebug) debugx("trade_status=".$trade_status);

@@ -1,0 +1,25 @@
+<label:include file="frame/headers">
+
+
+<div class="cont">
+	<div class="box">
+		<h2><t><channel:nav("")></t></h2>
+		<div class="cont">
+<span class="gray"><langs:search.caption.keyword>: <script>put(appCommon.toTagLink("",$url.toDecode($request.getQuery("keyword")),"<a href=\"?keyword={$keys.encode}&sea_field=topic\">{$keys}</a>"));</script></span>
+<span class="gray small">(<paging:total> <langs:chn.units>)</span>
+		</div>
+		<div class="con">
+<div class="StructListPic"><ul>
+<ul>
+<label:list>
+<label:include file="/inc/e/list.item.pic">
+</label:end>
+</ul></div>
+		
+		</div>
+<label:include file="/inc/e/paging.box">
+	</div>
+</div>
+
+
+<label:include file="frame/footers">

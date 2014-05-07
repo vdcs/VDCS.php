@@ -1,46 +1,42 @@
 <?php
-@set_time_limit(60);
-//ini_set('magic_quotes_runtime',0);		//function_exists('set_magic_quotes_runtime') && set_magic_quotes_runtime(0);
-define('MAGIC_QUOTES_GPC',FALSE);		//get_magic_quotes_gpc()?TRUE:
+@set_time_limit(60);define('MAGIC_QUOTES_GPC',FALSE);
 //function_exists('date_default_timezone_set') && date_default_timezone_set('Etc/GMT+0');
-define('MEMORY_LIMIT_ON',function_exists('memory_get_usage'));
-if(MEMORY_LIMIT_ON) $GLOBALS['_memory_start_']	= memory_get_usage();
+define('MEMORY_LIMIT_ON',function_exists('memory_get_usage'));		if(MEMORY_LIMIT_ON) $GLOBALS['_memory_start_']=memory_get_usage();
 define('ISRUN',version_compare(PHP_VERSION,'5.4')>-1?TRUE:FALSE);
 //==============================================
-if(!defined('VDCS')) include('util/VDCS.c.php');
-define('VDCS_BUILD',				'0.9.1.5');
-define('VDCS_UPDATE',				'2014-01-07');
+if(!defined('VDCS')) require('util/VDCS.c.php');
+define('VDCS_BUILD',				'0.9.1.6');
+define('VDCS_UPDATE',				'2014-04-30');
 //==============================================
 if(!defined('VDCS_PATH')) define('VDCS_PATH',dirname(__FILE__).'/');
 define('_BASE_PATH_VDCS',			VDCS_PATH);
+defined('VAX_PATH') || 				define('VAX_PATH',				dirname(VDCS_PATH).'/VAX.php/');
 //==============================================
-defined('_BASE_DIR_ROOT') || 			define('_BASE_DIR_ROOT',		'/');
-defined('_BASE_PATH_INCLUDE') || 		define('_BASE_PATH_INCLUDE',		substr(dirname(__FILE__),0,-4));
-defined('_BASE_PATH_ROOT') || 			define('_BASE_PATH_ROOT',		substr(_BASE_PATH_INCLUDE,0,-15));
-defined('_BASE_PATH_COMMON') || 		define('_BASE_PATH_COMMON',		substr(_BASE_PATH_INCLUDE,0,-8));
-defined('_BASE_DIR_DATA') || 			define('_BASE_DIR_DATA',		'data/');
-defined('_BASE_DIR_UPLOAD') || 			define('_BASE_DIR_UPLOAD',		'upload/');
-defined('VDCS_CONFIG_PATH') || 			define('VDCS_CONFIG_PATH',		VDCS_PATH.'config/');
-defined('VDCS_MODULE_PATH') || 			define('VDCS_MODULE_PATH',		VDCS_PATH.'module/');
-defined('VDCS_UTIL') || 			define('VDCS_UTIL',			'util');
-defined('VDCS_LIB') || 				define('VDCS_LIB',			'lib');
-defined('VDCS_INC') || 				define('VDCS_INC',			'inc');
-defined('VDCS_INC_PATH') || 			define('VDCS_INC_PATH',			VDCS_PATH.VDCS_INC.'/');
-defined('VDCS_CD_PATH') || 			define('VDCS_CD_PATH',			VDCS_PATH.'inc/cd/');
-defined('VDCS_WEB') || 				define('VDCS_WEB',			'web');
-defined('VDCS_WEB_PATH') || 			define('VDCS_WEB_PATH',			VDCS_PATH.VDCS_WEB.'/');
-defined('VDCS_WEB_CONFIG_PATH') || 		define('VDCS_WEB_CONFIG_PATH',		VDCS_WEB_PATH.'config/');
-defined('VDCS_WEB_CHANNEL_DIR') || 		define('VDCS_WEB_CHANNEL_DIR',		'channel');
-defined('VDCS_WEB_CHANNEL') || 			define('VDCS_WEB_CHANNEL',		'cms');
-defined('VDCS_WEB_CHANNELA_DIR') || 		define('VDCS_WEB_CHANNELA_DIR',		'channel.'.VDCS_WEB_CHANNEL);
-defined('VDCS_CHANNEL_PATH') || 		define('VDCS_CHANNEL_PATH',		VDCS_WEB_PATH.VDCS_WEB_CHANNEL_DIR.'/');
-defined('VDCS_CHANNELA_PATH') || 		define('VDCS_CHANNELA_PATH',		VDCS_WEB_PATH.VDCS_WEB_CHANNELA_DIR.'/');
-defined('VDCS_MANAGE_PATH') || 			define('VDCS_MANAGE_PATH',		VDCS_WEB_PATH.'manage/');
-//echo '_BASE_PATH_ROOT='._BASE_PATH_ROOT.NEWLINE.'_BASE_PATH_COMMON='._BASE_PATH_COMMON.NEWLINE.'_BASE_PATH_INCLUDE='._BASE_PATH_INCLUDE.NEWLINE;
 //==============================================
-defined('DIR_SEPARATOR') || 			define('DIR_SEPARATOR',			'/');
-defined('FILE_SEPARATOR') || 			define('FILE_SEPARATOR',		'/');
-
+defined('_BASE_DIR_ROOT') || 			define('_BASE_DIR_ROOT',			'/');
+defined('_BASE_DIR_COMMON') || 			define('_BASE_DIR_COMMON',			'common/');
+defined('_BASE_DIR_DATA') || 			define('_BASE_DIR_DATA',			'data/');
+defined('_BASE_DIR_UPLOAD') || 			define('_BASE_DIR_UPLOAD',			'upload/');
+defined('_BASE_PATH_ROOT') || 			define('_BASE_PATH_ROOT',			dirname(dirname(__FILE__)).'/www/');
+defined('_BASE_PATH_COMMON') || 		define('_BASE_PATH_COMMON',			_BASE_PATH_ROOT._BASE_DIR_COMMON);
+defined('APP_BASEURL') || 			define('APP_BASEURL',				_BASE_DIR_ROOT);
+defined('APP_VAX') || 				define('APP_VAX',				'');
+defined('APP_CHANNELA') || 			define('APP_CHANNELA',				'');
+defined('APP_UA') ||				define('APP_UA',				'user');
+define('VDCS_CONFIG',				'config');					define('VDCS_CONFIG_PATH',			VDCS_PATH.'config/');
+define('VDCS_UTIL',				'util');
+define('VDCS_LIB',				'lib');
+define('VDCS_WEB',				'web');						define('VDCS_WEB_PATH',				VDCS_PATH.VDCS_WEB.'/');
+define('VDCS_CHANNEL',				'channel');					define('VDCS_CHANNEL_PATH',			VDCS_WEB_PATH.VDCS_CHANNEL.'/');
+define('VDCS_CHANNELA',				'channel.'.APP_CHANNELA);			define('VDCS_CHANNELA_PATH',			VDCS_WEB_PATH.VDCS_CHANNELA.'/');
+define('VDCS_INC',				'inc');						define('VDCS_INC_PATH',				VDCS_PATH.VDCS_INC.'/');
+define('VDCS_CD_PATH',				VDCS_PATH.'inc/cd/');
+define('VDCS_MANAGE',				'manage');					define('VDCS_MANAGE_PATH',			VDCS_WEB_PATH.'manage/');
+//echo '_BASE_PATH_ROOT='._BASE_PATH_ROOT.NEWLINE.'_BASE_PATH_COMMON='._BASE_PATH_COMMON.NEWLINE;
+//==============================================
+defined('DIR_SEPARATOR') || 			define('DIR_SEPARATOR',				'/');
+defined('FILE_SEPARATOR') || 			define('FILE_SEPARATOR',			'/');
+//PATH_SEPARATOR
 define('PATTERN_FLAG',				'(.+?)');
 define('PATTERN_FLAG_VAR',			'([\w\-\_\.\:]*)');
 define('PATTERN_FLAG_LABEL',			'([^>"]*)');
@@ -57,7 +53,7 @@ define('PATTERN_PRE',				'/{\@([^{\}]*)}/ies');
 define('PATTERN_VAR',				'/{\$([^{\}}]*)}/ies');
 define('PATTERN_VAR_PX',			'/\{\${\$px}([^\{\}\}]*)\}/ies');
 //==============================================
-function timer(){return microtime(true);}function timerBegin(){$GLOBALS['_timer_begin_']=timer();}function timerExec(){return timer()-$GLOBALS['_timer_begin_'];}
+function timer(){return microtime(true);}function timerBegin(){$GLOBALS['_timer_begin_']=timer();}function timerExec($len=8){return number_format(timer()-$GLOBALS['_timer_begin_'],$len);}
 //==============================================
 function iss($s){return isset($s{0});}
 function isequal($s,$v){return $s==$v;}		function iscmp($s,$s2){return strcasecmp($s,$s2)==0?false:true;}
@@ -86,44 +82,33 @@ function requestn($k){return floatval($_REQUEST[$k]);}
 function requestx($k){$re=trim($_REQUEST[$k]);return isx($re)?$re:'';}
 }
 //==============================================
-//include('zextend/test.php');
+//require('zextend/test.php');
+define('DEBUGV',queryx('debug'));
 
 
 //==============================================
+function timeout($n=60){@set_time_limit($n);}
+function datei($fmt='Y-m-d H:i:s',$stamp=0){return gmdate($fmt,($stamp?$stamp:time())+DCS::timezone(1));}
 function extLoad($extname){if(!extension_loaded($extname)){$px=(PHP_SHLIB_SUFFIX==='dll')?'php_':'';dl($px.$extname.'.'.PHP_SHLIB_SUFFIX);}}
 function isphp($version='5.0.0'){static $_is_php;$version=(string)$version;if(!isset($_is_php[$version])) $_is_php[$version]=(version_compare(PHP_VERSION,$version)<0) ? FALSE : TRUE;return $_is_php[$version];}
-function isClassExists($classname){return class_exists($classname,false);}			//if(!function_exists('isClassExists'))
-function isInterfaceExists($classname){return interface_exists($classname,false);}
+function isClassExists($classname){return class_exists($classname,false);}			function isInterfaceExists($classname){return interface_exists($classname,false);}		//if(!function_exists('isClassExists'))
 function cfunc($s){if(function_exists($s)) call_user_func($s);}
-function unsetr(){
-	for($i=0;$i<func_num_args();$i++){
-		$_key=func_get_arg($i);
-		if(is_string($_key)){
-			if(is_object($GLOBALS[$_key])) $GLOBALS[$_key]=null;
-			else unset($GLOBALS[$_key]);
-		}
-		else unsetrf($_key);
-	}
-}
+function unsetr(){for($i=0;$i<func_num_args();$i++){$_key=func_get_arg($i);if(is_string($_key)) unsetrf($GLOBALS[$_key]);else unsetrf($_key);}}
 function unsetrf(&$o){if(is_object($o)) $o=null; else unset($o);}
 //==============================================
 function dcsRedirect($s)
 {
-	$scriptfile=$_SERVER['PHP_SELF'] ? $_SERVER['PHP_SELF'] : $_SERVER['SCRIPT_NAME'];
+	$brow='';$scriptfile=$_SERVER['PHP_SELF'] ? $_SERVER['PHP_SELF'] : $_SERVER['SCRIPT_NAME'];
 	$ary=explode('?',$scriptfile); $ary=explode('/',$ary[0]);
-	for($i=0;$i<count($ary)-1;$i++){$growsedir.=$ary[$i].'/';};
-	//----------
-	if($s=='.') $s=$growsedir;
-	if(substr($s,0,1)=='?') $s=$growsedir.$scriptfile;
-	if(substr($s,0,1)!='/' && !strpos($s,'://')) $s=$growsedir.$s;
-	dcsClear();
-	header('Location: '.$s);
-	//echo '<script type="text/javascript">location.href=\'$s\';</script>';
-	dcsEnd();
+	for($i=0;$i<count($ary)-1;$i++){$brow.=$ary[$i].'/';};
+	if($s=='.') $s=$brow;
+	if(substr($s,0,1)=='?') $s=$brow.$scriptfile;
+	if(substr($s,0,1)!='/' && !strpos($s,'://')) $s=$brow.$s;
+	dcsClear();header('Location: '.$s);dcsEnd();
 }function go($s){dcsRedirect($s);}
 
 function dcsClear(){unset($GLOBALS['_VCACHE'],$GLOBALS['_cfg']);}	//,'dcs','cfg','ctl'	$GLOBALS['dcs']=null;
-function dcsEnd(){dcsClear();/*function_exists('exits')?exits():exit();*/}	//flush();
+function dcsEnd(){dcsClear();/*function_exists('exits')?exits():exit();*/exit();}	//flush();
 //==============================================
 function obStarts()
 {
@@ -140,12 +125,11 @@ function obStarts()
 }
 function obStart($calls=null){return ob_start($calls);}function obContent(){return ob_get_contents();}function obFlush(){return ob_end_flush();}function obClean(){return ob_end_clean();}
 function ignoreAbort(){ignore_user_abort();}
-function datei($fmt,$stamp=0){return gmdate($fmt,($stamp?$stamp:time())+DCS::timezone(1));}
 //==============================================
-function dcsHeader($cType='',$cCharset=''){
-	if(!$cType) $cType=CONTENT_TYPE_HTML;
-	if(!$cCharset) $cCharset=CHARSET_HTML;
-	@header('Content-Type:'.$cType.'; charset='.$cCharset);
+function dcsHeader($type=null,$charset=null){
+	if(!$type) $type=CONTENT_TYPE_HTML;
+	if(!$charset) $charset=CHARSET_HTML;
+	@header('Content-Type:'.$type.'; charset='.$charset);
 }
 function dcsNoCache(){
 	header('Pragma: no-cache');						//HTTP/1.0
@@ -158,42 +142,34 @@ function dcsExpires($day=30,$modify=null){
 		if(!is_string($modify)) $modify=gmdate('D, d M Y H:i:s',time()+DCS::timezone(1));
 		header('Last-Modified: '.$modify.' GMT');
 	}
-	header('Expires: '.gmdate('D, d M Y H:i:s',time()+86400*$day+DCS::timezone(1)).' GMT');
+	header('Expires: '.datei('D, d M Y H:i:s').' GMT');
 }
 function dcsGzipStatus($t=1){return appv('app.gzip.status');}
-function dcsMemoryUsage($t=1)
-{
-	$re=MEMORY_LIMIT_ON?(memory_get_usage()-$GLOBALS['_memory_start_']):0;
-	return ($t==1)?utilCode::toFileSize($re):$re;
-}
-function dcsExecTime($t=1,$len=4)
-{
-	$_time=microtime(1)-$_SERVER['REQUEST_TIME_FLOAT'];
-	return($t==1) ? number_format($_time,$len) : number_format($_time*1000,$len);
-}
+function dcsMemoryUsage($t=1){$re=MEMORY_LIMIT_ON?(memory_get_usage()-$GLOBALS['_memory_start_']):0;return ($t==1)?utilCode::toFileSize($re):$re;}
+function dcsExecTime($t=1,$len=4){$_time=microtime(1)-$_SERVER['REQUEST_TIME_FLOAT'];return($t==1) ? number_format($_time,$len) : number_format($_time*1000,$len);}
 //==============================================
 function dcsLogSave($filename,$sort,$msg){include_once(VDCS_UTIL.'/ResLog.php');ResLog::save($filename,$sort,$msg);}function dcsLog($sort,$msg){dcsLogSave('today',$sort,$msg);}function dcsLogError($sort,$msg){dcsLogSave('today',$sort,$msg);}
 function dcsMessage($title,$explain='[unknown]',$t=1){include_once(VDCS_UTIL.'/ResMessage.php');ResMessage::show($title,$explain,$t);}
 function dcsMessageError($num,$tit,$msg,$description='',$source=''){dcsMessage($tit,array('message'=>$msg,'number'=>$num,'description'=>$description,'source'=>$source));}
 //==============================================
-function pageHeader($cType='',$cCharset='')
+function pageHeader($type=null,$charset=null)
 {
 	if($GLOBALS['_cfg']['page.isheader']) return;$GLOBALS['_cfg']['page.isheader']=true;
-	switch($cType){
-		case 'html':	$cType=CONTENT_TYPE_HTML;break;
-		case 'xml':	$cType=CONTENT_TYPE_XML;break;
-		case 'wml':	$cType=CONTENT_TYPE_WML;break;
-		case 'json':	$cType=CONTENT_TYPE_JSON;break;
+	switch($type){
+		case 'html':	$type=CONTENT_TYPE_HTML;break;
+		case 'xml':	$type=CONTENT_TYPE_XML;$charset=CONTENT_TYPE_XML;break;
+		case 'json':	$type=CONTENT_TYPE_JSON;$charset=CONTENT_TYPE_JSON;break;
 		case 'jsx':
-		case 'js':	$cType=CONTENT_TYPE_JS;break;
+		case 'js':	$type=CONTENT_TYPE_JS;$charset=CONTENT_TYPE_JS;break;
 		case 'cssx':
-		case 'css':	$cType=CONTENT_TYPE_CSS;break;
-		case 'txt':	$cType=CONTENT_TYPE_TXT;break;
-		default:	if(!$cType) $cType=CONTENT_TYPE_HTML;break;		// 'html'
+		case 'css':	$type=CONTENT_TYPE_CSS;$charset=CONTENT_TYPE_CSS;break;
+		case 'wml':	$type=CONTENT_TYPE_WML;$charset=CONTENT_TYPE_JSON;break;
+		case 'txt':	$type=CONTENT_TYPE_TXT;$charset=CONTENT_TYPE_XML;break;
+		default:	if(!$type) $type=CONTENT_TYPE_HTML;break;		// 'html'
 	}
-	if(!$cCharset) $cCharset=CHARSET_HTML;
-	@header('Content-Type:'.$cType.'; charset='.$cCharset);
-	if($gzipcompress && function_exists('ob_gzhandler')){ob_start('ob_gzhandler');}else{$gzipcompress=0;ob_start();}
+	if(!$charset) $charset=CHARSET_HTML;
+	@header('Content-Type:'.$type.'; charset='.$charset);
+	obStarts();
 }
 function pageFlush(){ob_end_flush();}
 //==============================================
@@ -202,9 +178,8 @@ function appExt($re,$_ext=EXT_CONFIG)
 {
 	if(insr($re,'.')>0){
 		if(inp(EXT_GATHER,substr($re,insr($re,'.')),'.')<1) $re.=$_ext;
-	}else{
-		$re.=$_ext;
 	}
+	else $re.=$_ext;
 	return $re;
 }
 //function appExt($re,$ext=EXT_CONFIG){return pathExt($re,$ext);}
@@ -224,14 +199,13 @@ function toPathRel($re){return r($re,$GLOBALS['_cfg']['sys.path']['root'],DIR_SE
 //==============================================
 function toPathsReal($paths,$filename,$dbg=false)
 {
-	$path='';
 	$filename=appExt($filename);
 	foreach($paths as $k=>$v){
 		$path=$v.$filename;
 		if($dbg) debugx($path);
-		if(is_file($path)) break;
+		if(is_file($path)) return $path;
 	}
-	return $path;
+	return '';
 }
 //==============================================
 
@@ -242,12 +216,17 @@ function toPathsReal($paths,$filename,$dbg=false)
 */
 class DCS
 {
-	static $timer=0;
+	static $timer=0,$local=false;
 	public function init()
 	{
 		//$this->_data['start']=microtime(1);
 		self::$timer=time();
+		self::$local=self::isLocal();
+		defined('ISLOCAL')		|| define('ISLOCAL',self::$local);
 	}
+	
+	static $PATH_AL=null;
+	public static function pathal($ary){if(!self::$PATH_AL)self::$PATH_AL=array();array_push(self::$PATH_AL,$ary);}
 	
 	static $mapDatc=array();
 	public static function isDatc($key){return isset(self::$mapDatc[$key]);}
@@ -272,18 +251,18 @@ class DCS
 	public static function serverString(){return self::isLocal()?'local':'server';}
 	public static function isLocal(){static $re=null;if(is_null($re)) $re=ins('127,192,10.,::1',substr(self::serverip(),0,3))>0?true:false;return $re;}
 	public static function isLocali(){static $re=null;if(is_null($re)) $re=ins('127,::1',substr(self::serverip(),0,3))>0?true:false;return $re;}
-	
+
 	public static function browseDomain(){return $_SERVER['HTTP_HOST'];}
 	public static function browseScript(){return $_SERVER['PHP_SELF']?$_SERVER['PHP_SELF']:$_SERVER['SCRIPT_NAME'];}
 	public static function browseURI(){return $_SERVER['REQUEST_URI'];}
 	public static function browseURL($script=false){return self::url($script?$_SERVER['REQUEST_URI']:'');}
 	public static function browsePath($script=false){return $script?self::browseURI():self::browseScript();}
 	
-	public static function urlLink($re,$apd){return utilCode::urlLink($re,$apd);}
+	public static function urlLink($re,$params){return utilCode::urlLink($re,$params);}
 	public static function urlEncode($re){return rawurlencode($re);}
 	public static function urlDecode($re){return rawurldecode($re);}
-	public static function isURL($url){return ins($url,'http://')>0 || ins($url,'https://')>0 ? true : false;}
-	public static function url($url='',$baseurl=null){if(ins($url,'://')>0) return $url;return (is_null($baseurl)?self::urlHost():$baseurl).ltrim($url,'/');}
+	public static function isURL($url){return ins($url,'://')>0 ? true : false;}		//ins($url,'http://')>0 || ins($url,'https://')>0
+	public static function url($url='',$baseurl=null){if(ins($url,'://')>0) return $url;return (!$baseurl?self::urlHost():$baseurl).ltrim($url,'/');}
 	public static function urlHost(){return self::transport().'://'.self::host().'/';}
 	public static function host(){return $_SERVER['HTTP_HOST'];}
 	public static function transport(){return $_SERVER['HTTPS']=='on'?'https':'http';}
@@ -291,7 +270,28 @@ class DCS
 	public static function ip(){return $_SERVER['REMOTE_ADDR'];}
 	public static function port(){return $_SERVER['REMOTE_PORT'];}
 	public static function agent(){return $_SERVER['HTTP_USER_AGENT'];}
-	public static function sessionid(){return session_id();}
+	//public static function sessionid(){return session_id();}
+	public static function sessionid(){return $GLOBALS['dcs']->client->getSessionID();}
+	public static function sessionSet($key,$value){return $GLOBALS['dcs']->client->setSession($key,$value);}
+	public static function sessionGet($key){return $GLOBALS['dcs']->client->getSession($key);}
+	public static function sessionDel($key){return $GLOBALS['dcs']->client->delSession($key);}
+	public static function cookieSet($key,$value){return $GLOBALS['dcs']->client->setCookies($key,$value);}
+	public static function cookieGet($key){return $GLOBALS['dcs']->client->getCookies($key);}
+	public static function cookieDel($key){return $GLOBALS['dcs']->client->delCookies($key);}
+	public static function cookieAge($age){return $GLOBALS['dcs']->client->setCookiesAge($age);}
+	public static function cookieDomain($domain){return $GLOBALS['dcs']->client->setCookiesDomain($domain);}
+	
+	public static function pathConfigureDomain($file)
+	{
+		$basepath=dirname($file).'/';
+		$filename=substr($file,strlen($basepath),-4);
+		//debug($filename);
+		if(!is_file($pathv=$basepath.$filename.'@'.$_SERVER['HTTP_HOST'].'.php')) $pathv='';
+		if(!$pathv) $pathv=$basepath.$filename.'@'.'default.php';
+		return $pathv;
+	}
+
+	public static function linkURL($channel,$page,$params=null){return $GLOBALS['cfg']->getLinkURL($channel,$page,$params);}
 }
 
 
@@ -300,24 +300,33 @@ class DCS
 ################################################
 */
 class test{
+	static $PUT=true;
 	function init(){static $use;if($use)return;include_once(VDCS_UTIL.'/ResTest.php');$use=true;}
-	function toVarString($o){self::init();return ResTest::toVar($o);}
-	function toXMLString($o){self::init();return ResTest::toXML($o);}
-	function toTxtString($o,$t=''){self::init();return ResTest::toTxt($o,$t);}
-	function toAryString($o,$t=''){self::init();return ResTest::toAry($o,$t);}
-	function toTreeString($o,$t=''){self::init();return ResTest::toTree($o,$t);}
-	function toTableString($o,$t=''){self::init();return ResTest::toTable($o,$t);}
-	function x($s,$br=true){self::init();ResTest::x($s,$br);}function j($s){self::init();ResTest::j($s);}function vc($s){self::init();ResTest::vc($s);}
+	function v($o){self::init();return ResTest::toVar($o);}				function toVarString($o){return self::v($o);}
+	function xml($o){self::init();return ResTest::toXML($o);}			function toXMLString($o){return self::xml($o);}
+	function t($o,$t=''){self::init();return ResTest::toTxt($o,$t);}		function toTxtString($o,$t=''){return self::t($o,$t);}
+	function a($o,$t=''){self::init();return ResTest::toAry($o,$t);}		function toAryString($o,$t=''){return self::a($o,$t);}
+	function o($o,$t=''){self::init();return ResTest::toObject($o,$t);}		function toObjString($o,$t=''){return self::o($o,$t);}
+	function tree($o,$t=''){self::init();return ResTest::toTree($o,$t);}		function toTreeString($o,$t=''){return self::tree($o,$t);}
+	function table($o,$t=''){self::init();return ResTest::toTable($o,$t);}		function toTableString($o,$t=''){return self::table($o,$t);}
+	function x($s,$br=true){if(!self::$PUT)return;self::init();ResTest::x($s,$br);}function j($s){self::init();ResTest::j($s);}function vc($s){self::init();ResTest::vc($s);}
 }
+function debugSet($b=false,$p=true){define('DEBUG_OUT',$b);test::$PUT=$p;}
+function isDebug(){return !!DEBUG_OUT;}
 function debugx($s,$br=true){test::x($s,$br);}function debugj($s){test::j($s);}function debugvc($s){test::vc($s);}
 function debuga($o,$t=''){debugx(test::toAryString($o,$t));}
+function debugo($o,$t=''){debugvc(test::toObjString($o,$t));}
 function debugTree($o,$t=''){debugx(test::toTreeString($o,$t));}
 function debugTable($o,$t=''){debugx(test::toTableString($o,$t));}
 function debugxx($s){if(DCS::isLocal())debugx($s);}
 function debugTrace(){put('<!--'.NEWLINE);debug_print_backtrace();put('-->');}
 
 
+
+
 /*
+################################################
+################################################
 ################################################
 ################################################
 */

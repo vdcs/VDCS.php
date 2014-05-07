@@ -3,4 +3,3 @@ class ChannelArticleSearch extends ChannelArticleList
 {
 	
 }
-?>

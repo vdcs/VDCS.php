@@ -16,11 +16,16 @@ trait DBCommon
 	}
 	//public static function toSQL($re,$q=0){return self::q($re,$q);}
 	
-	public static function sqlLimit($start,$num=false)
+	public static function sqlLimit($start,$row=false)
 	{
-		return ' LIMIT '.($start<=0?0:(int)$start).($num? ','.abs($num):'');
+		/*
+		if(isn($row)){
+			$row=$start;
+			$start=0;
+		}
+		*/
+		return ' LIMIT '.($start<=0?0:(int)$start).($row? ','.abs($row):'');
 	}
-	//public static function toSQLLimit($start,$num=false){return self::sqlLimit($start,$num);}
 	
 	
 	public static function sqla($re,$query,$term='')
@@ -122,7 +127,7 @@ trait DBCommon
 		if($limit>0) $re.=' LIMIT 0,'.$limit;
 		return $re;
 	}
-	public static function sqlSelect($sTable,$act,$sFields,$sTerm='',$sOrder='',$limit=0)
+	public static function sqlSelect($sTable,$act,$sFields,$sTerm='',$sOrder='',$limit=null)
 	{
 		$fields=$ends='';
 		switch($act){
@@ -136,7 +141,10 @@ trait DBCommon
 				break;
 			default:
 				$fields=self::toSafeFields($sFields);
-				if($limit>0) $ends=' LIMIT 0,'.$limit;
+				if($limit){
+					if(is_numeric($limit)) $ends=' LIMIT 0,'.$limit;
+					else $ends=' '.$limit;
+				}
 				break;
 		}
 		//debugx($fields);
@@ -358,8 +366,12 @@ trait DBAssist
 	
 	public static function doTableClear($table){return self::$db->doTableClear($table);}
 	public static function doTableDelete($table){return self::$db->doTableDelete($table);}
-	
-	
+	/*
+	public function truncate(){return DB::exec('TRUNCATE '.$this->TableName);}
+	public function optimize(){return DB::exec('OPTIMIZE TABLE '.$this->TableName, 'SILENT');}
+	*/
+
+
 	/*
 	########################################
 	########################################
@@ -391,6 +403,7 @@ trait DBAssist
 	public static function getTotal(){return self::$db->getTotal();}
 	public static function getSQLTree(){return self::$db->getSQLTree();}
 }
+
 class DB
 {
 	use DBCommon,DBAssist;

@@ -1,21 +1,4 @@
-<input type="text" name="sea_time1" placeholder="开始时间" /> - <input type="text" name="sea_time2" placeholder="结束时间" />
-<script type="text/javascript">
-var sea_time1 = $('input[name=sea_time1]').datepicker({
-		format:'yyyy-mm-dd',
-		onRender: function(date) {
-		return date.valueOf();
-		}
-	}).on('changeDate', function(ev) {
-		//sea_time2.setValue(day);
-		sea_time1.hide();
-		$('input[name=sea_time2]')[0].focus();
-	}).data('datepicker');
-var sea_time2 = $('input[name=sea_time2]').datepicker({
-	format:'yyyy-mm-dd',
-	onRender: function(date) {
-		return date.valueOf();// <= datebegin.date.valueOf() ? 'disabled' : ''
-	}
-}).on('changeDate', function(ev) {
-	sea_time2.hide();
-}).data('datepicker');
-</script>
+
+<input type="text" name="sea_time1" placeholder="开始时间" datepicker="date" data-next="input[name=sea_time2]" />
+ - 
+<input type="text" name="sea_time2" placeholder="结束时间" datepicker="date" />

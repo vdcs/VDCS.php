@@ -1,0 +1,30 @@
+<label:include file="header">
+<div class="framer">
+	<div class="side">
+<label:include file="common.menus">
+	</div>
+	<div class="cont">
+<label:include file="common.navbar">
+		<div class="Block Block-List">
+			<div class="BlockBar hide"><p><channel:nav("")></p></div>
+			<div class="cont">
+<span class="gray"><langs:search.caption.keyword>: <script>put(appCommon.toTagLink("",$url.toDecode($request.getQuery("keyword")),"<a href=\"?keyword={$keys.encode}&sea_field=topic\">{$keys}</a>"));</script></span>
+<span class="gray small">(<paging:total> <langs:chn.units>)</span>
+			</div></div>
+			<div class="cont">
+<div class="StructListPic StructShopItem StructListShop">
+<label:include file="common.list.bar">
+<ul>
+<label:list>
+<label:include file="element.list.item">
+</label:end>
+</ul>
+</div>
+			</div></div>
+			<div class="cont">
+<div class="StructList-Paging"><paging:string><label:include file="/inc/common.paging.extend"></div>
+			</div>
+		</div>
+	</div></div>
+</div>
+<label:include file="footer">

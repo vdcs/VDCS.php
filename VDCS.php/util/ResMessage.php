@@ -66,15 +66,15 @@ class ResMessage
 				$re.=NEWLINE.'<script language="javascript" type="text/javascript" src="'.appURL('images').'script/jquery.min.js"></script>';
 				$re.=NEWLINE.'<script language="javascript" type="text/javascript" src="'.appURL('images').'script/VDCS.js"></script>';
 				$re.=NEWLINE.'</head>';
-				$re.=NEWLINE.'<body clsss="text"><center>';
-				$re.=NEWLINE.'<div class="BoxError"><div class="BoxErrorFrame"><div class="BoxErrorInner"><div class="BoxErrorBody">';
-				$re.=NEWLINE.'<div class="partHeader"><div class="partInner"><a href="'.$_AppURL.'"><span class="txt">'.APP_VERSION_NAME.'</span></a> - '.$tit.'</div></div>';
-				$re.=NEWLINE.'<div class="partMessage"><div class="partInner">';
-				$re.=NEWLINE.'       <div class="title"><span>Message <a href="javascript:$p.setClipBoardData($(\'#VDCS-content-message\').html());alert(\'错误信息复制成功！\');">copy</a></span></div>';
+				$re.=NEWLINE.'<body class="message">';
+				$re.=NEWLINE.'<div class="box_error"><div class="inners">';
+				$re.=NEWLINE.'<h2><t><a href="'.$_AppURL.'"><span class="txt">'.APP_VERSION_NAME.'</span></a></t><cite> - <span>'.$tit.'</span></cite></h2>';
+				$re.=NEWLINE.'<div class="message"><div class="inner">';
+				$re.=NEWLINE.'       <div class="title"><span>Message <a href="#copy">copy</a></span></div>';
 				$re.=NEWLINE.'       <div class="content">'.self::toContent('message',$msg['message'],'center').'</div>';
 				$re.=NEWLINE.'</div></div>';
 				if(isset($msg['description']) || isset($msg['source'])){
-					$re.=NEWLINE.'<div class="partReference"><div class="partInner">';
+					$re.=NEWLINE.'<div class="reference"><div class="inner">';
 					$re.=NEWLINE.'       <div class="title"><span>Reference</span></div>';
 					//$re.=NEWLINE.'       <div class="content">'.$msg['description'].'</div>';
 					if(len($msg['number'])>0) $re.=NEWLINE.'       <div class="content"><span class="error">Error #<em>'.$msg['number'].'</em></span></div>';
@@ -82,10 +82,10 @@ class ResMessage
 					if(len($msg['source'])>0) $re.=NEWLINE.'       <div class="source">'.$msg['source'].'</div>';
 					$re.=NEWLINE.'</div></div>';
 				}
-				$re.=NEWLINE.'<div class="partLinks"><div class="partInner"><a href="'.appURL('root').'"><span>Index</span></a> &nbsp; <a href="javascript:history.back();"><span>Back</span></a></div></div>';
-				$re.=NEWLINE.'<div class="partFooter"><div class="partInner"><span class="stat">Processed in <em>'.dcsExecTime().'</em> s, <em>'.DB::getTotal().'</em> queries. Memory usage <em>'.dcsMemoryUsage().'</em>.</span> '.appWebVersion().'</div></div>';
-				$re.=NEWLINE.'</div></div></div></div>';
-				$re.=NEWLINE.'</center></body>';
+				$re.=NEWLINE.'<h4><a href="'.appURL('root').'"><span>Index</span></a> &nbsp; <a href="javascript:history.back();"><span>Back</span></a></h4>';
+				$re.=NEWLINE.'<h5><span class="stat">Processed in <em>'.dcsExecTime().'</em> s, <em>'.DB::getTotal().'</em> queries. Memory usage <em>'.dcsMemoryUsage().'</em>.</span> '.appWebVersion().'</h5>';
+				$re.=NEWLINE.'</div></div>';
+				$re.=NEWLINE.'</body>';
 				$re.=NEWLINE.'</html>';
 			}
 			else{

@@ -1,6 +1,0 @@
-<?
-class ChannelMmSettingsBase extends ChannelMmBase
-{
-	
-}
-?>

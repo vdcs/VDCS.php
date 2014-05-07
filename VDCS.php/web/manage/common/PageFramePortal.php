@@ -196,7 +196,7 @@ class PageFramePortal extends ManagePortalBase
 			$channel=$treeURL->getItem('channel');
 			if(!$channel) $channel=$treeURL->getItem('portals');
 			if(!$channel) $channel=$this->channel;
-			$url=ManageCommon::entryURL($channel,$treeURL->getItem('p'),$treeURL->getItem('m'),$treeURL->getItem('mi'),$treeURL->getItem('x'),$treeURL->getItem('params'));
+			$url=ManageCommon::entryURL($channel,$treeURL->getItem('p'),$treeURL->getItem('m'),$treeURL->getItem('mi'),$treeURL->getItem('i'),$treeURL->getItem('x'),$treeURL->getItem('params'));
 			/*
 			$url=rd($url,'channel',$portals);
 			if(len($treeURL->getItem('portal'))>0){

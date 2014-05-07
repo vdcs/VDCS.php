@@ -1,16 +1,11 @@
 <script type="text/javascript">
 $(function(){
-	var _list=function(opt){
-		if(!opt) opt={};
-		if(pages.listExtendOpt) opt=pages.listExtendOpt(opt);
-		pages.initList(null,opt);
-	};
-	_list();
-	$('form[name="searchbar"]').find('[el=submit]').click(function(){
-		var _params=$(this).parents('form').serialize();
-		var opt={};
-		opt.params=_params;
-		_list(opt);
+	pages.lister();
+
+	$('#searchbar').find('[el=submit]').click(function(){
+		var params=$(this).parents('form').serialize();
+		pages.lister({params:params});
+		return false
 	});
 });
 </script>

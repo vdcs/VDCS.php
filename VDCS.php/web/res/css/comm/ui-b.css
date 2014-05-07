@@ -1,0 +1,39 @@
+@charset "utf-8";
+/*
+Version:	VDCS comm @btn v1.0
+Support:	http://uri.sx/vdcs.css
+Uodated:	2014-05-00
+*/
+
+
+@uib_font_size: 14px;
+@uib_font_size_b: 16px;
+@uib_font_size_s: 12px;
+@uib_el_height: 32px;
+
+body{font-size:@uib_font_size;}
+
+
+.btn{font-size:@uib_font_size;height:@uib_el_height;line-height:@uib_el_height;}
+.btn.b{font-size:@uib_font_size_b;}
+.btn.s{font-size:@uib_font_size_s;}
+
+
+select,
+textarea,
+input{font-size:@uib_font_size;height:@uib_el_height;}
+.forms.m p select,
+.forms.m p textarea,
+.forms.m p input,
+.input-big select,
+.input-big textarea,
+.input-big input{font-size:@uib_font_size_b;}
+
+.forms dd{margin:18px 0;}
+
+
+.itip em{top:5px;}
+.itip.infos em,
+.itip.alerts em,
+.itip.errors em,
+.itip.succeeds em{top:12px;}

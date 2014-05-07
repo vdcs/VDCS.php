@@ -11,7 +11,7 @@ trait WebServeRefBase
 		if(inp('j,json',PAGE_X)>0){
 			$this->serveType='json';
 			initServeJSON();global $serve;$this->serve=&$serve['json'];
-			if(queryx('debug')!='show') debugSet(false,false);
+			if(DEBUGV!='show') debugSet(false,false);
 		}
 		else{
 			$this->serve=&initServeXCML();

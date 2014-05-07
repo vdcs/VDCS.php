@@ -10,27 +10,39 @@ class apiEntry extends apiBase
 	{
 		$this->uam=&Ua::instance(APP_UA,'manage');
 		$_id=0;
-		$_name=request('name');
-		$_email=request('email');
+		$_account=request('account');
 		$_password=request('password');
-
-		if(len($_name)>0 && !utilCheck::isName($_name) && !utilCheck::isEmail($_name)) $this->addError($this->getVar('ua.names').'信息 不符合规则','name','check');
-		if(len($_email)<1 && ins($_name,'@')>0) $_email=$_name;
-		if(len($_email)>0 && !utilCheck::isEmail($_email)) $this->addError('电子邮件 不符合规则','email','check');
-		if(len($_name)<1 && len($_email)<1) $this->addError('登录'.$this->getVar('ua.names').' 不能为空','account','no');
-
-		$_query=$_email?$this->ua->sqlQuery('email',$_email):UaUA::toQueryI($this->ua,$_name);
+		$_names=requestx('names');
+		
+		if(utilCheck::isEmail($_account)) $_field='email';
+		elseif(utilCheck::isMobile($_account)) $_field='mobile';
+		elseif(utilCheck::isName($_account)) $_field='name';
+		//else $_field='uid';
+		
+		if(!$_field) $this->addError('账号不合法','account','check');
+		else $_query=UaUA::toQueryI($this->ua,$_account);//$_email?$this->ua->sqlQuery('email',$_email):
+		
 		$_id=$this->ua->queryField('id',$_query);
 		if($_id>0){
-			$this->addError(''.$_email.' 已存在','account','check');
+			$this->addError('账号 已存在','account','check');//$_email
 		}
+		
+		//check names
+		if($_names){
+			$_query_names='names='.DB::q($_names,1);
+			$_id=$this->ua->queryField('id',$_query_names);
+			if($_id>0){
+				$this->addError('名称 已存在','account','check');//$_email
+			}
+		}
+		
 
 		if($this->isRaiseError()) return;
 
 		$tData=newTree();
-		$tData->addItem('name', $_name);
-		$tData->addItem('email', $_email);
+		$tData->addItem($_field, $_account);
 		$tData->addItem('password', $_password);
+		$tData->addItem('names', $_names);
 		//$tData->addItem('mobile', $_mobile);
 
 		$newid=-1;

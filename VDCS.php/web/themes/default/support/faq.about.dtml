@@ -1,7 +1,6 @@
 ﻿<label:include file="frame/headers">
 
 
-<div class="cont">
 <div class="pages">
 <h2><t><app:web.name> - <web:var.title></t></h2>
 <loop:faq>
@@ -9,7 +8,6 @@
 <a name="_faq_[item:key]" class="hide">&nbsp;</a>
 <div class="content">[item:content]</div>
 </loop>
-</div>
 </div>
 
 

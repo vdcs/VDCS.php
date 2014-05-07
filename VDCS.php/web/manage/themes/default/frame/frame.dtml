@@ -3,12 +3,16 @@
 
 <div id="timer"><cite>今天是 <span el="today">0000-00-00</span> <span el="week">星期</span></cite></div>
 <div id="header"><div class="inners">
-	<h2><a class="name" href="<url:root>" target="_blank"><app:web.name></a><span class="title">管理后台</span></h2>
+	<h2>
+		<a class="name" href="<url:root>" target="_blank"><app:web.name></a>
+		<span class="title">管理后台</span>
+		<a href="<url:root>comm" target="_blank">　　</a>
+	</h2>
 	<div class="nav">
 		<ul>
 		<li class="welcome">Hi <span class="name"><manager:name></span>!</li>
-		<li class="main"><a href="<url:manage.main>" target="ifrm_main">管理首页</a></li>
-		<li class="refresh"><a href="javascript:;" onclick="javascript:mframe.reload('main');">刷新页面</a></li>
+		<li class="main"><a href="<url:manage.main>" target="main">管理首页</a></li>
+		<li class="refresh"><a href="javascript:;">刷新页面</a></li>
 		<li class="help"><a href="<url:manage.help>" target="_blank">帮助中心</a></li>
 		<li class="logout"><a href="<url:manage.logout>" onclick="javascript:return mframe.logout(this);" target="_top">安全退出</a></li>
 		</ul>
@@ -25,11 +29,15 @@
 <div id="body"><div class="inners">
 	<div class="tabs">
 		<ul></ul>
-		<!--
-		<li class="main"><a href="#main"><span>管理中心</span></a><i><em></em></i></li>
-		-->
+		<!--<li class="main"><a href="#main"><span>管理中心</span></a><i><em></em></i></li>-->
 		<xmp>
 		<li><a href="#sub"><span>加载中..</span></a><i><em></em></i></li>
+		</xmp>
+		<xmp el="menu">
+			<ul>
+			<li><a class="close" href="#close">关闭标签页</a></li>
+			<li><a class="close_other" href="#close_other">关闭其它标签页</a></li>
+			</ul>
 		</xmp>
 	</div>
 	<div class="menus">
@@ -38,11 +46,9 @@
 <div class="box ">
 {$bar}
 	<div class="con" id="FrameMenu-Items-{$sn}">
-		<div class="items">
-		<ul>
+		<div class="items"><ul>
 {$items}
-		</ul>
-		</div>
+		</ul></div>
 	</div>
 </div>
 </xmp>

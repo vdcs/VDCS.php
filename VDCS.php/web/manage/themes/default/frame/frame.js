@@ -82,12 +82,28 @@ var mframe={
 	},
 	
 
+	isContentMenu:function(e){
+		var re=true;
+		if(3 == e.which && $(e.toElement).parents('.tabs').length>0) re=false;
+		return re;
+	},
+
 	tab_index:-1,tab_index_now:-1,
 	tabIniter:function(){
 		var that=this;
 		this.jtabs=this.jbody.find('.tabs');
 		this.jtabsul=this.jtabs.find('ul');
-		this.tab_tpl=this.jtabs.find('xmp').html();
+		this.tab_tpl=this.jtabs.find('xmp:first').html();
+		this.jtabs.on('mousedown','li',function(e){
+			if(3 == e.which){	// || 2 == e.which
+				//dbg.t('clickRight');
+				//e.cancelBubble=true;
+				//e.returnValue=false;
+				e.stopPropagation();
+				that.tabMenu($(this));
+				return false;
+			}
+		});
 		this.jtabs.on('click','li a',function(){
 			that.tabSwitch($(this).parents('li'));
 			return false
@@ -97,6 +113,50 @@ var mframe={
 			return false
 		});
 	},
+	tabMenu:function(jtab){
+		var that=this;
+		if(!this.jtabmenu){
+			this.jtabmenu=$('<div id="tabs_menu"></div>')
+					.css({position:'absolute', zIndex:'500'})
+               				.appendTo('body');
+               		this.jtabmenu.html(this.jtabs.finde('menu').html());
+               		this.jtabmenu.on('click','a[href]',function(e){
+               			that.tabMenuClick($(this));
+               			e.stopPropagation();
+               			return false;
+               		});
+               		$(document).on('click',function(){
+               			that.tabMenuHide();
+               		});
+		}
+		this.jtabmenu.css({top:jtab.offset().top+jtab.height()-3,left:jtab.offset().left+1});
+		this.jtabmenu.attr('tab-index',jtab.attr('tab-index'));
+		this.jtabmenu.show();
+	},
+	tabMenuHide:function(){
+		if(this.jtabmenu) this.jtabmenu.hide();
+	},
+	tabMenuClick:function(ja){
+		var index=this.jtabmenu.attr('tab-index');
+		//dbg.t(index);
+		var action=ja.attr('href').substr(1);
+		//dbg.t(action);
+		switch(action){
+			case 'close':			this.tabMenu_Close(index);break;
+			case 'close_other':		this.tabMenu_CloseOther(index);break;
+		}
+	},
+	tabMenu_Close:function(index){
+		this.tabClose(index);
+	},
+	tabMenu_CloseOther:function(index){
+		var that=this;
+		this.jtabsul.find('li[tab-index]').each(function(){
+			var _index=$(this).attr('tab-index');
+			if(_index!=index) that.tabClose(_index);
+		});
+	},
+
 	tabOpenA:function(ja,url,title){
 		url=url||ja.attr('tab-url')||ja.attr('href');
 		title=title||ja.attr('tab-title')||ja.attrd('title');
@@ -142,8 +202,12 @@ var mframe={
 		this.tabIndexShow(_index,url);
 	},
 	tagIframeLoad:function(jifrm){
+		var that=this;
 		var contents=jifrm.contents()[0];
 		if(contents){
+			$(contents).on('click',function(){
+               			that.tabMenuHide();
+               		});
 			var url=contents.URL;
 			url=contents.location.pathname+contents.location.search;
 			if(url){
@@ -157,6 +221,8 @@ var mframe={
 		}
 	},
 	tabClose:function(jtab){
+		this.tabMenuHide();
+		if(isint(jtab)) jtab=this.jtabsul.find('li[tab-index="'+jtab+'"]');
 		if(!jtab || jtab.hasClass('main')) return;
 		var jtab0=jtab.prev();
 		if(jtab0.length<1) jtab0=jtab.next();
@@ -182,6 +248,7 @@ var mframe={
 		jtab.attr('tab-url',url);
 	},
 	tabIndexShow:function(index,url){
+		this.tabMenuHide();
 		//dbg.t('index.show='+index,url);
 		var jtab=this.jtabsul.find('li[tab-index="'+index+'"]').addClass('pop');
 		var jfrm=this.jmains.find('.ifrm[tab-index="'+index+'"]').show();
@@ -190,6 +257,7 @@ var mframe={
 			jfrm.find('iframe').attr('src',url);
 		}
 		this.tab_index_now=index;
+		//if(!this.jtabmenu) this.tabMenu(jtab);		// tabMenu test
 	},
 	tabIndexHide:function(index){
 		//dbg.t('index.hide='+index);
@@ -228,7 +296,9 @@ var mframe={
 	menuLoad:function(channel){
 		var that=this;
 		var exts='.'+$c.EXT;
-		var _url=window.location.toString().split(document.domain)[1];
+		if(window.location.port) var _url=window.location.toString().split(document.domain+':'+window.location.port)[1];
+		else var _url=window.location.toString().split(document.domain)[1];
+		//alert(window.location.port)
 		if(ins(_url,exts)<1) _url+='index'+exts;
 		_url=_url.split(exts)[0]+exts+'/frame/menu.x?channel={$channel}';
 		_url=rd(_url,'channel',channel);
@@ -258,6 +328,9 @@ var mframe={
 		this.items[channel]=omenu;
 	},
 '':''};
+
+
+document.oncontextmenu=mframe.isContentMenu;
 
 
 //########################################

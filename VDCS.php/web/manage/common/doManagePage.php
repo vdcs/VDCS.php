@@ -20,7 +20,7 @@ function doManagePage($className=VDCS_MANAGE_ENTRY_PORTAL,$check=true)
 	defined('PAGE_MI') || define('PAGE_MI',queryx('mi'));
 	defined('PAGE_X') || define('PAGE_X',queryx('x'));
 	//##########
-	global $mpo;//,$mpMod,$mpFrame,$mr,$ma,$uu,$ua,$theme;
+	global $mpo;		//,$mpMod,$mpFrame,$mr,$ma,$uu,$ua,$theme;
 	$mpo=new $className;
 	//$mpo->model=&$mpMod;
 	//$mpo->frame=&$mpFrame;
@@ -53,4 +53,3 @@ function doManagePage($className=VDCS_MANAGE_ENTRY_PORTAL,$check=true)
 	$mpo->doClear();					//页面清理
 	mend();
 }
-?>

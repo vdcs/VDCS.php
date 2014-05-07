@@ -7,7 +7,7 @@ trait WebServeRefEle
 	
 	public function serveInit()
 	{
-		if(queryx('debug')!='e') debugSet(false);
+		if(DEBUGV!='e') debugSet(false);
 		$this->theme->setExtend('e','.e');
 	}
 	public function serveParse()
@@ -16,4 +16,3 @@ trait WebServeRefEle
 	}
 	
 }
-?>

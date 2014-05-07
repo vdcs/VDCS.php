@@ -5,7 +5,7 @@ class WebCommon
 	public static function initChannel($channel=null)	//,$theme=null
 	{
 		define('APP_CHANNEL',$channel?$channel:self::getScript('channel'));
-		//define('APP_THEME',$theme?$theme:APP_CHANNEL);
+		//define('APP_THEMER',$theme?$theme:APP_CHANNEL);
 		$portal=$GLOBALS['_cfg']['channel'][APP_CHANNEL.'.portal'];
 		if(!$portal) $portal=APP_CHANNEL;
 		defined('APP_PORTAL')		||define('APP_PORTAL',$portal);

@@ -1,14 +1,14 @@
 @charset "utf-8";
 /*
 Version:	VDCS comm @tips v1.0
-Support:	http://go.hpns.cn/vdcs/css
+Support:	http://uri.sx/vdcs.css
 Uodated:	2013-07-00
 */
 
 
 .itip{.clr();text-align:left;padding:3px 0;margin:0;position:relative;}
-.itip em{float:left;display:inline-block;width:16px;height:16px;background:url("/images/common/struct/tips_warn.png") 0 -200px no-repeat;position:absolute;top:3px;left:0;}
-@-moz-document url-prefix(){.itip em{top:4px;}}
+.itip em{float:left;display:inline-block;width:16px;height:16px;background:url("/images/common/struct/tips_warn.png") 0 -200px no-repeat;position:absolute;top:4px;left:0;}
+/*@-moz-document url-prefix(){.itip em{top:4px;}}*/
 .itip.load em{background:url("/images/common/load/16_leaf.gif") 0 0 no-repeat;}
 .itip.info em{background-position:0 -200px;}
 .itip.alert em{background-position:0 -100px;}

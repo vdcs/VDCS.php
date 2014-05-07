@@ -1,5 +1,5 @@
 <div class="xlist" 
 	_channel="{@channel}" _p="{@portal}" _m="{@module}" _x="{@extend}" _action="<ctl:action>" _mode="<ctl:mode>"
 	_title="<var:title>" _names="<var:names>" _name="<var:name>">
-<h3><cite><var:title></cite></h3>
+<h3><t><var:title></t></h3>
 <label:include file="inc/table.head">

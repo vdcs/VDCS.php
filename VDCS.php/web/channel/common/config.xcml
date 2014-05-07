@@ -12,12 +12,13 @@
 	<var>
 		<title>公共服务</title>
 		<title.index>首页</title.index>
+		<title.root>null</title.root>
 		
 		<title.sitemap>网站地图</title.sitemap>
 		<title.online>在线服务</title.online>
-		<title.setting>喜好设置</title.setting>
 		
-		<title.search>全站搜索</title.search>
+		<title.settings>设置</title.settings>
+		<title.search>搜索</title.search>
 		
 		<title.comment>网友评论</title.comment>
 		<title.payment>在线支付</title.payment>

@@ -272,8 +272,6 @@ appi.binder={
 			}
 		},error:true});
 	},
-
-
 '':''};
 $(function(){
 	appi.binder.initer();

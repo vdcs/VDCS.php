@@ -1,5 +1,4 @@
-<meta charset="<web:meta.charset>" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" /><web:header.append><web:header.xcompat>
+<meta charset="<web:meta.charset>" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><web:header.append>
 <meta name="generator" content="<app:web.generator>" /><meta name="author" content="<app:web.author>" />
 <meta name="copyright" content="<app:web.copyright>" />
 <meta name="keywords" content="<app:web.keywords>" />

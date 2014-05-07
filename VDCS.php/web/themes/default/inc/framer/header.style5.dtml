@@ -1,4 +1,4 @@
-<label:include script="style.html5.css" type="css">
+<label:include script="style.base.css" type="css">
 <label:include script="~!style.css" type="css">
 <!--{if isStr({$web:channel})}--><label:include script="~~!style.css" type="css"><!--{/if}-->
 <!--{if isStr({$web:portal})}--><label:include script="~~!<web:portal>.css" type="css"><!--{/if}-->

@@ -96,7 +96,7 @@
 	
 	<item>
 		<part>space</part>
-		<status>1</status>
+		<status>0</status>
 	</item>
 	<item>
 		<part>item</part>
@@ -106,7 +106,7 @@
 		<att></att>
 		<atts></atts>
 		<explain></explain>
-		<status>1</status>
+		<status>0</status>
 	</item>
 	<item>
 		<part>item</part>

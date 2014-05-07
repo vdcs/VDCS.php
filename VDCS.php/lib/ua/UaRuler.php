@@ -141,7 +141,7 @@ class UaRuler
 		$_channel=$this->getChannel(1);
 		$_modulec=$this->getModulec(1);
 		$_actionc=$this->getActionc(1);
-		//debugx($_popedoms);
+		//debugx('popedoms: '.$_popedoms);
 		//debugx('cma: '.$_channel.','.$_modulec.','.$_actionc);
 		$isCheck=false;
 		if(ins(','.$_popedoms,','.$_channel.':')>0){

@@ -214,12 +214,12 @@ class PagePortal extends ManagePortalBaseX
 	protected function parseSort()
 	{
 		$arr=$_POST;
-		foreach($arr as $classid=>$orderid){
+		foreach($arr as $classid=>$rootid){
 			$classid=toInt($classid);
-			$orderid=toInt($orderid);
+			$rootid=toInt($rootid);
 			
 			$sqlTerm=$this->sqlRelate('classid='.DB::q($classid,1));
-			$sql='update '.$this->TableName.' set orderid='.$orderid.' where '.$sqlTerm;
+			$sql='update '.$this->TableName.' set rootid='.$rootid.' where '.$sqlTerm;
 			DB::exec($sql);
 		}
 		$this->setSucceed();

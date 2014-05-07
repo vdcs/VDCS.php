@@ -43,6 +43,4 @@ class ManageExtendBase
 		return $re;
 	}
 	
-	
-	
 }

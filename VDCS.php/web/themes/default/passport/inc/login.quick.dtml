@@ -15,7 +15,7 @@
 	<div class="cent">
 <div class="xform">
 <div class="forms">
-<form name="frm_login" action="" method="post" >
+<form name="frm_post" action="" method="post" >
 <dl>
 <dt el="id">
 	<h2>帐号</h2>
@@ -45,7 +45,7 @@
 	</div>
 	<div class="sider">
 		<p>还没有帐号？</p>
-		<p><a class="btn c" href="<url:register>"><span>轻松注册</span></a></p>
+		<p><a class="btn g" href="<url:register>"><span>轻松注册</span></a></p>
 		<sh></sh>
 <label:include file="inc/oauth.links.s">
 	</div>

@@ -30,7 +30,6 @@ class VDCSConfig
 
 class VDCSClass
 {
-
 	public static function call($class,$method,$arga){return call_user_func_array(array($class,$method),$arga);}
 	
 	
@@ -73,6 +72,7 @@ class VDCSClass
 			$ret['status']='_class';
 			$ret['message']='class not found: '.$classname;
 		}
+		if(DEBUGV=='class') debuga($ret);
 		return $ret;
 	}
 
@@ -88,7 +88,6 @@ class VDCSClass
 		$ret=VDCSClass::exec('mappingParser',$arga);
 		return $ret;
 	}
-
 }
 
 
@@ -228,8 +227,8 @@ class VDCSCache
 	{
 		$_v='<'.'?'.NEWLINE;
 		$_v.=NEWLINE.'// VDCS Cache Tree: '.$s;
-		$_v.=NEWLINE.'$_VCACHE[\''.$s.'\']='.self::toAryString($o);
-		$_v.=NEWLINE.'?'.'>';
+		$_v.=NEWLINE.'$_VCACHE[\''.$s.'\']='.self::toAryString($o).';';
+		$_v.=NEWLINE;		//.'?'.'>';
 		self::doUpdateFile($s,$f,$_v);
 	}
 	
@@ -242,7 +241,7 @@ class VDCSCache
 			$_v.=NEWLINE.'$_VCACHE[\''.$s.'\'][\''.$o->getItemKey().'\']='.self::toValue($o->getItemValue(),1).';';
 			$o->doMove();
 		}
-		$_v.=NEWLINE.'?'.'>';
+		$_v.=NEWLINE;		//.'?'.'>';
 		self::doUpdateFile($s,$f,$_v);
 	}
 	
@@ -259,7 +258,7 @@ class VDCSCache
 			}
 			$o->doItemMove();
 		}
-		$_v.=NEWLINE.'?'.'>';
+		$_v.=NEWLINE;		//.'?'.'>';
 		self::doUpdateFile($s,$f,$_v);
 	}
 	
@@ -703,11 +702,12 @@ $_cfg['sys.dir']['common.include']		= 'common/include/';
 $_cfg['sys.dir']['data']			= _BASE_DIR_DATA;
 $_cfg['sys.dir']['data.cache']			= _BASE_DIR_DATA.'cache/';
 $_cfg['sys.dir']['data.log']			= _BASE_DIR_DATA.'log/';
+$_cfg['sys.dir']['upload']			= _BASE_DIR_UPLOAD;
 //======================================================================
 $_cfg['sys.url']['root']			= '';
+$_cfg['sys.url']['images']			= 'images/';
 $_cfg['sys.url']['common']			= 'common/';
-$_cfg['sys.url']['data']			= 'data/';
-//$_cfg['sys.url']['images']			= 'images/';
+//$_cfg['sys.url']['data']			= 'data/';
 //$_cfg['sys.url']['support']			= 'support/';
 //----------------------------------------------------------------------
 //$_cfg['sys.url']['manage']			= 'manage/';

@@ -15,13 +15,11 @@ class ChannelArticleBasic extends WebPortalBase
 	*/
 	public function initBasic()
 	{
-		global $cfg;
+		$this->cfg->setTitle('chn',$this->cfg->v('title'));
 		
-		$cfg->setTitle('chn',$cfg->v('title'));
-		
-		$cfg->doClassInit();
-		$cfg->doSpecialInit();
-		$this->tableYear=CommonChannelExtend::getYearTable($cfg->getChannel(),$cfg->chn->getSQLStruct('table.name'),$cfg->chn->getSQLStruct('table.px').'tim');
+		$this->cfg->doClassInit();
+		$this->cfg->doSpecialInit();
+		$this->tableYear=CommonChannelExtend::getYearTable($this->cfg->getChannel(),$this->cfg->chn->getSQLStruct('table.name'),$this->cfg->chn->getSQLStruct('table.px').'tim');
 	}
 	
 	public function doThemeCacheBasic()
@@ -30,4 +28,3 @@ class ChannelArticleBasic extends WebPortalBase
 	}
 	
 }
-?>

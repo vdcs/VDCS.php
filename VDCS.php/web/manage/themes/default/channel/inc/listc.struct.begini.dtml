@@ -5,8 +5,8 @@
 	_title="<var:title>" _names="<var:names>" _name="<var:name>">
 <div class="box">
 	<h2><t><var:title></t></h2>
-	<div class="toolbar">
-		
+	<div class="toolbar btn-toolbar">
+<label:include file="{#portalx}.list-toolbar">
 	</div>
 	<div class="bod">
 <form name="frm_list" action="" method="post">

@@ -8,4 +8,3 @@ class ChannelArticleIndex extends ChannelArticleBase
 	}
 	
 }
-?>

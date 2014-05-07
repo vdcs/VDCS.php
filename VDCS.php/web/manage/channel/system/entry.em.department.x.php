@@ -81,7 +81,7 @@ class PagePortal extends ManagePortalBaseX
 	}
 	protected function parseListdepar()
 	{		
-		$table=EmDepartment::query($this->ua);
+		$table=EcDepartment::getTable();
 		$this->setTable($table);
 		$this->setSucceed();
 

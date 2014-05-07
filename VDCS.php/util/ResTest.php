@@ -20,6 +20,9 @@ echo '</pre>';
 class ResTest
 {
 	
+	public static function logAction($name='action',$value=''){return ResLog::action($name,$value);}
+	
+	
 	function put($s){echo $s;}
 	function puts($s){echo $s.NEWLINE;}
 	
@@ -46,22 +49,6 @@ class ResTest
 
 	public static function toObject($o,$t=''){return print_r(get_object_vars($o),true);}
 	
-	
-	public static function logAction($name='action',$value='')
-	{
-		if(!$name) $name='action';
-		if(!$value){
-			$value='';
-			$value.=NEWLINE.DCS::now();
-			$value.=NEWLINE.'Request URI: '.$_SERVER['REQUEST_URI'];
-			$value.=NEWLINE.'Script Info: '.$_SERVER['SCRIPT_NAME'].' ? '.$_SERVER['QUERY_STRING'];
-			$value.=NEWLINE.'BROWSER URL: '.DCS::browseURL(true);
-			$value.=NEWLINE.'sid: '.session_id().' , '.$_REQUEST['PHPSESSID'];
-			$value.=NEWLINE.'ip: '.DCS::ip().' , '.DCS::agent();
-			$value.=NEWLINE.NEWLINE.'_GET'.NEWLINE.self::pr($_GET,true).NEWLINE.'_POST'.NEWLINE.self::pr($_POST).$GLOBALS["HTTP_RAW_POST_DATA"].NEWLINE;
-		}
-		doFileWrite(appFilePath('data/log/'.$name.'.log'),NEWLINE.$value.NEWLINE,FILE_APPEND);
-	}
 	
 	public static function pr($o,$inline=false)
 	{

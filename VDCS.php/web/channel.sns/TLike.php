@@ -75,7 +75,7 @@ class TLike
 	
 	public static function doDataFilter(&$tableData)
 	{
-		UaExtend::appendInfo($tableData,['fields'=>'sign']);
+		UaExtend::appendInfo($tableData,['fieldx'=>'sign']);
 		return;
 		//$tableData->doAppendFields('unames,usign');
 		$tableData->doBegin();

@@ -135,8 +135,8 @@ class UcContactsFollow
 	public static function doDataFilter(&$tableData)
 	{
 		global $ua;
-		UaExtend::appendInfo($tableData,['fields'=>'sign,total_follow,total_fans,total_post','sx'=>'']);
-		UaExtend::appendInfo($tableData,['fields'=>'sign,total_follow,total_fans,total_post','sx'=>'2','relateid'=>'uuid2']);
+		UaExtend::appendInfo($tableData,['fieldx'=>'sign,total_follow,total_fans,total_post','sx'=>'']);
+		UaExtend::appendInfo($tableData,['fieldx'=>'sign,total_follow,total_fans,total_post','sx'=>'2','relateid'=>'uuid2']);
 		return;
 		$tableGroup=UcContactsGroup::getTableByID($ua->id);
 		$tableData->doAppendFields('groupname');

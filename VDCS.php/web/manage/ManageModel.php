@@ -133,4 +133,3 @@ class ManageModel
 		return $re;
 	}
 }
-?>

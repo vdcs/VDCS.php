@@ -40,8 +40,8 @@ trait WebPortalRefControl
 		$this->ctl->pages->addPathForm('form.config',appDirPath('common.config/form/'));
 		$this->ctl->pages->addPathForm('manage.channel.config',appDirPath('manage.channel.config/form/'));
 		$this->ctl->pages->addPathForm('manage.config',appDirPath('manage.config/form/'));
-		$this->ctl->pages->addPathForm('vchannela',appDirPath('vdcs.web/'.VDCS_WEB_CHANNELA_DIR.'/'.$this->_chn_.'/'));
-		$this->ctl->pages->addPathForm('vchannel',appDirPath('vdcs.web/'.VDCS_WEB_CHANNEL_DIR.'/'.$this->_chn_.'/'));
+		$this->ctl->pages->addPathForm('vchannela',appDirPath('vdcs.web/'.VDCS_CHANNELA.'/'.$this->_chn_.'/'));
+		$this->ctl->pages->addPathForm('vchannel',appDirPath('vdcs.web/'.VDCS_CHANNEL.'/'.$this->_chn_.'/'));
 		$this->ctl->pages->addPathForm('form.vdcs.web',appDirPath('vdcs.web/config/form/'));
 		$this->ctl->pages->addPathForm('form.vdcs.manage',appDirPath('vdcs.manage/config/form/'));
 		$this->ctl->pages->setFileForm(appDirPath('common.channel/'.$this->_chn_.'/').FILENAME_FORM);

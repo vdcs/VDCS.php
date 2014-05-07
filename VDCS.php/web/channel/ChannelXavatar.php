@@ -36,16 +36,17 @@ class ChannelXavatar
 		//$filename=$uid.'_avatar_'.$resType;
 		$filename=$uid.'_avatar_{type}';
 		$dirbase=self::toVarDirParser('{$sn1}/{$sn2}{$sn3}/',$uid);
-		$filepaths=appPaths('upload/'.APP_UA.'/'.$dirbase.$filename.'.jpg');
-		//debugx($filepaths);
+		$filepaths=appPaths('upload/'.APP_UA.'/'.$dirbase.$filename.'.jpg',false);
+		if($isdebug) debugx($filepaths);
 		$filepath=rv($filepaths,'type',$resType);
-		//debugx($filepath);
+		if($isdebug) debugx($filepath);
 		if(!isFile($filepath) && $resType){
 			$filepath=rv($filepaths,'type','big');
 		}
 		if(!isFile($filepath)) $filepath=appPaths('vdcs/web/res/ua/avatar.gif');
-		debugx($filepath);
+		if($isdebug) debugx($filepath);
 		//debugx(DCS::browseURL(true));
+		if($isdebug) return;
 		dcsExpires(30);
 		utilIO::outputImage($filepath);
 	}

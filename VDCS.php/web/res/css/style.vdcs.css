@@ -2,34 +2,35 @@
 @import url("../css/style.html5.css");
 /*
 Version:	VDCS @style v1.0
-Support:	http://go.hpns.cn/vdcs/css
-Uodated:	2012-05-00
+Support:	http://uri.sx/vdcs.css
+Uodated:	2014-04-00
 */
 
 
 body{font-family:'Verdana','Arial','Helvetica','sans-serif';}
-body.text{padding:30px;}
+body.message{background-color:#E6E6E6;}
 
 
 a{color:#555;text-decoration:none;}
 a:hover{color:#d20000;text-decoration:underline;}
 
 
-.BoxError{text-align:center;width:600px;}
-.BoxErrorFrame{width:600px;text-align:left;margin-top:120px;}
-.BoxErrorBody{border:1px solid #E6E6E6;background-color:#F7F8FC;color:#888888;font-size:11px;}
-.BoxErrorBody .title{color:#D8E2F4;font-weight:bold;}
-.BoxErrorBody .partHeader{border:1px solid #FFFFFF;background-color:#E9F5FF;padding:8px 14px 6px 14px;}
-.BoxErrorBody .partHeader a{font-size:16px;font-weight:bold;text-decoration:none;}
-.BoxErrorBody .partMessage{padding:15px;margin:10px 0;}
-.BoxErrorBody .partMessage .title{}
-.BoxErrorBody .partMessage .content{font-size:16px;line-height:1.8;color:#000000;font-weight:bold;text-align:center;margin-top:30px;}
-.BoxErrorBody .partReference{padding:5px 15px 15px 15px;}
-.BoxErrorBody .partReference .title{padding:3px 0;}
-.BoxErrorBody .partReference .content{margin-left:10px;padding:3px 0;}
-.BoxErrorBody .partReference .source{color:#CCCC99;margin-left:10px;padding:3px 0;}
-.BoxErrorBody .partLinks{text-align:center;margin-top:20px;}
-.BoxErrorBody .partLinks a{}
-.BoxErrorBody .partFooter{font-size:10px;text-align:center;padding:5px 0;margin-top:10px;}
-.BoxErrorBody .partFooter .stat{ }
-.BoxErrorBody .partFooter .vver{font-size:10px;}
+.box_error{width:600px;margin:0 auto;margin-top:150px;}
+.box_error > .inners{border:1px solid #CCC;background-color:#FFF;.rc(8px);.shadow_box(#ccc,10px);}
+.box_error > .inners{color:#999;font-size:11px;text-align:left;}
+.box_error .title{color:#86A6CB;font-weight:bold;}
+.box_error h2{background-color:#E9F5FF;padding:10px 14px 10px 14px;}
+.box_error h2 a{font-size:16px;font-weight:bold;text-decoration:none;}
+.box_error .message{padding:15px;margin:10px 0;}
+.box_error .message .title{}
+.box_error .message .title a{color:#86A6CB;font-weight:normal;}
+.box_error .message .content{font-size:16px;line-height:1.8;color:#666;font-weight:bold;text-align:center;margin-top:30px;}
+.box_error .reference{padding:5px 15px 15px 15px;}
+.box_error .reference .title{padding:3px 0;}
+.box_error .reference .content{margin-left:10px;padding:3px 0;}
+.box_error .reference .source{color:#CCCC99;margin-left:10px;padding:3px 0;}
+.box_error h4{text-align:center;margin-top:20px;}
+.box_error h4 a{}
+.box_error h5{font-size:10px;text-align:center;padding:8px 0;margin-top:10px;}
+.box_error h5 .stat{ }
+.box_error h5 .vver{font-size:10px;}

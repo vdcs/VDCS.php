@@ -1,0 +1,24 @@
+</form>
+	</div>
+</div>
+<sh></sh>
+<script type="text/javascript">
+$(function(){
+	$('#searchbar').finde('adv').on('actived',function(){
+		if($(this).prop('checked')) $('#searchbar .adv_part').show();
+		else $('#searchbar .adv_part').hide();
+	})
+	.change(function(){$(this).trigger('actived')});
+
+	$('#searchbar').on('click','[el=submit]',function(){
+		var params=$(this).parents('form').serialize();
+		pages.lister({params:params});
+	});
+
+	$(document).on('click','[search-params]',function(){
+		var params=$(this).attr('search-params');
+		pages.lister({params:params});
+		//return false
+	});
+});
+</script>

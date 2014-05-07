@@ -43,7 +43,7 @@
 #header .info{display:none;}
 
 
-#footer{clear:both;height:220px;background:url("footer_bg.png") 0 0 repeat-x;overflow:hidden;}
+#footer{clear:both;height:220px;background:url("/themes/default/frame/footer_bg.png") 0 0 repeat-x;overflow:hidden;}
 #footer > .inners{margin-top:0;}
 #footer,
 #footer a{color:#7b7b7b;}
@@ -58,12 +58,12 @@
 #footer .logo{width:279px;height:110px;border-right:#303030 1px solid;}
 #footer .logo a{margin-top:25px;margin-left:60px;}
 #footer .links{width:278px;height:110px;border-left:#171717 1px solid;border-right:#303030 1px solid;padding-left:20px;}
-#footer .links h2{height:35px;background:url("footer.png") no-repeat 0 0;}
+#footer .links h2{height:35px;background:url("/themes/default/frame/footer.png") no-repeat 0 0;}
 #footer .links ul{margin-left:5px;}
 #footer .links li{line-height:25px;}
 #footer .contacts{width:378px;height:110px;border-left:#171717 1px solid;padding-left:20px;}
-#footer .contacts h2{height:35px;background:url("footer.png") no-repeat 0 -40px;}
+#footer .contacts h2{height:35px;background:url("/themes/default/frame/footer.png") no-repeat 0 -40px;}
 #footer .contacts ul{margin-left:0;}
 #footer .contacts li{line-height:25px;}
-#footer .contacts .address{display:inline-block;height:20px;line-height:20px;background:url("footer.png") no-repeat 0 -80px;padding-left:20px;}
+#footer .contacts .address{display:inline-block;height:20px;line-height:20px;background:url("/themes/default/frame/footer.png") no-repeat 0 -80px;padding-left:20px;}
 #footer .contacts .phone{}

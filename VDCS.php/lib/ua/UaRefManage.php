@@ -1,7 +1,8 @@
 <?
 trait UaRefManage
 {
-	
+	//public $TableFields=[];
+
 	public function init()
 	{
 		parent::init();

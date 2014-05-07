@@ -1,0 +1,6 @@
+
+<div class="box">
+	<h2><t>搜索</t></h2>
+	<div class="con">
+<form id="searchbar" name="searchbar" class="searchbar">
+<input type="text" name="keyword" class="keyword" placeholder="输入关键字" el="keyword" /><a class="btn submit" el="submit">搜索</a>

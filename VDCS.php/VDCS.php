@@ -1,46 +1,42 @@
 <?php
-@set_time_limit(60);
-//ini_set('magic_quotes_runtime',0);		//function_exists('set_magic_quotes_runtime') && set_magic_quotes_runtime(0);
-define('MAGIC_QUOTES_GPC',FALSE);		//get_magic_quotes_gpc()?TRUE:
+@set_time_limit(60);define('MAGIC_QUOTES_GPC',FALSE);
 //function_exists('date_default_timezone_set') && date_default_timezone_set('Etc/GMT+0');
-define('MEMORY_LIMIT_ON',function_exists('memory_get_usage'));
-if(MEMORY_LIMIT_ON) $GLOBALS['_memory_start_']	= memory_get_usage();
+define('MEMORY_LIMIT_ON',function_exists('memory_get_usage'));		if(MEMORY_LIMIT_ON) $GLOBALS['_memory_start_']=memory_get_usage();
 define('ISRUN',version_compare(PHP_VERSION,'5.4')>-1?TRUE:FALSE);
 //==============================================
 if(!defined('VDCS')) require('util/VDCS.c.php');
-define('VDCS_BUILD',				'0.9.1.5');
-define('VDCS_UPDATE',				'2014-03-02');
+define('VDCS_BUILD',				'0.9.1.6');
+define('VDCS_UPDATE',				'2014-04-30');
 //==============================================
 if(!defined('VDCS_PATH')) define('VDCS_PATH',dirname(__FILE__).'/');
 define('_BASE_PATH_VDCS',			VDCS_PATH);
+defined('VAX_PATH') || 				define('VAX_PATH',				dirname(VDCS_PATH).'/VAX.php/');
 //==============================================
-defined('_BASE_DIR_ROOT') || 			define('_BASE_DIR_ROOT',		'/');
-defined('_BASE_PATH_INCLUDE') || 		define('_BASE_PATH_INCLUDE',		substr(dirname(__FILE__),0,-4));
-defined('_BASE_PATH_ROOT') || 			define('_BASE_PATH_ROOT',		substr(_BASE_PATH_INCLUDE,0,-15));
-defined('_BASE_PATH_COMMON') || 		define('_BASE_PATH_COMMON',		substr(_BASE_PATH_INCLUDE,0,-8));
-defined('_BASE_DIR_DATA') || 			define('_BASE_DIR_DATA',		'data/');
-defined('_BASE_DIR_UPLOAD') || 			define('_BASE_DIR_UPLOAD',		'upload/');
-defined('VDCS_CONFIG_PATH') || 			define('VDCS_CONFIG_PATH',		VDCS_PATH.'config/');
-defined('VDCS_MODULE_PATH') || 			define('VDCS_MODULE_PATH',		VDCS_PATH.'module/');
-defined('VDCS_UTIL') || 			define('VDCS_UTIL',			'util');
-defined('VDCS_LIB') || 				define('VDCS_LIB',			'lib');
-defined('VDCS_INC') || 				define('VDCS_INC',			'inc');
-defined('VDCS_INC_PATH') || 			define('VDCS_INC_PATH',			VDCS_PATH.VDCS_INC.'/');
-defined('VDCS_CD_PATH') || 			define('VDCS_CD_PATH',			VDCS_PATH.'inc/cd/');
-defined('VDCS_WEB') || 				define('VDCS_WEB',			'web');
-defined('VDCS_WEB_PATH') || 			define('VDCS_WEB_PATH',			VDCS_PATH.VDCS_WEB.'/');
-defined('VDCS_WEB_CONFIG_PATH') || 		define('VDCS_WEB_CONFIG_PATH',		VDCS_WEB_PATH.'config/');
-defined('VDCS_WEB_CHANNEL_DIR') || 		define('VDCS_WEB_CHANNEL_DIR',		'channel');
-defined('VDCS_WEB_CHANNEL') || 			define('VDCS_WEB_CHANNEL',		'cms');
-defined('VDCS_WEB_CHANNELA_DIR') || 		define('VDCS_WEB_CHANNELA_DIR',		'channel.'.VDCS_WEB_CHANNEL);
-defined('VDCS_CHANNEL_PATH') || 		define('VDCS_CHANNEL_PATH',		VDCS_WEB_PATH.VDCS_WEB_CHANNEL_DIR.'/');
-defined('VDCS_CHANNELA_PATH') || 		define('VDCS_CHANNELA_PATH',		VDCS_WEB_PATH.VDCS_WEB_CHANNELA_DIR.'/');
-defined('VDCS_MANAGE_PATH') || 			define('VDCS_MANAGE_PATH',		VDCS_WEB_PATH.'manage/');
-//echo '_BASE_PATH_ROOT='._BASE_PATH_ROOT.NEWLINE.'_BASE_PATH_COMMON='._BASE_PATH_COMMON.NEWLINE.'_BASE_PATH_INCLUDE='._BASE_PATH_INCLUDE.NEWLINE;
 //==============================================
-defined('DIR_SEPARATOR') || 			define('DIR_SEPARATOR',			'/');
-defined('FILE_SEPARATOR') || 			define('FILE_SEPARATOR',		'/');
-
+defined('_BASE_DIR_ROOT') || 			define('_BASE_DIR_ROOT',			'/');
+defined('_BASE_DIR_COMMON') || 			define('_BASE_DIR_COMMON',			'common/');
+defined('_BASE_DIR_DATA') || 			define('_BASE_DIR_DATA',			'data/');
+defined('_BASE_DIR_UPLOAD') || 			define('_BASE_DIR_UPLOAD',			'upload/');
+defined('_BASE_PATH_ROOT') || 			define('_BASE_PATH_ROOT',			dirname(dirname(__FILE__)).'/www/');
+defined('_BASE_PATH_COMMON') || 		define('_BASE_PATH_COMMON',			_BASE_PATH_ROOT._BASE_DIR_COMMON);
+defined('APP_BASEURL') || 			define('APP_BASEURL',				_BASE_DIR_ROOT);
+defined('APP_VAX') || 				define('APP_VAX',				'');
+defined('APP_CHANNELA') || 			define('APP_CHANNELA',				'');
+defined('APP_UA') ||				define('APP_UA',				'user');
+define('VDCS_CONFIG',				'config');					define('VDCS_CONFIG_PATH',			VDCS_PATH.'config/');
+define('VDCS_UTIL',				'util');
+define('VDCS_LIB',				'lib');
+define('VDCS_WEB',				'web');						define('VDCS_WEB_PATH',				VDCS_PATH.VDCS_WEB.'/');
+define('VDCS_CHANNEL',				'channel');					define('VDCS_CHANNEL_PATH',			VDCS_WEB_PATH.VDCS_CHANNEL.'/');
+define('VDCS_CHANNELA',				'channel.'.APP_CHANNELA);			define('VDCS_CHANNELA_PATH',			VDCS_WEB_PATH.VDCS_CHANNELA.'/');
+define('VDCS_INC',				'inc');						define('VDCS_INC_PATH',				VDCS_PATH.VDCS_INC.'/');
+define('VDCS_CD_PATH',				VDCS_PATH.'inc/cd/');
+define('VDCS_MANAGE',				'manage');					define('VDCS_MANAGE_PATH',			VDCS_WEB_PATH.'manage/');
+//echo '_BASE_PATH_ROOT='._BASE_PATH_ROOT.NEWLINE.'_BASE_PATH_COMMON='._BASE_PATH_COMMON.NEWLINE;
+//==============================================
+defined('DIR_SEPARATOR') || 			define('DIR_SEPARATOR',				'/');
+defined('FILE_SEPARATOR') || 			define('FILE_SEPARATOR',			'/');
+//PATH_SEPARATOR
 define('PATTERN_FLAG',				'(.+?)');
 define('PATTERN_FLAG_VAR',			'([\w\-\_\.\:]*)');
 define('PATTERN_FLAG_LABEL',			'([^>"]*)');
@@ -87,23 +83,17 @@ function requestx($k){$re=trim($_REQUEST[$k]);return isx($re)?$re:'';}
 }
 //==============================================
 //require('zextend/test.php');
+define('DEBUGV',queryx('debug'));
 
 
 //==============================================
+function timeout($n=60){@set_time_limit($n);}
+function datei($fmt='Y-m-d H:i:s',$stamp=0){return gmdate($fmt,($stamp?$stamp:time())+DCS::timezone(1));}
 function extLoad($extname){if(!extension_loaded($extname)){$px=(PHP_SHLIB_SUFFIX==='dll')?'php_':'';dl($px.$extname.'.'.PHP_SHLIB_SUFFIX);}}
 function isphp($version='5.0.0'){static $_is_php;$version=(string)$version;if(!isset($_is_php[$version])) $_is_php[$version]=(version_compare(PHP_VERSION,$version)<0) ? FALSE : TRUE;return $_is_php[$version];}
 function isClassExists($classname){return class_exists($classname,false);}			function isInterfaceExists($classname){return interface_exists($classname,false);}		//if(!function_exists('isClassExists'))
 function cfunc($s){if(function_exists($s)) call_user_func($s);}
-function unsetr(){
-	for($i=0;$i<func_num_args();$i++){
-		$_key=func_get_arg($i);
-		if(is_string($_key)){
-			if(is_object($GLOBALS[$_key])) $GLOBALS[$_key]=null;
-			else unset($GLOBALS[$_key]);
-		}
-		else unsetrf($_key);
-	}
-}
+function unsetr(){for($i=0;$i<func_num_args();$i++){$_key=func_get_arg($i);if(is_string($_key)) unsetrf($GLOBALS[$_key]);else unsetrf($_key);}}
 function unsetrf(&$o){if(is_object($o)) $o=null; else unset($o);}
 //==============================================
 function dcsRedirect($s)
@@ -135,7 +125,6 @@ function obStarts()
 }
 function obStart($calls=null){return ob_start($calls);}function obContent(){return ob_get_contents();}function obFlush(){return ob_end_flush();}function obClean(){return ob_end_clean();}
 function ignoreAbort(){ignore_user_abort();}
-function datei($fmt='Y-m-d H:i:s',$stamp=0){return gmdate($fmt,($stamp?$stamp:time())+DCS::timezone(1));}
 //==============================================
 function dcsHeader($type=null,$charset=null){
 	if(!$type) $type=CONTENT_TYPE_HTML;
@@ -153,7 +142,7 @@ function dcsExpires($day=30,$modify=null){
 		if(!is_string($modify)) $modify=gmdate('D, d M Y H:i:s',time()+DCS::timezone(1));
 		header('Last-Modified: '.$modify.' GMT');
 	}
-	header('Expires: '.gmdate('D, d M Y H:i:s',time()+86400*$day+DCS::timezone(1)).' GMT');
+	header('Expires: '.datei('D, d M Y H:i:s').' GMT');
 }
 function dcsGzipStatus($t=1){return appv('app.gzip.status');}
 function dcsMemoryUsage($t=1){$re=MEMORY_LIMIT_ON?(memory_get_usage()-$GLOBALS['_memory_start_']):0;return ($t==1)?utilCode::toFileSize($re):$re;}
@@ -168,19 +157,19 @@ function pageHeader($type=null,$charset=null)
 	if($GLOBALS['_cfg']['page.isheader']) return;$GLOBALS['_cfg']['page.isheader']=true;
 	switch($type){
 		case 'html':	$type=CONTENT_TYPE_HTML;break;
-		case 'xml':	$type=CONTENT_TYPE_XML;break;
-		case 'wml':	$type=CONTENT_TYPE_WML;break;
-		case 'json':	$type=CONTENT_TYPE_JSON;break;
+		case 'xml':	$type=CONTENT_TYPE_XML;$charset=CONTENT_TYPE_XML;break;
+		case 'json':	$type=CONTENT_TYPE_JSON;$charset=CONTENT_TYPE_JSON;break;
 		case 'jsx':
-		case 'js':	$type=CONTENT_TYPE_JS;break;
+		case 'js':	$type=CONTENT_TYPE_JS;$charset=CONTENT_TYPE_JS;break;
 		case 'cssx':
-		case 'css':	$type=CONTENT_TYPE_CSS;break;
-		case 'txt':	$type=CONTENT_TYPE_TXT;break;
+		case 'css':	$type=CONTENT_TYPE_CSS;$charset=CONTENT_TYPE_CSS;break;
+		case 'wml':	$type=CONTENT_TYPE_WML;$charset=CONTENT_TYPE_JSON;break;
+		case 'txt':	$type=CONTENT_TYPE_TXT;$charset=CONTENT_TYPE_XML;break;
 		default:	if(!$type) $type=CONTENT_TYPE_HTML;break;		// 'html'
 	}
 	if(!$charset) $charset=CHARSET_HTML;
 	@header('Content-Type:'.$type.'; charset='.$charset);
-	if($gzipcompress && function_exists('ob_gzhandler')){ob_start('ob_gzhandler');}else{$gzipcompress=0;ob_start();}
+	obStarts();
 }
 function pageFlush(){ob_end_flush();}
 //==============================================
@@ -189,9 +178,8 @@ function appExt($re,$_ext=EXT_CONFIG)
 {
 	if(insr($re,'.')>0){
 		if(inp(EXT_GATHER,substr($re,insr($re,'.')),'.')<1) $re.=$_ext;
-	}else{
-		$re.=$_ext;
 	}
+	else $re.=$_ext;
 	return $re;
 }
 //function appExt($re,$ext=EXT_CONFIG){return pathExt($re,$ext);}
@@ -211,14 +199,13 @@ function toPathRel($re){return r($re,$GLOBALS['_cfg']['sys.path']['root'],DIR_SE
 //==============================================
 function toPathsReal($paths,$filename,$dbg=false)
 {
-	$path='';
 	$filename=appExt($filename);
 	foreach($paths as $k=>$v){
 		$path=$v.$filename;
 		if($dbg) debugx($path);
-		if(is_file($path)) break;
+		if(is_file($path)) return $path;
 	}
-	return $path;
+	return '';
 }
 //==============================================
 
@@ -235,7 +222,7 @@ class DCS
 		//$this->_data['start']=microtime(1);
 		self::$timer=time();
 		self::$local=self::isLocal();
-		define('ISLOCAL',self::$local);
+		defined('ISLOCAL')		|| define('ISLOCAL',self::$local);
 	}
 	
 	static $PATH_AL=null;
@@ -335,112 +322,14 @@ function debugxx($s){if(DCS::isLocal())debugx($s);}
 function debugTrace(){put('<!--'.NEWLINE);debug_print_backtrace();put('-->');}
 
 
-/*
-################################################
-################################################
-*/
-class VDCS
-{
-	public $client;
-	public $dbs,$db,$dba;				//$dp,adodb
-	
-	public function __construct(){}
-	public function __destruct()
-	{
-		unset($this->client);
-		unset($this->dbs,$this->db,$this->dba);
-	}
-	
-	/*
-	########################################
-	########################################
-	*/
-	public static function initEnvionment()
-	{
-		if(!MAGIC_QUOTES_GPC){
-			stripslashes($_POST);		//extract(stripslashes($_POST));
-			stripslashes($_GET);		//extract(stripslashes($_GET));
-			//$_FILES=stripslashes($_FILES);
-		}
-	}
-	
-	public static function initCacheApp($obj=null)
-	{
-		global $_cfg;
-		$_cache=_BASE_PATH_ROOT.$GLOBALS['_cfg']['sys.dir']['data.cache'].'config/configure'.EXT_CACHE;
-		if(!is_file($_cache)){
-			$file='cache'.EXT_EXECUTE;
-			$path=_autoload_::path($file);
-			$obj=($path)?'AppCache':'AppCacheBase';
-			call_user_func(array($obj,'doUpdate'),'');	//$obj::doUpdate();
-			if(!is_file($_cache)){
-				echo 'Directory permissions needed! [confugure]';
-				echo NEWLINE.'<!-- '.$_cache.' -->';
-				dcsEnd();
-			}
-		}
-		include($_cache);
-	}
-	
-	public function initCore()
-	{
-		global $_cfg;
-		defined('TIMEZONE') || define(TIMEZONE,SYS_TIMEZONE);
-		
-		//$this->req	= new VDCS_Request();
-		$this->client	= new VDCS_Client();
-		
-		if(ISRUN){
-			//if($_cfg['app.dbs']) $this->dbs=VDCSDB::getInstance($_cfg['sys.dbs']);
-			$this->db=VDCSDB::getInstance($_cfg['sys.db'],'DB');
-		}
-	}
-	public function initDBS($cfg=null)
-	{
-		$this->dbs=VDCSDB::getInstance($cfg?$cfg:$GLOBALS['_cfg']['sys.dbs'],'DBS');
-	}
-	
-	
-	/*
-	########################################
-	########################################
-	*/
-	public static function loadRes($res,$f=null)
-	{
-		if($f==null){$f=$res;$res='';}
-		__autoload($f);
-	}
-	
-}
 
 
 /*
 ################################################
 ################################################
+################################################
+################################################
 */
-require('VDCS.util.php');
-require('VDCS.res.php');
-
-function dcsNO()
-{
-	if(defined('NOVDCS')){
-		DCS::init();
-		return true;
-	}
-	return false;
-}
-$dcs=null;
-function dcsInit($_core=false,$_cache=false)
-{
-	DCS::init();
-	global $dcs;
-	$dcs=new VDCS();
-	if($_cache) $dcs->initCacheApp();
-	if($_core) $dcs->initCore();
-}
-function dcsLoadRes($res,$f=null){VDCS::loadRes($res,$f);}
-
-
 function c($c,$k){return $GLOBALS['_cfg'][$c][$k];}
 function appv($k){return $GLOBALS['_cfg']['app'][$k];}function appValue($k){return appv($k);}
 function appURL($k){return $GLOBALS['_cfg']['app']['url.'.$k];}
@@ -475,22 +364,14 @@ function appPaths($s,$isreal=true,$isdir=0)
 {
 	if($isdir==1 && substr($s,-1)!='/') $s.='/';
 	$sDir=$sValue='';
+	$cfgkey=$GLOBALS['_cfg']['sys.path']?'sys.path':'sys.dir';
 	if(!isRealPath($s)){		//($n=strpos($s,PATH_SYMBOL))===false
 		$n=strpos($s,'/');
-		if(!($n===false) && array_key_exists(substr($s,0,$n),$GLOBALS['_cfg']['sys.dir'])){
+		if(!($n===false) && array_key_exists(substr($s,0,$n),$GLOBALS['_cfg'][$cfgkey])){
 			$sDir=substr($s,0,$n);
 			$sValue=substr($s,$n+1);
 		}
 	}
-	/*
-	else{
-		debugx('sys.path='.$n);
-		if(array_key_exists(substr($s,0,$n),$GLOBALS['_cfg']['sys.path'])){
-			$sDir=substr($s,0,$n);
-			$sValue=substr($s,$n+1);
-		}
-	}
-	*/
 	if(!$sDir){
 		$sDir='root';
 		if(!$sValue) $sValue=$s;
@@ -499,7 +380,7 @@ function appPaths($s,$isreal=true,$isdir=0)
 		//if(ins(EXT_GATHER,right($sValue,4))<1) $sValue.=EXT_CONFIG;
 		$sValue=appExt($sValue);
 	}
-	$re=$GLOBALS['_cfg']['sys.dir'][$sDir].$sValue;
+	$re=$GLOBALS['_cfg'][$cfgkey][$sDir].$sValue;
 	if(!isRealPath($re)) $re=_BASE_PATH_ROOT.$re;
 	if($isreal) $re=appPathReal($re,$sDir,$sValue);
 	//$re=r($re,'\\','/');
@@ -521,6 +402,76 @@ function appPathReal($re,$d,$fn)
 		}
 	}
 	return $re;
+}
+
+
+/*
+################################################
+################################################
+*/
+require('VDCS.util.php');
+require('VDCS.res.php');
+
+function dcsNO()
+{
+	if(defined('NOVDCS')){
+		DCS::init();
+		return true;
+	}
+	return false;
+}
+$dcs=null;
+function dcsInit($_core=false,$_cache=false)
+{
+	DCS::init();
+	global $dcs;
+	$dcs=new VDCS();
+	if($_cache) $dcs->initCacheApp();
+	if($_core) $dcs->initCore();
+}
+
+class VDCS
+{
+	public $client;
+	public $dbs,$db,$dba;				//$dp,adodb
+	
+	public function __construct(){}
+	public function __destruct()
+	{
+		unset($this->client);
+		unset($this->dbs,$this->db,$this->dba);
+	}
+	
+	public static function initCacheApp($obj=null)
+	{
+		global $_cfg;
+		$_cache=_BASE_PATH_ROOT.$GLOBALS['_cfg']['sys.dir']['data.cache'].'config/configure'.EXT_CACHE;
+		if(!is_file($_cache)){
+			$file='cache'.EXT_EXECUTE;
+			$path=_autoload_::path($file);
+			$obj=($path)?'AppCache':'AppCacheBase';
+			call_user_func(array($obj,'doUpdate'),'');	//$obj::doUpdate();
+			if(!is_file($_cache)){
+				echo 'Directory permissions needed! [confugure]';
+				echo NEWLINE.'<!-- '.$_cache.' -->';
+				dcsEnd();
+			}
+		}
+		include($_cache);
+	}
+	
+	public function initCore()
+	{
+		global $_cfg;
+		defined('TIMEZONE') || define(TIMEZONE,SYS_TIMEZONE);
+		//$this->req	= new VDCS_Request();
+		$this->client	= new VDCS_Client();
+		if(ISRUN){
+			//if($_cfg['app.dbs']) $this->dbs=VDCSDB::getInstance($_cfg['sys.dbs']);
+			$this->db=VDCSDB::getInstance($_cfg['sys.db'],'DB');
+		}
+	}
+	public function initDBS($cfg=null){$this->dbs=VDCSDB::getInstance($cfg?$cfg:$GLOBALS['_cfg']['sys.dbs'],'DBS');}
 }
 
 
@@ -560,13 +511,20 @@ class _autoload_
 	
 	public static function path($file,$debug=false){include_once(VDCS_PATH.'lib/Autoload.php');return Autoload::path($file,$debug);}
 }
-function __autoload($f)			//自动加载对象	AppName => AppName.php
+
+//set_include_path(get_include_path().PATH_SEPARATOR.VDCS_PATH.PATH_SEPARATOR.VDCS_PATH.VDCS_UTIL.PATH_SEPARATOR.VDCS_PATH.VDCS_LIB.PATH_SEPARATOR.VDCS_PATH.VDCS_LIB.'/ua/'.PATH_SEPARATOR.VDCS_PATH.VDCS_WEB);
+//spl_autoload_extensions('.php');
+//spl_autoload_register('__autoload');
+function __autoload($f)			//自动加载对象		AppDemo => AppDemo.php
 {
+	//debugx('autoload: '.$f);
+	//spl_autoload($f);if(class_exists($f,false)||trait_exists($f,false)||interface_exists($f,false)) return true;
+	//debugx('autoloaded: '.$f);
 	$file=$f.EXT_EXECUTE;
 	$path=_autoload_::getPath($file);
 	if(!empty($path)){
-		include($path);
-		return true;
+		if(!is_file($path)) return @unlink(_BASE_PATH_ROOT.$GLOBALS['_cfg']['sys.dir']['data.cache'].'config/classpath'.EXT_CACHE);
+		include($path);return true;
 	}
 	$path=_autoload_::path($file);
 	if(!empty($path)){
@@ -575,7 +533,7 @@ function __autoload($f)			//自动加载对象	AppName => AppName.php
 		include($path);
 		return true;
 	}
-	if(Autoload::compatFalse($f)) return false;
+	if(Autoload::compatFalse($f)) return null;
 	include_once(VDCS_PATH.'util/ResMessage.php');ResMessage::debugClass($f);
 	dcsEnd();
 }

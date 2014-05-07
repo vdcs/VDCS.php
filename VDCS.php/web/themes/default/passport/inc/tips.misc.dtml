@@ -1,10 +1,10 @@
 ﻿
 <div class="sider_tips"><div class="inner">
 <p>还没有帐号？</p>
-<p><a class="btn b c" href="<url:register>"><span>注册</span></a></p>
+<p><a class="btn g" href="<url:register>"><span>注册</span></a></p>
 <sh></sh>
 <p>已有帐号？请直接登录</p>
-<p><a class="btn b c" href="<url:login>"><span>登录</span></a></p>
+<p><a class="btn g" href="<url:login>"><span>登录</span></a></p>
 <sh></sh>
 <label:include file="inc/oauth.links">
 </div></div>

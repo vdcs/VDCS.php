@@ -22,7 +22,7 @@ class ApiServeX extends utilErrorBase
 	{
 		define('DEBUG_TYPE',1);
 		if(inp('j,json,xj',PAGE_X)>0){
-			if(queryx('debug')!='show') debugSet(false,false);
+			if(DEBUGV!='show') debugSet(false,false);
 			require_once(VDCS_CD_PATH.'WebServeJSON.php');
 			$this->serve=new WebServeJSON();
 		}

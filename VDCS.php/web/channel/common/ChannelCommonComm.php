@@ -15,6 +15,7 @@ class ChannelCommonComm extends ChannelCommonBase
 	public function doParse()
 	{
 		global $_cfg,$dcs;
+		//$test=new Tester();
 		$_reload=query('reload');
 		switch($_reload){
 			case 'app':

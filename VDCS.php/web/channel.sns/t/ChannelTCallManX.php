@@ -25,7 +25,7 @@ class ChannelTCallManX extends ChannelTBaseX
 			//debugTree($treeItem);
 			$tableData->addItem($treeItem);
 		}
-		UaExtend::appendInfo($tableData,['relateid'=>'uid','fields'=>'sign,avatar']);
+		UaExtend::appendInfo($tableData,['relateid'=>'uid','fieldx'=>'sign,avatar']);
 		$tableData->begin();
 		while($tableData->next()){
 			$uid=$tableData->getItemValueInt('uid');

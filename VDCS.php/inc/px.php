@@ -1,4 +1,6 @@
 <?
+if(defined('NOVDCS')) dcsInit(false,true);
+
 $px=queryx('px');
 
 $classname='ChannelX'.$px;

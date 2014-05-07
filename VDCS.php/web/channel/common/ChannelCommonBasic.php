@@ -26,5 +26,5 @@ class ChannelCommonBasic extends WebPortalBase
 	{
 		$this->theme->output=CommonTheme::toCacheFilterLoop($this->theme->output,'menu','cpo.tableMenu');
 	}
+	
 }
-?>

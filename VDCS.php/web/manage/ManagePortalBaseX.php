@@ -1,6 +1,6 @@
 <?
 class ManagePortalBaseX extends ManagePortalBase
 {
-	use WebServeRefXML;
+	use WebServeRefX;
 	
 }

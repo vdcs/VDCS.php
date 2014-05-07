@@ -1,0 +1,19 @@
+<label:include file="frame/headers">
+
+
+<div class="cont">
+	<div class="box">
+		<h2><t><web:var.classtitle> (<paging:total> <langs:chn.units>)</t></h2>
+		<div class="con">
+<div class="StructLists"><ul>
+<label:list>
+<label:include file="/inc/e/list.item">
+</label:end>
+</ul></div>
+		</div>
+<label:include file="/inc/e/paging.box">
+	</div>
+</div>
+
+
+<label:include file="frame/footers">

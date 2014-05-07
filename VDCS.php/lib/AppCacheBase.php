@@ -2,7 +2,7 @@
 class AppCacheBase
 {
 	
-	public static function isDebug(){return queryx('debug')=='app.cache';}
+	public static function isDebug(){return DEBUGV=='app.cache';}
 	
 	public static function doUpdate()
 	{
@@ -31,8 +31,8 @@ class AppCacheBase
 		$treeApp->addItem('ext.rewrite',$value);
 		//####################
 		if(!$treeApp->isItem('var.rewrite.ext')) $treeApp->addItem('var.rewrite.ext',$value);		//channel
-		if(!$treeApp->isItem('var.rewrite.exti')) $treeApp->addItem('var.rewrite.exti',$value);	//account,passport
-		if(!$treeApp->isItem('var.rewrite.extc')) $treeApp->addItem('var.rewrite.extc',$value);	//common
+		if(!$treeApp->isItem('var.rewrite.exti')) $treeApp->addItem('var.rewrite.exti',$value);		//account,passport
+		if(!$treeApp->isItem('var.rewrite.extc')) $treeApp->addItem('var.rewrite.extc',$value);		//common
 		$treeApp->addItem('rewrite.ext',$treeApp->getItem('var.rewrite.ext'));
 		$treeApp->addItem('rewrite.exti',$treeApp->getItem('var.rewrite.exti'));
 		$treeApp->addItem('rewrite.extc',$treeApp->getItem('var.rewrite.extc'));
@@ -117,14 +117,27 @@ class AppCacheBase
 				}
 			}
 		}
+		//##########
+		$_cfg['sys.url']['ua.index']=$_cfg['sys.url'][APP_UA.'.index']?$_cfg['sys.url'][APP_UA.'.index']:$_cfg['sys.url']['account'];
+		$_cfg['sys.url']['ua.login']=$_cfg['sys.url'][APP_UA.'.login']?$_cfg['sys.url'][APP_UA.'.login']:$_cfg['sys.url']['login'];
+		$_cfg['sys.url']['ua.logout']=$_cfg['sys.url'][APP_UA.'.logout']?$_cfg['sys.url'][APP_UA.'.logout']:$_cfg['sys.url']['logout'];
+		//##########
 		$manageDir=$sIni->get('Manage.dir');if(!$manageDir) $manageDir='manage';if(right($manageDir,1)!='/')$manageDir.='/';
-		$_cfg['sys.url']['manage']=$manageDir;
-		$_cfg['sys.dir']['manage']=$manageDir.'/';
-		//$_cfg['sys.url']['manage.themes']=$manageDir.'themes/';
-		$_baseurl=_BASE_DIR_ROOT;
-		if(defined('BASEURL')) $_baseurl=BASEURL;
+		$manageURL=$sIni->get('Manage.url');
+		if(is_dir(appPaths($manageDir,false,true))){		// hold www/manage/
+			$_cfg['sys.url']['manage']=$manageDir;
+			$_cfg['sys.dir']['manage']=$manageDir;
+		}
+		else{
+			if(!$manageURL) $manageURL='manage'.EXT_SCRIPT;
+			$_cfg['sys.url']['manage']=APP_BASEURL.$manageURL;
+			$_cfg['sys.dir']['manage']='common/'.$manageDir;
+		}
+		//##########
+		
+		//##########
 		foreach($_cfg['sys.url'] as $k=>$v){
-			if(left($v,1)!='/'&&instr($v,'://')<1) $v=$_baseurl.$v;
+			if(left($v,1)!='/'&&instr($v,'://')<1) $v=APP_BASEURL.$v;
 			$_v.=NEWLINE.'$_cfg[\'app\'][\'url.'.$k.'\']			= '.VDCSCache::toValue($v,1).';';
 		}
 		$_v.=NEWLINE.NEWLINE;
@@ -207,7 +220,7 @@ class AppCacheBase
 		}
 		
 		
-		$_v.=NEWLINE.'?'.'>';
+		$_v.=NEWLINE;		//.'?'.'>';
 		//debugx(appPaths('common.config/configure'.EXT_INI));
 		//print_r($GLOBALS['_cfg']);
 		if(self::isDebug()){

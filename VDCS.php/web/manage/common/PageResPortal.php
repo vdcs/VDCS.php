@@ -18,7 +18,7 @@ class PageResPortal extends ManagePortalBase
 		
 		$basepath=appDirPath('vdcs.mthemes/'.MANAGE_THEME);		//manage.themes
 		//debugx($basepath);
-		$path=appDirPath('manage.themes/'.MANAGE_THEME_APP).$file;
+		$path=appDirPath('manage.themes/'.APP_MANAGE_THEME).$file;
 		$isexist=true;
 		//debugx($path);
 		if(!isFile($path)){

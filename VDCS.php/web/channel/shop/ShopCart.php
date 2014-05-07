@@ -26,8 +26,8 @@ class ShopCart
 			$tData->addItem('uusid',$ua->sid());
 			if(!self::sid()) self::sid($ua->sid());
 		}
-		$tData->addItem('tim',DCS::time());
-		$tData->addItem('tim_up',DCS::time());
+		$tData->addItem('tim',DCS::timer());
+		$tData->addItem('tim_up',DCS::timer());
 		
 		$sql=DB::sqlInsert(self::TableName,self::TableFields,$tData);
 		$isexec=DB::exec($sql);

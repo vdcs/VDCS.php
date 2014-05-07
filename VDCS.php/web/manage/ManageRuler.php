@@ -19,7 +19,7 @@ class ManageRuler extends UaRuler
 		$roles=$this->ma->getData('roles');
 		//$roles=$this->ma->uValue('emp.roles');
 		if($roles) $re.=','.$this->getRolePopedoms($roles);
-		if(queryx('debug')=='popedoms'){
+		if(DEBUGV=='popedoms'){
 			debugx($roles);
 			debugx($re);
 		}
@@ -41,5 +41,10 @@ class ManageRuler extends UaRuler
 		$this->ma->doInit();
 	}
 	
+	public function doPopedomCheck()
+	{
+		
+		parent::doPopedomCheck();
+	}
+
 }
-?>

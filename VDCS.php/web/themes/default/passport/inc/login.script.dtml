@@ -2,7 +2,7 @@
 <script type="text/javascript">
 app._xlogin={
 	initer:function(opt,selector){
-		opt=ox({frm:'frm_login',
+		opt=ox({frm:'frm_post',
 			names			: '登录',
 			message_formcheck	: '请填写必要的登录信息！',
 			message_error_account	: '请输入您的 登录帐号 ！',

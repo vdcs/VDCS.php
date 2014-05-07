@@ -1,73 +1,26 @@
-﻿<label:include file="frame/headeri">
+﻿<label:include file="/frame/headeri">
 
 <div class="framer">
 <div class="side">
-<label:include file="/side.user">
 	<div class="box">
-		<h2><t>积分排行</t></h2>
+		<h2><t>标题</t></h2>
 		<div class="con">
-<div class="e_list e_list_sn"><ul>
-<label:block("account.ua","res=points;row=10;cache=;t=i")>
-<li><span class="sn sn-[item:sn]"></span><span class="m"><a href="[item:linkurl]">[item:name]</a></span><span class="r"><span class="total-view">[item:points]</span></span></li>
-</label:end>
-</ul></div>
+内容
 		</div>
 	</div>
 </div>
 <div class="cent">
 	<div class="box">
-		<h2><t>最新<chn:var("article","names")></t></h2>
+		<h2><t>标题</t></h2>
 		<div class="con">
-<div class="e_list"><ul>
-<label:block("article","res=new;classid=;row=10;cache=;t=i")>
-<label:include file="/inc/e/item.pro">
-</label:end>
-</ul></div>
+内容
 		</div>
 	</div>
 	<div class="space"></div>
 	<div class="box">
-		<h2><t>最新<chn:var("news","names")></t></h2>
+		<h2><t>标题</t></h2>
 		<div class="con">
-<div class="e_list"><ul>
-<label:block("news","res=new;classid=;row=10;cache=;t=i")>
-<label:include file="/inc/e/item">
-</label:end>
-</ul></div>
-		</div>
-	</div>
-	<div class="space"></div>
-	
-	<div class="box">
-		<h2><t>最新<chn:var("down","names")></t></h2>
-		<div class="con">
-<div class="e_list"><ul>
-<label:block("down","res=new;row=10;num_topic=45;cache=;t=i")>
-<label:include file="/inc/e/item.pro">
-</label:end>
-</ul></div>
-		</div>
-	</div>
-	<div class="space"></div>
-	<div class="box">
-		<h2><t>最新<chn:var("photo","names")></t></h2>
-		<div class="con">
-<div class="e_pic e_c3"><ul>
-<label:block("photo","res=new;classid=;row=6;cache=;t=i")>
-<label:include file="/inc/e/item.pic">
-</label:end>
-</ul></div>
-		</div>
-	</div>
-	<div class="space"></div>
-	<div class="box">
-		<h2><t>最新<chn:var("shop","names")></t></h2>
-		<div class="con">
-<div class="e_pic e_c3 e_goods"><ul>
-<label:block("shop","res=new;classid=;row=6;cache=;t=i")>
-<label:include file="/shop/e.item.pic">
-</label:end>
-</ul></div>
+内容
 		</div>
 	</div>
 </div>
@@ -82,28 +35,11 @@
 </ul></div>
 		</div>
 	</div>
-	<div class="space"></div>
-	<div class="box">
-		<h2><t>网站统计</t></h2>
-		<div class="con">
-<ul>
-<li><chn:var("account","ua:names")>总数: <span class="total"><config:data("total.user")></span> <chn:var("account","user:unit")><chn:var("account","ua:names")></li>
-<li>最新注册: <span class="v"><config:data("new.username")></span></li>
-<li><chn:var("article","names")>总数: <span class="total"><config:data("total.article")></span> <chn:var("article","unit")><chn:var("article","names")></li>
-<li><chn:var("news","names")>总数: <span class="total"><config:data("total.news")></span> <chn:var("news","unit")><chn:var("news","names")></li>
-<li><chn:var("down","names")>总数: <span class="total"><config:data("total.down")></span> <chn:var("down","unit")><chn:var("down","names")></li>
-<li><chn:var("photo","names")>总数: <span class="total"><config:data("total.photo")></span> <chn:var("photo","unit")><chn:var("photo","names")></li>
-<li><chn:var("shop","names")>总数: <span class="total"><config:data("total.shop")></span> <chn:var("shop","unit")><chn:var("shop","names")></li>
-<li><chn:var("ask","names")>总数: <span class="total"><config:data("total.ask")></span> <chn:var("ask","unit")><chn:var("ask","names")></li>
-<li><chn:var("blog","names")>总数: <span class="total"><config:data("total.blog")></span> <chn:var("blog","unit")><chn:var("blog","names")></li>
-</ul>
-		</div>
-	</div>
 </div>
 </div>
 <div class="framesh"></div>
 <div class="framer">
-<label:include file="/inc/common.links">
+<label:include file="/inc/links">
 </div>
 
-<label:include file="frame/footer">
+<label:include file="/frame/footer">

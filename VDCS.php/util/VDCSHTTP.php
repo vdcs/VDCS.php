@@ -212,9 +212,11 @@ class VDCSHTTP
 	
 	public static function socket($hosts,$data,$timeout=5)
 	{
-		$parse = parse_url($hosts);
+		if(!isa($hosts)) $parse = parse_url($hosts);
+		else $parse=$hosts;
 		$host=$parse['host'];
 		$port=$parse['port']?$parse['port']:80;
+		//debuga($parse);
 		if(!$host || !$port || !$data) return false;
 		$socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
 		if ($socket === false) {

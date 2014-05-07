@@ -36,7 +36,7 @@ class utilPic
 			$this->_var['thumb.height']=$this->treeConfig->getItemInt('thumb.height');
 		}
 		if($this->_var['thumb.width']>0 && $this->_var['thumb.height']>0){
-			$this->_var['thumb.name']=utilPic::toMakeThumb($this->_var['savepath'],$this->_var['file.name'],'',$this->_var['thumbname'],$this->_var['thumb.width'],$this->_var['thumb.height']);
+			$this->_var['thumb.name']=utilImage::toMakeThumb($this->_var['savepath'],$this->_var['file.name'],'',$this->_var['thumbname'],$this->_var['thumb.width'],$this->_var['thumb.height']);
 			if(len($this->_var['thumb.name'])>0){
 				$this->_var['thumb.is']=true;
 				$this->_var['thumb.ext']=getPathPart($this->_var['thumb.name'],'ext');;

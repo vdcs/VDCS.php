@@ -1,5 +1,15 @@
 <label:include file="frame/headers">
 
+<!--
+dropdown
+<style type="text/css">
+@import url("/images/css/comm/ui.extends.css");
+@import url("/images/css/comm/widget.css");
+</style>
+<label:include script="jquery/extends.min.js">
+-->
+
+
 <label:include script="comm/process.css" type="css">
 
 <div class="framer">
@@ -17,6 +27,8 @@
 <a class="btn m" href="javascript:;"><span><i class="icol-lock"></i>主要 btn m</span></a>
 <br/>
 <a class="btn c" href="javascript:;"><span><i class="icos-bag"></i>着重 btn c</span></a>
+<br/>
+<a class="btn g" href="javascript:;"><span><i class="icos-cog"></i>引导 btn g</span></a>
 </p>
 
 <p>
@@ -25,6 +37,8 @@
 <a class="btn b m" href="javascript:;"><span><i class="icol-monitor"></i>主要 btn b m</span></a>
 <br/>
 <a class="btn b c" href="javascript:;"><span><i class="icos-cog"></i>着重 btn b c</span></a>
+<br/>
+<a class="btn b g" href="javascript:;"><span><i class="icos-cog"></i>引导 btn b g</span></a>
 </p>
 
 <p>
@@ -33,6 +47,8 @@
 <a class="btn s m" href="javascript:;"><span>主要 btn s m</span></a>
 <br/>
 <a class="btn s c" href="javascript:;"><span>着重 btn s c</span></a>
+<br/>
+<a class="btn s g" href="javascript:;"><span>引导 btn s g</span></a>
 </p>
 
 <div class="space"></div>

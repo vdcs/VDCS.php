@@ -26,7 +26,7 @@ class CommonPaPaymentGateway extends ChannelPaBase
 		//网关处理
 		switch($sp){
 			case 'alipay':
-				$params->addItem('notify_url',DCS::url($this->cfg->toLinkURL('pami','p=payment&m=alipay&mi=notify')));		//,APP_BASEURL
+				$params->addItem('notify_url',DCS::url($this->cfg->toLinkURL('pami','p=payment&m=alipay&mi=notify')));
 				$params->addItem('return_url',DCS::url($this->cfg->toLinkURL('pami','p=payment&m=alipay&mi=return')));
 				//debugTree($params);
 				$sp_url=PaymentAlipayAction::buildTransactionURL($params);

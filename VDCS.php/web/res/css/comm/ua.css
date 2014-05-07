@@ -1,9 +1,15 @@
 @charset "utf-8";
 /*
 Version:	VDCS comm @ua v1.0
-Support:	http://go.hpns.cn/vdcs/css
-Uodated:	2014-02-00
+Support:	http://uri.sx/vdcs.css
+Uodated:	2014-04-00
 */
+
+
+.ua{display:inline-block;vertical-align:middle;}
+.ua img{}
+.ua span{margin-left:5px;}
+
 
 
 /* ######### Avatar ######## */

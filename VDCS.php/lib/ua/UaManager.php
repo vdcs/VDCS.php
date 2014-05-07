@@ -322,7 +322,7 @@ class UaManager
 					$treeRelation->doMove();
 				}
 			}
-			if(queryx('debug')=='mau') debugTree($this->treeUa);
+			if(DEBUGV=='mau') debugTree($this->treeUa);
 		}
 	}
 	public function uTree()

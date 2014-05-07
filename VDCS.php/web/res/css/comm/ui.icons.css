@@ -1,11 +1,9 @@
 @charset "utf-8";
 /*
 Version:	VDCS comm @icons v1.0
-Support:	http://go.hpns.cn/vdcs/css
-Uodated:	2014-02-00
+Support:	http://uri.sx/vdcs.css
+Uodated:	2014-05-00
 */
-
-
 
 
 .sparkline, 
@@ -26,21 +24,15 @@ Uodated:	2014-02-00
 [class*=" icol-"],
 [class^="icos-"],
 [class*=" icos-"]{
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	font-size: 32px;
-	text-align: center;
-	margin: 0 0;
 	display: inline-block;
-	vertical-align: middle;
-	line-height: 1;
+	width: 40px;height: 40px;line-height: 40px;
+	font-size: 32px;text-align: center;vertical-align: middle;
+	margin: 0 0;
 }
 
 .icon.icon-circle,
 .icon.icon-square{
-	color: #fff;
-	font-size: 20px;
+	color: #fff;font-size: 20px;
 	background-color: #666;
 	.rc(2px);
 }
@@ -54,17 +46,10 @@ em.icon{width:20px;height:20px;}
 [class^="icos-"],
 [class*=" icol-"],
 [class*=" icos-"]{
-	display: inline-block;
-	*display: inline;
-	/* IE7 inline-block hack */
-	*zoom: 1;
-	width: 16px;
-	height: 16px;
+	display: inline-block;*display: inline;*zoom: 1;		/* IE7 inline-block hack */
+	width: 16px;height: 16px;line-height: 16px;vertical-align: text-top;
+	background-repeat: no-repeat;background-position: 16px 16px;
 	*margin-right: .3em;
-	line-height: 16px;
-	vertical-align: text-top;
-	background-repeat: no-repeat;
-	background-position: 16px 16px;
 }
 
 /* Color Icons
@@ -108,11 +93,11 @@ em.icon{width:20px;height:20px;}
 .btn [class^="icol-"], 
 .btn [class^="icos-"], 
 .btn [class*=" icol-"], 
-.btn [class*=" icos-"]{margin-left:3px;margin-right:3px;}
+.btn [class*=" icos-"]{margin-top:@btn_ico_top;margin-right:4px;}
 .btn.b [class^="icol-"], 
 .btn.b [class^="icos-"], 
 .btn.b [class*=" icol-"], 
-.btn.b [class*=" icos-"]{margin-top:2px;margin-right:5px;}
+.btn.b [class*=" icos-"]{margin-top:@btn_ico_top_b;margin-right:6px;}
 
 
 /* Icon Definitions

@@ -54,6 +54,7 @@ trait ChannelRefPa
 	{
 		if($this->pam) $this->pam->doLoad($this);
 	}
+
 	public function parseCan()
 	{
 		if($this->pam) return $this->pam->parseCan($this);
@@ -63,9 +64,29 @@ trait ChannelRefPa
 	{
 		if($this->pam) $this->pam->doParse($this);
 	}
+
+	public function doTheme()
+	{
+		if($this->pam) $this->pam->doTheme($this);
+	}
 	public function doThemeCache()
 	{
 		if($this->pam) $this->pam->doThemeCache($this);
 	}
+	public function doThemer()
+	{
+		if($this->pam) $this->pam->doThemer($this);
+	}
 	
+	/*
+	public function doThemePre(){}				//模板前置输出处理
+	public function doTheme(){}				//模板输出处理
+	public function doThemePos(){}				//模板后置输出处理
+	public function doThemeCacheBasic(){}			//模板基础缓存处理
+	public function doThemeCachePre(){}			//模板前置缓存处理
+	public function doThemeCache(){}			//模板缓存处理
+	public function doThemeCachePos(){}			//模板后置缓存处理
+	public function doThemer(){}				//模板输出处理
+	*/
+
 }

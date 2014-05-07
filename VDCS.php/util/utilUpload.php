@@ -140,11 +140,16 @@ class utilUpload
 				$pathFrom=$this->_var['savepath'].$this->_var['file.name'];
 				$filenameTo=$this->_var['filename'].'.'.$this->format;
 				$pathTo=$this->_var['savepath'].$filenameTo;
-				$isCover=utilPic::doFileConver($this->_var['file.ext'],$pathFrom,$this->format,$pathTo);
+				/*dcsLog(__CLASS__.'.this',test::o($this));
+				dcsLog(__CLASS__.'._var',test::a($this->_var));
+				dcsLog(__CLASS__.'.pathFrom',$pathFrom);
+				dcsLog(__CLASS__.'.filenameTo',$filenameTo);
+				dcsLog(__CLASS__.'.pathTo',$pathTo);*/
+				$isCover=utilImage::doFileConver($this->_var['file.ext'],$pathFrom,$this->format,$pathTo);
 				if($isCover){
 					$this->_var['file.size']=utilFile::getSize($pathTo);
 					$this->_var['file.names']=utilFile::getPathPart($pathTo,'names');
-					$this->_var['file.type']=utilPic::getMimeType($pathTo);
+					$this->_var['file.type']=utilImage::getMimeType($pathTo);
 					$this->_var['file.name']=$filenameTo;
 					$this->_var['file.ext']=utilFile::getPathPart($pathTo,'ext');
 					$this->_var['file.name']=$this->_var['filename'].'.'.$this->_var['file.ext'];

@@ -31,7 +31,7 @@ class ManageTheme extends BaseTheme
 			default:
 				$this->_var['channelbase.path']	= $this->_var['themebase.path'].$this->_var['channel.dir'];
 				$this->_var['channelapp.path']	= $this->_var['themeapp.path'].$this->_var['channel.dir'];
-				//$channeldir=MANAGE_THEME_APP?MANAGE_THEME_APP.'/':'';
+				//$channeldir=APP_MANAGE_THEME?APP_MANAGE_THEME.'/':'';
 				$this->_var['channeldef.path']	= $this->_var['themedef.path'].$this->_var['channel.dir'];
 				//$this->_var['channelv.path']	= $this->_var['theme.path'].$this->_var['channel.dir'];
 				$this->_var['channel.path']	= $this->_var['theme.path'].$this->_var['channel.dir'];
@@ -61,7 +61,7 @@ class ManageTheme extends BaseTheme
 		$this->_var['themedef.path']	= appDirPath('manage.themes/');
 		
 		//$this->setTheme($_cfg['app']['manage.theme']?$_cfg['app']['manage.theme']:self::$ThemeDefault);
-		$this->setTheme(MANAGE_THEME_APP);
+		$this->setTheme(APP_MANAGE_THEME);
 	}
 	
 	public function doParse()

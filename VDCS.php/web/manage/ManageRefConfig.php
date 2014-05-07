@@ -12,6 +12,7 @@ trait ManageRefConfig
 			$this->_trees[$file]=VDCSDTML::getConfigCacheTree('vdcs.mconfig/'.$file);
 			$this->_trees[$file]->doAppendTree(VDCSDTML::getConfigCacheTree('manage.config/'.$file));
 			$this->_trees[$file]->doAppendTree(VDCSDTML::getConfigCacheTree('manage.config/'.$file.FILE_EXTEND_DEFINE));
+			//debugTree($this->_trees[$file]);
 			//if($file=='language'){
 			//	debugTree($this->_trees[$file]);
 			//}

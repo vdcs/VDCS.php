@@ -4,14 +4,14 @@
 <div class="cont">
 	<div class="box">
 		<h2><t>资金流动</t></h2>
-		<div class="bod">
+		<div class="bod" id="lists">
 			<table class="table tables table-striped table-hover table-list">
 				<thead>
 					<tr><th>序号</th><th>金额</th><th>状态</th><th>余额</th><th>时间</th></tr>
 				</thead>
-				<tbody id="transaction_list"></tbody>			
+				<tbody el="cont" data-empty="true"></tbody>			
 			</table>
-			<xmp id="transaction_list_tpl">
+			<xmp el="tpl">
 				<tr dataid="[item:id]">
 					<td>[item:id]</td><td>[item:money]</td>
 					<td>[item:payment]</td><td>[item:balance]</td><td>[item:tim.name]</td>
@@ -22,19 +22,14 @@
 </div>
 <div class="space"></div>
 <div class="paging"></div>
+
 <script type="text/javascript">
 $(function(){
-	var record_list=ui.list;//对象，传入存放内容的对象和模板对象
-	var opt={cont:$('#transaction_list'),tpl:$('#transaction_list_tpl')};
+	var record_list=extend(ui.list);
+	var opt={wrap:$('#lists'),paging:$('.paging')};
 	opt.serveVar={channel:'{@channel}',p:'assets',m:'transaction',action:'transaction'};
-	
-	opt.bind=function(jitem){
-	};
-	opt.binds=function(jcont){
-		
-	};
-	opt.paging=$(".paging");
-	opt.node_table='item';
+	opt.bind=function(jitem){};
+	opt.binds=function(jcont,treeVar){};
 	record_list.init(opt);
 	record_list.parse();
 });

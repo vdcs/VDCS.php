@@ -2,7 +2,13 @@
 extendo(pages,{
 	
 	initList:function(jlist,opt){this.list.initer(jlist,opt)},
-	
+	listExtendOpt:function(opt){return opt},
+	lister:function(opt){
+		if(!opt) opt={};
+		if(this.listExtendOpt) opt=this.listExtendOpt(opt);
+		this.initList(null,opt);
+	},
+
 	list:{
 		initer:function(jlist,opt){
 			jlist=jlist?jlist:$('.xlist').parent();

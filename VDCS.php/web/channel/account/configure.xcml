@@ -19,7 +19,7 @@
 		<m.default><![CDATA[demo=abc;]]></m.default>
 	</config>
 	<url.script>
-		<avatar><![CDATA[{@rootc.script}&p=avatar&id={$id}&res={$res}&f=.gif]]></avatar>
+		<avatar><![CDATA[{@rootc.script}&p=avatar&id={$id}&res={$res}&f=.img]]></avatar>
 		<user.view><![CDATA[{@rootc.script}&p=user]]></user.view>
 		<user.view.id><![CDATA[{@rootc.script}&p=user&id={$id}]]></user.view.id>
 	</url.script>
@@ -27,7 +27,7 @@
 		<!--
 		<index><![CDATA[{@root}{@channel}]]></index>
 		-->
-		<avatar><![CDATA[{@root}avatar/{$id}_{$res}.gif]]></avatar>
+		<avatar><![CDATA[{@root}avatar/{$id}_{$res}.img]]></avatar>
 		<user.view><![CDATA[{@rootc.rewrite}user_{$id}<app:rewrite.exti>]]></user.view>
 		<user.view.id><![CDATA[{@rootc.rewrite}user<app:rewrite.exti>?id={$id}]]></user.view.id>
 	</url.rewrite>

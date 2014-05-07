@@ -1,11 +1,11 @@
-﻿<label:include file="/inc/header.html5">
+﻿<label:include file="/inc/framer/header.html5">
 <head>
-<label:include file="/inc/header.meta5">
+<label:include file="/inc/framer/header.meta5">
 <label:include file="/inc/header.metax">
-<label:include file="/inc/header.title">
-<label:include file="/inc/header.links5">
+<label:include file="/inc/framer/header.title">
+<label:include file="/inc/framer/header.links5">
 <label:include file="/inc/header.linkx">
-<label:include file="/inc/header.style5">
+<label:include file="/inc/framer/header.style5">
 <label:include file="/inc/header.script.core">
 <label:include file="/inc/header.scriptx">
 <label:include file="/inc/header.script.app">
@@ -14,9 +14,7 @@
 <label:include script="comm/page.css" type="css">
 <label:include script="comm/box.css" type="css">
 <label:include script="comm/widget.css" type="css">
-<label:include script="comm/ui.iblank.css" type="css">
 
-<label:include script="comm/ui.css" type="css">
 <label:include script="comm/ui.table.css" type="css">
 <label:include script="comm/ui.paging.css" type="css">
 <label:include script="comm/ui.icons.css" type="css">

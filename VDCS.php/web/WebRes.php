@@ -37,8 +37,7 @@ class WebRes
 		}
 
 		$isexist=true;
-		$rootpath=appPaths('root/',true,true);			//appDirPath('root');
-		$filepath=$rootpath.$res.'/'.$file;
+		$filepath=appPaths(self::$RESDIR_ROOT[$res],true,true).$file;
 		if($isdebug) debugx('filepath.root='.$filepath);
 		if(!isFile($filepath)){
 			$basepath=appPaths('vdcs/web/',true,true);
@@ -82,6 +81,11 @@ class WebRes
 		'images'=>'res/',
 		'themes'=>'themes/',
 		'manage/themes'=>'manage/themes/default/',
+		);
+	static $RESDIR_ROOT=array(
+		'images'=>'images/',
+		'themes'=>'themes/',
+		'manage/themes'=>'manage/themes/',
 		);
 
 	public static function typeParser($type)

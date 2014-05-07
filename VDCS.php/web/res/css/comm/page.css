@@ -1,7 +1,7 @@
 @charset "utf-8";
 /*
 Version:	VDCS comm @page v1.0
-Support:	http://go.hpns.cn/vdcs/css
+Support:	http://uri.sx/vdcs.css
 Uodated:	2014-03-00
 */
 
@@ -12,8 +12,8 @@ a{color:@acolor;text-decoration:none;}
 a:hover{color:@acolor_hover;text-decoration:underline;}
 
 
-.thin,a.thin{color:#996;}
-a.thin:hover{color:#960;}
+.thin,a.thin{color:@color_thin;}
+a.thin:hover{color:@color_thin + 10;}
 
 
 .xform{clear:both;width:@xform_width;padding:80px 0;margin:0 auto;}
@@ -43,14 +43,14 @@ footer > inners,#footer > .inners,
 #menu{float:left;width:@menu_width;}
 #main{float:left;width:@main_width;min-height:@main_height_min;_height:@main_height_min;margin-left:@main_space;}
 #main > .cont{.clr();position:relative;}
-#main > .cent{margin-right:@main_side_width+@main_space;}
+#main > .cent{margin-right:@main_side_width + @main_space;}
 #main > .side,
 #main > .sider{float:right;width:@main_side_width;.posr(0);}
 
 
 .framesh{height:@spaceh;}
 .framers,.framesh,
-.framer{.clr();width:@width;margin:0 auto;}
+.framer{.clr();width:@framer_width;margin:0 auto;}
 .framer{text-align:left;overflow:hidden;}
 .framer > .main{width:@width;}
 

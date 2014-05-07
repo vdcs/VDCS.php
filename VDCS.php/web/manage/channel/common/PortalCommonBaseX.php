@@ -1,7 +1,6 @@
 <?
 class PortalCommonBaseX extends PortalCommonBase
 {
-	use WebServeRefXML;
-
+	use WebServeRefX;
+	
 }
-?>

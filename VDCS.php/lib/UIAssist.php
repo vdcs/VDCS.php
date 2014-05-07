@@ -124,6 +124,7 @@ class UIAssist
 		//debugx($rootpath);
 		$re.=getFile($respath.'css/less/defined.css').NEWLINE;
 		$re.=getFile($respath.'css/less/style.css').NEWLINE;
+		$re.=getFile($respath.'css/less/lib.css').NEWLINE;
 		$re.=getFile($rootpath.'css/define.less').NEWLINE;
 		//die($re);
 		return $re;

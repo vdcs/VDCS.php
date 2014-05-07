@@ -1,11 +1,11 @@
 /*
 Version:	VDCS Common & Instantiation Library v2.0
 		in jquery 1.10.2
-Support:	http://go.hpns.cn/vdcs/js
-Uodated:	2014-01-23
+Support:	http://uri.sx/vdcs.js
+Uodated:	2014-04-30
 */
 
-var VDCS={},dcs={ver:{bulid:'0.2.6.3',d:'20140100'}};
+var VDCS={},dcs={ver:{bulid:'0.2.6.3',d:'20140400'}};
 var d=document,dE=d.documentElement,dO=null,w=window;
 
 
@@ -37,11 +37,6 @@ extendo(Date.prototype,{Conversion:{w:604800000,d:86400000,h:3600000,i:60000,s:1
 	distance:function(d){var n=this.diff('s',d==0?new Date():$v.sDate),re=[0,'',-1];if(n>86400){re[0]=3;re[2]=parseInt(n/86400);if(re[2]<1)re[2]=1}else if(n>3600){re[0]=2;re[2]=parseInt(n/3600);if(re[2]<1)re[2]=1}else if(n>60){re[0]=1;re[2]=parseInt(n/60);if(re[2]<1)re[2]=1}else if(n>0){re[0]=0;re[2]=n;if(re[2]<1)re[2]=1}if(re[2]>0)re[1]=r($v['date.distances'][re[0]],'$1',re[2]);return re},
 	toJSON:function(){return'"'+this.getFullYear()+'-'+(this.getMonth()+1).toPaddedString(2)+'-'+this.getDate().toPaddedString(2)+' '+this.getHours().toPaddedString(2)+':'+this.getMinutes().toPaddedString(2)+':'+this.getSeconds().toPaddedString(2)+'"'}
 });
-extendo(String.prototype,{
-	trim:function(){return this.replace(/(^\s*)|(\s*$)/g,'')},
-	strip:function(){return this.replace(/^\s+/,'').replace(/\s+$/,'')},
-	ary:function(){return this.split('')}
-});
 
 // function
 put=function(s){d.write(s)};
@@ -61,8 +56,7 @@ isNume=isNumber=function(s,t,v){var vars=(t==1)?'0123456789.':'0123456789',ar=ne
 
 too=function(o,t){return iso(o)?o:$o(o,t)};
 tob=toBool=function(s){return (s==true||s==1||s=='True'||s=='true'||s=='1')};
-toi=toInt=function(s,b){return isInt(s)?parseInt(s,b||10):0};
-ton=toNum=function(s){return isNum(s,1)?parseFloat(s):0};
+toi=toInt=function(s,b){return isInt(s)?parseInt(s,b||10):0};		ton=toNum=function(s){return isNum(s,1)?parseFloat(s):0};
 
 t=function(s){return typeof(s)=='string'?s.trim():s};	len=function(s){return s.replace(/[^\x00-\xff]/g,'aa').length};
 r=function(s,s1,s2){if(!s)return s;if(!ise(s1)){while(s.indexOf(s1)>-1){s=s.replace(s1,s2)}};return s};	rv=function(s,s1,s2){return r(s,'{'+s1+'}',s2)};	rd=function(s,s1,s2){return r(s,'{$'+s1+'}',s2)};
@@ -88,7 +82,7 @@ $lng=$lang=dcs.lang={};$app=dcs.app={};$a={};
 $v.v=$lng.v=function(k,v){return ise(v)?this[k]:this[k]=v};
 $v.STime=function(s){this.sTime=s;this.sDate=new Date().toDate(s)};
 
-var ua={rc:'',id:-1,name:''};
+var ua={rc:'',id:-1,names:''};
 
 // config & common
 $c=dcs.config=dcs.common={local:true,EXT:'php',
@@ -119,7 +113,10 @@ $c=dcs.config=dcs.common={local:true,EXT:'php',
 	setPath:function(d,u,t){if(!ise(d))this._data['dir']=d; if(!ise(u)) this._data['url']=u; if(!ise(t))this._data['dir.theme']=(t=='_base')?this._data['dir.themes.base']:t},
 	setUnit:function(emoney,points,exp){extendo($v.unit,{emoney:emoney,points:points,exp:exp})},
 	
-	setr:function(channel,p,m,mi){this.channel=channel;this.p=p;this.m=m;this.mi=mi},
+	setr:function(channel,p,m,mi){
+		this.channel=channel;this.p=p;this.m=m;this.mi=mi;
+		if(ui.serve){ui.serve.setVar('channel',this.channel);}
+	},
 	router:function(){return {channel:this.channel,p:this.p,m:this.m,mi:this.mi,x:this.x,action:this.action,params:this.params}},
 
 	setUA:function(rc,id,name){
@@ -156,11 +153,6 @@ $b=dcs.browser={nav:navigator,agent:navigator.userAgent.toLowerCase(),ver:naviga
 		return re
 	},
 	init:function(){
-		/*
-		$(function(){dbg.o(navigator);});
-		alert(this.agent+'\n'+this.ver);
-		alert(Math.floor(this.ver.split(' ')[0]));
-		*/
 		var b=$b.browser=$b.prober();
 		for(var k in b){$b[k]=b[k]}		//ox($b,$b.browser);
 		if(!$.browser) $.browser=$b.browser;
@@ -302,36 +294,11 @@ $f=dcs.form={MSX:'[]',
 	getValue:function(id){
 		var re='',oj=this.obj(id,true);
 		if(!oj) return re;
-		var ar=oj.fieldValue();
-		for(var a=0;a<ar.length;a++){
-			if(len(ar[a])>0) re+=','+ar[a]
-		}
-		if(len(re)>1) re=re.substr(1);
-		return re
+		return oj.vals();
 	},
-	setValue:function(id,value,mod){
+	setValue:function(id,value,mode){
 		var oj=this.obj(id,true);if(!oj || value === undefined) return false;
-		var _type=oj[0].type,values=','+value+',';
-		switch(oj[0].type){
-			case 'radio':
-			case 'checkbox':
-				oj.each(function(i){
-					if(mod=='__all' || inp(values,$(this).val())>0 || inp(values,'_no'+i)>0 || inp(values,'__no'+i)>0) $(this).checked(true);
-				});
-				break;
-			default:
-				if(oj[0].tagName.toLowerCase()=='select'){
-					var ojo=oj.find('option');
-					ojo.each(function(i){		//oj.attr('value',value);
-						if(mod=='__all' || inp(values,$(this).val())>0 || inp(values,'_no'+i)>0 || inp(values,'__no'+i)>0) $(this).attr('selected',true);
-					})
-				}
-				else{
-					oj.attr('value',mod=='append'?(oj.val()+value):value)		//oj.val(value);
-				}
-				break;
-		}
-		return true
+		return oj.vals(value,mode)
 	},
 	v:function(o,v,m){return v?this.setValue(o,v,m):this.getValue(o)},
 	focus:function(id){this.o(id).focus()},doFocus:function(id){this.focus(id)},
@@ -367,9 +334,7 @@ $ajax.ne=function(){
 			if(_x.status==200||_x.status==304){
 				if(_p['ready']) _p['ready']($ajax.value(_x,_p['value']))
 			}
-			else if(_x.status==0){
-				//
-			}
+			else if(_x.status==0){}
 			else{
 				if(_p['error']){
 					if(isf(_p['error'])) _p['error'](_x.status,_x.responseText);
@@ -382,7 +347,7 @@ $ajax.ne=function(){
 		}
 	};
 	_x.onreadystatechange=_ready;
-	if(_p['method']=='POST') _x.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+	if(_p['method']=='POST') _x.setRequestHeader('Content-Type',_p['contentType']||'application/x-www-form-urlencoded');
 	//_x.send(_p['method']=='POST'?_p['params']:null);
 	_x.send(_p['params']);
 	if(!$b.ie&&_p['async']==false){
@@ -730,7 +695,7 @@ $url=dcs.url={
 	isSafe:function(s){return regEx.exec(new RegExp("^(http(s?)|ftp)://","i"))},	//|file
 	querys:function(ar){
 		var re='';
-		for(k in ar) re+='&'+k+'='+this.toEncode(ar[k]);
+		for(k in ar) re+='&'+k+'='+this.en(ar[k]);
 		if(re.length>0)re=re.substring(1);
 		return re
 	},
@@ -759,27 +724,6 @@ $url=dcs.url={
 	},
 	en:function(s){return this.toEncode(s)},toEncode:function(s){return encodeURIComponent(s)},toEncodei:function(s){return encodeURI(s)},
 	de:function(s){return this.toDecodei(s)},toDecode:function(s){return decodeURIComponent(s)},toDecodei:function(s){return decodeURI(s)},
-'':''};
-
-
-//images
-/* ************************************* */
-$lng['img']={};
-$img={_total:0,
-	load:function(url,func,callback){
-		var img=new Image();img.src=url;
-		if(func||callback){
-			var _load=function(){
-				if(func) func(img);
-				if(callback) callback.call(img)		//将callback函数this指针切换为img。
-			};
-			if(img.complete){				//如果图片已经存在于浏览器缓存，直接调用回调函数
-				_load();
-				return					//直接返回，不用再处理onload事件
-			}
-			img.onload=function(){_load()}			//图片下载完毕时异步调用callback函数。
-		}
-	},
 '':''};
 
 
@@ -855,8 +799,8 @@ $util=dcs.util={
 			if(iso(xml)) xcml.loadResponseXML(xml);
 			else xcml.loadXML(xml);
 			xcml.doParse();
-			var tmpItemArray=xcml.getConfigure('node').split(',');
-			for(var a=0;a<tmpItemArray.length;a++){reTree.doAppendTree(xcml.getNodeTree(tmpItemArray[a]),tmpItemArray[a]+'.')}
+			var itema=xcml.getConfigure('node').split(',');
+			for(var a=0;a<itema.length;a++){reTree.doAppendTree(xcml.getNodeTree(itema[a]),itema[a]+'.')}
 		}
 		return reTree
 	},
@@ -897,9 +841,9 @@ $util=dcs.util={
 				}
 				reMap.addItem(xcml.getConfigureNode(),oTable);
 			}
-			var tmpItemArray=xcml.getConfigure('nodes').split(',');
-			for(a in tmpItemArray){
-				var _node=tmpItemArray[a];
+			var itema=xcml.getConfigure('nodes').split(',');
+			for(a in itema){
+				var _node=itema[a];
 				fields=xcml.getConfigure('field.'+_node);
 				if(_node && fields){
 					oTable=new VDCS.utilTable();
@@ -957,6 +901,9 @@ $dtml=dcs.DTML={
 			case 'date':		re=$time.toConvert(re,'date'); break;
 			case 'dates':		re=$time.toConvert(re,'dates'); break;
 			case 'datey':		re=$time.toConvert(re,'datey'); break;
+			case 'time':		re=$time.toConvert(re,'time'); break;
+			case 'times':		re=$time.toConvert(re,'times'); break;
+			case 'timec':		re=$time.toConvert(re,'timec'); break;
 			//case 'url':		re=$codes.toURL(re); break;
 			//case 'explain.js':	re=$codes.toJS(toHTMLValue(re,2,0)); break;
 			//case 'money':		re=$codes.toMoney(re); break;
@@ -968,8 +915,9 @@ $dtml=dcs.DTML={
 			default:
 				if(func) re=func(re,fmt,p2);
 				else{
-					var fname='to_'+fmt;
-					if($codes[fname]) re=$codes[fname](re,p2);
+					var fname;
+					if($codes[fname='filter_'+fmt]) re=$codes[fname](re,p2);
+					else if($codes[fname='to_'+fmt]) re=$codes[fname](re,p2);
 				}
 				break;
 		}}
@@ -1132,9 +1080,9 @@ VDCS.utilTable=function(){
 	
 	this.doItemBegin=this.begin=this.ibegin=function(){this._i=1};
 	this.doItemEnd=this.end=this.iend=function(){this._i=(this._row>0?this._row:1)};
-	this.doItemMove=this.move=this.imove=function(strer){
-		if(!isInt(strer)) strer=1;
-		this._i+=strer;
+	this.doItemMove=this.move=this.imove=function(n){
+		if(!isInt(n)) n=1;
+		this._i+=n;
 		if(this._i>this._row) this._i=this._row;
 		if(this._i<1) this._i=1
 	};
@@ -1174,13 +1122,13 @@ VDCS.utilTable=function(){
 	
 	this.delItem=function(s){
 		if(this._row>0){
-			var tmpRow=isInt(s)?s:this._i,tmpAry=this._data;
+			var _row=isInt(s)?s:this._i,_ary=this._data;
 			this._row=-1;
 			this._data=new Array();
-			for(var a=0;a<tmpAry.length;a++){
-				if(a!=tmpRow){
+			for(var a=0;a<_ary.length;a++){
+				if(a!=_row){
 					this._row++;
-					this._data[this._row]=tmpAry[a]
+					this._data[this._row]=_ary[a]
 				}
 			}
 			this._i=1
@@ -1455,13 +1403,13 @@ $form={
 					var _min=toi(jfield.attr('vmin')?jfield.attr('vmin'):(jfield.attr('min')?jfield.attr('min'):jfield.attr('minlength')));
 					if(_min>0 && !jfield.val().length) _ischeck=false;
 				}
-				if(!_ischeck && !that.jformitem) that.jformitem=jfield;
+				if(!_ischeck && !that.jformitem) that.jformitem=jfield
 			}
 		});
 		that.jforms.find('input[type=radio]:checked').each(function(){
 			var name=$(this).attr('name');
 			var value=$(this).val();
-			if(name) ardata[name]=value;
+			if(name) ardata[name]=value
 		});
 		if(that.opt && that.opt.encrypt){
 			var _timer='';
@@ -1536,45 +1484,42 @@ $form={
 		this.statusParser(treeVar,opt);
 	},
 	statusMessage:function(treeVar,def,err){
-		var _msg=treeVar.v('message')||treeVar.v('message.string')||'';
-		if(!_msg && err) _msg=treeVar.v('error_msg')||treeVar.v('error_message')||'';
-		if(!_msg && def) _msg=def;
-		return _msg
+		var msg=treeVar.v('message')||treeVar.v('message.string')||'';
+		if(!msg && err) msg=treeVar.v('error_msg')||treeVar.v('error_message')||'';
+		if(!msg && def) msg=def;
+		return msg
 	},
 	statusParser:function(treeVar,opt){
 		opt=this.statusOpt(opt);
-		var ret={};
-		var _status=opt.status?opt.status:treeVar.v('status');
-		var _msg=this.statusMessage(treeVar,'',true);
-		if(!_msg) _msg=opt['message_'+_status];
-		if(!_msg){
+		var ret={},_status=opt.status?opt.status:treeVar.v('status'),msg=this.statusMessage(treeVar,'',true)||opt['message_'+_status];
+		if(!msg){
 			switch(_status){
-				case 'init':		_msg='数据初始化！';break;
-				case 'parser':		_msg='无效的数据解析！';break;
-				case 'already':		_msg='数据已处理！';break;
-				case 'params':		_msg='缺少必要的参数！';break;
-				case 'data':		_msg='不正确的数据提交！';break;
-				case 'nodata':		_msg='不正确的数据提交！';break;
-				case 'noexist':		_msg='记录不存在！';break;
-				case 'nopermission':	_msg='权限不足！';break;
-				case 'succeed':		_msg='提交成功！';break;
+				case 'init':		msg='数据初始化！';break;
+				case 'parser':		msg='无效的数据解析！';break;
+				case 'already':		msg='数据已处理！';break;
+				case 'params':		msg='缺少必要的参数！';break;
+				case 'data':		msg='不正确的数据提交！';break;
+				case 'nodata':		msg='不正确的数据提交！';break;
+				case 'noexist':		msg='记录不存在！';break;
+				case 'nopermission':	msg='权限不足！';break;
+				case 'succeed':		msg='提交成功！';break;
 				case 'failed':		
-				default:		_msg='数据处理失败！';break;
+				default:		msg='数据处理失败！';break;
 			}
 		}
-		ret.status=_status;ret.message=_msg;
-		if(!_msg) alert(xml);
+		if(!msg) alert(xml);
 		else{
 			var tips_status=opt['tips_status_'+_status] || 'info';
 			if(opt.tips){
 				switch(opt.tips){
-					case 'mini':		ui.mini.show(_msg);break;
+					case 'mini':		ui.mini.show(msg);break;
 					case 'tips':
-					default:		app.tips(tips_status,_msg,true);break;
+					default:		app.tips(tips_status,msg,true);break;
 				}
 			}
-			if(opt.callback) opt.callback(_status,_msg);
+			if(opt.callback) opt.callback.call(this,_status,msg);
 		}
+		ret.status=_status;ret.message=msg;
 		return ret
 	},
 '':''};
@@ -1619,17 +1564,19 @@ VDCS.forms=function(opt,selector){
 	this._initer=this.__initer=function(opt,selector){
 		if(this.isiniter)return;this.isiniter=true;
 		this._opt(opt);this._selector(selector);
-		if(this.opt.body || this.jbody){
-			this.jbody=this.jbody?$jo(this.jbody):$jo(this.opt.body);
-			if(this.jbody) this.jform=this.jbody.find('form');
+		this.jwrap=this.jwrap||this.jbody;
+		this.opt.wrap=this.opt.wrap||this.opt.body;
+		if(this.opt.wrap || this.jwrap){
+			this.jwrap=this.jwrap?$jo(this.jwrap):$jo(this.opt.wrap);
+			if(this.jwrap) this.jform=this.jwrap.find('form');
 		}
 		else if(this.opt.frm || this.jform){
 			this.jform=this.jform?$jo(this.jform):$f.form(this.opt.frm);
-			if(this.jform) this.jbody=this.jform.parent();
+			if(this.jform) this.jwrap=this.jform.parent();
 		}
-		if(!this.jbody && !this.jform)return;
-		this.jtips=this.selector.jtips?this.selector.jtips:this.jbody.finder(this.selector.tips);
-		this.jsubmit=this.selector.jsubmit?this.selector.jsubmit:this.jbody.finder(this.selector.submit);
+		if(!this.jwrap && !this.jform)return;
+		this.jtips=this.selector.jtips?this.selector.jtips:this.jwrap.finder(this.selector.tips);
+		this.jsubmit=this.selector.jsubmit?this.selector.jsubmit:this.jwrap.finder(this.selector.submit);
 		this.isinit=true
 	};
 	
@@ -1641,10 +1588,10 @@ VDCS.forms=function(opt,selector){
 		return re
 	},
 	
-	this.formCheck=function(){if(!this.jforms)this.jforms=this.jbody;return $form.formCheck(this)};
+	this.formCheck=function(){if(!this.jforms)this.jforms=this.jwrap;return $form.formCheck(this)};
 	this.formHide=function(){
 		if(!this.isinit) return;
-		this.jbody.hide()
+		this.jwrap.hide()
 	};
 	
 	this.submitInit=function(opt){
@@ -1669,6 +1616,10 @@ VDCS.forms=function(opt,selector){
 		this.submit_status=status;
 		var _value=title;
 		if(!this.opt.submit_value) this.opt.submit_value=this.jsubmit.text();
+		if(ui.progressi){
+			if(status=='ing') ui.progressi.start();
+			else ui.progressi.done();
+		}
 		switch(status){
 			case 'ing':
 			case 'off':
@@ -1688,7 +1639,11 @@ VDCS.forms=function(opt,selector){
 		if(this.opt.submit_status && _value) this.jsubmit.find('span').text(_value)
 	};
 	this.submitLock=function(){return this.submit_status && this.submit_status!='on'};
-	
+	this.reset=function(){
+		this.jform.each(function(){this.reset()});
+		this.submitSet('on');
+	};
+
 	this.tips=function(status,message,callback,timer){
 		timer=timer?timer:this.opt.tips_timer;
 		if(status=='hide') app.hint(this.jtips,'hide');
@@ -1766,12 +1721,12 @@ VDCS.forms=function(opt,selector){
 			if(this.treeVar.v('url_back')) this.urlBack(this.treeVar.v('url_back'));
 			this.submitSet('succeed');
 			if(this.opt.tips_succeed) that.parserTips();
-			if(this.opt.callback) this.opt.callback(_status,this.treeVar);
+			if(this.opt.callback) this.opt.callback.call(this,_status,this.treeVar);
 		}
 		else{
 			this.tips('error',this.treeVar.v('message')||this.treeVar.v('error_message')||this.getMessage('error_unknown')+'('+_status+')',true);
 			this.submitSet('on');
-			if(this.opt.callerror) this.opt.callerror(_status,this.treeVar);
+			if(this.opt.callerror) this.opt.callerror.call(this,_status,this.treeVar);
 		}
 	};
 	this.parserTips=function(opt){
@@ -1822,6 +1777,7 @@ VDCS.list=function(opts){
 		if(this.jwrap){
 			if(!this.jcont) this.jcont=this.jwrap.finde('cont');
 			if(!this.jtpl) this.jtpl=this.jwrap.finde('tpl');
+			if(!this.jtpl) this.jtpl=this.jwrap.find('xmp:first');
 			if(!this.jtple) this.jtple=this.jwrap.finde('tple');
 		}
 		//##########
@@ -1879,13 +1835,13 @@ VDCS.list=function(opts){
 				treeItem.extractJson(this.opt.jsonFields);
 				if(this.opt.user_avatar) treeItem.addItem('user_avatar',rd('/images/ua/avatar.gif','uid','[item:uuid]'));
 				if(this.opt.avatar) treeItem.addItem('avatar.url',rd('/images/ua/avatar.gif','uid','[item:uuid]'));
-				if(this.opt.filterItem) treeItem=this.opt.filterItem(treeItem);
+				if(this.opt.filterItem) treeItem=this.opt.filterItem.call(this,treeItem);
 				if(this.filterItem) treeItem=this.filterItem(treeItem);
 				var _html=this.getItemString(treeItem);
 				//htmla.push(_html);
 				var jitem=$(_html).appendTo(this.jcont);
 				
-				if(this.opt.bind) this.opt.bind(jitem,treeItem);
+				if(this.opt.bind) this.opt.bind.call(this,jitem,treeItem);
 				if(this.bind) this.bind(jitem,treeItem);
 				this.tableList.move();
 			}
@@ -1894,7 +1850,10 @@ VDCS.list=function(opts){
 				if(!_html){
 					//data-empty="暂无记录" data-empty-type="inline" data-empty-status="info"
 					var _empty=this.jcont.attrd('empty');
-					if(_empty) _html='<div class="iblank '+(this.jcont.attrd('empty-type')||'inline')+' '+(this.jcont.attrd('empty-status')||'info')+'"><p><em></em><i>'+_empty+'</i></p></div>';
+					if(_empty){
+						if(_empty=='true') _empty='暂无记录';
+						_html='<div class="iblank '+(this.jcont.attrd('empty-type')||'inline')+' '+(this.jcont.attrd('empty-status')||'info')+'"><p><em></em><i>'+_empty+'</i></p></div>';
+					}
 				}
 				if(_html){
 					var jempty=$(_html);
@@ -1904,7 +1863,7 @@ VDCS.list=function(opts){
 					this.jcont.append(_html);
 				}
 			}
-			if(this.opt.binds) this.opt.binds(this.jcont,this.treeVar,this.maps);
+			if(this.opt.binds) this.opt.binds.call(this,this.jcont,this.treeVar,this.maps);
 			if(this.binds) this.binds(this.jcont,this.treeVar,this.maps);
 			this.uio(this.jcont);
 			if(this.jpaging){
@@ -1933,6 +1892,9 @@ VDCS.list=function(opts){
 		re=$dtml.filterItem(re,treeItem);
 		return re
 	};
+	this.pagingParse=function(){
+
+	};
 	
 	this.refille=function(jitem,treeItem){
 		var that=this;
@@ -1955,6 +1917,7 @@ VDCS.list=function(opts){
 	};
 
 	this.loadon=function(){
+		if(ui.progressi) ui.progressi.starter();
 		if(this.jloader){
 			if(!this.jloader.finder('.loading')){
 				this.jloader.html(this.getLoadString());
@@ -1967,13 +1930,14 @@ VDCS.list=function(opts){
 		}
 	};
 	this.loadoff=function(){
+		if(ui.progressi) ui.progressi.doner();
 		this.jcont.html('');
 		if(this.jloader) this.jloader.hide();
 	};
 	this.getLoadString=function(){
 		var re='';
 		if(this.jloading) re=this.jloading.html();
-		if(!re) re='<span class="loading"><img src="/images/common/load/bar.gif" /></span>';
+		if(!re) re='<span class="loading"><em class="iloading"></em></span>';
 		return re
 	};
 };

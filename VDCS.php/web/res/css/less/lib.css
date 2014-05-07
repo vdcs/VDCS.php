@@ -1,12 +1,71 @@
 
 
-
-
-.btn_tag(@size:10px;@bg:#EEE;@bgh:#666){
-	/*height:@size;line-height:@size;*/
-	padding: 3px @size;
-	.rc(@size);
-	text-decoration: none;
-	background-color:@bg;
-	:hover{background-color:@bgh;};
+.icon_load(@color:#CCC;@size:10px;@weight:2px){
+	display:inline-block;width: @size + @weight * 2;height: @size + @weight * 2;
+	border: solid @weight transparent;
+	border-top-color: @color;border-left-color: @color;
+	border-radius: @size;
+	.ani(spinner-o 600ms linear infinite);
 }
+
+
+
+
+.tag(@size:20px;@bg:#F3F3F3;@color:#FFF){
+	display:inline-block;.heightll(@size);.rc(@size);padding:0 @size / 2;
+	text-decoration:none;text-align:center;
+	color:@color;background-color:@bg;
+}
+.tag_hover(@bg:#F3F3F3;@color:#FFF;){
+
+}
+
+.tagl(@size:24px;@border:2px;@color:#F3F3F3;@bg:#FFF){
+	.tag(@size - @border * 2,@bg,@color);
+	border:@border solid @color;
+}
+.tagc(@size:20px;@bg:#F3F3F3;@color:#FFF){
+	display:inline-block;width:@size;.heightll(@size);.rc(50%);
+	text-decoration:none;text-align:center;
+	color:@color;background-color:@bg;
+}
+
+
+.tip_book(){
+	border-radius: 10px 0 10px 0;
+	border: transparent 1px solid;
+	border: #ccc 1px solid;
+	box-shadow: 0 0 10px 0 #ccc;
+}
+
+
+
+.img_polaroid(){
+	padding:4px;
+	background-color:#fff;
+	border:1px solid #ccc;border:1px solid rgba(0, 0, 0, 0.2);
+	.shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+}
+
+
+
+
+.content_show(){
+	-webkit-animation-name:fadeIn;
+	-webkit-animation-duration:.5s;
+	-webkit-animation-timing-function:ease-in;
+	-moz-animation-name:fadeIn;
+	-moz-animation-duration:.5s;
+	-moz-animation-timing-function:ease-in;
+}
+.content_hide(){
+	-webkit-animation-name:fadeOut;
+	-webkit-animation-duration:.3s;
+	-webkit-animation-timing-function:ease-in;
+	-moz-animation-name:fadeOut;
+	-moz-animation-duration:.3s;
+	-moz-animation-timing-function:ease-in;
+}
+
+
+

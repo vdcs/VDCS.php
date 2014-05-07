@@ -12,18 +12,18 @@
 <label:include file="inc/listc.tpl.begini">
 <td><a href="#edit">[item:classid]</a></td>
 <td><span style="padding-left:[item:levelid]0px;">[item:name]</span></td>
-<td><span class="orders_value"><input type="text" name="[item:classid]" value="[item:orderid]" style="width:20px;margin-left:5px;" /></span></td>
+<td><span class="root_value"><input type="text" name="[item:classid]" value="[item:rootid]" style="width:25px;margin-left:5px;" /></span></td>
 <td class="status"><span data-dict="data.hidden" data-value="[item:status]"></span></td>
 <td class="handle"><p><a href="#edit"><exec:langs("action.edit")></a></p><a href="#view"><exec:langs("action.view")></a></td><!-- <p><a href="#view"><exec:langs("action.view")></a></p> -->
 <label:include file="inc/listc.tpl.endi">
 <div class="space"></div>
-<a id="set_orders" class="btn btn-primary">保存排序</a>
+<a id="set_root" class="btn btn-primary">保存排序</a>
 <label:include file="inc/listc.script">
 <script type="text/javascript">
 $(function(){
-	$('#set_orders').click(function(){
+	$('#set_root').click(function(){
 		var send=[];
-		$('.orders_value').find('input').each(function(){
+		$('.root_value').find('input').each(function(){
 			var key=$(this).attr('name');
 			var value=$(this).val();
 			send[key]=value;

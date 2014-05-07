@@ -21,7 +21,15 @@ class ChannelPaBase
 		
 	}
 
+	public function doTheme(&$that)
+	{
+		
+	}
 	public function doThemeCache(&$that)
+	{
+		
+	}
+	public function doThemer(&$that)
 	{
 		
 	}

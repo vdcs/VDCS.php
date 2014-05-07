@@ -7,18 +7,18 @@
 		<li><a href="<url:account>"><span>帐户</span></a></li>
 		<!--
 		<li><a href="<url:plaza>"><span>广场</span></a></li>
-		-->
-		<li><a href="<linkurl:ask.index>"><span>问答</span></a><dl class="rc5 rc0t bsh">
+		<li><a href="<linkurl:ask.index>"><span>问答</span></a><dl>
 <dd><a href="<chn:linkurl("ask","pa","p=new")>"><span>新问题</span></a></dd>
 <dd><a href="<chn:linkurl("ask","pa","p=rewards")>"><span>悬赏</span></a></dd>
 <dd><a href="<chn:linkurl("ask","pa","p=put")>"><span>提问</span></a></dd>
 </dl></li>
+		-->
 		</ul>
 	</div>
 	<div class="nav">
 <label:include file="/inc/widget/headbar/nav.cart">
 		<ul class="show<ua:_o>">
-		<li class="ua"><a class="ua" href="<url:account>" uid="<url:uap><ua:_no>"><img class="avatar c s" src="<chn:linkurl("account","avatar","res=s&id=<ua:id>")>" /><span><ua:names></span></a><dl class="rc5 rc0t bsh">
+		<li class="ua"><a class="ua" href="<url:ua.index>" uid="<url:_id>" uap="<url:uap><ua:_no>"><img class="avatar c s" src="<chn:linkurl("account","avatar","res=s&id=<ua:id>")>" /><span><ua:names></span></a><dl>
 <dd class="inbox"><a href="<chn:linkurl("account","pa","p=inbox")>"><span>私信</span></a></dd>
 <dd class="notices"><a href="<chn:linkurl("account","pa","p=notices")>"><span>通知</span></a></dd>
 <dd class="settings"><a href="<chn:linkurl("account","pa","p=settings")>"><span>设置</span></a></dd>

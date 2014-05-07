@@ -1,0 +1,69 @@
+@charset "utf-8";
+/*
+Version:	VDCS comm @ui v1.0
+Support:	http://uri.sx/vdcs.css
+Uodated:	2014-05-00
+*/
+
+
+.iload{.icon_load();}
+.iloading{display:inline-block;width:16px;height:16px;background:url("/images/common/load/bar.gif") 0 0 no-repeat;}
+
+.iclose{display:inline-block;width:13px;height:13px;background:url("/images/common/struct/closed.gif") no-repeat 0 0;}
+.iclose:hover{background-position:0 -13px;}
+.iclose span{display:none;}
+
+.istar{display:inline-block;width:56px;height:12px;background:url("/images/common/struct/stars.gif") 0 0 no-repeat;}
+.istar.v0{background-position:0 0;}
+.istar.v1{background-position:0 -14px;}
+.istar.v2{background-position:0 -28px;}
+.istar.v3{background-position:0 -42px;}
+.istar.v4{background-position:0 -56px;}
+.istar.v5{background-position:0 -70px;}
+
+.iradio,.icheck{display:inline-block;width:15px;height:15px;background:url("/images/common/struct/formi.png") 0 0 no-repeat;cursor:pointer;}
+.icheck.check,.icheck.yes,.icheck.active,.icheck.checked{background-position:-15px 0;}
+.iradio{background-position:0 -20px;}
+.iradio.check,.iradio.yes,.iradio.active,.iradio.checked{background-position:-14px -20px;}
+.icheck.m{width:18px;height:16px;background:url("/images/common/struct/selects.png") 1px -79px no-repeat;}
+.icheck.m.check,.icheck.m.yes,.icheck.m.active,.icheck.m.checked{background-position:1px -40px;}
+label .iradio,label .icheck{margin-right:3px;}
+
+
+.iblank{clear:both;text-align:center;padding:20px 0;margin:0 auto;}
+.iblank p{display:inline-block;text-align:center;margin:0 auto;}
+.iblank p em{float:left;display:inline-block;width:70px;height:60px;}
+.iblank p i{float:left;display:inline-block;height:60px;line-height:60px;color:#C4C4C4;font-size:16px;}
+.iblank.inline{display:block;}
+.iblank.inline p{}
+.iblank.inline p i{vertical-align:middle;margin-left:30px;}
+.iblank.clot i{display:block;margin-top:10px;}
+.iblank.message em{background:url("/images/common/struct/blank.png") repeat scroll -624px -656px transparent;}
+.iblank.help em{background:url("/images/common/struct/blank.png") repeat scroll -472px -656px transparent;}
+.iblank.notice em{background:url("/images/common/struct/blank.png") repeat scroll -923px -656px transparent;}
+.iblank.friends em{background:url("/images/common/struct/blank.png") repeat scroll -321px -473px transparent;}
+.iblank.info em{background:url("/images/common/struct/blank.png") repeat scroll -923px -473px transparent;}
+
+
+.ui-box{clear:both;text-align:left;border:1px solid rgba(0, 0, 0, 0.3);background-color:#FFF;overflow:hidden;}
+.ui-box{.shadow(0 3px 7px rgba(0, 0, 0, 0.3));.bg_clip(padding-box);}
+.ui-box > h3{display:block;height:45px;line-height:45px;border-bottom:1px solid #EEE;font-size:1.5em;font-weight:bold;background-repeat:no-repeat;background-position:0 0;padding:0 15px;position:relative;}
+.ui-box > h3 > .close{position:absolute;top:16px;right:15px;}
+.ui-box > h5{display:block;border-top: 1px solid #ddd;background-color:#F5F5F5;text-align:right;padding:14px 9px;position:relative;}
+.ui-box > h5{.shadow(inset 0 1px 0 #fff);}
+.ui-box > h5 > a{margin:0 6px;}
+.ui-box > .conts{clear:both;margin:15px;}
+
+.ui-popup{clear:both;height:54px;overflow:hidden;}
+.ui-popup .pinner{height:54px;background-repeat:no-repeat;background-position:0 0;padding-left:14px;}
+.ui-popup .pbody{height:54px;background-repeat:no-repeat;background-position:100% -54px;padding-right:6px;}
+.ui-popup p{background-repeat:repeat-x;background-position:0 -108px;line-height:52px;font-size:14px;color:#006600;text-align:center;padding:0 20px 0 12px;overflow:hidden;}
+.ui-popup p em{dislpay:none}
+.ui-popup p span{height:54px;}
+.ui-popup.info .pinner{background-position:0 -216px;padding-left:46px;}
+.ui-popup.succeed .pinner{background-position:0 -162px;padding-left:46px;}
+.ui-popup.error .pinner{background-position:0 -270px;padding-left:46px;}
+.ui-popup.load p em{float:left;display:block;width:45px;height:50px;background:url("/images/common/load/32_oo.gif") 0 10px no-repeat;}
+.ui-popup .pinner,
+.ui-popup .pbody,
+.ui-popup p{background-image:url("/images/common/struct/popups.png");}

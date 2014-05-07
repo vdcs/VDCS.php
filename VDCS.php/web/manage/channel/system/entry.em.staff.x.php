@@ -118,7 +118,7 @@ class PagePortal extends ManagePortalBaseX
 			EcEmployee::add($this->treeData);	
 		}
 		
-		//关联管理员	
+		//关联管理员
 		$manpass=$this->treeData->getItem('manpass');
 		if($maid && $isman){ //一直是
 			$manTree=newTree();

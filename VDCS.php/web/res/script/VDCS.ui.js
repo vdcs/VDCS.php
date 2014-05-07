@@ -1,7 +1,7 @@
 /*
 Version:	VDCS UI Library
-Support:	http://go.hpns.cn/vdcs/js
-Uodated:	2014-01-00
+Support:	http://uri.sx/vdcs.js
+Uodated:	2014-04-00
 */
 
 var ui={speed:500,effect:{},
@@ -20,6 +20,10 @@ var ui={speed:500,effect:{},
 		en:function(k){this.items[this.k(k)]=true},
 		un:function(k){this.items[this.k(k)]=false},
 	'':''},
+
+	initor:function(node){
+		if(this[node] && this[node].initer) this[node].initer();
+	},
 '':''};
 
 extendo(ui,{		//oparent:ui,
@@ -376,57 +380,88 @@ extendo(ui.effect,{
 
 /* ################ form ############### */
 ui.form={
-	class_pop:'gray',
-	parser:function(obj,opt){
+
+	init:function(jwrap){
+		var that=this;
+		if(!jwrap) jwrap=$('body');
+		if(jwrap){
+			this.bindi(jwrap);
+			jwrap.find('[data-ui-form]').each(function(){
+				var jthis=$(this);
+				if(jthis.attr('data-ui-form')) that.opnParser(jthis,{type:jthis.attr('data-ui-form'),value:jthis.attr('data-value')});
+			});
+		}
+		this.opnInit()
+	},
+
+	opn_class_pop:'gray',
+	opnInit:function(){
+		var that=this;
+		$(document).on('click.button.data-api', '[data-toggle^=button]', function(e){
+			var $opn = $(e.target);
+			if (!$opn.hasClass('opn')) $opn = $opn.closest('.opn');
+			that.opnSwitch($opn,'toggle');
+		})
+	},
+	opnSwitch:function(obj,option){
+		var that=this;
+		return obj.each(function(){that.opnToggle(obj)})
+	},
+	opnToggle:function(obj){
+		var that=this;
+		var $parent = obj.closest('[data-toggle="buttons-radio"]')
+		$parent && $parent.find('.opn-'+that.opn_class_pop+'').removeClass('opn-'+that.opn_class_pop+'');
+		obj.toggleClass('opn-'+that.opn_class_pop+'')
+	},
+	
+	opnParser:function(jo,opt){
 		if(typeof opt !='object'){
 			this.type=opt;
 		}else{
 			this.type=opt.type;
 		} 
-		if(!this.type) this.type='checkbox';
-		this.obj=obj;
-		this.opt=opt;
-		if(this.obj.find('input').length>8) return;
-		var opn_html=this.getOpnHtml();
-		this.obj.after(opn_html);
-		this.bindAction();
-		this.obj.hide();
+		if(!opt.type) opt.type='checkbox';
+		if(!isun(opt.value)) jo.find(':input').vals(opt.value);
+		if(jo.find('input').length>8) return;
+		var opn_html=this.getOpnHtml(jo,opt);
+		jo.after(opn_html);
+		this.opnBind(jo,opt);
+		jo.hide();
 	},
-	getOpnHtml:function(){
+	getOpnHtml:function(jo,opt){
 		var that=this;
 		var htmla=[];
-		htmla.push('<div class="opn-group" data-toggle="buttons-'+that.type+'">');
-		this.obj.find('input').each(function(){
+		htmla.push('<div class="opn-group" data-toggle="buttons-'+opt.type+'">');
+		jo.find('input').each(function(){
 			var jthis=$(this);
 			var id=jthis.attr('id');
 			var text=jthis.parent('label').text();
 			if(!text) text=jthis.next('span').text();
 			if(!text) text=jthis.attr('value');
 			var ischecked='';
-			if(jthis.checked()) ischecked='opn-'+that.class_pop+'';
+			if(jthis.checked()) ischecked='opn-'+that.opn_class_pop+'';
 			htmla.push('<a type="button" class="opn '+ischecked+'">'+text+'</a>');
 		});
 		htmla.push('</div>');
 		//$('.myval').after(htmla.join(''));
 		return htmla.join('')
 	},
-	bindAction:function(){
+	opnBind:function(jo,opt){
 		var that=this;
-		this.opns=this.obj.next('.opn-group');
-		this.opns.find('.opn').each(function(i){
+		jo.next('.opn-group').find('.opn').each(function(i){
 			if($(this).attr('isinit')) return;
 			if(that.type=='checkbox'){
 				$(this).bind('click.check',function(){
-					if($(this).hasClass('opn-'+that.class_pop+'')){
-						that.getOrigWrap($(this)).find('input:eq('+i+')').checked(false);
+					if($(this).hasClass('opn-'+that.opn_class_pop+'')){
+						that.getOpnOrigWrap($(this)).find('input:eq('+i+')').checked(false);
 					}else{
-						that.getOrigWrap($(this)).find('input:eq('+i+')').checked(true);
+						that.getOpnOrigWrap($(this)).find('input:eq('+i+')').checked(true);
 					}
 				}).attr('isinit','yes');
 			}else if(that.type=='radio'){
-				//that.getOrigWrap($(this)).find('input').checked(false)
+				//that.getOpnOrigWrap($(this)).find('input').checked(false)
 				$(this).bind('click.check',function(){
-					var jinput=that.getOrigWrap($(this)).find('input');
+					var jinput=that.getOpnOrigWrap($(this)).find('input');
 					jinput.checked(false);
 					jinput.end().find('input:eq('+i+')').checked(true);
 					//alert(i);
@@ -435,12 +470,13 @@ ui.form={
 			
 		});
 	},
-	getOrigWrap:function(jthis){
+	getOpnOrigWrap:function(jthis){
 		var jparent=jthis.parent('.opn-group');
 		var jre=jparent.prev('[data-ui-form]');
 		if(jre.length<1) jre.prev('div');
 		return jre
 	},
+
 
 	bindi:function(jo){
 		var selector='input[type="checkbox"][data-bind="check"]';		//,.iradio,.iselect
@@ -491,35 +527,6 @@ ui.form={
 	},
 	bindiradio:function(jo){},
 	bindiselect:function(jo){},
-
-	init:function(jwrap){
-		var that=this;
-		if(jwrap){
-			jwrap.find('[data-ui-form]').each(function(){
-				var jthis=$(this);
-				if(jthis.attr('data-ui-form')) that.parser(jthis,jthis.attr('data-ui-form'));
-			});
-		}
-		this.initOpnAction()
-	},
-	initOpnAction:function(){
-		var that=this;
-		$(document).on('click.button.data-api', '[data-toggle^=button]', function (e) {
-			var $opn = $(e.target);
-			if (!$opn.hasClass('opn')) $opn = $opn.closest('.opn');
-			that.switchopn($opn,'toggle');
-		})	
-	},
-	switchopn:function(obj,option){
-		var that=this;
-		return obj.each(function(){that.toggleopn(obj)})
-	},
-	toggleopn:function(obj){
-		var that=this;
-		var $parent = obj.closest('[data-toggle="buttons-radio"]')
-		$parent && $parent.find('.opn-'+that.class_pop+'').removeClass('opn-'+that.class_pop+'');
-		obj.toggleClass('opn-'+that.class_pop+'')
-	},
 '':''};
 
 
@@ -807,3 +814,167 @@ ui.editor={
 	},
 '':''};
 
+
+
+;(function(factory) {
+	if (typeof module === 'function') {
+		module.exports = factory(this.jQuery || require('jquery'));
+	} else {
+		this.NProgress = factory(this.jQuery);
+	}
+})(function($) {
+	var NProgress = {};
+	NProgress.version = '0.1.2';
+	var Settings = NProgress.settings = {
+		minimum: 0.08,
+		easing: 'ease',
+		positionUsing: '',
+		speed: 200,
+		trickle: true,
+		trickleRate: 0.02,
+		trickleSpeed: 800,
+		showSpinner: true,
+		template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
+	};
+	NProgress.configure = function(options) {
+		$.extend(Settings, options);
+		return this;
+	};
+	NProgress.status = null;
+	NProgress.set = function(n) {
+		var started = NProgress.isStarted();
+		n = clamp(n, Settings.minimum, 1);
+		NProgress.status = (n === 1 ? null : n);
+		var $progress	= NProgress.render(!started),
+			$bar	= $progress.find('[role="bar"]'),
+			speed	= Settings.speed,
+			ease	= Settings.easing;
+		$progress[0].offsetWidth;
+		$progress.queue(function(next) {
+			if (Settings.positionUsing === '') Settings.positionUsing = NProgress.getPositioningCSS();
+			$bar.css(barPositionCSS(n, speed, ease));
+			if (n === 1) {
+				$progress.css({ transition: 'none', opacity: 1 });
+				$progress[0].offsetWidth;
+				setTimeout(function() {
+					$progress.css({ transition: 'all '+speed+'ms linear', opacity: 0 });
+					setTimeout(function() {
+						NProgress.remove();
+						next();
+					}, speed);
+				}, speed);
+			} else {
+				setTimeout(next, speed);
+			}
+		});
+		return this;
+	};
+	NProgress.isStarted = function() {return typeof NProgress.status === 'number';};
+	NProgress.start = function(init) {
+		if (!NProgress.status) NProgress.set(0);
+		var work = function() {
+			setTimeout(function() {
+				if (!NProgress.status) return;
+				NProgress.trickle();
+				work();
+			}, Settings.trickleSpeed);
+		};
+		if (Settings.trickle) work();
+		return this;
+	};
+	NProgress.done = function(force) {
+		if (!force && !NProgress.status) return this;
+		return NProgress.inc(0.3 + 0.5 * Math.random()).set(1);
+	};
+	NProgress.inc = function(amount) {
+		var n = NProgress.status;
+		if (!n) return NProgress.start();
+		if (typeof amount !== 'number') {
+			amount = (1 - n) * clamp(Math.random() * n, 0.1, 0.95);
+		}
+		n = clamp(n + amount, 0, 0.994);
+		return NProgress.set(n);
+	};
+	NProgress.trickle = function() {return NProgress.inc(Math.random() * Settings.trickleRate);};
+	NProgress.render = function(fromStart) {
+		if (NProgress.isRendered()) return $("#nprogress");
+		$('html').addClass('nprogress-busy');
+		var $el = $("<div id='nprogress'>").html(Settings.template);
+		var perc = fromStart ? '-100' : toBarPerc(NProgress.status || 0);
+		$el.find('[role="bar"]').css({
+			transition: 'all 0 linear',
+			transform: 'translate3d('+perc+'%,0,0)'
+		});
+		if (!Settings.showSpinner) $el.find('[role="spinner"]').remove();
+		$el.appendTo(document.body);
+		return $el;
+	};
+	NProgress.remove = function() {
+		$('html').removeClass('nprogress-busy');
+		$('#nprogress').remove();
+	};
+	NProgress.isRendered = function() {return ($("#nprogress").length > 0);};
+	NProgress.getPositioningCSS = function() {
+		var bodyStyle = document.body.style;
+		var vendorPrefix = ('WebkitTransform' in bodyStyle) ? 'Webkit' :
+					 ('MozTransform' in bodyStyle) ? 'Moz' :
+					 ('msTransform' in bodyStyle) ? 'ms' :
+					 ('OTransform' in bodyStyle) ? 'O' : '';
+		if (vendorPrefix + 'Perspective' in bodyStyle) {return 'translate3d';}
+		else if (vendorPrefix + 'Transform' in bodyStyle) {return 'translate';}
+		else {return 'margin';}
+	};
+	
+	function clamp(n, min, max) {
+		if (n < min) return min;
+		if (n > max) return max;
+		return n;
+	}
+	function toBarPerc(n) {return (-1 + n) * 100;}
+	function barPositionCSS(n, speed, ease) {
+		var barCSS;
+		if (Settings.positionUsing === 'translate3d') {
+			barCSS = { transform: 'translate3d('+toBarPerc(n)+'%,0,0)' };
+		} else if (Settings.positionUsing === 'translate') {
+			barCSS = { transform: 'translate('+toBarPerc(n)+'%,0)' };
+		} else {
+			barCSS = { 'margin-left': toBarPerc(n)+'%' };
+		}
+		barCSS.transition = 'all '+speed+'ms '+ease;
+		return barCSS;
+	}
+	
+	NProgress.initer=function(){
+		NProgress._initer_=true;
+		NProgress._doned_=true;
+		$(function(){NProgress.doned()});
+		return NProgress.start(true)
+	};
+	NProgress.isInit=function(){return NProgress._initer_};
+	NProgress.started=function(){
+		if(NProgress.isStarted()) return NProgress.inc();
+		else return NProgress.start(true)
+	};
+	NProgress.doned=function(){
+		if(!NProgress._doned_) return false;
+		NProgress.done()
+	};
+	
+	NProgress.timer_clear=function(){
+		if(NProgress.done_timer){
+			clearTimeout(NProgress.done_timer);
+			NProgress.done_timer=null;
+		}
+	};
+	NProgress.starter=function(){
+		NProgress.timer_clear();
+		return NProgress.started()
+	};
+	NProgress.doner=function(){
+		NProgress.timer_clear();
+		NProgress.done_timer=setTimeout(function(){NProgress.doned()},300);
+	};
+	
+	ui.progressi=NProgress;
+	return ui.progressi;
+});

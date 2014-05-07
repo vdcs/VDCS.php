@@ -1,2 +1,3 @@
 <label:include file="/header.i">
+<label:include script="jquery/extends.min.js">
 <div id="wrap"><div id="wrapper">

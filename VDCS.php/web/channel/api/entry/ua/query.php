@@ -27,6 +27,7 @@ class apiEntry extends apiBase
 
 		switch($by){
 			case 'email'		: $sqlQuery=$this->ua->sqlQuery('email',$value);break;
+			case 'mobile'		: $sqlQuery=$this->ua->sqlQuery('mobile',$value);break;
 			case 'name'		: $sqlQuery=$this->ua->sqlQuery('name',$value);break;
 			case 'uid':
 			default			: $sqlQuery=$this->ua->setID(toi($value));break;
@@ -41,7 +42,12 @@ class apiEntry extends apiBase
 		$this->ua->setID($uid);
 		$isload=$this->ua->dataLoader(1);
 
-		$this->addVarTree($this->ua->getDataTree(),'ua.');
+		global $cfg;
+		$treeUa=$this->ua->getDataTree();
+		$treeUa->addItem('_avatar',DCS::url($cfg->getLinkURL('account','avatar','res=s&id='.$treeUa->getItem('_id'))));
+		$treeUa->addItem('_avatar_tpl',DCS::url($cfg->getLinkURL('account','avatar','res={type}&id={id}')));
+		$this->addVarTree($treeUa,'ua.');
+
 		$this->setSucceed();
 	}
 	

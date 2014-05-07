@@ -20,9 +20,9 @@ class ManagePortalBase extends WebPortalBase
 		$this->_var['PageID']=-1;
 		$this->_var['paging.listnum']=0;
 		$this->_var['paging.show']=true;
-
+		
 		$this->_var['action.relate']='relate';
-
+		
 		$this->_var['AppendURL']='';
 		$this->_var['AppendQuery']='';
 		$this->_var['FieldMode']='';
@@ -68,7 +68,11 @@ class ManagePortalBase extends WebPortalBase
 	*/
 	public function inite()					//初始化0
 	{
-		$this->_chn_=PAGE_CHN;$this->_p_=PAGE_P;$this->_m_=PAGE_M;$this->_mi_=PAGE_MI;$this->_x_=PAGE_X;
+		if($this->ruler->module=='i' || $this->ruler->modulei=='i'){
+			$this->ruler->setMode('ignore');
+		}
+
+		$this->_chn_=PAGE_CHN;$this->_p_=PAGE_P;$this->_m_=PAGE_M;$this->_mi_=PAGE_MI;$this->_x_=PAGE_X;$this->_i_=PAGE_I;
 		//debugx('_chn_='.$this->_chn_.', _p_='.$this->_p_.', _m_='.$this->_m_.', _mi_='.$this->_mi_.', _x_='.$this->_x_);
 		$this->action=query('action');
 		
@@ -90,8 +94,10 @@ class ManagePortalBase extends WebPortalBase
 		$this->ruler->modulei=&$this->_mi_;
 		$this->ruler->extend=&$this->_x_;
 		$this->ruler->action=&$this->action;
+		if($this->_i_) $this->ruler->setMode('ignore');
 	}
 	public function initer(){}				//初始化0
+	
 	
 	protected function initControlParams()
 	{
@@ -185,4 +191,3 @@ class ManagePortalBase extends WebPortalBase
 	}
 	
 }
-?>

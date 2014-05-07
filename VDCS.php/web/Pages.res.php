@@ -1,10 +1,10 @@
 <?
 //defined('APP_LADDER')		|| define('APP_LADDER',			'../');
 defined('APP_INC')		|| define('APP_INC',			'');		//inc/
-defined('APP_PORTALNAME')	|| define('APP_PORTALNAME',		'PagePortal');
+//defined('APP_PORTALNAME')	|| define('APP_PORTALNAME',		'PagePortal');
 defined('APP_PORTAL_DEFAULT')	|| define('APP_PORTAL_DEFAULT',		'index');
 defined('APP_UCHANNEL')		|| define('APP_UCHANNEL',		'account');
-defined('APP_UA')		|| define('APP_UA',			'user');
+//defined('APP_UA')		|| define('APP_UA',			'user');
 /*
 $n=10000;
 timerBegin();
@@ -45,7 +45,7 @@ function resObject()
 	//WebCommon::initChannel(PAGE_CHN);
 	$portal=$GLOBALS['_cfg']['channel'][PAGE_CHN.'.portal'];
 	if(!$portal) $portal=PAGE_CHN;
-	define('APP_CHANNEL',PAGE_CHN);define('APP_PORTAL',$portal);		//define('APP_THEME',$theme?$theme:APP_CHANNEL);
+	define('APP_CHANNEL',PAGE_CHN);define('APP_PORTAL',$portal);		//define('APP_THEMER',$theme?$theme:APP_CHANNEL);
 	//##########
 	$extendv='';
 	if(PAGE_X){
@@ -84,7 +84,7 @@ function resObject()
 	define('APP_OBJECTNAME',$objectName);
 	//debugx('objectName='.$objectName);
 	//debugx($_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']);		//SCRIPT_NAME
-	eval('class '.APP_PORTALNAME.' extends '.$objectName.'{}');
+	eval('class PagePortal extends '.$objectName.'{}');			//eval('class '.APP_PORTALNAME.' extends '.$objectName.'{}');
 	return true;
 }
 //##############################
@@ -100,10 +100,10 @@ function webAgent()
 	doWebPageBase();
 }
 
-function doWebPageBase($classname=APP_PORTALNAME)		//,$isDebug=false
+function doWebPageBase()			//$classname=APP_PORTALNAME,$isDebug=false
 {
-	global $uu,$ua,$theme,$cpo;		//$_cfg,$cp,
-	$cpo=new $classname;
+	global $uu,$theme,$cpo;			//$_cfg,$cp,
+	$cpo=new PagePortal;			//$classname
 	$cpo->initer();						//初始化
 	$cpo->themeInit();					//模板初始化
 	$cpo->initBasic();					//频道初始化
@@ -119,7 +119,7 @@ function doWebPageBase($classname=APP_PORTALNAME)		//,$isDebug=false
 	$cpo->themeParse();					//模板解析
 	//$cpo->doDestroy();					//页面对像消毁
 	//$cpo->doClear();					//页面清理
-	if(DEBUG_OUT && (DCS::isLocal() || queryx('debug')=='info')){	//DEBUG_WEB_SCRIPT>0 &&
+	if(DEBUG_OUT && (DCS::isLocal() || DEBUGV=='info')){	//DEBUG_WEB_SCRIPT>0 &&
 		ResMessage::debugi();
 	}
 	//debugx('full='.WebCommon::getScript().',channel='.WebCommon::getScript('channel').',file='.WebCommon::getScript('file').',filename='.WebCommon::getScript('filename'));
@@ -238,18 +238,12 @@ class WebPortalBase
 		if($this->iscontrol) $this->controlInit();	//控制器初始化
 		if($this->iserve) $this->serveInit();		//服务预初始化
 	}
-	
 	public function initUA()				//UA初始化
 	{
 		$this->ua=&Ua::instance($this->UARC);
 	}
-	
 	public function initBasic(){}				//页面预初始化
-	
-	public function inited()				//初始化
-	{
-		
-	}
+	public function inited(){}				//初始化
 	
 	
 	/*
@@ -285,7 +279,7 @@ class WebPortalBase
 	{
 		$this->setPortals__();
 	}
-
+	
 	public function doLoadPre(){}				//页面预载入
 	public function doLoad(){}				//页面载入
 	public function doLoadPos(){}				//页面后置载入
@@ -345,7 +339,8 @@ class WebPortalBase
 	########################################
 	########################################
 	*/
-	public function setSucceed(){$this->setStatus('succeed');}
+	public function setSucceed($msg=null){$this->setStatus('succeed',$msg);}
+	public function setFailed($msg=null){$this->setStatus('failed',$msg);}
 	public function getStatus($k='status'){return $this->getVar($k);}
 	public function setStatus($v,$msg=''){$this->addVar('status',$v);if($msg)$this->setMessage($msg);}
 	public function getMessage($k='message'){return $this->getVar($k);}
